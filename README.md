@@ -33,7 +33,7 @@ This English source README focuses on high-signal cases with concrete workflows,
 
 Each case title links to its public source, and each author handle links to the creator profile.
 
-Try it on Evolink: [GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[Try GLM-5.2 on Evolink](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 Overview
 

@@ -33,7 +33,7 @@
 
 每個案例標題都連回公開來源，作者 handle 會連到創作者個人頁。
 
-在 Evolink 上試用: [GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[在 Evolink 上試用 GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 總覽
 

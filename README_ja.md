@@ -33,7 +33,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 各ケースのタイトルは公開ソースへ、作者ハンドルは作者プロフィールへリンクしています。
 
-Evolink で試す: [GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[Evolink で GLM-5.2 を試す](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 Overview
 

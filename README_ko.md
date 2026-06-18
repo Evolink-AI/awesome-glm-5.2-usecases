@@ -33,7 +33,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 각 사례 제목은 공개 출처로, 작성자 핸들은 크리에이터 프로필로 연결됩니다.
 
-Evolink에서 사용해 보기: [GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[Evolink에서 GLM-5.2 사용해 보기](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 개요
 

@@ -33,7 +33,7 @@
 
 Каждый заголовок кейса ведет на публичный источник, а handle автора — на профиль создателя.
 
-Попробовать в Evolink: [GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[Попробовать GLM-5.2 в Evolink](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 Обзор
 

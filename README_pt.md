@@ -33,7 +33,7 @@ Este README localizado foca casos com workflows concretos, evidência pública d
 
 Cada título de caso aponta para a fonte pública, e cada autor aponta para o perfil do criador.
 
-Testar no Evolink: [GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[Testar GLM-5.2 no Evolink](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 Visão Geral
 

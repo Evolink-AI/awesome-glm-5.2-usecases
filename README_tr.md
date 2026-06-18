@@ -33,7 +33,7 @@ Bu yerelleştirilmiş README, somut iş akışları, açık benchmark kanıtı, 
 
 Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profiline bağlanır.
 
-Evolink üzerinde dene: [GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[GLM-5.2'yi Evolink üzerinde dene](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 Genel Bakış
 
