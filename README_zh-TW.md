@@ -1,10 +1,10 @@
 <div align="center">
 
-<a href="https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="GLM-5.2 高訊號使用案例倉庫 banner" width="760"></a>
+<a href="https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="GLM-5.2 高訊號使用案例倉庫 banner" width="760"></a>
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
-[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
-[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 [![Docs](https://img.shields.io/badge/Docs-Read-blue)](https://docs.evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 [![English](https://img.shields.io/badge/English-111111)](README.md)
@@ -33,7 +33,7 @@
 
 每個案例標題都連回公開來源，作者 handle 會連到創作者個人頁。
 
-[在 Evolink 上試用 GLM-5.2](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[在 Evolink 上試用 GLM-5.2](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 總覽
 
@@ -51,7 +51,7 @@
 <a id="-quick-api-access"></a>
 ## ⚡ 快速 API 接入
 
-透過 Evolink 的 OpenAI 相容 Chat Completions API 使用 GLM-5.2。先在 [Evolink](https://evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases) 取得 API key，然後在執行請求前設定為 `EVOLINK_API_KEY`。
+透過 Evolink 的 OpenAI 相容 Chat Completions API 使用 GLM-5.2。先在 [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases) 取得 API key，然後在執行請求前設定為 `EVOLINK_API_KEY`。
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

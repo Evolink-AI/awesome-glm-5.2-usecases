@@ -1,10 +1,10 @@
 <div align="center">
 
-<a href="https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="GLM-5.2 yüksek sinyalli kullanım örnekleri banner" width="760"></a>
+<a href="https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="GLM-5.2 yüksek sinyalli kullanım örnekleri banner" width="760"></a>
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
-[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
-[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 [![Docs](https://img.shields.io/badge/Docs-Read-blue)](https://docs.evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 [![English](https://img.shields.io/badge/English-111111)](README.md)
@@ -33,7 +33,7 @@ Bu yerelleştirilmiş README, somut iş akışları, açık benchmark kanıtı, 
 
 Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profiline bağlanır.
 
-[GLM-5.2'yi Evolink üzerinde dene](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[GLM-5.2'yi Evolink üzerinde dene](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 Genel Bakış
 
@@ -51,7 +51,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 <a id="-quick-api-access"></a>
 ## ⚡ Hızlı API erişimi
 
-GLM-5.2’yi Evolink’in OpenAI uyumlu Chat Completions API’si üzerinden kullanın. [Evolink](https://evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases) üzerinden API key alın ve isteği çalıştırmadan önce `EVOLINK_API_KEY` olarak ayarlayın.
+GLM-5.2’yi Evolink’in OpenAI uyumlu Chat Completions API’si üzerinden kullanın. [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases) üzerinden API key alın ve isteği çalıştırmadan önce `EVOLINK_API_KEY` olarak ayarlayın.
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

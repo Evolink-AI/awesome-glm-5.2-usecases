@@ -1,10 +1,10 @@
 <div align="center">
 
-<a href="https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="Dépôt de cas d’usage GLM-5.2 banner" width="760"></a>
+<a href="https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="Dépôt de cas d’usage GLM-5.2 banner" width="760"></a>
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
-[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
-[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 [![Docs](https://img.shields.io/badge/Docs-Read-blue)](https://docs.evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 [![English](https://img.shields.io/badge/English-111111)](README.md)
@@ -33,7 +33,7 @@ Ce README localisé se concentre sur les cas avec workflows concrets, preuves pu
 
 Chaque titre de cas renvoie à sa source publique et chaque auteur renvoie au profil du créateur.
 
-[Essayer GLM-5.2 sur Evolink](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[Essayer GLM-5.2 sur Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 Vue d’ensemble
 
@@ -51,7 +51,7 @@ Chaque titre de cas renvoie à sa source publique et chaque auteur renvoie au pr
 <a id="-quick-api-access"></a>
 ## ⚡ Accès rapide à l’API
 
-Utilisez GLM-5.2 via l’API Chat Completions compatible OpenAI d’Evolink. Obtenez une API key sur [Evolink](https://evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases), puis définissez-la comme `EVOLINK_API_KEY` avant d’exécuter la requête.
+Utilisez GLM-5.2 via l’API Chat Completions compatible OpenAI d’Evolink. Obtenez une API key sur [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases), puis définissez-la comme `EVOLINK_API_KEY` avant d’exécuter la requête.
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

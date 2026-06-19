@@ -1,10 +1,10 @@
 <div align="center">
 
-<a href="https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="GLM-5.2 고신뢰 유스케이스 저장소 banner" width="760"></a>
+<a href="https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="GLM-5.2 고신뢰 유스케이스 저장소 banner" width="760"></a>
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
-[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
-[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 [![Docs](https://img.shields.io/badge/Docs-Read-blue)](https://docs.evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 [![English](https://img.shields.io/badge/English-111111)](README.md)
@@ -33,7 +33,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 각 사례 제목은 공개 출처로, 작성자 핸들은 크리에이터 프로필로 연결됩니다.
 
-[Evolink에서 GLM-5.2 사용해 보기](https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[Evolink에서 GLM-5.2 사용해 보기](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
 
 ## 📊 개요
 
@@ -51,7 +51,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 <a id="-quick-api-access"></a>
 ## ⚡ 빠른 API 접근
 
-Evolink의 OpenAI 호환 Chat Completions API로 GLM-5.2를 사용할 수 있습니다. [Evolink](https://evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)에서 API key를 받은 뒤 요청 전에 `EVOLINK_API_KEY`로 설정하세요.
+Evolink의 OpenAI 호환 Chat Completions API로 GLM-5.2를 사용할 수 있습니다. [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)에서 API key를 받은 뒤 요청 전에 `EVOLINK_API_KEY`로 설정하세요.
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

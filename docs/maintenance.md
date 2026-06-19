@@ -61,7 +61,7 @@ Description:
 
 Website:
 
-> https://evolink.ai/glm-5.2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases
+> https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases
 
 Topics:
 
