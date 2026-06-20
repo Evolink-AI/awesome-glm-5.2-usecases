@@ -37,7 +37,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- **59 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **69 seçilmiş GLM-5.2 vakası**.
 - Covers Benchmark ve frontier değerlendirmesi, Kod ajanları ve uzun bağlam workflow’ları, Uygulamalı demolar ve showcase build’leri, Sağlayıcı ve araç entegrasyonları, Maliyet, fiyatlandırma ve yerel dağıtım, Sınırlar, caveat’ler ve güvenlik sinyalleri.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -83,6 +83,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42 |
 | [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51 |
 | [🧭 Sınırlar, caveat’ler ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59 |
+| [🗓️ Günlük güncelleme - 2026-06-20](#daily-update-2026-06-20) | Vakalar 60-69 |
 | [🙏 Teşekkür](#acknowledge) | Krediler ve düzeltme politikası |
 
 ### [📏 Benchmark ve frontier değerlendirmesi](#benchmarks-frontier-evaluation)
@@ -838,6 +839,132 @@ Type: Limit | Date: 2026-06-13
 The author reports paying $65 per month for a GLM Coding Pro plan and says the plan had nearly doubled since their last subscription. Use it as a reminder to check current pricing.
 
 Type: Limit | Date: 2026-06-13
+
+---
+
+<a id="daily-update-2026-06-20"></a>
+## 🗓️ Günlük güncelleme - 2026-06-20
+
+| Vaka | Ne gösteriyor | Tür |
+|---|---|---|
+| [Case 60: KernelBench Hard And Mega GPU Coding](#case-60) | Use this case to evaluate GLM-5.2 on GPU-kernel coding across KernelBench-Hard and KernelBench-Mega, where open agent traces make the result inspectable. | Benchmark |
+| [Case 61: Cursor Setup Through OpenRouter](#case-61) | Use this case to configure GLM-5.2 in Cursor through OpenRouter for a low-cost open-model coding workflow. | Tutorial |
+| [Case 62: OpenCode Harness With Local Serving](#case-62) | Use this case to test GLM-5.2 with the OpenCode harness, local serving, and tool-heavy coding workflows before comparing it with Claude Opus. | Evaluation |
+| [Case 63: Amp Agentic Eyes For Visual Design](#case-63) | Use this case to pair GLM-5.2 with Amp custom agents when a text-only model needs visual-review support for design tasks. | Integration |
+| [Case 64: Basement Local Inference Speed](#case-64) | Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup. | Demo |
+| [Case 65: Fast-RLM Long-Context Instruction Injection](#case-65) | Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt. | Integration |
+| [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
+| [Case 67: Short Parallel Work Versus Long Agent Runs](#case-67) | Use this case to route GLM-5.2 toward short bounded coding tasks while reserving stronger models for deeper multi-hour agent runs. | Limit |
+| [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
+| [Case 69: Baseten Faster One-Million-Context Serving](#case-69) | Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses. | Integration |
+
+<a id="case-60"></a>
+### Case 60: [KernelBench Hard And Mega GPU Coding](https://x.com/elliotarledge/status/2068177175640240323) (tarafından [@elliotarledge](https://x.com/elliotarledge))
+
+**Use this case to evaluate GLM-5.2 on GPU-kernel coding across KernelBench-Hard and KernelBench-Mega, where open agent traces make the result inspectable.**
+
+The KernelBench update reports H100, B200, and RTX PRO 6000 tests, open-sourced agent traces, and GLM-5.2 as the top open model in the comparison.
+
+Tür: Benchmark | Tarih: 2026-06-20
+
+---
+
+<a id="case-61"></a>
+### Case 61: [Cursor Setup Through OpenRouter](https://x.com/agentnative_/status/2068148384846746107) (tarafından [@agentnative_](https://x.com/agentnative_))
+
+**Use this case to configure GLM-5.2 in Cursor through OpenRouter for a low-cost open-model coding workflow.**
+
+The source gives a concrete Cursor/OpenRouter setup path rather than only announcing model availability.
+
+Tür: Tutorial | Tarih: 2026-06-20
+
+---
+
+<a id="case-62"></a>
+### Case 62: [OpenCode Harness With Local Serving](https://x.com/PatrickToulme/status/2068134212587184442) (tarafından [@PatrickToulme](https://x.com/PatrickToulme))
+
+**Use this case to test GLM-5.2 with the OpenCode harness, local serving, and tool-heavy coding workflows before comparing it with Claude Opus.**
+
+The author reports a local deployment, nested subagents, research/planning behavior, and a working application build.
+
+Tür: Evaluation | Tarih: 2026-06-20
+
+---
+
+<a id="case-63"></a>
+### Case 63: [Amp Agentic Eyes For Visual Design](https://x.com/beyang/status/2068087124818317374) (tarafından [@beyang](https://x.com/beyang))
+
+**Use this case to pair GLM-5.2 with Amp custom agents when a text-only model needs visual-review support for design tasks.**
+
+The post connects a GLM-5.2 visual design benchmark result with Amp plugin agents that can provide a review layer.
+
+Tür: Integration | Tarih: 2026-06-20
+
+---
+
+<a id="case-64"></a>
+### Case 64: [Basement Local Inference Speed](https://x.com/volatilemrkts/status/2068077319986516031) (tarafından [@volatilemrkts](https://x.com/volatilemrkts))
+
+**Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup.**
+
+The source reports 44.1 tokens per second on a local high-memory Mac setup and mentions decode-repeat issues with heavy tool calls.
+
+Tür: Demo | Tarih: 2026-06-20
+
+---
+
+<a id="case-65"></a>
+### Case 65: [Fast-RLM Long-Context Instruction Injection](https://x.com/neural_avb/status/2067992817625088439) (tarafından [@neural_avb](https://x.com/neural_avb))
+
+**Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt.**
+
+The release notes describe a concrete agent-scaffolding change and a GLM-5.2 long-context benchmark effect.
+
+Tür: Integration | Tarih: 2026-06-20
+
+---
+
+<a id="case-66"></a>
+### Case 66: [DeepAgents Code Open Harness Trial](https://x.com/sydneyrunkle/status/2067947260369854830) (tarafından [@sydneyrunkle](https://x.com/sydneyrunkle))
+
+**Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell.**
+
+The author reports using GLM-5.2 with DeepAgents Code and frames open model plus open harness as the testing pattern.
+
+Tür: Demo | Tarih: 2026-06-20
+
+---
+
+<a id="case-67"></a>
+### Case 67: [Short Parallel Work Versus Long Agent Runs](https://x.com/thekuchh/status/2068010332501479865) (tarafından [@thekuchh](https://x.com/thekuchh))
+
+**Use this case to route GLM-5.2 toward short bounded coding tasks while reserving stronger models for deeper multi-hour agent runs.**
+
+The post reports a practical split: GLM-5.2 works well for short parallel tasks but drifted on a longer agent run.
+
+Tür: Limit | Tarih: 2026-06-20
+
+---
+
+<a id="case-68"></a>
+### Case 68: [Unsloth Quantized Local Deployment](https://x.com/mrblock/status/2067931982760394765) (tarafından [@mrblock](https://x.com/mrblock))
+
+**Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware.**
+
+The post describes Unsloth dynamic 2-bit and 1-bit GGUF options, memory reductions, and llama.cpp or Unsloth Studio deployment routes.
+
+Tür: Tutorial | Tarih: 2026-06-20
+
+---
+
+<a id="case-69"></a>
+### Case 69: [Baseten Faster One-Million-Context Serving](https://x.com/alphatozeta8148/status/2067852860499562821) (tarafından [@alphatozeta8148](https://x.com/alphatozeta8148))
+
+**Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses.**
+
+The source reports GLM-5.2 running four times faster at full 1M context and shows it in coding harnesses.
+
+Tür: Integration | Tarih: 2026-06-20
 
 ---
 
