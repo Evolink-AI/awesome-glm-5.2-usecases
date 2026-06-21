@@ -811,23 +811,6 @@ The source reports GLM-5.2 running four times faster at full 1M context and show
 
 Tipo: Integration | Data: 2026-06-20
 
----
-
-## 🗓️ Atualização diária - 2026-06-21
-
-| Case | O que mostra | Tipo |
-|---|---|---|
-| [Case 70: Liderança open-source no DeepSWE em esforço máximo](#case-70) | Use este caso para acompanhar o GLM-5.2 no DeepSWE em esforço máximo, onde o leaderboard publicado o coloca em primeiro entre os modelos abertos com 44% de pass@1. | Benchmark |
-| [Case 71: Jogo voxel estilo Temple Run em one-shot](#case-71) | Use este caso para estressar o GLM-5.2 em geração de jogos com um único prompt e depois inspecionar o que ainda precisa de correções iterativas em uma build visualmente rica. | Demo |
-| [Case 72: Vice-campeão em benchmark de debate LLM](#case-72) | Use este caso para avaliar o GLM-5.2 além de tarefas de código em debates adversariais multi-turno, onde a variante de raciocínio máximo ficou em segundo atrás dos modelos Claude. | Benchmark |
-| [Case 73: Verificação de censura em código e viés](#case-73) | Use este caso como um sinal prático de segurança para testes de código e viés político, não como prova de que preocupações mais amplas de alinhamento já estejam resolvidas. | Limit |
-| [Case 74: Subagentes de QA do Browser Use para web design](#case-74) | Use este caso para combinar o GLM-5.2 com subagentes multimodais de QA do Browser Use v2 quando um modelo apenas textual precisa de inspeção visual e correções iterativas em sites. | Integration |
-| [Case 75: Falha de cobrança em raciocínio difícil](#case-75) | Use este caso para testar o GLM-5.2 com cuidado em cargas de raciocínio difíceis, porque o relato público mostra longos tempos de execução, baixa conclusão e cobrança inesperadamente alta. | Limit |
-| [Case 76: Taxa de alucinação no AA-Omniscience](#case-76) | Use este caso para comparar o GLM-5.2 em tratamento de incerteza, onde o resultado publicado do AA-Omniscience mostra taxa de alucinação menor que a de vários outros modelos frontier. | Evaluation |
-| [Case 77: Roteamento de stack de agentes de marketing em produção](#case-77) | Use este caso para rotear o GLM-5.2 para workflows de agentes em produção que valorizam estrutura, velocidade e self-hosting, mantendo modelos fechados mais fortes para julgamentos ambíguos. | Evaluation |
-| [Case 78: Conjunto de exemplos one-shot no OpenCode Go](#case-78) | Use este caso para medir o GLM-5.2 em builds rápidas de um único tiro dentro do OpenCode Go antes de comprometê-lo com loops de agentes mais abertos. | Demo |
-| [Case 79: Tokens grátis diários no IDE oficial ZCode](#case-79) | Use este caso para acessar o GLM-5.2 via ZCode quando você quiser um IDE oficial de programação gratuito com grandes cotas diárias de tokens e um workflow ao estilo Cursor. | Tutorial |
-
 <a id="case-74"></a>
 ### Case 74: [Subagentes de QA do Browser Use para web design](https://x.com/browser_use/status/2068405699340853541) (por [@browser_use](https://x.com/browser_use))
 
