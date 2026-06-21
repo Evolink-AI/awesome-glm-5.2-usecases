@@ -77,14 +77,12 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Abschnitt | Fälle |
 |---|---|
-| [📏 Benchmarks und Frontier-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12 |
-| [💻 Coding Agents und Long-Context-Workflows](#coding-agents-long-context-workflows) | Case 13-22 |
-| [🎮 Hands-on-Demos und Showcase-Builds](#hands-on-demos-showcase-builds) | Case 23-30 |
-| [🔌 Provider- und Tool-Integrationen](#provider-tool-integrations) | Case 31-42 |
-| [💸 Kosten, Preise und lokales Deployment](#cost-pricing-local-deployment) | Case 43-51 |
-| [🧭 Grenzen, Caveats und Sicherheitssignale](#limits-caveats-safety-signals) | Case 52-59 |
-| [🗓️ Tägliches Update - 2026-06-20](#daily-update-2026-06-20) | Fälle 60-69 |
-| [🗓️ Tägliches Update - 2026-06-21](#daily-update-2026-06-21) | Fälle 70-79 |
+| [📏 Benchmarks und Frontier-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76 |
+| [💻 Coding Agents und Long-Context-Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77 |
+| [🎮 Hands-on-Demos und Showcase-Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78 |
+| [🔌 Provider- und Tool-Integrationen](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79 |
+| [💸 Kosten, Preise und lokales Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68 |
+| [🧭 Grenzen, Caveats und Sicherheitssignale](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75 |
 | [🙏 Danksagung](#acknowledge) | Credits und Korrekturrichtlinie |
 
 ### [📏 Benchmarks und Frontier-Bewertung](#benchmarks-frontier-evaluation)
@@ -103,6 +101,10 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [KernelBench-Hard Without Shortcutting](#case-10) | Use this case when checking whether benchmark gains come from valid implementation behavior instead of shortcutting. | Evaluation |
 | [Runescape Bench Catch-Up](#case-11) | Use this case as a fast signal for open-weight model progress on game-like benchmark tasks. | Benchmark |
 | [BridgeBench Speed Improvement](#case-12) | Use this case to evaluate latency-sensitive workflows where speed matters alongside intelligence. | Benchmark |
+| [Case 60: KernelBench Hard And Mega GPU Coding](#case-60) | Use this case to evaluate GLM-5.2 on GPU-kernel coding across KernelBench-Hard and KernelBench-Mega, where open agent traces make the result inspectable. | Benchmark |
+| [Case 70: DeepSWE Max-Effort Open-Source Lead](#case-70) | Nutze diesen Fall, um GLM-5.2 auf DeepSWE im Max-Effort-Modus zu verfolgen, wo das veröffentlichte Leaderboard es mit 44 % pass@1 auf Platz eins unter den offenen Modellen setzt. | Benchmark |
+| [Case 72: LLM Debate Benchmark Runner-Up](#case-72) | Nutze diesen Fall, um GLM-5.2 jenseits von Coding-Aufgaben in adversarialen Multi-Turn-Debatten zu bewerten, wo die Max-Reasoning-Variante hinter Claude-Modellen den zweiten Platz erreichte. | Benchmark |
+| [Case 76: AA-Omniscience Hallucination Rate](#case-76) | Nutze diesen Fall, um GLM-5.2 beim Umgang mit Unsicherheit zu vergleichen, wo das veröffentlichte AA-Omniscience-Ergebnis eine niedrigere Halluzinationsrate als bei mehreren anderen Frontier-Modellen zeigt. | Evaluation |
 
 ### [💻 Coding Agents und Long-Context-Workflows](#coding-agents-long-context-workflows)
 
@@ -118,6 +120,10 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [Linux Wrapper For ZCode Built With GLM-5.2](#case-20) | Use this case as an example of GLM-5.2 assisting with tooling around coding-agent environments. | Demo |
 | [Computer Use Skill Packaging](#case-21) | Use this case to study GLM-5.2 as a helper for turning an open-source computer-use repo into a reusable skill. | Demo |
 | [ZCode 3.0 Agentic Development Environment Review](#case-22) | Use this case to evaluate GLM-5.2 inside a full agentic development environment rather than a single chat session. | Demo |
+| [Case 62: OpenCode Harness With Local Serving](#case-62) | Use this case to test GLM-5.2 with the OpenCode harness, local serving, and tool-heavy coding workflows before comparing it with Claude Opus. | Evaluation |
+| [Case 65: Fast-RLM Long-Context Instruction Injection](#case-65) | Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt. | Integration |
+| [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
+| [Case 77: Production Marketing Agent Stack Routing](#case-77) | Nutze diesen Fall, um GLM-5.2 in produktive Agent-Workflows zu routen, die Struktur, Geschwindigkeit und Self-Hosting schätzen, während stärkere geschlossene Modelle für mehrdeutige Urteilsfragen reserviert bleiben. | Evaluation |
 
 ### [🎮 Hands-on-Demos und Showcase-Builds](#hands-on-demos-showcase-builds)
 
@@ -131,6 +137,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [Research Paper Understanding Workflow](#case-28) | Use this case to apply GLM-5.2 to paper-reading workflows with contextual questions and cross-paper references. | Integration |
 | [Constrained Poem Comparison](#case-29) | Use this case to separate correctness from creative quality when comparing GLM-5.2 with Fable-style models. | Evaluation |
 | [Design Sense Example](#case-30) | Use this case as a lightweight visual-design signal, then verify with your own prompt and UI review. | Demo |
+| [Case 71: Temple Run Voxel Game One-Shot](#case-71) | Nutze diesen Fall, um GLM-5.2 bei der Spieleerzeugung aus einem einzigen Prompt zu stresstesten und anschließend zu prüfen, was in einem visuell reichen Build noch iterativ korrigiert werden muss. | Demo |
+| [Case 78: OpenCode Go One-Shot Example Set](#case-78) | Nutze diesen Fall, um GLM-5.2 bei schnellen One-Shot-Builds in OpenCode Go zu benchmarken, bevor es in offenere Agent-Loops eingebunden wird. | Demo |
 
 ### [🔌 Provider- und Tool-Integrationen](#provider-tool-integrations)
 
@@ -148,6 +156,11 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [Hermes Agent From Nous Portal](#case-40) | Use this case to connect GLM-5.2 into Hermes Agent workflows through Nous Portal and OpenRouter. | Integration |
 | [io.net Day-Zero Launch Partner](#case-41) | Use this case when evaluating compute-backed serving for a 753B-parameter long-context model. | Integration |
 | [Modular Cloud Day-Zero Serving](#case-42) | Use this case to consider Modular Cloud for long-context GLM-5.2 serving at provider scale. | Integration |
+| [Case 61: Cursor Setup Through OpenRouter](#case-61) | Use this case to configure GLM-5.2 in Cursor through OpenRouter for a low-cost open-model coding workflow. | Tutorial |
+| [Case 63: Amp Agentic Eyes For Visual Design](#case-63) | Use this case to pair GLM-5.2 with Amp custom agents when a text-only model needs visual-review support for design tasks. | Integration |
+| [Case 69: Baseten Faster One-Million-Context Serving](#case-69) | Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses. | Integration |
+| [Case 74: Browser Use QA Subagents For Web Design](#case-74) | Nutze diesen Fall, um GLM-5.2 mit Browser Use v2 Multimodal-QA-Subagents zu koppeln, wenn ein reines Textmodell visuelle Prüfung und iterative Website-Fixes braucht. | Integration |
+| [Case 79: ZCode Official IDE Daily Free Tokens](#case-79) | Nutze diesen Fall, um über ZCode auf GLM-5.2 zuzugreifen, wenn du eine kostenlose offizielle Coding-IDE mit großen täglichen Token-Kontingenten und einem Cursor-ähnlichen Workflow willst. | Tutorial |
 
 ### [💸 Kosten, Preise und lokales Deployment](#cost-pricing-local-deployment)
 
@@ -162,6 +175,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [ZenMux Free Week Offer](#case-49) | Use this case to find time-boxed free-access windows for GLM-5.2 testing. | Integration |
 | [crofAI Per-Token Pricing](#case-50) | Use this case to compare third-party provider pricing for GLM-5.2 before selecting a route. | Integration |
 | [API Price Margin Comparison](#case-51) | Use this case as a market-pricing critique when comparing GLM-5.2 to other frontier labs and open models. | Evaluation |
+| [Case 64: Basement Local Inference Speed](#case-64) | Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup. | Demo |
+| [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
 
 ### [🧭 Grenzen, Caveats und Sicherheitssignale](#limits-caveats-safety-signals)
 
@@ -175,7 +190,9 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [FutureSim Non-Improvement Result](#case-57) | Use this case to check whether coding gains generalize to non-coding domains before broad deployment. | Limit |
 | [Launch Readiness Critique](#case-58) | Use this case to separate model capability from launch execution, documentation, and API readiness. | Limit |
 | [Coding Plan Price Increase](#case-59) | Use this case to verify plan pricing before recommending GLM-5.2 as a low-cost replacement. | Limit |
-
+| [Case 67: Short Parallel Work Versus Long Agent Runs](#case-67) | Use this case to route GLM-5.2 toward short bounded coding tasks while reserving stronger models for deeper multi-hour agent runs. | Limit |
+| [Case 73: Code Censorship And Bias Check](#case-73) | Nutze diesen Fall als praktisches Sicherheitssignal für Code- und Political-Bias-Tests, nicht als Beleg dafür, dass breitere Alignment-Fragen bereits gelöst sind. | Limit |
+| [Case 75: Hard Reasoning Billing Failure](#case-75) | Nutze diesen Fall, um GLM-5.2 bei schwierigen Reasoning-Workloads vorsichtig zu testen, weil der öffentliche Bericht lange Laufzeiten, niedrige Abschlussraten und unerwartet hohe abgerechnete Ausgabe zeigt. | Limit |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Benchmarks und Frontier-Bewertung
 
@@ -311,6 +328,51 @@ Type: Benchmark | Date: 2026-06-13
 
 ---
 
+<a id="case-60"></a>
+### Case 60: [KernelBench Hard And Mega GPU Coding](https://x.com/elliotarledge/status/2068177175640240323) (von [@elliotarledge](https://x.com/elliotarledge))
+
+**Use this case to evaluate GLM-5.2 on GPU-kernel coding across KernelBench-Hard and KernelBench-Mega, where open agent traces make the result inspectable.**
+
+The KernelBench update reports H100, B200, and RTX PRO 6000 tests, open-sourced agent traces, and GLM-5.2 as the top open model in the comparison.
+
+Typ: Benchmark | Datum: 2026-06-20
+
+---
+
+<a id="case-70"></a>
+### Case 70: [DeepSWE Max-Effort Open-Source Lead](https://x.com/datacurve/status/2068473057107476680) (von [@datacurve](https://x.com/datacurve))
+
+**Nutze diesen Fall, um GLM-5.2 auf DeepSWE im Max-Effort-Modus zu verfolgen, wo das veröffentlichte Leaderboard es mit 44 % pass@1 auf Platz eins unter den offenen Modellen setzt.**
+
+DataCurve teilte ein DeepSWE-Leaderboard-Update, das GLM-5.2 mit 44 % pass@1 und 17 Punkten Vorsprung vor Kimi K2.7 Code unter den offenen Modellen zeigt. Behandle das als Benchmark-Update, nicht als Beweis dafür, dass bereits jeder reale Agent-Workflow gelöst ist.
+
+Type: Benchmark | Date: 2026-06-20
+
+---
+
+<a id="case-72"></a>
+### Case 72: [LLM Debate Benchmark Runner-Up](https://x.com/LechMazur/status/2068428300460974279) (von [@LechMazur](https://x.com/LechMazur))
+
+**Nutze diesen Fall, um GLM-5.2 jenseits von Coding-Aufgaben in adversarialen Multi-Turn-Debatten zu bewerten, wo die Max-Reasoning-Variante hinter Claude-Modellen den zweiten Platz erreichte.**
+
+Lech Mazur teilte ein Ergebnis des LLM Debate Benchmark, in dem GLM-5.2 Max den zweiten Platz belegt. Der Benchmark misst adversariale Multi-Turn-Debatten über breite Themenfelder hinweg und ist damit ein Reasoning-Signal außerhalb klassischer Coding-Leaderboards.
+
+Type: Benchmark | Date: 2026-06-20
+
+---
+
+<a id="case-76"></a>
+### Case 76: [AA-Omniscience Hallucination Rate](https://x.com/yuhasbeentaken/status/2068259921519423855) (von [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+
+**Nutze diesen Fall, um GLM-5.2 beim Umgang mit Unsicherheit zu vergleichen, wo das veröffentlichte AA-Omniscience-Ergebnis eine niedrigere Halluzinationsrate als bei mehreren anderen Frontier-Modellen zeigt.**
+
+Der Post meldet für GLM-5.2 auf AA-Omniscience eine Halluzinationsrate von 28 % und damit niedrigere Werte als bei Fable 5 und DeepSeek V4 Pro. Der Benchmark ist darauf ausgerichtet, ob Modelle Unsicherheit eingestehen oder verweigern, statt zu raten.
+
+Type: Evaluation | Date: 2026-06-20
+
+---
+
+
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Coding Agents und Long-Context-Workflows
 
@@ -424,6 +486,51 @@ Type: Demo | Date: 2026-06-14
 
 ---
 
+<a id="case-62"></a>
+### Case 62: [OpenCode Harness With Local Serving](https://x.com/PatrickToulme/status/2068134212587184442) (von [@PatrickToulme](https://x.com/PatrickToulme))
+
+**Use this case to test GLM-5.2 with the OpenCode harness, local serving, and tool-heavy coding workflows before comparing it with Claude Opus.**
+
+The author reports a local deployment, nested subagents, research/planning behavior, and a working application build.
+
+Typ: Evaluation | Datum: 2026-06-20
+
+---
+
+<a id="case-65"></a>
+### Case 65: [Fast-RLM Long-Context Instruction Injection](https://x.com/neural_avb/status/2067992817625088439) (von [@neural_avb](https://x.com/neural_avb))
+
+**Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt.**
+
+The release notes describe a concrete agent-scaffolding change and a GLM-5.2 long-context benchmark effect.
+
+Typ: Integration | Datum: 2026-06-20
+
+---
+
+<a id="case-66"></a>
+### Case 66: [DeepAgents Code Open Harness Trial](https://x.com/sydneyrunkle/status/2067947260369854830) (von [@sydneyrunkle](https://x.com/sydneyrunkle))
+
+**Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell.**
+
+The author reports using GLM-5.2 with DeepAgents Code and frames open model plus open harness as the testing pattern.
+
+Typ: Demo | Datum: 2026-06-20
+
+---
+
+<a id="case-77"></a>
+### Case 77: [Production Marketing Agent Stack Routing](https://x.com/DeRonin_/status/2068303752671477820) (von [@DeRonin_](https://x.com/DeRonin_))
+
+**Nutze diesen Fall, um GLM-5.2 in produktive Agent-Workflows zu routen, die Struktur, Geschwindigkeit und Self-Hosting schätzen, während stärkere geschlossene Modelle für mehrdeutige Urteilsfragen reserviert bleiben.**
+
+Nach einem sechstägigen Side-by-Side-Lauf in einem Agentur-Stack sagt der Autor, GLM-5.2 habe über 60 Agent-Schritte gehalten, strukturierte Formate über 800-mal in Folge getroffen und selbst gehostet mit niedriger Latenz geliefert. Derselbe Post bevorzugt für voice-kritische oder mehrdeutige Aufgaben weiterhin Opus, wodurch gerade diese Routing-Regel der nützliche Takeaway ist.
+
+Type: Evaluation | Date: 2026-06-20
+
+---
+
+
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Hands-on-Demos und Showcase-Builds
 
@@ -514,6 +621,29 @@ The author says they enjoyed GLM-5.2's design sense and shared a visual example.
 Type: Demo | Date: 2026-06-17
 
 ---
+
+<a id="case-71"></a>
+### Case 71: [Temple Run Voxel Game One-Shot](https://x.com/pseudokid/status/2068431546143649829) (von [@pseudokid](https://x.com/pseudokid))
+
+**Nutze diesen Fall, um GLM-5.2 bei der Spieleerzeugung aus einem einzigen Prompt zu stresstesten und anschließend zu prüfen, was in einem visuell reichen Build noch iterativ korrigiert werden muss.**
+
+Der Autor berichtet, dass er den Großteil eines von Temple Run inspirierten Voxel-Biker-Games im ersten Turn erhalten hat und danach nur wenige Folge-Pässe für Kamera- und Bewegungs-Fixes brauchte. Der Post erwähnt außerdem, dass Z.ai-Tooling Screenshots und Gameplay-Videos erzeugen kann, damit das Textmodell das Ergebnis besser bewertet.
+
+Type: Demo | Date: 2026-06-20
+
+---
+
+<a id="case-78"></a>
+### Case 78: [OpenCode Go One-Shot Example Set](https://x.com/LyalinDotCom/status/2068378281636982990) (von [@LyalinDotCom](https://x.com/LyalinDotCom))
+
+**Nutze diesen Fall, um GLM-5.2 bei schnellen One-Shot-Builds in OpenCode Go zu benchmarken, bevor es in offenere Agent-Loops eingebunden wird.**
+
+Der Autor berichtet von One-Shot-Beispielen für eine Solar-System-Web-App, eine System-Info-Electron-App und ein einfaches Explore-Island-Webgame über OpenCode Go. Im selben Post sagt er außerdem, GLM-5.2 sei das beste offene Modell, das er bisher genutzt habe, ohne es bereits als frontier-gleich einzustufen.
+
+Type: Demo | Date: 2026-06-20
+
+---
+
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Provider- und Tool-Integrationen
@@ -650,6 +780,62 @@ Type: Integration | Date: 2026-06-16
 
 ---
 
+<a id="case-61"></a>
+### Case 61: [Cursor Setup Through OpenRouter](https://x.com/agentnative_/status/2068148384846746107) (von [@agentnative_](https://x.com/agentnative_))
+
+**Use this case to configure GLM-5.2 in Cursor through OpenRouter for a low-cost open-model coding workflow.**
+
+The source gives a concrete Cursor/OpenRouter setup path rather than only announcing model availability.
+
+Typ: Tutorial | Datum: 2026-06-20
+
+---
+
+<a id="case-63"></a>
+### Case 63: [Amp Agentic Eyes For Visual Design](https://x.com/beyang/status/2068087124818317374) (von [@beyang](https://x.com/beyang))
+
+**Use this case to pair GLM-5.2 with Amp custom agents when a text-only model needs visual-review support for design tasks.**
+
+The post connects a GLM-5.2 visual design benchmark result with Amp plugin agents that can provide a review layer.
+
+Typ: Integration | Datum: 2026-06-20
+
+---
+
+<a id="case-69"></a>
+### Case 69: [Baseten Faster One-Million-Context Serving](https://x.com/alphatozeta8148/status/2067852860499562821) (von [@alphatozeta8148](https://x.com/alphatozeta8148))
+
+**Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses.**
+
+The source reports GLM-5.2 running four times faster at full 1M context and shows it in coding harnesses.
+
+Typ: Integration | Datum: 2026-06-20
+
+---
+
+<a id="case-74"></a>
+### Case 74: [Browser Use QA Subagents For Web Design](https://x.com/browser_use/status/2068405699340853541) (von [@browser_use](https://x.com/browser_use))
+
+**Nutze diesen Fall, um GLM-5.2 mit Browser Use v2 Multimodal-QA-Subagents zu koppeln, wenn ein reines Textmodell visuelle Prüfung und iterative Website-Fixes braucht.**
+
+Browser Use berichtet, dass GLM-5.2 Fable 5 bei einer Website-Design-Aufgabe geschlagen habe und anschließend QA-Subagents hinzugefügt wurden, die das Ergebnis inspizieren, Ästhetik bewerten, Bugs finden und gezielte Fixes an GLM zurückspielen. Der vollständige Build-plus-QA-Loop soll dabei unter 0,75 US-Dollar gekostet haben.
+
+Type: Integration | Date: 2026-06-20
+
+---
+
+<a id="case-79"></a>
+### Case 79: [ZCode Official IDE Daily Free Tokens](https://x.com/Alan_Earn/status/2068223665268006924) (von [@Alan_Earn](https://x.com/Alan_Earn))
+
+**Nutze diesen Fall, um über ZCode auf GLM-5.2 zuzugreifen, wenn du eine kostenlose offizielle Coding-IDE mit großen täglichen Token-Kontingenten und einem Cursor-ähnlichen Workflow willst.**
+
+Der Post beschreibt ZCode als Zhipus offizielle Coding-IDE mit GLM-5.2 als Standardmodell, 3 Mio. Tokens pro Tag, 1 Mio. Kontext und Clients für Mac und Windows. Außerdem enthält er einen kurzen Setup-Ablauf und ist damit handlungsnäher als eine generische Launch-Ankündigung.
+
+Type: Tutorial | Date: 2026-06-20
+
+---
+
+
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Kosten, Preise und lokales Deployment
 
@@ -752,6 +938,29 @@ Type: Evaluation | Date: 2026-06-16
 
 ---
 
+<a id="case-64"></a>
+### Case 64: [Basement Local Inference Speed](https://x.com/volatilemrkts/status/2068077319986516031) (von [@volatilemrkts](https://x.com/volatilemrkts))
+
+**Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup.**
+
+The source reports 44.1 tokens per second on a local high-memory Mac setup and mentions decode-repeat issues with heavy tool calls.
+
+Typ: Demo | Datum: 2026-06-20
+
+---
+
+<a id="case-68"></a>
+### Case 68: [Unsloth Quantized Local Deployment](https://x.com/mrblock/status/2067931982760394765) (von [@mrblock](https://x.com/mrblock))
+
+**Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware.**
+
+The post describes Unsloth dynamic 2-bit and 1-bit GGUF options, memory reductions, and llama.cpp or Unsloth Studio deployment routes.
+
+Typ: Tutorial | Datum: 2026-06-20
+
+---
+
+
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Grenzen, Caveats und Sicherheitssignale
 
@@ -843,99 +1052,6 @@ Type: Limit | Date: 2026-06-13
 
 ---
 
-<a id="daily-update-2026-06-20"></a>
-## 🗓️ Tägliches Update - 2026-06-20
-
-| Fall | Was es zeigt | Typ |
-|---|---|---|
-| [Case 60: KernelBench Hard And Mega GPU Coding](#case-60) | Use this case to evaluate GLM-5.2 on GPU-kernel coding across KernelBench-Hard and KernelBench-Mega, where open agent traces make the result inspectable. | Benchmark |
-| [Case 61: Cursor Setup Through OpenRouter](#case-61) | Use this case to configure GLM-5.2 in Cursor through OpenRouter for a low-cost open-model coding workflow. | Tutorial |
-| [Case 62: OpenCode Harness With Local Serving](#case-62) | Use this case to test GLM-5.2 with the OpenCode harness, local serving, and tool-heavy coding workflows before comparing it with Claude Opus. | Evaluation |
-| [Case 63: Amp Agentic Eyes For Visual Design](#case-63) | Use this case to pair GLM-5.2 with Amp custom agents when a text-only model needs visual-review support for design tasks. | Integration |
-| [Case 64: Basement Local Inference Speed](#case-64) | Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup. | Demo |
-| [Case 65: Fast-RLM Long-Context Instruction Injection](#case-65) | Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt. | Integration |
-| [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
-| [Case 67: Short Parallel Work Versus Long Agent Runs](#case-67) | Use this case to route GLM-5.2 toward short bounded coding tasks while reserving stronger models for deeper multi-hour agent runs. | Limit |
-| [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
-| [Case 69: Baseten Faster One-Million-Context Serving](#case-69) | Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses. | Integration |
-
-<a id="case-60"></a>
-### Case 60: [KernelBench Hard And Mega GPU Coding](https://x.com/elliotarledge/status/2068177175640240323) (von [@elliotarledge](https://x.com/elliotarledge))
-
-**Use this case to evaluate GLM-5.2 on GPU-kernel coding across KernelBench-Hard and KernelBench-Mega, where open agent traces make the result inspectable.**
-
-The KernelBench update reports H100, B200, and RTX PRO 6000 tests, open-sourced agent traces, and GLM-5.2 as the top open model in the comparison.
-
-Typ: Benchmark | Datum: 2026-06-20
-
----
-
-<a id="case-61"></a>
-### Case 61: [Cursor Setup Through OpenRouter](https://x.com/agentnative_/status/2068148384846746107) (von [@agentnative_](https://x.com/agentnative_))
-
-**Use this case to configure GLM-5.2 in Cursor through OpenRouter for a low-cost open-model coding workflow.**
-
-The source gives a concrete Cursor/OpenRouter setup path rather than only announcing model availability.
-
-Typ: Tutorial | Datum: 2026-06-20
-
----
-
-<a id="case-62"></a>
-### Case 62: [OpenCode Harness With Local Serving](https://x.com/PatrickToulme/status/2068134212587184442) (von [@PatrickToulme](https://x.com/PatrickToulme))
-
-**Use this case to test GLM-5.2 with the OpenCode harness, local serving, and tool-heavy coding workflows before comparing it with Claude Opus.**
-
-The author reports a local deployment, nested subagents, research/planning behavior, and a working application build.
-
-Typ: Evaluation | Datum: 2026-06-20
-
----
-
-<a id="case-63"></a>
-### Case 63: [Amp Agentic Eyes For Visual Design](https://x.com/beyang/status/2068087124818317374) (von [@beyang](https://x.com/beyang))
-
-**Use this case to pair GLM-5.2 with Amp custom agents when a text-only model needs visual-review support for design tasks.**
-
-The post connects a GLM-5.2 visual design benchmark result with Amp plugin agents that can provide a review layer.
-
-Typ: Integration | Datum: 2026-06-20
-
----
-
-<a id="case-64"></a>
-### Case 64: [Basement Local Inference Speed](https://x.com/volatilemrkts/status/2068077319986516031) (von [@volatilemrkts](https://x.com/volatilemrkts))
-
-**Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup.**
-
-The source reports 44.1 tokens per second on a local high-memory Mac setup and mentions decode-repeat issues with heavy tool calls.
-
-Typ: Demo | Datum: 2026-06-20
-
----
-
-<a id="case-65"></a>
-### Case 65: [Fast-RLM Long-Context Instruction Injection](https://x.com/neural_avb/status/2067992817625088439) (von [@neural_avb](https://x.com/neural_avb))
-
-**Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt.**
-
-The release notes describe a concrete agent-scaffolding change and a GLM-5.2 long-context benchmark effect.
-
-Typ: Integration | Datum: 2026-06-20
-
----
-
-<a id="case-66"></a>
-### Case 66: [DeepAgents Code Open Harness Trial](https://x.com/sydneyrunkle/status/2067947260369854830) (von [@sydneyrunkle](https://x.com/sydneyrunkle))
-
-**Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell.**
-
-The author reports using GLM-5.2 with DeepAgents Code and frames open model plus open harness as the testing pattern.
-
-Typ: Demo | Datum: 2026-06-20
-
----
-
 <a id="case-67"></a>
 ### Case 67: [Short Parallel Work Versus Long Agent Runs](https://x.com/thekuchh/status/2068010332501479865) (von [@thekuchh](https://x.com/thekuchh))
 
@@ -944,77 +1060,6 @@ Typ: Demo | Datum: 2026-06-20
 The post reports a practical split: GLM-5.2 works well for short parallel tasks but drifted on a longer agent run.
 
 Typ: Limit | Datum: 2026-06-20
-
----
-
-<a id="case-68"></a>
-### Case 68: [Unsloth Quantized Local Deployment](https://x.com/mrblock/status/2067931982760394765) (von [@mrblock](https://x.com/mrblock))
-
-**Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware.**
-
-The post describes Unsloth dynamic 2-bit and 1-bit GGUF options, memory reductions, and llama.cpp or Unsloth Studio deployment routes.
-
-Typ: Tutorial | Datum: 2026-06-20
-
----
-
-<a id="case-69"></a>
-### Case 69: [Baseten Faster One-Million-Context Serving](https://x.com/alphatozeta8148/status/2067852860499562821) (von [@alphatozeta8148](https://x.com/alphatozeta8148))
-
-**Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses.**
-
-The source reports GLM-5.2 running four times faster at full 1M context and shows it in coding harnesses.
-
-Typ: Integration | Datum: 2026-06-20
-
----
-
-<a id="daily-update-2026-06-21"></a>
-## 🗓️ Tägliches Update - 2026-06-21
-
-| Fall | Was es zeigt | Typ |
-|---|---|---|
-| [Case 70: DeepSWE Max-Effort Open-Source Lead](#case-70) | Nutze diesen Fall, um GLM-5.2 auf DeepSWE im Max-Effort-Modus zu verfolgen, wo das veröffentlichte Leaderboard es mit 44 % pass@1 auf Platz eins unter den offenen Modellen setzt. | Benchmark |
-| [Case 71: Temple Run Voxel Game One-Shot](#case-71) | Nutze diesen Fall, um GLM-5.2 bei der Spieleerzeugung aus einem einzigen Prompt zu stresstesten und anschließend zu prüfen, was in einem visuell reichen Build noch iterativ korrigiert werden muss. | Demo |
-| [Case 72: LLM Debate Benchmark Runner-Up](#case-72) | Nutze diesen Fall, um GLM-5.2 jenseits von Coding-Aufgaben in adversarialen Multi-Turn-Debatten zu bewerten, wo die Max-Reasoning-Variante hinter Claude-Modellen den zweiten Platz erreichte. | Benchmark |
-| [Case 73: Code Censorship And Bias Check](#case-73) | Nutze diesen Fall als praktisches Sicherheitssignal für Code- und Political-Bias-Tests, nicht als Beleg dafür, dass breitere Alignment-Fragen bereits gelöst sind. | Limit |
-| [Case 74: Browser Use QA Subagents For Web Design](#case-74) | Nutze diesen Fall, um GLM-5.2 mit Browser Use v2 Multimodal-QA-Subagents zu koppeln, wenn ein reines Textmodell visuelle Prüfung und iterative Website-Fixes braucht. | Integration |
-| [Case 75: Hard Reasoning Billing Failure](#case-75) | Nutze diesen Fall, um GLM-5.2 bei schwierigen Reasoning-Workloads vorsichtig zu testen, weil der öffentliche Bericht lange Laufzeiten, niedrige Abschlussraten und unerwartet hohe abgerechnete Ausgabe zeigt. | Limit |
-| [Case 76: AA-Omniscience Hallucination Rate](#case-76) | Nutze diesen Fall, um GLM-5.2 beim Umgang mit Unsicherheit zu vergleichen, wo das veröffentlichte AA-Omniscience-Ergebnis eine niedrigere Halluzinationsrate als bei mehreren anderen Frontier-Modellen zeigt. | Evaluation |
-| [Case 77: Production Marketing Agent Stack Routing](#case-77) | Nutze diesen Fall, um GLM-5.2 in produktive Agent-Workflows zu routen, die Struktur, Geschwindigkeit und Self-Hosting schätzen, während stärkere geschlossene Modelle für mehrdeutige Urteilsfragen reserviert bleiben. | Evaluation |
-| [Case 78: OpenCode Go One-Shot Example Set](#case-78) | Nutze diesen Fall, um GLM-5.2 bei schnellen One-Shot-Builds in OpenCode Go zu benchmarken, bevor es in offenere Agent-Loops eingebunden wird. | Demo |
-| [Case 79: ZCode Official IDE Daily Free Tokens](#case-79) | Nutze diesen Fall, um über ZCode auf GLM-5.2 zuzugreifen, wenn du eine kostenlose offizielle Coding-IDE mit großen täglichen Token-Kontingenten und einem Cursor-ähnlichen Workflow willst. | Tutorial |
-
-<a id="case-70"></a>
-### Case 70: [DeepSWE Max-Effort Open-Source Lead](https://x.com/datacurve/status/2068473057107476680) (von [@datacurve](https://x.com/datacurve))
-
-**Nutze diesen Fall, um GLM-5.2 auf DeepSWE im Max-Effort-Modus zu verfolgen, wo das veröffentlichte Leaderboard es mit 44 % pass@1 auf Platz eins unter den offenen Modellen setzt.**
-
-DataCurve teilte ein DeepSWE-Leaderboard-Update, das GLM-5.2 mit 44 % pass@1 und 17 Punkten Vorsprung vor Kimi K2.7 Code unter den offenen Modellen zeigt. Behandle das als Benchmark-Update, nicht als Beweis dafür, dass bereits jeder reale Agent-Workflow gelöst ist.
-
-Type: Benchmark | Date: 2026-06-20
-
----
-
-<a id="case-71"></a>
-### Case 71: [Temple Run Voxel Game One-Shot](https://x.com/pseudokid/status/2068431546143649829) (von [@pseudokid](https://x.com/pseudokid))
-
-**Nutze diesen Fall, um GLM-5.2 bei der Spieleerzeugung aus einem einzigen Prompt zu stresstesten und anschließend zu prüfen, was in einem visuell reichen Build noch iterativ korrigiert werden muss.**
-
-Der Autor berichtet, dass er den Großteil eines von Temple Run inspirierten Voxel-Biker-Games im ersten Turn erhalten hat und danach nur wenige Folge-Pässe für Kamera- und Bewegungs-Fixes brauchte. Der Post erwähnt außerdem, dass Z.ai-Tooling Screenshots und Gameplay-Videos erzeugen kann, damit das Textmodell das Ergebnis besser bewertet.
-
-Type: Demo | Date: 2026-06-20
-
----
-
-<a id="case-72"></a>
-### Case 72: [LLM Debate Benchmark Runner-Up](https://x.com/LechMazur/status/2068428300460974279) (von [@LechMazur](https://x.com/LechMazur))
-
-**Nutze diesen Fall, um GLM-5.2 jenseits von Coding-Aufgaben in adversarialen Multi-Turn-Debatten zu bewerten, wo die Max-Reasoning-Variante hinter Claude-Modellen den zweiten Platz erreichte.**
-
-Lech Mazur teilte ein Ergebnis des LLM Debate Benchmark, in dem GLM-5.2 Max den zweiten Platz belegt. Der Benchmark misst adversariale Multi-Turn-Debatten über breite Themenfelder hinweg und ist damit ein Reasoning-Signal außerhalb klassischer Coding-Leaderboards.
-
-Type: Benchmark | Date: 2026-06-20
 
 ---
 
@@ -1029,17 +1074,6 @@ Type: Limit | Date: 2026-06-20
 
 ---
 
-<a id="case-74"></a>
-### Case 74: [Browser Use QA Subagents For Web Design](https://x.com/browser_use/status/2068405699340853541) (von [@browser_use](https://x.com/browser_use))
-
-**Nutze diesen Fall, um GLM-5.2 mit Browser Use v2 Multimodal-QA-Subagents zu koppeln, wenn ein reines Textmodell visuelle Prüfung und iterative Website-Fixes braucht.**
-
-Browser Use berichtet, dass GLM-5.2 Fable 5 bei einer Website-Design-Aufgabe geschlagen habe und anschließend QA-Subagents hinzugefügt wurden, die das Ergebnis inspizieren, Ästhetik bewerten, Bugs finden und gezielte Fixes an GLM zurückspielen. Der vollständige Build-plus-QA-Loop soll dabei unter 0,75 US-Dollar gekostet haben.
-
-Type: Integration | Date: 2026-06-20
-
----
-
 <a id="case-75"></a>
 ### Case 75: [Hard Reasoning Billing Failure](https://x.com/s_batzoglou/status/2068297051247350154) (von [@s_batzoglou](https://x.com/s_batzoglou))
 
@@ -1051,49 +1085,6 @@ Type: Limit | Date: 2026-06-20
 
 ---
 
-<a id="case-76"></a>
-### Case 76: [AA-Omniscience Hallucination Rate](https://x.com/yuhasbeentaken/status/2068259921519423855) (von [@yuhasbeentaken](https://x.com/yuhasbeentaken))
-
-**Nutze diesen Fall, um GLM-5.2 beim Umgang mit Unsicherheit zu vergleichen, wo das veröffentlichte AA-Omniscience-Ergebnis eine niedrigere Halluzinationsrate als bei mehreren anderen Frontier-Modellen zeigt.**
-
-Der Post meldet für GLM-5.2 auf AA-Omniscience eine Halluzinationsrate von 28 % und damit niedrigere Werte als bei Fable 5 und DeepSeek V4 Pro. Der Benchmark ist darauf ausgerichtet, ob Modelle Unsicherheit eingestehen oder verweigern, statt zu raten.
-
-Type: Evaluation | Date: 2026-06-20
-
----
-
-<a id="case-77"></a>
-### Case 77: [Production Marketing Agent Stack Routing](https://x.com/DeRonin_/status/2068303752671477820) (von [@DeRonin_](https://x.com/DeRonin_))
-
-**Nutze diesen Fall, um GLM-5.2 in produktive Agent-Workflows zu routen, die Struktur, Geschwindigkeit und Self-Hosting schätzen, während stärkere geschlossene Modelle für mehrdeutige Urteilsfragen reserviert bleiben.**
-
-Nach einem sechstägigen Side-by-Side-Lauf in einem Agentur-Stack sagt der Autor, GLM-5.2 habe über 60 Agent-Schritte gehalten, strukturierte Formate über 800-mal in Folge getroffen und selbst gehostet mit niedriger Latenz geliefert. Derselbe Post bevorzugt für voice-kritische oder mehrdeutige Aufgaben weiterhin Opus, wodurch gerade diese Routing-Regel der nützliche Takeaway ist.
-
-Type: Evaluation | Date: 2026-06-20
-
----
-
-<a id="case-78"></a>
-### Case 78: [OpenCode Go One-Shot Example Set](https://x.com/LyalinDotCom/status/2068378281636982990) (von [@LyalinDotCom](https://x.com/LyalinDotCom))
-
-**Nutze diesen Fall, um GLM-5.2 bei schnellen One-Shot-Builds in OpenCode Go zu benchmarken, bevor es in offenere Agent-Loops eingebunden wird.**
-
-Der Autor berichtet von One-Shot-Beispielen für eine Solar-System-Web-App, eine System-Info-Electron-App und ein einfaches Explore-Island-Webgame über OpenCode Go. Im selben Post sagt er außerdem, GLM-5.2 sei das beste offene Modell, das er bisher genutzt habe, ohne es bereits als frontier-gleich einzustufen.
-
-Type: Demo | Date: 2026-06-20
-
----
-
-<a id="case-79"></a>
-### Case 79: [ZCode Official IDE Daily Free Tokens](https://x.com/Alan_Earn/status/2068223665268006924) (von [@Alan_Earn](https://x.com/Alan_Earn))
-
-**Nutze diesen Fall, um über ZCode auf GLM-5.2 zuzugreifen, wenn du eine kostenlose offizielle Coding-IDE mit großen täglichen Token-Kontingenten und einem Cursor-ähnlichen Workflow willst.**
-
-Der Post beschreibt ZCode als Zhipus offizielle Coding-IDE mit GLM-5.2 als Standardmodell, 3 Mio. Tokens pro Tag, 1 Mio. Kontext und Clients für Mac und Windows. Außerdem enthält er einen kurzen Setup-Ablauf und ist damit handlungsnäher als eine generische Launch-Ankündigung.
-
-Type: Tutorial | Date: 2026-06-20
-
----
 
 <a id="acknowledge"></a>
 ## 🙏 Danksagung
