@@ -37,7 +37,7 @@
 
 ## 📊 總覽
 
-- **69 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
+- **79 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
 - Covers Benchmark 與前沿評測, Coding Agent 與長上下文工作流, 上手 Demo 與 Showcase, 供應商與工具整合, 成本、定價與本地部署, 限制、Caveat 與安全訊號.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - 你可以用這個 repo 尋找實用工作流、比較優勢與限制、探索供應商路徑，並追蹤真實上手實驗。
@@ -84,6 +84,7 @@ curl --request POST \
 | [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | Case 43-51 |
 | [🧭 限制、Caveat 與安全訊號](#limits-caveats-safety-signals) | Case 52-59 |
 | [🗓️ 每日更新 - 2026-06-20](#daily-update-2026-06-20) | 案例 60-69 |
+| [🗓️ 每日更新 - 2026-06-21](#daily-update-2026-06-21) | 案例 70-79 |
 | [🙏 致謝](#acknowledge) | 來源致謝與修正政策 |
 
 ### [📏 Benchmark 與前沿評測](#benchmarks-frontier-evaluation)
@@ -968,12 +969,138 @@ The source reports GLM-5.2 running four times faster at full 1M context and show
 
 ---
 
+<a id="daily-update-2026-06-21"></a>
+## 🗓️ 每日更新 - 2026-06-21
+
+| Case | 展示重點 | 類型 |
+|---|---|---|
+| [Case 70: DeepSWE 高強度模式開源領先](#case-70) | 用這個案例追蹤 GLM-5.2 在 DeepSWE 高強度設定下的表現；貼文榜單顯示它以 44% pass@1 位列開源模型第一。 | Benchmark |
+| [Case 71: Temple Run 體素遊戲單次生成](#case-71) | 用這個案例高壓測試 GLM-5.2 的單提示詞遊戲生成能力，再查看一個視覺元素較多的建置仍需要哪些迭代修正。 | Demo |
+| [Case 72: LLM 辯論基準第二名](#case-72) | 用這個案例評估 GLM-5.2 在編碼之外的對抗式多輪辯論表現；max-reasoning 版本在結果中位列 Claude 系列之後的第二名。 | Benchmark |
+| [Case 73: 程式碼審查與偏見檢查](#case-73) | 用這個案例作為程式碼與政治偏見測試的實務安全訊號，而不是把它當成更廣泛對齊問題已經解決的證明。 | Limit |
+| [Case 74: 面向網頁設計的 Browser Use QA 子代理](#case-74) | 當純文字模型需要視覺檢查與迭代式網站修復時，可用這個案例把 GLM-5.2 與 Browser Use v2 多模態 QA 子代理搭配起來。 | Integration |
+| [Case 75: 高難推理計費異常](#case-75) | 用這個案例謹慎測試 GLM-5.2 在高難推理負載上的表現，因為公開報告顯示它執行時間長、完成率低，而且計費輸出異常偏高。 | Limit |
+| [Case 76: AA-Omniscience 幻覺率](#case-76) | 用這個案例比較 GLM-5.2 的不確定性處理能力；貼文中的 AA-Omniscience 結果顯示，它的幻覺率低於若干其他前沿模型。 | Evaluation |
+| [Case 77: 生產級行銷 Agent 棧路由策略](#case-77) | 用這個案例把 GLM-5.2 路由到重視結構化、速度與自託管的生產 Agent 工作流中，同時把更強的閉源模型留給模糊判斷任務。 | Evaluation |
+| [Case 78: OpenCode Go 單次生成案例集](#case-78) | 用這個案例在 OpenCode Go 裡快速基準測試 GLM-5.2 的單次生成建置能力，再決定是否投入更開放式的 Agent 迴圈。 | Demo |
+| [Case 79: ZCode 官方 IDE 每日免費額度](#case-79) | 當你想要一個帶大額每日免費 token、互動體驗類似 Cursor 的官方編碼 IDE 時，可用這個案例透過 ZCode 存取 GLM-5.2。 | Tutorial |
+
+<a id="case-70"></a>
+### Case 70: [DeepSWE 高強度模式開源領先](https://x.com/datacurve/status/2068473057107476680) (作者 [@datacurve](https://x.com/datacurve))
+
+**用這個案例追蹤 GLM-5.2 在 DeepSWE 高強度設定下的表現；貼文榜單顯示它以 44% pass@1 位列開源模型第一。**
+
+DataCurve 分享的 DeepSWE 榜單更新顯示，GLM-5.2 在開源模型中達到 44% pass@1，並領先 Kimi K2.7 Code 17 個點。應把它視為一次 benchmark 更新，而不是所有真實世界 agent 工作流都已被解決的證明。
+
+類型: Benchmark | 日期: 2026-06-20
+
+---
+
+<a id="case-71"></a>
+### Case 71: [Temple Run 體素遊戲單次生成](https://x.com/pseudokid/status/2068431546143649829) (作者 [@pseudokid](https://x.com/pseudokid))
+
+**用這個案例高壓測試 GLM-5.2 的單提示詞遊戲生成能力，再查看一個視覺元素較多的建置仍需要哪些迭代修正。**
+
+作者表示，首輪提示就生成出大部分 Temple Run 風格的體素摩托遊戲，之後只用少量補充輪次修正鏡頭與移動邏輯。貼文也提到 Z.ai 工具鏈可以生成截圖與實機影片，幫助文字模型評估結果。
+
+類型: Demo | 日期: 2026-06-20
+
+---
+
+<a id="case-72"></a>
+### Case 72: [LLM 辯論基準第二名](https://x.com/LechMazur/status/2068428300460974279) (作者 [@LechMazur](https://x.com/LechMazur))
+
+**用這個案例評估 GLM-5.2 在編碼之外的對抗式多輪辯論表現；max-reasoning 版本在結果中位列 Claude 系列之後的第二名。**
+
+Lech Mazur 分享了一項 LLM Debate Benchmark 結果，其中 GLM-5.2 Max 排名第二。這個基準衡量的是跨廣泛主題的對抗式多輪辯論能力，因此它提供的是編碼榜單之外的推理訊號。
+
+類型: Benchmark | 日期: 2026-06-20
+
+---
+
+<a id="case-73"></a>
+### Case 73: [程式碼審查與偏見檢查](https://x.com/wongmjane/status/2068424945663893936) (作者 [@wongmjane](https://x.com/wongmjane))
+
+**用這個案例作為程式碼與政治偏見測試的實務安全訊號，而不是把它當成更廣泛對齊問題已經解決的證明。**
+
+作者稱，GLM-5.2 沒有把中國政治審查內容注入到程式碼中；同時它也糾正了一個關於越南戰爭的錯誤「美國偏見」說法，而對偏意見類問題保持不變。這使它成為測試政治敏感編碼行為與事實性表現的一個具體公開案例。
+
+類型: Limit | 日期: 2026-06-20
+
+---
+
+<a id="case-74"></a>
+### Case 74: [面向網頁設計的 Browser Use QA 子代理](https://x.com/browser_use/status/2068405699340853541) (作者 [@browser_use](https://x.com/browser_use))
+
+**當純文字模型需要視覺檢查與迭代式網站修復時，可用這個案例把 GLM-5.2 與 Browser Use v2 多模態 QA 子代理搭配起來。**
+
+Browser Use 表示，GLM-5.2 在一個網站設計任務中超過了 Fable 5，接著又加入 QA 子代理來檢查結果、判斷美感、找出 bug，並把定向修復建議回傳給 GLM。整套 build 加 QA 的循環據稱成本低於 0.75 美元。
+
+類型: Integration | 日期: 2026-06-20
+
+---
+
+<a id="case-75"></a>
+### Case 75: [高難推理計費異常](https://x.com/s_batzoglou/status/2068297051247350154) (作者 [@s_batzoglou](https://x.com/s_batzoglou))
+
+**用這個案例謹慎測試 GLM-5.2 在高難推理負載上的表現，因為公開報告顯示它執行時間長、完成率低，而且計費輸出異常偏高。**
+
+作者執行了 11 個歸納推理題，只回報 4 個完成、2 個答對、多小時級執行時間，以及明顯高於可見 token 數的收費。這是關於推理效率與計費行為的具體警示，不只是 benchmark 分數問題。
+
+類型: Limit | 日期: 2026-06-20
+
+---
+
+<a id="case-76"></a>
+### Case 76: [AA-Omniscience 幻覺率](https://x.com/yuhasbeentaken/status/2068259921519423855) (作者 [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+
+**用這個案例比較 GLM-5.2 的不確定性處理能力；貼文中的 AA-Omniscience 結果顯示，它的幻覺率低於若干其他前沿模型。**
+
+貼文報告 GLM-5.2 在 AA-Omniscience 上的幻覺率為 28%，低於 Fable 5 與 DeepSeek V4 Pro 的對應結果。這個基準關注的是模型在不確定時是否會拒答或承認不確定，而不是繼續猜測。
+
+類型: Evaluation | 日期: 2026-06-20
+
+---
+
+<a id="case-77"></a>
+### Case 77: [生產級行銷 Agent 棧路由策略](https://x.com/DeRonin_/status/2068303752671477820) (作者 [@DeRonin_](https://x.com/DeRonin_))
+
+**用這個案例把 GLM-5.2 路由到重視結構化、速度與自託管的生產 Agent 工作流中，同時把更強的閉源模型留給模糊判斷任務。**
+
+作者在代理機構棧中做了 6 天並行對比後表示，GLM-5.2 在開始漂移前可穩定執行 60 多個 agent 步驟，連續 800 多次匹配結構化格式，並提供低延遲的自託管回應。同一則貼文仍偏好用 Opus 處理語音關鍵或高歧義任務，因此真正有價值的是這條路由規則本身。
+
+類型: Evaluation | 日期: 2026-06-20
+
+---
+
+<a id="case-78"></a>
+### Case 78: [OpenCode Go 單次生成案例集](https://x.com/LyalinDotCom/status/2068378281636982990) (作者 [@LyalinDotCom](https://x.com/LyalinDotCom))
+
+**用這個案例在 OpenCode Go 裡快速基準測試 GLM-5.2 的單次生成建置能力，再決定是否投入更開放式的 Agent 迴圈。**
+
+作者展示了一組透過 OpenCode Go 完成的單次生成案例，包括太陽系 Web 應用、系統資訊 Electron 應用，以及一個簡單的探索小島 Web 遊戲。同一則貼文也表示，GLM-5.2 是他用過最強的開源模型，但還沒有把它稱作與最前沿閉源模型完全同級。
+
+類型: Demo | 日期: 2026-06-20
+
+---
+
+<a id="case-79"></a>
+### Case 79: [ZCode 官方 IDE 每日免費額度](https://x.com/Alan_Earn/status/2068223665268006924) (作者 [@Alan_Earn](https://x.com/Alan_Earn))
+
+**當你想要一個帶大額每日免費 token、互動體驗類似 Cursor 的官方編碼 IDE 時，可用這個案例透過 ZCode 存取 GLM-5.2。**
+
+貼文將 ZCode 描述為智譜官方編碼 IDE，預設模型就是 GLM-5.2，並提供每日 300 萬 token、100 萬上下文視窗，以及 Mac 和 Windows 用戶端。它還包含一段簡短的上手流程，因此比一般的上線公告更具可操作性。
+
+類型: Tutorial | 日期: 2026-06-20
+
+---
+
 <a id="acknowledge"></a>
 ## 🙏 致謝
 
 本倉庫來自公開分享 GLM-5.2 使用證據的創作者、開發者、benchmark 團隊、供應商與社群。
 
-感謝這些高訊號來源創作者：[@ArtificialAnlys](https://x.com/ArtificialAnlys)、[@arena](https://x.com/arena)、[@Designarena](https://x.com/Designarena)、[@ProximalHQ](https://x.com/ProximalHQ)、[@AiBattle_](https://x.com/AiBattle_)、[@cline](https://x.com/cline)、[@gosrum](https://x.com/gosrum)、[@bridgemindai](https://x.com/bridgemindai)、[@bridgebench](https://x.com/bridgebench)、[@elliotarledge](https://x.com/elliotarledge)、[@maxbittker](https://x.com/maxbittker)、[@KELMAND1](https://x.com/KELMAND1)、[@altudev](https://x.com/altudev)、[@AskVenice](https://x.com/AskVenice)、[@atomic_chat_hq](https://x.com/atomic_chat_hq)、[@anshuc](https://x.com/anshuc)、[@laozhang2579](https://x.com/laozhang2579)、[@zcode_ai](https://x.com/zcode_ai)、[@0xSero](https://x.com/0xSero)、[@laogui](https://x.com/laogui)、[@aimlapi](https://x.com/aimlapi)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@grx_xce](https://x.com/grx_xce)、[@askalphaxiv](https://x.com/askalphaxiv)、[@emollick](https://x.com/emollick)、[@opencode](https://x.com/opencode)、[@ollama](https://x.com/ollama)、[@OpenRouter](https://x.com/OpenRouter)、[@vllm_project](https://x.com/vllm_project)、[@NotionHQ](https://x.com/NotionHQ)、[@FireworksAI_HQ](https://x.com/FireworksAI_HQ)、[@CarolGLMs](https://x.com/CarolGLMs)、[@CommandCodeAI](https://x.com/CommandCodeAI)、[@Teknium](https://x.com/Teknium)、[@ionet](https://x.com/ionet)、[@clattner_llvm](https://x.com/clattner_llvm)、[@Hesamation](https://x.com/Hesamation)、[@Jeyffre](https://x.com/Jeyffre)、[@pcuenq](https://x.com/pcuenq)、[@ai_xiaomu](https://x.com/ai_xiaomu)、[@RoundtableSpace](https://x.com/RoundtableSpace)、[@JZiyue_](https://x.com/JZiyue_)、[@nahcrof](https://x.com/nahcrof)、[@scaling01](https://x.com/scaling01)、[@sawyerhood](https://x.com/sawyerhood)、[@ml_angelopoulos](https://x.com/ml_angelopoulos)、[@VittoStack](https://x.com/VittoStack)、[@josepha_mayo](https://x.com/josepha_mayo)、[@k_matsumaru](https://x.com/k_matsumaru)、[@nikhilchandak29](https://x.com/nikhilchandak29)。
+感謝這些高訊號來源創作者：[@ArtificialAnlys](https://x.com/ArtificialAnlys)、[@arena](https://x.com/arena)、[@Designarena](https://x.com/Designarena)、[@ProximalHQ](https://x.com/ProximalHQ)、[@AiBattle_](https://x.com/AiBattle_)、[@cline](https://x.com/cline)、[@gosrum](https://x.com/gosrum)、[@bridgemindai](https://x.com/bridgemindai)、[@bridgebench](https://x.com/bridgebench)、[@elliotarledge](https://x.com/elliotarledge)、[@maxbittker](https://x.com/maxbittker)、[@KELMAND1](https://x.com/KELMAND1)、[@altudev](https://x.com/altudev)、[@AskVenice](https://x.com/AskVenice)、[@atomic_chat_hq](https://x.com/atomic_chat_hq)、[@anshuc](https://x.com/anshuc)、[@laozhang2579](https://x.com/laozhang2579)、[@zcode_ai](https://x.com/zcode_ai)、[@0xSero](https://x.com/0xSero)、[@laogui](https://x.com/laogui)、[@aimlapi](https://x.com/aimlapi)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@grx_xce](https://x.com/grx_xce)、[@askalphaxiv](https://x.com/askalphaxiv)、[@emollick](https://x.com/emollick)、[@opencode](https://x.com/opencode)、[@ollama](https://x.com/ollama)、[@OpenRouter](https://x.com/OpenRouter)、[@vllm_project](https://x.com/vllm_project)、[@NotionHQ](https://x.com/NotionHQ)、[@FireworksAI_HQ](https://x.com/FireworksAI_HQ)、[@CarolGLMs](https://x.com/CarolGLMs)、[@CommandCodeAI](https://x.com/CommandCodeAI)、[@Teknium](https://x.com/Teknium)、[@ionet](https://x.com/ionet)、[@clattner_llvm](https://x.com/clattner_llvm)、[@Hesamation](https://x.com/Hesamation)、[@Jeyffre](https://x.com/Jeyffre)、[@pcuenq](https://x.com/pcuenq)、[@ai_xiaomu](https://x.com/ai_xiaomu)、[@RoundtableSpace](https://x.com/RoundtableSpace)、[@JZiyue_](https://x.com/JZiyue_)、[@nahcrof](https://x.com/nahcrof)、[@scaling01](https://x.com/scaling01)、[@sawyerhood](https://x.com/sawyerhood)、[@ml_angelopoulos](https://x.com/ml_angelopoulos)、[@VittoStack](https://x.com/VittoStack)、[@josepha_mayo](https://x.com/josepha_mayo)、[@k_matsumaru](https://x.com/k_matsumaru)、[@nikhilchandak29](https://x.com/nikhilchandak29)、[@datacurve](https://x.com/datacurve)、[@pseudokid](https://x.com/pseudokid)、[@LechMazur](https://x.com/LechMazur)、[@wongmjane](https://x.com/wongmjane)、[@browser_use](https://x.com/browser_use)、[@s_batzoglou](https://x.com/s_batzoglou)、[@yuhasbeentaken](https://x.com/yuhasbeentaken)、[@DeRonin_](https://x.com/DeRonin_)、[@LyalinDotCom](https://x.com/LyalinDotCom)、[@Alan_Earn](https://x.com/Alan_Earn)。
 
 *我們無法保證每個案例都已歸屬到最初原創者。如果需要修正來源或署名，請聯絡我們，我們會更新。*
 

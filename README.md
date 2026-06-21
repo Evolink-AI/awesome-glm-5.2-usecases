@@ -37,7 +37,7 @@ Each case title links to its public source, and each author handle links to the 
 
 ## 📊 Overview
 
-- **69 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
+- **79 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
 - Covers Benchmarks & Frontier Evaluation, Coding Agents & Long-Context Workflows, Hands-On Demos & Showcase Builds, Provider & Tool Integrations, Cost, Pricing & Local Deployment, Limits, Caveats & Safety Signals.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Use this repo to find practical workflows, compare strengths and limits, discover provider routes, and follow real hands-on experiments.
@@ -84,6 +84,7 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51 |
 | [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals) | Case 52-59 |
 | [🗓️ Daily Update - 2026-06-20](#daily-update-2026-06-20) | Cases 60-69 |
+| [🗓️ Daily Update - 2026-06-21](#daily-update-2026-06-21) | Cases 70-79 |
 | [🙏 Acknowledge](#acknowledge) | Credits and correction policy |
 
 ### [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation)
@@ -968,12 +969,138 @@ Type: Integration | Date: 2026-06-20
 
 ---
 
+<a id="daily-update-2026-06-21"></a>
+## 🗓️ Daily Update - 2026-06-21
+
+| Case | What it shows | Type |
+|---|---|---|
+| [Case 70: DeepSWE Max-Effort Open-Source Lead](#case-70) | Use this case to track GLM-5.2 on DeepSWE at max effort, where the posted leaderboard puts it first among open models with a 44% pass@1 score. | Benchmark |
+| [Case 71: Temple Run Voxel Game One-Shot](#case-71) | Use this case to stress-test GLM-5.2 on single-prompt game generation, then inspect what still needs iterative correction in a visually rich build. | Demo |
+| [Case 72: LLM Debate Benchmark Runner-Up](#case-72) | Use this case to evaluate GLM-5.2 beyond coding tasks on adversarial multi-turn debate, where the max-reasoning variant placed second behind Claude models. | Benchmark |
+| [Case 73: Code Censorship And Bias Check](#case-73) | Use this case as a practical safety signal for code and political-bias testing, not as proof that broader alignment concerns are settled. | Limit |
+| [Case 74: Browser Use QA Subagents For Web Design](#case-74) | Use this case to pair GLM-5.2 with Browser Use v2 multimodal QA subagents when a text-only model needs visual inspection and iterative website fixes. | Integration |
+| [Case 75: Hard Reasoning Billing Failure](#case-75) | Use this case to test GLM-5.2 carefully on hard reasoning workloads, because the public report shows long runtimes, low completion, and unexpectedly high billed output. | Limit |
+| [Case 76: AA-Omniscience Hallucination Rate](#case-76) | Use this case to compare GLM-5.2 on uncertainty handling, where the posted AA-Omniscience result shows a lower hallucination rate than several other frontier models. | Evaluation |
+| [Case 77: Production Marketing Agent Stack Routing](#case-77) | Use this case to route GLM-5.2 into production agent workflows that value structure, speed, and self-hosting, while keeping stronger closed models for ambiguous judgment calls. | Evaluation |
+| [Case 78: OpenCode Go One-Shot Example Set](#case-78) | Use this case to benchmark GLM-5.2 on quick one-shot builds inside OpenCode Go before committing it to more open-ended agent loops. | Demo |
+| [Case 79: ZCode Official IDE Daily Free Tokens](#case-79) | Use this case to access GLM-5.2 through ZCode when you want a free official coding IDE with large daily token allowances and a Cursor-like workflow. | Tutorial |
+
+<a id="case-70"></a>
+### Case 70: [DeepSWE Max-Effort Open-Source Lead](https://x.com/datacurve/status/2068473057107476680) (by [@datacurve](https://x.com/datacurve))
+
+**Use this case to track GLM-5.2 on DeepSWE at max effort, where the posted leaderboard puts it first among open models with a 44% pass@1 score.**
+
+DataCurve shared a DeepSWE leaderboard update showing GLM-5.2 at 44% pass@1 and 17 points ahead of Kimi K2.7 Code among open models. Treat it as a benchmark update, not as proof that every real-world agent workflow is already solved.
+
+Type: Benchmark | Date: 2026-06-20
+
+---
+
+<a id="case-71"></a>
+### Case 71: [Temple Run Voxel Game One-Shot](https://x.com/pseudokid/status/2068431546143649829) (by [@pseudokid](https://x.com/pseudokid))
+
+**Use this case to stress-test GLM-5.2 on single-prompt game generation, then inspect what still needs iterative correction in a visually rich build.**
+
+The author reports getting most of a Temple Run-inspired voxel biker game on the first turn, then using a few follow-up passes for camera and movement fixes. The post also notes that Z.ai tooling can generate screenshots and gameplay videos to help the text model evaluate the result.
+
+Type: Demo | Date: 2026-06-20
+
+---
+
+<a id="case-72"></a>
+### Case 72: [LLM Debate Benchmark Runner-Up](https://x.com/LechMazur/status/2068428300460974279) (by [@LechMazur](https://x.com/LechMazur))
+
+**Use this case to evaluate GLM-5.2 beyond coding tasks on adversarial multi-turn debate, where the max-reasoning variant placed second behind Claude models.**
+
+Lech Mazur shared an LLM Debate Benchmark result that places GLM-5.2 Max in second place. The benchmark measures adversarial multi-turn debates across broad topics, making it a reasoning signal outside standard coding leaderboards.
+
+Type: Benchmark | Date: 2026-06-20
+
+---
+
+<a id="case-73"></a>
+### Case 73: [Code Censorship And Bias Check](https://x.com/wongmjane/status/2068424945663893936) (by [@wongmjane](https://x.com/wongmjane))
+
+**Use this case as a practical safety signal for code and political-bias testing, not as proof that broader alignment concerns are settled.**
+
+The author says GLM-5.2 did not inject Chinese political censorship into code, and separately corrected a false US-bias claim about the Vietnam War while leaving opinion-like cases unchanged. That makes it a concrete public example for testing politically sensitive coding and factuality behavior.
+
+Type: Limit | Date: 2026-06-20
+
+---
+
+<a id="case-74"></a>
+### Case 74: [Browser Use QA Subagents For Web Design](https://x.com/browser_use/status/2068405699340853541) (by [@browser_use](https://x.com/browser_use))
+
+**Use this case to pair GLM-5.2 with Browser Use v2 multimodal QA subagents when a text-only model needs visual inspection and iterative website fixes.**
+
+Browser Use reports GLM-5.2 beating Fable 5 on a website design task, then adding QA subagents that inspect the result, judge aesthetics, find bugs, and feed targeted fixes back to GLM. The full build-plus-QA loop reportedly cost under $0.75.
+
+Type: Integration | Date: 2026-06-20
+
+---
+
+<a id="case-75"></a>
+### Case 75: [Hard Reasoning Billing Failure](https://x.com/s_batzoglou/status/2068297051247350154) (by [@s_batzoglou](https://x.com/s_batzoglou))
+
+**Use this case to test GLM-5.2 carefully on hard reasoning workloads, because the public report shows long runtimes, low completion, and unexpectedly high billed output.**
+
+The author ran 11 induction problems and reports only four completions, two correct answers, multi-hour run times, and charges that looked far above the visible token count. This is a concrete warning about reasoning efficiency and billing behavior, not just benchmark score.
+
+Type: Limit | Date: 2026-06-20
+
+---
+
+<a id="case-76"></a>
+### Case 76: [AA-Omniscience Hallucination Rate](https://x.com/yuhasbeentaken/status/2068259921519423855) (by [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+
+**Use this case to compare GLM-5.2 on uncertainty handling, where the posted AA-Omniscience result shows a lower hallucination rate than several other frontier models.**
+
+The post reports a 28% hallucination rate for GLM-5.2 on AA-Omniscience, compared with higher rates for Fable 5 and DeepSeek V4 Pro. The benchmark is framed around whether models refuse or admit uncertainty instead of guessing.
+
+Type: Evaluation | Date: 2026-06-20
+
+---
+
+<a id="case-77"></a>
+### Case 77: [Production Marketing Agent Stack Routing](https://x.com/DeRonin_/status/2068303752671477820) (by [@DeRonin_](https://x.com/DeRonin_))
+
+**Use this case to route GLM-5.2 into production agent workflows that value structure, speed, and self-hosting, while keeping stronger closed models for ambiguous judgment calls.**
+
+After a six-day side-by-side run in an agency stack, the author says GLM-5.2 held 60-plus agent steps before drifting, matched structured formats 800-plus times in a row, and delivered low-latency self-hosted responses. The same post still prefers Opus for voice-critical or ambiguous tasks, making the routing rule itself the useful takeaway.
+
+Type: Evaluation | Date: 2026-06-20
+
+---
+
+<a id="case-78"></a>
+### Case 78: [OpenCode Go One-Shot Example Set](https://x.com/LyalinDotCom/status/2068378281636982990) (by [@LyalinDotCom](https://x.com/LyalinDotCom))
+
+**Use this case to benchmark GLM-5.2 on quick one-shot builds inside OpenCode Go before committing it to more open-ended agent loops.**
+
+The author reports one-shot examples spanning a solar-system web app, a system-info Electron app, and a simple explore-island web game via OpenCode Go. The same post also says GLM-5.2 is the best open model they have used while stopping short of calling it frontier-equal.
+
+Type: Demo | Date: 2026-06-20
+
+---
+
+<a id="case-79"></a>
+### Case 79: [ZCode Official IDE Daily Free Tokens](https://x.com/Alan_Earn/status/2068223665268006924) (by [@Alan_Earn](https://x.com/Alan_Earn))
+
+**Use this case to access GLM-5.2 through ZCode when you want a free official coding IDE with large daily token allowances and a Cursor-like workflow.**
+
+The post describes ZCode as Zhipu's official coding IDE, with GLM-5.2 as the default model, 3M daily tokens, 1M context, and Mac/Windows clients. It also includes a short setup flow, making it more actionable than a generic launch announcement.
+
+Type: Tutorial | Date: 2026-06-20
+
+---
+
 <a id="acknowledge"></a>
 ## 🙏 Acknowledge
 
 This repository was inspired by the creators, developers, benchmark teams, providers, and communities who shared real GLM-5.2 usage evidence publicly.
 
-Thanks to the high-signal source creators represented here: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29).
+Thanks to the high-signal source creators represented here: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn).
 
 *We cannot guarantee that every case is attributed to the original creator. If anything needs to be corrected, please contact us and we will update it.*
 

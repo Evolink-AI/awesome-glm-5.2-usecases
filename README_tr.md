@@ -37,7 +37,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **69 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **79 seçilmiş GLM-5.2 vakası**.
 - Covers Benchmark ve frontier değerlendirmesi, Kod ajanları ve uzun bağlam workflow’ları, Uygulamalı demolar ve showcase build’leri, Sağlayıcı ve araç entegrasyonları, Maliyet, fiyatlandırma ve yerel dağıtım, Sınırlar, caveat’ler ve güvenlik sinyalleri.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -84,6 +84,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51 |
 | [🧭 Sınırlar, caveat’ler ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59 |
 | [🗓️ Günlük güncelleme - 2026-06-20](#daily-update-2026-06-20) | Vakalar 60-69 |
+| [🗓️ Günlük güncelleme - 2026-06-21](#daily-update-2026-06-21) | Vakalar 70-79 |
 | [🙏 Teşekkür](#acknowledge) | Krediler ve düzeltme politikası |
 
 ### [📏 Benchmark ve frontier değerlendirmesi](#benchmarks-frontier-evaluation)
@@ -968,12 +969,138 @@ Tür: Integration | Tarih: 2026-06-20
 
 ---
 
+<a id="daily-update-2026-06-21"></a>
+## 🗓️ Günlük güncelleme - 2026-06-21
+
+| Vaka | Ne gösteriyor | Tür |
+|---|---|---|
+| [Case 70: DeepSWE Max-Effort Open-Source Lead](#case-70) | GLM-5.2’yi DeepSWE’de max effort modunda takip etmek için kullanın; paylaşılan leaderboard, modeli %44 pass@1 ile açık modeller arasında birinci gösteriyor. | Benchmark |
+| [Case 71: Temple Run Voxel Game One-Shot](#case-71) | GLM-5.2’yi tek prompt ile oyun üretiminde stres-test etmek için kullanın; ardından görsel olarak zengin bir build’de hâlâ hangi noktaların iteratif düzeltme istediğini inceleyin. | Demo |
+| [Case 72: LLM Debate Benchmark Runner-Up](#case-72) | GLM-5.2’yi kodlama dışındaki görevlerde, adversarial çok turlu tartışma benchmark’ında max-reasoning varyantının Claude modellerinin hemen arkasında ikinci olduğu bağlamda değerlendirmek için kullanın. | Benchmark |
+| [Case 73: Code Censorship And Bias Check](#case-73) | Bu vakayı kod ve politik önyargı testleri için pratik bir güvenlik sinyali olarak kullanın; daha geniş alignment endişelerinin tamamen çözüldüğünün kanıtı olarak değil. | Limit |
+| [Case 74: Browser Use QA Subagents For Web Design](#case-74) | Metin tabanlı bir model görsel inceleme ve iteratif web sitesi düzeltmeleri gerektirdiğinde, GLM-5.2’yi Browser Use v2 multimodal QA subagent’larıyla eşlemek için bu vakayı kullanın. | Integration |
+| [Case 75: Hard Reasoning Billing Failure](#case-75) | GLM-5.2’yi zor reasoning iş yüklerinde dikkatli test etmek için bu vakayı kullanın; herkese açık rapor uzun çalışma süreleri, düşük tamamlama oranı ve beklenmedik derecede yüksek faturalanan çıktı gösteriyor. | Limit |
+| [Case 76: AA-Omniscience Hallucination Rate](#case-76) | GLM-5.2’yi belirsizlik yönetimi açısından karşılaştırmak için kullanın; paylaşılan AA-Omniscience sonucu, bazı diğer frontier modellere göre daha düşük halüsinasyon oranı gösteriyor. | Evaluation |
+| [Case 77: Production Marketing Agent Stack Routing](#case-77) | GLM-5.2’yi yapı, hız ve self-hosting değer veren production agent workflow’larına yönlendirmek için kullanın; belirsiz yargı gerektiren durumlarda daha güçlü kapalı modelleri saklı tutun. | Evaluation |
+| [Case 78: OpenCode Go One-Shot Example Set](#case-78) | GLM-5.2’yi OpenCode Go içinde hızlı one-shot build’lerde benchmark etmek için kullanın; daha açık uçlu agent döngülerine bağlamadan önce kısa testler yapın. | Demo |
+| [Case 79: ZCode Official IDE Daily Free Tokens](#case-79) | Büyük günlük token kotası ve Cursor benzeri workflow sunan ücretsiz resmi bir coding IDE istediğinizde GLM-5.2’ye ZCode üzerinden erişmek için bu vakayı kullanın. | Tutorial |
+
+<a id="case-70"></a>
+### Case 70: [DeepSWE Max-Effort Open-Source Lead](https://x.com/datacurve/status/2068473057107476680) (tarafından [@datacurve](https://x.com/datacurve))
+
+**GLM-5.2’yi DeepSWE’de max effort modunda takip etmek için kullanın; paylaşılan leaderboard, modeli %44 pass@1 ile açık modeller arasında birinci gösteriyor.**
+
+DataCurve, GLM-5.2’nin açık modeller arasında %44 pass@1 ve Kimi K2.7 Code’a göre 17 puan farkla önde göründüğü bir DeepSWE leaderboard güncellemesi paylaştı. Bunu, her gerçek dünya agent workflow’unun zaten çözüldüğünün kanıtı olarak değil, bir benchmark güncellemesi olarak değerlendirin.
+
+Tür: Benchmark | Tarih: 2026-06-20
+
+---
+
+<a id="case-71"></a>
+### Case 71: [Temple Run Voxel Game One-Shot](https://x.com/pseudokid/status/2068431546143649829) (tarafından [@pseudokid](https://x.com/pseudokid))
+
+**GLM-5.2’yi tek prompt ile oyun üretiminde stres-test etmek için kullanın; ardından görsel olarak zengin bir build’de hâlâ hangi noktaların iteratif düzeltme istediğini inceleyin.**
+
+Yazar, Temple Run esintili voxel motosiklet oyununun büyük kısmını ilk turda aldığını, ardından kamera ve hareket düzeltmeleri için birkaç takip geçişi yaptığını söylüyor. Gönderi ayrıca Z.ai araçlarının ekran görüntüsü ve oynanış videosu üretebildiğini, bunun da metin modelinin sonucu değerlendirmesine yardımcı olduğunu belirtiyor.
+
+Tür: Demo | Tarih: 2026-06-20
+
+---
+
+<a id="case-72"></a>
+### Case 72: [LLM Debate Benchmark Runner-Up](https://x.com/LechMazur/status/2068428300460974279) (tarafından [@LechMazur](https://x.com/LechMazur))
+
+**GLM-5.2’yi kodlama dışındaki görevlerde, adversarial çok turlu tartışma benchmark’ında max-reasoning varyantının Claude modellerinin hemen arkasında ikinci olduğu bağlamda değerlendirmek için kullanın.**
+
+Lech Mazur, GLM-5.2 Max’i ikinci sıraya koyan bir LLM Debate Benchmark sonucu paylaştı. Benchmark, geniş konu yelpazesinde adversarial çok turlu tartışmaları ölçtüğü için standart coding leaderboard’larının dışında bir reasoning sinyali sunuyor.
+
+Tür: Benchmark | Tarih: 2026-06-20
+
+---
+
+<a id="case-73"></a>
+### Case 73: [Code Censorship And Bias Check](https://x.com/wongmjane/status/2068424945663893936) (tarafından [@wongmjane](https://x.com/wongmjane))
+
+**Bu vakayı kod ve politik önyargı testleri için pratik bir güvenlik sinyali olarak kullanın; daha geniş alignment endişelerinin tamamen çözüldüğünün kanıtı olarak değil.**
+
+Yazar, GLM-5.2’nin koda Çin siyasi sansürü enjekte etmediğini ve ayrıca Vietnam Savaşı hakkındaki hatalı bir ABD yanlılığı iddiasını düzeltirken görüş niteliğindeki örnekleri değiştirmediğini söylüyor. Bu da onu politik olarak hassas coding ve olgusallık davranışını test etmek için somut, herkese açık bir örnek yapıyor.
+
+Tür: Limit | Tarih: 2026-06-20
+
+---
+
+<a id="case-74"></a>
+### Case 74: [Browser Use QA Subagents For Web Design](https://x.com/browser_use/status/2068405699340853541) (tarafından [@browser_use](https://x.com/browser_use))
+
+**Metin tabanlı bir model görsel inceleme ve iteratif web sitesi düzeltmeleri gerektirdiğinde, GLM-5.2’yi Browser Use v2 multimodal QA subagent’larıyla eşlemek için bu vakayı kullanın.**
+
+Browser Use, GLM-5.2’nin bir web sitesi tasarım görevinde Fable 5’i geçtiğini, ardından sonucu inceleyen, estetiği değerlendiren, bug’ları bulan ve hedefli düzeltmeleri tekrar GLM’ye veren QA subagent’ları eklediğini bildiriyor. Tam build artı QA döngüsünün maliyetinin 0.75 doların altında olduğu da aktarılıyor.
+
+Tür: Integration | Tarih: 2026-06-20
+
+---
+
+<a id="case-75"></a>
+### Case 75: [Hard Reasoning Billing Failure](https://x.com/s_batzoglou/status/2068297051247350154) (tarafından [@s_batzoglou](https://x.com/s_batzoglou))
+
+**GLM-5.2’yi zor reasoning iş yüklerinde dikkatli test etmek için bu vakayı kullanın; herkese açık rapor uzun çalışma süreleri, düşük tamamlama oranı ve beklenmedik derecede yüksek faturalanan çıktı gösteriyor.**
+
+Yazar, 11 induction problemi çalıştırdığını ve yalnızca dört tamamlanma, iki doğru cevap, saatler süren çalışma süreleri ve görünen token sayısına göre çok daha yüksek görünen ücretler rapor ettiğini belirtiyor. Bu, yalnızca benchmark skoru değil, reasoning verimliliği ve faturalama davranışı açısından da somut bir uyarı.
+
+Tür: Limit | Tarih: 2026-06-20
+
+---
+
+<a id="case-76"></a>
+### Case 76: [AA-Omniscience Hallucination Rate](https://x.com/yuhasbeentaken/status/2068259921519423855) (tarafından [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+
+**GLM-5.2’yi belirsizlik yönetimi açısından karşılaştırmak için kullanın; paylaşılan AA-Omniscience sonucu, bazı diğer frontier modellere göre daha düşük halüsinasyon oranı gösteriyor.**
+
+Gönderi, GLM-5.2 için AA-Omniscience üzerinde %28 halüsinasyon oranı bildiriyor; bu oran Fable 5 ve DeepSeek V4 Pro’dan daha düşük. Benchmark, modellerin tahmin yürütmek yerine reddedip belirsizliği kabul edip etmediği etrafında çerçeveleniyor.
+
+Tür: Evaluation | Tarih: 2026-06-20
+
+---
+
+<a id="case-77"></a>
+### Case 77: [Production Marketing Agent Stack Routing](https://x.com/DeRonin_/status/2068303752671477820) (tarafından [@DeRonin_](https://x.com/DeRonin_))
+
+**GLM-5.2’yi yapı, hız ve self-hosting değer veren production agent workflow’larına yönlendirmek için kullanın; belirsiz yargı gerektiren durumlarda daha güçlü kapalı modelleri saklı tutun.**
+
+Yazar, bir ajans stack’inde altı günlük yan yana kullanımın ardından GLM-5.2’nin sapmadan 60’tan fazla agent adımı taşıdığını, yapılandırılmış formatları 800’den fazla kez art arda eşlediğini ve düşük gecikmeli self-hosted yanıtlar verdiğini söylüyor. Aynı gönderi yine de ses açısından kritik veya belirsiz görevlerde Opus’u tercih ediyor; bu da yönlendirme kuralını asıl faydalı çıkarım haline getiriyor.
+
+Tür: Evaluation | Tarih: 2026-06-20
+
+---
+
+<a id="case-78"></a>
+### Case 78: [OpenCode Go One-Shot Example Set](https://x.com/LyalinDotCom/status/2068378281636982990) (tarafından [@LyalinDotCom](https://x.com/LyalinDotCom))
+
+**GLM-5.2’yi OpenCode Go içinde hızlı one-shot build’lerde benchmark etmek için kullanın; daha açık uçlu agent döngülerine bağlamadan önce kısa testler yapın.**
+
+Yazar, OpenCode Go üzerinden güneş sistemi web uygulaması, sistem bilgisi Electron uygulaması ve basit bir explore-island web oyunu gibi one-shot örnekler paylaşıyor. Aynı gönderi, GLM-5.2’nin kullandıkları en iyi açık model olduğunu söylerken onu frontier ile tam eşit ilan etmekten kaçınıyor.
+
+Tür: Demo | Tarih: 2026-06-20
+
+---
+
+<a id="case-79"></a>
+### Case 79: [ZCode Official IDE Daily Free Tokens](https://x.com/Alan_Earn/status/2068223665268006924) (tarafından [@Alan_Earn](https://x.com/Alan_Earn))
+
+**Büyük günlük token kotası ve Cursor benzeri workflow sunan ücretsiz resmi bir coding IDE istediğinizde GLM-5.2’ye ZCode üzerinden erişmek için bu vakayı kullanın.**
+
+Gönderi, ZCode’u Zhipu’nun resmi coding IDE’si olarak tanımlıyor; GLM-5.2 varsayılan model, günlük 3M token, 1M context ve Mac/Windows istemcileri ile birlikte geliyor. Kısa bir kurulum akışı da içerdiği için genel bir lansman duyurusundan daha uygulanabilir.
+
+Tür: Tutorial | Tarih: 2026-06-20
+
+---
+
 <a id="acknowledge"></a>
 ## 🙏 Teşekkür
 
 This repository was inspired by public creators, developers, benchmark teams, providers, and communities who shared real GLM-5.2 usage evidence.
 
-Burada yer alan yüksek sinyalli kaynaklara ve üreticilere teşekkürler: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29).
+Burada yer alan yüksek sinyalli kaynaklara ve üreticilere teşekkürler: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 
