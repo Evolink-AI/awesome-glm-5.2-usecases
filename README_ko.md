@@ -213,7 +213,7 @@ curl --request POST \
 
 Artificial Analysis reported GLM-5.2 as the leading open-weights model on its Intelligence Index, with a score of 51 and a Pareto-frontier position on intelligence versus cost per task. The post also records model size, context window, pricing, and provider availability.
 
-Type: Benchmark | Date: 2026-06-17
+유형: Benchmark | 날짜: 2026-06-17
 
 ---
 
@@ -224,7 +224,7 @@ Type: Benchmark | Date: 2026-06-17
 
 The Arena account reported GLM-5.2 Max ranking second in Code Arena Frontend, ahead of other open models and close to the top frontier entry. The post is especially useful for front-end, React, HTML, gaming, simulation, and reference-based design use cases.
 
-Type: Benchmark | Date: 2026-06-16
+유형: Benchmark | 날짜: 2026-06-16
 
 ---
 
@@ -235,7 +235,7 @@ Type: Benchmark | Date: 2026-06-16
 
 Design Arena reported GLM-5.2 reaching first place with an Elo score of 1360, highlighting a jump in design-code performance for an open-weights model. Treat it as a design benchmark signal, not as a substitute for project-specific UI review.
 
-Type: Benchmark | Date: 2026-06-16
+유형: Benchmark | 날짜: 2026-06-16
 
 ---
 
@@ -246,7 +246,7 @@ Type: Benchmark | Date: 2026-06-16
 
 The post reports GLM-5.2 ranking third on FrontierSWE and frames it as one of the first open-weight models to narrow the gap with top proprietary models on implementation-heavy engineering work.
 
-Type: Benchmark | Date: 2026-06-16
+유형: Benchmark | 날짜: 2026-06-16
 
 ---
 
@@ -257,7 +257,7 @@ Type: Benchmark | Date: 2026-06-16
 
 AiBattle reported a 46.2% DeepSWE score for GLM-5.2 and described it as the highest score for an open-source model in that benchmark context.
 
-Type: Benchmark | Date: 2026-06-16
+유형: Benchmark | 날짜: 2026-06-16
 
 ---
 
@@ -268,7 +268,7 @@ Type: Benchmark | Date: 2026-06-16
 
 Cline highlighted GLM-5.2 as the first open-weights model to cross 80% on Terminal-Bench and positioned it as a frontier-level option for accessible tool-based development.
 
-Type: Benchmark | Date: 2026-06-16
+유형: Benchmark | 날짜: 2026-06-16
 
 ---
 
@@ -279,7 +279,7 @@ Type: Benchmark | Date: 2026-06-16
 
 The author shared a Japanese benchmark update where GLM-5.2 unexpectedly led GPT-5.5 on the latest SWELancer results across task success, earned reward, and time to complete, with two inaccessible tasks excluded.
 
-Type: Evaluation | Date: 2026-06-17
+유형: Evaluation | 날짜: 2026-06-17
 
 ---
 
@@ -290,7 +290,7 @@ Type: Evaluation | Date: 2026-06-17
 
 BridgeMind reported GLM-5.2 as the first model to receive a perfect score on the BridgeBench BS benchmark, making it a useful source for reasoning-heavy evaluation claims.
 
-Type: Benchmark | Date: 2026-06-13
+유형: Benchmark | 날짜: 2026-06-13
 
 ---
 
@@ -301,7 +301,7 @@ Type: Benchmark | Date: 2026-06-13
 
 BridgeBench reported GLM-5.2 taking the number one spot on a reasoning benchmark and beating Claude Fable 5 in that measurement context.
 
-Type: Benchmark | Date: 2026-06-14
+유형: Benchmark | 날짜: 2026-06-14
 
 ---
 
@@ -312,7 +312,7 @@ Type: Benchmark | Date: 2026-06-14
 
 The KernelBench-Hard post says the interesting result was not just score, but that GLM-5.2 stopped using an inappropriate shortcut on an fp8 GEMM problem, making it relevant for benchmark integrity.
 
-Type: Evaluation | Date: 2026-06-13
+유형: Evaluation | 날짜: 2026-06-13
 
 ---
 
@@ -323,7 +323,7 @@ Type: Evaluation | Date: 2026-06-13
 
 The post reports GLM-5.2 scoring better than recent proprietary models on Runescape bench, using that result to frame how quickly open-source frontier capability is catching up.
 
-Type: Benchmark | Date: 2026-06-16
+유형: Benchmark | 날짜: 2026-06-16
 
 ---
 
@@ -334,7 +334,7 @@ Type: Benchmark | Date: 2026-06-16
 
 BridgeBench reported GLM-5.2 as three times faster than GLM-5.1 and fourth on its speed benchmark, making it relevant for workflows where iteration speed affects usability.
 
-Type: Benchmark | Date: 2026-06-13
+유형: Benchmark | 날짜: 2026-06-13
 
 ---
 
@@ -393,7 +393,7 @@ Lech Mazur 는 GLM-5.2 Max 가 2위를 차지한 LLM Debate Benchmark 결과를 
 
 The post describes a 1 hour 42 minute GLM-5.2 refactor task with 88 model turns and 102 tool calls. The workflow included a handoff, four blocker fixes, TDD implementation of 12 tests, two rounds of P2 fixes, and final regression.
 
-Type: Demo | Date: 2026-06-14
+유형: Demo | 날짜: 2026-06-14
 
 ---
 
@@ -404,7 +404,7 @@ Type: Demo | Date: 2026-06-14
 
 The author reports testing GLM-5.2 with six bug fixes and one implementation in OpenCode, saying the changes went through cleanly with solid planning and better speed than GLM-5.1.
 
-Type: Demo | Date: 2026-06-13
+유형: Demo | 날짜: 2026-06-13
 
 ---
 
@@ -415,7 +415,7 @@ Type: Demo | Date: 2026-06-13
 
 Venice shared a full walkthrough for building a retro video game with GLM-5.2 and OpenCode, positioning it as a private, open-source, long-horizon coding workflow.
 
-Type: Tutorial | Date: 2026-06-17
+유형: Tutorial | 날짜: 2026-06-17
 
 ---
 
@@ -426,7 +426,7 @@ Type: Tutorial | Date: 2026-06-17
 
 Atomic Chat reported asking both models to build pool break, spring block, and Galton board simulations. Their post says GLM-5.2 handled all three with more detail and polish, while Kimi struggled with physical behavior.
 
-Type: Evaluation | Date: 2026-06-17
+유형: Evaluation | 날짜: 2026-06-17
 
 ---
 
@@ -437,7 +437,7 @@ Type: Evaluation | Date: 2026-06-17
 
 The author says GLM-5.2 produced a creative personal site after being pushed with the right prompting, and shared a video of the result. It is useful for front-end design iteration rather than single-shot benchmark claims.
 
-Type: Demo | Date: 2026-06-17
+유형: Demo | 날짜: 2026-06-17
 
 ---
 
@@ -448,7 +448,7 @@ Type: Demo | Date: 2026-06-17
 
 The Chinese post compares GLM-5.2, Kimi K2.7, and Claude Opus 4.8 on an AI contract-review product PRD. It reports build duration, step count, five-hour quota usage, and code-quality scoring.
 
-Type: Evaluation | Date: 2026-06-15
+유형: Evaluation | 날짜: 2026-06-15
 
 ---
 
@@ -459,7 +459,7 @@ Type: Evaluation | Date: 2026-06-15
 
 ZCode announced GLM-5.2 availability for Coding Plan users, stronger agent task execution, better long-context coding, and a Goal feature for managing larger objectives from planning to completion.
 
-Type: Integration | Date: 2026-06-14
+유형: Integration | 날짜: 2026-06-14
 
 ---
 
@@ -470,7 +470,7 @@ Type: Integration | Date: 2026-06-14
 
 The author reports completing zcode-linux using GLM-5.2 and Claude Code so Linux users can run ZCode in a Linux environment and add arbitrary API endpoints, including local LLM endpoints.
 
-Type: Demo | Date: 2026-06-15
+유형: Demo | 날짜: 2026-06-15
 
 ---
 
@@ -481,7 +481,7 @@ Type: Demo | Date: 2026-06-15
 
 The post says GLM-5.2 was setting up computer use, found an advanced open-source repository, and converted it into a skill. It is a hands-on signal for tool-wrapping and agent integration work.
 
-Type: Demo | Date: 2026-06-14
+유형: Demo | 날짜: 2026-06-14
 
 ---
 
@@ -492,7 +492,7 @@ Type: Demo | Date: 2026-06-14
 
 The Chinese review says ZCode 3.0 was rewritten from shell-like earlier versions into a self-developed agent core paired with GLM-5.2, with a better experience among domestic agentic development environments.
 
-Type: Demo | Date: 2026-06-14
+유형: Demo | 날짜: 2026-06-14
 
 ---
 
@@ -547,7 +547,7 @@ The author reports using GLM-5.2 with DeepAgents Code and frames open model plus
 
 작성자는 Claude Code의 model을 로컬 GLM 5.2로 바꾸고 M3 Ultra 512GB 머신에서 12시간짜리 `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.` 작업을 돌렸습니다. 게시물은 실행 시간, token 사용량, code churn, RAM 사용량, GGUF와 KV-cache 구성을 함께 공유하며, 품질은 frontier급으로 느껴졌지만 로컬 추론 속도가 가장 큰 병목이었다고 말합니다.
 
-Type: Demo | Date: 2026-06-21
+유형: Demo | 날짜: 2026-06-21
 
 ---
 
@@ -562,7 +562,7 @@ Type: Demo | Date: 2026-06-21
 
 AI/ML API reported asking GLM-5.2 and Opus 4.8 to one-shot a playable Backrooms game. Their post says GLM-5.2 built fuller mechanics in 1:08 at $0.37, while Opus took 2:14 at $1.94.
 
-Type: Demo | Date: 2026-06-16
+유형: Demo | 날짜: 2026-06-16
 
 ---
 
@@ -573,7 +573,7 @@ Type: Demo | Date: 2026-06-16
 
 BridgeMind tested GLM-5.2 on a horror house game, a 3D stealth game, and a Remotion marketing video. The post reports mixed results, including broken game logic, making it useful as a grounded limitation signal.
 
-Type: Evaluation | Date: 2026-06-13
+유형: Evaluation | 날짜: 2026-06-13
 
 ---
 
@@ -584,7 +584,7 @@ Type: Evaluation | Date: 2026-06-13
 
 The author tested ZCode 3.0 with GLM-5.2 by creating a Super Mario-style clone, then shared the result after five iterations of issue fixes and feature additions.
 
-Type: Demo | Date: 2026-06-14
+유형: Demo | 날짜: 2026-06-14
 
 ---
 
@@ -595,7 +595,7 @@ Type: Demo | Date: 2026-06-14
 
 The post describes a Lunar Lander contest among MiniMax M3, GLM-5.2, and Kimi K2.7 Code, using a video result as a practical benchmark before returning to local-model development.
 
-Type: Evaluation | Date: 2026-06-14
+유형: Evaluation | 날짜: 2026-06-14
 
 ---
 
@@ -606,7 +606,7 @@ Type: Evaluation | Date: 2026-06-14
 
 The author shared an example of a GLM-5.2 creation on Design Arena made from one prompt, using it to show the narrowing gap between open and closed-weight models.
 
-Type: Demo | Date: 2026-06-16
+유형: Demo | 날짜: 2026-06-16
 
 ---
 
@@ -617,7 +617,7 @@ Type: Demo | Date: 2026-06-16
 
 AlphaXiv introduced GLM-5.2 for understanding research papers, where users highlight a section, ask questions, and reference other papers for context, comparisons, and benchmark references.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -628,7 +628,7 @@ Type: Integration | Date: 2026-06-16
 
 Ethan Mollick credited GLM-5.2 Max for producing a correct constrained poem, while noting that Fable incorporated the disappearing-letter constraint into the poem theme more creatively.
 
-Type: Evaluation | Date: 2026-06-17
+유형: Evaluation | 날짜: 2026-06-17
 
 ---
 
@@ -639,7 +639,7 @@ Type: Evaluation | Date: 2026-06-17
 
 The author says they enjoyed GLM-5.2's design sense and shared a visual example. It is useful as a pointer to inspect, not as standalone proof of production design quality.
 
-Type: Demo | Date: 2026-06-17
+유형: Demo | 날짜: 2026-06-17
 
 ---
 
@@ -672,7 +672,7 @@ Type: Demo | Date: 2026-06-17
 
 작성자는 GLM-5.2가 하나의 메인 프롬프트만으로 플레이 가능한 Space Invaders 스타일 게임을 만들었고, 이후 sprite 교체와 leaderboard 같은 작은 추가를 위해 세 번의 후속 프롬프트를 썼다고 말합니다. 공개 결과물은 가벼운 게임 생성 예시로는 유용하지만 완전한 benchmark는 아닙니다.
 
-Type: Demo | Date: 2026-06-21
+유형: Demo | 날짜: 2026-06-21
 
 ---
 
@@ -683,7 +683,7 @@ Type: Demo | Date: 2026-06-21
 
 작성자는 4,000단어 분석과 Agents SDK repository를 입력한 뒤 OpenCode와 GLM-5.2로 완전히 상호작용 가능한 recovery lab을 구축했습니다. 게시물에는 176k-token 실행, one-shot 결과, polish 전 기준 약 3.50달러의 end-to-end cost가 함께 적혀 있습니다.
 
-Type: Demo | Date: 2026-06-21
+유형: Demo | 날짜: 2026-06-21
 
 ---
 
@@ -698,7 +698,7 @@ Type: Demo | Date: 2026-06-21
 
 OpenCode announced GLM-5.2 availability in Go, highlighting text support, a 1M context window, and same pricing as 5.1.
 
-Type: Integration | Date: 2026-06-17
+유형: Integration | 날짜: 2026-06-17
 
 ---
 
@@ -709,7 +709,7 @@ Type: Integration | Date: 2026-06-17
 
 Ollama announced GLM-5.2 availability, describing it as a long-horizon coding and agentic-task model with 1M context.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -720,7 +720,7 @@ Type: Integration | Date: 2026-06-16
 
 OpenRouter announced GLM-5.2 availability as a 1M-token long-horizon model, giving users a provider-neutral path to call it.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -731,7 +731,7 @@ Type: Integration | Date: 2026-06-16
 
 The vLLM project announced GLM-5.2 support in v0.23.0, framing it as a flagship model for long-horizon coding agents with 1M context.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -742,7 +742,7 @@ Type: Integration | Date: 2026-06-16
 
 Notion announced GLM-5.2 availability as an open-weight model built for long-horizon tasks and served via Baseten.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -753,7 +753,7 @@ Type: Integration | Date: 2026-06-16
 
 Fireworks announced GLM-5.2 live on day zero, emphasizing 1M context, coding-first positioning, and independent validation on SWE-Bench, Terminal-Bench, GPQA, and AIME.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -764,7 +764,7 @@ Type: Integration | Date: 2026-06-16
 
 CarolGLMs shared a Google Cloud link for GLM-5.2, making it a direct pointer for teams working through cloud model catalogs.
 
-Type: Integration | Date: 2026-06-17
+유형: Integration | 날짜: 2026-06-17
 
 ---
 
@@ -775,7 +775,7 @@ Type: Integration | Date: 2026-06-17
 
 Venice announced GLM-5.2 availability in privacy mode with TEE/E2EE framing, aimed at private agentic coding and long-horizon tasks.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -786,7 +786,7 @@ Type: Integration | Date: 2026-06-16
 
 Command Code announced GLM-5.2 availability, noting 1M context, strong reasoning, open-source status, and access through its one-dollar Go plan.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -797,7 +797,7 @@ Type: Integration | Date: 2026-06-16
 
 Teknium reported GLM-5.2 availability in Hermes Agent from Nous Portal and OpenRouter, useful for agent-framework routing experiments.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -808,7 +808,7 @@ Type: Integration | Date: 2026-06-16
 
 io.net announced itself as a day-zero launch partner for GLM-5.2, emphasizing 1M context, agentic-first design, long-horizon coding, and the compute needs of a 753B-parameter model.
 
-Type: Integration | Date: 2026-06-17
+유형: Integration | 날짜: 2026-06-17
 
 ---
 
@@ -819,7 +819,7 @@ Type: Integration | Date: 2026-06-17
 
 Chris Lattner posted that GLM-5.2 was live on Modular Cloud on day zero, highlighting open weights, coding, long-horizon agents, and 1M context.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -885,7 +885,7 @@ Browser Use 는 GLM-5.2가 웹사이트 디자인 작업에서 Fable 5를 이긴
 
 Skirano는 Cursor의 OpenAI API key 칸에 Fireworks key를 붙여 넣고, base URL로 `https://api.fireworks.ai/inference/v1` 를 쓰며, model로 `accounts/fireworks/models/glm-5p2` 를 고른 뒤 재시작하는 최소 설정 흐름을 보여 줍니다. 익숙한 coding IDE 안에서 GLM-5.2를 바로 시도할 수 있는 구체적인 경로입니다.
 
-Type: Tutorial | Date: 2026-06-21
+유형: Tutorial | 날짜: 2026-06-21
 
 ---
 
@@ -896,7 +896,7 @@ Type: Tutorial | Date: 2026-06-21
 
 VulcanBench v0.2.0은 first-class ZAI support를 추가해 GLM-5.2를 `zai:glm-5.2` 로 OpenAI, Anthropic 모델과 나란히 실행할 수 있게 했습니다. 전용 `ZAI_API_KEY` 경로도 제공해, 일회성 screenshot보다 재현 가능한 오픈 benchmark harness를 원하는 사람에게 유용합니다.
 
-Type: Integration | Date: 2026-06-21
+유형: Integration | 날짜: 2026-06-21
 
 ---
 
@@ -907,7 +907,7 @@ Type: Integration | Date: 2026-06-21
 
 OpenCode v1.17.9는 GLM-5.2를 위한 High와 Max thinking variant를 OpenAI 호환 및 Anthropic 호환 provider 전반에 추가했고, OpenRouter effort mapping도 native하게 다룹니다. 같은 release에서 agent step-limit 동작도 고쳐져 더 긴 실행에 실용성이 높아졌습니다.
 
-Type: Integration | Date: 2026-06-21
+유형: Integration | 날짜: 2026-06-21
 
 ---
 
@@ -918,7 +918,7 @@ Type: Integration | Date: 2026-06-21
 
 이 게시물은 coding plan workload에 대해 일반 `https://api.z.ai/api/paas/v4/` 대신 `https://api.z.ai/api/coding/paas/v4` 를 쓰라고 안내합니다. 또한 Claude Code와 OpenCode 같은 도구가 지원하는 경우 `https://api.z.ai/api/anthropic` 을 주로 사용한다고 덧붙입니다. GLM-5.2가 잘못 라우팅되는 것처럼 보일 때 쓸 수 있는 구체적인 설정 수정입니다.
 
-Type: Tutorial | Date: 2026-06-21
+유형: Tutorial | 날짜: 2026-06-21
 
 ---
 
@@ -929,7 +929,7 @@ Type: Tutorial | Date: 2026-06-21
 
 작성자는 5분 정도면 무료 ZenMux API key와 base URL을 발급받아 GLM-5.2를 Claude, Cursor, Hermes 등에 연결할 수 있는 흐름을 공유합니다. 다만 무료 tier는 빠르게 rate-limit에 걸린다고 덧붙여, 지속성 보장보다는 access note로 보는 편이 맞습니다.
 
-Type: Tutorial | Date: 2026-06-21
+유형: Tutorial | 날짜: 2026-06-21
 
 ---
 
@@ -944,7 +944,7 @@ Type: Tutorial | Date: 2026-06-21
 
 The post compares 1M output token prices and argues that GLM-5.2 can be meaningfully cheaper than frontier closed models. Treat the numbers as a source-linked pricing comparison that should be rechecked before budgeting.
 
-Type: Evaluation | Date: 2026-06-16
+유형: Evaluation | 날짜: 2026-06-16
 
 ---
 
@@ -955,7 +955,7 @@ Type: Evaluation | Date: 2026-06-16
 
 The author estimates that multiple DGX Spark-class machines could run a 700B-class model and compares a roughly $20K hardware purchase against high monthly API spending for coding and agent workloads.
 
-Type: Evaluation | Date: 2026-06-17
+유형: Evaluation | 날짜: 2026-06-17
 
 ---
 
@@ -966,7 +966,7 @@ Type: Evaluation | Date: 2026-06-17
 
 The post says GLM-5.2 had just been released and was already running with MLX on two Mac Studio M3 Ultra machines, framing it as comparable to recent closed models with open weights.
 
-Type: Demo | Date: 2026-06-16
+유형: Demo | 날짜: 2026-06-16
 
 ---
 
@@ -977,7 +977,7 @@ Type: Demo | Date: 2026-06-16
 
 The Chinese post compares claimed SWE-Bench numbers, commercial open-source use, and an estimated single-H100 local deployment cost against a Claude Pro subscription. The numbers should be revalidated for current infrastructure pricing.
 
-Type: Evaluation | Date: 2026-06-14
+유형: Evaluation | 날짜: 2026-06-14
 
 ---
 
@@ -988,7 +988,7 @@ Type: Evaluation | Date: 2026-06-14
 
 The post frames GLM-5.2 as a lower-cost Claude competitor with daily credits, open-source control, self-hosting, and stronger value for long coding sessions.
 
-Type: Evaluation | Date: 2026-06-17
+유형: Evaluation | 날짜: 2026-06-17
 
 ---
 
@@ -999,7 +999,7 @@ Type: Evaluation | Date: 2026-06-17
 
 The author describes GLM-5.2 availability through ZCode with a large free daily token allowance and notes possible use for setting up vLLM Studio or local hosting.
 
-Type: Integration | Date: 2026-06-16
+유형: Integration | 날짜: 2026-06-16
 
 ---
 
@@ -1010,7 +1010,7 @@ Type: Integration | Date: 2026-06-16
 
 The post advertises GLM-5.2 live on ZenMux with a one-week free window, 1M context, coding and agentic improvements, and same-price-as-5.1 positioning.
 
-Type: Integration | Date: 2026-06-17
+유형: Integration | 날짜: 2026-06-17
 
 ---
 
@@ -1021,7 +1021,7 @@ Type: Integration | Date: 2026-06-17
 
 The post announces GLM-5.2 on crofAI with listed input, output, and cache prices, positioning it as cheap frontier intelligence.
 
-Type: Integration | Date: 2026-06-17
+유형: Integration | 날짜: 2026-06-17
 
 ---
 
@@ -1032,7 +1032,7 @@ Type: Integration | Date: 2026-06-17
 
 The author compares GLM-5.2 and other large open models on output-token pricing and uses the comparison to argue that some frontier-lab API margins are high.
 
-Type: Evaluation | Date: 2026-06-16
+유형: Evaluation | 날짜: 2026-06-16
 
 ---
 
@@ -1065,7 +1065,7 @@ The post describes Unsloth dynamic 2-bit and 1-bit GGUF options, memory reductio
 
 게시물은 두 대의 M3 Ultra 512GB 머신에 걸친 MLX distributed 실행에서 GLM-5.2 8-bit가 약 17.9 tokens/sec, 총 약 760GB 메모리로 동작한다고 보여 줍니다. 작성자는 아직 work-in-progress PR이라고도 밝혀, 완성된 가이드라기보다 deployment signal로 보는 편이 적절합니다.
 
-Type: Demo | Date: 2026-06-21
+유형: Demo | 날짜: 2026-06-21
 
 ---
 
@@ -1076,7 +1076,7 @@ Type: Demo | Date: 2026-06-21
 
 이 게시물은 ZCode가 GLM coding plan multiplier를 peak 시간에는 3x에서 2x로, off-peak에는 2x에서 0.67x로 낮췄고, 그 창이 9월 말까지 이어진다고 말합니다. GLM-5.2 credits를 오래 끌고 가려는 사람에게 구체적인 access / pricing note가 됩니다.
 
-Type: Integration | Date: 2026-06-21
+유형: Integration | 날짜: 2026-06-21
 
 ---
 
@@ -1091,7 +1091,7 @@ Type: Integration | Date: 2026-06-21
 
 The author notes that GLM models lacking vision reduces usefulness, quoting a Design Arena ranking post. This is a practical caveat for multimodal product planning.
 
-Type: Limit | Date: 2026-06-17
+유형: Limit | 날짜: 2026-06-17
 
 ---
 
@@ -1102,7 +1102,7 @@ Type: Limit | Date: 2026-06-17
 
 The author says GLM-5.2 is impressive but not yet close to Fable-level or Opus 4.8 thinking-level performance on the general distribution of real-world agentic tasks, based on an Agent Arena methodology.
 
-Type: Limit | Date: 2026-06-16
+유형: Limit | 날짜: 2026-06-16
 
 ---
 
@@ -1113,7 +1113,7 @@ Type: Limit | Date: 2026-06-16
 
 The post reports a harmful-content refusal failure in a comparative safety test. The repository records only the safety signal, not the unsafe details, and treats this as a deployment-risk caveat.
 
-Type: Limit | Date: 2026-06-16
+유형: Limit | 날짜: 2026-06-16
 
 ---
 
@@ -1124,7 +1124,7 @@ Type: Limit | Date: 2026-06-16
 
 The author criticizes Design Arena methodology while still acknowledging GLM-5.2 as strong, making it useful for readers who want benchmark skepticism alongside leaderboard claims.
 
-Type: Limit | Date: 2026-06-16
+유형: Limit | 날짜: 2026-06-16
 
 ---
 
@@ -1135,7 +1135,7 @@ Type: Limit | Date: 2026-06-16
 
 The Japanese post considers using GLM-5.2 inside a coding plan but notes prior concern about peak-time response latency.
 
-Type: Limit | Date: 2026-06-16
+유형: Limit | 날짜: 2026-06-16
 
 ---
 
@@ -1146,7 +1146,7 @@ Type: Limit | Date: 2026-06-16
 
 The post reports GLM-5.2 as no better than GLM-5.1 on FutureSim and uses the result to caution that coding improvements may not generalize equally across all domains.
 
-Type: Limit | Date: 2026-06-16
+유형: Limit | 날짜: 2026-06-16
 
 ---
 
@@ -1157,7 +1157,7 @@ Type: Limit | Date: 2026-06-16
 
 The post calls the early release messy because benchmarks and API access were not yet available at the time, making it relevant for launch-readiness review rather than model-quality judgment.
 
-Type: Limit | Date: 2026-06-13
+유형: Limit | 날짜: 2026-06-13
 
 ---
 
@@ -1168,7 +1168,7 @@ Type: Limit | Date: 2026-06-13
 
 The author reports paying $65 per month for a GLM Coding Pro plan and says the plan had nearly doubled since their last subscription. Use it as a reminder to check current pricing.
 
-Type: Limit | Date: 2026-06-13
+유형: Limit | 날짜: 2026-06-13
 
 ---
 
