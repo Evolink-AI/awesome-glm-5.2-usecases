@@ -540,6 +540,17 @@ The author reports using GLM-5.2 with DeepAgents Code and frames open model plus
 
 ---
 
+<a id="case-80"></a>
+### Case 80: [M3 Ultra Pokemon Red Goal Run](https://x.com/hxiao/status/2068800750554378434) (by [@hxiao](https://x.com/hxiao))
+
+**M3 Ultra에서의 장시간 로컬 coding agent 실행에서 GLM-5.2를 판단하기 위한 사례입니다. 거의 반나절 동안 Pokemon Red를 HTML로 재현하려 한 목표 실행을 따라갈 수 있습니다.**
+
+작성자는 Claude Code의 model을 로컬 GLM 5.2로 바꾸고 M3 Ultra 512GB 머신에서 12시간짜리 `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.` 작업을 돌렸습니다. 게시물은 실행 시간, token 사용량, code churn, RAM 사용량, GGUF와 KV-cache 구성을 함께 공유하며, 품질은 frontier급으로 느껴졌지만 로컬 추론 속도가 가장 큰 병목이었다고 말합니다.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 실사용 데모와 쇼케이스 빌드
@@ -651,6 +662,28 @@ Type: Demo | Date: 2026-06-17
 작성자는 OpenCode Go 를 통해 solar-system web app, system-info Electron app, simple explore-island web game 에 걸친 one-shot 예시를 공유합니다. 같은 글에서 GLM-5.2를 지금까지 써본 최고의 open model 이라고 평가하면서도 frontier-equal 이라고 단정하지는 않습니다.
 
 유형: Demo | 날짜: 2026-06-20
+
+---
+
+<a id="case-81"></a>
+### Case 81: [Space Invaders One-Prompt Build](https://x.com/DeryaTR_/status/2068803754611069128) (by [@DeryaTR_](https://x.com/DeryaTR_))
+
+**단일 프롬프트 게임 생성에서 GLM-5.2를 시험하고, 몇 번의 추가 프롬프트로 asset 교체와 가벼운 polish가 어떻게 진행되는지 보기 위한 사례입니다.**
+
+작성자는 GLM-5.2가 하나의 메인 프롬프트만으로 플레이 가능한 Space Invaders 스타일 게임을 만들었고, 이후 sprite 교체와 leaderboard 같은 작은 추가를 위해 세 번의 후속 프롬프트를 썼다고 말합니다. 공개 결과물은 가벼운 게임 생성 예시로는 유용하지만 완전한 benchmark는 아닙니다.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-82"></a>
+### Case 82: [OpenCode Recovery Lab One-Shot](https://x.com/threepointone/status/2068718370581536816) (by [@threepointone](https://x.com/threepointone))
+
+**대화형 agent failure simulation을 빠르게 프로토타이핑하기 위한 사례입니다. 작성자는 약 3.50달러로 동작하는 recovery lab을 one-shot으로 만들었다고 보고합니다.**
+
+작성자는 4,000단어 분석과 Agents SDK repository를 입력한 뒤 OpenCode와 GLM-5.2로 완전히 상호작용 가능한 recovery lab을 구축했습니다. 게시물에는 176k-token 실행, one-shot 결과, polish 전 기준 약 3.50달러의 end-to-end cost가 함께 적혀 있습니다.
+
+Type: Demo | Date: 2026-06-21
 
 ---
 
@@ -845,6 +878,61 @@ Browser Use 는 GLM-5.2가 웹사이트 디자인 작업에서 Fable 5를 이긴
 
 ---
 
+<a id="case-83"></a>
+### Case 83: [Cursor Setup Through Fireworks](https://x.com/skirano/status/2068777440986513647) (by [@skirano](https://x.com/skirano))
+
+**Fireworks를 통해 GLM-5.2를 Cursor에 최소 설정으로 연결하고, 별도 클라이언트 코드 없이 시험하기 위한 사례입니다.**
+
+Skirano는 Cursor의 OpenAI API key 칸에 Fireworks key를 붙여 넣고, base URL로 `https://api.fireworks.ai/inference/v1` 를 쓰며, model로 `accounts/fireworks/models/glm-5p2` 를 고른 뒤 재시작하는 최소 설정 흐름을 보여 줍니다. 익숙한 coding IDE 안에서 GLM-5.2를 바로 시도할 수 있는 구체적인 경로입니다.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-84"></a>
+### Case 84: [VulcanBench ZAI Provider Support](https://x.com/vulcanbench/status/2068724843856707676) (by [@vulcanbench](https://x.com/vulcanbench))
+
+**전용 ZAI provider 지원과 API key 경로를 갖춘 오픈 benchmark harness에서 GLM-5.2를 실행하기 위한 사례입니다.**
+
+VulcanBench v0.2.0은 first-class ZAI support를 추가해 GLM-5.2를 `zai:glm-5.2` 로 OpenAI, Anthropic 모델과 나란히 실행할 수 있게 했습니다. 전용 `ZAI_API_KEY` 경로도 제공해, 일회성 screenshot보다 재현 가능한 오픈 benchmark harness를 원하는 사람에게 유용합니다.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-85"></a>
+### Case 85: [OpenCode High/Max Reasoning Variants](https://x.com/OpenCodeLog/status/2068487086576156705) (by [@OpenCodeLog](https://x.com/OpenCodeLog))
+
+**OpenCode 안에서 GLM-5.2의 High / Max reasoning variant에 접근하면서 step-limit 처리 개선까지 함께 가져오기 위한 사례입니다.**
+
+OpenCode v1.17.9는 GLM-5.2를 위한 High와 Max thinking variant를 OpenAI 호환 및 Anthropic 호환 provider 전반에 추가했고, OpenRouter effort mapping도 native하게 다룹니다. 같은 release에서 agent step-limit 동작도 고쳐져 더 긴 실행에 실용성이 높아졌습니다.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-86"></a>
+### Case 86: [Z.ai Coding Endpoint Selection](https://x.com/ivanfioravanti/status/2068574700721082400) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**GLM-5.2 coding plan 트래픽을 일반 API가 아니라 coding 최적화 Z.ai endpoint로 보내기 위한 사례입니다.**
+
+이 게시물은 coding plan workload에 대해 일반 `https://api.z.ai/api/paas/v4/` 대신 `https://api.z.ai/api/coding/paas/v4` 를 쓰라고 안내합니다. 또한 Claude Code와 OpenCode 같은 도구가 지원하는 경우 `https://api.z.ai/api/anthropic` 을 주로 사용한다고 덧붙입니다. GLM-5.2가 잘못 라우팅되는 것처럼 보일 때 쓸 수 있는 구체적인 설정 수정입니다.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-87"></a>
+### Case 87: [ZenMux Free GLM-5.2 API Setup](https://x.com/0x_kaize/status/2068676992782811607) (by [@0x_kaize](https://x.com/0x_kaize))
+
+**무료 GLM-5.2 API key와 base URL을 받아 Claude, Cursor, Hermes 같은 도구에 연결하기 위한 사례입니다.**
+
+작성자는 5분 정도면 무료 ZenMux API key와 base URL을 발급받아 GLM-5.2를 Claude, Cursor, Hermes 등에 연결할 수 있는 흐름을 공유합니다. 다만 무료 tier는 빠르게 rate-limit에 걸린다고 덧붙여, 지속성 보장보다는 access note로 보는 편이 맞습니다.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 비용, 가격, 로컬 배포
@@ -970,6 +1058,28 @@ The post describes Unsloth dynamic 2-bit and 1-bit GGUF options, memory reductio
 
 ---
 
+<a id="case-88"></a>
+### Case 88: [Two M3 Ultra MLX Distributed Run](https://x.com/ivanfioravanti/status/2068781499206574576) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**더 큰 Apple Silicon 구성을 짜기 전에, 두 대의 M3 Ultra에 분산 MLX로 올린 GLM-5.2 8-bit serving 모습을 가늠하기 위한 사례입니다.**
+
+게시물은 두 대의 M3 Ultra 512GB 머신에 걸친 MLX distributed 실행에서 GLM-5.2 8-bit가 약 17.9 tokens/sec, 총 약 760GB 메모리로 동작한다고 보여 줍니다. 작성자는 아직 work-in-progress PR이라고도 밝혀, 완성된 가이드라기보다 deployment signal로 보는 편이 적절합니다.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-89"></a>
+### Case 89: [ZCode Multiplier Cut Through September](https://x.com/buildwithhassan/status/2068534544177791376) (by [@buildwithhassan](https://x.com/buildwithhassan))
+
+**peak / off-peak multiplier 인하 기간을 활용해 GLM-5.2 plan credits를 더 오래 쓰기 위한 사례입니다.**
+
+이 게시물은 ZCode가 GLM coding plan multiplier를 peak 시간에는 3x에서 2x로, off-peak에는 2x에서 0.67x로 낮췄고, 그 창이 9월 말까지 이어진다고 말합니다. GLM-5.2 credits를 오래 끌고 가려는 사람에게 구체적인 access / pricing note가 됩니다.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 한계, caveat, 안전 신호
@@ -1092,117 +1202,6 @@ The post reports a practical split: GLM-5.2 works well for short parallel tasks 
 작성자는 11개의 induction problem 을 실행해 완료는 4개, 정답은 2개였고, 실행 시간은 수 시간에 달했으며, 청구 금액은 눈에 보이는 token count 보다 훨씬 높아 보였다고 보고합니다. 이는 단순 benchmark score 가 아니라 reasoning efficiency 와 billing behavior 에 대한 구체적인 경고입니다.
 
 유형: Limit | 날짜: 2026-06-20
-
----
-
-
-<a id="case-80"></a>
-### Case 80: [M3 Ultra Pokemon Red Goal Run](https://x.com/hxiao/status/2068800750554378434) (by [@hxiao](https://x.com/hxiao))
-
-**M3 Ultra에서의 장시간 로컬 coding agent 실행에서 GLM-5.2를 판단하기 위한 사례입니다. 거의 반나절 동안 Pokemon Red를 HTML로 재현하려 한 목표 실행을 따라갈 수 있습니다.**
-
-작성자는 Claude Code의 model을 로컬 GLM 5.2로 바꾸고 M3 Ultra 512GB 머신에서 12시간짜리 `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.` 작업을 돌렸습니다. 게시물은 실행 시간, token 사용량, code churn, RAM 사용량, GGUF와 KV-cache 구성을 함께 공유하며, 품질은 frontier급으로 느껴졌지만 로컬 추론 속도가 가장 큰 병목이었다고 말합니다.
-
-Type: Demo | Date: 2026-06-21
-
----
-
-<a id="case-81"></a>
-### Case 81: [Space Invaders One-Prompt Build](https://x.com/DeryaTR_/status/2068803754611069128) (by [@DeryaTR_](https://x.com/DeryaTR_))
-
-**단일 프롬프트 게임 생성에서 GLM-5.2를 시험하고, 몇 번의 추가 프롬프트로 asset 교체와 가벼운 polish가 어떻게 진행되는지 보기 위한 사례입니다.**
-
-작성자는 GLM-5.2가 하나의 메인 프롬프트만으로 플레이 가능한 Space Invaders 스타일 게임을 만들었고, 이후 sprite 교체와 leaderboard 같은 작은 추가를 위해 세 번의 후속 프롬프트를 썼다고 말합니다. 공개 결과물은 가벼운 게임 생성 예시로는 유용하지만 완전한 benchmark는 아닙니다.
-
-Type: Demo | Date: 2026-06-21
-
----
-
-<a id="case-82"></a>
-### Case 82: [OpenCode Recovery Lab One-Shot](https://x.com/threepointone/status/2068718370581536816) (by [@threepointone](https://x.com/threepointone))
-
-**대화형 agent failure simulation을 빠르게 프로토타이핑하기 위한 사례입니다. 작성자는 약 3.50달러로 동작하는 recovery lab을 one-shot으로 만들었다고 보고합니다.**
-
-작성자는 4,000단어 분석과 Agents SDK repository를 입력한 뒤 OpenCode와 GLM-5.2로 완전히 상호작용 가능한 recovery lab을 구축했습니다. 게시물에는 176k-token 실행, one-shot 결과, polish 전 기준 약 3.50달러의 end-to-end cost가 함께 적혀 있습니다.
-
-Type: Demo | Date: 2026-06-21
-
----
-
-<a id="case-83"></a>
-### Case 83: [Cursor Setup Through Fireworks](https://x.com/skirano/status/2068777440986513647) (by [@skirano](https://x.com/skirano))
-
-**Fireworks를 통해 GLM-5.2를 Cursor에 최소 설정으로 연결하고, 별도 클라이언트 코드 없이 시험하기 위한 사례입니다.**
-
-Skirano는 Cursor의 OpenAI API key 칸에 Fireworks key를 붙여 넣고, base URL로 `https://api.fireworks.ai/inference/v1` 를 쓰며, model로 `accounts/fireworks/models/glm-5p2` 를 고른 뒤 재시작하는 최소 설정 흐름을 보여 줍니다. 익숙한 coding IDE 안에서 GLM-5.2를 바로 시도할 수 있는 구체적인 경로입니다.
-
-Type: Tutorial | Date: 2026-06-21
-
----
-
-<a id="case-84"></a>
-### Case 84: [VulcanBench ZAI Provider Support](https://x.com/vulcanbench/status/2068724843856707676) (by [@vulcanbench](https://x.com/vulcanbench))
-
-**전용 ZAI provider 지원과 API key 경로를 갖춘 오픈 benchmark harness에서 GLM-5.2를 실행하기 위한 사례입니다.**
-
-VulcanBench v0.2.0은 first-class ZAI support를 추가해 GLM-5.2를 `zai:glm-5.2` 로 OpenAI, Anthropic 모델과 나란히 실행할 수 있게 했습니다. 전용 `ZAI_API_KEY` 경로도 제공해, 일회성 screenshot보다 재현 가능한 오픈 benchmark harness를 원하는 사람에게 유용합니다.
-
-Type: Integration | Date: 2026-06-21
-
----
-
-<a id="case-85"></a>
-### Case 85: [OpenCode High/Max Reasoning Variants](https://x.com/OpenCodeLog/status/2068487086576156705) (by [@OpenCodeLog](https://x.com/OpenCodeLog))
-
-**OpenCode 안에서 GLM-5.2의 High / Max reasoning variant에 접근하면서 step-limit 처리 개선까지 함께 가져오기 위한 사례입니다.**
-
-OpenCode v1.17.9는 GLM-5.2를 위한 High와 Max thinking variant를 OpenAI 호환 및 Anthropic 호환 provider 전반에 추가했고, OpenRouter effort mapping도 native하게 다룹니다. 같은 release에서 agent step-limit 동작도 고쳐져 더 긴 실행에 실용성이 높아졌습니다.
-
-Type: Integration | Date: 2026-06-21
-
----
-
-<a id="case-86"></a>
-### Case 86: [Z.ai Coding Endpoint Selection](https://x.com/ivanfioravanti/status/2068574700721082400) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
-
-**GLM-5.2 coding plan 트래픽을 일반 API가 아니라 coding 최적화 Z.ai endpoint로 보내기 위한 사례입니다.**
-
-이 게시물은 coding plan workload에 대해 일반 `https://api.z.ai/api/paas/v4/` 대신 `https://api.z.ai/api/coding/paas/v4` 를 쓰라고 안내합니다. 또한 Claude Code와 OpenCode 같은 도구가 지원하는 경우 `https://api.z.ai/api/anthropic` 을 주로 사용한다고 덧붙입니다. GLM-5.2가 잘못 라우팅되는 것처럼 보일 때 쓸 수 있는 구체적인 설정 수정입니다.
-
-Type: Tutorial | Date: 2026-06-21
-
----
-
-<a id="case-87"></a>
-### Case 87: [ZenMux Free GLM-5.2 API Setup](https://x.com/0x_kaize/status/2068676992782811607) (by [@0x_kaize](https://x.com/0x_kaize))
-
-**무료 GLM-5.2 API key와 base URL을 받아 Claude, Cursor, Hermes 같은 도구에 연결하기 위한 사례입니다.**
-
-작성자는 5분 정도면 무료 ZenMux API key와 base URL을 발급받아 GLM-5.2를 Claude, Cursor, Hermes 등에 연결할 수 있는 흐름을 공유합니다. 다만 무료 tier는 빠르게 rate-limit에 걸린다고 덧붙여, 지속성 보장보다는 access note로 보는 편이 맞습니다.
-
-Type: Tutorial | Date: 2026-06-21
-
----
-
-<a id="case-88"></a>
-### Case 88: [Two M3 Ultra MLX Distributed Run](https://x.com/ivanfioravanti/status/2068781499206574576) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
-
-**더 큰 Apple Silicon 구성을 짜기 전에, 두 대의 M3 Ultra에 분산 MLX로 올린 GLM-5.2 8-bit serving 모습을 가늠하기 위한 사례입니다.**
-
-게시물은 두 대의 M3 Ultra 512GB 머신에 걸친 MLX distributed 실행에서 GLM-5.2 8-bit가 약 17.9 tokens/sec, 총 약 760GB 메모리로 동작한다고 보여 줍니다. 작성자는 아직 work-in-progress PR이라고도 밝혀, 완성된 가이드라기보다 deployment signal로 보는 편이 적절합니다.
-
-Type: Demo | Date: 2026-06-21
-
----
-
-<a id="case-89"></a>
-### Case 89: [ZCode Multiplier Cut Through September](https://x.com/buildwithhassan/status/2068534544177791376) (by [@buildwithhassan](https://x.com/buildwithhassan))
-
-**peak / off-peak multiplier 인하 기간을 활용해 GLM-5.2 plan credits를 더 오래 쓰기 위한 사례입니다.**
-
-이 게시물은 ZCode가 GLM coding plan multiplier를 peak 시간에는 3x에서 2x로, off-peak에는 2x에서 0.67x로 낮췄고, 그 창이 9월 말까지 이어진다고 말합니다. GLM-5.2 credits를 오래 끌고 가려는 사람에게 구체적인 access / pricing note가 됩니다.
-
-Type: Integration | Date: 2026-06-21
 
 ---
 
