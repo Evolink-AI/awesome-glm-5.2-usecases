@@ -37,7 +37,7 @@
 
 ## 📊 總覽
 
-- **79 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
+- **89 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
 - Covers Benchmark 與前沿評測, Coding Agent 與長上下文工作流, 上手 Demo 與 Showcase, 供應商與工具整合, 成本、定價與本地部署, 限制、Caveat 與安全訊號.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - 你可以用這個 repo 尋找實用工作流、比較優勢與限制、探索供應商路徑，並追蹤真實上手實驗。
@@ -78,10 +78,10 @@ curl --request POST \
 | 章節 | 案例 |
 |---|---|
 | [📏 Benchmark 與前沿評測](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76 |
-| [💻 Coding Agent 與長上下文工作流](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77 |
-| [🎮 上手 Demo 與 Showcase](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78 |
-| [🔌 供應商與工具整合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79 |
-| [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | Case 43-51, 64, 68 |
+| [💻 Coding Agent 與長上下文工作流](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80 |
+| [🎮 上手 Demo 與 Showcase](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82 |
+| [🔌 供應商與工具整合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87 |
+| [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89 |
 | [🧭 限制、Caveat 與安全訊號](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75 |
 | [🙏 致謝](#acknowledge) | 來源致謝與修正政策 |
 
@@ -124,6 +124,7 @@ curl --request POST \
 | [Case 65: Fast-RLM Long-Context Instruction Injection](#case-65) | Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt. | Integration |
 | [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
 | [Case 77: 生產級行銷 Agent 棧路由策略](#case-77) | 用這個案例把 GLM-5.2 路由到重視結構化、速度與自託管的生產 Agent 工作流中，同時把更強的閉源模型留給模糊判斷任務。 | Evaluation |
+| [Case 80: M3 Ultra Pokemon Red Goal Run](#case-80) | 用這個案例評估 GLM-5.2 在長時間本地 coding agent 執行中的表現，追蹤它在 M3 Ultra 上花接近半天重建 Pokemon Red HTML 版本的嘗試。 | Demo |
 
 ### [🎮 上手 Demo 與 Showcase](#hands-on-demos-showcase-builds)
 
@@ -139,6 +140,8 @@ curl --request POST \
 | [Design Sense Example](#case-30) | Use this case as a lightweight visual-design signal, then verify with your own prompt and UI review. | Demo |
 | [Case 71: Temple Run 體素遊戲單次生成](#case-71) | 用這個案例高壓測試 GLM-5.2 的單提示詞遊戲生成能力，再查看一個視覺元素較多的建置仍需要哪些迭代修正。 | Demo |
 | [Case 78: OpenCode Go 單次生成案例集](#case-78) | 用這個案例在 OpenCode Go 裡快速基準測試 GLM-5.2 的單次生成建置能力，再決定是否投入更開放式的 Agent 迴圈。 | Demo |
+| [Case 81: Space Invaders One-Prompt Build](#case-81) | 用這個案例測試 GLM-5.2 的單提示詞遊戲生成能力，並觀察少量後續回合如何完成素材替換與輕量打磨。 | Demo |
+| [Case 82: OpenCode Recovery Lab One-Shot](#case-82) | 用這個案例快速原型化互動式 agent failure simulation；作者回報約 3.50 美元就一輪做出了可運作的 recovery lab。 | Demo |
 
 ### [🔌 供應商與工具整合](#provider-tool-integrations)
 
@@ -161,6 +164,11 @@ curl --request POST \
 | [Case 69: Baseten Faster One-Million-Context Serving](#case-69) | Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses. | Integration |
 | [Case 74: 面向網頁設計的 Browser Use QA 子代理](#case-74) | 當純文字模型需要視覺檢查與迭代式網站修復時，可用這個案例把 GLM-5.2 與 Browser Use v2 多模態 QA 子代理搭配起來。 | Integration |
 | [Case 79: ZCode 官方 IDE 每日免費額度](#case-79) | 當你想要一個帶大額每日免費 token、互動體驗類似 Cursor 的官方編碼 IDE 時，可用這個案例透過 ZCode 存取 GLM-5.2。 | Tutorial |
+| [Case 83: Cursor Setup Through Fireworks](#case-83) | 用這個案例透過 Fireworks 以最小 OpenAI 相容設定把 GLM-5.2 接入 Cursor，無須撰寫自訂客戶端程式。 | Tutorial |
+| [Case 84: VulcanBench ZAI Provider Support](#case-84) | 用這個案例在開放 benchmark harness 中透過一級支援的 ZAI provider 與專用 API key 路徑執行 GLM-5.2。 | Integration |
+| [Case 85: OpenCode High/Max Reasoning Variants](#case-85) | 用這個案例在 OpenCode 中使用 GLM-5.2 的 High / Max reasoning 變體，同時取得更可靠的 step-limit 處理。 | Integration |
+| [Case 86: Z.ai Coding Endpoint Selection](#case-86) | 用這個案例把 GLM-5.2 coding plan 流量從通用 API 路徑切到針對 coding 最佳化的 Z.ai endpoint。 | Tutorial |
+| [Case 87: ZenMux Free GLM-5.2 API Setup](#case-87) | 用這個案例取得免費的 GLM-5.2 API key 與 base URL，再接入 Claude、Cursor、Hermes 等工具。 | Tutorial |
 
 ### [💸 成本、定價與本地部署](#cost-pricing-local-deployment)
 
@@ -177,6 +185,8 @@ curl --request POST \
 | [API Price Margin Comparison](#case-51) | Use this case as a market-pricing critique when comparing GLM-5.2 to other frontier labs and open models. | Evaluation |
 | [Case 64: Basement Local Inference Speed](#case-64) | Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup. | Demo |
 | [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
+| [Case 88: Two M3 Ultra MLX Distributed Run](#case-88) | 用這個案例估算 GLM-5.2 8-bit 在兩台 M3 Ultra 上進行分散式 MLX 推理時的實際部署表現，再決定是否擴大 Apple Silicon 配置。 | Demo |
+| [Case 89: ZCode Multiplier Cut Through September](#case-89) | 用這個案例透過更低的 ZCode 尖峰與離峰 multiplier，在 9 月前盡量拉長 GLM-5.2 的 plan credits。 | Integration |
 
 ### [🧭 限制、Caveat 與安全訊號](#limits-caveats-safety-signals)
 
@@ -1086,12 +1096,123 @@ The post reports a practical split: GLM-5.2 works well for short parallel tasks 
 ---
 
 
+<a id="case-80"></a>
+### Case 80: [M3 Ultra Pokemon Red Goal Run](https://x.com/hxiao/status/2068800750554378434) (by [@hxiao](https://x.com/hxiao))
+
+**用這個案例評估 GLM-5.2 在長時間本地 coding agent 執行中的表現，追蹤它在 M3 Ultra 上花接近半天重建 Pokemon Red HTML 版本的嘗試。**
+
+作者把 Claude Code 的 model 切到本地 GLM 5.2，並在一台 M3 Ultra 512GB 機器上跑了 12 小時的 `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.` 任務。貼文公開了執行時間、token 用量、code churn、RAM 使用量，以及 GGUF 與 KV-cache 配置，也指出模型品質感覺接近 frontier，但本地推理速度仍是主要瓶頸。
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-81"></a>
+### Case 81: [Space Invaders One-Prompt Build](https://x.com/DeryaTR_/status/2068803754611069128) (by [@DeryaTR_](https://x.com/DeryaTR_))
+
+**用這個案例測試 GLM-5.2 的單提示詞遊戲生成能力，並觀察少量後續回合如何完成素材替換與輕量打磨。**
+
+作者表示，GLM-5.2 用一個主提示詞就生成了可玩的 Space Invaders 風格遊戲，接著再用三輪後續提示完成 sprite 替換與 leaderboard 等小幅增補。這個公開結果更適合作為輕量遊戲生成樣例，而不是完整 benchmark。
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-82"></a>
+### Case 82: [OpenCode Recovery Lab One-Shot](https://x.com/threepointone/status/2068718370581536816) (by [@threepointone](https://x.com/threepointone))
+
+**用這個案例快速原型化互動式 agent failure simulation；作者回報約 3.50 美元就一輪做出了可運作的 recovery lab。**
+
+作者在輸入一份 4,000 字分析與 Agents SDK repository 後，用 OpenCode 搭配 GLM-5.2 建出一個完全可互動的 recovery lab。貼文列出了 176k token 的執行、一輪成型的結果，以及打磨前端到端約 3.50 美元的成本。
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-83"></a>
+### Case 83: [Cursor Setup Through Fireworks](https://x.com/skirano/status/2068777440986513647) (by [@skirano](https://x.com/skirano))
+
+**用這個案例透過 Fireworks 以最小 OpenAI 相容設定把 GLM-5.2 接入 Cursor，無須撰寫自訂客戶端程式。**
+
+Skirano 展示了最簡 Cursor 設定流程：把 Fireworks key 填進 OpenAI API key 欄位，base URL 使用 `https://api.fireworks.ai/inference/v1`，模型選擇 `accounts/fireworks/models/glm-5p2`，然後重新啟動 Cursor。對想在熟悉的 coding IDE 裡試用 GLM-5.2 的人來說，這是一條相當具體的接入路徑。
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-84"></a>
+### Case 84: [VulcanBench ZAI Provider Support](https://x.com/vulcanbench/status/2068724843856707676) (by [@vulcanbench](https://x.com/vulcanbench))
+
+**用這個案例在開放 benchmark harness 中透過一級支援的 ZAI provider 與專用 API key 路徑執行 GLM-5.2。**
+
+VulcanBench v0.2.0 新增了一級支援的 ZAI provider，讓使用者能把 GLM-5.2 作為 `zai:glm-5.2` 與 OpenAI、Anthropic 模型並排執行，並提供獨立的 `ZAI_API_KEY`。如果你要的是開放、可重現的 benchmark harness，而不是單張截圖，這個案例更有用。
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-85"></a>
+### Case 85: [OpenCode High/Max Reasoning Variants](https://x.com/OpenCodeLog/status/2068487086576156705) (by [@OpenCodeLog](https://x.com/OpenCodeLog))
+
+**用這個案例在 OpenCode 中使用 GLM-5.2 的 High / Max reasoning 變體，同時取得更可靠的 step-limit 處理。**
+
+OpenCode v1.17.9 為 GLM-5.2 新增了 High 與 Max thinking 變體，覆蓋 OpenAI 相容與 Anthropic 相容 provider，並原生支援 OpenRouter 的 effort 映射。相同版本也修正了 agent step-limit 行為，讓這個整合更適合較長的執行。
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-86"></a>
+### Case 86: [Z.ai Coding Endpoint Selection](https://x.com/ivanfioravanti/status/2068574700721082400) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**用這個案例把 GLM-5.2 coding plan 流量從通用 API 路徑切到針對 coding 最佳化的 Z.ai endpoint。**
+
+貼文建議，對於 coding plan 工作負載，應優先使用 `https://api.z.ai/api/coding/paas/v4`，而不是通用的 `https://api.z.ai/api/paas/v4/`。作者也補充說，Claude Code、OpenCode 等工具在支援時通常會走 `https://api.z.ai/api/anthropic`。如果你感覺 GLM-5.2 路由不對，這是一條非常具體的設定修正。
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-87"></a>
+### Case 87: [ZenMux Free GLM-5.2 API Setup](https://x.com/0x_kaize/status/2068676992782811607) (by [@0x_kaize](https://x.com/0x_kaize))
+
+**用這個案例取得免費的 GLM-5.2 API key 與 base URL，再接入 Claude、Cursor、Hermes 等工具。**
+
+作者分享了一條大約五分鐘的設定流程：取得免費的 ZenMux API key 與 base URL，然後把 GLM-5.2 接到 Claude、Cursor、Hermes 等工具上。貼文也提醒免費 tier 很快就會碰到 rate limit，因此它更適合作為 access note，而不是長期穩定性保證。
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-88"></a>
+### Case 88: [Two M3 Ultra MLX Distributed Run](https://x.com/ivanfioravanti/status/2068781499206574576) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**用這個案例估算 GLM-5.2 8-bit 在兩台 M3 Ultra 上進行分散式 MLX 推理時的實際部署表現，再決定是否擴大 Apple Silicon 配置。**
+
+貼文展示了 GLM-5.2 8-bit 在兩台 M3 Ultra 512GB 機器上透過 MLX distributed 執行的情況，速度約 17.9 tokens/sec，總記憶體占用約 760GB。作者也明確說明這仍是一個進行中的 PR，因此它更適合作為 deployment signal，而不是完整部署指南。
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-89"></a>
+### Case 89: [ZCode Multiplier Cut Through September](https://x.com/buildwithhassan/status/2068534544177791376) (by [@buildwithhassan](https://x.com/buildwithhassan))
+
+**用這個案例透過更低的 ZCode 尖峰與離峰 multiplier，在 9 月前盡量拉長 GLM-5.2 的 plan credits。**
+
+這則貼文表示，ZCode 已把 GLM coding plan multiplier 在尖峰時段從 3x 下調到 2x，在離峰時段從 2x 下調到 0.67x，而且新窗口會持續到 9 月底。對想在 GLM-5.2 上盡量延長 credits 的人來說，這是一個非常具體的 access / pricing note。
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+
 <a id="acknowledge"></a>
 ## 🙏 致謝
 
 本倉庫來自公開分享 GLM-5.2 使用證據的創作者、開發者、benchmark 團隊、供應商與社群。
 
-感謝這些高訊號來源創作者：[@ArtificialAnlys](https://x.com/ArtificialAnlys)、[@arena](https://x.com/arena)、[@Designarena](https://x.com/Designarena)、[@ProximalHQ](https://x.com/ProximalHQ)、[@AiBattle_](https://x.com/AiBattle_)、[@cline](https://x.com/cline)、[@gosrum](https://x.com/gosrum)、[@bridgemindai](https://x.com/bridgemindai)、[@bridgebench](https://x.com/bridgebench)、[@elliotarledge](https://x.com/elliotarledge)、[@maxbittker](https://x.com/maxbittker)、[@KELMAND1](https://x.com/KELMAND1)、[@altudev](https://x.com/altudev)、[@AskVenice](https://x.com/AskVenice)、[@atomic_chat_hq](https://x.com/atomic_chat_hq)、[@anshuc](https://x.com/anshuc)、[@laozhang2579](https://x.com/laozhang2579)、[@zcode_ai](https://x.com/zcode_ai)、[@0xSero](https://x.com/0xSero)、[@laogui](https://x.com/laogui)、[@aimlapi](https://x.com/aimlapi)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@grx_xce](https://x.com/grx_xce)、[@askalphaxiv](https://x.com/askalphaxiv)、[@emollick](https://x.com/emollick)、[@opencode](https://x.com/opencode)、[@ollama](https://x.com/ollama)、[@OpenRouter](https://x.com/OpenRouter)、[@vllm_project](https://x.com/vllm_project)、[@NotionHQ](https://x.com/NotionHQ)、[@FireworksAI_HQ](https://x.com/FireworksAI_HQ)、[@CarolGLMs](https://x.com/CarolGLMs)、[@CommandCodeAI](https://x.com/CommandCodeAI)、[@Teknium](https://x.com/Teknium)、[@ionet](https://x.com/ionet)、[@clattner_llvm](https://x.com/clattner_llvm)、[@Hesamation](https://x.com/Hesamation)、[@Jeyffre](https://x.com/Jeyffre)、[@pcuenq](https://x.com/pcuenq)、[@ai_xiaomu](https://x.com/ai_xiaomu)、[@RoundtableSpace](https://x.com/RoundtableSpace)、[@JZiyue_](https://x.com/JZiyue_)、[@nahcrof](https://x.com/nahcrof)、[@scaling01](https://x.com/scaling01)、[@sawyerhood](https://x.com/sawyerhood)、[@ml_angelopoulos](https://x.com/ml_angelopoulos)、[@VittoStack](https://x.com/VittoStack)、[@josepha_mayo](https://x.com/josepha_mayo)、[@k_matsumaru](https://x.com/k_matsumaru)、[@nikhilchandak29](https://x.com/nikhilchandak29)、[@datacurve](https://x.com/datacurve)、[@pseudokid](https://x.com/pseudokid)、[@LechMazur](https://x.com/LechMazur)、[@wongmjane](https://x.com/wongmjane)、[@browser_use](https://x.com/browser_use)、[@s_batzoglou](https://x.com/s_batzoglou)、[@yuhasbeentaken](https://x.com/yuhasbeentaken)、[@DeRonin_](https://x.com/DeRonin_)、[@LyalinDotCom](https://x.com/LyalinDotCom)、[@Alan_Earn](https://x.com/Alan_Earn)。
+感謝這些高訊號來源創作者：[@ArtificialAnlys](https://x.com/ArtificialAnlys)、[@arena](https://x.com/arena)、[@Designarena](https://x.com/Designarena)、[@ProximalHQ](https://x.com/ProximalHQ)、[@AiBattle_](https://x.com/AiBattle_)、[@cline](https://x.com/cline)、[@gosrum](https://x.com/gosrum)、[@bridgemindai](https://x.com/bridgemindai)、[@bridgebench](https://x.com/bridgebench)、[@elliotarledge](https://x.com/elliotarledge)、[@maxbittker](https://x.com/maxbittker)、[@KELMAND1](https://x.com/KELMAND1)、[@altudev](https://x.com/altudev)、[@AskVenice](https://x.com/AskVenice)、[@atomic_chat_hq](https://x.com/atomic_chat_hq)、[@anshuc](https://x.com/anshuc)、[@laozhang2579](https://x.com/laozhang2579)、[@zcode_ai](https://x.com/zcode_ai)、[@0xSero](https://x.com/0xSero)、[@laogui](https://x.com/laogui)、[@aimlapi](https://x.com/aimlapi)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@grx_xce](https://x.com/grx_xce)、[@askalphaxiv](https://x.com/askalphaxiv)、[@emollick](https://x.com/emollick)、[@opencode](https://x.com/opencode)、[@ollama](https://x.com/ollama)、[@OpenRouter](https://x.com/OpenRouter)、[@vllm_project](https://x.com/vllm_project)、[@NotionHQ](https://x.com/NotionHQ)、[@FireworksAI_HQ](https://x.com/FireworksAI_HQ)、[@CarolGLMs](https://x.com/CarolGLMs)、[@CommandCodeAI](https://x.com/CommandCodeAI)、[@Teknium](https://x.com/Teknium)、[@ionet](https://x.com/ionet)、[@clattner_llvm](https://x.com/clattner_llvm)、[@Hesamation](https://x.com/Hesamation)、[@Jeyffre](https://x.com/Jeyffre)、[@pcuenq](https://x.com/pcuenq)、[@ai_xiaomu](https://x.com/ai_xiaomu)、[@RoundtableSpace](https://x.com/RoundtableSpace)、[@JZiyue_](https://x.com/JZiyue_)、[@nahcrof](https://x.com/nahcrof)、[@scaling01](https://x.com/scaling01)、[@sawyerhood](https://x.com/sawyerhood)、[@ml_angelopoulos](https://x.com/ml_angelopoulos)、[@VittoStack](https://x.com/VittoStack)、[@josepha_mayo](https://x.com/josepha_mayo)、[@k_matsumaru](https://x.com/k_matsumaru)、[@nikhilchandak29](https://x.com/nikhilchandak29)、[@datacurve](https://x.com/datacurve)、[@pseudokid](https://x.com/pseudokid)、[@LechMazur](https://x.com/LechMazur)、[@wongmjane](https://x.com/wongmjane)、[@browser_use](https://x.com/browser_use)、[@s_batzoglou](https://x.com/s_batzoglou)、[@yuhasbeentaken](https://x.com/yuhasbeentaken)、[@DeRonin_](https://x.com/DeRonin_)、[@LyalinDotCom](https://x.com/LyalinDotCom)、[@Alan_Earn](https://x.com/Alan_Earn)、[@hxiao](https://x.com/hxiao)、[@DeryaTR_](https://x.com/DeryaTR_)、[@threepointone](https://x.com/threepointone)、[@skirano](https://x.com/skirano)、[@vulcanbench](https://x.com/vulcanbench)、[@OpenCodeLog](https://x.com/OpenCodeLog)、[@0x_kaize](https://x.com/0x_kaize)、[@buildwithhassan](https://x.com/buildwithhassan)。
 
 *我們無法保證每個案例都已歸屬到最初原創者。如果需要修正來源或署名，請聯絡我們，我們會更新。*
 

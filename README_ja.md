@@ -37,7 +37,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **79 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **89 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - Covers Benchmark と frontier 評価, Coding agent と長文脈 workflow, 実演デモと showcase build, プロバイダ・ツール統合, コスト、価格、ローカル運用, 制約、caveat、安全性シグナル.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -78,10 +78,10 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | セクション | ケース |
 |---|---|
 | [📏 Benchmark と frontier 評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76 |
-| [💻 Coding agent と長文脈 workflow](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77 |
-| [🎮 実演デモと showcase build](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68 |
+| [💻 Coding agent と長文脈 workflow](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80 |
+| [🎮 実演デモと showcase build](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89 |
 | [🧭 制約、caveat、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75 |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
@@ -124,6 +124,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [Case 65: Fast-RLM Long-Context Instruction Injection](#case-65) | Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt. | Integration |
 | [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
 | [Case 77: 本番マーケティング agent stack のルーティング](#case-77) | 構造化、速度、self-hosting を重視する production agent workflow に GLM-5.2 を割り当てつつ、曖昧な判断はより強い closed model に任せるためのケースです。 | Evaluation |
+| [Case 80: M3 Ultra Pokemon Red Goal Run](#case-80) | M3 Ultra 上の長時間ローカル coding agent 実行で GLM-5.2 を判断するためのケースです。約半日かけて Pokemon Red を HTML で再現しようとした実例を追えます。 | Demo |
 
 ### [🎮 実演デモと showcase build](#hands-on-demos-showcase-builds)
 
@@ -139,6 +140,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [Design Sense Example](#case-30) | Use this case as a lightweight visual-design signal, then verify with your own prompt and UI review. | Demo |
 | [Case 71: Temple Run 風ボクセルゲームのワンショット生成](#case-71) | 単一プロンプトのゲーム生成で GLM-5.2 を stress-test し、視覚的にリッチなビルドで何が追加修正を要するかを確認するためのケースです。 | Demo |
 | [Case 78: OpenCode Go ワンショット実例セット](#case-78) | より open-ended な agent loop に投入する前に、OpenCode Go 内の quick one-shot build で GLM-5.2 を benchmark するためのケースです。 | Demo |
+| [Case 81: Space Invaders One-Prompt Build](#case-81) | 単一プロンプトのゲーム生成で GLM-5.2 を試し、その後の数回の追加入力で asset 差し替えや軽い polish がどう進むかを見るためのケースです。 | Demo |
+| [Case 82: OpenCode Recovery Lab One-Shot](#case-82) | 約 3.50 ドルの one-shot 実行で動く recovery lab を作れたという報告を基に、agent failure simulation の試作速度を見るためのケースです。 | Demo |
 
 ### [🔌 プロバイダ・ツール統合](#provider-tool-integrations)
 
@@ -161,6 +164,11 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [Case 69: Baseten Faster One-Million-Context Serving](#case-69) | Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses. | Integration |
 | [Case 74: Web デザイン向け Browser Use QA subagents](#case-74) | text-only model に視覚確認が必要なとき、GLM-5.2 を Browser Use v2 の multimodal QA subagents と組み合わせ、反復的な website 修正に使うためのケースです。 | Integration |
 | [Case 79: ZCode 公式 IDE の daily free tokens](#case-79) | 大きな daily token allowance と Cursor 風 workflow を備えた無料の公式 coding IDE として、ZCode 経由で GLM-5.2 にアクセスするためのケースです。 | Tutorial |
+| [Case 83: Cursor Setup Through Fireworks](#case-83) | Fireworks 経由で GLM-5.2 を Cursor に最小構成で接続し、独自クライアントコードなしで試すためのケースです。 | Tutorial |
+| [Case 84: VulcanBench ZAI Provider Support](#case-84) | 専用の ZAI provider 対応を備えたオープン benchmark harness で GLM-5.2 を走らせるためのケースです。 | Integration |
+| [Case 85: OpenCode High/Max Reasoning Variants](#case-85) | OpenCode 内で GLM-5.2 の High / Max reasoning variant を使い、step-limit 処理の改善も取り込むためのケースです。 | Integration |
+| [Case 86: Z.ai Coding Endpoint Selection](#case-86) | coding plan のトラフィックを汎用 API ではなく coding 最適化済みの Z.ai endpoint に向けるための設定ケースです。 | Tutorial |
+| [Case 87: ZenMux Free GLM-5.2 API Setup](#case-87) | 無料の ZenMux API key と base URL を取得し、Claude、Cursor、Hermes などに差し込むためのアクセス設定ケースです。 | Tutorial |
 
 ### [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment)
 
@@ -177,6 +185,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [API Price Margin Comparison](#case-51) | Use this case as a market-pricing critique when comparing GLM-5.2 to other frontier labs and open models. | Evaluation |
 | [Case 64: Basement Local Inference Speed](#case-64) | Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup. | Demo |
 | [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
+| [Case 88: Two M3 Ultra MLX Distributed Run](#case-88) | 2 台の M3 Ultra で分散 MLX 実行したときの GLM-5.2 8-bit serving の実態を見積もるためのケースです。 | Demo |
+| [Case 89: ZCode Multiplier Cut Through September](#case-89) | peak / off-peak の multiplier 引き下げ期間を使って GLM-5.2 の plan credits を引き延ばすためのアクセス・価格メモです。 | Integration |
 
 ### [🧭 制約、caveat、安全性シグナル](#limits-caveats-safety-signals)
 
@@ -1086,12 +1096,123 @@ The post reports a practical split: GLM-5.2 works well for short parallel tasks 
 ---
 
 
+<a id="case-80"></a>
+### Case 80: [M3 Ultra Pokemon Red Goal Run](https://x.com/hxiao/status/2068800750554378434) (by [@hxiao](https://x.com/hxiao))
+
+**M3 Ultra 上での長時間ローカル coding agent 実行において、GLM-5.2 を評価するためのケースです。約半日かけて Pokemon Red を HTML で再現しようとした実例を追えます。**
+
+作者は Claude Code の model をローカル GLM 5.2 に差し替え、M3 Ultra 512GB マシンで 12 時間の `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.` を実行しました。投稿では実行時間、token 使用量、code churn、RAM 使用量、GGUF と KV-cache 構成が共有されており、品質は frontier 級に感じる一方でローカル推論速度が主なボトルネックだと述べています。
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-81"></a>
+### Case 81: [Space Invaders One-Prompt Build](https://x.com/DeryaTR_/status/2068803754611069128) (by [@DeryaTR_](https://x.com/DeryaTR_))
+
+**単一プロンプトのゲーム生成で GLM-5.2 を試し、その後の数回の追加入力で asset 差し替えや軽い polish がどう進むかを見るためのケースです。**
+
+作者は GLM-5.2 が 1 つのメインプロンプトから遊べる Space Invaders 風ゲームを作り、その後 3 回の追加プロンプトで sprite 差し替えや leaderboard などの小さな追加を行ったと報告しています。公開結果は軽量なゲーム生成例として有用ですが、完全な benchmark ではありません。
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-82"></a>
+### Case 82: [OpenCode Recovery Lab One-Shot](https://x.com/threepointone/status/2068718370581536816) (by [@threepointone](https://x.com/threepointone))
+
+**対話的な agent failure simulation を素早く試作するためのケースです。作者は約 3.50 ドルで動く recovery lab を one-shot で作れたと報告しています。**
+
+作者は 4,000 語の分析と Agents SDK repository を渡した後、OpenCode と GLM-5.2 で完全に操作可能な recovery lab を構築しました。投稿では 176k tokens の実行、one-shot の成功、polish 前で約 3.50 ドルという end-to-end cost が示されています。
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-83"></a>
+### Case 83: [Cursor Setup Through Fireworks](https://x.com/skirano/status/2068777440986513647) (by [@skirano](https://x.com/skirano))
+
+**Fireworks 経由で GLM-5.2 を Cursor に最小構成で接続し、独自クライアントコードなしで試すためのケースです。**
+
+Skirano は Cursor の OpenAI API key 欄に Fireworks key を貼り、base URL に `https://api.fireworks.ai/inference/v1` を使い、model として `accounts/fireworks/models/glm-5p2` を選んで再起動する最小セットアップを示しています。GLM-5.2 を慣れた coding IDE で試す具体的な導線です。
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-84"></a>
+### Case 84: [VulcanBench ZAI Provider Support](https://x.com/vulcanbench/status/2068724843856707676) (by [@vulcanbench](https://x.com/vulcanbench))
+
+**専用の ZAI provider 対応と API key 導線を備えたオープン benchmark harness で GLM-5.2 を走らせるためのケースです。**
+
+VulcanBench v0.2.0 は first-class の ZAI support を追加し、GLM-5.2 を `zai:glm-5.2` として OpenAI や Anthropic model と並べて実行できるようにしました。専用の `ZAI_API_KEY` も用意されており、単発 screenshot ではなく開かれた benchmark harness を求める人に向いています。
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-85"></a>
+### Case 85: [OpenCode High/Max Reasoning Variants](https://x.com/OpenCodeLog/status/2068487086576156705) (by [@OpenCodeLog](https://x.com/OpenCodeLog))
+
+**OpenCode 内で GLM-5.2 の High / Max reasoning variant にアクセスしつつ、より安定した step-limit 処理も取り込むためのケースです。**
+
+OpenCode v1.17.9 は GLM-5.2 の High / Max thinking variant を OpenAI 互換および Anthropic 互換 provider で追加し、OpenRouter の effort mapping も native に扱えるようにしました。同じ release では agent step-limit の挙動も修正されており、長めの実行でより実用的になっています。
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-86"></a>
+### Case 86: [Z.ai Coding Endpoint Selection](https://x.com/ivanfioravanti/status/2068574700721082400) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**GLM-5.2 の coding plan トラフィックを、汎用 API ではなく coding 最適化済みの Z.ai endpoint に向けるためのケースです。**
+
+この投稿では coding plan workload 向けに、一般的な `https://api.z.ai/api/paas/v4/` ではなく `https://api.z.ai/api/coding/paas/v4` を使うよう案内しています。また、Claude Code や OpenCode が対応している場合は `https://api.z.ai/api/anthropic` を使うことが多いとも述べています。GLM-5.2 が misroute されていると感じるときの具体的な設定修正です。
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-87"></a>
+### Case 87: [ZenMux Free GLM-5.2 API Setup](https://x.com/0x_kaize/status/2068676992782811607) (by [@0x_kaize](https://x.com/0x_kaize))
+
+**無料の GLM-5.2 API key と base URL を取得し、Claude、Cursor、Hermes などに差し込むためのケースです。**
+
+作者は 5 分程度で無料の ZenMux API key と base URL を取得し、GLM-5.2 を Claude、Cursor、Hermes などに接続する流れを共有しています。一方で無料 tier はすぐ rate-limit に達すると書かれており、永続的な保証というより access note として使うのが適切です。
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-88"></a>
+### Case 88: [Two M3 Ultra MLX Distributed Run](https://x.com/ivanfioravanti/status/2068781499206574576) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**より大きな Apple Silicon 構成を組む前に、2 台の M3 Ultra で分散 MLX 実行した GLM-5.2 8-bit serving の実態を見積もるためのケースです。**
+
+投稿では 2 台の M3 Ultra 512GB マシンにまたがる MLX distributed 実行で、GLM-5.2 8-bit が約 17.9 tokens/sec、総メモリがおよそ 760GB で動いています。作者はまだ work-in-progress の PR だとも明記しており、完成ガイドではなく deployment signal として見るべきです。
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-89"></a>
+### Case 89: [ZCode Multiplier Cut Through September](https://x.com/buildwithhassan/status/2068534544177791376) (by [@buildwithhassan](https://x.com/buildwithhassan))
+
+**peak / off-peak の multiplier 引き下げ期間を使って、GLM-5.2 の plan credits を引き延ばすためのケースです。**
+
+この投稿では ZCode が GLM coding plan の multiplier を peak 時間帯で 3x から 2x、off-peak で 2x から 0.67x に下げ、その新しい window が 9 月末まで続くと述べています。GLM-5.2 の credits を伸ばしたい人にとって、具体的な access / pricing note です。
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+
 <a id="acknowledge"></a>
 ## 🙏 謝辞
 
 This repository was inspired by public creators, developers, benchmark teams, providers, and communities who shared real GLM-5.2 usage evidence.
 
-ここで取り上げた高シグナルな情報源とクリエイターに感謝します: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn).
+ここで取り上げた高シグナルな情報源とクリエイターに感謝します: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 

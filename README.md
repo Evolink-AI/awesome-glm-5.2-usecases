@@ -37,7 +37,7 @@ Each case title links to its public source, and each author handle links to the 
 
 ## 📊 Overview
 
-- **79 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
+- **89 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
 - Covers Benchmarks & Frontier Evaluation, Coding Agents & Long-Context Workflows, Hands-On Demos & Showcase Builds, Provider & Tool Integrations, Cost, Pricing & Local Deployment, Limits, Caveats & Safety Signals.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Use this repo to find practical workflows, compare strengths and limits, discover provider routes, and follow real hands-on experiments.
@@ -78,10 +78,10 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | Section | Cases |
 |---|---|
 | [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76 |
-| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77 |
-| [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78 |
-| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79 |
-| [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68 |
+| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80 |
+| [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82 |
+| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87 |
+| [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89 |
 | [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75 |
 | [🙏 Acknowledge](#acknowledge) | Credits and correction policy |
 
@@ -124,6 +124,7 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [Case 65: Fast-RLM Long-Context Instruction Injection](#case-65) | Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt. | Integration |
 | [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
 | [Case 77: Production Marketing Agent Stack Routing](#case-77) | Use this case to route GLM-5.2 into production agent workflows that value structure, speed, and self-hosting, while keeping stronger closed models for ambiguous judgment calls. | Evaluation |
+| [Case 80: M3 Ultra Pokemon Red Goal Run](#case-80) | Use this case to judge GLM-5.2 on a long-horizon local coding-agent run, where the model spent roughly half a day trying to recreate Pokemon Red in HTML on an M3 Ultra box. | Demo |
 
 ### [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds)
 
@@ -139,6 +140,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [Design Sense Example](#case-30) | Use this case as a lightweight visual-design signal, then verify with your own prompt and UI review. | Demo |
 | [Case 71: Temple Run Voxel Game One-Shot](#case-71) | Use this case to stress-test GLM-5.2 on single-prompt game generation, then inspect what still needs iterative correction in a visually rich build. | Demo |
 | [Case 78: OpenCode Go One-Shot Example Set](#case-78) | Use this case to benchmark GLM-5.2 on quick one-shot builds inside OpenCode Go before committing it to more open-ended agent loops. | Demo |
+| [Case 81: Space Invaders One-Prompt Build](#case-81) | Use this case to test GLM-5.2 on one-prompt game creation, then see how a few extra passes handle asset swaps and simple polish. | Demo |
+| [Case 82: OpenCode Recovery Lab One-Shot](#case-82) | Use this case to prototype interactive agent-failure simulations quickly, because the author reports getting a working recovery lab in one shot for about $3.50. | Demo |
 
 ### [🔌 Provider & Tool Integrations](#provider-tool-integrations)
 
@@ -161,6 +164,11 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [Case 69: Baseten Faster One-Million-Context Serving](#case-69) | Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses. | Integration |
 | [Case 74: Browser Use QA Subagents For Web Design](#case-74) | Use this case to pair GLM-5.2 with Browser Use v2 multimodal QA subagents when a text-only model needs visual inspection and iterative website fixes. | Integration |
 | [Case 79: ZCode Official IDE Daily Free Tokens](#case-79) | Use this case to access GLM-5.2 through ZCode when you want a free official coding IDE with large daily token allowances and a Cursor-like workflow. | Tutorial |
+| [Case 83: Cursor Setup Through Fireworks](#case-83) | Use this case to wire GLM-5.2 into Cursor through Fireworks with a minimal OpenAI-compatible setup and no custom client code. | Tutorial |
+| [Case 84: VulcanBench ZAI Provider Support](#case-84) | Use this case to run GLM-5.2 in an open benchmark harness with first-class ZAI provider support and a dedicated API key path. | Integration |
+| [Case 85: OpenCode High/Max Reasoning Variants](#case-85) | Use this case to access GLM-5.2 High and Max reasoning variants inside OpenCode while also picking up more reliable step-limit handling. | Integration |
+| [Case 86: Z.ai Coding Endpoint Selection](#case-86) | Use this case to route GLM-5.2 coding-plan traffic to the coding-optimized Z.ai endpoint instead of the generic API path. | Tutorial |
+| [Case 87: ZenMux Free GLM-5.2 API Setup](#case-87) | Use this case to get a free GLM-5.2 API key and base URL, then plug it into Claude, Cursor, Hermes, and similar tools. | Tutorial |
 
 ### [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment)
 
@@ -177,6 +185,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [API Price Margin Comparison](#case-51) | Use this case as a market-pricing critique when comparing GLM-5.2 to other frontier labs and open models. | Evaluation |
 | [Case 64: Basement Local Inference Speed](#case-64) | Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup. | Demo |
 | [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
+| [Case 88: Two M3 Ultra MLX Distributed Run](#case-88) | Use this case to estimate what GLM-5.2 8-bit serving looks like across two M3 Ultra machines before building a larger Apple-silicon setup. | Demo |
+| [Case 89: ZCode Multiplier Cut Through September](#case-89) | Use this case to stretch GLM-5.2 plan credits with lower ZCode multipliers during both peak and off-peak windows. | Integration |
 
 ### [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals)
 
@@ -530,6 +540,17 @@ Type: Evaluation | Date: 2026-06-20
 
 ---
 
+<a id="case-80"></a>
+### Case 80: [M3 Ultra Pokemon Red Goal Run](https://x.com/hxiao/status/2068800750554378434) (by [@hxiao](https://x.com/hxiao))
+
+**Use this case to judge GLM-5.2 on a long-horizon local coding-agent run, where the model spent roughly half a day trying to recreate Pokemon Red in HTML on an M3 Ultra box.**
+
+The author swapped Claude Code's model to local GLM 5.2 on an M3 Ultra 512GB machine and ran a 12-hour `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.` task. The post shares runtime, token usage, code churn, RAM use, and the GGUF plus KV-cache setup, while noting that the model quality felt frontier-level but local inference throughput was the bottleneck.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Hands-On Demos & Showcase Builds
@@ -641,6 +662,28 @@ Type: Demo | Date: 2026-06-20
 The author reports one-shot examples spanning a solar-system web app, a system-info Electron app, and a simple explore-island web game via OpenCode Go. The same post also says GLM-5.2 is the best open model they have used while stopping short of calling it frontier-equal.
 
 Type: Demo | Date: 2026-06-20
+
+---
+
+<a id="case-81"></a>
+### Case 81: [Space Invaders One-Prompt Build](https://x.com/DeryaTR_/status/2068803754611069128) (by [@DeryaTR_](https://x.com/DeryaTR_))
+
+**Use this case to test GLM-5.2 on one-prompt game creation, then see how a few extra passes handle asset swaps and simple polish.**
+
+The author says GLM-5.2 built a playable Space Invaders-style game from one main prompt, then used three follow-up prompts for sprite replacements and minor additions like a leaderboard. The posted result is a lightweight public example of game-building quality, not a full benchmark.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-82"></a>
+### Case 82: [OpenCode Recovery Lab One-Shot](https://x.com/threepointone/status/2068718370581536816) (by [@threepointone](https://x.com/threepointone))
+
+**Use this case to prototype interactive agent-failure simulations quickly, because the author reports getting a working recovery lab in one shot for about $3.50.**
+
+The author built a fully interactive recovery lab with OpenCode and GLM-5.2 after feeding the model a 4,000-word analysis and the Agents SDK repository. The post reports a 176k-token run, a one-shot result, and an end-to-end cost around $3.50 before polish.
+
+Type: Demo | Date: 2026-06-21
 
 ---
 
@@ -835,6 +878,61 @@ Type: Tutorial | Date: 2026-06-20
 
 ---
 
+<a id="case-83"></a>
+### Case 83: [Cursor Setup Through Fireworks](https://x.com/skirano/status/2068777440986513647) (by [@skirano](https://x.com/skirano))
+
+**Use this case to wire GLM-5.2 into Cursor through Fireworks with a minimal OpenAI-compatible setup and no custom client code.**
+
+Skirano shows a minimal Cursor setup flow: paste a Fireworks key into the OpenAI API key field, use `https://api.fireworks.ai/inference/v1` as the base URL, select `accounts/fireworks/models/glm-5p2`, and restart Cursor. That makes this a concrete route for trying GLM-5.2 inside a familiar coding IDE.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-84"></a>
+### Case 84: [VulcanBench ZAI Provider Support](https://x.com/vulcanbench/status/2068724843856707676) (by [@vulcanbench](https://x.com/vulcanbench))
+
+**Use this case to run GLM-5.2 in an open benchmark harness with first-class ZAI provider support and a dedicated API key path.**
+
+VulcanBench v0.2.0 added first-class ZAI support, letting users run GLM-5.2 as `zai:glm-5.2` beside OpenAI and Anthropic models with a dedicated `ZAI_API_KEY`. This is useful for people who want an open benchmark harness rather than one-off screenshots.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-85"></a>
+### Case 85: [OpenCode High/Max Reasoning Variants](https://x.com/OpenCodeLog/status/2068487086576156705) (by [@OpenCodeLog](https://x.com/OpenCodeLog))
+
+**Use this case to access GLM-5.2 High and Max reasoning variants inside OpenCode while also picking up more reliable step-limit handling.**
+
+OpenCode v1.17.9 added High and Max thinking variants for GLM-5.2 across OpenAI-compatible and Anthropic-compatible providers, plus native OpenRouter effort mapping. The same release also fixed agent step-limit behavior, making the integration more practical for longer runs.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-86"></a>
+### Case 86: [Z.ai Coding Endpoint Selection](https://x.com/ivanfioravanti/status/2068574700721082400) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**Use this case to route GLM-5.2 coding-plan traffic to the coding-optimized Z.ai endpoint instead of the generic API path.**
+
+The post points users to `https://api.z.ai/api/coding/paas/v4` instead of the general `https://api.z.ai/api/paas/v4/` endpoint for coding-plan workloads, and notes that `https://api.z.ai/api/anthropic` is what tools like Claude Code and OpenCode usually use where supported. Treat it as a concrete configuration fix when GLM-5.2 feels misrouted.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-87"></a>
+### Case 87: [ZenMux Free GLM-5.2 API Setup](https://x.com/0x_kaize/status/2068676992782811607) (by [@0x_kaize](https://x.com/0x_kaize))
+
+**Use this case to get a free GLM-5.2 API key and base URL, then plug it into Claude, Cursor, Hermes, and similar tools.**
+
+The author shares a five-minute setup flow for getting a free ZenMux API key and base URL, then wiring GLM-5.2 into Claude, Cursor, Hermes, and similar tools. The post also notes that the free tier rate-limits quickly, which makes it more useful as an access note than a durability guarantee.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Cost, Pricing & Local Deployment
@@ -957,6 +1055,28 @@ Type: Demo | Date: 2026-06-20
 The post describes Unsloth dynamic 2-bit and 1-bit GGUF options, memory reductions, and llama.cpp or Unsloth Studio deployment routes.
 
 Type: Tutorial | Date: 2026-06-20
+
+---
+
+<a id="case-88"></a>
+### Case 88: [Two M3 Ultra MLX Distributed Run](https://x.com/ivanfioravanti/status/2068781499206574576) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**Use this case to estimate what GLM-5.2 8-bit serving looks like across two M3 Ultra machines before building a larger Apple-silicon setup.**
+
+The post shows GLM-5.2 8-bit running with MLX distributed across two M3 Ultra 512GB machines at about 17.9 tokens per second and roughly 760GB of memory. The author also flags the setup as a preliminary work-in-progress PR, so use it as a deployment signal rather than a finished guide.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-89"></a>
+### Case 89: [ZCode Multiplier Cut Through September](https://x.com/buildwithhassan/status/2068534544177791376) (by [@buildwithhassan](https://x.com/buildwithhassan))
+
+**Use this case to stretch GLM-5.2 plan credits with lower ZCode multipliers during both peak and off-peak windows.**
+
+The post says ZCode lowered GLM coding-plan multipliers from 3x to 2x in peak hours and from 2x to 0.67x off-peak, with the new window running until the end of September. That makes it a concrete access and pricing note for anyone stretching credits on GLM-5.2.
+
+Type: Integration | Date: 2026-06-21
 
 ---
 
@@ -1091,7 +1211,7 @@ Type: Limit | Date: 2026-06-20
 
 This repository was inspired by the creators, developers, benchmark teams, providers, and communities who shared real GLM-5.2 usage evidence publicly.
 
-Thanks to the high-signal source creators represented here: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn).
+Thanks to the high-signal source creators represented here: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
 
 *We cannot guarantee that every case is attributed to the original creator. If anything needs to be corrected, please contact us and we will update it.*
 

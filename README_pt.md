@@ -37,7 +37,7 @@ Cada título de caso aponta para a fonte pública, e cada autor aponta para o pe
 
 ## 📊 Visão Geral
 
-- **79 casos selecionados de GLM-5.2** de criadores públicos, equipes de benchmark, desenvolvedores de ferramentas, provedores e usuários práticos.
+- **89 casos selecionados de GLM-5.2** de criadores públicos, equipes de benchmark, desenvolvedores de ferramentas, provedores e usuários práticos.
 - Covers Benchmarks e avaliação frontier, Agentes de código e workflows de contexto longo, Demos práticas e showcases, Integrações de provedores e ferramentas, Custo, preços e deployment local, Limites, ressalvas e sinais de segurança.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Use este repo para encontrar workflows práticos, comparar pontos fortes e limites, descobrir provedores e acompanhar experimentos reais.
@@ -78,10 +78,24 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 | Seção | Casos |
 |---|---|
 | [📏 Benchmarks e avaliação frontier](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76 |
-| [💻 Agentes de código e workflows de contexto longo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77 |
-| [🎮 Demos práticas e showcases](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78 |
-| [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79 |
-| [💸 Custo, preços e deployment local](#cost-pricing-local-deployment) | Case 43-51, 64, 68 |
+| [💻 Agentes de código e workflows de contexto longo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80 |
+
+| [Case 80: Recriação de Pokemon Red no M3 Ultra](#case-80) | Use este caso para avaliar o GLM-5.2 em uma execução local de agente de código de longo horizonte, na qual o modelo passou cerca de meio dia tentando recriar Pokemon Red em HTML em uma máquina M3 Ultra. | Demo |
+| [🎮 Demos práticas e showcases](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82 |
+
+| [Case 81: Build de Space Invaders com um único prompt](#case-81) | Use este caso para testar o GLM-5.2 na criação de jogos com um único prompt e depois ver como alguns passes extras lidam com trocas de assets e polimento simples. | Demo |
+| [Case 82: Laboratório de recuperação do OpenCode em one-shot](#case-82) | Use este caso para prototipar rapidamente simulações interativas de falha de agentes, porque o autor relata ter obtido um recovery lab funcional em one-shot por cerca de US$ 3,50. | Demo |
+| [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87 |
+
+| [Case 83: Configuração do Cursor via Fireworks](#case-83) | Use este caso para conectar o GLM-5.2 ao Cursor via Fireworks com uma configuração mínima compatível com OpenAI e sem código cliente customizado. | Tutorial |
+| [Case 84: Suporte ao provedor ZAI no VulcanBench](#case-84) | Use este caso para executar o GLM-5.2 em um harness aberto de benchmark com suporte de primeira classe ao provedor ZAI e um caminho dedicado de API key. | Integration |
+| [Case 85: Variantes de raciocínio High/Max no OpenCode](#case-85) | Use este caso para acessar as variantes de raciocínio High e Max do GLM-5.2 dentro do OpenCode, ao mesmo tempo em que ganha um tratamento mais confiável do limite de passos. | Integration |
+| [Case 86: Seleção do endpoint de código do Z.ai](#case-86) | Use este caso para rotear o tráfego de coding plan do GLM-5.2 para o endpoint do Z.ai otimizado para código em vez do caminho genérico de API. | Tutorial |
+| [Case 87: Configuração gratuita da API GLM-5.2 no ZenMux](#case-87) | Use este caso para obter uma API key e uma base URL gratuitas do GLM-5.2 e depois conectá-las ao Claude, Cursor, Hermes e ferramentas similares. | Tutorial |
+| [💸 Custo, preços e deployment local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89 |
+
+| [Case 88: Execução distribuída de MLX em dois M3 Ultra](#case-88) | Use este caso para estimar como é servir o GLM-5.2 em 8 bits em duas máquinas M3 Ultra antes de montar uma configuração maior sobre Apple Silicon. | Demo |
+| [Case 89: Corte do multiplicador do ZCode até setembro](#case-89) | Use este caso para esticar os créditos do plano do GLM-5.2 com multiplicadores menores do ZCode tanto nos horários de pico quanto fora deles. | Integration |
 | [🧭 Limites, ressalvas e sinais de segurança](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75 |
 | [🙏 Agradecimentos](#acknowledge) | Créditos e política de correção |
 
@@ -531,6 +545,17 @@ Type: Evaluation | Date: 2026-06-20
 ---
 
 
+
+<a id="case-80"></a>
+### Case 80: [Recriação de Pokemon Red no M3 Ultra](https://x.com/hxiao/status/2068800750554378434) (por [@hxiao](https://x.com/hxiao))
+
+**Use este caso para avaliar o GLM-5.2 em uma execução local de agente de código de longo horizonte, na qual o modelo passou cerca de meio dia tentando recriar Pokemon Red em HTML em uma máquina M3 Ultra.**
+
+O autor trocou o modelo do Claude Code por um GLM 5.2 local em uma máquina M3 Ultra de 512 GB e executou por 12 horas a tarefa `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.`. O post compartilha tempo de execução, uso de tokens, churn de código, uso de RAM e a configuração de GGUF mais KV-cache, ao mesmo tempo em que observa que a qualidade do modelo pareceu nível frontier, mas o throughput de inferência local foi o gargalo.
+
+Type: Demo | Date: 2026-06-21
+
+---
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Demos práticas e showcases
 
@@ -645,6 +670,28 @@ Type: Demo | Date: 2026-06-20
 ---
 
 
+
+<a id="case-81"></a>
+### Case 81: [Build de Space Invaders com um único prompt](https://x.com/DeryaTR_/status/2068803754611069128) (por [@DeryaTR_](https://x.com/DeryaTR_))
+
+**Use este caso para testar o GLM-5.2 na criação de jogos com um único prompt e depois ver como alguns passes extras lidam com trocas de assets e polimento simples.**
+
+A autora diz que o GLM-5.2 construiu um jogo jogável no estilo Space Invaders a partir de um prompt principal e depois usou três prompts de acompanhamento para substituir sprites e adicionar pequenos extras como um leaderboard. O resultado publicado é um exemplo público leve de qualidade de criação de jogos, não um benchmark completo.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-82"></a>
+### Case 82: [Laboratório de recuperação do OpenCode em one-shot](https://x.com/threepointone/status/2068718370581536816) (por [@threepointone](https://x.com/threepointone))
+
+**Use este caso para prototipar rapidamente simulações interativas de falha de agentes, porque o autor relata ter obtido um recovery lab funcional em one-shot por cerca de US$ 3,50.**
+
+O autor construiu um recovery lab totalmente interativo com OpenCode e GLM-5.2 depois de fornecer ao modelo uma análise de 4.000 palavras e o repositório do Agents SDK. O post relata uma execução de 176k tokens, um resultado one-shot e um custo end-to-end em torno de US$ 3,50 antes do polimento.
+
+Type: Demo | Date: 2026-06-21
+
+---
 <a id="provider-tool-integrations"></a>
 ## 🔌 Integrações de provedores e ferramentas
 
@@ -823,7 +870,7 @@ Type: Integration | Date: 2026-06-20
 ---
 
 <a id="case-79"></a>
-### Case 79: [Tokens grátis diários no IDE oficial ZCode](https://x.com/Alan_Earn/status/2068223665268006924) (por [@Alan_Earn](https://x.com/Alan_Earn))
+### Case 79: [Tokens grátis diários no IDE oficial ZCode](https://x.com/Alan_Earn/status/2068223665268006924) (por [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan))
 
 **Use este caso para acessar o GLM-5.2 via ZCode quando você quiser um IDE oficial de programação gratuito com grandes cotas diárias de tokens e um workflow ao estilo Cursor.**
 
@@ -834,6 +881,61 @@ Type: Tutorial | Date: 2026-06-20
 ---
 
 
+
+<a id="case-83"></a>
+### Case 83: [Configuração do Cursor via Fireworks](https://x.com/skirano/status/2068777440986513647) (por [@skirano](https://x.com/skirano))
+
+**Use este caso para conectar o GLM-5.2 ao Cursor via Fireworks com uma configuração mínima compatível com OpenAI e sem código cliente customizado.**
+
+Skirano mostra um fluxo mínimo de configuração no Cursor: colar uma chave da Fireworks no campo de API key da OpenAI, usar `https://api.fireworks.ai/inference/v1` como base URL, selecionar `accounts/fireworks/models/glm-5p2` e reiniciar o Cursor. Isso o torna uma rota concreta para testar o GLM-5.2 dentro de um IDE de programação familiar.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-84"></a>
+### Case 84: [Suporte ao provedor ZAI no VulcanBench](https://x.com/vulcanbench/status/2068724843856707676) (por [@vulcanbench](https://x.com/vulcanbench))
+
+**Use este caso para executar o GLM-5.2 em um harness aberto de benchmark com suporte de primeira classe ao provedor ZAI e um caminho dedicado de API key.**
+
+O VulcanBench v0.2.0 adicionou suporte de primeira classe ao ZAI, permitindo que os usuários executem o GLM-5.2 como `zai:glm-5.2` ao lado de modelos da OpenAI e da Anthropic com uma `ZAI_API_KEY` dedicada. Isso é útil para quem quer um harness aberto de benchmark em vez de screenshots isolados.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-85"></a>
+### Case 85: [Variantes de raciocínio High/Max no OpenCode](https://x.com/OpenCodeLog/status/2068487086576156705) (por [@OpenCodeLog](https://x.com/OpenCodeLog))
+
+**Use este caso para acessar as variantes de raciocínio High e Max do GLM-5.2 dentro do OpenCode, ao mesmo tempo em que ganha um tratamento mais confiável do limite de passos.**
+
+O OpenCode v1.17.9 adicionou variantes de thinking High e Max para o GLM-5.2 em provedores compatíveis com OpenAI e Anthropic, além do mapeamento nativo de esforço para o OpenRouter. A mesma versão também corrigiu o comportamento do limite de passos do agente, tornando a integração mais prática para execuções mais longas.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-86"></a>
+### Case 86: [Seleção do endpoint de código do Z.ai](https://x.com/ivanfioravanti/status/2068574700721082400) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**Use este caso para rotear o tráfego de coding plan do GLM-5.2 para o endpoint do Z.ai otimizado para código em vez do caminho genérico de API.**
+
+O post orienta os usuários a usar `https://api.z.ai/api/coding/paas/v4` em vez do endpoint geral `https://api.z.ai/api/paas/v4/` para workloads de coding plan, e observa que `https://api.z.ai/api/anthropic` é o que ferramentas como Claude Code e OpenCode costumam usar quando há suporte. Trate isso como uma correção concreta de configuração quando o GLM-5.2 parecer mal roteado.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-87"></a>
+### Case 87: [Configuração gratuita da API GLM-5.2 no ZenMux](https://x.com/0x_kaize/status/2068676992782811607) (por [@0x_kaize](https://x.com/0x_kaize))
+
+**Use este caso para obter uma API key e uma base URL gratuitas do GLM-5.2 e depois conectá-las ao Claude, Cursor, Hermes e ferramentas similares.**
+
+O autor compartilha um fluxo de configuração de cinco minutos para obter uma API key e uma base URL gratuitas do ZenMux e depois conectar o GLM-5.2 ao Claude, Cursor, Hermes e ferramentas similares. O post também observa que o rate limit da camada gratuita chega rápido, então isso é mais útil como nota de acesso do que como garantia de durabilidade.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Custo, preços e deployment local
 
@@ -959,6 +1061,28 @@ Tipo: Tutorial | Data: 2026-06-20
 ---
 
 
+
+<a id="case-88"></a>
+### Case 88: [Execução distribuída de MLX em dois M3 Ultra](https://x.com/ivanfioravanti/status/2068781499206574576) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**Use este caso para estimar como é servir o GLM-5.2 em 8 bits em duas máquinas M3 Ultra antes de montar uma configuração maior sobre Apple Silicon.**
+
+O post mostra o GLM-5.2 em 8 bits rodando com MLX distributed em duas máquinas M3 Ultra de 512 GB a cerca de 17,9 tokens por segundo e com aproximadamente 760 GB de memória. O autor também destaca que a configuração é um PR preliminar ainda em andamento, então use isso como sinal de deployment e não como guia finalizado.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-89"></a>
+### Case 89: [Corte do multiplicador do ZCode até setembro](https://x.com/buildwithhassan/status/2068534544177791376) (por [@buildwithhassan](https://x.com/buildwithhassan))
+
+**Use este caso para esticar os créditos do plano do GLM-5.2 com multiplicadores menores do ZCode tanto nos horários de pico quanto fora deles.**
+
+O post diz que o ZCode reduziu os multiplicadores do coding plan de GLM de 3x para 2x nos horários de pico e de 2x para 0,67x fora deles, com a nova janela valendo até o fim de setembro. Isso o torna uma nota concreta de acesso e preço para quem quer esticar créditos no GLM-5.2.
+
+Type: Integration | Date: 2026-06-21
+
+---
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Limites, ressalvas e sinais de segurança
 

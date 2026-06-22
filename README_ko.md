@@ -37,7 +37,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 ## 📊 개요
 
-- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **79개의 선별된 GLM-5.2 사례**입니다.
+- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **89개의 선별된 GLM-5.2 사례**입니다.
 - Covers 벤치마크와 frontier 평가, 코딩 에이전트와 장기 컨텍스트 워크플로, 실사용 데모와 쇼케이스 빌드, 공급자 및 도구 통합, 비용, 가격, 로컬 배포, 한계, caveat, 안전 신호.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - 실용 워크플로, 강점과 한계 비교, 공급자 경로, 실제 실험을 찾는 데 사용하세요.
@@ -78,10 +78,10 @@ curl --request POST \
 | 섹션 | 사례 |
 |---|---|
 | [📏 벤치마크와 frontier 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76 |
-| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77 |
-| [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78 |
-| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79 |
-| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68 |
+| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80 |
+| [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82 |
+| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87 |
+| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89 |
 | [🧭 한계, caveat, 안전 신호](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75 |
 | [🙏 감사의 글](#acknowledge) | 크레딧 및 수정 정책 |
 
@@ -124,6 +124,7 @@ curl --request POST \
 | [Case 65: Fast-RLM Long-Context Instruction Injection](#case-65) | Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt. | Integration |
 | [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
 | [Case 77: 프로덕션 마케팅 agent stack 라우팅](#case-77) | 구조화, 속도, self-hosting 을 중시하는 production agent workflow 에 GLM-5.2를 배치하고, 모호한 판단은 더 강한 closed model 에 맡기는 라우팅 사례입니다. | Evaluation |
+| [Case 80: M3 Ultra Pokemon Red Goal Run](#case-80) | M3 Ultra에서 장시간 로컬 coding agent 실행으로 GLM-5.2를 판단하기 위한 사례입니다. 거의 반나절 동안 Pokemon Red를 HTML로 재현하려 한 실험을 따라갈 수 있습니다. | Demo |
 
 ### [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds)
 
@@ -139,6 +140,8 @@ curl --request POST \
 | [Design Sense Example](#case-30) | Use this case as a lightweight visual-design signal, then verify with your own prompt and UI review. | Demo |
 | [Case 71: Temple Run 스타일 복셀 게임 원샷 생성](#case-71) | 단일 프롬프트 게임 생성에서 GLM-5.2를 stress-test 하고, 시각적으로 풍부한 빌드에서 무엇이 추가 수정이 필요한지 확인하는 사례입니다. | Demo |
 | [Case 78: OpenCode Go 원샷 예시 세트](#case-78) | 더 open-ended 한 agent loop 에 투입하기 전에 OpenCode Go 안의 quick one-shot build 에서 GLM-5.2를 benchmark 하는 사례입니다. | Demo |
+| [Case 81: Space Invaders One-Prompt Build](#case-81) | 단일 프롬프트 게임 생성에서 GLM-5.2를 시험하고, 몇 번의 추가 프롬프트로 asset 교체와 가벼운 polish가 어떻게 진행되는지 보는 사례입니다. | Demo |
+| [Case 82: OpenCode Recovery Lab One-Shot](#case-82) | 약 3.50달러의 one-shot 실행으로 동작하는 recovery lab을 만들었다는 보고를 바탕으로, agent failure simulation 프로토타이핑 속도를 보는 사례입니다. | Demo |
 
 ### [🔌 공급자 및 도구 통합](#provider-tool-integrations)
 
@@ -161,6 +164,11 @@ curl --request POST \
 | [Case 69: Baseten Faster One-Million-Context Serving](#case-69) | Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses. | Integration |
 | [Case 74: 웹 디자인용 Browser Use QA subagents](#case-74) | text-only model 에 시각 검수가 필요할 때 GLM-5.2를 Browser Use v2의 multimodal QA subagents 와 조합해 반복적인 웹사이트 수정에 쓰는 사례입니다. | Integration |
 | [Case 79: ZCode 공식 IDE 일일 무료 토큰](#case-79) | 큰 daily token allowance 와 Cursor 유사 workflow 를 제공하는 무료 공식 coding IDE 로 ZCode 를 통해 GLM-5.2에 접근하는 사례입니다. | Tutorial |
+| [Case 83: Cursor Setup Through Fireworks](#case-83) | Fireworks를 통해 GLM-5.2를 Cursor에 최소 설정으로 연결하고, 별도 클라이언트 코드 없이 시험하는 사례입니다. | Tutorial |
+| [Case 84: VulcanBench ZAI Provider Support](#case-84) | 전용 ZAI provider 지원과 API key 경로를 갖춘 오픈 benchmark harness에서 GLM-5.2를 실행하는 사례입니다. | Integration |
+| [Case 85: OpenCode High/Max Reasoning Variants](#case-85) | OpenCode 안에서 GLM-5.2의 High / Max reasoning variant를 쓰고 step-limit 처리 개선도 함께 가져오는 사례입니다. | Integration |
+| [Case 86: Z.ai Coding Endpoint Selection](#case-86) | coding plan 트래픽을 일반 API가 아니라 coding 최적화 Z.ai endpoint로 보내기 위한 설정 사례입니다. | Tutorial |
+| [Case 87: ZenMux Free GLM-5.2 API Setup](#case-87) | 무료 ZenMux API key와 base URL을 받아 Claude, Cursor, Hermes 같은 도구에 연결하는 접근 설정 사례입니다. | Tutorial |
 
 ### [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment)
 
@@ -177,6 +185,8 @@ curl --request POST \
 | [API Price Margin Comparison](#case-51) | Use this case as a market-pricing critique when comparing GLM-5.2 to other frontier labs and open models. | Evaluation |
 | [Case 64: Basement Local Inference Speed](#case-64) | Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup. | Demo |
 | [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
+| [Case 88: Two M3 Ultra MLX Distributed Run](#case-88) | 두 대의 M3 Ultra에 분산 MLX로 올린 GLM-5.2 8-bit serving 모습을 보고 더 큰 Apple Silicon 구성을 가늠하는 사례입니다. | Demo |
+| [Case 89: ZCode Multiplier Cut Through September](#case-89) | peak / off-peak multiplier 인하 기간을 활용해 GLM-5.2 plan credits를 더 오래 쓰기 위한 접근·가격 메모입니다. | Integration |
 
 ### [🧭 한계, caveat, 안전 신호](#limits-caveats-safety-signals)
 
@@ -1086,12 +1096,123 @@ The post reports a practical split: GLM-5.2 works well for short parallel tasks 
 ---
 
 
+<a id="case-80"></a>
+### Case 80: [M3 Ultra Pokemon Red Goal Run](https://x.com/hxiao/status/2068800750554378434) (by [@hxiao](https://x.com/hxiao))
+
+**M3 Ultra에서의 장시간 로컬 coding agent 실행에서 GLM-5.2를 판단하기 위한 사례입니다. 거의 반나절 동안 Pokemon Red를 HTML로 재현하려 한 목표 실행을 따라갈 수 있습니다.**
+
+작성자는 Claude Code의 model을 로컬 GLM 5.2로 바꾸고 M3 Ultra 512GB 머신에서 12시간짜리 `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.` 작업을 돌렸습니다. 게시물은 실행 시간, token 사용량, code churn, RAM 사용량, GGUF와 KV-cache 구성을 함께 공유하며, 품질은 frontier급으로 느껴졌지만 로컬 추론 속도가 가장 큰 병목이었다고 말합니다.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-81"></a>
+### Case 81: [Space Invaders One-Prompt Build](https://x.com/DeryaTR_/status/2068803754611069128) (by [@DeryaTR_](https://x.com/DeryaTR_))
+
+**단일 프롬프트 게임 생성에서 GLM-5.2를 시험하고, 몇 번의 추가 프롬프트로 asset 교체와 가벼운 polish가 어떻게 진행되는지 보기 위한 사례입니다.**
+
+작성자는 GLM-5.2가 하나의 메인 프롬프트만으로 플레이 가능한 Space Invaders 스타일 게임을 만들었고, 이후 sprite 교체와 leaderboard 같은 작은 추가를 위해 세 번의 후속 프롬프트를 썼다고 말합니다. 공개 결과물은 가벼운 게임 생성 예시로는 유용하지만 완전한 benchmark는 아닙니다.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-82"></a>
+### Case 82: [OpenCode Recovery Lab One-Shot](https://x.com/threepointone/status/2068718370581536816) (by [@threepointone](https://x.com/threepointone))
+
+**대화형 agent failure simulation을 빠르게 프로토타이핑하기 위한 사례입니다. 작성자는 약 3.50달러로 동작하는 recovery lab을 one-shot으로 만들었다고 보고합니다.**
+
+작성자는 4,000단어 분석과 Agents SDK repository를 입력한 뒤 OpenCode와 GLM-5.2로 완전히 상호작용 가능한 recovery lab을 구축했습니다. 게시물에는 176k-token 실행, one-shot 결과, polish 전 기준 약 3.50달러의 end-to-end cost가 함께 적혀 있습니다.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-83"></a>
+### Case 83: [Cursor Setup Through Fireworks](https://x.com/skirano/status/2068777440986513647) (by [@skirano](https://x.com/skirano))
+
+**Fireworks를 통해 GLM-5.2를 Cursor에 최소 설정으로 연결하고, 별도 클라이언트 코드 없이 시험하기 위한 사례입니다.**
+
+Skirano는 Cursor의 OpenAI API key 칸에 Fireworks key를 붙여 넣고, base URL로 `https://api.fireworks.ai/inference/v1` 를 쓰며, model로 `accounts/fireworks/models/glm-5p2` 를 고른 뒤 재시작하는 최소 설정 흐름을 보여 줍니다. 익숙한 coding IDE 안에서 GLM-5.2를 바로 시도할 수 있는 구체적인 경로입니다.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-84"></a>
+### Case 84: [VulcanBench ZAI Provider Support](https://x.com/vulcanbench/status/2068724843856707676) (by [@vulcanbench](https://x.com/vulcanbench))
+
+**전용 ZAI provider 지원과 API key 경로를 갖춘 오픈 benchmark harness에서 GLM-5.2를 실행하기 위한 사례입니다.**
+
+VulcanBench v0.2.0은 first-class ZAI support를 추가해 GLM-5.2를 `zai:glm-5.2` 로 OpenAI, Anthropic 모델과 나란히 실행할 수 있게 했습니다. 전용 `ZAI_API_KEY` 경로도 제공해, 일회성 screenshot보다 재현 가능한 오픈 benchmark harness를 원하는 사람에게 유용합니다.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-85"></a>
+### Case 85: [OpenCode High/Max Reasoning Variants](https://x.com/OpenCodeLog/status/2068487086576156705) (by [@OpenCodeLog](https://x.com/OpenCodeLog))
+
+**OpenCode 안에서 GLM-5.2의 High / Max reasoning variant에 접근하면서 step-limit 처리 개선까지 함께 가져오기 위한 사례입니다.**
+
+OpenCode v1.17.9는 GLM-5.2를 위한 High와 Max thinking variant를 OpenAI 호환 및 Anthropic 호환 provider 전반에 추가했고, OpenRouter effort mapping도 native하게 다룹니다. 같은 release에서 agent step-limit 동작도 고쳐져 더 긴 실행에 실용성이 높아졌습니다.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+<a id="case-86"></a>
+### Case 86: [Z.ai Coding Endpoint Selection](https://x.com/ivanfioravanti/status/2068574700721082400) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**GLM-5.2 coding plan 트래픽을 일반 API가 아니라 coding 최적화 Z.ai endpoint로 보내기 위한 사례입니다.**
+
+이 게시물은 coding plan workload에 대해 일반 `https://api.z.ai/api/paas/v4/` 대신 `https://api.z.ai/api/coding/paas/v4` 를 쓰라고 안내합니다. 또한 Claude Code와 OpenCode 같은 도구가 지원하는 경우 `https://api.z.ai/api/anthropic` 을 주로 사용한다고 덧붙입니다. GLM-5.2가 잘못 라우팅되는 것처럼 보일 때 쓸 수 있는 구체적인 설정 수정입니다.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-87"></a>
+### Case 87: [ZenMux Free GLM-5.2 API Setup](https://x.com/0x_kaize/status/2068676992782811607) (by [@0x_kaize](https://x.com/0x_kaize))
+
+**무료 GLM-5.2 API key와 base URL을 받아 Claude, Cursor, Hermes 같은 도구에 연결하기 위한 사례입니다.**
+
+작성자는 5분 정도면 무료 ZenMux API key와 base URL을 발급받아 GLM-5.2를 Claude, Cursor, Hermes 등에 연결할 수 있는 흐름을 공유합니다. 다만 무료 tier는 빠르게 rate-limit에 걸린다고 덧붙여, 지속성 보장보다는 access note로 보는 편이 맞습니다.
+
+Type: Tutorial | Date: 2026-06-21
+
+---
+
+<a id="case-88"></a>
+### Case 88: [Two M3 Ultra MLX Distributed Run](https://x.com/ivanfioravanti/status/2068781499206574576) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**더 큰 Apple Silicon 구성을 짜기 전에, 두 대의 M3 Ultra에 분산 MLX로 올린 GLM-5.2 8-bit serving 모습을 가늠하기 위한 사례입니다.**
+
+게시물은 두 대의 M3 Ultra 512GB 머신에 걸친 MLX distributed 실행에서 GLM-5.2 8-bit가 약 17.9 tokens/sec, 총 약 760GB 메모리로 동작한다고 보여 줍니다. 작성자는 아직 work-in-progress PR이라고도 밝혀, 완성된 가이드라기보다 deployment signal로 보는 편이 적절합니다.
+
+Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-89"></a>
+### Case 89: [ZCode Multiplier Cut Through September](https://x.com/buildwithhassan/status/2068534544177791376) (by [@buildwithhassan](https://x.com/buildwithhassan))
+
+**peak / off-peak multiplier 인하 기간을 활용해 GLM-5.2 plan credits를 더 오래 쓰기 위한 사례입니다.**
+
+이 게시물은 ZCode가 GLM coding plan multiplier를 peak 시간에는 3x에서 2x로, off-peak에는 2x에서 0.67x로 낮췄고, 그 창이 9월 말까지 이어진다고 말합니다. GLM-5.2 credits를 오래 끌고 가려는 사람에게 구체적인 access / pricing note가 됩니다.
+
+Type: Integration | Date: 2026-06-21
+
+---
+
+
 <a id="acknowledge"></a>
 ## 🙏 감사의 글
 
 This repository was inspired by public creators, developers, benchmark teams, providers, and communities who shared real GLM-5.2 usage evidence.
 
-여기에 포함된 고신뢰 출처와 크리에이터에게 감사드립니다: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn).
+여기에 포함된 고신뢰 출처와 크리에이터에게 감사드립니다: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 
