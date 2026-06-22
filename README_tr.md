@@ -38,7 +38,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 ## 📊 Genel Bakış
 
 - Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **89 seçilmiş GLM-5.2 vakası**.
-- Covers Benchmark ve frontier değerlendirmesi, Kod ajanları ve uzun bağlam workflow’ları, Uygulamalı demolar ve showcase build’leri, Sağlayıcı ve araç entegrasyonları, Maliyet, fiyatlandırma ve yerel dağıtım, Sınırlar, caveat’ler ve güvenlik sinyalleri.
+- Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
 
@@ -77,275 +77,275 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Benchmark ve frontier değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76 |
-| [💻 Kod ajanları ve uzun bağlam workflow’ları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80 |
-| [🎮 Uygulamalı demolar ve showcase build’leri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89 |
-| [🧭 Sınırlar, caveat’ler ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75 |
-| [🙏 Teşekkür](#acknowledge) | Krediler ve düzeltme politikası |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80 |
+| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89 |
+| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75 |
+| [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
-### [📏 Benchmark ve frontier değerlendirmesi](#benchmarks-frontier-evaluation)
+### [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation)
 
-| Case | Ne gösteriyor | Tür |
+| Vaka | Odak | Tür |
 |---|---|---|
-| [Artificial Analysis Intelligence Index](#case-1) | Use the Artificial Analysis post to compare GLM-5.2 against other open-weight and proprietary frontier models on intelligence and cost per task. | Benchmark |
-| [Code Arena Frontend Ranking](#case-2) | Use this case to evaluate GLM-5.2 on real front-end coding tasks judged by arena-style comparisons. | Benchmark |
-| [Design Arena First Place](#case-3) | Use this case to judge whether GLM-5.2 can handle design-plus-code tasks rather than only text-heavy coding benchmarks. | Benchmark |
-| [FrontierSWE Result](#case-4) | Use the FrontierSWE post to compare GLM-5.2 against GPT-5.5, Opus, and Fable-style models on software-engineering tasks. | Benchmark |
-| [DeepSWE Open-Source Lead](#case-5) | Use the DeepSWE case to understand GLM-5.2 as a strong open model for difficult software-engineering evaluation tasks. | Benchmark |
-| [Terminal-Bench Over 80 Percent](#case-6) | Use this case when evaluating GLM-5.2 for terminal-oriented coding and agent workflows. | Benchmark |
-| [SWELancer Comparison Against GPT-5.5](#case-7) | Use this SWELancer case as a concrete multi-metric comparison between GLM-5.2 and GPT-5.5 on task success, reward, and completion time. | Evaluation |
-| [BridgeBench Perfect Score Signal](#case-8) | Use this case to inspect GLM-5.2 on grounded multi-step reasoning rather than only coding leaderboards. | Benchmark |
-| [BridgeBench Reasoning Number One](#case-9) | Use this case to compare GLM-5.2 with closed frontier models on grounded reasoning tasks. | Benchmark |
-| [KernelBench-Hard Without Shortcutting](#case-10) | Use this case when checking whether benchmark gains come from valid implementation behavior instead of shortcutting. | Evaluation |
-| [Runescape Bench Catch-Up](#case-11) | Use this case as a fast signal for open-weight model progress on game-like benchmark tasks. | Benchmark |
-| [BridgeBench Speed Improvement](#case-12) | Use this case to evaluate latency-sensitive workflows where speed matters alongside intelligence. | Benchmark |
-| [Case 60: KernelBench Hard And Mega GPU Coding](#case-60) | Use this case to evaluate GLM-5.2 on GPU-kernel coding across KernelBench-Hard and KernelBench-Mega, where open agent traces make the result inspectable. | Benchmark |
-| [Case 70: DeepSWE Max-Effort Open-Source Lead](#case-70) | GLM-5.2’yi DeepSWE’de max effort modunda takip etmek için kullanın; paylaşılan leaderboard, modeli %44 pass@1 ile açık modeller arasında birinci gösteriyor. | Benchmark |
-| [Case 72: LLM Debate Benchmark Runner-Up](#case-72) | GLM-5.2’yi kodlama dışındaki görevlerde, adversarial çok turlu tartışma benchmark’ında max-reasoning varyantının Claude modellerinin hemen arkasında ikinci olduğu bağlamda değerlendirmek için kullanın. | Benchmark |
-| [Case 76: AA-Omniscience Hallucination Rate](#case-76) | GLM-5.2’yi belirsizlik yönetimi açısından karşılaştırmak için kullanın; paylaşılan AA-Omniscience sonucu, bazı diğer frontier modellere göre daha düşük halüsinasyon oranı gösteriyor. | Evaluation |
+| [Artificial Analysis Intelligence Index](#case-1) | GLM-5.2'yi zeka ve görev başına maliyet açısından diğer açık ağırlıklı ve özel öncü modellerle karşılaştırmak için Yapay Analiz gönderisini kullanın. | Kıyaslama |
+| [Code Arena Frontend Ranking](#case-2) | Arena tarzı karşılaştırmalarla değerlendirilen gerçek ön uç kodlama görevlerinde GLM-5.2'yi değerlendirmek için bu durumu kullanın. | Kıyaslama |
+| [Design Arena First Place](#case-3) | GLM-5.2'nin yalnızca metin ağırlıklı kodlama kıyaslamaları yerine tasarım artı kod görevlerini yerine getirip getiremeyeceğini değerlendirmek için bu durumu kullanın. | Kıyaslama |
+| [FrontierSWE Result](#case-4) | Yazılım mühendisliği görevlerinde GLM-5.2'yi GPT-5.5, Opus ve Fable tarzı modellerle karşılaştırmak için FrontierSWE gönderisini kullanın. | Kıyaslama |
+| [DeepSWE Open-Source Lead](#case-5) | GLM-5.2'yi zor yazılım mühendisliği değerlendirme görevleri için güçlü bir açık model olarak anlamak için DeepSWE örneğini kullanın. | Kıyaslama |
+| [Terminal-Bench Over 80 Percent](#case-6) | Terminal odaklı kodlama ve aracı iş akışları için GLM-5.2'yi değerlendirirken bu durumu kullanın. | Kıyaslama |
+| [SWELancer'ın GPT-5.5 ile Karşılaştırması](#case-7) | Bu SWELancer vakasını, GLM-5.2 ile GPT-5.5 arasında görev başarısı, ödül ve tamamlanma süresi açısından somut bir çok ölçümlü karşılaştırma olarak kullanın. | Değerlendirme |
+| [BridgeBench Perfect Score Signal](#case-8) | GLM-5.2'yi yalnızca kodlama skor tabloları yerine temellendirilmiş çok adımlı akıl yürütmeye göre incelemek için bu örneği kullanın. | Kıyaslama |
+| [BridgeBench Reasoning Number One](#case-9) | Temellendirilmiş muhakeme görevlerinde GLM-5.2'yi kapalı sınır modelleriyle karşılaştırmak için bu durumu kullanın. | Kıyaslama |
+| [KernelBench-Hard Without Shortcutting](#case-10) | Karşılaştırma kazanımlarının kısayol yerine geçerli uygulama davranışından gelip gelmediğini kontrol ederken bu durumu kullanın. | Değerlendirme |
+| [Runescape Bench Catch-Up](#case-11) | Bu durumu, oyun benzeri kıyaslama görevlerinde açık ağırlıklı model ilerlemesi için hızlı bir sinyal olarak kullanın. | Kıyaslama |
+| [BridgeBench Speed Improvement](#case-12) | Zekanın yanı sıra hızın da önemli olduğu, gecikmeye duyarlı iş akışlarını değerlendirmek için bu durumu kullanın. | Kıyaslama |
+| [KernelBench Sert ve Mega GPU Kodlama](#case-60) | Açık aracı izlerinin sonucu denetlenebilir hale getirdiği KernelBench-Hard ve KernelBench-Mega genelinde GPU çekirdek kodlamasında GLM-5.2'yi değerlendirmek için bu durumu kullanın. | Kıyaslama |
+| [DeepSWE Max-Effort Open-Source Lead](#case-70) | GLM-5.2’yi DeepSWE’de max effort modunda takip etmek için kullanın; paylaşılan leaderboard, modeli %44 pass@1 ile açık modeller arasında birinci gösteriyor. | Kıyaslama |
+| [LLM Debate Benchmark Runner-Up](#case-72) | GLM-5.2’yi kodlama dışındaki görevlerde, adversarial çok turlu tartışma benchmark’ında max-reasoning varyantının Claude modellerinin hemen arkasında ikinci olduğu bağlamda değerlendirmek için kullanın. | Kıyaslama |
+| [AA-Omniscience Hallucination Rate](#case-76) | GLM-5.2’yi belirsizlik yönetimi açısından karşılaştırmak için kullanın; paylaşılan AA-Omniscience sonucu, bazı diğer frontier modellere göre daha düşük halüsinasyon oranı gösteriyor. | Değerlendirme |
 
-### [💻 Kod ajanları ve uzun bağlam workflow’ları](#coding-agents-long-context-workflows)
+### [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows)
 
-| Case | Ne gösteriyor | Tür |
+| Vaka | Odak | Tür |
 |---|---|---|
-| [One Hour Forty Two Minute Refactor Loop](#case-13) | Use this case as a pattern for long autonomous front-end refactoring with TDD, reviewer feedback, and regression checks. | Demo |
-| [OpenCode Bug Fix And Implementation Test](#case-14) | Use this case to test GLM-5.2 as an OpenCode coding agent for bug fixes plus a small implementation task. | Demo |
-| [OpenCode Retro Video Game Walkthrough](#case-15) | Use this walkthrough to build a small game with GLM-5.2 and OpenCode from a single prompt, then inspect how the model handles implementation details. | Tutorial |
-| [HTML5 Physics Simulations Contest](#case-16) | Use this case to compare GLM-5.2 and Kimi K2.7 Code on self-contained HTML5 physics simulations without libraries. | Evaluation |
-| [Personal Site UI UX Build](#case-17) | Use this case to prompt GLM-5.2 for a polished personal site and inspect how far multiple turns can improve UI/UX. | Demo |
-| [AI Contract Review Product Build](#case-18) | Use this case to evaluate GLM-5.2 on a product-building task with a PRD, time budget, step count, usage quota, and code-quality comparison. | Evaluation |
-| [ZCode Goal Feature For Larger Development Objectives](#case-19) | Use this case to understand how GLM-5.2 is integrated into ZCode 3.0 for larger agentic development tasks. | Integration |
-| [Linux Wrapper For ZCode Built With GLM-5.2](#case-20) | Use this case as an example of GLM-5.2 assisting with tooling around coding-agent environments. | Demo |
-| [Computer Use Skill Packaging](#case-21) | Use this case to study GLM-5.2 as a helper for turning an open-source computer-use repo into a reusable skill. | Demo |
-| [ZCode 3.0 Agentic Development Environment Review](#case-22) | Use this case to evaluate GLM-5.2 inside a full agentic development environment rather than a single chat session. | Demo |
-| [Case 62: OpenCode Harness With Local Serving](#case-62) | Use this case to test GLM-5.2 with the OpenCode harness, local serving, and tool-heavy coding workflows before comparing it with Claude Opus. | Evaluation |
-| [Case 65: Fast-RLM Long-Context Instruction Injection](#case-65) | Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt. | Integration |
-| [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
-| [Case 77: Production Marketing Agent Stack Routing](#case-77) | GLM-5.2’yi yapı, hız ve self-hosting değer veren production agent workflow’larına yönlendirmek için kullanın; belirsiz yargı gerektiren durumlarda daha güçlü kapalı modelleri saklı tutun. | Evaluation |
-| [Case 80: M3 Ultra Pokemon Red Goal Run](#case-80) | GLM-5.2’yi uzun süreli yerel coding agent çalıştırmasında değerlendirmek için kullanın; modelin bir M3 Ultra makinede yaklaşık yarım gün boyunca Pokemon Red’i HTML olarak yeniden kurmaya çalıştığı bir örneği izleyin. | Demo |
+| [One Hour Forty Two Minute Refactor Loop](#case-13) | Bu durumu, TDD, gözden geçiren geri bildirimi ve regresyon kontrolleri ile uzun, otonom ön uç yeniden düzenleme için bir model olarak kullanın. | Demo |
+| [OpenCode Bug Fix And Implementation Test](#case-14) | GLM-5.2'yi hata düzeltmeleri ve küçük bir uygulama görevi için OpenCode kodlama aracısı olarak test etmek için bu örneği kullanın. | Demo |
+| [OpenCode Retro Video Game Walkthrough](#case-15) | Tek bir komut isteminden GLM-5.2 ve OpenCode ile küçük bir oyun oluşturmak için bu kılavuzu kullanın, ardından modelin uygulama ayrıntılarını nasıl işlediğini inceleyin. | Öğretici |
+| [HTML5 Physics Simulations Contest](#case-16) | Kitaplıksız bağımsız HTML5 fizik simülasyonlarında GLM-5.2 ve Kimi K2.7 Kodunu karşılaştırmak için bu örneği kullanın. | Değerlendirme |
+| [Personal Site UI UX Build](#case-17) | GLM-5.2'yi gösterişli bir kişisel siteye yönlendirmek için bu durumu kullanın ve birden fazla dönüşün UI/UX'i ne kadar geliştirebileceğini inceleyin. | Demo |
+| [AI Contract Review Product Build](#case-18) | PRD, zaman bütçesi, adım sayısı, kullanım kotası ve kod kalitesi karşılaştırması ile bir ürün oluşturma görevinde GLM-5.2'yi değerlendirmek için bu durumu kullanın. | Değerlendirme |
+| [ZCode Goal Feature For Larger Development Objectives](#case-19) | Daha büyük ajan geliştirme görevleri için GLM-5.2'nin ZCode 3.0'a nasıl entegre edildiğini anlamak için bu örneği kullanın. | Entegrasyon |
+| [GLM-5.2 ile Oluşturulan ZCode İçin Linux Paketleyici](#case-20) | Bu durumu, kodlama aracısı ortamları etrafındaki araçlara yardımcı olan GLM-5.2'nin bir örneği olarak kullanın. | Demo |
+| [Computer Use Skill Packaging](#case-21) | Açık kaynaklı bilgisayar kullanımlı bir depoyu yeniden kullanılabilir bir beceriye dönüştürmek için bir yardımcı olarak GLM-5.2'yi incelemek için bu örneği kullanın. | Demo |
+| [ZCode 3.0 Agentic Development Environment Review](#case-22) | GLM-5.2'yi tek bir sohbet oturumu yerine tam bir aracılı geliştirme ortamında değerlendirmek için bu örneği kullanın. | Demo |
+| [Yerel Hizmetli OpenCode Donanımı](#case-62) | GLM-5.2'yi Claude Opus ile karşılaştırmadan önce OpenCode donanımı, yerel hizmet ve araç ağırlıklı kodlama iş akışlarıyla test etmek için bu durumu kullanın. | Değerlendirme |
+| [Fast-RLM Long-Context Instruction Injection](#case-65) | Talimatları RLM sistem istemine taşıyarak GLM-5.2 uzun bağlam sayımını ve REPL aracısı davranışını iyileştirmek için bu durumu kullanın. | Entegrasyon |
+| [DeepAgents Code Open Harness Trial](#case-66) | GLM-5.2'yi açık kodlama ajanı donanımıyla denemek ve modeli tekrarlanabilir bir ajan kabuğu altında karşılaştırmak için bu durumu kullanın. | Demo |
+| [Production Marketing Agent Stack Routing](#case-77) | GLM-5.2’yi yapı, hız ve self-hosting değer veren production agent workflow’larına yönlendirmek için kullanın; belirsiz yargı gerektiren durumlarda daha güçlü kapalı modelleri saklı tutun. | Değerlendirme |
+| [M3 Ultra Pokemon Red Goal Run](#case-80) | GLM-5.2’yi uzun süreli yerel coding agent çalıştırmasında değerlendirmek için bu vakayı kullanın; modelin bir M3 Ultra makinede yaklaşık yarım gün boyunca Pokemon Red’i HTML olarak yeniden kurmaya çalıştığı bir örneği izleyin. | Demo |
 
-### [🎮 Uygulamalı demolar ve showcase build’leri](#hands-on-demos-showcase-builds)
+### [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds)
 
-| Case | Ne gösteriyor | Tür |
+| Vaka | Odak | Tür |
 |---|---|---|
-| [Playable Backrooms One-Shot](#case-23) | Use this case to compare same-prompt game-building output, runtime, and cost between GLM-5.2 and Opus 4.8. | Demo |
-| [Three Real Builds With Mixed Results](#case-24) | Use this case as a cautionary demo set: test multiple real builds before trusting a model for production game or video tasks. | Evaluation |
-| [Super Mario Clone In ZCode](#case-25) | Use this case to evaluate iterative game-building with GLM-5.2 and ZCode over several fix-and-feature passes. | Demo |
-| [Lunar Lander Contest](#case-26) | Use this case to compare GLM-5.2, MiniMax M3, and Kimi K2.7 Code on an interactive game-style task. | Evaluation |
-| [One-Prompt Design Arena Creation](#case-27) | Use this case to inspect what GLM-5.2 can generate from a single design prompt in an arena context. | Demo |
-| [Research Paper Understanding Workflow](#case-28) | Use this case to apply GLM-5.2 to paper-reading workflows with contextual questions and cross-paper references. | Integration |
-| [Constrained Poem Comparison](#case-29) | Use this case to separate correctness from creative quality when comparing GLM-5.2 with Fable-style models. | Evaluation |
-| [Design Sense Example](#case-30) | Use this case as a lightweight visual-design signal, then verify with your own prompt and UI review. | Demo |
-| [Case 71: Temple Run Voxel Game One-Shot](#case-71) | GLM-5.2’yi tek prompt ile oyun üretiminde stres-test etmek için kullanın; ardından görsel olarak zengin bir build’de hâlâ hangi noktaların iteratif düzeltme istediğini inceleyin. | Demo |
-| [Case 78: OpenCode Go One-Shot Example Set](#case-78) | GLM-5.2’yi OpenCode Go içinde hızlı one-shot build’lerde benchmark etmek için kullanın; daha açık uçlu agent döngülerine bağlamadan önce kısa testler yapın. | Demo |
-| [Case 81: Space Invaders One-Prompt Build](#case-81) | GLM-5.2’yi tek istemle oyun üretiminde sınamak, ardından birkaç ek turda asset değişimleri ve hafif polish’in nasıl ilerlediğini görmek için kullanın. | Demo |
-| [Case 82: OpenCode Recovery Lab One-Shot](#case-82) | Etkileşimli agent-failure simülasyonlarını hızlıca prototiplemek için kullanın; yazar yaklaşık 3,50 dolara çalışan bir recovery lab’i tek atışta kurduğunu söylüyor. | Demo |
+| [Playable Backrooms One-Shot](#case-23) | GLM-5.2 ile Opus 4.8 arasındaki aynı istemde oyun oluşturma çıktısını, çalışma süresini ve maliyetini karşılaştırmak için bu durumu kullanın. | Demo |
+| [Karışık Sonuçlara Sahip Üç Gerçek Yapı](#case-24) | Bu durumu uyarıcı bir demo seti olarak kullanın: üretim oyunu veya video görevleri için bir modele güvenmeden önce birden fazla gerçek yapıyı test edin. | Değerlendirme |
+| [Super Mario Clone In ZCode](#case-25) | Birkaç düzeltme ve özellik geçişi üzerinden GLM-5.2 ve ZCode ile yinelemeli oyun oluşturmayı değerlendirmek için bu durumu kullanın. | Demo |
+| [Lunar Lander Contest](#case-26) | Etkileşimli oyun tarzı bir görevde GLM-5.2, MiniMax M3 ve Kimi K2.7 Code'u karşılaştırmak için bu durumu kullanın. | Değerlendirme |
+| [One-Prompt Design Arena Creation](#case-27) | Bu örneği, GLM-5.2'nin bir arena bağlamında tek bir tasarım isteminden neler üretebileceğini incelemek için kullanın. | Demo |
+| [Araştırma Makalesi İş Akışını Anlamak](#case-28) | GLM-5.2'yi bağlamsal sorular ve çapraz makale referansları içeren kağıt okuma iş akışlarına uygulamak için bu örneği kullanın. | Entegrasyon |
+| [Constrained Poem Comparison](#case-29) | GLM-5.2'yi Fable tarzı modellerle karşılaştırırken doğruluğu yaratıcı kaliteden ayırmak için bu durumu kullanın. | Değerlendirme |
+| [Design Sense Example](#case-30) | Bu durumu hafif bir görsel tasarım sinyali olarak kullanın, ardından kendi isteminiz ve kullanıcı arayüzü incelemenizle doğrulayın. | Demo |
+| [Temple Run Voxel Game One-Shot](#case-71) | GLM-5.2’yi tek prompt ile oyun üretiminde stres-test etmek için kullanın; ardından görsel olarak zengin bir build’de hâlâ hangi noktaların iteratif düzeltme istediğini inceleyin. | Demo |
+| [OpenCode Go One-Shot Example Set](#case-78) | GLM-5.2’yi OpenCode Go içinde hızlı one-shot build’lerde benchmark etmek için kullanın; daha açık uçlu agent döngülerine bağlamadan önce kısa testler yapın. | Demo |
+| [Space Invaders One-Prompt Build](#case-81) | GLM-5.2’yi tek istemle oyun üretiminde sınamak, ardından birkaç ek turda asset değişimleri ve hafif polish’in nasıl ilerlediğini görmek için bu vakayı kullanın. | Demo |
+| [OpenCode Recovery Lab One-Shot](#case-82) | Etkileşimli agent-failure simülasyonlarını hızlıca prototiplemek için bu vakayı kullanın; yazar yaklaşık 3,50 dolara çalışan bir recovery lab’i tek atışta kurduğunu bildiriyor. | Demo |
 
 ### [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations)
 
-| Case | Ne gösteriyor | Tür |
+| Vaka | Odak | Tür |
 |---|---|---|
-| [OpenCode Go Availability](#case-31) | Use this case to track GLM-5.2 availability inside OpenCode Go workflows with text, 1M context, and GLM-5.1-like pricing. | Integration |
-| [Ollama Cloud Availability](#case-32) | Use this case to route GLM-5.2 into Ollama Cloud for accessible open-source coding-model experiments. | Integration |
-| [OpenRouter One API Call Access](#case-33) | Use this case to access GLM-5.2 through OpenRouter when comparing provider routing or multi-model stacks. | Integration |
-| [vLLM Day-Zero Support](#case-34) | Use this case to self-host or serve GLM-5.2 through vLLM with day-zero support. | Integration |
-| [Notion Availability Via Baseten](#case-35) | Use this case to identify GLM-5.2 as an open-weight model available inside Notion workflows. | Integration |
-| [Fireworks Day-Zero Serving](#case-36) | Use this case to evaluate Fireworks as a serving route for GLM-5.2 workloads that need hosted infrastructure. | Integration |
-| [Google Cloud Model Garden Link](#case-37) | Use this case to find GLM-5.2 in Google Cloud-oriented deployment and agent-platform contexts. | Integration |
-| [Venice Privacy Mode](#case-38) | Use this case when privacy mode, TEE, or end-to-end encryption is a deciding factor in trying GLM-5.2. | Integration |
-| [Command Code Availability](#case-39) | Use this case to try GLM-5.2 in Command Code with a low-cost entry plan and long-context coding features. | Integration |
-| [Hermes Agent From Nous Portal](#case-40) | Use this case to connect GLM-5.2 into Hermes Agent workflows through Nous Portal and OpenRouter. | Integration |
-| [io.net Day-Zero Launch Partner](#case-41) | Use this case when evaluating compute-backed serving for a 753B-parameter long-context model. | Integration |
-| [Modular Cloud Day-Zero Serving](#case-42) | Use this case to consider Modular Cloud for long-context GLM-5.2 serving at provider scale. | Integration |
-| [Case 61: Cursor Setup Through OpenRouter](#case-61) | Use this case to configure GLM-5.2 in Cursor through OpenRouter for a low-cost open-model coding workflow. | Tutorial |
-| [Case 63: Amp Agentic Eyes For Visual Design](#case-63) | Use this case to pair GLM-5.2 with Amp custom agents when a text-only model needs visual-review support for design tasks. | Integration |
-| [Case 69: Baseten Faster One-Million-Context Serving](#case-69) | Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses. | Integration |
-| [Case 74: Browser Use QA Subagents For Web Design](#case-74) | Metin tabanlı bir model görsel inceleme ve iteratif web sitesi düzeltmeleri gerektirdiğinde, GLM-5.2’yi Browser Use v2 multimodal QA subagent’larıyla eşlemek için bu vakayı kullanın. | Integration |
-| [Case 79: ZCode Official IDE Daily Free Tokens](#case-79) | Büyük günlük token kotası ve Cursor benzeri workflow sunan ücretsiz resmi bir coding IDE istediğinizde GLM-5.2’ye ZCode üzerinden erişmek için bu vakayı kullanın. | Tutorial |
-| [Case 83: Cursor Setup Through Fireworks](#case-83) | GLM-5.2’yi Fireworks üzerinden Cursor’a minimum OpenAI-uyumlu ayarla bağlamak ve özel istemci kodu yazmadan denemek için kullanın. | Tutorial |
-| [Case 84: VulcanBench ZAI Provider Support](#case-84) | GLM-5.2’yi açık bir benchmark harness içinde birinci sınıf ZAI provider desteği ve özel API key yolu ile çalıştırmak için kullanın. | Integration |
-| [Case 85: OpenCode High/Max Reasoning Variants](#case-85) | OpenCode içinde GLM-5.2 High ve Max reasoning varyantlarına erişmek, aynı zamanda daha güvenilir step-limit davranışı kazanmak için kullanın. | Integration |
-| [Case 86: Z.ai Coding Endpoint Selection](#case-86) | GLM-5.2 coding-plan trafiğini genel API yolu yerine coding’e optimize edilmiş Z.ai endpoint’ine yönlendirmek için kullanın. | Tutorial |
-| [Case 87: ZenMux Free GLM-5.2 API Setup](#case-87) | Ücretsiz GLM-5.2 API key ve base URL alıp bunu Claude, Cursor, Hermes ve benzeri araçlara takmak için kullanın. | Tutorial |
+| [OpenCode Go Availability](#case-31) | Metin, 1M bağlamı ve GLM-5.1 benzeri fiyatlandırma ile OpenCode Go iş akışları içindeki GLM-5.2 kullanılabilirliğini izlemek için bu durumu kullanın. | Entegrasyon |
+| [Ollama Cloud Availability](#case-32) | Erişilebilir açık kaynaklı kodlama modeli deneyleri için GLM-5.2'yi Ollama Cloud'a yönlendirmek için bu durumu kullanın. | Entegrasyon |
+| [OpenRouter One API Call Access](#case-33) | Sağlayıcı yönlendirmesini veya çok modelli yığınları karşılaştırırken GLM-5.2'ye OpenRouter aracılığıyla erişmek için bu durumu kullanın. | Entegrasyon |
+| [vLLM Day-Zero Support](#case-34) | Bu durumu kendi kendine barındırmak veya sıfırıncı gün desteğiyle GLM-5.2'yi vLLM aracılığıyla sunmak için kullanın. | Entegrasyon |
+| [Notion Availability Via Baseten](#case-35) | GLM-5.2'yi Notion iş akışlarında bulunan açık ağırlıklı bir model olarak tanımlamak için bu durumu kullanın. | Entegrasyon |
+| [Fireworks Day-Zero Serving](#case-36) | Fireworks'ü, barındırılan altyapıya ihtiyaç duyan GLM-5.2 iş yükleri için bir hizmet rotası olarak değerlendirmek için bu durumu kullanın. | Entegrasyon |
+| [Google Cloud Model Bahçe Bağlantısı](#case-37) | Google Cloud odaklı dağıtım ve aracı platform bağlamlarında GLM-5.2'yi bulmak için bu durumu kullanın. | Entegrasyon |
+| [Venice Privacy Mode](#case-38) | GLM-5.2'yi denemede gizlilik modu, TEE veya uçtan uca şifrelemenin belirleyici bir faktör olduğu durumlarda bu durumu kullanın. | Entegrasyon |
+| [Command Code Availability](#case-39) | Düşük maliyetli giriş planı ve uzun bağlam kodlama özellikleriyle Komut Kodunda GLM-5.2'yi denemek için bu durumu kullanın. | Entegrasyon |
+| [Nous Portal'dan Hermes Ajanı](#case-40) | GLM-5.2'yi Nous Portal ve OpenRouter aracılığıyla Hermes Agent iş akışlarına bağlamak için bu durumu kullanın. | Entegrasyon |
+| [io.net Day-Zero Launch Partner](#case-41) | 753B parametreli uzun bağlam modeli için işlem destekli sunumu değerlendirirken bu durumu kullanın. | Entegrasyon |
+| [Modular Cloud Day-Zero Serving](#case-42) | Sağlayıcı ölçeğinde uzun bağlamlı GLM-5.2 hizmeti için Modüler Bulut'u değerlendirmek üzere bu durumu kullanın. | Entegrasyon |
+| [Cursor Setup Through OpenRouter](#case-61) | Düşük maliyetli bir açık model kodlama iş akışı için Cursor'daki GLM-5.2'yi OpenRouter aracılığıyla yapılandırmak için bu durumu kullanın. | Öğretici |
+| [Amp Agentic Eyes For Visual Design](#case-63) | Salt metinden oluşan bir modelin tasarım görevleri için görsel inceleme desteğine ihtiyacı olduğunda GLM-5.2'yi Amp özel aracılarıyla eşleştirmek için bu durumu kullanın. | Entegrasyon |
+| [Baseten Faster One-Million-Context Serving](#case-69) | Factory Droid, OpenCode ve kodlama donanımları için uzun bağlamlı hizmet hızının önemli olduğu durumlarda GLM-5.2'yi Baseten'e yönlendirmek için bu durumu kullanın. | Entegrasyon |
+| [Browser Use QA Subagents For Web Design](#case-74) | Metin tabanlı bir model görsel inceleme ve iteratif web sitesi düzeltmeleri gerektirdiğinde, GLM-5.2’yi Browser Use v2 multimodal QA subagent’larıyla eşlemek için bu vakayı kullanın. | Entegrasyon |
+| [ZCode Official IDE Daily Free Tokens](#case-79) | Büyük günlük token kotası ve Cursor benzeri workflow sunan ücretsiz resmi bir coding IDE istediğinizde GLM-5.2’ye ZCode üzerinden erişmek için bu vakayı kullanın. | Öğretici |
+| [Cursor Setup Through Fireworks](#case-83) | GLM-5.2’yi Fireworks üzerinden Cursor’a minimum OpenAI-uyumlu ayarla bağlamak ve özel istemci kodu yazmadan denemek için bu vakayı kullanın. | Öğretici |
+| [VulcanBench ZAI Provider Support](#case-84) | GLM-5.2’yi açık bir benchmark harness içinde birinci sınıf ZAI provider desteği ve özel API key yolu ile çalıştırmak için bu vakayı kullanın. | Entegrasyon |
+| [OpenCode High/Max Reasoning Variants](#case-85) | OpenCode içinde GLM-5.2 High ve Max reasoning varyantlarına erişmek, aynı zamanda daha güvenilir step-limit davranışı kazanmak için bu vakayı kullanın. | Entegrasyon |
+| [Z.ai Coding Endpoint Selection](#case-86) | GLM-5.2 coding-plan trafiğini genel API yolu yerine coding’e optimize edilmiş Z.ai endpoint’ine yönlendirmek için bu vakayı kullanın. | Öğretici |
+| [ZenMux Free GLM-5.2 API Setup](#case-87) | Ücretsiz GLM-5.2 API key ve base URL alıp bunu Claude, Cursor, Hermes ve benzeri araçlara takmak için bu vakayı kullanın. | Öğretici |
 
 ### [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment)
 
-| Case | Ne gösteriyor | Tür |
+| Vaka | Odak | Tür |
 |---|---|---|
-| [Output Token Cost Comparison](#case-43) | Use this case to compare GLM-5.2 output-token economics against Opus, Fable, and GPT-5.5-style models. | Evaluation |
-| [Local Near-Frontier Hardware ROI](#case-44) | Use this case to reason about whether self-hosting GLM-5.2-like models can repay hardware costs for heavy agent users. | Evaluation |
-| [MLX On Two Mac Studios](#case-45) | Use this case to explore local GLM-5.2 runs on Apple hardware and MLX-oriented setups. | Demo |
-| [H100 Monthly Local Deployment Claim](#case-46) | Use this case as a cost-comparison prompt for checking local deployment assumptions before choosing between subscription and self-hosting. | Evaluation |
-| [Daily Credits And Claude Replacement Claim](#case-47) | Use this case to inspect the free-credit and replacement-agent narrative around GLM-5.2, while separating marketing claims from verified workload fit. | Evaluation |
-| [Free ZCode Token Window](#case-48) | Use this case to test GLM-5.2 through a free ZCode allowance before committing to a paid provider or local deployment. | Integration |
-| [ZenMux Free Week Offer](#case-49) | Use this case to find time-boxed free-access windows for GLM-5.2 testing. | Integration |
-| [crofAI Per-Token Pricing](#case-50) | Use this case to compare third-party provider pricing for GLM-5.2 before selecting a route. | Integration |
-| [API Price Margin Comparison](#case-51) | Use this case as a market-pricing critique when comparing GLM-5.2 to other frontier labs and open models. | Evaluation |
-| [Case 64: Basement Local Inference Speed](#case-64) | Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup. | Demo |
-| [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
-| [Case 88: Two M3 Ultra MLX Distributed Run](#case-88) | Daha büyük bir Apple Silicon kurulumu planlamadan önce GLM-5.2 8-bit serving’in iki M3 Ultra üzerinde dağıtık MLX ile nasıl göründüğünü tahmin etmek için kullanın. | Demo |
-| [Case 89: ZCode Multiplier Cut Through September](#case-89) | Hem peak hem off-peak pencerelerde daha düşük ZCode multiplier’larıyla GLM-5.2 plan kredilerini uzatmak için kullanın. | Integration |
+| [Output Token Cost Comparison](#case-43) | GLM-5.2 çıkış jetonu ekonomisini Opus, Fable ve GPT-5.5 tarzı modellerle karşılaştırmak için bu durumu kullanın. | Değerlendirme |
+| [Local Near-Frontier Hardware ROI](#case-44) | Kendi kendini barındıran GLM-5.2 benzeri modellerin yoğun aracı kullanıcılarının donanım maliyetlerini karşılayıp karşılayamayacağı hakkında fikir yürütmek için bu durumu kullanın. | Değerlendirme |
+| [MLX On Two Mac Studios](#case-45) | Apple donanımında ve MLX odaklı kurulumlarda yerel GLM-5.2 çalıştırmalarını keşfetmek için bu vakayı kullanın. | Demo |
+| [H100 Monthly Local Deployment Claim](#case-46) | Bu durumu, abonelik ve kendi kendine barındırma arasında seçim yapmadan önce yerel dağıtım varsayımlarını kontrol etmek için bir maliyet karşılaştırma istemi olarak kullanın. | Değerlendirme |
+| [Daily Credits And Claude Replacement Claim](#case-47) | Pazarlama iddialarını doğrulanmış iş yükü uyumundan ayırırken GLM-5.2 hakkındaki ücretsiz kredi ve yedek temsilci anlatımını incelemek için bu vakayı kullanın. | Değerlendirme |
+| [Free ZCode Token Window](#case-48) | Ücretli bir sağlayıcıya veya yerel dağıtıma başvurmadan önce GLM-5.2'yi ücretsiz ZCode ödeneği aracılığıyla test etmek için bu durumu kullanın. | Entegrasyon |
+| [ZenMux Free Week Offer](#case-49) | GLM-5.2 testi için zaman çerçeveli serbest erişim pencerelerini bulmak için bu durumu kullanın. | Entegrasyon |
+| [crofAI Token Başına Fiyatlandırma](#case-50) | Bir rota seçmeden önce GLM-5.2 için üçüncü taraf sağlayıcı fiyatlarını karşılaştırmak için bu durumu kullanın. | Entegrasyon |
+| [API Price Margin Comparison](#case-51) | GLM-5.2'yi diğer öncü laboratuvarlar ve açık modellerle karşılaştırırken bu durumu piyasa fiyatlandırma eleştirisi olarak kullanın. | Değerlendirme |
+| [Basement Local Inference Speed](#case-64) | Çevrimdışı kodlama kurulumunu planlamadan önce, geniş bellekli Apple donanımındaki yerel GLM-5.2 çıkarım verimini tahmin etmek için bu durumu kullanın. | Demo |
+| [Unsloth Quantized Local Deployment](#case-68) | Tam model ağırlıkları sıradan yerel donanım için çok büyük olduğunda nicelenmiş GLM-5.2 dağıtım yollarını değerlendirmek için bu durumu kullanın. | Öğretici |
+| [Two M3 Ultra MLX Distributed Run](#case-88) | Daha büyük bir Apple Silicon kurulumu planlamadan önce GLM-5.2 8-bit serving’in iki M3 Ultra üzerinde dağıtık MLX ile nasıl göründüğünü tahmin etmek için bu vakayı kullanın. | Demo |
+| [ZCode Multiplier Cut Through September](#case-89) | Hem peak hem off-peak pencerelerde daha düşük ZCode multiplier’larıyla GLM-5.2 plan kredilerini uzatmak için bu vakayı kullanın. | Entegrasyon |
 
-### [🧭 Sınırlar, caveat’ler ve güvenlik sinyalleri](#limits-caveats-safety-signals)
+### [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals)
 
-| Case | Ne gösteriyor | Tür |
+| Vaka | Odak | Tür |
 |---|---|---|
-| [No Vision Caveat](#case-52) | Use this case to remember that GLM-5.2 may be less useful for workflows requiring native vision capability. | Limit |
-| [Real-World Agent Gap Caveat](#case-53) | Use this case to avoid over-reading benchmark wins as proof that GLM-5.2 matches the best proprietary models on all deployed agentic tasks. | Limit |
-| [Safety Guardrail Concern](#case-54) | Use this case as a reminder to run safety evaluations before deploying GLM-5.2 in sensitive domains. | Limit |
-| [Benchmark Methodology Critique](#case-55) | Use this case to question benchmark methodology even when the headline result favors GLM-5.2. | Limit |
-| [Peak-Time Latency Concern](#case-56) | Use this case to test provider latency before switching coding plans or routing Claude Code-style workflows to GLM-5.2. | Limit |
-| [FutureSim Non-Improvement Result](#case-57) | Use this case to check whether coding gains generalize to non-coding domains before broad deployment. | Limit |
-| [Launch Readiness Critique](#case-58) | Use this case to separate model capability from launch execution, documentation, and API readiness. | Limit |
-| [Coding Plan Price Increase](#case-59) | Use this case to verify plan pricing before recommending GLM-5.2 as a low-cost replacement. | Limit |
-| [Case 67: Short Parallel Work Versus Long Agent Runs](#case-67) | Use this case to route GLM-5.2 toward short bounded coding tasks while reserving stronger models for deeper multi-hour agent runs. | Limit |
-| [Case 73: Code Censorship And Bias Check](#case-73) | Bu vakayı kod ve politik önyargı testleri için pratik bir güvenlik sinyali olarak kullanın; daha geniş alignment endişelerinin tamamen çözüldüğünün kanıtı olarak değil. | Limit |
-| [Case 75: Hard Reasoning Billing Failure](#case-75) | GLM-5.2’yi zor reasoning iş yüklerinde dikkatli test etmek için bu vakayı kullanın; herkese açık rapor uzun çalışma süreleri, düşük tamamlama oranı ve beklenmedik derecede yüksek faturalanan çıktı gösteriyor. | Limit |
+| [No Vision Caveat](#case-52) | GLM-5.2'nin yerel görme yeteneği gerektiren iş akışları için daha az kullanışlı olabileceğini hatırlamak için bu durumu kullanın. | Sınır |
+| [Gerçek Dünyadaki Ajan Boşluğu Uyarısı](#case-53) | GLM-5.2'nin tüm dağıtılan aracı görevlerde en iyi özel modellerle eşleştiğinin kanıtı olarak kıyaslama kazanımlarını aşırı okumaktan kaçınmak için bu durumu kullanın. | Sınır |
+| [Safety Guardrail Concern](#case-54) | Bu durumu, GLM-5.2'yi hassas alanlara dağıtmadan önce güvenlik değerlendirmelerini çalıştırmayı hatırlatmak için kullanın. | Sınır |
+| [Karşılaştırmalı Metodoloji Eleştirisi](#case-55) | Başlık sonucu GLM-5.2 lehine olsa bile kıyaslama metodolojisini sorgulamak için bu durumu kullanın. | Sınır |
+| [Peak-Time Latency Concern](#case-56) | Kodlama planlarını değiştirmeden veya Claude Code tarzı iş akışlarını GLM-5.2'ye yönlendirmeden önce sağlayıcı gecikmesini test etmek için bu durumu kullanın. | Sınır |
+| [FutureSim Non-Improvement Result](#case-57) | Geniş dağıtımdan önce kodlama kazanımlarının kodlamayan alanlara genellenip genelleştirilmediğini kontrol etmek için bu durumu kullanın. | Sınır |
+| [Launch Readiness Critique](#case-58) | Model yeteneğini başlatma yürütmesinden, dokümantasyonundan ve API hazırlığından ayırmak için bu durumu kullanın. | Sınır |
+| [Kodlama Planı Fiyat Artışı](#case-59) | Düşük maliyetli bir alternatif olarak GLM-5.2'yi önermeden önce plan fiyatlandırmasını doğrulamak için bu durumu kullanın. | Sınır |
+| [Kısa Paralel Çalışmaya Karşı Uzun Aracı Çalıştırmaları](#case-67) | Bu durumu, GLM-5.2'yi kısa sınırlı kodlama görevlerine yönlendirmek ve aynı zamanda daha uzun, çok saatlik aracı çalıştırmaları için daha güçlü modeller ayırmak için kullanın. | Sınır |
+| [Code Censorship And Bias Check](#case-73) | Bu vakayı kod ve politik önyargı testleri için pratik bir güvenlik sinyali olarak kullanın; daha geniş alignment endişelerinin tamamen çözüldüğünün kanıtı olarak değil. | Sınır |
+| [Hard Reasoning Billing Failure](#case-75) | GLM-5.2’yi zor reasoning iş yüklerinde dikkatli test etmek için bu vakayı kullanın; herkese açık rapor uzun çalışma süreleri, düşük tamamlama oranı ve beklenmedik derecede yüksek faturalanan çıktı gösteriyor. | Sınır |
 <a id="benchmarks-frontier-evaluation"></a>
-## 📏 Benchmark ve frontier değerlendirmesi
+## 📏 Kıyaslamalar ve öncü model değerlendirmesi
 
 <a id="case-1"></a>
-### Case 1: [Artificial Analysis Intelligence Index](https://x.com/ArtificialAnlys/status/2067135640249209175) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+### Case 1: [Artificial Analysis Intelligence Index](https://x.com/ArtificialAnlys/status/2067135640249209175) (yazan [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
-**Use the Artificial Analysis post to compare GLM-5.2 against other open-weight and proprietary frontier models on intelligence and cost per task.**
+**GLM-5.2'yi zeka ve görev başına maliyet açısından diğer açık ağırlıklı ve özel öncü modellerle karşılaştırmak için Yapay Analiz gönderisini kullanın.**
 
-Artificial Analysis reported GLM-5.2 as the leading open-weights model on its Intelligence Index, with a score of 51 and a Pareto-frontier position on intelligence versus cost per task. The post also records model size, context window, pricing, and provider availability.
+Yapay Analiz, GLM-5.2'yi, Zeka Endeksi'nde 51 puanla ve zeka ile görev başına maliyet açısından Pareto-sınır pozisyonuyla önde gelen açık ağırlık modeli olarak bildirdi. Gönderi ayrıca model boyutunu, bağlam penceresini, fiyatlandırmayı ve sağlayıcının kullanılabilirliğini de kaydeder.
 
-Tür: Benchmark | Tarih: 2026-06-17
+Tür: Kıyaslama | Tarih: 2026-06-17
 
 ---
 
 <a id="case-2"></a>
-### Case 2: [Code Arena Frontend Ranking](https://x.com/arena/status/2066957802741043641) (by [@arena](https://x.com/arena))
+### Case 2: [Code Arena Frontend Ranking](https://x.com/arena/status/2066957802741043641) (yazan [@arena](https://x.com/arena))
 
-**Use this case to evaluate GLM-5.2 on real front-end coding tasks judged by arena-style comparisons.**
+**Arena tarzı karşılaştırmalarla değerlendirilen gerçek ön uç kodlama görevlerinde GLM-5.2'yi değerlendirmek için bu durumu kullanın.**
 
-The Arena account reported GLM-5.2 Max ranking second in Code Arena Frontend, ahead of other open models and close to the top frontier entry. The post is especially useful for front-end, React, HTML, gaming, simulation, and reference-based design use cases.
+Arena hesabı, GLM-5.2 Max'in Code Arena Frontend'de diğer açık modellerin önünde ikinci sırada yer aldığını ve sınır girişine yakın olduğunu bildirdi. Gönderi özellikle ön uç, React, HTML, oyun, simülasyon ve referans tabanlı tasarım kullanım durumları için kullanışlıdır.
 
-Tür: Benchmark | Tarih: 2026-06-16
+Tür: Kıyaslama | Tarih: 2026-06-16
 
 ---
 
 <a id="case-3"></a>
-### Case 3: [Design Arena First Place](https://x.com/Designarena/status/2066940737011560652) (by [@Designarena](https://x.com/Designarena))
+### Case 3: [Design Arena First Place](https://x.com/Designarena/status/2066940737011560652) (yazan [@Designarena](https://x.com/Designarena))
 
-**Use this case to judge whether GLM-5.2 can handle design-plus-code tasks rather than only text-heavy coding benchmarks.**
+**GLM-5.2'nin yalnızca metin ağırlıklı kodlama kıyaslamaları yerine tasarım artı kod görevlerini yerine getirip getiremeyeceğini değerlendirmek için bu durumu kullanın.**
 
-Design Arena reported GLM-5.2 reaching first place with an Elo score of 1360, highlighting a jump in design-code performance for an open-weights model. Treat it as a design benchmark signal, not as a substitute for project-specific UI review.
+Design Arena, GLM-5.2'nin 1360 Elo puanıyla birinci sıraya ulaştığını bildirdi ve bu, açık ağırlıklı bir model için tasarım kodu performansındaki sıçramayı vurguladı. Bunu, projeye özgü kullanıcı arayüzü incelemesinin yerine geçecek bir tasarım kriteri sinyali olarak değerlendirin.
 
-Tür: Benchmark | Tarih: 2026-06-16
+Tür: Kıyaslama | Tarih: 2026-06-16
 
 ---
 
 <a id="case-4"></a>
-### Case 4: [FrontierSWE Result](https://x.com/ProximalHQ/status/2066939701026787583) (by [@ProximalHQ](https://x.com/ProximalHQ))
+### Case 4: [FrontierSWE Result](https://x.com/ProximalHQ/status/2066939701026787583) (yazan [@ProximalHQ](https://x.com/ProximalHQ))
 
-**Use the FrontierSWE post to compare GLM-5.2 against GPT-5.5, Opus, and Fable-style models on software-engineering tasks.**
+**Yazılım mühendisliği görevlerinde GLM-5.2'yi GPT-5.5, Opus ve Fable tarzı modellerle karşılaştırmak için FrontierSWE gönderisini kullanın.**
 
-The post reports GLM-5.2 ranking third on FrontierSWE and frames it as one of the first open-weight models to narrow the gap with top proprietary models on implementation-heavy engineering work.
+Gönderi, GLM-5.2'nin FrontierSWE'de üçüncü sırada yer aldığını bildiriyor ve onu, uygulama ağırlıklı mühendislik işlerinde üst düzey özel modellerle aradaki farkı daraltan ilk açık ağırlıklı modellerden biri olarak çerçeveliyor.
 
-Tür: Benchmark | Tarih: 2026-06-16
+Tür: Kıyaslama | Tarih: 2026-06-16
 
 ---
 
 <a id="case-5"></a>
-### Case 5: [DeepSWE Open-Source Lead](https://x.com/AiBattle_/status/2066938378512126024) (by [@AiBattle_](https://x.com/AiBattle_))
+### Case 5: [DeepSWE Open-Source Lead](https://x.com/AiBattle_/status/2066938378512126024) (yazan [@AiBattle_](https://x.com/AiBattle_))
 
-**Use the DeepSWE case to understand GLM-5.2 as a strong open model for difficult software-engineering evaluation tasks.**
+**GLM-5.2'yi zor yazılım mühendisliği değerlendirme görevleri için güçlü bir açık model olarak anlamak için DeepSWE örneğini kullanın.**
 
-AiBattle reported a 46.2% DeepSWE score for GLM-5.2 and described it as the highest score for an open-source model in that benchmark context.
+AiBattle, GLM-5.2 için %46,2 DeepSWE puanı bildirdi ve bunu, bu kıyaslama bağlamında açık kaynaklı bir model için en yüksek puan olarak tanımladı.
 
-Tür: Benchmark | Tarih: 2026-06-16
+Tür: Kıyaslama | Tarih: 2026-06-16
 
 ---
 
 <a id="case-6"></a>
-### Case 6: [Terminal-Bench Over 80 Percent](https://x.com/cline/status/2066951439793242193) (by [@cline](https://x.com/cline))
+### Case 6: [Terminal-Bench Over 80 Percent](https://x.com/cline/status/2066951439793242193) (yazan [@cline](https://x.com/cline))
 
-**Use this case when evaluating GLM-5.2 for terminal-oriented coding and agent workflows.**
+**Terminal odaklı kodlama ve aracı iş akışları için GLM-5.2'yi değerlendirirken bu durumu kullanın.**
 
-Cline highlighted GLM-5.2 as the first open-weights model to cross 80% on Terminal-Bench and positioned it as a frontier-level option for accessible tool-based development.
+Cline, GLM-5.2'yi Terminal-Bench'te %80'i aşan ilk açık ağırlıklı model olarak vurguladı ve onu erişilebilir araç tabanlı geliştirme için sınır düzeyinde bir seçenek olarak konumlandırdı.
 
-Tür: Benchmark | Tarih: 2026-06-16
+Tür: Kıyaslama | Tarih: 2026-06-16
 
 ---
 
 <a id="case-7"></a>
-### Case 7: [SWELancer Comparison Against GPT-5.5](https://x.com/gosrum/status/2067153091842203676) (by [@gosrum](https://x.com/gosrum))
+### Case 7: [SWELancer'ın GPT-5.5 ile Karşılaştırması](https://x.com/gosrum/status/2067153091842203676) (yazan [@gosrum](https://x.com/gosrum))
 
-**Use this SWELancer case as a concrete multi-metric comparison between GLM-5.2 and GPT-5.5 on task success, reward, and completion time.**
+**Bu SWELancer vakasını, GLM-5.2 ile GPT-5.5 arasında görev başarısı, ödül ve tamamlanma süresi açısından somut bir çok ölçümlü karşılaştırma olarak kullanın.**
 
-The author shared a Japanese benchmark update where GLM-5.2 unexpectedly led GPT-5.5 on the latest SWELancer results across task success, earned reward, and time to complete, with two inaccessible tasks excluded.
+Yazar, erişilemeyen iki görev hariç olmak üzere görev başarısı, kazanılan ödül ve tamamlama süresi açısından en son SWELancer sonuçlarında GLM-5.2'nin beklenmedik bir şekilde GPT-5.5'i yönlendirdiği bir Japon kıyaslama güncellemesini paylaştı.
 
-Tür: Evaluation | Tarih: 2026-06-17
+Tür: Değerlendirme | Tarih: 2026-06-17
 
 ---
 
 <a id="case-8"></a>
-### Case 8: [BridgeBench Perfect Score Signal](https://x.com/bridgemindai/status/2065874542321426819) (by [@bridgemindai](https://x.com/bridgemindai))
+### Case 8: [BridgeBench Perfect Score Signal](https://x.com/bridgemindai/status/2065874542321426819) (yazan [@bridgemindai](https://x.com/bridgemindai))
 
-**Use this case to inspect GLM-5.2 on grounded multi-step reasoning rather than only coding leaderboards.**
+**GLM-5.2'yi yalnızca kodlama skor tabloları yerine temellendirilmiş çok adımlı akıl yürütmeye göre incelemek için bu örneği kullanın.**
 
-BridgeMind reported GLM-5.2 as the first model to receive a perfect score on the BridgeBench BS benchmark, making it a useful source for reasoning-heavy evaluation claims.
+BridgeMind, GLM-5.2'yi BridgeBench BS kıyaslamasında mükemmel puan alan ilk model olarak bildirdi, bu da onu muhakeme ağırlıklı değerlendirme iddiaları için yararlı bir kaynak haline getiriyor.
 
-Tür: Benchmark | Tarih: 2026-06-13
+Tür: Kıyaslama | Tarih: 2026-06-13
 
 ---
 
 <a id="case-9"></a>
-### Case 9: [BridgeBench Reasoning Number One](https://x.com/bridgebench/status/2066123398816624743) (by [@bridgebench](https://x.com/bridgebench))
+### Case 9: [BridgeBench Reasoning Number One](https://x.com/bridgebench/status/2066123398816624743) (yazan [@bridgebench](https://x.com/bridgebench))
 
-**Use this case to compare GLM-5.2 with closed frontier models on grounded reasoning tasks.**
+**Temellendirilmiş muhakeme görevlerinde GLM-5.2'yi kapalı sınır modelleriyle karşılaştırmak için bu durumu kullanın.**
 
-BridgeBench reported GLM-5.2 taking the number one spot on a reasoning benchmark and beating Claude Fable 5 in that measurement context.
+BridgeBench, GLM-5.2'nin mantıksal değerlendirmede bir numara olduğunu ve bu ölçüm bağlamında Claude Fable 5'i geride bıraktığını bildirdi.
 
-Tür: Benchmark | Tarih: 2026-06-14
+Tür: Kıyaslama | Tarih: 2026-06-14
 
 ---
 
 <a id="case-10"></a>
-### Case 10: [KernelBench-Hard Without Shortcutting](https://x.com/elliotarledge/status/2065735912370417760) (by [@elliotarledge](https://x.com/elliotarledge))
+### Case 10: [KernelBench-Hard Without Shortcutting](https://x.com/elliotarledge/status/2065735912370417760) (yazan [@elliotarledge](https://x.com/elliotarledge))
 
-**Use this case when checking whether benchmark gains come from valid implementation behavior instead of shortcutting.**
+**Karşılaştırma kazanımlarının kısayol yerine geçerli uygulama davranışından gelip gelmediğini kontrol ederken bu durumu kullanın.**
 
-The KernelBench-Hard post says the interesting result was not just score, but that GLM-5.2 stopped using an inappropriate shortcut on an fp8 GEMM problem, making it relevant for benchmark integrity.
+KernelBench-Hard gönderisi, ilginç sonucun sadece puan olmadığını, aynı zamanda GLM-5.2'nin fp8 GEMM probleminde uygunsuz bir kısayol kullanmayı bırakarak onu kıyaslama bütünlüğü açısından anlamlı hale getirdiğini söylüyor.
 
-Tür: Evaluation | Tarih: 2026-06-13
+Tür: Değerlendirme | Tarih: 2026-06-13
 
 ---
 
 <a id="case-11"></a>
-### Case 11: [Runescape Bench Catch-Up](https://x.com/maxbittker/status/2066985743197577433) (by [@maxbittker](https://x.com/maxbittker))
+### Case 11: [Runescape Bench Catch-Up](https://x.com/maxbittker/status/2066985743197577433) (yazan [@maxbittker](https://x.com/maxbittker))
 
-**Use this case as a fast signal for open-weight model progress on game-like benchmark tasks.**
+**Bu durumu, oyun benzeri kıyaslama görevlerinde açık ağırlıklı model ilerlemesi için hızlı bir sinyal olarak kullanın.**
 
-The post reports GLM-5.2 scoring better than recent proprietary models on Runescape bench, using that result to frame how quickly open-source frontier capability is catching up.
+Gönderi, GLM-5.2'nin Runescape bench'indeki son tescilli modellerden daha iyi puan aldığını ve bu sonucu, açık kaynak sınır yeteneğinin ne kadar hızlı yetiştiğini çerçevelemek için kullandığını bildiriyor.
 
-Tür: Benchmark | Tarih: 2026-06-16
+Tür: Kıyaslama | Tarih: 2026-06-16
 
 ---
 
 <a id="case-12"></a>
-### Case 12: [BridgeBench Speed Improvement](https://x.com/bridgebench/status/2065845045752648159) (by [@bridgebench](https://x.com/bridgebench))
+### Case 12: [BridgeBench Speed Improvement](https://x.com/bridgebench/status/2065845045752648159) (yazan [@bridgebench](https://x.com/bridgebench))
 
-**Use this case to evaluate latency-sensitive workflows where speed matters alongside intelligence.**
+**Zekanın yanı sıra hızın da önemli olduğu, gecikmeye duyarlı iş akışlarını değerlendirmek için bu durumu kullanın.**
 
-BridgeBench reported GLM-5.2 as three times faster than GLM-5.1 and fourth on its speed benchmark, making it relevant for workflows where iteration speed affects usability.
+BridgeBench, GLM-5.2'nin GLM-5.1'den üç kat daha hızlı olduğunu ve hız karşılaştırmasında dördüncü olduğunu bildirdi; bu da onu yineleme hızının kullanılabilirliği etkilediği iş akışları için uygun hale getiriyor.
 
-Tür: Benchmark | Tarih: 2026-06-13
+Tür: Kıyaslama | Tarih: 2026-06-13
 
 ---
 
 <a id="case-60"></a>
-### Case 60: [KernelBench Hard And Mega GPU Coding](https://x.com/elliotarledge/status/2068177175640240323) (tarafından [@elliotarledge](https://x.com/elliotarledge))
+### Case 60: [KernelBench Sert ve Mega GPU Kodlama](https://x.com/elliotarledge/status/2068177175640240323) (yazan [@elliotarledge](https://x.com/elliotarledge))
 
-**Use this case to evaluate GLM-5.2 on GPU-kernel coding across KernelBench-Hard and KernelBench-Mega, where open agent traces make the result inspectable.**
+**Açık aracı izlerinin sonucu denetlenebilir hale getirdiği KernelBench-Hard ve KernelBench-Mega genelinde GPU çekirdek kodlamasında GLM-5.2'yi değerlendirmek için bu durumu kullanın.**
 
-The KernelBench update reports H100, B200, and RTX PRO 6000 tests, open-sourced agent traces, and GLM-5.2 as the top open model in the comparison.
+KernelBench güncellemesi, H100, B200 ve RTX PRO 6000 testlerini, açık kaynaklı aracı izlerini ve karşılaştırmada en iyi açık model olarak GLM-5.2'yi rapor ediyor.
 
-Tür: Benchmark | Tarih: 2026-06-20
+Tür: Kıyaslama | Tarih: 2026-06-20
 
 ---
 
@@ -356,7 +356,7 @@ Tür: Benchmark | Tarih: 2026-06-20
 
 DataCurve, GLM-5.2’nin açık modeller arasında %44 pass@1 ve Kimi K2.7 Code’a göre 17 puan farkla önde göründüğü bir DeepSWE leaderboard güncellemesi paylaştı. Bunu, her gerçek dünya agent workflow’unun zaten çözüldüğünün kanıtı olarak değil, bir benchmark güncellemesi olarak değerlendirin.
 
-Tür: Benchmark | Tarih: 2026-06-20
+Tür: Kıyaslama | Tarih: 2026-06-20
 
 ---
 
@@ -367,7 +367,7 @@ Tür: Benchmark | Tarih: 2026-06-20
 
 Lech Mazur, GLM-5.2 Max’i ikinci sıraya koyan bir LLM Debate Benchmark sonucu paylaştı. Benchmark, geniş konu yelpazesinde adversarial çok turlu tartışmaları ölçtüğü için standart coding leaderboard’larının dışında bir reasoning sinyali sunuyor.
 
-Tür: Benchmark | Tarih: 2026-06-20
+Tür: Kıyaslama | Tarih: 2026-06-20
 
 ---
 
@@ -378,152 +378,152 @@ Tür: Benchmark | Tarih: 2026-06-20
 
 Gönderi, GLM-5.2 için AA-Omniscience üzerinde %28 halüsinasyon oranı bildiriyor; bu oran Fable 5 ve DeepSeek V4 Pro’dan daha düşük. Benchmark, modellerin tahmin yürütmek yerine reddedip belirsizliği kabul edip etmediği etrafında çerçeveleniyor.
 
-Tür: Evaluation | Tarih: 2026-06-20
+Tür: Değerlendirme | Tarih: 2026-06-20
 
 ---
 
 
 <a id="coding-agents-long-context-workflows"></a>
-## 💻 Kod ajanları ve uzun bağlam workflow’ları
+## 💻 Kod ajanları ve uzun bağlamlı iş akışları
 
 <a id="case-13"></a>
-### Case 13: [One Hour Forty Two Minute Refactor Loop](https://x.com/KELMAND1/status/2066012493315723610) (by [@KELMAND1](https://x.com/KELMAND1))
+### Case 13: [One Hour Forty Two Minute Refactor Loop](https://x.com/KELMAND1/status/2066012493315723610) (yazan [@KELMAND1](https://x.com/KELMAND1))
 
-**Use this case as a pattern for long autonomous front-end refactoring with TDD, reviewer feedback, and regression checks.**
+**Bu durumu, TDD, gözden geçiren geri bildirimi ve regresyon kontrolleri ile uzun, otonom ön uç yeniden düzenleme için bir model olarak kullanın.**
 
-The post describes a 1 hour 42 minute GLM-5.2 refactor task with 88 model turns and 102 tool calls. The workflow included a handoff, four blocker fixes, TDD implementation of 12 tests, two rounds of P2 fixes, and final regression.
+Gönderide, 88 model dönüşü ve 102 araç çağrısıyla 1 saat 42 dakikalık bir GLM-5.2 yeniden düzenleme görevi anlatılıyor. İş akışı bir geçiş, dört engelleyici düzeltme, 12 testten oluşan TDD uygulaması, iki tur P2 düzeltmesi ve son regresyonu içeriyordu.
 
 Tür: Demo | Tarih: 2026-06-14
 
 ---
 
 <a id="case-14"></a>
-### Case 14: [OpenCode Bug Fix And Implementation Test](https://x.com/altudev/status/2065868921341632881) (by [@altudev](https://x.com/altudev))
+### Case 14: [OpenCode Bug Fix And Implementation Test](https://x.com/altudev/status/2065868921341632881) (yazan [@altudev](https://x.com/altudev))
 
-**Use this case to test GLM-5.2 as an OpenCode coding agent for bug fixes plus a small implementation task.**
+**GLM-5.2'yi hata düzeltmeleri ve küçük bir uygulama görevi için OpenCode kodlama aracısı olarak test etmek için bu örneği kullanın.**
 
-The author reports testing GLM-5.2 with six bug fixes and one implementation in OpenCode, saying the changes went through cleanly with solid planning and better speed than GLM-5.1.
+Yazar, GLM-5.2'nin OpenCode'da altı hata düzeltmesi ve bir uygulamayla test edildiğini bildiriyor ve değişikliklerin sağlam bir planlamayla ve GLM-5.1'den daha iyi bir hızla temiz bir şekilde gerçekleştiğini söylüyor.
 
 Tür: Demo | Tarih: 2026-06-13
 
 ---
 
 <a id="case-15"></a>
-### Case 15: [OpenCode Retro Video Game Walkthrough](https://x.com/AskVenice/status/2067047775783534789) (by [@AskVenice](https://x.com/AskVenice))
+### Case 15: [OpenCode Retro Video Game Walkthrough](https://x.com/AskVenice/status/2067047775783534789) (yazan [@AskVenice](https://x.com/AskVenice))
 
-**Use this walkthrough to build a small game with GLM-5.2 and OpenCode from a single prompt, then inspect how the model handles implementation details.**
+**Tek bir komut isteminden GLM-5.2 ve OpenCode ile küçük bir oyun oluşturmak için bu kılavuzu kullanın, ardından modelin uygulama ayrıntılarını nasıl işlediğini inceleyin.**
 
-Venice shared a full walkthrough for building a retro video game with GLM-5.2 and OpenCode, positioning it as a private, open-source, long-horizon coding workflow.
+Venice, GLM-5.2 ve OpenCode ile retro bir video oyunu oluşturmaya yönelik tam bir yol haritası paylaşarak oyunu özel, açık kaynaklı, uzun ufuklu bir kodlama iş akışı olarak konumlandırdı.
 
-Tür: Tutorial | Tarih: 2026-06-17
+Tür: Öğretici | Tarih: 2026-06-17
 
 ---
 
 <a id="case-16"></a>
-### Case 16: [HTML5 Physics Simulations Contest](https://x.com/atomic_chat_hq/status/2067038851139334588) (by [@atomic_chat_hq](https://x.com/atomic_chat_hq))
+### Case 16: [HTML5 Physics Simulations Contest](https://x.com/atomic_chat_hq/status/2067038851139334588) (yazan [@atomic_chat_hq](https://x.com/atomic_chat_hq))
 
-**Use this case to compare GLM-5.2 and Kimi K2.7 Code on self-contained HTML5 physics simulations without libraries.**
+**Kitaplıksız bağımsız HTML5 fizik simülasyonlarında GLM-5.2 ve Kimi K2.7 Kodunu karşılaştırmak için bu örneği kullanın.**
 
-Atomic Chat reported asking both models to build pool break, spring block, and Galton board simulations. Their post says GLM-5.2 handled all three with more detail and polish, while Kimi struggled with physical behavior.
+Atomic Chat, her iki modelden de havuz sonu, yaylı blok ve Galton tahtası simülasyonları oluşturmalarını istediğini bildirdi. Gönderileri, GLM-5.2'nin üçünü de daha ayrıntılı ve cilalı bir şekilde ele aldığını, Kimi'nin ise fiziksel davranışlarla mücadele ettiğini söylüyor.
 
-Tür: Evaluation | Tarih: 2026-06-17
+Tür: Değerlendirme | Tarih: 2026-06-17
 
 ---
 
 <a id="case-17"></a>
-### Case 17: [Personal Site UI UX Build](https://x.com/anshuc/status/2067034697704857615) (by [@anshuc](https://x.com/anshuc))
+### Case 17: [Personal Site UI UX Build](https://x.com/anshuc/status/2067034697704857615) (yazan [@anshuc](https://x.com/anshuc))
 
-**Use this case to prompt GLM-5.2 for a polished personal site and inspect how far multiple turns can improve UI/UX.**
+**GLM-5.2'yi gösterişli bir kişisel siteye yönlendirmek için bu durumu kullanın ve birden fazla dönüşün UI/UX'i ne kadar geliştirebileceğini inceleyin.**
 
-The author says GLM-5.2 produced a creative personal site after being pushed with the right prompting, and shared a video of the result. It is useful for front-end design iteration rather than single-shot benchmark claims.
+Yazar, GLM-5.2'nin doğru yönlendirmeyle yönlendirildikten sonra yaratıcı bir kişisel site oluşturduğunu ve sonucun bir videosunu paylaştığını söylüyor. Tek seferlik kıyaslama iddiaları yerine ön uç tasarım yinelemesi için kullanışlıdır.
 
 Tür: Demo | Tarih: 2026-06-17
 
 ---
 
 <a id="case-18"></a>
-### Case 18: [AI Contract Review Product Build](https://x.com/laozhang2579/status/2066339734956499301) (by [@laozhang2579](https://x.com/laozhang2579))
+### Case 18: [AI Contract Review Product Build](https://x.com/laozhang2579/status/2066339734956499301) (yazan [@laozhang2579](https://x.com/laozhang2579))
 
-**Use this case to evaluate GLM-5.2 on a product-building task with a PRD, time budget, step count, usage quota, and code-quality comparison.**
+**PRD, zaman bütçesi, adım sayısı, kullanım kotası ve kod kalitesi karşılaştırması ile bir ürün oluşturma görevinde GLM-5.2'yi değerlendirmek için bu durumu kullanın.**
 
-The Chinese post compares GLM-5.2, Kimi K2.7, and Claude Opus 4.8 on an AI contract-review product PRD. It reports build duration, step count, five-hour quota usage, and code-quality scoring.
+Çin gönderisi GLM-5.2, Kimi K2.7 ve Claude Opus 4.8'i yapay zeka sözleşme inceleme ürünü PRD'de karşılaştırıyor. Derleme süresini, adım sayısını, beş saatlik kota kullanımını ve kod kalitesi puanlamasını bildirir.
 
-Tür: Evaluation | Tarih: 2026-06-15
+Tür: Değerlendirme | Tarih: 2026-06-15
 
 ---
 
 <a id="case-19"></a>
-### Case 19: [ZCode Goal Feature For Larger Development Objectives](https://x.com/zcode_ai/status/2066236605917188228) (by [@zcode_ai](https://x.com/zcode_ai))
+### Case 19: [ZCode Goal Feature For Larger Development Objectives](https://x.com/zcode_ai/status/2066236605917188228) (yazan [@zcode_ai](https://x.com/zcode_ai))
 
-**Use this case to understand how GLM-5.2 is integrated into ZCode 3.0 for larger agentic development tasks.**
+**Daha büyük ajan geliştirme görevleri için GLM-5.2'nin ZCode 3.0'a nasıl entegre edildiğini anlamak için bu örneği kullanın.**
 
-ZCode announced GLM-5.2 availability for Coding Plan users, stronger agent task execution, better long-context coding, and a Goal feature for managing larger objectives from planning to completion.
+ZCode, Kodlama Planı kullanıcıları için GLM-5.2'nin kullanılabilirliğini, daha güçlü aracı görevi yürütmeyi, daha iyi uzun bağlam kodlamasını ve planlamadan tamamlamaya kadar daha büyük hedefleri yönetmek için bir Hedef özelliğini duyurdu.
 
-Tür: Integration | Tarih: 2026-06-14
+Tür: Entegrasyon | Tarih: 2026-06-14
 
 ---
 
 <a id="case-20"></a>
-### Case 20: [Linux Wrapper For ZCode Built With GLM-5.2](https://x.com/gosrum/status/2066484949755269510) (by [@gosrum](https://x.com/gosrum))
+### Case 20: [GLM-5.2 ile Oluşturulan ZCode İçin Linux Paketleyici](https://x.com/gosrum/status/2066484949755269510) (yazan [@gosrum](https://x.com/gosrum))
 
-**Use this case as an example of GLM-5.2 assisting with tooling around coding-agent environments.**
+**Bu durumu, kodlama aracısı ortamları etrafındaki araçlara yardımcı olan GLM-5.2'nin bir örneği olarak kullanın.**
 
-The author reports completing zcode-linux using GLM-5.2 and Claude Code so Linux users can run ZCode in a Linux environment and add arbitrary API endpoints, including local LLM endpoints.
+Yazar, Linux kullanıcılarının ZCode'u bir Linux ortamında çalıştırabilmesi ve yerel LLM uç noktaları da dahil olmak üzere isteğe bağlı API uç noktaları ekleyebilmesi için GLM-5.2 ve Claude Code kullanarak zcode-linux'un tamamlandığını bildiriyor.
 
 Tür: Demo | Tarih: 2026-06-15
 
 ---
 
 <a id="case-21"></a>
-### Case 21: [Computer Use Skill Packaging](https://x.com/0xSero/status/2065952130054382079) (by [@0xSero](https://x.com/0xSero))
+### Case 21: [Computer Use Skill Packaging](https://x.com/0xSero/status/2065952130054382079) (yazan [@0xSero](https://x.com/0xSero))
 
-**Use this case to study GLM-5.2 as a helper for turning an open-source computer-use repo into a reusable skill.**
+**Açık kaynaklı bilgisayar kullanımlı bir depoyu yeniden kullanılabilir bir beceriye dönüştürmek için bir yardımcı olarak GLM-5.2'yi incelemek için bu örneği kullanın.**
 
-The post says GLM-5.2 was setting up computer use, found an advanced open-source repository, and converted it into a skill. It is a hands-on signal for tool-wrapping and agent integration work.
+Gönderi, GLM-5.2'nin bilgisayar kullanımını ayarladığını, gelişmiş bir açık kaynak deposu bulduğunu ve bunu bir beceriye dönüştürdüğünü söylüyor. Araç sarma ve aracı entegrasyonu çalışmaları için uygulamalı bir sinyaldir.
 
 Tür: Demo | Tarih: 2026-06-14
 
 ---
 
 <a id="case-22"></a>
-### Case 22: [ZCode 3.0 Agentic Development Environment Review](https://x.com/laogui/status/2066190262993559963) (by [@laogui](https://x.com/laogui))
+### Case 22: [ZCode 3.0 Agentic Development Environment Review](https://x.com/laogui/status/2066190262993559963) (yazan [@laogui](https://x.com/laogui))
 
-**Use this case to evaluate GLM-5.2 inside a full agentic development environment rather than a single chat session.**
+**GLM-5.2'yi tek bir sohbet oturumu yerine tam bir aracılı geliştirme ortamında değerlendirmek için bu örneği kullanın.**
 
-The Chinese review says ZCode 3.0 was rewritten from shell-like earlier versions into a self-developed agent core paired with GLM-5.2, with a better experience among domestic agentic development environments.
+Çin incelemesi, ZCode 3.0'ın kabuk benzeri önceki sürümlerden, GLM-5.2 ile eşleştirilmiş, kendi geliştirdiği bir aracı çekirdeğine yeniden yazıldığını ve yerel aracı geliştirme ortamlarında daha iyi bir deneyime sahip olduğunu söylüyor.
 
 Tür: Demo | Tarih: 2026-06-14
 
 ---
 
 <a id="case-62"></a>
-### Case 62: [OpenCode Harness With Local Serving](https://x.com/PatrickToulme/status/2068134212587184442) (tarafından [@PatrickToulme](https://x.com/PatrickToulme))
+### Case 62: [Yerel Hizmetli OpenCode Donanımı](https://x.com/PatrickToulme/status/2068134212587184442) (yazan [@PatrickToulme](https://x.com/PatrickToulme))
 
-**Use this case to test GLM-5.2 with the OpenCode harness, local serving, and tool-heavy coding workflows before comparing it with Claude Opus.**
+**GLM-5.2'yi Claude Opus ile karşılaştırmadan önce OpenCode donanımı, yerel hizmet ve araç ağırlıklı kodlama iş akışlarıyla test etmek için bu durumu kullanın.**
 
-The author reports a local deployment, nested subagents, research/planning behavior, and a working application build.
+Yazar, yerel bir konuşlandırmayı, iç içe geçmiş alt aracıları, araştırma/planlama davranışını ve çalışan bir uygulama yapısını rapor eder.
 
-Tür: Evaluation | Tarih: 2026-06-20
+Tür: Değerlendirme | Tarih: 2026-06-20
 
 ---
 
 <a id="case-65"></a>
-### Case 65: [Fast-RLM Long-Context Instruction Injection](https://x.com/neural_avb/status/2067992817625088439) (tarafından [@neural_avb](https://x.com/neural_avb))
+### Case 65: [Fast-RLM Long-Context Instruction Injection](https://x.com/neural_avb/status/2067992817625088439) (yazan [@neural_avb](https://x.com/neural_avb))
 
-**Use this case to improve GLM-5.2 long-context counting and REPL-agent behavior by moving instructions into the RLM system prompt.**
+**Talimatları RLM sistem istemine taşıyarak GLM-5.2 uzun bağlam sayımını ve REPL aracısı davranışını iyileştirmek için bu durumu kullanın.**
 
-The release notes describe a concrete agent-scaffolding change and a GLM-5.2 long-context benchmark effect.
+Sürüm notları, somut bir aracı-iskele değişikliğini ve GLM-5.2 uzun bağlamlı kıyaslama etkisini açıklamaktadır.
 
-Tür: Integration | Tarih: 2026-06-20
+Tür: Entegrasyon | Tarih: 2026-06-20
 
 ---
 
 <a id="case-66"></a>
-### Case 66: [DeepAgents Code Open Harness Trial](https://x.com/sydneyrunkle/status/2067947260369854830) (tarafından [@sydneyrunkle](https://x.com/sydneyrunkle))
+### Case 66: [DeepAgents Code Open Harness Trial](https://x.com/sydneyrunkle/status/2067947260369854830) (yazan [@sydneyrunkle](https://x.com/sydneyrunkle))
 
-**Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell.**
+**GLM-5.2'yi açık kodlama ajanı donanımıyla denemek ve modeli tekrarlanabilir bir ajan kabuğu altında karşılaştırmak için bu durumu kullanın.**
 
-The author reports using GLM-5.2 with DeepAgents Code and frames open model plus open harness as the testing pattern.
+Yazar, test modeli olarak DeepAgents Koduyla birlikte GLM-5.2'nin kullanıldığını ve açık model artı açık donanıma sahip çerçevelerin kullanıldığını bildiriyor.
 
 Tür: Demo | Tarih: 2026-06-20
 
@@ -536,12 +536,12 @@ Tür: Demo | Tarih: 2026-06-20
 
 Yazar, bir ajans stack’inde altı günlük yan yana kullanımın ardından GLM-5.2’nin sapmadan 60’tan fazla agent adımı taşıdığını, yapılandırılmış formatları 800’den fazla kez art arda eşlediğini ve düşük gecikmeli self-hosted yanıtlar verdiğini söylüyor. Aynı gönderi yine de ses açısından kritik veya belirsiz görevlerde Opus’u tercih ediyor; bu da yönlendirme kuralını asıl faydalı çıkarım haline getiriyor.
 
-Tür: Evaluation | Tarih: 2026-06-20
+Tür: Değerlendirme | Tarih: 2026-06-20
 
 ---
 
 <a id="case-80"></a>
-### Case 80: [M3 Ultra Pokemon Red Goal Run](https://x.com/hxiao/status/2068800750554378434) (by [@hxiao](https://x.com/hxiao))
+### Case 80: [M3 Ultra Pokemon Red Goal Run](https://x.com/hxiao/status/2068800750554378434) (yazan [@hxiao](https://x.com/hxiao))
 
 **GLM-5.2’yi uzun süreli yerel coding agent çalıştırmasında değerlendirmek için bu vakayı kullanın; modelin bir M3 Ultra makinede yaklaşık yarım gün boyunca Pokemon Red’i HTML olarak yeniden kurmaya çalıştığı bir örneği izleyin.**
 
@@ -553,91 +553,91 @@ Tür: Demo | Tarih: 2026-06-21
 
 
 <a id="hands-on-demos-showcase-builds"></a>
-## 🎮 Uygulamalı demolar ve showcase build’leri
+## 🎮 Uygulamalı demolar ve vitrin derlemeleri
 
 <a id="case-23"></a>
-### Case 23: [Playable Backrooms One-Shot](https://x.com/aimlapi/status/2066996493257408639) (by [@aimlapi](https://x.com/aimlapi))
+### Case 23: [Playable Backrooms One-Shot](https://x.com/aimlapi/status/2066996493257408639) (yazan [@aimlapi](https://x.com/aimlapi))
 
-**Use this case to compare same-prompt game-building output, runtime, and cost between GLM-5.2 and Opus 4.8.**
+**GLM-5.2 ile Opus 4.8 arasındaki aynı istemde oyun oluşturma çıktısını, çalışma süresini ve maliyetini karşılaştırmak için bu durumu kullanın.**
 
-AI/ML API reported asking GLM-5.2 and Opus 4.8 to one-shot a playable Backrooms game. Their post says GLM-5.2 built fuller mechanics in 1:08 at $0.37, while Opus took 2:14 at $1.94.
+AI/ML API, GLM-5.2 ve Opus 4.8'den tek seferlik oynanabilir bir Backrooms oyunu talep ettiğini bildirdi. Gönderileri, GLM-5.2'nin 1:08'de 0,37 dolardan daha dolgun mekanikler ürettiğini, Opus'un ise 2:14'ü 1,94 dolardan aldığını söylüyor.
 
 Tür: Demo | Tarih: 2026-06-16
 
 ---
 
 <a id="case-24"></a>
-### Case 24: [Three Real Builds With Mixed Results](https://x.com/bridgemindai/status/2065840871929442319) (by [@bridgemindai](https://x.com/bridgemindai))
+### Case 24: [Karışık Sonuçlara Sahip Üç Gerçek Yapı](https://x.com/bridgemindai/status/2065840871929442319) (yazan [@bridgemindai](https://x.com/bridgemindai))
 
-**Use this case as a cautionary demo set: test multiple real builds before trusting a model for production game or video tasks.**
+**Bu durumu uyarıcı bir demo seti olarak kullanın: üretim oyunu veya video görevleri için bir modele güvenmeden önce birden fazla gerçek yapıyı test edin.**
 
-BridgeMind tested GLM-5.2 on a horror house game, a 3D stealth game, and a Remotion marketing video. The post reports mixed results, including broken game logic, making it useful as a grounded limitation signal.
+BridgeMind, GLM-5.2'yi bir korku evi oyunu, bir 3D gizlilik oyunu ve bir Remotion pazarlama videosu üzerinde test etti. Gönderi, bozuk oyun mantığı da dahil olmak üzere karışık sonuçlar bildiriyor ve bu da onu temelli bir sınırlama sinyali olarak faydalı kılıyor.
 
-Tür: Evaluation | Tarih: 2026-06-13
+Tür: Değerlendirme | Tarih: 2026-06-13
 
 ---
 
 <a id="case-25"></a>
-### Case 25: [Super Mario Clone In ZCode](https://x.com/ivanfioravanti/status/2066272681406980208) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 25: [Super Mario Clone In ZCode](https://x.com/ivanfioravanti/status/2066272681406980208) (yazan [@ivanfioravanti](https://x.com/ivanfioravanti))
 
-**Use this case to evaluate iterative game-building with GLM-5.2 and ZCode over several fix-and-feature passes.**
+**Birkaç düzeltme ve özellik geçişi üzerinden GLM-5.2 ve ZCode ile yinelemeli oyun oluşturmayı değerlendirmek için bu durumu kullanın.**
 
-The author tested ZCode 3.0 with GLM-5.2 by creating a Super Mario-style clone, then shared the result after five iterations of issue fixes and feature additions.
+Yazar, Super Mario tarzı bir klon oluşturarak ZCode 3.0'ı GLM-5.2 ile test etti, ardından beş sorun düzeltmesi ve özellik ekleme yinelemesinden sonra sonucu paylaştı.
 
 Tür: Demo | Tarih: 2026-06-14
 
 ---
 
 <a id="case-26"></a>
-### Case 26: [Lunar Lander Contest](https://x.com/ivanfioravanti/status/2066193134984319173) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 26: [Lunar Lander Contest](https://x.com/ivanfioravanti/status/2066193134984319173) (yazan [@ivanfioravanti](https://x.com/ivanfioravanti))
 
-**Use this case to compare GLM-5.2, MiniMax M3, and Kimi K2.7 Code on an interactive game-style task.**
+**Etkileşimli oyun tarzı bir görevde GLM-5.2, MiniMax M3 ve Kimi K2.7 Code'u karşılaştırmak için bu durumu kullanın.**
 
-The post describes a Lunar Lander contest among MiniMax M3, GLM-5.2, and Kimi K2.7 Code, using a video result as a practical benchmark before returning to local-model development.
+Yazıda MiniMax M3, GLM-5.2 ve Kimi K2.7 Code arasındaki bir Lunar Lander yarışması anlatılıyor ve yerel model geliştirmeye dönmeden önce pratik bir kıyaslama olarak bir video sonucu kullanılıyor.
 
-Tür: Evaluation | Tarih: 2026-06-14
+Tür: Değerlendirme | Tarih: 2026-06-14
 
 ---
 
 <a id="case-27"></a>
-### Case 27: [One-Prompt Design Arena Creation](https://x.com/grx_xce/status/2066951779154374907) (by [@grx_xce](https://x.com/grx_xce))
+### Case 27: [One-Prompt Design Arena Creation](https://x.com/grx_xce/status/2066951779154374907) (yazan [@grx_xce](https://x.com/grx_xce))
 
-**Use this case to inspect what GLM-5.2 can generate from a single design prompt in an arena context.**
+**Bu örneği, GLM-5.2'nin bir arena bağlamında tek bir tasarım isteminden neler üretebileceğini incelemek için kullanın.**
 
-The author shared an example of a GLM-5.2 creation on Design Arena made from one prompt, using it to show the narrowing gap between open and closed-weight models.
+Yazar, açık ve kapalı ağırlıklı modeller arasındaki daralan boşluğu göstermek için Design Arena'da tek bir istemden yapılmış bir GLM-5.2 yaratımı örneğini paylaştı.
 
 Tür: Demo | Tarih: 2026-06-16
 
 ---
 
 <a id="case-28"></a>
-### Case 28: [Research Paper Understanding Workflow](https://x.com/askalphaxiv/status/2066996976445706745) (by [@askalphaxiv](https://x.com/askalphaxiv))
+### Case 28: [Araştırma Makalesi İş Akışını Anlamak](https://x.com/askalphaxiv/status/2066996976445706745) (yazan [@askalphaxiv](https://x.com/askalphaxiv))
 
-**Use this case to apply GLM-5.2 to paper-reading workflows with contextual questions and cross-paper references.**
+**GLM-5.2'yi bağlamsal sorular ve çapraz makale referansları içeren kağıt okuma iş akışlarına uygulamak için bu örneği kullanın.**
 
-AlphaXiv introduced GLM-5.2 for understanding research papers, where users highlight a section, ask questions, and reference other papers for context, comparisons, and benchmark references.
+AlphaXiv, kullanıcıların bir bölümü vurguladığı, sorular sorduğu ve bağlam, karşılaştırmalar ve kıyaslama referansları için diğer makalelere referans verdiği araştırma makalelerini anlamak için GLM-5.2'yi tanıttı.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-29"></a>
-### Case 29: [Constrained Poem Comparison](https://x.com/emollick/status/2067056226337186146) (by [@emollick](https://x.com/emollick))
+### Case 29: [Constrained Poem Comparison](https://x.com/emollick/status/2067056226337186146) (yazan [@emollick](https://x.com/emollick))
 
-**Use this case to separate correctness from creative quality when comparing GLM-5.2 with Fable-style models.**
+**GLM-5.2'yi Fable tarzı modellerle karşılaştırırken doğruluğu yaratıcı kaliteden ayırmak için bu durumu kullanın.**
 
-Ethan Mollick credited GLM-5.2 Max for producing a correct constrained poem, while noting that Fable incorporated the disappearing-letter constraint into the poem theme more creatively.
+Ethan Mollick, GLM-5.2 Max'in doğru bir kısıtlı şiir ürettiğini belirtirken, Fable'ın kaybolan harf kısıtlamasını şiir temasına daha yaratıcı bir şekilde dahil ettiğini belirtti.
 
-Tür: Evaluation | Tarih: 2026-06-17
+Tür: Değerlendirme | Tarih: 2026-06-17
 
 ---
 
 <a id="case-30"></a>
-### Case 30: [Design Sense Example](https://x.com/0xSero/status/2067074877941796994) (by [@0xSero](https://x.com/0xSero))
+### Case 30: [Design Sense Example](https://x.com/0xSero/status/2067074877941796994) (yazan [@0xSero](https://x.com/0xSero))
 
-**Use this case as a lightweight visual-design signal, then verify with your own prompt and UI review.**
+**Bu durumu hafif bir görsel tasarım sinyali olarak kullanın, ardından kendi isteminiz ve kullanıcı arayüzü incelemenizle doğrulayın.**
 
-The author says they enjoyed GLM-5.2's design sense and shared a visual example. It is useful as a pointer to inspect, not as standalone proof of production design quality.
+Yazar, GLM-5.2'nin tasarım anlayışından hoşlandıklarını ve görsel bir örnek paylaştıklarını söylüyor. Üretim tasarımı kalitesinin bağımsız bir kanıtı olarak değil, denetlenecek bir işaretçi olarak kullanışlıdır.
 
 Tür: Demo | Tarih: 2026-06-17
 
@@ -666,7 +666,7 @@ Tür: Demo | Tarih: 2026-06-20
 ---
 
 <a id="case-81"></a>
-### Case 81: [Space Invaders One-Prompt Build](https://x.com/DeryaTR_/status/2068803754611069128) (by [@DeryaTR_](https://x.com/DeryaTR_))
+### Case 81: [Space Invaders One-Prompt Build](https://x.com/DeryaTR_/status/2068803754611069128) (yazan [@DeryaTR_](https://x.com/DeryaTR_))
 
 **GLM-5.2’yi tek istemle oyun üretiminde sınamak, ardından birkaç ek turda asset değişimleri ve hafif polish’in nasıl ilerlediğini görmek için bu vakayı kullanın.**
 
@@ -677,7 +677,7 @@ Tür: Demo | Tarih: 2026-06-21
 ---
 
 <a id="case-82"></a>
-### Case 82: [OpenCode Recovery Lab One-Shot](https://x.com/threepointone/status/2068718370581536816) (by [@threepointone](https://x.com/threepointone))
+### Case 82: [OpenCode Recovery Lab One-Shot](https://x.com/threepointone/status/2068718370581536816) (yazan [@threepointone](https://x.com/threepointone))
 
 **Etkileşimli agent-failure simülasyonlarını hızlıca prototiplemek için bu vakayı kullanın; yazar yaklaşık 3,50 dolara çalışan bir recovery lab’i tek atışta kurduğunu bildiriyor.**
 
@@ -692,167 +692,167 @@ Tür: Demo | Tarih: 2026-06-21
 ## 🔌 Sağlayıcı ve araç entegrasyonları
 
 <a id="case-31"></a>
-### Case 31: [OpenCode Go Availability](https://x.com/opencode/status/2067207923122479242) (by [@opencode](https://x.com/opencode))
+### Case 31: [OpenCode Go Availability](https://x.com/opencode/status/2067207923122479242) (yazan [@opencode](https://x.com/opencode))
 
-**Use this case to track GLM-5.2 availability inside OpenCode Go workflows with text, 1M context, and GLM-5.1-like pricing.**
+**Metin, 1M bağlamı ve GLM-5.1 benzeri fiyatlandırma ile OpenCode Go iş akışları içindeki GLM-5.2 kullanılabilirliğini izlemek için bu durumu kullanın.**
 
-OpenCode announced GLM-5.2 availability in Go, highlighting text support, a 1M context window, and same pricing as 5.1.
+OpenCode, metin desteğini, 1 milyon bağlam penceresini ve 5.1 ile aynı fiyatlandırmayı öne çıkararak GLM-5.2'nin Go'da kullanılabilirliğini duyurdu.
 
-Tür: Integration | Tarih: 2026-06-17
+Tür: Entegrasyon | Tarih: 2026-06-17
 
 ---
 
 <a id="case-32"></a>
-### Case 32: [Ollama Cloud Availability](https://x.com/ollama/status/2066949797316350361) (by [@ollama](https://x.com/ollama))
+### Case 32: [Ollama Cloud Availability](https://x.com/ollama/status/2066949797316350361) (yazan [@ollama](https://x.com/ollama))
 
-**Use this case to route GLM-5.2 into Ollama Cloud for accessible open-source coding-model experiments.**
+**Erişilebilir açık kaynaklı kodlama modeli deneyleri için GLM-5.2'yi Ollama Cloud'a yönlendirmek için bu durumu kullanın.**
 
-Ollama announced GLM-5.2 availability, describing it as a long-horizon coding and agentic-task model with 1M context.
+Ollama, GLM-5.2'nin kullanılabilirliğini duyurdu ve bunu uzun ufuklu bir kodlama ve 1M bağlamına sahip ajansal görev modeli olarak tanımladı.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-33"></a>
-### Case 33: [OpenRouter One API Call Access](https://x.com/OpenRouter/status/2066941552208056561) (by [@OpenRouter](https://x.com/OpenRouter))
+### Case 33: [OpenRouter One API Call Access](https://x.com/OpenRouter/status/2066941552208056561) (yazan [@OpenRouter](https://x.com/OpenRouter))
 
-**Use this case to access GLM-5.2 through OpenRouter when comparing provider routing or multi-model stacks.**
+**Sağlayıcı yönlendirmesini veya çok modelli yığınları karşılaştırırken GLM-5.2'ye OpenRouter aracılığıyla erişmek için bu durumu kullanın.**
 
-OpenRouter announced GLM-5.2 availability as a 1M-token long-horizon model, giving users a provider-neutral path to call it.
+OpenRouter, GLM-5.2'nin 1 milyon jetonlu uzun ufuk modeli olarak kullanılabilirliğini duyurdu ve kullanıcılara onu çağırmak için sağlayıcıdan bağımsız bir yol sağladı.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-34"></a>
-### Case 34: [vLLM Day-Zero Support](https://x.com/vllm_project/status/2066950636428775693) (by [@vllm_project](https://x.com/vllm_project))
+### Case 34: [vLLM Day-Zero Support](https://x.com/vllm_project/status/2066950636428775693) (yazan [@vllm_project](https://x.com/vllm_project))
 
-**Use this case to self-host or serve GLM-5.2 through vLLM with day-zero support.**
+**Bu durumu kendi kendine barındırmak veya sıfırıncı gün desteğiyle GLM-5.2'yi vLLM aracılığıyla sunmak için kullanın.**
 
-The vLLM project announced GLM-5.2 support in v0.23.0, framing it as a flagship model for long-horizon coding agents with 1M context.
+vLLM projesi, v0.23.0'da GLM-5.2 desteğini duyurdu ve bu, onu 1M bağlamına sahip uzun ufuklu kodlama aracıları için amiral gemisi modeli olarak çerçeveledi.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-35"></a>
-### Case 35: [Notion Availability Via Baseten](https://x.com/NotionHQ/status/2066963258985320550) (by [@NotionHQ](https://x.com/NotionHQ))
+### Case 35: [Notion Availability Via Baseten](https://x.com/NotionHQ/status/2066963258985320550) (yazan [@NotionHQ](https://x.com/NotionHQ))
 
-**Use this case to identify GLM-5.2 as an open-weight model available inside Notion workflows.**
+**GLM-5.2'yi Notion iş akışlarında bulunan açık ağırlıklı bir model olarak tanımlamak için bu durumu kullanın.**
 
-Notion announced GLM-5.2 availability as an open-weight model built for long-horizon tasks and served via Baseten.
+Notion, GLM-5.2'nin uzun vadeli görevler için tasarlanmış ve Baseten aracılığıyla sunulan açık ağırlıklı bir model olarak mevcut olduğunu duyurdu.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-36"></a>
-### Case 36: [Fireworks Day-Zero Serving](https://x.com/FireworksAI_HQ/status/2067007200426680509) (by [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
+### Case 36: [Fireworks Day-Zero Serving](https://x.com/FireworksAI_HQ/status/2067007200426680509) (yazan [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
 
-**Use this case to evaluate Fireworks as a serving route for GLM-5.2 workloads that need hosted infrastructure.**
+**Fireworks'ü, barındırılan altyapıya ihtiyaç duyan GLM-5.2 iş yükleri için bir hizmet rotası olarak değerlendirmek için bu durumu kullanın.**
 
-Fireworks announced GLM-5.2 live on day zero, emphasizing 1M context, coding-first positioning, and independent validation on SWE-Bench, Terminal-Bench, GPQA, and AIME.
+Fireworks, GLM-5.2'yi sıfır günde canlı olarak duyurdu ve 1M bağlamını, öncelikli kodlama konumlandırmasını ve SWE-Bench, Terminal-Bench, GPQA ve AIME'de bağımsız doğrulamayı vurguladı.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-37"></a>
-### Case 37: [Google Cloud Model Garden Link](https://x.com/CarolGLMs/status/2067127223216419088) (by [@CarolGLMs](https://x.com/CarolGLMs))
+### Case 37: [Google Cloud Model Bahçe Bağlantısı](https://x.com/CarolGLMs/status/2067127223216419088) (yazan [@CarolGLMs](https://x.com/CarolGLMs))
 
-**Use this case to find GLM-5.2 in Google Cloud-oriented deployment and agent-platform contexts.**
+**Google Cloud odaklı dağıtım ve aracı platform bağlamlarında GLM-5.2'yi bulmak için bu durumu kullanın.**
 
-CarolGLMs shared a Google Cloud link for GLM-5.2, making it a direct pointer for teams working through cloud model catalogs.
+CarolGLM'ler, GLM-5.2 için bir Google Cloud bağlantısı paylaştı ve bu, onu bulut modeli katalogları üzerinden çalışan ekipler için doğrudan bir işaretçi haline getirdi.
 
-Tür: Integration | Tarih: 2026-06-17
+Tür: Entegrasyon | Tarih: 2026-06-17
 
 ---
 
 <a id="case-38"></a>
-### Case 38: [Venice Privacy Mode](https://x.com/AskVenice/status/2066990725439361251) (by [@AskVenice](https://x.com/AskVenice))
+### Case 38: [Venice Privacy Mode](https://x.com/AskVenice/status/2066990725439361251) (yazan [@AskVenice](https://x.com/AskVenice))
 
-**Use this case when privacy mode, TEE, or end-to-end encryption is a deciding factor in trying GLM-5.2.**
+**GLM-5.2'yi denemede gizlilik modu, TEE veya uçtan uca şifrelemenin belirleyici bir faktör olduğu durumlarda bu durumu kullanın.**
 
-Venice announced GLM-5.2 availability in privacy mode with TEE/E2EE framing, aimed at private agentic coding and long-horizon tasks.
+Venice, özel aracılı kodlamayı ve uzun vadeli görevleri hedefleyen TEE/E2EE çerçevelemeli gizlilik modunda GLM-5.2'nin kullanılabilirliğini duyurdu.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-39"></a>
-### Case 39: [Command Code Availability](https://x.com/CommandCodeAI/status/2066950478194503990) (by [@CommandCodeAI](https://x.com/CommandCodeAI))
+### Case 39: [Command Code Availability](https://x.com/CommandCodeAI/status/2066950478194503990) (yazan [@CommandCodeAI](https://x.com/CommandCodeAI))
 
-**Use this case to try GLM-5.2 in Command Code with a low-cost entry plan and long-context coding features.**
+**Düşük maliyetli giriş planı ve uzun bağlam kodlama özellikleriyle Komut Kodunda GLM-5.2'yi denemek için bu durumu kullanın.**
 
-Command Code announced GLM-5.2 availability, noting 1M context, strong reasoning, open-source status, and access through its one-dollar Go plan.
+Command Code, 1 milyon bağlamı, güçlü muhakemesi, açık kaynak durumu ve bir dolarlık Go planı aracılığıyla erişime dikkat çekerek GLM-5.2'nin kullanılabilirliğini duyurdu.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-40"></a>
-### Case 40: [Hermes Agent From Nous Portal](https://x.com/Teknium/status/2066954081575592282) (by [@Teknium](https://x.com/Teknium))
+### Case 40: [Nous Portal'dan Hermes Ajanı](https://x.com/Teknium/status/2066954081575592282) (yazan [@Teknium](https://x.com/Teknium))
 
-**Use this case to connect GLM-5.2 into Hermes Agent workflows through Nous Portal and OpenRouter.**
+**GLM-5.2'yi Nous Portal ve OpenRouter aracılığıyla Hermes Agent iş akışlarına bağlamak için bu durumu kullanın.**
 
-Teknium reported GLM-5.2 availability in Hermes Agent from Nous Portal and OpenRouter, useful for agent-framework routing experiments.
+Teknium, Hermes Agent'ta Nous Portal ve OpenRouter'dan GLM-5.2 kullanılabilirliğini bildirdi; bu, aracı çerçeve yönlendirme deneyleri için kullanışlıdır.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-41"></a>
-### Case 41: [io.net Day-Zero Launch Partner](https://x.com/ionet/status/2067140436095803763) (by [@ionet](https://x.com/ionet))
+### Case 41: [io.net Day-Zero Launch Partner](https://x.com/ionet/status/2067140436095803763) (yazan [@ionet](https://x.com/ionet))
 
-**Use this case when evaluating compute-backed serving for a 753B-parameter long-context model.**
+**753B parametreli uzun bağlam modeli için işlem destekli sunumu değerlendirirken bu durumu kullanın.**
 
-io.net announced itself as a day-zero launch partner for GLM-5.2, emphasizing 1M context, agentic-first design, long-horizon coding, and the compute needs of a 753B-parameter model.
+io.net, 1M bağlamını, aracı öncelikli tasarımı, uzun ufuk kodlamasını ve 753B parametreli bir modelin bilgi işlem ihtiyaçlarını vurgulayarak kendisini GLM-5.2 için sıfırıncı gün lansman ortağı olarak duyurdu.
 
-Tür: Integration | Tarih: 2026-06-17
+Tür: Entegrasyon | Tarih: 2026-06-17
 
 ---
 
 <a id="case-42"></a>
-### Case 42: [Modular Cloud Day-Zero Serving](https://x.com/clattner_llvm/status/2066974950293147950) (by [@clattner_llvm](https://x.com/clattner_llvm))
+### Case 42: [Modular Cloud Day-Zero Serving](https://x.com/clattner_llvm/status/2066974950293147950) (yazan [@clattner_llvm](https://x.com/clattner_llvm))
 
-**Use this case to consider Modular Cloud for long-context GLM-5.2 serving at provider scale.**
+**Sağlayıcı ölçeğinde uzun bağlamlı GLM-5.2 hizmeti için Modüler Bulut'u değerlendirmek üzere bu durumu kullanın.**
 
-Chris Lattner posted that GLM-5.2 was live on Modular Cloud on day zero, highlighting open weights, coding, long-horizon agents, and 1M context.
+Chris Lattner, GLM-5.2'nin sıfırıncı günde Modular Cloud'da yayında olduğunu ve açık ağırlıkları, kodlamayı, uzun ufuklu aracıları ve 1M bağlamını öne çıkardığını bildirdi.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-61"></a>
-### Case 61: [Cursor Setup Through OpenRouter](https://x.com/agentnative_/status/2068148384846746107) (tarafından [@agentnative_](https://x.com/agentnative_))
+### Case 61: [Cursor Setup Through OpenRouter](https://x.com/agentnative_/status/2068148384846746107) (yazan [@agentnative_](https://x.com/agentnative_))
 
-**Use this case to configure GLM-5.2 in Cursor through OpenRouter for a low-cost open-model coding workflow.**
+**Düşük maliyetli bir açık model kodlama iş akışı için Cursor'daki GLM-5.2'yi OpenRouter aracılığıyla yapılandırmak için bu durumu kullanın.**
 
-The source gives a concrete Cursor/OpenRouter setup path rather than only announcing model availability.
+Kaynak, yalnızca modelin kullanılabilirliğini duyurmak yerine somut bir İmleç/OpenRouter kurulum yolu veriyor.
 
-Tür: Tutorial | Tarih: 2026-06-20
+Tür: Öğretici | Tarih: 2026-06-20
 
 ---
 
 <a id="case-63"></a>
-### Case 63: [Amp Agentic Eyes For Visual Design](https://x.com/beyang/status/2068087124818317374) (tarafından [@beyang](https://x.com/beyang))
+### Case 63: [Amp Agentic Eyes For Visual Design](https://x.com/beyang/status/2068087124818317374) (yazan [@beyang](https://x.com/beyang))
 
-**Use this case to pair GLM-5.2 with Amp custom agents when a text-only model needs visual-review support for design tasks.**
+**Salt metinden oluşan bir modelin tasarım görevleri için görsel inceleme desteğine ihtiyacı olduğunda GLM-5.2'yi Amp özel aracılarıyla eşleştirmek için bu durumu kullanın.**
 
-The post connects a GLM-5.2 visual design benchmark result with Amp plugin agents that can provide a review layer.
+Gönderi, bir GLM-5.2 görsel tasarım kıyaslama sonucunu, bir inceleme katmanı sağlayabilen Amp eklenti aracılarına bağlar.
 
-Tür: Integration | Tarih: 2026-06-20
+Tür: Entegrasyon | Tarih: 2026-06-20
 
 ---
 
 <a id="case-69"></a>
-### Case 69: [Baseten Faster One-Million-Context Serving](https://x.com/alphatozeta8148/status/2067852860499562821) (tarafından [@alphatozeta8148](https://x.com/alphatozeta8148))
+### Case 69: [Baseten Faster One-Million-Context Serving](https://x.com/alphatozeta8148/status/2067852860499562821) (yazan [@alphatozeta8148](https://x.com/alphatozeta8148))
 
-**Use this case to route GLM-5.2 through Baseten when long-context serving speed matters for Factory Droid, OpenCode, and coding harnesses.**
+**Factory Droid, OpenCode ve kodlama donanımları için uzun bağlamlı hizmet hızının önemli olduğu durumlarda GLM-5.2'yi Baseten'e yönlendirmek için bu durumu kullanın.**
 
-The source reports GLM-5.2 running four times faster at full 1M context and shows it in coding harnesses.
+Kaynak, GLM-5.2'nin tam 1M bağlamında dört kat daha hızlı çalıştığını bildiriyor ve bunu kodlama donanımlarında gösteriyor.
 
-Tür: Integration | Tarih: 2026-06-20
+Tür: Entegrasyon | Tarih: 2026-06-20
 
 ---
 
@@ -863,7 +863,7 @@ Tür: Integration | Tarih: 2026-06-20
 
 Browser Use, GLM-5.2’nin bir web sitesi tasarım görevinde Fable 5’i geçtiğini, ardından sonucu inceleyen, estetiği değerlendiren, bug’ları bulan ve hedefli düzeltmeleri tekrar GLM’ye veren QA subagent’ları eklediğini bildiriyor. Tam build artı QA döngüsünün maliyetinin 0.75 doların altında olduğu da aktarılıyor.
 
-Tür: Integration | Tarih: 2026-06-20
+Tür: Entegrasyon | Tarih: 2026-06-20
 
 ---
 
@@ -874,62 +874,62 @@ Tür: Integration | Tarih: 2026-06-20
 
 Gönderi, ZCode’u Zhipu’nun resmi coding IDE’si olarak tanımlıyor; GLM-5.2 varsayılan model, günlük 3M token, 1M context ve Mac/Windows istemcileri ile birlikte geliyor. Kısa bir kurulum akışı da içerdiği için genel bir lansman duyurusundan daha uygulanabilir.
 
-Tür: Tutorial | Tarih: 2026-06-20
+Tür: Öğretici | Tarih: 2026-06-20
 
 ---
 
 <a id="case-83"></a>
-### Case 83: [Cursor Setup Through Fireworks](https://x.com/skirano/status/2068777440986513647) (by [@skirano](https://x.com/skirano))
+### Case 83: [Cursor Setup Through Fireworks](https://x.com/skirano/status/2068777440986513647) (yazan [@skirano](https://x.com/skirano))
 
 **GLM-5.2’yi Fireworks üzerinden Cursor’a minimum OpenAI-uyumlu ayarla bağlamak ve özel istemci kodu yazmadan denemek için bu vakayı kullanın.**
 
 Skirano, Cursor’daki OpenAI API key alanına Fireworks key yapıştırmayı, base URL olarak `https://api.fireworks.ai/inference/v1` kullanmayı, model olarak `accounts/fireworks/models/glm-5p2` seçmeyi ve Cursor’u yeniden başlatmayı gösteriyor. Bu, GLM-5.2’yi tanıdık bir coding IDE içinde denemek için somut bir rota sunuyor.
 
-Tür: Tutorial | Tarih: 2026-06-21
+Tür: Öğretici | Tarih: 2026-06-21
 
 ---
 
 <a id="case-84"></a>
-### Case 84: [VulcanBench ZAI Provider Support](https://x.com/vulcanbench/status/2068724843856707676) (by [@vulcanbench](https://x.com/vulcanbench))
+### Case 84: [VulcanBench ZAI Provider Support](https://x.com/vulcanbench/status/2068724843856707676) (yazan [@vulcanbench](https://x.com/vulcanbench))
 
 **GLM-5.2’yi açık bir benchmark harness içinde birinci sınıf ZAI provider desteği ve özel API key yolu ile çalıştırmak için bu vakayı kullanın.**
 
 VulcanBench v0.2.0, GLM-5.2’yi `zai:glm-5.2` olarak OpenAI ve Anthropic modellerinin yanında çalıştırabilen first-class ZAI desteği ekledi ve ayrı bir `ZAI_API_KEY` yolu sundu. Bu, tekil ekran görüntülerinden ziyade açık bir benchmark harness isteyenler için yararlı.
 
-Tür: Integration | Tarih: 2026-06-21
+Tür: Entegrasyon | Tarih: 2026-06-21
 
 ---
 
 <a id="case-85"></a>
-### Case 85: [OpenCode High/Max Reasoning Variants](https://x.com/OpenCodeLog/status/2068487086576156705) (by [@OpenCodeLog](https://x.com/OpenCodeLog))
+### Case 85: [OpenCode High/Max Reasoning Variants](https://x.com/OpenCodeLog/status/2068487086576156705) (yazan [@OpenCodeLog](https://x.com/OpenCodeLog))
 
 **OpenCode içinde GLM-5.2 High ve Max reasoning varyantlarına erişmek, aynı zamanda daha güvenilir step-limit davranışı kazanmak için bu vakayı kullanın.**
 
 OpenCode v1.17.9, GLM-5.2 için High ve Max thinking varyantlarını hem OpenAI-uyumlu hem Anthropic-uyumlu sağlayıcılarda ekledi ve OpenRouter effort mapping’i yerel olarak destekledi. Aynı sürüm, agent step-limit davranışını da düzelterek entegrasyonu daha uzun çalıştırmalar için pratik hale getirdi.
 
-Tür: Integration | Tarih: 2026-06-21
+Tür: Entegrasyon | Tarih: 2026-06-21
 
 ---
 
 <a id="case-86"></a>
-### Case 86: [Z.ai Coding Endpoint Selection](https://x.com/ivanfioravanti/status/2068574700721082400) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 86: [Z.ai Coding Endpoint Selection](https://x.com/ivanfioravanti/status/2068574700721082400) (yazan [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **GLM-5.2 coding-plan trafiğini genel API yolu yerine coding’e optimize edilmiş Z.ai endpoint’ine yönlendirmek için bu vakayı kullanın.**
 
 Gönderi, coding-plan iş yükleri için genel `https://api.z.ai/api/paas/v4/` yerine `https://api.z.ai/api/coding/paas/v4` kullanmayı öneriyor. Ayrıca Claude Code ve OpenCode gibi araçların destekledikleri yerde genelde `https://api.z.ai/api/anthropic` yolunu kullandığını not ediyor. GLM-5.2 yanlış rota alıyor gibi hissedildiğinde uygulanabilecek somut bir yapılandırma düzeltmesi bu.
 
-Tür: Tutorial | Tarih: 2026-06-21
+Tür: Öğretici | Tarih: 2026-06-21
 
 ---
 
 <a id="case-87"></a>
-### Case 87: [ZenMux Free GLM-5.2 API Setup](https://x.com/0x_kaize/status/2068676992782811607) (by [@0x_kaize](https://x.com/0x_kaize))
+### Case 87: [ZenMux Free GLM-5.2 API Setup](https://x.com/0x_kaize/status/2068676992782811607) (yazan [@0x_kaize](https://x.com/0x_kaize))
 
 **Ücretsiz GLM-5.2 API key ve base URL alıp bunu Claude, Cursor, Hermes ve benzeri araçlara takmak için bu vakayı kullanın.**
 
 Yazar, yaklaşık beş dakikalık bir kurulumla ücretsiz ZenMux API key ve base URL alıp GLM-5.2’yi Claude, Cursor, Hermes ve benzeri araçlara bağlama akışını paylaşıyor. Aynı gönderi ücretsiz katmanın hızlıca rate-limit’e girdiğini de söylüyor; bu nedenle bunu dayanıklılık garantisinden çok erişim notu olarak görmek daha doğru.
 
-Tür: Tutorial | Tarih: 2026-06-21
+Tür: Öğretici | Tarih: 2026-06-21
 
 ---
 
@@ -938,128 +938,128 @@ Tür: Tutorial | Tarih: 2026-06-21
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
 
 <a id="case-43"></a>
-### Case 43: [Output Token Cost Comparison](https://x.com/Hesamation/status/2066999955638673891) (by [@Hesamation](https://x.com/Hesamation))
+### Case 43: [Output Token Cost Comparison](https://x.com/Hesamation/status/2066999955638673891) (yazan [@Hesamation](https://x.com/Hesamation))
 
-**Use this case to compare GLM-5.2 output-token economics against Opus, Fable, and GPT-5.5-style models.**
+**GLM-5.2 çıkış jetonu ekonomisini Opus, Fable ve GPT-5.5 tarzı modellerle karşılaştırmak için bu durumu kullanın.**
 
-The post compares 1M output token prices and argues that GLM-5.2 can be meaningfully cheaper than frontier closed models. Treat the numbers as a source-linked pricing comparison that should be rechecked before budgeting.
+Gönderi, 1 milyon çıkış token fiyatlarını karşılaştırıyor ve GLM-5.2'nin, sınır kapalı modellerden anlamlı derecede daha ucuz olabileceğini savunuyor. Rakamları, bütçelemeden önce yeniden kontrol edilmesi gereken, kaynağa bağlı fiyatlandırma karşılaştırması olarak değerlendirin.
 
-Tür: Evaluation | Tarih: 2026-06-16
+Tür: Değerlendirme | Tarih: 2026-06-16
 
 ---
 
 <a id="case-44"></a>
-### Case 44: [Local Near-Frontier Hardware ROI](https://x.com/Jeyffre/status/2067132023576354818) (by [@Jeyffre](https://x.com/Jeyffre))
+### Case 44: [Local Near-Frontier Hardware ROI](https://x.com/Jeyffre/status/2067132023576354818) (yazan [@Jeyffre](https://x.com/Jeyffre))
 
-**Use this case to reason about whether self-hosting GLM-5.2-like models can repay hardware costs for heavy agent users.**
+**Kendi kendini barındıran GLM-5.2 benzeri modellerin yoğun aracı kullanıcılarının donanım maliyetlerini karşılayıp karşılayamayacağı hakkında fikir yürütmek için bu durumu kullanın.**
 
-The author estimates that multiple DGX Spark-class machines could run a 700B-class model and compares a roughly $20K hardware purchase against high monthly API spending for coding and agent workloads.
+Yazar, birden fazla DGX Spark sınıfı makinenin 700B sınıfı bir modeli çalıştırabileceğini tahmin ediyor ve yaklaşık 20 bin dolarlık donanım satın alımını, kodlama ve aracı iş yükleri için yüksek aylık API harcamalarıyla karşılaştırıyor.
 
-Tür: Evaluation | Tarih: 2026-06-17
+Tür: Değerlendirme | Tarih: 2026-06-17
 
 ---
 
 <a id="case-45"></a>
-### Case 45: [MLX On Two Mac Studios](https://x.com/pcuenq/status/2066967665726337219) (by [@pcuenq](https://x.com/pcuenq))
+### Case 45: [MLX On Two Mac Studios](https://x.com/pcuenq/status/2066967665726337219) (yazan [@pcuenq](https://x.com/pcuenq))
 
-**Use this case to explore local GLM-5.2 runs on Apple hardware and MLX-oriented setups.**
+**Apple donanımında ve MLX odaklı kurulumlarda yerel GLM-5.2 çalıştırmalarını keşfetmek için bu vakayı kullanın.**
 
-The post says GLM-5.2 had just been released and was already running with MLX on two Mac Studio M3 Ultra machines, framing it as comparable to recent closed models with open weights.
+Gönderide, GLM-5.2'nin yeni piyasaya sürüldüğü ve halihazırda iki Mac Studio M3 Ultra makinesinde MLX ile çalıştığı belirtiliyor ve bu da onu açık ağırlıklara sahip son kapalı modellerle karşılaştırılabilir bir çerçeveye oturtuyor.
 
 Tür: Demo | Tarih: 2026-06-16
 
 ---
 
 <a id="case-46"></a>
-### Case 46: [H100 Monthly Local Deployment Claim](https://x.com/ai_xiaomu/status/2066181367340429446) (by [@ai_xiaomu](https://x.com/ai_xiaomu))
+### Case 46: [H100 Monthly Local Deployment Claim](https://x.com/ai_xiaomu/status/2066181367340429446) (yazan [@ai_xiaomu](https://x.com/ai_xiaomu))
 
-**Use this case as a cost-comparison prompt for checking local deployment assumptions before choosing between subscription and self-hosting.**
+**Bu durumu, abonelik ve kendi kendine barındırma arasında seçim yapmadan önce yerel dağıtım varsayımlarını kontrol etmek için bir maliyet karşılaştırma istemi olarak kullanın.**
 
-The Chinese post compares claimed SWE-Bench numbers, commercial open-source use, and an estimated single-H100 local deployment cost against a Claude Pro subscription. The numbers should be revalidated for current infrastructure pricing.
+Çin gönderisi, iddia edilen SWE-Bench sayılarını, ticari açık kaynak kullanımını ve tahmini tek H100 yerel dağıtım maliyetini Claude Pro aboneliğiyle karşılaştırıyor. Rakamların mevcut altyapı fiyatlandırması için yeniden doğrulanması gerekmektedir.
 
-Tür: Evaluation | Tarih: 2026-06-14
+Tür: Değerlendirme | Tarih: 2026-06-14
 
 ---
 
 <a id="case-47"></a>
-### Case 47: [Daily Credits And Claude Replacement Claim](https://x.com/RoundtableSpace/status/2067076011770986715) (by [@RoundtableSpace](https://x.com/RoundtableSpace))
+### Case 47: [Daily Credits And Claude Replacement Claim](https://x.com/RoundtableSpace/status/2067076011770986715) (yazan [@RoundtableSpace](https://x.com/RoundtableSpace))
 
-**Use this case to inspect the free-credit and replacement-agent narrative around GLM-5.2, while separating marketing claims from verified workload fit.**
+**Pazarlama iddialarını doğrulanmış iş yükü uyumundan ayırırken GLM-5.2 hakkındaki ücretsiz kredi ve yedek temsilci anlatımını incelemek için bu vakayı kullanın.**
 
-The post frames GLM-5.2 as a lower-cost Claude competitor with daily credits, open-source control, self-hosting, and stronger value for long coding sessions.
+Gönderi, GLM-5.2'yi günlük krediler, açık kaynak kontrolü, kendi kendine barındırma ve uzun kodlama oturumları için daha güçlü değer ile daha düşük maliyetli bir Claude rakibi olarak çerçeveliyor.
 
-Tür: Evaluation | Tarih: 2026-06-17
+Tür: Değerlendirme | Tarih: 2026-06-17
 
 ---
 
 <a id="case-48"></a>
-### Case 48: [Free ZCode Token Window](https://x.com/0xSero/status/2066772591319077208) (by [@0xSero](https://x.com/0xSero))
+### Case 48: [Free ZCode Token Window](https://x.com/0xSero/status/2066772591319077208) (yazan [@0xSero](https://x.com/0xSero))
 
-**Use this case to test GLM-5.2 through a free ZCode allowance before committing to a paid provider or local deployment.**
+**Ücretli bir sağlayıcıya veya yerel dağıtıma başvurmadan önce GLM-5.2'yi ücretsiz ZCode ödeneği aracılığıyla test etmek için bu durumu kullanın.**
 
-The author describes GLM-5.2 availability through ZCode with a large free daily token allowance and notes possible use for setting up vLLM Studio or local hosting.
+Yazar, büyük bir ücretsiz günlük jeton tahsisatı ile ZCode aracılığıyla GLM-5.2'nin kullanılabilirliğini açıklıyor ve vLLM Studio veya yerel barındırma kurulumu için olası kullanıma dikkat çekiyor.
 
-Tür: Integration | Tarih: 2026-06-16
+Tür: Entegrasyon | Tarih: 2026-06-16
 
 ---
 
 <a id="case-49"></a>
-### Case 49: [ZenMux Free Week Offer](https://x.com/JZiyue_/status/2067114018079412723) (by [@JZiyue_](https://x.com/JZiyue_))
+### Case 49: [ZenMux Free Week Offer](https://x.com/JZiyue_/status/2067114018079412723) (yazan [@JZiyue_](https://x.com/JZiyue_))
 
-**Use this case to find time-boxed free-access windows for GLM-5.2 testing.**
+**GLM-5.2 testi için zaman çerçeveli serbest erişim pencerelerini bulmak için bu durumu kullanın.**
 
-The post advertises GLM-5.2 live on ZenMux with a one-week free window, 1M context, coding and agentic improvements, and same-price-as-5.1 positioning.
+Gönderi, GLM-5.2'yi ZenMux'ta bir haftalık ücretsiz süre, 1 milyon bağlam, kodlama ve ajansal iyileştirmeler ve 5.1 ile aynı fiyat konumlandırmasıyla canlı olarak tanıtıyor.
 
-Tür: Integration | Tarih: 2026-06-17
+Tür: Entegrasyon | Tarih: 2026-06-17
 
 ---
 
 <a id="case-50"></a>
-### Case 50: [crofAI Per-Token Pricing](https://x.com/nahcrof/status/2067166596523765781) (by [@nahcrof](https://x.com/nahcrof))
+### Case 50: [crofAI Token Başına Fiyatlandırma](https://x.com/nahcrof/status/2067166596523765781) (yazan [@nahcrof](https://x.com/nahcrof))
 
-**Use this case to compare third-party provider pricing for GLM-5.2 before selecting a route.**
+**Bir rota seçmeden önce GLM-5.2 için üçüncü taraf sağlayıcı fiyatlarını karşılaştırmak için bu durumu kullanın.**
 
-The post announces GLM-5.2 on crofAI with listed input, output, and cache prices, positioning it as cheap frontier intelligence.
+Gönderi, crofAI üzerinde listelenen girdi, çıktı ve önbellek fiyatlarıyla GLM-5.2'yi ucuz sınır istihbaratı olarak konumlandırıyor.
 
-Tür: Integration | Tarih: 2026-06-17
+Tür: Entegrasyon | Tarih: 2026-06-17
 
 ---
 
 <a id="case-51"></a>
-### Case 51: [API Price Margin Comparison](https://x.com/scaling01/status/2066952626386714906) (by [@scaling01](https://x.com/scaling01))
+### Case 51: [API Price Margin Comparison](https://x.com/scaling01/status/2066952626386714906) (yazan [@scaling01](https://x.com/scaling01))
 
-**Use this case as a market-pricing critique when comparing GLM-5.2 to other frontier labs and open models.**
+**GLM-5.2'yi diğer öncü laboratuvarlar ve açık modellerle karşılaştırırken bu durumu piyasa fiyatlandırma eleştirisi olarak kullanın.**
 
-The author compares GLM-5.2 and other large open models on output-token pricing and uses the comparison to argue that some frontier-lab API margins are high.
+Yazar, çıktı token fiyatlandırmasında GLM-5.2 ve diğer büyük açık modelleri karşılaştırıyor ve bu karşılaştırmayı bazı öncü laboratuvar API marjlarının yüksek olduğunu iddia etmek için kullanıyor.
 
-Tür: Evaluation | Tarih: 2026-06-16
+Tür: Değerlendirme | Tarih: 2026-06-16
 
 ---
 
 <a id="case-64"></a>
-### Case 64: [Basement Local Inference Speed](https://x.com/volatilemrkts/status/2068077319986516031) (tarafından [@volatilemrkts](https://x.com/volatilemrkts))
+### Case 64: [Basement Local Inference Speed](https://x.com/volatilemrkts/status/2068077319986516031) (yazan [@volatilemrkts](https://x.com/volatilemrkts))
 
-**Use this case to estimate local GLM-5.2 inference throughput on large-memory Apple hardware before planning an offline coding setup.**
+**Çevrimdışı kodlama kurulumunu planlamadan önce, geniş bellekli Apple donanımındaki yerel GLM-5.2 çıkarım verimini tahmin etmek için bu durumu kullanın.**
 
-The source reports 44.1 tokens per second on a local high-memory Mac setup and mentions decode-repeat issues with heavy tool calls.
+Kaynak, yerel yüksek bellekli Mac kurulumunda saniyede 44,1 token rapor ediyor ve ağır araç çağrılarıyla ilgili kod çözme tekrarı sorunlarından bahsediyor.
 
 Tür: Demo | Tarih: 2026-06-20
 
 ---
 
 <a id="case-68"></a>
-### Case 68: [Unsloth Quantized Local Deployment](https://x.com/mrblock/status/2067931982760394765) (tarafından [@mrblock](https://x.com/mrblock))
+### Case 68: [Unsloth Quantized Local Deployment](https://x.com/mrblock/status/2067931982760394765) (yazan [@mrblock](https://x.com/mrblock))
 
-**Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware.**
+**Tam model ağırlıkları sıradan yerel donanım için çok büyük olduğunda nicelenmiş GLM-5.2 dağıtım yollarını değerlendirmek için bu durumu kullanın.**
 
-The post describes Unsloth dynamic 2-bit and 1-bit GGUF options, memory reductions, and llama.cpp or Unsloth Studio deployment routes.
+Gönderide Unsloth dinamik 2 bit ve 1 bit GGUF seçenekleri, bellek azaltmaları ve llama.cpp veya Unsloth Studio dağıtım yolları açıklanıyor.
 
-Tür: Tutorial | Tarih: 2026-06-20
+Tür: Öğretici | Tarih: 2026-06-20
 
 ---
 
 <a id="case-88"></a>
-### Case 88: [Two M3 Ultra MLX Distributed Run](https://x.com/ivanfioravanti/status/2068781499206574576) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 88: [Two M3 Ultra MLX Distributed Run](https://x.com/ivanfioravanti/status/2068781499206574576) (yazan [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **Daha büyük bir Apple Silicon kurulumu planlamadan önce GLM-5.2 8-bit serving’in iki M3 Ultra üzerinde dağıtık MLX ile nasıl göründüğünü tahmin etmek için bu vakayı kullanın.**
 
@@ -1070,116 +1070,116 @@ Tür: Demo | Tarih: 2026-06-21
 ---
 
 <a id="case-89"></a>
-### Case 89: [ZCode Multiplier Cut Through September](https://x.com/buildwithhassan/status/2068534544177791376) (by [@buildwithhassan](https://x.com/buildwithhassan))
+### Case 89: [ZCode Multiplier Cut Through September](https://x.com/buildwithhassan/status/2068534544177791376) (yazan [@buildwithhassan](https://x.com/buildwithhassan))
 
 **Hem peak hem off-peak pencerelerde daha düşük ZCode multiplier’larıyla GLM-5.2 plan kredilerini uzatmak için bu vakayı kullanın.**
 
 Gönderi, ZCode’un GLM coding-plan multiplier’ını peak saatlerde 3x’ten 2x’e ve off-peak’te 2x’ten 0,67x’e düşürdüğünü, bu yeni pencerenin Eylül sonuna kadar süreceğini söylüyor. Bu da GLM-5.2 üzerinde kredi uzatmaya çalışanlar için somut bir erişim ve fiyatlandırma notu haline geliyor.
 
-Tür: Integration | Tarih: 2026-06-21
+Tür: Entegrasyon | Tarih: 2026-06-21
 
 ---
 
 
 <a id="limits-caveats-safety-signals"></a>
-## 🧭 Sınırlar, caveat’ler ve güvenlik sinyalleri
+## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
 
 <a id="case-52"></a>
-### Case 52: [No Vision Caveat](https://x.com/sawyerhood/status/2067061246705426923) (by [@sawyerhood](https://x.com/sawyerhood))
+### Case 52: [No Vision Caveat](https://x.com/sawyerhood/status/2067061246705426923) (yazan [@sawyerhood](https://x.com/sawyerhood))
 
-**Use this case to remember that GLM-5.2 may be less useful for workflows requiring native vision capability.**
+**GLM-5.2'nin yerel görme yeteneği gerektiren iş akışları için daha az kullanışlı olabileceğini hatırlamak için bu durumu kullanın.**
 
-The author notes that GLM models lacking vision reduces usefulness, quoting a Design Arena ranking post. This is a practical caveat for multimodal product planning.
+Yazar, Design Arena sıralama gönderisinden alıntı yaparak, vizyondan yoksun GLM modellerinin kullanışlılığı azalttığını belirtiyor. Bu, çok modelli ürün planlaması için pratik bir uyarıdır.
 
-Tür: Limit | Tarih: 2026-06-17
+Tür: Sınır | Tarih: 2026-06-17
 
 ---
 
 <a id="case-53"></a>
-### Case 53: [Real-World Agent Gap Caveat](https://x.com/ml_angelopoulos/status/2067013545431269405) (by [@ml_angelopoulos](https://x.com/ml_angelopoulos))
+### Case 53: [Gerçek Dünyadaki Ajan Boşluğu Uyarısı](https://x.com/ml_angelopoulos/status/2067013545431269405) (yazan [@ml_angelopoulos](https://x.com/ml_angelopoulos))
 
-**Use this case to avoid over-reading benchmark wins as proof that GLM-5.2 matches the best proprietary models on all deployed agentic tasks.**
+**GLM-5.2'nin tüm dağıtılan aracı görevlerde en iyi özel modellerle eşleştiğinin kanıtı olarak kıyaslama kazanımlarını aşırı okumaktan kaçınmak için bu durumu kullanın.**
 
-The author says GLM-5.2 is impressive but not yet close to Fable-level or Opus 4.8 thinking-level performance on the general distribution of real-world agentic tasks, based on an Agent Arena methodology.
+Yazar, GLM-5.2'nin etkileyici olduğunu ancak Agent Arena metodolojisine dayalı olarak gerçek dünyadaki aracılık görevlerinin genel dağıtımında henüz Fable düzeyinde veya Opus 4.8 düşünme düzeyinde performansa yakın olmadığını söylüyor.
 
-Tür: Limit | Tarih: 2026-06-16
+Tür: Sınır | Tarih: 2026-06-16
 
 ---
 
 <a id="case-54"></a>
-### Case 54: [Safety Guardrail Concern](https://x.com/VittoStack/status/2066984051840606436) (by [@VittoStack](https://x.com/VittoStack))
+### Case 54: [Safety Guardrail Concern](https://x.com/VittoStack/status/2066984051840606436) (yazan [@VittoStack](https://x.com/VittoStack))
 
-**Use this case as a reminder to run safety evaluations before deploying GLM-5.2 in sensitive domains.**
+**Bu durumu, GLM-5.2'yi hassas alanlara dağıtmadan önce güvenlik değerlendirmelerini çalıştırmayı hatırlatmak için kullanın.**
 
-The post reports a harmful-content refusal failure in a comparative safety test. The repository records only the safety signal, not the unsafe details, and treats this as a deployment-risk caveat.
+Gönderi, karşılaştırmalı bir güvenlik testinde zararlı içerik reddinin başarısız olduğunu bildiriyor. Depo, güvenli olmayan ayrıntıları değil yalnızca güvenlik sinyalini kaydeder ve bunu bir dağıtım riski uyarısı olarak ele alır.
 
-Tür: Limit | Tarih: 2026-06-16
+Tür: Sınır | Tarih: 2026-06-16
 
 ---
 
 <a id="case-55"></a>
-### Case 55: [Benchmark Methodology Critique](https://x.com/josepha_mayo/status/2066951013337112661) (by [@josepha_mayo](https://x.com/josepha_mayo))
+### Case 55: [Karşılaştırmalı Metodoloji Eleştirisi](https://x.com/josepha_mayo/status/2066951013337112661) (yazan [@josepha_mayo](https://x.com/josepha_mayo))
 
-**Use this case to question benchmark methodology even when the headline result favors GLM-5.2.**
+**Başlık sonucu GLM-5.2 lehine olsa bile kıyaslama metodolojisini sorgulamak için bu durumu kullanın.**
 
-The author criticizes Design Arena methodology while still acknowledging GLM-5.2 as strong, making it useful for readers who want benchmark skepticism alongside leaderboard claims.
+Yazar, GLM-5.2'nin hala güçlü olduğunu kabul ederken Design Arena metodolojisini eleştiriyor, bu da onu liderlik tablosu iddialarının yanı sıra kıyaslama şüphesi isteyen okuyucular için faydalı kılıyor.
 
-Tür: Limit | Tarih: 2026-06-16
+Tür: Sınır | Tarih: 2026-06-16
 
 ---
 
 <a id="case-56"></a>
-### Case 56: [Peak-Time Latency Concern](https://x.com/k_matsumaru/status/2067023197166559621) (by [@k_matsumaru](https://x.com/k_matsumaru))
+### Case 56: [Peak-Time Latency Concern](https://x.com/k_matsumaru/status/2067023197166559621) (yazan [@k_matsumaru](https://x.com/k_matsumaru))
 
-**Use this case to test provider latency before switching coding plans or routing Claude Code-style workflows to GLM-5.2.**
+**Kodlama planlarını değiştirmeden veya Claude Code tarzı iş akışlarını GLM-5.2'ye yönlendirmeden önce sağlayıcı gecikmesini test etmek için bu durumu kullanın.**
 
-The Japanese post considers using GLM-5.2 inside a coding plan but notes prior concern about peak-time response latency.
+Japon gönderisi, GLM-5.2'yi bir kodlama planı içinde kullanmayı düşünüyor ancak yoğun zamandaki yanıt gecikmesiyle ilgili öncelikli endişelere dikkat çekiyor.
 
-Tür: Limit | Tarih: 2026-06-16
+Tür: Sınır | Tarih: 2026-06-16
 
 ---
 
 <a id="case-57"></a>
-### Case 57: [FutureSim Non-Improvement Result](https://x.com/nikhilchandak29/status/2066970561511657913) (by [@nikhilchandak29](https://x.com/nikhilchandak29))
+### Case 57: [FutureSim Non-Improvement Result](https://x.com/nikhilchandak29/status/2066970561511657913) (yazan [@nikhilchandak29](https://x.com/nikhilchandak29))
 
-**Use this case to check whether coding gains generalize to non-coding domains before broad deployment.**
+**Geniş dağıtımdan önce kodlama kazanımlarının kodlamayan alanlara genellenip genelleştirilmediğini kontrol etmek için bu durumu kullanın.**
 
-The post reports GLM-5.2 as no better than GLM-5.1 on FutureSim and uses the result to caution that coding improvements may not generalize equally across all domains.
+Gönderi, FutureSim'de GLM-5.2'nin GLM-5.1'den daha iyi olmadığını bildiriyor ve bu sonucu, kodlama iyileştirmelerinin tüm alanlarda eşit şekilde genellenemeyeceği konusunda uyarmak için kullanıyor.
 
-Tür: Limit | Tarih: 2026-06-16
+Tür: Sınır | Tarih: 2026-06-16
 
 ---
 
 <a id="case-58"></a>
-### Case 58: [Launch Readiness Critique](https://x.com/bridgemindai/status/2065770088821600512) (by [@bridgemindai](https://x.com/bridgemindai))
+### Case 58: [Launch Readiness Critique](https://x.com/bridgemindai/status/2065770088821600512) (yazan [@bridgemindai](https://x.com/bridgemindai))
 
-**Use this case to separate model capability from launch execution, documentation, and API readiness.**
+**Model yeteneğini başlatma yürütmesinden, dokümantasyonundan ve API hazırlığından ayırmak için bu durumu kullanın.**
 
-The post calls the early release messy because benchmarks and API access were not yet available at the time, making it relevant for launch-readiness review rather than model-quality judgment.
+Gönderi, erken sürümün karmaşık olduğunu söylüyor çünkü karşılaştırmalar ve API erişimi o sırada henüz mevcut değildi, bu da onu model kalitesi değerlendirmesinden ziyade lansmana hazırlık incelemesi için uygun hale getiriyor.
 
-Tür: Limit | Tarih: 2026-06-13
+Tür: Sınır | Tarih: 2026-06-13
 
 ---
 
 <a id="case-59"></a>
-### Case 59: [Coding Plan Price Increase](https://x.com/bridgemindai/status/2065799843658793092) (by [@bridgemindai](https://x.com/bridgemindai))
+### Case 59: [Kodlama Planı Fiyat Artışı](https://x.com/bridgemindai/status/2065799843658793092) (yazan [@bridgemindai](https://x.com/bridgemindai))
 
-**Use this case to verify plan pricing before recommending GLM-5.2 as a low-cost replacement.**
+**Düşük maliyetli bir alternatif olarak GLM-5.2'yi önermeden önce plan fiyatlandırmasını doğrulamak için bu durumu kullanın.**
 
-The author reports paying $65 per month for a GLM Coding Pro plan and says the plan had nearly doubled since their last subscription. Use it as a reminder to check current pricing.
+Yazar, GLM Coding Pro planı için ayda 65 dolar ödediğini bildiriyor ve son aboneliklerinden bu yana planın neredeyse iki katına çıktığını söylüyor. Mevcut fiyatları kontrol etmek için bunu bir hatırlatma olarak kullanın.
 
-Tür: Limit | Tarih: 2026-06-13
+Tür: Sınır | Tarih: 2026-06-13
 
 ---
 
 <a id="case-67"></a>
-### Case 67: [Short Parallel Work Versus Long Agent Runs](https://x.com/thekuchh/status/2068010332501479865) (tarafından [@thekuchh](https://x.com/thekuchh))
+### Case 67: [Kısa Paralel Çalışmaya Karşı Uzun Aracı Çalıştırmaları](https://x.com/thekuchh/status/2068010332501479865) (yazan [@thekuchh](https://x.com/thekuchh))
 
-**Use this case to route GLM-5.2 toward short bounded coding tasks while reserving stronger models for deeper multi-hour agent runs.**
+**Bu durumu, GLM-5.2'yi kısa sınırlı kodlama görevlerine yönlendirmek ve aynı zamanda daha uzun, çok saatlik aracı çalıştırmaları için daha güçlü modeller ayırmak için kullanın.**
 
-The post reports a practical split: GLM-5.2 works well for short parallel tasks but drifted on a longer agent run.
+Gönderi pratik bir bölünmeyi bildiriyor: GLM-5.2 kısa paralel görevler için iyi çalışıyor ancak daha uzun bir ajan çalışmasında sürükleniyor.
 
-Tür: Limit | Tarih: 2026-06-20
+Tür: Sınır | Tarih: 2026-06-20
 
 ---
 
@@ -1190,7 +1190,7 @@ Tür: Limit | Tarih: 2026-06-20
 
 Yazar, GLM-5.2’nin koda Çin siyasi sansürü enjekte etmediğini ve ayrıca Vietnam Savaşı hakkındaki hatalı bir ABD yanlılığı iddiasını düzeltirken görüş niteliğindeki örnekleri değiştirmediğini söylüyor. Bu da onu politik olarak hassas coding ve olgusallık davranışını test etmek için somut, herkese açık bir örnek yapıyor.
 
-Tür: Limit | Tarih: 2026-06-20
+Tür: Sınır | Tarih: 2026-06-20
 
 ---
 
@@ -1201,7 +1201,7 @@ Tür: Limit | Tarih: 2026-06-20
 
 Yazar, 11 induction problemi çalıştırdığını ve yalnızca dört tamamlanma, iki doğru cevap, saatler süren çalışma süreleri ve görünen token sayısına göre çok daha yüksek görünen ücretler rapor ettiğini belirtiyor. Bu, yalnızca benchmark skoru değil, reasoning verimliliği ve faturalama davranışı açısından da somut bir uyarı.
 
-Tür: Limit | Tarih: 2026-06-20
+Tür: Sınır | Tarih: 2026-06-20
 
 ---
 
@@ -1209,7 +1209,7 @@ Tür: Limit | Tarih: 2026-06-20
 <a id="acknowledge"></a>
 ## 🙏 Teşekkür
 
-This repository was inspired by public creators, developers, benchmark teams, providers, and communities who shared real GLM-5.2 usage evidence.
+Bu depo, gerçek GLM-5.2 kullanım kanıtlarını paylaşan herkese açık içerik oluşturuculardan, geliştiricilerden, kıyaslama ekiplerinden, sağlayıcılardan ve topluluklardan ilham almıştır.
 
 Burada yer alan yüksek sinyalli kaynaklara ve üreticilere teşekkürler: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
 

@@ -6,6 +6,13 @@ The update automation must append one entry for every scheduled run, including n
 
 ## 2026-06-22
 
+- Status: TRANSLATION FIX
+- Scope: completed historical localization cleanup across all non-English README files.
+- Updated files: `README_de.md`, `README_es.md`, `README_fr.md`, `README_ja.md`, `README_ko.md`, `README_pt.md`, `README_ru.md`, `README_tr.md`, `README_zh-CN.md`, `README_zh-TW.md`
+- Fixed: untranslated historical case summaries, case body text, author labels, menu case tables, localized type labels, and acknowledgement text.
+- Preserved: English source `README.md`, code blocks, API examples, URLs, anchors, and `### Case N:` heading format.
+- Verifier: PASS, 11 README files, English case count 89
+
 - Status: UPDATED
 - Run artifact: `.codex/usecase-update-loop/runs/20260622T000239Z/`
 - Raw collected: 136
