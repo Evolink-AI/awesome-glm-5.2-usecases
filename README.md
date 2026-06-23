@@ -37,7 +37,7 @@ Each case title links to its public source, and each author handle links to the 
 
 ## 📊 Overview
 
-- **89 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
+- **99 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
 - Covers Benchmarks & Frontier Evaluation, Coding Agents & Long-Context Workflows, Hands-On Demos & Showcase Builds, Provider & Tool Integrations, Cost, Pricing & Local Deployment, Limits, Caveats & Safety Signals.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Use this repo to find practical workflows, compare strengths and limits, discover provider routes, and follow real hands-on experiments.
@@ -77,11 +77,11 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Section | Cases |
 |---|---|
-| [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76 |
-| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80 |
-| [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82 |
-| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87 |
-| [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89 |
+| [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94 |
+| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91 |
+| [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99 |
+| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96 |
+| [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98 |
 | [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75 |
 | [🙏 Acknowledge](#acknowledge) | Credits and correction policy |
 
@@ -105,6 +105,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [Case 70: DeepSWE Max-Effort Open-Source Lead](#case-70) | Use this case to track GLM-5.2 on DeepSWE at max effort, where the posted leaderboard puts it first among open models with a 44% pass@1 score. | Benchmark |
 | [Case 72: LLM Debate Benchmark Runner-Up](#case-72) | Use this case to evaluate GLM-5.2 beyond coding tasks on adversarial multi-turn debate, where the max-reasoning variant placed second behind Claude models. | Benchmark |
 | [Case 76: AA-Omniscience Hallucination Rate](#case-76) | Use this case to compare GLM-5.2 on uncertainty handling, where the posted AA-Omniscience result shows a lower hallucination rate than several other frontier models. | Evaluation |
+| [Case 90: GDPval-AA Agentic Work Index](#case-90) | Use this case to compare GLM-5.2 on long-horizon knowledge work rather than coding-only leaderboards. | Evaluation |
+| [Case 94: Game Dev Arena Runner-Up](#case-94) | Use this case to judge GLM-5.2 on game-building quality, where the model reached second place on Game Dev Arena and became the top open-weight lab in that ranking. | Evaluation |
 
 ### [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows)
 
@@ -125,6 +127,7 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [Case 66: DeepAgents Code Open Harness Trial](#case-66) | Use this case to try GLM-5.2 with an open coding-agent harness and compare the model under a reproducible agent shell. | Demo |
 | [Case 77: Production Marketing Agent Stack Routing](#case-77) | Use this case to route GLM-5.2 into production agent workflows that value structure, speed, and self-hosting, while keeping stronger closed models for ambiguous judgment calls. | Evaluation |
 | [Case 80: M3 Ultra Pokemon Red Goal Run](#case-80) | Use this case to judge GLM-5.2 on a long-horizon local coding-agent run, where the model spent roughly half a day trying to recreate Pokemon Red in HTML on an M3 Ultra box. | Demo |
+| [Case 91: Cline Repo Bug Fix Showdown](#case-91) | Use this case to compare GLM-5.2 and Opus 4.8 on a real repository bug fix, where GLM spent more tokens but produced the cheaper and cleaner final patch. | Evaluation |
 
 ### [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds)
 
@@ -142,6 +145,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [Case 78: OpenCode Go One-Shot Example Set](#case-78) | Use this case to benchmark GLM-5.2 on quick one-shot builds inside OpenCode Go before committing it to more open-ended agent loops. | Demo |
 | [Case 81: Space Invaders One-Prompt Build](#case-81) | Use this case to test GLM-5.2 on one-prompt game creation, then see how a few extra passes handle asset swaps and simple polish. | Demo |
 | [Case 82: OpenCode Recovery Lab One-Shot](#case-82) | Use this case to prototype interactive agent-failure simulations quickly, because the author reports getting a working recovery lab in one shot for about $3.50. | Demo |
+| [Case 92: Open Design Reference URL Rebuild](#case-92) | Use this case to test GLM-5.2 on reference-driven web recreation, where one prompt plus a source URL reproduced a site with near-pixel-level fidelity. | Demo |
+| [Case 99: Trader Desk Cost-Quality Test](#case-99) | Use this case to compare GLM-5.2 on full-stack UI builds, where it came close to the most polished trading-desk output while costing only a small fraction of the top result. | Evaluation |
 
 ### [🔌 Provider & Tool Integrations](#provider-tool-integrations)
 
@@ -169,6 +174,9 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [Case 85: OpenCode High/Max Reasoning Variants](#case-85) | Use this case to access GLM-5.2 High and Max reasoning variants inside OpenCode while also picking up more reliable step-limit handling. | Integration |
 | [Case 86: Z.ai Coding Endpoint Selection](#case-86) | Use this case to route GLM-5.2 coding-plan traffic to the coding-optimized Z.ai endpoint instead of the generic API path. | Tutorial |
 | [Case 87: ZenMux Free GLM-5.2 API Setup](#case-87) | Use this case to get a free GLM-5.2 API key and base URL, then plug it into Claude, Cursor, Hermes, and similar tools. | Tutorial |
+| [Case 93: Noumena ncode GLM Default](#case-93) | Use this case to route GLM-5.2 into ncode and Noumena-style agent environments with separate standard and 1M-context endpoints plus default-model support. | Integration |
+| [Case 95: Claude Code Through Baseten](#case-95) | Use this case to run GLM-5.2 inside Claude Code through a Baseten key, custom base URL, and model remapping in `~/.claude/settings.json`. | Tutorial |
+| [Case 96: Deepsec Pi Agent Default](#case-96) | Use this case to test GLM-5.2 in a security harness, where `deepsec` made it the default model for the Pi agent and reported competitive eval results. | Integration |
 
 ### [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment)
 
@@ -187,6 +195,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | [Case 68: Unsloth Quantized Local Deployment](#case-68) | Use this case to evaluate quantized GLM-5.2 deployment paths when full model weights are too large for ordinary local hardware. | Tutorial |
 | [Case 88: Two M3 Ultra MLX Distributed Run](#case-88) | Use this case to estimate what GLM-5.2 8-bit serving looks like across two M3 Ultra machines before building a larger Apple-silicon setup. | Demo |
 | [Case 89: ZCode Multiplier Cut Through September](#case-89) | Use this case to stretch GLM-5.2 plan credits with lower ZCode multipliers during both peak and off-peak windows. | Integration |
+| [Case 97: RTX PRO 6000 Local Throughput](#case-97) | Use this case to size a high-end local GLM-5.2 workstation, where a two-Blackwell desktop held double-digit decode speed on a 4-bit quantized build. | Demo |
+| [Case 98: Mac Studio API ROI Reality Check](#case-98) | Use this case to sanity-check whether a Mac Studio purchase makes sense for local GLM-5.2 inference, because the posted payback math strongly favors API or plan access for most users. | Evaluation |
 
 ### [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals)
 
@@ -383,6 +393,30 @@ Type: Evaluation | Date: 2026-06-20
 ---
 
 
+
+<a id="case-90"></a>
+### Case 90: [GDPval-AA Agentic Work Index](https://x.com/ArtificialAnlys/status/2069121548670406947) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**Use this case to compare GLM-5.2 on long-horizon knowledge work rather than coding-only leaderboards.**
+
+Artificial Analysis reports GLM-5.2 at 1524 Elo on GDPval-AA, #3 overall behind Claude Fable 5 and Opus 4.8, and slightly ahead of GPT-5.5 xhigh at 1509. It is the top open-weights model by a wide margin, and the post says the benchmark averaged about 31 turns per task across 1,999 matches.
+
+Type: Evaluation | Date: 2026-06-22
+
+---
+
+<a id="case-94"></a>
+### Case 94: [Game Dev Arena Runner-Up](https://x.com/Designarena/status/2069166634976371084) (by [@Designarena](https://x.com/Designarena))
+
+**Use this case to judge GLM-5.2 on game-building quality, where the model reached second place on Game Dev Arena and became the top open-weight lab in that ranking.**
+
+Design Arena reported GLM-5.2 at 1368 Elo on Game Dev Arena, a 29-point jump and six-rank improvement over GLM-5.1. The post places it in the same performance band as Claude Fable 5 and says it ranked second overall, ahead of OpenAI and behind only Anthropic at the lab level.
+
+Type: Evaluation | Date: 2026-06-22
+
+---
+
+
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Coding Agents & Long-Context Workflows
 
@@ -551,6 +585,17 @@ Type: Demo | Date: 2026-06-21
 
 ---
 
+<a id="case-91"></a>
+### Case 91: [Cline Repo Bug Fix Showdown](https://x.com/cline/status/2069171146994729078) (by [@cline](https://x.com/cline))
+
+**Use this case to compare GLM-5.2 and Opus 4.8 on a real repository bug fix, where GLM spent more tokens but produced the cheaper and cleaner final patch.**
+
+Cline tested both models on the same bug from the Cline repo under the same harness and tools. The post says GLM used about 1.1M tokens versus 660K for Opus, cost $0.41 versus $0.81, took 4.7 minutes and 28 tool calls versus 1.6 minutes and 12 tool calls, and finished with dead-code cleanup plus a successful production build while Opus left type errors that still passed tests.
+
+Type: Evaluation | Date: 2026-06-22
+
+---
+
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Hands-On Demos & Showcase Builds
@@ -684,6 +729,28 @@ Type: Demo | Date: 2026-06-21
 The author built a fully interactive recovery lab with OpenCode and GLM-5.2 after feeding the model a 4,000-word analysis and the Agents SDK repository. The post reports a 176k-token run, a one-shot result, and an end-to-end cost around $3.50 before polish.
 
 Type: Demo | Date: 2026-06-21
+
+---
+
+<a id="case-92"></a>
+### Case 92: [Open Design Reference URL Rebuild](https://x.com/OpenDesignHQ/status/2069046584134778995) (by [@OpenDesignHQ](https://x.com/OpenDesignHQ))
+
+**Use this case to test GLM-5.2 on reference-driven web recreation, where one prompt plus a source URL reproduced a site with near-pixel-level fidelity.**
+
+Open Design says it tested GLM-5.2 in its built-in AMR using just a reference URL and one simple prompt, and the model recreated the website almost perfectly in the demo. Treat it as a hands-on proof of reference-based UI generation, not a full benchmark.
+
+Type: Demo | Date: 2026-06-22
+
+---
+
+<a id="case-99"></a>
+### Case 99: [Trader Desk Cost-Quality Test](https://x.com/atomic_chat_hq/status/2069171121044513273) (by [@atomic_chat_hq](https://x.com/atomic_chat_hq))
+
+**Use this case to compare GLM-5.2 on full-stack UI builds, where it came close to the most polished trading-desk output while costing only a small fraction of the top result.**
+
+Atomic Chat compared four models on the same live Trader Desk build prompt with frontend, backend, eight-symbol market data, and a custom dark-theme UI. The post reports GLM-5.2 at 13,677 tokens and $0.03, versus Fugu Ultra at 22,225 tokens and $0.51, and says GLM produced a similarly complete multi-panel interface with live data at much lower cost.
+
+Type: Evaluation | Date: 2026-06-22
 
 ---
 
@@ -933,6 +1000,39 @@ Type: Tutorial | Date: 2026-06-21
 
 ---
 
+<a id="case-93"></a>
+### Case 93: [Noumena ncode GLM Default](https://x.com/_xjdr/status/2069030608727408993) (by [@_xjdr](https://x.com/_xjdr))
+
+**Use this case to route GLM-5.2 into ncode and Noumena-style agent environments with separate standard and 1M-context endpoints plus default-model support.**
+
+The Noumena update says the team added first-class GLM support across tool calling, function parsing, app routing, and reasoning traces, then split the API into `glm-5.2` and `glm-5.2[1m]` endpoints to control TTFT under heavy 1M-context traffic. It also says fresh ncode builds switched their default opus-class model from Kimi to GLM after positive usage feedback.
+
+Type: Integration | Date: 2026-06-22
+
+---
+
+<a id="case-95"></a>
+### Case 95: [Claude Code Through Baseten](https://x.com/thealexker/status/2069163621469335757) (by [@thealexker](https://x.com/thealexker))
+
+**Use this case to run GLM-5.2 inside Claude Code through a Baseten key, custom base URL, and model remapping in `~/.claude/settings.json`.**
+
+The tutorial walks through installing Claude Code, creating a Baseten account, grabbing an API key, and editing `~/.claude/settings.json` so all three Claude model tiers point to `zai-org/GLM-5.2` through custom Anthropic environment variables. It is a concrete drop-in configuration pattern for using GLM-5.2 in the Claude Code client.
+
+Type: Tutorial | Date: 2026-06-22
+
+---
+
+<a id="case-96"></a>
+### Case 96: [Deepsec Pi Agent Default](https://x.com/cramforce/status/2069057402524082622) (by [@cramforce](https://x.com/cramforce))
+
+**Use this case to test GLM-5.2 in a security harness, where `deepsec` made it the default model for the Pi agent and reported competitive eval results.**
+
+The post announces `deepsec` support for `@badlogicgames` Pi agent with GLM-5.2 as the default model and gives a runnable command, `pnpm deepsec process --agent pi`. It also says the author ran the Deepsec evals and found the result competitive with other frontier models, making this a concrete security-oriented integration surface.
+
+Type: Integration | Date: 2026-06-22
+
+---
+
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Cost, Pricing & Local Deployment
@@ -1080,6 +1180,28 @@ Type: Integration | Date: 2026-06-21
 
 ---
 
+<a id="case-97"></a>
+### Case 97: [RTX PRO 6000 Local Throughput](https://x.com/CardilloSamuel/status/2068954298596380743) (by [@CardilloSamuel](https://x.com/CardilloSamuel))
+
+**Use this case to size a high-end local GLM-5.2 workstation, where a two-Blackwell desktop held double-digit decode speed on a 4-bit quantized build.**
+
+CardilloSamuel reports running GLM-5.2 UD-Q4_K_XL on 2x RTX PRO 6000 Blackwells plus a Threadripper PRO 9995WX and 1TB DDR5. The post cites about 64 tok/s prefill, 13-15 tok/s decode, a 69.7% Aider Polyglot score within two points of BF16, and notes system RAM bandwidth as the bottleneck while leaving a mismatched 5090 out of the split.
+
+Type: Demo | Date: 2026-06-22
+
+---
+
+<a id="case-98"></a>
+### Case 98: [Mac Studio API ROI Reality Check](https://x.com/karminski3/status/2068974488973447524) (by [@karminski3](https://x.com/karminski3))
+
+**Use this case to sanity-check whether a Mac Studio purchase makes sense for local GLM-5.2 inference, because the posted payback math strongly favors API or plan access for most users.**
+
+The post estimates that a RMB 32,999 Mac Studio roughly equals 1,178 million GLM-5.2 API tokens at the cited pricing, and argues the payback period is about 209 days even for a much smaller Qwen setup. It then says a 512GB Mac Studio running quantized GLM-5.2 around 17 tok/s could take about seven years to break even, so local ownership only makes sense if you already have the hardware or can use idle time.
+
+Type: Evaluation | Date: 2026-06-22
+
+---
+
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Limits, Caveats & Safety Signals
@@ -1205,13 +1327,15 @@ Type: Limit | Date: 2026-06-20
 
 ---
 
-
 <a id="acknowledge"></a>
 ## 🙏 Acknowledge
 
 This repository was inspired by the creators, developers, benchmark teams, providers, and communities who shared real GLM-5.2 usage evidence publicly.
 
 Thanks to the high-signal source creators represented here: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
+
+
+New creators added in this run: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3).
 
 *We cannot guarantee that every case is attributed to the original creator. If anything needs to be corrected, please contact us and we will update it.*
 

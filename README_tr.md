@@ -39,7 +39,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 - Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **89 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
-- Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
+- Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
 
 > [!NOTE]
@@ -77,11 +77,11 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80 |
-| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76, 90, 94 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91 |
+| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82, 92, 99 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98 |
 | [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
@@ -105,6 +105,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [DeepSWE Max-Effort Open-Source Lead](#case-70) | GLM-5.2’yi DeepSWE’de max effort modunda takip etmek için kullanın; paylaşılan leaderboard, modeli %44 pass@1 ile açık modeller arasında birinci gösteriyor. | Kıyaslama |
 | [LLM Debate Benchmark Runner-Up](#case-72) | GLM-5.2’yi kodlama dışındaki görevlerde, adversarial çok turlu tartışma benchmark’ında max-reasoning varyantının Claude modellerinin hemen arkasında ikinci olduğu bağlamda değerlendirmek için kullanın. | Kıyaslama |
 | [AA-Omniscience Hallucination Rate](#case-76) | GLM-5.2’yi belirsizlik yönetimi açısından karşılaştırmak için kullanın; paylaşılan AA-Omniscience sonucu, bazı diğer frontier modellere göre daha düşük halüsinasyon oranı gösteriyor. | Değerlendirme |
+| [Case 90: GDPval-AA Agentic Work Index](#case-90) | GLM-5.2’yi yalnızca coding leaderboard’ları yerine uzun ufuklu bilgi işi üzerinde karşılaştırmak için bu vakayı kullanın. | Değerlendirme |
+| [Case 94: Game Dev Arena Runner-Up](#case-94) | GLM-5.2’yi oyun üretim kalitesi açısından değerlendirmek için bu vakayı kullanın; model Game Dev Arena’da ikinci sıraya çıkıp bu sıralamada en iyi open-weight lab oldu. | Değerlendirme |
 
 ### [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows)
 
@@ -125,6 +127,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [DeepAgents Code Open Harness Trial](#case-66) | GLM-5.2'yi açık kodlama ajanı donanımıyla denemek ve modeli tekrarlanabilir bir ajan kabuğu altında karşılaştırmak için bu durumu kullanın. | Demo |
 | [Production Marketing Agent Stack Routing](#case-77) | GLM-5.2’yi yapı, hız ve self-hosting değer veren production agent workflow’larına yönlendirmek için kullanın; belirsiz yargı gerektiren durumlarda daha güçlü kapalı modelleri saklı tutun. | Değerlendirme |
 | [M3 Ultra Pokemon Red Goal Run](#case-80) | GLM-5.2’yi uzun süreli yerel coding agent çalıştırmasında değerlendirmek için bu vakayı kullanın; modelin bir M3 Ultra makinede yaklaşık yarım gün boyunca Pokemon Red’i HTML olarak yeniden kurmaya çalıştığı bir örneği izleyin. | Demo |
+| [Case 91: Cline Repo Bug Fix Showdown](#case-91) | GLM-5.2 ile Opus 4.8’i gerçek bir repository bug fix üzerinde karşılaştırmak için bu vakayı kullanın; GLM daha fazla token harcasa da daha ucuz ve daha temiz final patch üretti. | Değerlendirme |
 
 ### [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds)
 
@@ -142,6 +145,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [OpenCode Go One-Shot Example Set](#case-78) | GLM-5.2’yi OpenCode Go içinde hızlı one-shot build’lerde benchmark etmek için kullanın; daha açık uçlu agent döngülerine bağlamadan önce kısa testler yapın. | Demo |
 | [Space Invaders One-Prompt Build](#case-81) | GLM-5.2’yi tek istemle oyun üretiminde sınamak, ardından birkaç ek turda asset değişimleri ve hafif polish’in nasıl ilerlediğini görmek için bu vakayı kullanın. | Demo |
 | [OpenCode Recovery Lab One-Shot](#case-82) | Etkileşimli agent-failure simülasyonlarını hızlıca prototiplemek için bu vakayı kullanın; yazar yaklaşık 3,50 dolara çalışan bir recovery lab’i tek atışta kurduğunu bildiriyor. | Demo |
+| [Case 92: Open Design Reference URL Rebuild](#case-92) | GLM-5.2’yi referans odaklı web yeniden oluşturma için test etmek üzere bu vakayı kullanın; tek bir prompt ve kaynak URL ile bir site neredeyse piksel düzeyinde sadakatle yeniden üretildi. | Demo |
+| [Case 99: Trader Desk Cost-Quality Test](#case-99) | GLM-5.2’yi full-stack UI build’lerde karşılaştırmak için bu vakayı kullanın; en cilalı trading-desk çıktısına çok yaklaşırken maliyeti en üst sonucun yalnızca küçük bir kısmı oldu. | Değerlendirme |
 
 ### [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations)
 
@@ -169,6 +174,9 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [OpenCode High/Max Reasoning Variants](#case-85) | OpenCode içinde GLM-5.2 High ve Max reasoning varyantlarına erişmek, aynı zamanda daha güvenilir step-limit davranışı kazanmak için bu vakayı kullanın. | Entegrasyon |
 | [Z.ai Coding Endpoint Selection](#case-86) | GLM-5.2 coding-plan trafiğini genel API yolu yerine coding’e optimize edilmiş Z.ai endpoint’ine yönlendirmek için bu vakayı kullanın. | Öğretici |
 | [ZenMux Free GLM-5.2 API Setup](#case-87) | Ücretsiz GLM-5.2 API key ve base URL alıp bunu Claude, Cursor, Hermes ve benzeri araçlara takmak için bu vakayı kullanın. | Öğretici |
+| [Case 93: Noumena ncode GLM Default](#case-93) | GLM-5.2’yi ncode ve Noumena tarzı agent ortamlarına yönlendirmek için bu vakayı kullanın; ayrı standart ve 1M-context endpoint’leri ile default model desteği sunuluyor. | Entegrasyon |
+| [Case 95: Claude Code Through Baseten](#case-95) | GLM-5.2’yi Claude Code içinde bir Baseten key, özel base URL ve `~/.claude/settings.json` içindeki model remapping ile çalıştırmak için bu vakayı kullanın. | Öğretici |
+| [Case 96: Deepsec Pi Agent Default](#case-96) | GLM-5.2’yi bir security harness içinde test etmek için bu vakayı kullanın; `deepsec`, modeli Pi agent için varsayılan yaptı ve rekabetçi eval sonuçları bildirdi. | Entegrasyon |
 
 ### [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment)
 
@@ -187,6 +195,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Unsloth Quantized Local Deployment](#case-68) | Tam model ağırlıkları sıradan yerel donanım için çok büyük olduğunda nicelenmiş GLM-5.2 dağıtım yollarını değerlendirmek için bu durumu kullanın. | Öğretici |
 | [Two M3 Ultra MLX Distributed Run](#case-88) | Daha büyük bir Apple Silicon kurulumu planlamadan önce GLM-5.2 8-bit serving’in iki M3 Ultra üzerinde dağıtık MLX ile nasıl göründüğünü tahmin etmek için bu vakayı kullanın. | Demo |
 | [ZCode Multiplier Cut Through September](#case-89) | Hem peak hem off-peak pencerelerde daha düşük ZCode multiplier’larıyla GLM-5.2 plan kredilerini uzatmak için bu vakayı kullanın. | Entegrasyon |
+| [Case 97: RTX PRO 6000 Local Throughput](#case-97) | Üst düzey bir yerel GLM-5.2 workstation boyutlandırmak için bu vakayı kullanın; iki Blackwell’li bir masaüstü, 4-bit quantized build üzerinde çift haneli decode hızı korudu. | Demo |
+| [Case 98: Mac Studio API ROI Reality Check](#case-98) | Yerel GLM-5.2 inference için Mac Studio satın almanın mantıklı olup olmadığını sağduyuyla kontrol etmek için bu vakayı kullanın; çünkü paylaşılan geri ödeme hesabı çoğu kullanıcı için açık biçimde API veya plan erişimini daha mantıklı gösteriyor. | Değerlendirme |
 
 ### [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals)
 
@@ -383,6 +393,28 @@ Tür: Değerlendirme | Tarih: 2026-06-20
 ---
 
 
+<a id="case-90"></a>
+### Case 90: [GDPval-AA Agentic Work Index](https://x.com/ArtificialAnlys/status/2069121548670406947) (yazan [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**GLM-5.2’yi yalnızca coding leaderboard’ları yerine uzun ufuklu bilgi işi üzerinde karşılaştırmak için bu vakayı kullanın.**
+
+Artificial Analysis, GLM-5.2’nin GDPval-AA üzerinde 1524 Elo aldığını, Claude Fable 5 ve Opus 4.8’in ardından genel sıralamada 3. olduğunu ve 1509 alan GPT-5.5 xhigh’ın biraz önünde yer aldığını bildiriyor. Açık ağırlıklı modeller arasında açık ara en üst model olduğu, ayrıca gönderiye göre benchmark’ın 1.999 maç boyunca görev başına ortalama yaklaşık 31 turn içerdiği söyleniyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-22
+
+---
+
+<a id="case-94"></a>
+### Case 94: [Game Dev Arena Runner-Up](https://x.com/Designarena/status/2069166634976371084) (yazan [@Designarena](https://x.com/Designarena))
+
+**GLM-5.2’yi oyun üretim kalitesi açısından değerlendirmek için bu vakayı kullanın; model Game Dev Arena’da ikinci sıraya çıkıp bu sıralamada en iyi open-weight lab oldu.**
+
+Design Arena, GLM-5.2’nin Game Dev Arena’da 1368 Elo aldığını, bunun GLM-5.1’e göre 29 puanlık artış ve altı sıra yükseliş anlamına geldiğini bildirdi. Gönderi modeli Claude Fable 5 ile aynı performans bandına koyuyor ve genel sıralamada ikinci olduğunu, lab düzeyinde OpenAI’ın önünde ve yalnızca Anthropic’in arkasında yer aldığını söylüyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-22
+
+---
+
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Kod ajanları ve uzun bağlamlı iş akışları
 
@@ -552,6 +584,17 @@ Tür: Demo | Tarih: 2026-06-21
 ---
 
 
+<a id="case-91"></a>
+### Case 91: [Cline Repo Bug Fix Showdown](https://x.com/cline/status/2069171146994729078) (yazan [@cline](https://x.com/cline))
+
+**GLM-5.2 ile Opus 4.8’i gerçek bir repository bug fix üzerinde karşılaştırmak için bu vakayı kullanın; GLM daha fazla token harcasa da daha ucuz ve daha temiz final patch üretti.**
+
+Cline, iki modeli de aynı harness ve aynı araçlar altında Cline reposundaki aynı hata üzerinde test etti. Gönderiye göre GLM yaklaşık 1,1 milyon token kullandı, Opus ise 660 bin; maliyet 0,41 dolar karşı 0,81 dolar oldu; süre 4,7 dakika ve 28 tool call iken Opus 1,6 dakika ve 12 tool call kullandı; ayrıca GLM dead-code cleanup ve başarılı production build ile bitirirken Opus testleri geçen ama hâlâ type errors bırakan bir sonuç verdi.
+
+Tür: Değerlendirme | Tarih: 2026-06-22
+
+---
+
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Uygulamalı demolar ve vitrin derlemeleri
 
@@ -687,6 +730,28 @@ Tür: Demo | Tarih: 2026-06-21
 
 ---
 
+
+<a id="case-92"></a>
+### Case 92: [Open Design Reference URL Rebuild](https://x.com/OpenDesignHQ/status/2069046584134778995) (yazan [@OpenDesignHQ](https://x.com/OpenDesignHQ))
+
+**GLM-5.2’yi referans odaklı web yeniden oluşturma için test etmek üzere bu vakayı kullanın; tek bir prompt ve kaynak URL ile bir site neredeyse piksel düzeyinde sadakatle yeniden üretildi.**
+
+Open Design, GLM-5.2’yi yerleşik AMR içinde yalnızca bir referans URL ve tek bir basit prompt ile test ettiğini ve modelin demoda siteyi neredeyse kusursuz biçimde yeniden kurduğunu söylüyor. Bunu tam bir benchmark değil, referans tabanlı UI üretimi için uygulamalı bir kanıt olarak değerlendirin.
+
+Tür: Demo | Tarih: 2026-06-22
+
+---
+
+<a id="case-99"></a>
+### Case 99: [Trader Desk Cost-Quality Test](https://x.com/atomic_chat_hq/status/2069171121044513273) (yazan [@atomic_chat_hq](https://x.com/atomic_chat_hq))
+
+**GLM-5.2’yi full-stack UI build’lerde karşılaştırmak için bu vakayı kullanın; en cilalı trading-desk çıktısına çok yaklaşırken maliyeti en üst sonucun yalnızca küçük bir kısmı oldu.**
+
+Atomic Chat, frontend, backend, sekiz sembollü market data ve özel dark-theme UI içeren aynı canlı Trader Desk build prompt’u üzerinde dört modeli karşılaştırdı. Gönderi, GLM-5.2’nin 13.677 token ve 0,03 dolar kullandığını; Fugu Ultra’nın ise 22.225 token ve 0,51 dolar kullandığını bildiriyor ve GLM’nin çok daha düşük maliyetle canlı verili, benzer derecede tamamlanmış çok panelli bir arayüz ürettiğini söylüyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-22
+
+---
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Sağlayıcı ve araç entegrasyonları
@@ -934,6 +999,39 @@ Tür: Öğretici | Tarih: 2026-06-21
 ---
 
 
+<a id="case-93"></a>
+### Case 93: [Noumena ncode GLM Default](https://x.com/_xjdr/status/2069030608727408993) (yazan [@_xjdr](https://x.com/_xjdr))
+
+**GLM-5.2’yi ncode ve Noumena tarzı agent ortamlarına yönlendirmek için bu vakayı kullanın; ayrı standart ve 1M-context endpoint’leri ile default model desteği sunuluyor.**
+
+Noumena güncellemesi, ekibin tool calling, function parsing, app routing ve reasoning traces genelinde birinci sınıf GLM desteği eklediğini, ardından ağır 1M-context trafiği altında TTFT’yi kontrol etmek için API’yi `glm-5.2` ve `glm-5.2[1m]` endpoint’lerine böldüğünü söylüyor. Ayrıca yeni ncode sürümlerinin, olumlu kullanım geri bildirimleri sonrası varsayılan opus-class modelini Kimi’den GLM’e çevirdiği de belirtiliyor.
+
+Tür: Entegrasyon | Tarih: 2026-06-22
+
+---
+
+<a id="case-95"></a>
+### Case 95: [Claude Code Through Baseten](https://x.com/thealexker/status/2069163621469335757) (yazan [@thealexker](https://x.com/thealexker))
+
+**GLM-5.2’yi Claude Code içinde bir Baseten key, özel base URL ve `~/.claude/settings.json` içindeki model remapping ile çalıştırmak için bu vakayı kullanın.**
+
+Bu öğretici, Claude Code kurulumu, Baseten hesabı açma, API key alma ve `~/.claude/settings.json` düzenleme adımlarını anlatıyor; böylece üç Claude model katmanı da özel Anthropic environment variables üzerinden `zai-org/GLM-5.2` adresine yönleniyor. Bu, GLM-5.2’yi Claude Code istemcisinde kullanmak için somut bir drop-in yapılandırma deseni sunuyor.
+
+Tür: Öğretici | Tarih: 2026-06-22
+
+---
+
+<a id="case-96"></a>
+### Case 96: [Deepsec Pi Agent Default](https://x.com/cramforce/status/2069057402524082622) (yazan [@cramforce](https://x.com/cramforce))
+
+**GLM-5.2’yi bir security harness içinde test etmek için bu vakayı kullanın; `deepsec`, modeli Pi agent için varsayılan yaptı ve rekabetçi eval sonuçları bildirdi.**
+
+Gönderi, `deepsec` desteğini GLM-5.2 varsayılan model olacak şekilde Pi agent için duyuruyor ve çalıştırılabilir komutu `pnpm deepsec process --agent pi` olarak veriyor. Yazarın Deepsec evals çalıştırdığı ve sonucu diğer frontier modellerle rekabetçi bulduğu da belirtiliyor; bu da onu güvenlik odaklı somut bir entegrasyon yüzeyi haline getiriyor.
+
+Tür: Entegrasyon | Tarih: 2026-06-22
+
+---
+
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
 
@@ -1080,6 +1178,28 @@ Tür: Entegrasyon | Tarih: 2026-06-21
 
 ---
 
+
+<a id="case-97"></a>
+### Case 97: [RTX PRO 6000 Local Throughput](https://x.com/CardilloSamuel/status/2068954298596380743) (yazan [@CardilloSamuel](https://x.com/CardilloSamuel))
+
+**Üst düzey bir yerel GLM-5.2 workstation boyutlandırmak için bu vakayı kullanın; iki Blackwell’li bir masaüstü, 4-bit quantized build üzerinde çift haneli decode hızı korudu.**
+
+CardilloSamuel, 2x RTX PRO 6000 Blackwell, Threadripper PRO 9995WX ve 1TB DDR5 ile GLM-5.2 UD-Q4_K_XL çalıştırdığını bildiriyor. Gönderide yaklaşık 64 tok/s prefill, 13-15 tok/s decode, BF16’nın iki puan içinde kalan %69,7 Aider Polyglot skoru yer alıyor; ayrıca sistem RAM bant genişliğinin darboğaz olduğu ve uyumsuz bir 5090’ın bölüştürmeye dahil edilmediği not ediliyor.
+
+Tür: Demo | Tarih: 2026-06-22
+
+---
+
+<a id="case-98"></a>
+### Case 98: [Mac Studio API ROI Reality Check](https://x.com/karminski3/status/2068974488973447524) (yazan [@karminski3](https://x.com/karminski3))
+
+**Yerel GLM-5.2 inference için Mac Studio satın almanın mantıklı olup olmadığını sağduyuyla kontrol etmek için bu vakayı kullanın; çünkü paylaşılan geri ödeme hesabı çoğu kullanıcı için açık biçimde API veya plan erişimini daha mantıklı gösteriyor.**
+
+Gönderi, 32.999 RMB tutarındaki bir Mac Studio’nun verilen fiyatlamada yaklaşık 1.178 milyon GLM-5.2 API token’ına denk geldiğini tahmin ediyor ve çok daha küçük bir Qwen kurulumu için bile geri ödeme süresinin yaklaşık 209 gün olduğunu savunuyor. Ardından, quantized GLM-5.2’yi yaklaşık 17 tok/s hızında çalıştıran 512GB Mac Studio’nun başa başa ulaşmasının yaklaşık yedi yıl sürebileceği söyleniyor; bu yüzden yerel sahiplik ancak donanım zaten varsa veya boşta geçen süre değerlendirilebiliyorsa mantıklı görünüyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-22
+
+---
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
