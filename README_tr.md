@@ -37,7 +37,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **89 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **109 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -78,11 +78,11 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | Bölüm | Vakalar |
 |---|---|
 | [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76, 90, 94 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91 |
-| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82, 92, 99 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98 |
-| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91, 102 |
+| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82, 92, 99-100 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98, 106-107 |
+| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75, 103, 108 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
 ### [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation)
@@ -128,6 +128,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Production Marketing Agent Stack Routing](#case-77) | GLM-5.2’yi yapı, hız ve self-hosting değer veren production agent workflow’larına yönlendirmek için kullanın; belirsiz yargı gerektiren durumlarda daha güçlü kapalı modelleri saklı tutun. | Değerlendirme |
 | [M3 Ultra Pokemon Red Goal Run](#case-80) | GLM-5.2’yi uzun süreli yerel coding agent çalıştırmasında değerlendirmek için bu vakayı kullanın; modelin bir M3 Ultra makinede yaklaşık yarım gün boyunca Pokemon Red’i HTML olarak yeniden kurmaya çalıştığı bir örneği izleyin. | Demo |
 | [Case 91: Cline Repo Bug Fix Showdown](#case-91) | GLM-5.2 ile Opus 4.8’i gerçek bir repository bug fix üzerinde karşılaştırmak için bu vakayı kullanın; GLM daha fazla token harcasa da daha ucuz ve daha temiz final patch üretti. | Değerlendirme |
+| [Case 102: OpenInspect FP8 Background Agent](#case-102) | Hosted chat workflow yerine GLM-5.2’yi FP8 ile çalıştıran self-hosted background-agent stack’i incelemek için bu vakayı kullanın. | Entegrasyon |
 
 ### [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds)
 
@@ -147,6 +148,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [OpenCode Recovery Lab One-Shot](#case-82) | Etkileşimli agent-failure simülasyonlarını hızlıca prototiplemek için bu vakayı kullanın; yazar yaklaşık 3,50 dolara çalışan bir recovery lab’i tek atışta kurduğunu bildiriyor. | Demo |
 | [Case 92: Open Design Reference URL Rebuild](#case-92) | GLM-5.2’yi referans odaklı web yeniden oluşturma için test etmek üzere bu vakayı kullanın; tek bir prompt ve kaynak URL ile bir site neredeyse piksel düzeyinde sadakatle yeniden üretildi. | Demo |
 | [Case 99: Trader Desk Cost-Quality Test](#case-99) | GLM-5.2’yi full-stack UI build’lerde karşılaştırmak için bu vakayı kullanın; en cilalı trading-desk çıktısına çok yaklaşırken maliyeti en üst sonucun yalnızca küçük bir kısmı oldu. | Değerlendirme |
+| [Case 100: Luddite Game After Claude Refusal](#case-100) | Kapalı bir modelin reddettiği oyun fikrini GLM-5.2 ile prototiplemek ve ardından oynanabilir çıktıyı kendiniz incelemek için bu vakayı kullanın. | Demo |
 
 ### [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations)
 
@@ -177,6 +179,10 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Case 93: Noumena ncode GLM Default](#case-93) | GLM-5.2’yi ncode ve Noumena tarzı agent ortamlarına yönlendirmek için bu vakayı kullanın; ayrı standart ve 1M-context endpoint’leri ile default model desteği sunuluyor. | Entegrasyon |
 | [Case 95: Claude Code Through Baseten](#case-95) | GLM-5.2’yi Claude Code içinde bir Baseten key, özel base URL ve `~/.claude/settings.json` içindeki model remapping ile çalıştırmak için bu vakayı kullanın. | Öğretici |
 | [Case 96: Deepsec Pi Agent Default](#case-96) | GLM-5.2’yi bir security harness içinde test etmek için bu vakayı kullanın; `deepsec`, modeli Pi agent için varsayılan yaptı ve rekabetçi eval sonuçları bildirdi. | Entegrasyon |
+| [Case 101: Baseten + Droid Harness Quickstart](#case-101) | GLM-5.2’yi Baseten ve Droid harness üzerinden hızlıca ayağa kaldırmak, ardından aynı kısa setup akışını başka IDE’lerde de kullanmak için bu vakayı kullanın. | Öğretici |
+| [Case 104: OpenAI-Compatible GLM API Workflow](#case-104) | reasoning control, tool calling, long-context retrieval ve cost tracking içeren OpenAI uyumlu bir GLM-5.2 istemcisini Python’da kurmak için bu vakayı kullanın. | Öğretici |
+| [Case 105: Perplexity Agent API Search Sandbox](#case-105) | search destekli sandboxed agent’ları tek bir API call arkasında kullanmak istediğinizde GLM-5.2’yi Perplexity Agent API’ye bağlamak için bu vakayı kullanın. | Entegrasyon |
+| [Case 109: Baseten 280 TPS GLM API](#case-109) | Sağlayıcı gecikmesinin önemli olduğu durumlarda Baseten’in iddia ettiği hızlı GLM-5.2 serving sinyalini incelemek için bu vakayı kullanın. | Entegrasyon |
 
 ### [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment)
 
@@ -197,6 +203,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [ZCode Multiplier Cut Through September](#case-89) | Hem peak hem off-peak pencerelerde daha düşük ZCode multiplier’larıyla GLM-5.2 plan kredilerini uzatmak için bu vakayı kullanın. | Entegrasyon |
 | [Case 97: RTX PRO 6000 Local Throughput](#case-97) | Üst düzey bir yerel GLM-5.2 workstation boyutlandırmak için bu vakayı kullanın; iki Blackwell’li bir masaüstü, 4-bit quantized build üzerinde çift haneli decode hızı korudu. | Demo |
 | [Case 98: Mac Studio API ROI Reality Check](#case-98) | Yerel GLM-5.2 inference için Mac Studio satın almanın mantıklı olup olmadığını sağduyuyla kontrol etmek için bu vakayı kullanın; çünkü paylaşılan geri ödeme hesabı çoğu kullanıcı için açık biçimde API veya plan erişimini daha mantıklı gösteriyor. | Değerlendirme |
+| [Case 106: LiteLLM Local Outage Save](#case-106) | hosted frontier API’ler kapandığında veya limite takıldığında teslimatı durdurmamak için yerel GLM-5.2’ye LiteLLM üzerinden yönelmekte bu vakayı kullanın. | Demo |
+| [Case 107: Individual Versus Team Local ROI](#case-107) | Yerel GLM-5.2 dağıtımının bireysel kullanıcı için mi yoksa ancak daha büyük bir ekip için mi mantıklı olduğunu değerlendirmek için bu vakayı kullanın. | Değerlendirme |
 
 ### [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals)
 
@@ -213,6 +221,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Kısa Paralel Çalışmaya Karşı Uzun Aracı Çalıştırmaları](#case-67) | Bu durumu, GLM-5.2'yi kısa sınırlı kodlama görevlerine yönlendirmek ve aynı zamanda daha uzun, çok saatlik aracı çalıştırmaları için daha güçlü modeller ayırmak için kullanın. | Sınır |
 | [Code Censorship And Bias Check](#case-73) | Bu vakayı kod ve politik önyargı testleri için pratik bir güvenlik sinyali olarak kullanın; daha geniş alignment endişelerinin tamamen çözüldüğünün kanıtı olarak değil. | Sınır |
 | [Hard Reasoning Billing Failure](#case-75) | GLM-5.2’yi zor reasoning iş yüklerinde dikkatli test etmek için bu vakayı kullanın; herkese açık rapor uzun çalışma süreleri, düşük tamamlama oranı ve beklenmedik derecede yüksek faturalanan çıktı gösteriyor. | Sınır |
+| [Case 103: HalluHard Multiturn Hallucination Signal](#case-103) | Diğer benchmark sonuçlarına fazla güvenmeden önce GLM-5.2’yi hallucination’a duyarlı multiturn görevlerde sınamak için bu vakayı kullanın. | Sınır |
+| [Case 108: Open-Weight Security Emergency Warning](#case-108) | open-weight GLM-5.2’nin offensive security agents için operasyonel sürtünmeyi düşürdüğünü gösteren bir güvenlik sinyali olarak bu vakayı kullanın. | Sınır |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
 
@@ -595,6 +605,17 @@ Tür: Değerlendirme | Tarih: 2026-06-22
 
 ---
 
+<a id="case-102"></a>
+### Case 102: [OpenInspect FP8 Background Agent](https://x.com/colemurray/status/2069485572339707938) (yazan [@colemurray](https://x.com/colemurray))
+
+**Hosted chat workflow yerine GLM-5.2’yi FP8 ile çalıştıran self-hosted background-agent stack’i incelemek için bu vakayı kullanın.**
+
+colemurray, Modal Inference üzerindeki OpenInspect’i GLM-5.2’yi FP8 ile çalıştıran tamamen self-hosted bir background agent system olarak paylaşıyor ve kritik altyapı üzerinde hız ile kontrolü vurguluyor. Gönderi kısa olsa da kullanılan tool stack’i ve deployment tarzını net biçimde gösteriyor.
+
+Tür: Entegrasyon | Tarih: 2026-06-23
+
+---
+
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Uygulamalı demolar ve vitrin derlemeleri
 
@@ -750,6 +771,17 @@ Tür: Demo | Tarih: 2026-06-22
 Atomic Chat, frontend, backend, sekiz sembollü market data ve özel dark-theme UI içeren aynı canlı Trader Desk build prompt’u üzerinde dört modeli karşılaştırdı. Gönderi, GLM-5.2’nin 13.677 token ve 0,03 dolar kullandığını; Fugu Ultra’nın ise 22.225 token ve 0,51 dolar kullandığını bildiriyor ve GLM’nin çok daha düşük maliyetle canlı verili, benzer derecede tamamlanmış çok panelli bir arayüz ürettiğini söylüyor.
 
 Tür: Değerlendirme | Tarih: 2026-06-22
+
+---
+
+<a id="case-100"></a>
+### Case 100: [Luddite Game After Claude Refusal](https://x.com/atmoio/status/2069559053114577088) (yazan [@atmoio](https://x.com/atmoio))
+
+**Kapalı bir modelin reddettiği oyun fikrini GLM-5.2 ile prototiplemek ve ardından oynanabilir çıktıyı kendiniz incelemek için bu vakayı kullanın.**
+
+atmoio, AI’yi yok etmeye çalışan Plague Inc tarzı mizahi bir oyunun Claude tarafından acceptable-use ihlali diye işaretlendiğini, ardından Luddite adlı oyunu GLM 5.2 ile kurup bir demo klip de eklediğini söylüyor. Bunu, policy gerekçesiyle kapalı modellerin reddedebileceği creative coding görevleri için uygulamalı bir fallback örneği olarak okuyun.
+
+Tür: Demo | Tarih: 2026-06-23
 
 ---
 
@@ -1032,6 +1064,50 @@ Tür: Entegrasyon | Tarih: 2026-06-22
 
 ---
 
+<a id="case-101"></a>
+### Case 101: [Baseten + Droid Harness Quickstart](https://x.com/RayFernando1337/status/2069523126384525639) (yazan [@RayFernando1337](https://x.com/RayFernando1337))
+
+**GLM-5.2’yi Baseten ve Droid harness üzerinden hızlıca ayağa kaldırmak, ardından aynı kısa setup akışını başka IDE’lerde de kullanmak için bu vakayı kullanın.**
+
+RayFernando1337, Baseten API key alma, Droid AI yapılandırmasını otomatikleştirme, GLM-5.2 entegrasyonunu test etme, alternatif kurulumları ve sınırlamaları gözden geçirme, ardından başka IDE’ler için bonus notlara geçme adımlarını zaman damgalarıyla sıralıyor.
+
+Tür: Öğretici | Tarih: 2026-06-23
+
+---
+
+<a id="case-104"></a>
+### Case 104: [OpenAI-Compatible GLM API Workflow](https://x.com/Marktechpost/status/2069308807570915500) (yazan [@Marktechpost](https://x.com/Marktechpost))
+
+**reasoning control, tool calling, long-context retrieval ve cost tracking içeren OpenAI uyumlu bir GLM-5.2 istemcisini Python’da kurmak için bu vakayı kullanın.**
+
+Marktechpost, GLM-5.2’yi tek bir OpenAI uyumlu istemciye saran bir öğretici ve bağlı code notebook paylaşıyor. Gönderi; thinking effort kontrolü (`off` / `high` / `max`), streamed reasoning ile answer ayrımı, multi-step agent için tool calling, structured JSON output, long-context retrieval ve token cost tracking kapsadığını söylüyor.
+
+Tür: Öğretici | Tarih: 2026-06-23
+
+---
+
+<a id="case-105"></a>
+### Case 105: [Perplexity Agent API Search Sandbox](https://x.com/perplexitydevs/status/2069252848647606584) (yazan [@perplexitydevs](https://x.com/perplexitydevs))
+
+**search destekli sandboxed agent’ları tek bir API call arkasında kullanmak istediğinizde GLM-5.2’yi Perplexity Agent API’ye bağlamak için bu vakayı kullanın.**
+
+Perplexity Devs, GLM-5.2’nin Agent API’ye eklendiğini duyururken modeli uzun ufuklu coding ve agentic workflow’lar için iyi bir seçenek olarak tanımlıyor. Gönderi özellikle Search as Code, OpenAI uyumlu arayüz ve işaretsiz first-party pricing vurgusu yapıyor.
+
+Tür: Entegrasyon | Tarih: 2026-06-23
+
+---
+
+<a id="case-109"></a>
+### Case 109: [Baseten 280 TPS GLM API](https://x.com/aqaderb/status/2069220126272999501) (yazan [@aqaderb](https://x.com/aqaderb))
+
+**Sağlayıcı gecikmesinin önemli olduğu durumlarda Baseten’in iddia ettiği hızlı GLM-5.2 serving sinyalini incelemek için bu vakayı kullanın. sub-second first-token time ve yüksek decoding throughput bunun merkezinde.**
+
+aqaderb, Baseten’in GLM-5.2 API’sini saniyede 280 token ve 0.8 saniyenin altında TTFT ile duyuruyor. Gönderi bunu PD disaggregation, multi-token prediction heads ile speculative decoding, KV-cache-aware routing ve diğer serving optimizasyonlarına bağlıyor; ayrıca ilgili engineering write-up’a da bağlantı veriyor.
+
+Tür: Entegrasyon | Tarih: 2026-06-23
+
+---
+
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
 
@@ -1201,6 +1277,28 @@ Tür: Değerlendirme | Tarih: 2026-06-22
 
 ---
 
+<a id="case-106"></a>
+### Case 106: [LiteLLM Local Outage Save](https://x.com/CardilloSamuel/status/2069431311463236078) (yazan [@CardilloSamuel](https://x.com/CardilloSamuel))
+
+**hosted frontier API’ler kapandığında veya limite takıldığında teslimatı durdurmamak için yerel GLM-5.2’ye LiteLLM üzerinden yönelmekte bu vakayı kullanın.**
+
+CardilloSamuel, bir arkadaşının token’ı bittiğinde ve Claude outage yaşadığında, kendi yerel GLM-5.2 dağıtımına işaret eden bir LiteLLM API key verdiğini söylüyor. Bu kişinin yaklaşık 5 milyon token’ı 0 dolara ürettiği, teslimatı zamanında bitirdiği ve hız düşüşünü süreklilik karşılığında kabul ettiği aktarılıyor.
+
+Tür: Demo | Tarih: 2026-06-23
+
+---
+
+<a id="case-107"></a>
+### Case 107: [Individual Versus Team Local ROI](https://x.com/yuhasbeentaken/status/2069337770493919414) (yazan [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+
+**Yerel GLM-5.2 dağıtımının bireysel kullanıcı için mi yoksa ancak daha büyük bir ekip için mi mantıklı olduğunu değerlendirmek için bu vakayı kullanın.**
+
+Gönderi, bireysel bir yerel kurulumun 512GB sistem belleği, birden çok GPU ve güçlü bir CPU isteyebileceğini, buna rağmen hızın ancak yaklaşık 6-10 token/saniye olabileceğini savunuyor. Öte yandan gizlilik, sınırsız token, haftalık cap olmaması ve sağlayıcı arızaları ya da policy değişikliklerinden bağımsızlık önemliyse 10+ geliştiricili ekipler için ortak bir şirket içi sunucunun daha mantıklı olduğu söyleniyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-23
+
+---
+
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
 
@@ -1325,6 +1423,27 @@ Tür: Sınır | Tarih: 2026-06-20
 
 ---
 
+<a id="case-103"></a>
+### Case 103: [HalluHard Multiturn Hallucination Signal](https://x.com/dyfan22/status/2069335764295438532) (yazan [@dyfan22](https://x.com/dyfan22))
+
+**Diğer benchmark sonuçlarına fazla güvenmeden önce GLM-5.2’yi hallucination’a duyarlı multiturn görevlerde sınamak için bu vakayı kullanın.**
+
+HalluHard, GLM-5.2’yi adaptive thinking ve maximum reasoning effort ayarıyla liderlik tablosuna ekledi. Güncelleme, başka benchmark’larda güçlü sonuçlar görülse bile GLM-5.2’nin HalluHard’ın zor multiturn benchmark’ında hâlâ sık sık hallucinate ettiğini söylüyor.
+
+Tür: Sınır | Tarih: 2026-06-23
+
+---
+
+<a id="case-108"></a>
+### Case 108: [Open-Weight Security Emergency Warning](https://x.com/joshua_saxe/status/2069289170107842572) (yazan [@joshua_saxe](https://x.com/joshua_saxe))
+
+**open-weight GLM-5.2’nin offensive security agents için operasyonel sürtünmeyi düşürdüğünü gösteren bir güvenlik sinyali olarak bu vakayı kullanın.**
+
+Joshua Saxe, GLM-5.2’nin frontier coding agents kullanan saldırganları daha önce sınırlayan izleme ve hesap sürtünmesinin büyük kısmını kaldırdığını savunuyor. Başlık, open weights ile private deployment birleşimini saldırı kabiliyetinde ciddi bir değişim olarak çerçeveliyor ve API gatekeeping’e güvenmek yerine savunma tarafının daha hızlı benimsemesini istiyor.
+
+Tür: Sınır | Tarih: 2026-06-23
+
+---
 
 <a id="acknowledge"></a>
 ## 🙏 Teşekkür
@@ -1333,8 +1452,10 @@ Bu depo, gerçek GLM-5.2 kullanım kanıtlarını paylaşan herkese açık içer
 
 Burada yer alan yüksek sinyalli kaynaklara ve üreticilere teşekkürler: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
 
-*If any attribution needs to be corrected, please contact us and we will update it.*
+Yakın zamanda eklenen üreticiler: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb).
 
-Contributions with concrete GLM-5.2 use cases are welcome through issues and pull requests.
+*Herhangi bir atıfın düzeltilmesi gerekiyorsa bizimle iletişime geçin; güncelleriz.*
+
+Daha ilginç GLM-5.2 kullanım vakalarınız varsa issue ya da pull request açarak Evolink usecase kütüphanesini genişletmeye yardımcı olun.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=EvoLinkAI/awesome-glm-5.2-usecases&type=Date)](https://www.star-history.com/#EvoLinkAI/awesome-glm-5.2-usecases&Date)

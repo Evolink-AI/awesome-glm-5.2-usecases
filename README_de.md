@@ -37,7 +37,7 @@ Jeder Case-Titel verlinkt auf die öffentliche Quelle, jeder Autor auf das jewei
 
 ## 📊 Überblick
 
-- **99 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
+- **109 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
 - Deckt Vergleichstests und Grenzmodell-Bewertung, Coding-Agenten und Langkontext-Workflows, Praxisdemos und Beispiel-Builds, Anbieter- und Tool-Integrationen, Kosten, Preise und lokale Bereitstellung sowie Grenzen, Hinweise und Sicherheitssignale ab.
 - Jeder Case enthält die Originalquelle, die Creator-Attribution, ein knappes Nutzungs-Takeaway, den Evidenztyp und das Veröffentlichungsdatum.
 - Nutze dieses Repo, um praktische Workflows zu finden, Stärken und Grenzen zu vergleichen, Provider-Routen zu entdecken und echte Experimente nachzuvollziehen.
@@ -78,11 +78,11 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | Abschnitt | Fälle |
 |---|---|
 | [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Fall 1-12, 60, 70, 72, 76, 90, 94 |
-| [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Fall 13-22, 62, 65, 66, 77, 80, 91 |
-| [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Fall 23-30, 71, 78, 81-82, 92, 99 |
-| [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Fall 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96 |
-| [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Fall 43-51, 64, 68, 88-89, 97-98 |
-| [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Fall 52-59, 67, 73, 75 |
+| [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Fall 13-22, 62, 65, 66, 77, 80, 91, 102 |
+| [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Fall 23-30, 71, 78, 81-82, 92, 99-100 |
+| [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Fall 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109 |
+| [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Fall 43-51, 64, 68, 88-89, 97-98, 106-107 |
+| [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Fall 52-59, 67, 73, 75, 103, 108 |
 | [🙏 Danksagung](#acknowledge) | Credits und Korrekturrichtlinie |
 
 ### [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation)
@@ -127,6 +127,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [DeepAgents Code Open Harness Trial](#case-66) | Verwenden Sie diesen Fall, um GLM-5.2 mit einem offenen Codierungsagenten-Harness auszuprobieren und das Modell unter einer reproduzierbaren Agentenhülle zu vergleichen. | Demo |
 | [Production Marketing Agent Stack Routing](#case-77) | Nutze diesen Fall, um GLM-5.2 in produktive Agent-Workflows zu routen, die Struktur, Geschwindigkeit und Self-Hosting schätzen, während stärkere geschlossene Modelle für mehrdeutige Urteilsfragen reserviert bleiben. | Bewertung |
 | [Case 91: Cline Repo Bug Fix Showdown](#case-91) | Nutze diesen Fall, um GLM-5.2 und Opus 4.8 bei einem echten Repository-Bugfix zu vergleichen, bei dem GLM mehr Tokens verbrauchte, aber den günstigeren und saubereren finalen Patch lieferte. | Bewertung |
+| [Case 102: OpenInspect FP8 Background Agent](#case-102) | Nutze diesen Fall, um einen selbst gehosteten GLM-5.2-Background-Agent-Stack statt eines gehosteten Chat-Workflows zu untersuchen. | Integration |
 
 ### [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds)
 
@@ -144,6 +145,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [OpenCode Go One-Shot Example Set](#case-78) | Nutze diesen Fall, um GLM-5.2 bei schnellen One-Shot-Builds in OpenCode Go zu benchmarken, bevor es in offenere Agent-Loops eingebunden wird. | Demo |
 | [Case 92: Open Design Reference URL Rebuild](#case-92) | Nutze diesen Fall, um GLM-5.2 bei referenzgesteuerter Web-Rekonstruktion zu testen, bei der ein Prompt plus eine Quell-URL eine Website mit nahezu pixelgenauer Treue reproduzierte. | Demo |
 | [Case 99: Trader Desk Cost-Quality Test](#case-99) | Nutze diesen Fall, um GLM-5.2 bei Full-Stack-UI-Builds zu vergleichen, wo es dem am stärksten polierten Trading-Desk-Output sehr nahe kam, aber nur einen kleinen Bruchteil der Kosten verursachte. | Bewertung |
+| [Case 100: Luddite Game After Claude Refusal](#case-100) | Nutze diesen Fall, um mit GLM-5.2 policy-sensitive Spielkonzepte zu prototypen, wenn ein geschlossenes Modell die Anfrage ablehnt, und prüfe das spielbare Ergebnis anschließend selbst. | Demo |
 
 ### [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations)
 
@@ -169,6 +171,10 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [Case 93: Noumena ncode GLM Default](#case-93) | Nutze diesen Fall, um GLM-5.2 in ncode- und Noumena-ähnliche Agent-Umgebungen zu routen, mit getrennten Standard- und 1M-Context-Endpunkten plus Default-Model-Support. | Integration |
 | [Case 95: Claude Code Through Baseten](#case-95) | Nutze diesen Fall, um GLM-5.2 innerhalb von Claude Code über einen Baseten-Key, eine benutzerdefinierte Base-URL und Model-Remapping in `~/.claude/settings.json` auszuführen. | Tutorial |
 | [Case 96: Deepsec Pi Agent Default](#case-96) | Nutze diesen Fall, um GLM-5.2 in einem Security-Harness zu testen, bei dem `deepsec` es zum Standardmodell für den Pi agent machte und wettbewerbsfähige Eval-Ergebnisse meldete. | Integration |
+| [Case 101: Baseten + Droid Harness Quickstart](#case-101) | Nutze diesen Fall, um GLM-5.2 schnell über Baseten und das Droid-Harness zum Laufen zu bringen, mit einem kurzen Setup-Ablauf, den du auch für andere IDEs wiederverwenden kannst. | Tutorial |
+| [Case 104: OpenAI-Compatible GLM API Workflow](#case-104) | Nutze diesen Fall, um einen OpenAI-kompatiblen GLM-5.2-Client mit steuerbarem Reasoning, Tool Calling, Long-Context-Retrieval und Kosten-Tracking in Python aufzubauen. | Tutorial |
+| [Case 105: Perplexity Agent API Search Sandbox](#case-105) | Nutze diesen Fall, um GLM-5.2 in die Agent API von Perplexity einzubinden, wenn du suchfähige Sandbox-Agenten hinter einem einzigen API-Call willst. | Integration |
+| [Case 109: Baseten 280 TPS GLM API](#case-109) | Nutze diesen Fall, wenn Provider-Latenz wichtig ist: Baseten beansprucht sehr schnelles GLM-5.2-Serving mit subsekündiger First-Token-Time und hohem Decoding-Durchsatz. | Integration |
 
 ### [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment)
 
@@ -187,6 +193,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [Unsloth Quantized Local Deployment](#case-68) | Verwenden Sie diesen Fall, um quantisierte GLM-5.2-Bereitstellungspfade zu bewerten, wenn die Gesamtgewichtungen des Modells für normale lokale Hardware zu groß sind. | Tutorial |
 | [Case 97: RTX PRO 6000 Local Throughput](#case-97) | Nutze diesen Fall, um eine High-End-Workstation für lokales GLM-5.2 zu dimensionieren, bei der ein Desktop mit zwei Blackwell-Karten bei einem 4-Bit-quantisierten Build zweistellige Decode-Geschwindigkeiten hielt. | Demo |
 | [Case 98: Mac Studio API ROI Reality Check](#case-98) | Nutze diesen Fall als Plausibilitätscheck, ob sich ein Mac Studio für lokale GLM-5.2-Inferenz lohnt, denn die veröffentlichte Amortisationsrechnung spricht für die meisten Nutzer klar für API- oder Plan-Zugang. | Bewertung |
+| [Case 106: LiteLLM Local Outage Save](#case-106) | Nutze diesen Fall, um ein Deliverable weiter voranzubringen, wenn gehostete Frontier-APIs ausfallen oder gedeckelt sind, indem du die Arbeit über ein lokal bereitgestelltes GLM-5.2 mit LiteLLM umleitest. | Demo |
+| [Case 107: Individual Versus Team Local ROI](#case-107) | Nutze diesen Fall, um zu entscheiden, ob sich ein lokales GLM-5.2-Deployment für Einzelpersonen lohnt oder eher nur für ein größeres Entwicklungsteam. | Bewertung |
 
 ### [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals)
 
@@ -203,6 +211,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [Kurze parallele Arbeit im Vergleich zu langen Agentenläufen](#case-67) | Verwenden Sie diesen Fall, um GLM-5.2 an kurz begrenzte Codierungsaufgaben weiterzuleiten und gleichzeitig stärkere Modelle für tiefere mehrstündige Agentenläufe zu reservieren. | Einschränkung |
 | [Code Censorship And Bias Check](#case-73) | Nutze diesen Fall als praktisches Sicherheitssignal für Code- und Political-Bias-Tests, nicht als Beleg dafür, dass breitere Alignment-Fragen bereits gelöst sind. | Einschränkung |
 | [Hard Reasoning Billing Failure](#case-75) | Nutze diesen Fall, um GLM-5.2 bei schwierigen Reasoning-Workloads vorsichtig zu testen, weil der öffentliche Bericht lange Laufzeiten, niedrige Abschlussraten und unerwartet hohe abgerechnete Ausgabe zeigt. | Einschränkung |
+| [Case 103: HalluHard Multiturn Hallucination Signal](#case-103) | Nutze diesen Fall, um GLM-5.2 auf hallucination-sensitiven Multiturn-Aufgaben zu testen, bevor du starken Benchmark-Scores anderswo vertraust. | Einschränkung |
+| [Case 108: Open-Weight Security Emergency Warning](#case-108) | Nutze diesen Fall als Signal für die Sicherheitsplanung: Open-Weight-GLM-5.2 senkt die operative Reibung für offensive Sicherheitsagenten, selbst wenn geschlossene APIs weiterhin überwacht werden. | Einschränkung |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Vergleichstests und Grenzmodell-Bewertung
 
@@ -585,6 +595,17 @@ Typ: Bewertung | Datum: 2026-06-22
 
 ---
 
+<a id="case-102"></a>
+### Case 102: [OpenInspect FP8 Background Agent](https://x.com/colemurray/status/2069485572339707938) (von [@colemurray](https://x.com/colemurray))
+
+**Nutze diesen Fall, um einen selbst gehosteten GLM-5.2-Background-Agent-Stack statt eines gehosteten Chat-Workflows zu untersuchen.**
+
+Cole Murray teilte einen Stack aus OpenInspect, Remote-Code-Runner und Fireworks FP8 GLM-5.2, der Background-Agenten auf selbst gehosteter Infrastruktur ausführt. Der Beitrag positioniert das Setup als offene Alternative zu gehosteten Agentenprodukten und verweist auf ein bereitgestelltes Runbook.
+
+Typ: Integration | Datum: 2026-06-23
+
+---
+
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Praxisdemos und Beispiel-Builds
 
@@ -740,6 +761,17 @@ Typ: Demo | Datum: 2026-06-22
 Atomic Chat verglich vier Modelle mit demselben Live-Trader-Desk-Build-Prompt mit Frontend, Backend, Marktdaten für acht Symbole und einer benutzerdefinierten Dark-Theme-UI. Laut Beitrag kam GLM-5.2 auf 13.677 Tokens und 0,03 US-Dollar gegenüber Fugu Ultra mit 22.225 Tokens und 0,51 US-Dollar, und GLM lieferte zu deutlich geringeren Kosten eine ähnlich vollständige Multi-Panel-Oberfläche mit Live-Daten.
 
 Typ: Bewertung | Datum: 2026-06-22
+
+---
+
+<a id="case-100"></a>
+### Case 100: [Luddite Game After Claude Refusal](https://x.com/atmoio/status/2069559053114577088) (von [@atmoio](https://x.com/atmoio))
+
+**Nutze diesen Fall, um mit GLM-5.2 policy-sensitive Spielkonzepte zu prototypen, wenn ein geschlossenes Modell die Anfrage ablehnt, und prüfe das spielbare Ergebnis anschließend selbst.**
+
+atmoio sagt, Claude habe ein humorvolles Plague-Inc.-ähnliches Spiel über die Zerstörung von KI als Acceptable-Use-Verstoß markiert. Der Autor habe das Spiel mit dem Namen Luddite daraufhin stattdessen mit GLM 5.2 gebaut und einen Demo-Clip angehängt. Betrachte es als praxisnahes Fallback-Beispiel für Creative-Coding-Aufgaben, die geschlossene Modelle aus Policy-Gründen ablehnen könnten.
+
+Typ: Demo | Datum: 2026-06-23
 
 ---
 
@@ -1000,6 +1032,50 @@ Typ: Integration | Datum: 2026-06-22
 
 ---
 
+<a id="case-101"></a>
+### Case 101: [Baseten + Droid Harness Quickstart](https://x.com/RayFernando1337/status/2069523126384525639) (von [@RayFernando1337](https://x.com/RayFernando1337))
+
+**Nutze diesen Fall, um GLM-5.2 schnell über Baseten und das Droid-Harness zum Laufen zu bringen, mit einem kurzen Setup-Ablauf, den du auch für andere IDEs wiederverwenden kannst.**
+
+RayFernando1337 skizziert ein Tutorial mit Zeitmarken: Baseten-API-Key besorgen, Droid-AI-Konfiguration automatisieren, die GLM-5.2-Integration testen, alternative Setups und Einschränkungen prüfen und zum Schluss Bonus-Setup-Hinweise für andere IDEs mitnehmen.
+
+Typ: Tutorial | Datum: 2026-06-23
+
+---
+
+<a id="case-104"></a>
+### Case 104: [OpenAI-Compatible GLM API Workflow](https://x.com/Marktechpost/status/2069308807570915500) (von [@Marktechpost](https://x.com/Marktechpost))
+
+**Nutze diesen Fall, um einen OpenAI-kompatiblen GLM-5.2-Client mit steuerbarem Reasoning, Tool Calling, Long-Context-Retrieval und Kosten-Tracking in Python aufzubauen.**
+
+Marktechpost teilte ein Tutorial samt verlinktem Code-Notebook für einen einzigen OpenAI-kompatiblen Client um GLM-5.2. Laut Beitrag deckt der Workflow Thinking-Effort-Steuerung (`off`/`high`/`max`), gestreamte Reasoning- versus Answer-Kanäle, Tool Calling mit einem mehrstufigen Agenten, strukturierten JSON-Output, Long-Context-Retrieval und Token-Kosten-Tracking ab.
+
+Typ: Tutorial | Datum: 2026-06-23
+
+---
+
+<a id="case-105"></a>
+### Case 105: [Perplexity Agent API Search Sandbox](https://x.com/perplexitydevs/status/2069252848647606584) (von [@perplexitydevs](https://x.com/perplexitydevs))
+
+**Nutze diesen Fall, um GLM-5.2 in die Agent API von Perplexity einzubinden, wenn du suchfähige Sandbox-Agenten hinter einem einzigen API-Call willst.**
+
+Perplexity Devs kündigte GLM-5.2 in der Agent API an und beschrieb es als gute Wahl für Long-Horizon-Coding- und agentische Workflows. Der Beitrag hebt konkret Search as Code, eine OpenAI-kompatible Schnittstelle und First-Party-Preise ohne Aufschlag hervor.
+
+Typ: Integration | Datum: 2026-06-23
+
+---
+
+<a id="case-109"></a>
+### Case 109: [Baseten 280 TPS GLM API](https://x.com/aqaderb/status/2069220126272999501) (von [@aqaderb](https://x.com/aqaderb))
+
+**Nutze diesen Fall, wenn Provider-Latenz wichtig ist: Baseten beansprucht sehr schnelles GLM-5.2-Serving mit subsekündiger First-Token-Time und hohem Decoding-Durchsatz.**
+
+aqaderb kündigte Basetens GLM-5.2-API mit 280 Tokens pro Sekunde und unter 0,8 Sekunden TTFT an. Der Beitrag führt das Ergebnis auf PD-Disaggregation, spekulatives Decoding mit Multi-Token-Prediction-Heads, KV-Cache-bewusstes Routing und weitere Serving-Optimierungen zurück und verlinkt eine Engineering-Ausarbeitung.
+
+Typ: Integration | Datum: 2026-06-23
+
+---
+
 <a id="case-95"></a>
 ### Case 95: [Claude Code Through Baseten](https://x.com/thealexker/status/2069163621469335757) (von [@thealexker](https://x.com/thealexker))
 
@@ -1191,6 +1267,28 @@ Typ: Bewertung | Datum: 2026-06-22
 
 ---
 
+<a id="case-106"></a>
+### Case 106: [LiteLLM Local Outage Save](https://x.com/CardilloSamuel/status/2069431311463236078) (von [@CardilloSamuel](https://x.com/CardilloSamuel))
+
+**Nutze diesen Fall, um ein Deliverable weiter voranzubringen, wenn gehostete Frontier-APIs ausfallen oder gedeckelt sind, indem du die Arbeit über ein lokal bereitgestelltes GLM-5.2 mit LiteLLM umleitest.**
+
+CardilloSamuel sagt, ein Freund sei aus Tokens gelaufen und in einen Claude-Ausfall geraten, woraufhin er einen LiteLLM-API-Key ausgab, der auf sein lokales GLM-5.2-Deployment zeigte. Der Freund habe damit etwa 5 Millionen Tokens für 0 US-Dollar generiert, das Deliverable rechtzeitig fertiggestellt und die langsamere Geschwindigkeit zugunsten der Kontinuität akzeptiert.
+
+Typ: Demo | Datum: 2026-06-23
+
+---
+
+<a id="case-107"></a>
+### Case 107: [Individual Versus Team Local ROI](https://x.com/yuhasbeentaken/status/2069337770493919414) (von [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+
+**Nutze diesen Fall, um zu entscheiden, ob sich ein lokales GLM-5.2-Deployment für Einzelpersonen lohnt oder eher nur für ein größeres Entwicklungsteam.**
+
+Der Beitrag argumentiert, dass ein individuelles lokales Setup 512 GB Systemspeicher, mehrere GPUs und eine starke CPU erfordern kann und trotzdem nur etwa 6-10 Tokens pro Sekunde liefert. Für Teams mit 10 oder mehr Entwicklern, die Privatsphäre, unbegrenzte Tokens, keine Wochenlimits und Schutz vor Provider-Ausfällen oder Policy-Änderungen schätzen, sei ein geteilter Inhouse-Server sinnvoller.
+
+Typ: Bewertung | Datum: 2026-06-23
+
+---
+
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Grenzen, Hinweise und Sicherheitssignale
 
@@ -1293,6 +1391,28 @@ Typ: Einschränkung | Datum: 2026-06-20
 
 ---
 
+<a id="case-103"></a>
+### Case 103: [HalluHard Multiturn Hallucination Signal](https://x.com/dyfan22/status/2069335764295438532) (von [@dyfan22](https://x.com/dyfan22))
+
+**Nutze diesen Fall, um GLM-5.2 auf hallucination-sensitiven Multiturn-Aufgaben zu testen, bevor du starken Benchmark-Scores anderswo vertraust.**
+
+HalluHard nahm GLM-5.2 mit adaptivem Thinking bei maximalem Reasoning-Effort ins Leaderboard auf. Das Update sagt, dass GLM-5.2 trotz starker Resultate auf anderen Benchmarks auf HalluHards anspruchsvollem Multiturn-Benchmark weiterhin häufig halluziniert.
+
+Typ: Einschränkung | Datum: 2026-06-23
+
+---
+
+<a id="case-108"></a>
+### Case 108: [Open-Weight Security Emergency Warning](https://x.com/joshua_saxe/status/2069289170107842572) (von [@joshua_saxe](https://x.com/joshua_saxe))
+
+**Nutze diesen Fall als Signal für die Sicherheitsplanung: Open-Weight-GLM-5.2 senkt die operative Reibung für offensive Sicherheitsagenten, selbst wenn geschlossene APIs weiterhin überwacht werden.**
+
+Joshua Saxe argumentiert, dass GLM-5.2 einen Großteil der Überwachungs- und Account-Reibung beseitigt, die Angreifer bei Frontier-Coding-Agenten bisher eingeschränkt habe. Der Thread rahmt offene Gewichte plus private Bereitstellung als ernste Veränderung offensiver Fähigkeiten und fordert schnellere defensive Adaption statt Vertrauen auf API-Gatekeeping.
+
+Typ: Einschränkung | Datum: 2026-06-23
+
+---
+
 <a id="case-73"></a>
 ### Case 73: [Code Censorship And Bias Check](https://x.com/wongmjane/status/2068424945663893936) (von [@wongmjane](https://x.com/wongmjane))
 
@@ -1321,7 +1441,9 @@ Typ: Einschränkung | Datum: 2026-06-20
 
 Dieses Repository wurde von öffentlichen Erstellern, Entwicklern, Benchmark-Teams, Anbietern und Communities inspiriert, die echte GLM-5.2-Nutzungsnachweise teilten.
 
-Danke an diese hier vertretenen High-Signal-Quellen und Creator: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn).
+Danke an diese hier vertretenen High-Signal-Quellen und Creator: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
+
+Neu hinzugekommene Creator: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 
