@@ -37,7 +37,7 @@ Jeder Case-Titel verlinkt auf die öffentliche Quelle, jeder Autor auf das jewei
 
 ## 📊 Überblick
 
-- **109 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
+- **119 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
 - Deckt Vergleichstests und Grenzmodell-Bewertung, Coding-Agenten und Langkontext-Workflows, Praxisdemos und Beispiel-Builds, Anbieter- und Tool-Integrationen, Kosten, Preise und lokale Bereitstellung sowie Grenzen, Hinweise und Sicherheitssignale ab.
 - Jeder Case enthält die Originalquelle, die Creator-Attribution, ein knappes Nutzungs-Takeaway, den Evidenztyp und das Veröffentlichungsdatum.
 - Nutze dieses Repo, um praktische Workflows zu finden, Stärken und Grenzen zu vergleichen, Provider-Routen zu entdecken und echte Experimente nachzuvollziehen.
@@ -77,18 +77,21 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Abschnitt | Fälle |
 |---|---|
-| [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Fall 1-12, 60, 70, 72, 76, 90, 94 |
-| [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Fall 13-22, 62, 65, 66, 77, 80, 91, 102 |
+| [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Fall 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113 |
+| [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Fall 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119 |
 | [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Fall 23-30, 71, 78, 81-82, 92, 99-100 |
-| [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Fall 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109 |
-| [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Fall 43-51, 64, 68, 88-89, 97-98, 106-107 |
-| [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Fall 52-59, 67, 73, 75, 103, 108 |
+| [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Fall 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116 |
+| [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Fall 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118 |
+| [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Fall 52-59, 67, 73, 75, 103, 108, 114 |
 | [🙏 Danksagung](#acknowledge) | Credits und Korrekturrichtlinie |
 
 ### [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation)
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 110: AA-Briefcase Time-Per-Task Frontier](#case-110) | Nutze diesen Fall, um GLM-5.2 bei langfristiger Wissensarbeit zu vergleichen, bei der die Zeit pro Aufgabe neben dem Benchmark-Score zählt. | Benchmark |
+| [Case 111: Code Arena Frontend Head-to-Head Margins](#case-111) | Nutze diesen Fall, um GLM-5.2s Frontend-Vorsprung über paarweise Head-to-Head-Ergebnisse statt nur über einen einzelnen Ranglisten-Screenshot zu prüfen. | Benchmark |
+| [Case 113: SWE Atlas Codebase QnA Runner-Up](#case-113) | Nutze diesen Fall, um GLM-5.2 über Codebase QnA, Test Writing und Refactoring zu verfolgen, statt nur einzelne SWE-Leaderboards zu betrachten. | Benchmark |
 | [Artificial Analysis Intelligence Index](#case-1) | Nutzen Sie den Beitrag „Künstliche Analyse“, um GLM-5.2 hinsichtlich Intelligenz und Kosten pro Aufgabe mit anderen Open-Weight- und proprietären Frontier-Modellen zu vergleichen. | Benchmark |
 | [Code Arena Frontend Ranking](#case-2) | Verwenden Sie diesen Fall, um GLM-5.2 anhand realer Front-End-Codierungsaufgaben zu bewerten, die anhand von Vergleichen im Arena-Stil beurteilt werden. | Benchmark |
 | [Design Arena First Place](#case-3) | Nutzen Sie diesen Fall, um zu beurteilen, ob GLM-5.2 Design-plus-Code-Aufgaben bewältigen kann und nicht nur textlastige Codierungs-Benchmarks. | Benchmark |
@@ -112,6 +115,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 117: OpenCode Go Refactor First-Pass Win](#case-117) | Nutze diesen Fall, um GLM-5.2 bei mittelgroßen Go-Refactorings in OpenCode zu bewerten, statt dich nur auf Benchmark-Behauptungen zu verlassen. | Bewertung |
+| [Case 119: Claude Code + Cursor $3.36 Default Run](#case-119) | Nutze diesen Fall, um GLM-5.2 als Daily Driver in Claude Code und Cursor einzuschätzen, bevor du mehr autonome Coding-Arbeit auf Open Weights verlagerst. | Bewertung |
 | [One Hour Forty Two Minute Refactor Loop](#case-13) | Verwenden Sie diesen Fall als Muster für ein langes autonomes Front-End-Refactoring mit TDD, Reviewer-Feedback und Regressionsprüfungen. | Demo |
 | [OpenCode Bug Fix And Implementation Test](#case-14) | Nutzen Sie diesen Fall, um GLM-5.2 als OpenCode-Coding-Agent für Fehlerbehebungen und eine kleine Implementierungsaufgabe zu testen. | Demo |
 | [OpenCode Retro Video Game Walkthrough](#case-15) | Verwenden Sie diese exemplarische Vorgehensweise, um ein kleines Spiel mit GLM-5.2 und OpenCode über eine einzige Eingabeaufforderung zu erstellen, und überprüfen Sie dann, wie das Modell Implementierungsdetails verarbeitet. | Tutorial |
@@ -151,6 +156,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 115: Command Code Fast 120-250 Tok/S Tier](#case-115) | Nutze diesen Fall, um eine schnellere GLM-5.2-Stufe in Command Code zu nutzen, wenn bei langfristigem Coding das Tempo wichtiger ist als nur der niedrigste Einstiegspreis. | Integration |
+| [Case 116: Vercel AI Gateway Fast GLM-5.2 API](#case-116) | Nutze diesen Fall, um GLM-5.2 Fast über Vercel AI Gateway zu routen, wenn du serverlose Geschwindigkeit plus klare Token-Preise brauchst. | Integration |
 | [OpenCode Go Availability](#case-31) | Verwenden Sie diesen Fall, um die GLM-5.2-Verfügbarkeit in OpenCode Go-Workflows mit Text, 1M-Kontext und GLM-5.1-ähnlichen Preisen zu verfolgen. | Integration |
 | [Ollama Cloud Availability](#case-32) | Verwenden Sie diesen Fall, um GLM-5.2 für zugängliche Open-Source-Codierungsmodellexperimente in die Ollama Cloud zu leiten. | Integration |
 | [OpenRouter One API Call Access](#case-33) | Verwenden Sie diesen Fall, um über OpenRouter auf GLM-5.2 zuzugreifen, wenn Sie Provider-Routing oder Multi-Modell-Stacks vergleichen. | Integration |
@@ -180,6 +187,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 112: 4x RTX PRO 6000 Terminal-Bench 2.0 Run](#case-112) | Nutze diesen Fall, um ein lokales GLM-5.2-Setup mit vier GPUs an einem harten Terminal-Benchmark auszurichten, bevor du dich auf einen High-End-Workstation-Build festlegst. | Bewertung |
+| [Case 118: Local Crackme Solve On 2x RTX PRO 6000 Blackwells](#case-118) | Nutze diesen Fall, um zu beurteilen, ob ein ernsthaftes lokales GLM-5.2-Setup lange Reverse-Engineering-Aufgaben ohne Debugger-Zugriff abschließen kann. | Demo |
 | [Output Token Cost Comparison](#case-43) | Verwenden Sie diesen Fall, um die Ökonomie des GLM-5.2-Ausgabetokens mit Modellen im Opus-, Fable- und GPT-5.5-Stil zu vergleichen. | Bewertung |
 | [Local Near-Frontier Hardware ROI](#case-44) | Nutzen Sie diesen Fall, um zu überlegen, ob selbsthostende GLM-5.2-ähnliche Modelle die Hardwarekosten für Benutzer mit hohem Agentenaufwand decken können. | Bewertung |
 | [MLX On Two Mac Studios](#case-45) | Nutzen Sie diesen Fall, um lokale GLM-5.2-Ausführungen auf Apple-Hardware und MLX-orientierte Setups zu erkunden. | Demo |
@@ -200,6 +209,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 114: Braintrust Model-Swap Cost Caveat](#case-114) | Nutze diesen Fall, um nicht anzunehmen, dass ein günstigerer Modellwechsel in einem echten agentischen Coding-Workflow die Qualität erhält. | Bewertung |
 | [No Vision Caveat](#case-52) | Bedenken Sie in diesem Fall, dass GLM-5.2 für Arbeitsabläufe, die native Bildverarbeitungsfunktionen erfordern, möglicherweise weniger nützlich ist. | Einschränkung |
 | [Vorsichtsmaßnahme zur Agentenlücke in der realen Welt](#case-53) | Verwenden Sie diesen Fall, um zu vermeiden, dass Benchmark-Siege als Beweis dafür, dass GLM-5.2 bei allen bereitgestellten Agentenaufgaben mit den besten proprietären Modellen übereinstimmt, überbewertet werden. | Einschränkung |
 | [Safety Guardrail Concern](#case-54) | Verwenden Sie diesen Fall als Erinnerung daran, Sicherheitsbewertungen durchzuführen, bevor Sie GLM-5.2 in sensiblen Domänen bereitstellen. | Einschränkung |
@@ -415,6 +425,39 @@ Typ: Bewertung | Datum: 2026-06-22
 
 ---
 
+<a id="case-110"></a>
+### Case 110: [AA-Briefcase Time-Per-Task Frontier](https://x.com/ArtificialAnlys/status/2069914443639635978) (von [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**Nutze diesen Fall, um GLM-5.2 bei langfristiger Wissensarbeit zu vergleichen, bei der die Zeit pro Aufgabe neben dem Benchmark-Score zählt.**
+
+Artificial Analysis sagt, dass GLM-5.2 mit einem Score von 1261 und durchschnittlich 16,3 Minuten pro Aufgabe auf der Pareto-Frontier von AA-Briefcase liegt, vor GPT-5.5 xhigh mit 1159, und dabei zugleich das bestplatzierte Open-Weights-Modell im Benchmark bleibt. Der Beitrag macht daraus einen nützlichen Benchmark für Teams, die Qualität bei Long-Horizon-Deliverables gegen Laufzeit abwägen wollen und nicht nur rohe Leaderboard-Ränge betrachten.
+
+Typ: Benchmark | Datum: 2026-06-24
+
+---
+
+<a id="case-111"></a>
+### Case 111: [Code Arena Frontend Head-to-Head Margins](https://x.com/arena/status/2069885722333769963) (von [@arena](https://x.com/arena))
+
+**Nutze diesen Fall, um GLM-5.2s Frontend-Vorsprung über paarweise Head-to-Head-Ergebnisse statt nur über einen einzelnen Ranglisten-Screenshot zu prüfen.**
+
+arena schlüsselt auf, warum GLM-5.2 Max die Spitze von Code Arena: Frontend erreicht hat, und sagt, das Modell liege in allen Paarungen bis auf eine beim Win Share vorn. Der Thread nennt 61,0 % gegen Kimi-K2.6, 59,4 % gegen Sonnet 4.6, 55,0 % gegen Opus 4.7 Thinking, ein knappes 41,7 % zu 40,0 % gegen GPT-5.5 xHigh sowie ein 45,5 %-Unentschieden gegen GLM-5.1.
+
+Typ: Benchmark | Datum: 2026-06-24
+
+---
+
+<a id="case-113"></a>
+### Case 113: [SWE Atlas Codebase QnA Runner-Up](https://x.com/ScaleAILabs/status/2069864932913631617) (von [@ScaleAILabs](https://x.com/ScaleAILabs))
+
+**Nutze diesen Fall, um GLM-5.2 über Codebase QnA, Test Writing und Refactoring zu verfolgen, statt nur einzelne SWE-Leaderboards zu betrachten.**
+
+Scale AI Labs sagt, dass GLM 5.2 jetzt auf allen drei SWE-Atlas-Leaderboards live ist: Codebase QnA, Test Writing und Refactoring. Der Beitrag hebt ein Ergebnis auf Platz zwei bei Codebase QnA hervor und beschreibt offene Modelle als inzwischen übergreifend konkurrenzfähig zu Frontier-Systemen.
+
+Typ: Benchmark | Datum: 2026-06-24
+
+---
+
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Coding-Agenten und Langkontext-Workflows
 
@@ -603,6 +646,28 @@ Typ: Bewertung | Datum: 2026-06-22
 Cole Murray teilte einen Stack aus OpenInspect, Remote-Code-Runner und Fireworks FP8 GLM-5.2, der Background-Agenten auf selbst gehosteter Infrastruktur ausführt. Der Beitrag positioniert das Setup als offene Alternative zu gehosteten Agentenprodukten und verweist auf ein bereitgestelltes Runbook.
 
 Typ: Integration | Datum: 2026-06-23
+
+---
+
+<a id="case-117"></a>
+### Case 117: [OpenCode Go Refactor First-Pass Win](https://x.com/vedovelli74/status/2069889605969592500) (von [@vedovelli74](https://x.com/vedovelli74))
+
+**Nutze diesen Fall, um GLM-5.2 bei mittelgroßen Go-Refactorings in OpenCode zu bewerten, statt dich nur auf Benchmark-Behauptungen zu verlassen.**
+
+vedovelli74 berichtet über einen ersten OpenCode-Lauf für das Refactoring einer mittelgroßen GoLang-Codebasis und sagt, GLM-5.2 sei schneller als Opus 4.8, tokeneffizienter und bei der Ersteinschätzung des nötigen Refactorings korrekt gewesen. Der Autor ergänzt, dass das Ergebnis später gegen Codex und Opus validiert wurde und bei der Lieferqualität weiterhin vorn lag.
+
+Typ: Bewertung | Datum: 2026-06-24
+
+---
+
+<a id="case-119"></a>
+### Case 119: [Claude Code + Cursor $3.36 Default Run](https://x.com/clairevo/status/2069828122640548204) (von [@clairevo](https://x.com/clairevo))
+
+**Nutze diesen Fall, um GLM-5.2 als Daily Driver in Claude Code und Cursor einzuschätzen, bevor du mehr autonome Coding-Arbeit auf Open Weights verlagerst.**
+
+clairevo sagt, GLM 5.2 sei inzwischen das Standardmodell in Claude Code und Cursor bei bislang 3,36 US-Dollar Laufkosten und vermittle dabei eine Coding-Qualität auf Opus-Niveau. Der Beitrag verweist außerdem auf einen OpenRouter-Setup-Pfad, Eindrücke zum Frontend-Design und die Review eines lang laufenden autonomen Tasks als Gründe für diese Präferenz.
+
+Typ: Bewertung | Datum: 2026-06-24
 
 ---
 
@@ -1076,6 +1141,28 @@ Typ: Integration | Datum: 2026-06-23
 
 ---
 
+<a id="case-115"></a>
+### Case 115: [Command Code Fast 120-250 Tok/S Tier](https://x.com/CommandCodeAI/status/2069891896881857016) (von [@CommandCodeAI](https://x.com/CommandCodeAI))
+
+**Nutze diesen Fall, um eine schnellere GLM-5.2-Stufe in Command Code zu nutzen, wenn bei langfristigem Coding das Tempo wichtiger ist als nur der niedrigste Einstiegspreis.**
+
+Command Code kündigte GLM-5.2 Fast als High-Throughput-Build an, der dieselbe Frontier-Coding-Positionierung beibehält und die Geschwindigkeit gleichzeitig auf 120-250 Tokens pro Sekunde erhöht. Der Beitrag sagt außerdem, dass die Stufe 1M Kontext, Tool Use und Reasoning beibehält und ab dem Ein-Dollar-Go-Plan mit 10 US-Dollar Usage Credits und darüber verfügbar ist.
+
+Typ: Integration | Datum: 2026-06-24
+
+---
+
+<a id="case-116"></a>
+### Case 116: [Vercel AI Gateway Fast GLM-5.2 API](https://x.com/wafer_ai/status/2069869501190152528) (von [@wafer_ai](https://x.com/wafer_ai))
+
+**Nutze diesen Fall, um GLM-5.2 Fast über Vercel AI Gateway zu routen, wenn du serverlose Geschwindigkeit plus klare Token-Preise brauchst.**
+
+wafer_ai sagt, dass GLM-5.2 Fast im Vercel AI Gateway live ist, mit 150-250 Tokens pro Sekunde, einem 1M-Token-Kontextfenster und gelisteten Preisen von 3,00 US-Dollar Input, 10,25 US-Dollar Output und 0,50 US-Dollar Cache pro 1M Tokens. Das macht den Beitrag zu einem konkreten Hinweis auf gehosteten Zugriff für Teams, die Durchsatz und vorhersehbare Gateway-Preise priorisieren.
+
+Typ: Integration | Datum: 2026-06-24
+
+---
+
 <a id="case-95"></a>
 ### Case 95: [Claude Code Through Baseten](https://x.com/thealexker/status/2069163621469335757) (von [@thealexker](https://x.com/thealexker))
 
@@ -1289,6 +1376,28 @@ Typ: Bewertung | Datum: 2026-06-23
 
 ---
 
+<a id="case-112"></a>
+### Case 112: [4x RTX PRO 6000 Terminal-Bench 2.0 Run](https://x.com/0xSero/status/2069871347010838586) (von [@0xSero](https://x.com/0xSero))
+
+**Nutze diesen Fall, um ein lokales GLM-5.2-Setup mit vier GPUs an einem harten Terminal-Benchmark auszurichten, bevor du dich auf einen High-End-Workstation-Build festlegst.**
+
+0xSero berichtet über einen GLM-5.2-REAP-NVFP4-Lauf mit 69,1 % auf Terminal Bench 2.0 und rahmt ihn als höchstes Terminal-Bench-Ergebnis unter Modellen ein, die auf 4x RTX PRO 6000 passen. Das macht den Beitrag zu einem konkreten Signal für lokale Bereitstellung für Teams, die quantisierte Open-Weight-Setups gegen gehostete Frontier-Terminals abwägen.
+
+Typ: Bewertung | Datum: 2026-06-24
+
+---
+
+<a id="case-118"></a>
+### Case 118: [Local Crackme Solve On 2x RTX PRO 6000 Blackwells](https://x.com/CardilloSamuel/status/2069887782508753302) (von [@CardilloSamuel](https://x.com/CardilloSamuel))
+
+**Nutze diesen Fall, um zu beurteilen, ob ein ernsthaftes lokales GLM-5.2-Setup lange Reverse-Engineering-Aufgaben ohne Debugger-Zugriff abschließen kann.**
+
+CardilloSamuel sagt, dass eine lokale GLM-5.2-Instanz auf 2x RTX PRO 6000 Blackwells mit rund 300 GB RAM eine Crackme-Challenge in 78 Minuten bei ungefähr 14 Tokens pro Sekunde über OpenCode gelöst habe. Laut Beitrag hatte das Harness weder Debugger- noch MCP-Zugriff, und das Modell habe dennoch Speicheradressen ausgegeben, Hypothesen getestet und die Anweisungen befolgt, statt die Binärdatei zu patchen.
+
+Typ: Demo | Datum: 2026-06-24
+
+---
+
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Grenzen, Hinweise und Sicherheitssignale
 
@@ -1413,6 +1522,17 @@ Typ: Einschränkung | Datum: 2026-06-23
 
 ---
 
+<a id="case-114"></a>
+### Case 114: [Braintrust Model-Swap Cost Caveat](https://x.com/ankrgyl/status/2069869387549446597) (von [@ankrgyl](https://x.com/ankrgyl))
+
+**Nutze diesen Fall, um nicht anzunehmen, dass ein günstigerer Modellwechsel in einem echten agentischen Coding-Workflow die Qualität erhält.**
+
+ankrgyl sagt, Braintrust habe Opus 4.8 und GLM-5.2 in einem Workflow verglichen, der von einem Repository-Commit und einer Bug-Beschreibung ausgeht und anschließend den resultierenden Fix bewertet. In diesem einfachen Tausch habe GLM-5.2 laut Beitrag ähnliche Kosten, längere Laufzeit, eine niedrigere Erfolgsquote und insgesamt geringere Effizienz gezeigt.
+
+Typ: Bewertung | Datum: 2026-06-24
+
+---
+
 <a id="case-73"></a>
 ### Case 73: [Code Censorship And Bias Check](https://x.com/wongmjane/status/2068424945663893936) (von [@wongmjane](https://x.com/wongmjane))
 
@@ -1443,7 +1563,7 @@ Dieses Repository wurde von öffentlichen Erstellern, Entwicklern, Benchmark-Tea
 
 Danke an diese hier vertretenen High-Signal-Quellen und Creator: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
 
-Neu hinzugekommene Creator: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb).
+Neu hinzugekommene Creator: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 

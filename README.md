@@ -37,7 +37,7 @@ Each case title links to its public source, and each author handle links to the 
 
 ## 📊 Overview
 
-- **109 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
+- **119 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
 - Covers Benchmarks & Frontier Evaluation, Coding Agents & Long-Context Workflows, Hands-On Demos & Showcase Builds, Provider & Tool Integrations, Cost, Pricing & Local Deployment, Limits, Caveats & Safety Signals.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Use this repo to find practical workflows, compare strengths and limits, discover provider routes, and follow real hands-on experiments.
@@ -77,18 +77,21 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Section | Cases |
 |---|---|
-| [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94 |
-| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102 |
+| [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113 |
+| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119 |
 | [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100 |
-| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109 |
-| [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107 |
-| [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108 |
+| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116 |
+| [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118 |
+| [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114 |
 | [🙏 Acknowledge](#acknowledge) | Credits and correction policy |
 
 ### [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation)
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 110: AA-Briefcase Time-Per-Task Frontier](#case-110) | Use this case to compare GLM-5.2 on long-horizon knowledge-work tasks where time per task matters alongside benchmark score. | Benchmark |
+| [Case 111: Code Arena Frontend Head-to-Head Margins](#case-111) | Use this case to inspect GLM-5.2's frontend edge through pairwise head-to-head results instead of relying on a single rank screenshot. | Benchmark |
+| [Case 113: SWE Atlas Codebase QnA Runner-Up](#case-113) | Use this case to track GLM-5.2 across codebase QnA, test writing, and refactoring rather than only single-task SWE leaderboards. | Benchmark |
 | [Artificial Analysis Intelligence Index](#case-1) | Use the Artificial Analysis post to compare GLM-5.2 against other open-weight and proprietary frontier models on intelligence and cost per task. | Benchmark |
 | [Code Arena Frontend Ranking](#case-2) | Use this case to evaluate GLM-5.2 on real front-end coding tasks judged by arena-style comparisons. | Benchmark |
 | [Design Arena First Place](#case-3) | Use this case to judge whether GLM-5.2 can handle design-plus-code tasks rather than only text-heavy coding benchmarks. | Benchmark |
@@ -112,6 +115,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 117: OpenCode Go Refactor First-Pass Win](#case-117) | Use this case to evaluate GLM-5.2 on medium-sized Go refactors inside OpenCode instead of relying only on benchmark claims. | Evaluation |
+| [Case 119: Claude Code + Cursor $3.36 Default Run](#case-119) | Use this case to gauge GLM-5.2 as a daily driver in Claude Code and Cursor before moving more autonomous coding work onto open weights. | Evaluation |
 | [One Hour Forty Two Minute Refactor Loop](#case-13) | Use this case as a pattern for long autonomous front-end refactoring with TDD, reviewer feedback, and regression checks. | Demo |
 | [OpenCode Bug Fix And Implementation Test](#case-14) | Use this case to test GLM-5.2 as an OpenCode coding agent for bug fixes plus a small implementation task. | Demo |
 | [OpenCode Retro Video Game Walkthrough](#case-15) | Use this walkthrough to build a small game with GLM-5.2 and OpenCode from a single prompt, then inspect how the model handles implementation details. | Tutorial |
@@ -154,6 +159,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 115: Command Code Fast 120-250 Tok/S Tier](#case-115) | Use this case to access a faster GLM-5.2 tier in Command Code when long-horizon coding speed matters more than only the lowest entry price. | Integration |
+| [Case 116: Vercel AI Gateway Fast GLM-5.2 API](#case-116) | Use this case to route GLM-5.2 Fast through Vercel AI Gateway when you need serverless speed plus explicit token pricing. | Integration |
 | [OpenCode Go Availability](#case-31) | Use this case to track GLM-5.2 availability inside OpenCode Go workflows with text, 1M context, and GLM-5.1-like pricing. | Integration |
 | [Ollama Cloud Availability](#case-32) | Use this case to route GLM-5.2 into Ollama Cloud for accessible open-source coding-model experiments. | Integration |
 | [OpenRouter One API Call Access](#case-33) | Use this case to access GLM-5.2 through OpenRouter when comparing provider routing or multi-model stacks. | Integration |
@@ -188,6 +195,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 112: 4x RTX PRO 6000 Terminal-Bench 2.0 Run](#case-112) | Use this case to size a four-GPU local GLM-5.2 setup against a hard terminal benchmark before committing to a high-end workstation build. | Evaluation |
+| [Case 118: Local Crackme Solve On 2x RTX PRO 6000 Blackwells](#case-118) | Use this case to judge whether a serious local GLM-5.2 setup can finish long reverse-engineering tasks without debugger access. | Demo |
 | [Output Token Cost Comparison](#case-43) | Use this case to compare GLM-5.2 output-token economics against Opus, Fable, and GPT-5.5-style models. | Evaluation |
 | [Local Near-Frontier Hardware ROI](#case-44) | Use this case to reason about whether self-hosting GLM-5.2-like models can repay hardware costs for heavy agent users. | Evaluation |
 | [MLX On Two Mac Studios](#case-45) | Use this case to explore local GLM-5.2 runs on Apple hardware and MLX-oriented setups. | Demo |
@@ -210,6 +219,7 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 114: Braintrust Model-Swap Cost Caveat](#case-114) | Use this case to avoid assuming a cheaper model swap will preserve quality in a real agentic coding workflow. | Evaluation |
 | [No Vision Caveat](#case-52) | Use this case to remember that GLM-5.2 may be less useful for workflows requiring native vision capability. | Limit |
 | [Real-World Agent Gap Caveat](#case-53) | Use this case to avoid over-reading benchmark wins as proof that GLM-5.2 matches the best proprietary models on all deployed agentic tasks. | Limit |
 | [Safety Guardrail Concern](#case-54) | Use this case as a reminder to run safety evaluations before deploying GLM-5.2 in sensitive domains. | Limit |
@@ -426,6 +436,38 @@ Type: Evaluation | Date: 2026-06-22
 
 ---
 
+<a id="case-110"></a>
+### Case 110: [AA-Briefcase Time-Per-Task Frontier](https://x.com/ArtificialAnlys/status/2069914443639635978) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**Use this case to compare GLM-5.2 on long-horizon knowledge-work tasks where time per task matters alongside benchmark score.**
+
+Artificial Analysis says GLM-5.2 sits on the AA-Briefcase Pareto frontier with a score of 1261 and an average time per task of 16.3 minutes, ahead of GPT-5.5 xhigh at 1159 while remaining the top open-weights model in the benchmark. The post makes this a useful benchmark for teams comparing long-horizon deliverable quality against runtime, not just raw leaderboard rank.
+
+Type: Benchmark | Date: 2026-06-24
+
+---
+
+<a id="case-111"></a>
+### Case 111: [Code Arena Frontend Head-to-Head Margins](https://x.com/arena/status/2069885722333769963) (by [@arena](https://x.com/arena))
+
+**Use this case to inspect GLM-5.2's frontend edge through pairwise head-to-head results instead of relying on a single rank screenshot.**
+
+arena breaks down why GLM-5.2 Max reached the top of Code Arena: Frontend, saying it posts a higher win share than its opponent in every pairing but one. The thread highlights 61.0% against Kimi-K2.6, 59.4% against Sonnet 4.6, 55.0% against Opus 4.7 Thinking, a tight 41.7% to 40.0% result versus GPT-5.5 xHigh, and a 45.5% tie against GLM-5.1.
+
+Type: Benchmark | Date: 2026-06-24
+
+---
+
+<a id="case-113"></a>
+### Case 113: [SWE Atlas Codebase QnA Runner-Up](https://x.com/ScaleAILabs/status/2069864932913631617) (by [@ScaleAILabs](https://x.com/ScaleAILabs))
+
+**Use this case to track GLM-5.2 across codebase QnA, test writing, and refactoring rather than only single-task SWE leaderboards.**
+
+Scale AI Labs says GLM 5.2 is now live on all three SWE Atlas leaderboards: Codebase QnA, Test Writing, and Refactoring. The post calls out a #2 result on Codebase QnA and describes open models as now rivaling frontier systems across the board.
+
+Type: Benchmark | Date: 2026-06-24
+
+---
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Coding Agents & Long-Context Workflows
@@ -617,6 +659,27 @@ Type: Integration | Date: 2026-06-23
 
 ---
 
+<a id="case-117"></a>
+### Case 117: [OpenCode Go Refactor First-Pass Win](https://x.com/vedovelli74/status/2069889605969592500) (by [@vedovelli74](https://x.com/vedovelli74))
+
+**Use this case to evaluate GLM-5.2 on medium-sized Go refactors inside OpenCode instead of relying only on benchmark claims.**
+
+vedovelli74 reports a first OpenCode run on a medium-sized GoLang codebase refactor and says GLM-5.2 was faster than Opus 4.8, more token-efficient, and correct on the first-pass assessment of what needed refactoring. The author adds that the result was later validated against Codex and Opus and still came out ahead on delivery quality.
+
+Type: Evaluation | Date: 2026-06-24
+
+---
+
+<a id="case-119"></a>
+### Case 119: [Claude Code + Cursor $3.36 Default Run](https://x.com/clairevo/status/2069828122640548204) (by [@clairevo](https://x.com/clairevo))
+
+**Use this case to gauge GLM-5.2 as a daily driver in Claude Code and Cursor before moving more autonomous coding work onto open weights.**
+
+clairevo says GLM 5.2 has become the default model in Claude Code and Cursor at a running cost of $3.36 so far, while giving off Opus-like coding quality. The post also points to an OpenRouter setup path, front-end design impressions, and a long-running autonomous task review as the reasons it won the author over.
+
+Type: Evaluation | Date: 2026-06-24
+
+---
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Hands-On Demos & Showcase Builds
@@ -1109,6 +1172,27 @@ Type: Integration | Date: 2026-06-23
 
 ---
 
+<a id="case-115"></a>
+### Case 115: [Command Code Fast 120-250 Tok/S Tier](https://x.com/CommandCodeAI/status/2069891896881857016) (by [@CommandCodeAI](https://x.com/CommandCodeAI))
+
+**Use this case to access a faster GLM-5.2 tier in Command Code when long-horizon coding speed matters more than only the lowest entry price.**
+
+Command Code announced GLM-5.2 Fast as a high-throughput build that keeps the same frontier-coding positioning while raising speed to 120-250 tokens per second. The post also says the tier keeps 1M context, tool use, and reasoning, and is available starting from the one-dollar Go plan with 10 dollars of usage credits and above.
+
+Type: Integration | Date: 2026-06-24
+
+---
+
+<a id="case-116"></a>
+### Case 116: [Vercel AI Gateway Fast GLM-5.2 API](https://x.com/wafer_ai/status/2069869501190152528) (by [@wafer_ai](https://x.com/wafer_ai))
+
+**Use this case to route GLM-5.2 Fast through Vercel AI Gateway when you need serverless speed plus explicit token pricing.**
+
+wafer_ai says GLM-5.2 Fast is live on the Vercel AI Gateway with 150-250 tokens per second, a 1M-token context window, and listed prices of $3.00 input, $10.25 output, and $0.50 cache per 1M tokens. That makes it a concrete hosted-access note for teams prioritizing throughput and predictable gateway pricing.
+
+Type: Integration | Date: 2026-06-24
+
+---
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Cost, Pricing & Local Deployment
@@ -1300,6 +1384,27 @@ Type: Evaluation | Date: 2026-06-23
 
 ---
 
+<a id="case-112"></a>
+### Case 112: [4x RTX PRO 6000 Terminal-Bench 2.0 Run](https://x.com/0xSero/status/2069871347010838586) (by [@0xSero](https://x.com/0xSero))
+
+**Use this case to size a four-GPU local GLM-5.2 setup against a hard terminal benchmark before committing to a high-end workstation build.**
+
+0xSero reports a GLM-5.2-REAP-NVFP4 run scoring 69.1% on Terminal Bench 2.0 and frames it as the highest terminal-bench result among models that fit on 4x RTX PRO 6000s. That makes it a concrete local-deployment signal for teams weighing quantized open-weight setups against hosted frontier terminals.
+
+Type: Evaluation | Date: 2026-06-24
+
+---
+
+<a id="case-118"></a>
+### Case 118: [Local Crackme Solve On 2x RTX PRO 6000 Blackwells](https://x.com/CardilloSamuel/status/2069887782508753302) (by [@CardilloSamuel](https://x.com/CardilloSamuel))
+
+**Use this case to judge whether a serious local GLM-5.2 setup can finish long reverse-engineering tasks without debugger access.**
+
+CardilloSamuel says a local GLM 5.2 instance running on 2x RTX PRO 6000 Blackwells with about 300 GB of RAM solved a crackme challenge in 78 minutes at roughly 14 tokens per second through OpenCode. The post says the harness had no debugger or MCP access, and that the model still dumped memory addresses, tested hypotheses, and followed the instructions instead of patching the binary.
+
+Type: Demo | Date: 2026-06-24
+
+---
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Limits, Caveats & Safety Signals
@@ -1447,12 +1552,23 @@ Type: Limit | Date: 2026-06-23
 
 ---
 
+<a id="case-114"></a>
+### Case 114: [Braintrust Model-Swap Cost Caveat](https://x.com/ankrgyl/status/2069869387549446597) (by [@ankrgyl](https://x.com/ankrgyl))
+
+**Use this case to avoid assuming a cheaper model swap will preserve quality in a real agentic coding workflow.**
+
+ankrgyl says Braintrust compared Opus 4.8 and GLM-5.2 on a workflow that starts from a repository commit and a bug description, then evaluates the resulting fix. In that basic swap, GLM-5.2 reportedly had similar cost, longer runtime, lower pass rate, and ended up less efficient overall.
+
+Type: Evaluation | Date: 2026-06-24
+
+---
+
 <a id="acknowledge"></a>
 ## 🙏 Acknowledge
 
 This repository was inspired by the creators, developers, benchmark teams, providers, and communities who shared real GLM-5.2 usage evidence publicly.
 
-Thanks to the high-signal source creators represented here: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
+Thanks to the high-signal source creators represented here: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo).
 
 
 Recent creators added: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb).
