@@ -89,6 +89,8 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 120: PostTrainBench Reliability Lead](#case-120) | Utilisez ce cas pour comparer GLM-5.2 Max sur la fiabilité des agents post-training, pas seulement sur le score headline, car le leaderboard signale aussi zéro run en échec sur 84 tâches. | Benchmark |
+| [Case 121: Fireworks + Faros 211-Task Repo Eval](#case-121) | Utilisez ce cas pour juger GLM-5.2 sur de vraies tâches d’ingénierie dans des repos privés plutôt que seulement sur des benchmarks publics, car le résultat publié couvre score, vitesse et coût par tâche. | Évaluation |
 | [Case 110: AA-Briefcase Time-Per-Task Frontier](#case-110) | Utilisez ce cas pour comparer GLM-5.2 sur du travail de connaissance à long horizon, où le temps par tâche compte autant que le score de benchmark. | Benchmark |
 | [Case 111: Code Arena Frontend Head-to-Head Margins](#case-111) | Utilisez ce cas pour examiner l’avantage front-end de GLM-5.2 via des résultats head-to-head par paire plutôt qu’avec une simple capture de classement. | Benchmark |
 | [Case 113: SWE Atlas Codebase QnA Runner-Up](#case-113) | Utilisez ce cas pour suivre GLM-5.2 sur Codebase QnA, Test Writing et Refactoring plutôt qu’en ne regardant qu’un seul leaderboard SWE. | Benchmark |
@@ -115,6 +117,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 122: One-Shot Telegram Bot With AgentRouter](#case-122) | Utilisez ce cas pour tester si GLM-5.2 peut inférer des defaults orientés production dans un build one-shot avec agent de code, au lieu de produire seulement le chemin minimal qui fonctionne. | Démo |
 | [Case 117: OpenCode Go Refactor First-Pass Win](#case-117) | Utilisez ce cas pour évaluer GLM-5.2 sur des refactors Go de taille moyenne dans OpenCode plutôt que de vous fier seulement aux promesses de benchmark. | Évaluation |
 | [Case 119: Claude Code + Cursor $3.36 Default Run](#case-119) | Utilisez ce cas pour jauger GLM-5.2 comme daily driver dans Claude Code et Cursor avant de déplacer davantage de travail de coding autonome vers les open weights. | Évaluation |
 | [One Hour Forty Two Minute Refactor Loop](#case-13) | Utilisez ce cas comme modèle pour une longue refactorisation frontale autonome avec TDD, les commentaires des réviseurs et les contrôles de régression. | Démo |
@@ -138,6 +141,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 123: Recast Six-Variation Landing-Page Loop](#case-123) | Utilisez ce cas pour prototyper des landing pages à faible coût en générant d’abord plusieurs variantes GLM-5.2, puis en faisant passer la meilleure dans un agent de code. | Tutoriel |
 | [Playable Backrooms One-Shot](#case-23) | Utilisez ce cas pour comparer le résultat, la durée d'exécution et le coût de la création de jeux avec la même invite entre GLM-5.2 et Opus 4.8. | Démo |
 | [Trois constructions réelles avec des résultats mitigés](#case-24) | Utilisez ce cas comme un ensemble de démonstration d'avertissement : testez plusieurs versions réelles avant de faire confiance à un modèle pour des tâches de production de jeux ou de vidéos. | Évaluation |
 | [Super Mario Clone In ZCode](#case-25) | Utilisez ce cas pour évaluer la création de jeux itérative avec GLM-5.2 et ZCode sur plusieurs passes de correctifs et de fonctionnalités. | Démo |
@@ -156,6 +160,8 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 124: HuggingChat Website Builder To HF Space](#case-124) | Utilisez ce cas pour essayer GLM-5.2 dans un flux presque gratuit de site personnel, de la recherche dans HuggingChat jusqu’au déploiement statique sur Hugging Face Spaces. | Tutoriel |
+| [Case 125: DigitalOcean Inference Engine Availability](#case-125) | Utilisez ce cas pour faire passer GLM-5.2 par une infrastructure managée quand vous voulez un accès provider officiel sans auto-héberger vous-même le modèle à contexte 1M. | Intégration |
 | [Case 115: Command Code Fast 120-250 Tok/S Tier](#case-115) | Utilisez ce cas pour accéder à un palier GLM-5.2 plus rapide dans Command Code quand la vitesse de coding à long horizon compte plus que le prix d’entrée minimal. | Intégration |
 | [Case 116: Vercel AI Gateway Fast GLM-5.2 API](#case-116) | Utilisez ce cas pour router GLM-5.2 Fast via Vercel AI Gateway quand vous avez besoin de vitesse serverless avec des prix token explicites. | Intégration |
 | [OpenCode Go Availability](#case-31) | Utilisez ce cas pour suivre la disponibilité de GLM-5.2 dans les workflows OpenCode Go avec du texte, un contexte 1M et une tarification de type GLM-5.1. | Intégration |
@@ -209,6 +215,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 126: Rust Bug Harness Pass With 7x Turn Gap](#case-126) | Utilisez ce cas pour dissocier l’avantage de GLM-5.2 en qualité de code de sa surcharge actuelle dans le harness d’agent, car le modèle peut passer le bug tout en dépensant bien plus de tours qu’Opus. | Évaluation |
 | [Case 114: Braintrust Model-Swap Cost Caveat](#case-114) | Utilisez ce cas pour éviter de supposer qu’un swap vers un modèle moins cher préservera la qualité dans un vrai workflow agentique de coding. | Évaluation |
 | [No Vision Caveat](#case-52) | Utilisez ce cas pour vous rappeler que GLM-5.2 peut être moins utile pour les flux de travail nécessitant une capacité de vision native. | Limite |
 | [Mise en garde sur les écarts d'agents dans le monde réel](#case-53) | Utilisez ce cas pour éviter de surlire les résultats des tests comme preuve que GLM-5.2 correspond aux meilleurs modèles propriétaires sur toutes les tâches agentiques déployées. | Limite |
@@ -411,6 +418,28 @@ Type: Évaluation | Date: 2026-06-20
 Artificial Analysis rapporte GLM-5.2 à 1524 Elo sur GDPval-AA, #3 au classement général derrière Claude Fable 5 et Opus 4.8, et légèrement devant GPT-5.5 xhigh à 1509. C’est de loin le meilleur modèle open-weights, et le post indique que le benchmark a moyenné environ 31 tours par tâche sur 1,999 matchs.
 
 Type: Évaluation | Date: 2026-06-22
+
+---
+
+<a id="case-120"></a>
+### Case 120: [PostTrainBench Reliability Lead](https://x.com/hrdkbhatnagar/status/2070244540108423427) (par [@hrdkbhatnagar](https://x.com/hrdkbhatnagar))
+
+**Utilisez ce cas pour comparer GLM-5.2 Max sur la fiabilité des agents post-training, pas seulement sur le score headline, car le leaderboard signale aussi zéro run en échec sur 84 tâches.**
+
+hrdkbhatnagar a partagé un leaderboard PostTrainBench où GLM 5.2 Max reasoning atteint 34,29 %, juste devant Opus 4.8 Max à 34,08 %. Le même post précise aussi que GLM n’a enregistré aucun run échoué sur 84 exécutions, contre environ 10 % de taux d’échec pour les agents Opus, ce qui en fait un benchmark utile pour les équipes qui valorisent la fiabilité de l’agent autant que le taux de réussite brut.
+
+Type: Benchmark | Date: 2026-06-25
+
+---
+
+<a id="case-121"></a>
+### Case 121: [Fireworks + Faros 211-Task Repo Eval](https://x.com/FireworksAI_HQ/status/2070181898962534570) (par [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
+
+**Utilisez ce cas pour juger GLM-5.2 sur de vraies tâches d’ingénierie dans des repos privés plutôt que seulement sur des benchmarks publics, car le résultat publié couvre score, vitesse et coût par tâche.**
+
+Fireworks dit qu’une évaluation conjointe avec Faros sur 211 tâches d’ingénierie réelles a placé Claude Code + GLM-5.2 devant Claude Code + Opus 4.8 et Codex + GPT-5.5. Les chiffres publiés sont un judge score de 0,568 contre 0,521 et 0,466, 321 secondes par tâche contre 775 et 392, et 0,92 dollar par tâche contre 1,76 et 2,06, avec la précision que Faros a utilisé ses propres dépôts et son propre travail, et pas seulement des benchmarks publics.
+
+Type: Évaluation | Date: 2026-06-25
 
 ---
 
@@ -660,6 +689,17 @@ Type: Évaluation | Date: 2026-06-22
 
 ---
 
+<a id="case-122"></a>
+### Case 122: [One-Shot Telegram Bot With AgentRouter](https://x.com/MatinSenPai/status/2070259817818812701) (par [@MatinSenPai](https://x.com/MatinSenPai))
+
+**Utilisez ce cas pour tester si GLM-5.2 peut inférer des defaults orientés production dans un build one-shot avec agent de code, au lieu de produire seulement le chemin minimal qui fonctionne.**
+
+MatinSenPai explique avoir construit un bot Telegram en une seule passe avec GLM 5.2 à partir du même prompt que dans la vidéo, et dit que le modèle a ajouté de lui-même des détails pratiques. Le post mentionne le nettoyage automatique des fichiers après l’envoi de vidéos, le respect des limites de taille du Telegram Bot API avec un plafond par défaut de 50 MB, des auto-tests répétés avant de finir, une structure plus propre qu’un build précédent avec MiMo et environ 140K tokens ou près de 5 dollars d’usage reporté via AgentRouter.
+
+Type: Démo | Date: 2026-06-25
+
+---
+
 <a id="case-117"></a>
 ### Case 117: [OpenCode Go Refactor First-Pass Win](https://x.com/vedovelli74/status/2069889605969592500) (par [@vedovelli74](https://x.com/vedovelli74))
 
@@ -684,6 +724,17 @@ Type: Évaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Démos pratiques et exemples
+
+<a id="case-123"></a>
+### Case 123: [Recast Six-Variation Landing-Page Loop](https://x.com/nutlope/status/2070199649818779914) (par [@nutlope](https://x.com/nutlope))
+
+**Utilisez ce cas pour prototyper des landing pages à faible coût en générant d’abord plusieurs variantes GLM-5.2, puis en faisant passer la meilleure dans un agent de code.**
+
+nutlope décrit un workflow d’itération web centré sur GLM 5.2 et Recast : générer six variations de landing page à partir d’un seul prompt, choisir le meilleur design, télécharger ce code et poursuivre l’itération dans un agent de coding séparé. L’auteur dit que GLM-5.2 fonctionne bien ici parce qu’il est rapide, peu coûteux et fort en design, et affirme qu’avec le même budget on peut généralement produire trois à six variantes GLM pour chaque page générée avec Opus 4.8.
+
+Type: Tutoriel | Date: 2026-06-25
+
+---
 
 <a id="case-23"></a>
 ### Case 23: [Playable Backrooms One-Shot](https://x.com/aimlapi/status/2066996493257408639) (par [@aimlapi](https://x.com/aimlapi))
@@ -1141,6 +1192,28 @@ Type: Intégration | Date: 2026-06-23
 
 ---
 
+<a id="case-124"></a>
+### Case 124: [HuggingChat Website Builder To HF Space](https://x.com/victormustar/status/2070190742991994967) (par [@victormustar](https://x.com/victormustar))
+
+**Utilisez ce cas pour essayer GLM-5.2 dans un flux presque gratuit de site personnel, de la recherche dans HuggingChat jusqu’au déploiement statique sur Hugging Face Spaces.**
+
+victormustar dit qu’un compte Hugging Face fournit assez de crédits gratuits pour demander à GLM-5.2 dans HuggingChat de construire un site web, avec Exa utilisé pour faire la recherche de fond sur l’utilisateur. Le même post ajoute que le site obtenu peut ensuite être déployé gratuitement comme Hugging Face Space statique, ce qui en fait une voie concrète et peu coûteuse pour des expérimentations de site personnel.
+
+Type: Tutoriel | Date: 2026-06-25
+
+---
+
+<a id="case-125"></a>
+### Case 125: [DigitalOcean Inference Engine Availability](https://x.com/digitalocean/status/2070177703911719301) (par [@digitalocean](https://x.com/digitalocean))
+
+**Utilisez ce cas pour faire passer GLM-5.2 par une infrastructure managée quand vous voulez un accès provider officiel sans auto-héberger vous-même le modèle à contexte 1M.**
+
+DigitalOcean a annoncé GLM-5.1 et GLM-5.2 dans son Inference Engine, en positionnant le modèle pour des workflows de coding agentique pouvant durer jusqu’à huit heures avec une fenêtre de contexte de 1M tokens. Le post présente aussi cette route comme une intégration directe dans une stack existante via une tarification à l’usage et une infrastructure entièrement managée.
+
+Type: Intégration | Date: 2026-06-25
+
+---
+
 <a id="case-115"></a>
 ### Case 115: [Command Code Fast 120-250 Tok/S Tier](https://x.com/CommandCodeAI/status/2069891896881857016) (par [@CommandCodeAI](https://x.com/CommandCodeAI))
 
@@ -1522,6 +1595,17 @@ Type: Limite | Date: 2026-06-23
 
 ---
 
+<a id="case-126"></a>
+### Case 126: [Rust Bug Harness Pass With 7x Turn Gap](https://x.com/BohuTANG/status/2069979942608425364) (par [@BohuTANG](https://x.com/BohuTANG))
+
+**Utilisez ce cas pour dissocier l’avantage de GLM-5.2 en qualité de code de sa surcharge actuelle dans le harness d’agent, car le modèle peut passer le bug tout en dépensant bien plus de tours qu’Opus.**
+
+BohuTANG a comparé GLM-5.2 et Opus 4.6 sur le même bug Rust, l’issue 979 de serde_json, à travers trois agents : evot, Claude Code et Pi. Les six sessions ont passé, et l’auteur dit que la compréhension du bug et la qualité finale du code de GLM ont tenu, mais que GLM a eu besoin de 38, 43 et 61 tours là où Opus a fini en environ 18 tours et près de 80 secondes sur les trois agents. Les notes de trace attribuent l’écart à des boucles répétées autour de cargo et de l’environnement, à une mauvaise convergence et à des vérifications beaucoup plus longues.
+
+Type: Évaluation | Date: 2026-06-25
+
+---
+
 <a id="case-114"></a>
 ### Case 114: [Braintrust Model-Swap Cost Caveat](https://x.com/ankrgyl/status/2069869387549446597) (par [@ankrgyl](https://x.com/ankrgyl))
 
@@ -1563,7 +1647,7 @@ Ce référentiel a été inspiré par des créateurs publics, des développeurs,
 
 Merci aux créateurs et sources à fort signal représentés ici : [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan).
 
-Créateurs ajoutés récemment : [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo).
+Créateurs ajoutés récemment : [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 

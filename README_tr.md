@@ -89,6 +89,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 120: PostTrainBench Reliability Lead](#case-120) | GLM-5.2 Max'i yalnızca başlık skoru üzerinden değil, 84 görevde sıfır başarısız koşu bildiren ajan güvenilirliği üzerinden de karşılaştırmak için bu vakayı kullanın. | Kıyaslama |
+| [Case 121: Fireworks + Faros 211-Task Repo Eval](#case-121) | Yalnızca herkese açık benchmarklara bakmak yerine GLM-5.2'yi özel repo mühendislik görevlerinde değerlendirmek için bu vakayı kullanın; çünkü yayınlanan sonuç skor, hız ve görev başına maliyet içeriyor. | Değerlendirme |
 | [Case 110: AA-Briefcase Time-Per-Task Frontier](#case-110) | GLM-5.2’yi, benchmark puanının yanında görev başına sürenin de önemli olduğu uzun ufuklu bilgi işi üzerinde karşılaştırmak için bu vakayı kullanın. | Kıyaslama |
 | [Case 111: Code Arena Frontend Head-to-Head Margins](#case-111) | GLM-5.2’nin frontend avantajını tek bir sıralama ekranı yerine ikili head-to-head sonuçlarla incelemek için bu vakayı kullanın. | Kıyaslama |
 | [Case 113: SWE Atlas Codebase QnA Runner-Up](#case-113) | GLM-5.2’yi yalnızca tek görevli SWE leaderboard’ları yerine codebase QnA, test yazımı ve refactor alanlarında izlemek için bu vakayı kullanın. | Kıyaslama |
@@ -115,6 +117,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 122: One-Shot Telegram Bot With AgentRouter](#case-122) | GLM-5.2'nin bir one-shot kod ajanı yapısında yalnızca minimum çalışan yolu üretmek yerine üretim düşüncesine yakın varsayımlar çıkarıp çıkaramadığını test etmek için bu vakayı kullanın. | Demo |
 | [Case 117: OpenCode Go Refactor First-Pass Win](#case-117) | GLM-5.2’yi yalnızca benchmark iddialarıyla değil, OpenCode içindeki orta ölçekli Go refactor işiyle değerlendirmek için bu vakayı kullanın. | Değerlendirme |
 | [Case 119: Claude Code + Cursor $3.36 Default Run](#case-119) | Daha otonom coding işlerini open weights’e taşımadan önce GLM-5.2’nin Claude Code ve Cursor içinde günlük varsayılan model olup olamayacağını görmek için bu vakayı kullanın. | Değerlendirme |
 | [One Hour Forty Two Minute Refactor Loop](#case-13) | Bu durumu, TDD, gözden geçiren geri bildirimi ve regresyon kontrolleri ile uzun, otonom ön uç yeniden düzenleme için bir model olarak kullanın. | Demo |
@@ -139,6 +142,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 123: Recast Six-Variation Landing-Page Loop](#case-123) | Önce birkaç GLM-5.2 varyasyonu üretip ardından en güçlü sonucu bir kod ajanına taşıyarak landing page prototiplemeyi ucuzlatmak için bu vakayı kullanın. | Öğretici |
 | [Playable Backrooms One-Shot](#case-23) | GLM-5.2 ile Opus 4.8 arasındaki aynı istemde oyun oluşturma çıktısını, çalışma süresini ve maliyetini karşılaştırmak için bu durumu kullanın. | Demo |
 | [Karışık Sonuçlara Sahip Üç Gerçek Yapı](#case-24) | Bu durumu uyarıcı bir demo seti olarak kullanın: üretim oyunu veya video görevleri için bir modele güvenmeden önce birden fazla gerçek yapıyı test edin. | Değerlendirme |
 | [Super Mario Clone In ZCode](#case-25) | Birkaç düzeltme ve özellik geçişi üzerinden GLM-5.2 ve ZCode ile yinelemeli oyun oluşturmayı değerlendirmek için bu durumu kullanın. | Demo |
@@ -159,6 +163,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 124: HuggingChat Website Builder To HF Space](#case-124) | HuggingChat araştırmasından Hugging Face Spaces üzerindeki statik deploy'a kadar uzanan neredeyse ücretsiz kişisel site akışında GLM-5.2'yi denemek için bu vakayı kullanın. | Öğretici |
+| [Case 125: DigitalOcean Inference Engine Availability](#case-125) | 1M bağlamlı modeli kendiniz barındırmadan resmi sağlayıcı erişimi istediğinizde GLM-5.2'yi yönetilen altyapı üzerinden yönlendirmek için bu vakayı kullanın. | Entegrasyon |
 | [Case 115: Command Code Fast 120-250 Tok/S Tier](#case-115) | Uzun ufuklu coding hızının en düşük giriş fiyatından daha önemli olduğu durumlarda Command Code içindeki daha hızlı GLM-5.2 katmanına erişmek için bu vakayı kullanın. | Entegrasyon |
 | [Case 116: Vercel AI Gateway Fast GLM-5.2 API](#case-116) | serverless hız ve açık token fiyatlandırması gerektiğinde GLM-5.2 Fast’i Vercel AI Gateway üzerinden yönlendirmek için bu vakayı kullanın. | Entegrasyon |
 | [OpenCode Go Availability](#case-31) | Metin, 1M bağlamı ve GLM-5.1 benzeri fiyatlandırma ile OpenCode Go iş akışları içindeki GLM-5.2 kullanılabilirliğini izlemek için bu durumu kullanın. | Entegrasyon |
@@ -219,6 +225,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 126: Rust Bug Harness Pass With 7x Turn Gap](#case-126) | GLM-5.2'nin kod kalitesi tarafındaki artısını mevcut ajan harness yükünden ayırmak için bu vakayı kullanın; çünkü model hatayı geçebiliyor ama Opus'tan çok daha fazla tur harcıyor. | Değerlendirme |
 | [Case 114: Braintrust Model-Swap Cost Caveat](#case-114) | Daha ucuz bir model değişiminin gerçek bir agentic coding workflow’unda kaliteyi koruyacağını varsaymamak için bu vakayı kullanın. | Değerlendirme |
 | [No Vision Caveat](#case-52) | GLM-5.2'nin yerel görme yeteneği gerektiren iş akışları için daha az kullanışlı olabileceğini hatırlamak için bu durumu kullanın. | Sınır |
 | [Gerçek Dünyadaki Ajan Boşluğu Uyarısı](#case-53) | GLM-5.2'nin tüm dağıtılan aracı görevlerde en iyi özel modellerle eşleştiğinin kanıtı olarak kıyaslama kazanımlarını aşırı okumaktan kaçınmak için bu durumu kullanın. | Sınır |
@@ -432,6 +439,28 @@ Tür: Değerlendirme | Tarih: 2026-06-22
 Design Arena, GLM-5.2’nin Game Dev Arena’da 1368 Elo aldığını, bunun GLM-5.1’e göre 29 puanlık artış ve altı sıra yükseliş anlamına geldiğini bildirdi. Gönderi modeli Claude Fable 5 ile aynı performans bandına koyuyor ve genel sıralamada ikinci olduğunu, lab düzeyinde OpenAI’ın önünde ve yalnızca Anthropic’in arkasında yer aldığını söylüyor.
 
 Tür: Değerlendirme | Tarih: 2026-06-22
+
+---
+
+<a id="case-120"></a>
+### Case 120: [PostTrainBench Reliability Lead](https://x.com/hrdkbhatnagar/status/2070244540108423427) (yazan [@hrdkbhatnagar](https://x.com/hrdkbhatnagar))
+
+**GLM-5.2 Max'i yalnızca başlık skoru üzerinden değil, 84 görevde sıfır başarısız koşu bildiren ajan güvenilirliği üzerinden de karşılaştırmak için bu vakayı kullanın.**
+
+hrdkbhatnagar, GLM 5.2 Max reasoning'in %34,29 ile Opus 4.8 Max'in %34,08 sonucunu az farkla geçtiği bir PostTrainBench liderlik tablosu paylaştı. Aynı gönderi, GLM'nin 84 çalışmada sıfır başarısız koşu kaydettiğini; Opus ajanlarında ise yaklaşık %10 başarısızlık oranı görüldüğünü söylüyor. Bu da ham başarı oranı kadar ajan güvenilirliğini önemseyen ekipler için kıymetli bir benchmark yapıyor.
+
+Tür: Kıyaslama | Tarih: 2026-06-25
+
+---
+
+<a id="case-121"></a>
+### Case 121: [Fireworks + Faros 211-Task Repo Eval](https://x.com/FireworksAI_HQ/status/2070181898962534570) (yazan [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
+
+**Yalnızca herkese açık benchmarklara bakmak yerine GLM-5.2'yi özel repo mühendislik görevlerinde değerlendirmek için bu vakayı kullanın; çünkü yayınlanan sonuç skor, hız ve görev başına maliyet içeriyor.**
+
+Fireworks, Faros ile birlikte 211 gerçek mühendislik görevi üzerinde yaptığı değerlendirmede Claude Code + GLM-5.2'nin hem Claude Code + Opus 4.8'i hem de Codex + GPT-5.5'i geçtiğini söylüyor. Paylaşılan sayılar 0,568 judge score'a karşı 0,521 ve 0,466; görev başına 321 saniyeye karşı 775 ve 392; görev başına 0,92 dolara karşı 1,76 ve 2,06 oldu. Ayrıca Faros'un yalnızca herkese açık benchmarklar yerine kendi repository ve işlerini kullandığı da belirtiliyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-25
 
 ---
 
@@ -659,6 +688,17 @@ Tür: Entegrasyon | Tarih: 2026-06-23
 
 ---
 
+<a id="case-122"></a>
+### Case 122: [One-Shot Telegram Bot With AgentRouter](https://x.com/MatinSenPai/status/2070259817818812701) (yazan [@MatinSenPai](https://x.com/MatinSenPai))
+
+**GLM-5.2'nin bir one-shot kod ajanı yapısında yalnızca minimum çalışan yolu üretmek yerine üretim düşüncesine yakın varsayımlar çıkarıp çıkaramadığını test etmek için bu vakayı kullanın.**
+
+MatinSenPai, videodakiyle aynı promptu kullanarak GLM 5.2 ile bir Telegram botunu tek seferde kurduğunu ve modelin istenmeden pratik ayrıntılar eklediğini söylüyor. Gönderi; videolar gönderildikten sonra dosyaların otomatik temizlenmesini, varsayılan 50 MB sınırıyla Telegram Bot API boyut limitlerine dikkat edilmesini, iş bitmeden önce tekrarlanan öz testleri, önceki MiMo yapısından daha temiz bir yapıyı ve AgentRouter üzerinden raporlanan yaklaşık 140 bin token ya da 5 dolarlık kullanımı öne çıkarıyor.
+
+Tür: Demo | Tarih: 2026-06-25
+
+---
+
 <a id="case-117"></a>
 ### Case 117: [OpenCode Go Refactor First-Pass Win](https://x.com/vedovelli74/status/2069889605969592500) (yazan [@vedovelli74](https://x.com/vedovelli74))
 
@@ -683,6 +723,17 @@ Tür: Değerlendirme | Tarih: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Uygulamalı demolar ve vitrin derlemeleri
+
+<a id="case-123"></a>
+### Case 123: [Recast Six-Variation Landing-Page Loop](https://x.com/nutlope/status/2070199649818779914) (yazan [@nutlope](https://x.com/nutlope))
+
+**Önce birkaç GLM-5.2 varyasyonu üretip ardından en güçlü sonucu bir kod ajanına taşıyarak landing page prototiplemeyi ucuzlatmak için bu vakayı kullanın.**
+
+nutlope, GLM 5.2 ve Recast etrafında kurulu bir web iterasyon akışı anlatıyor: tek bir prompttan altı landing page varyasyonu üret, en iyi tasarımı seç, o kodu indir ve ayrı bir coding agent içinde iterasyona devam et. Yazar, GLM-5.2'nin burada hızlı, ucuz ve tasarım açısından güçlü olduğu için iyi çalıştığını; aynı bütçeyle Opus 4.8'in ürettiği bir sayfa başına genellikle üç ila altı GLM varyasyonu alınabildiğini söylüyor.
+
+Tür: Öğretici | Tarih: 2026-06-25
+
+---
 
 <a id="case-23"></a>
 ### Case 23: [Playable Backrooms One-Shot](https://x.com/aimlapi/status/2066996493257408639) (yazan [@aimlapi](https://x.com/aimlapi))
@@ -1173,6 +1224,28 @@ Tür: Entegrasyon | Tarih: 2026-06-23
 
 ---
 
+<a id="case-124"></a>
+### Case 124: [HuggingChat Website Builder To HF Space](https://x.com/victormustar/status/2070190742991994967) (yazan [@victormustar](https://x.com/victormustar))
+
+**HuggingChat araştırmasından Hugging Face Spaces üzerindeki statik deploy'a kadar uzanan neredeyse ücretsiz kişisel site akışında GLM-5.2'yi denemek için bu vakayı kullanın.**
+
+victormustar, bir Hugging Face hesabının GLM-5.2'ye HuggingChat içinde web sitesi yaptırmak için yeterli ücretsiz kredi sağladığını ve kullanıcı hakkında arka plan araştırması için Exa'nın kullanıldığını söylüyor. Aynı gönderi, ortaya çıkan sitenin ücretsiz bir statik Hugging Face Space olarak dağıtılabildiğini ekliyor; bu da kişisel site denemeleri için somut ve düşük maliyetli bir yol sunuyor.
+
+Tür: Öğretici | Tarih: 2026-06-25
+
+---
+
+<a id="case-125"></a>
+### Case 125: [DigitalOcean Inference Engine Availability](https://x.com/digitalocean/status/2070177703911719301) (yazan [@digitalocean](https://x.com/digitalocean))
+
+**1M bağlamlı modeli kendiniz barındırmadan resmi sağlayıcı erişimi istediğinizde GLM-5.2'yi yönetilen altyapı üzerinden yönlendirmek için bu vakayı kullanın.**
+
+DigitalOcean, Inference Engine içinde GLM-5.1 ve GLM-5.2'yi duyurdu ve modeli 1M token bağlam penceresiyle sekiz saate kadar sürebilen agentic coding iş akışları için konumlandırdı. Gönderi ayrıca bu yolu, kullanım bazlı fiyatlandırma ve tamamen yönetilen altyapı üzerinden mevcut stack'e doğrudan entegrasyon olarak çerçeveliyor.
+
+Tür: Entegrasyon | Tarih: 2026-06-25
+
+---
+
 <a id="case-115"></a>
 ### Case 115: [Command Code Fast 120-250 Tok/S Tier](https://x.com/CommandCodeAI/status/2069891896881857016) (yazan [@CommandCodeAI](https://x.com/CommandCodeAI))
 
@@ -1411,6 +1484,17 @@ Tür: Demo | Tarih: 2026-06-24
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
 
+<a id="case-126"></a>
+### Case 126: [Rust Bug Harness Pass With 7x Turn Gap](https://x.com/BohuTANG/status/2069979942608425364) (yazan [@BohuTANG](https://x.com/BohuTANG))
+
+**GLM-5.2'nin kod kalitesi tarafındaki artısını mevcut ajan harness yükünden ayırmak için bu vakayı kullanın; çünkü model hatayı geçebiliyor ama Opus'tan çok daha fazla tur harcıyor.**
+
+BohuTANG, GLM-5.2 ile Opus 4.6'yı aynı Rust hatasında, serde_json issue 979 üzerinde, evot, Claude Code ve Pi olmak üzere üç ajanla karşılaştırdı. Altı oturumun tamamı geçti ve yazar, GLM'nin hata anlayışı ile nihai kod kalitesinin güçlü kaldığını söylüyor; ancak GLM'nin 38, 43 ve 61 tur harcadığı yerde Opus üç ajan genelinde yaklaşık 18 tur ve 80 saniyede tamamladı. Trace notları farkı tekrarlayan cargo ve ortam işlemlerine, zayıf yakınsamaya ve çok daha uzun öz doğrulama döngülerine bağlıyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-25
+
+---
+
 <a id="case-114"></a>
 ### Case 114: [Braintrust Model-Swap Cost Caveat](https://x.com/ankrgyl/status/2069869387549446597) (yazan [@ankrgyl](https://x.com/ankrgyl))
 
@@ -1570,7 +1654,7 @@ Tür: Sınır | Tarih: 2026-06-23
 
 Bu depo, gerçek GLM-5.2 kullanım kanıtlarını paylaşan herkese açık içerik oluşturuculardan, geliştiricilerden, kıyaslama ekiplerinden, sağlayıcılardan ve topluluklardan ilham almıştır.
 
-Burada yer alan yüksek sinyalli kaynaklara ve üreticilere teşekkürler: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo).
+Burada yer alan yüksek sinyalli kaynaklara ve üreticilere teşekkürler: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG).
 
 Yakın zamanda eklenen üreticiler: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb).
 
