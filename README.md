@@ -37,7 +37,7 @@ Each case title links to its public source, and each author handle links to the 
 
 ## 📊 Overview
 
-- **133 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
+- **140 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
 - Covers Benchmarks & Frontier Evaluation, Coding Agents & Long-Context Workflows, Hands-On Demos & Showcase Builds, Provider & Tool Integrations, Cost, Pricing & Local Deployment, Limits, Caveats & Safety Signals.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Use this repo to find practical workflows, compare strengths and limits, discover provider routes, and follow real hands-on experiments.
@@ -78,11 +78,11 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | Section | Cases |
 |---|---|
 | [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127 |
+| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136 |
 | [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123 |
-| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130 |
-| [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131 |
-| [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-133 |
+| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137 |
+| [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
+| [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
 | [🙏 Acknowledge](#acknowledge) | Credits and correction policy |
 
 ### [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation)
@@ -117,6 +117,8 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 136: Cursor + Fireworks 455M-Token Field Test](#case-136) | Use this case to judge GLM-5.2 as a serious Cursor daily driver, because the author reports 455M tokens of real usage with fast Fireworks serving and no immediate desire to go back to Opus or GPT-5.5. | Evaluation |
+| [Case 135: Devin Desktop Harness With Skill Portability](#case-135) | Use this case to test GLM-5.2 inside Devin Desktop when Z.ai's own coding surface feels unstable, because the author reports easier skill porting, higher speed, and better hackability there. | Evaluation |
 | [Case 127: Pi Inline GLM Reviewer](#case-127) | Use this case to add a second reviewer to a Pi-style coding-agent loop, because the author reports GLM-5.2 can advise Opus turn by turn for roughly a 10% cost increase. | Integration |
 | [Case 122: One-Shot Telegram Bot With AgentRouter](#case-122) | Use this case to test whether GLM-5.2 can infer production-minded defaults in a one-shot coding-agent build instead of only generating the minimum working path. | Demo |
 | [Case 117: OpenCode Go Refactor First-Pass Win](#case-117) | Use this case to evaluate GLM-5.2 on medium-sized Go refactors inside OpenCode instead of relying only on benchmark claims. | Evaluation |
@@ -164,6 +166,7 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 137: Free GLM API Service For Coding Agents](#case-137) | Use this case to test GLM-5.2 in Hermes or other coding agents without registration, because the shared service issues short-lived API keys and keeps the setup lightweight. | Integration |
 | [Case 128: Cloudflare Workers AI OpenCode Setup](#case-128) | Use this case to run GLM-5.2 through Cloudflare Workers AI when you want a free OpenAI-compatible route for coding agents without provisioning your own model host. | Tutorial |
 | [Case 129: Puter.js Zero-Setup Browser Client](#case-129) | Use this case to test GLM-5.2 in a browser-only prototype before touching API keys, billing, or backend setup. | Tutorial |
 | [Case 130: SiliconFlow Unified Endpoint Access](#case-130) | Use this case to place GLM-5.2 inside a broader multi-model stack, because the post describes a single OpenAI-compatible SiliconFlow endpoint covering Chinese and Western models with free trial credit. | Integration |
@@ -205,6 +208,9 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 140: B300 x2 Agent-Led Dual-Stack Bring-Up](#case-140) | Use this case to scope a serious self-hosted GLM-5.2 deployment, because the thread shows analysts standing up NVFP4 inference on bare-metal B300s across both vLLM and SGLang in under a day. | Evaluation |
+| [Case 139: oMLX M3 Ultra Prefill Speedup](#case-139) | Use this case to re-check Apple-silicon local viability after recent kernel work, because the reported GLM-5.2 prefill speed on an M3 Ultra 512GB nearly doubled without obvious quality collapse in quick tests. | Evaluation |
+| [Case 138: 20M Token Signup Credit Burst](#case-138) | Use this case to evaluate whether direct signup credits are enough for a real GLM-5.2 trial, because the post claims new accounts get 20M free tokens, no card, and full OpenAI-compatible access. | Integration |
 | [Case 131: 4x DGX Spark Local GLM Runbook](#case-131) | Use this case to gauge whether a DGX Spark cluster is a realistic local GLM-5.2 path, because the collected guide ties concrete hardware cost, cluster topology, and vLLM commands to a 1M-context GLM target. | Tutorial |
 | [Case 112: 4x RTX PRO 6000 Terminal-Bench 2.0 Run](#case-112) | Use this case to size a four-GPU local GLM-5.2 setup against a hard terminal benchmark before committing to a high-end workstation build. | Evaluation |
 | [Case 118: Local Crackme Solve On 2x RTX PRO 6000 Blackwells](#case-118) | Use this case to judge whether a serious local GLM-5.2 setup can finish long reverse-engineering tasks without debugger access. | Demo |
@@ -230,6 +236,7 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | Use this case to separate a real security signal from headline inflation, because the source says GLM-5.2 beat Claude Code on one IDOR benchmark but was never tested against Mythos itself. | Limit |
 | [Case 132: LisanBench Reasoning Efficiency Gap](#case-132) | Use this case to check GLM-5.2 on reasoning-heavy workloads before assuming its coding strength translates cleanly, because the posted LisanBench result is better than GLM-5 but still inefficient against other open models. | Limit |
 | [Case 133: PrinzBench Domain-Mismatch Caveat](#case-133) | Use this case to keep GLM-5.2 focused on coding and agent execution instead of legal research, because the post contrasts a weak PrinzBench score with much stronger software and tool-use benchmarks. | Limit |
 | [Case 126: Rust Bug Harness Pass With 7x Turn Gap](#case-126) | Use this case to separate GLM-5.2's code-quality upside from its current agent-harness overhead, because the model can pass the bug while still burning far more turns than Opus. | Evaluation |
@@ -695,6 +702,28 @@ Type: Integration | Date: 2026-06-23
 
 ---
 
+<a id="case-136"></a>
+### Case 136: [Cursor + Fireworks 455M-Token Field Test](https://x.com/robinebers/status/2071246749210190132) (by [@robinebers](https://x.com/robinebers))
+
+**Use this case to judge GLM-5.2 as a serious Cursor daily driver, because the author reports 455M tokens of real usage with fast Fireworks serving and no immediate desire to go back to Opus or GPT-5.5.**
+
+robinebers says a 36-hour switch to GLM 5.2 in Cursor changed their view of the model once it was paired with Fireworks. The post specifically calls out image support, claimed zero data retention, throughput around 80-100 tokens per second, and about $145 spent for 455 million tokens. That makes it a stronger harness-specific evaluation than generic benchmark praise, with concrete evidence that provider choice can change the practical experience.
+
+Type: Evaluation | Date: 2026-06-28
+
+---
+
+<a id="case-135"></a>
+### Case 135: [Devin Desktop Harness With Skill Portability](https://x.com/lily_gpupoor/status/2071297351801794850) (by [@lily_gpupoor](https://x.com/lily_gpupoor))
+
+**Use this case to test GLM-5.2 inside Devin Desktop when Z.ai's own coding surface feels unstable, because the author reports easier skill porting, higher speed, and better hackability there.**
+
+lily_gpupoor says heavy GLM-5.2 use through Devin Desktop felt materially better than the direct Z.ai coding plan during a period of API instability. The post highlights three concrete workflow wins: GLM edited a custom Solarized Green theme JSON and registered the extension successfully, Devin felt unusually fast, and previously built skills mostly carried over after switching from the default Windsurf Cascade agent to Devin Local.
+
+Type: Evaluation | Date: 2026-06-28
+
+---
+
 <a id="case-127"></a>
 ### Case 127: [Pi Inline GLM Reviewer](https://x.com/xpasky/status/2070831715518460177) (by [@xpasky](https://x.com/xpasky))
 
@@ -921,6 +950,17 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Provider & Tool Integrations
+
+<a id="case-137"></a>
+### Case 137: [Free GLM API Service For Coding Agents](https://x.com/mcwangcn/status/2071261128575897901) (by [@mcwangcn](https://x.com/mcwangcn))
+
+**Use this case to test GLM-5.2 in Hermes or other coding agents without registration, because the shared service issues short-lived API keys and keeps the setup lightweight.**
+
+mcwangcn shared a free GLM-5.2 API service that reportedly requires no signup or login and can be used from Lobster, Hermes, or other coding agents. The same post says each generated API key lasts one hour before renewal, which is a concrete anti-abuse constraint and makes the service better suited for quick workflow testing than for unattended long-term production use.
+
+Type: Integration | Date: 2026-06-28
+
+---
 
 <a id="case-31"></a>
 ### Case 31: [OpenCode Go Availability](https://x.com/opencode/status/2067207923122479242) (by [@opencode](https://x.com/opencode))
@@ -1321,6 +1361,39 @@ Type: Integration | Date: 2026-06-24
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Cost, Pricing & Local Deployment
 
+<a id="case-140"></a>
+### Case 140: [B300 x2 Agent-Led Dual-Stack Bring-Up](https://x.com/TheValueist/status/2071261052080148607) (by [@TheValueist](https://x.com/TheValueist))
+
+**Use this case to scope a serious self-hosted GLM-5.2 deployment, because the thread shows analysts standing up NVFP4 inference on bare-metal B300s across both vLLM and SGLang in under a day.**
+
+TheValueist says an analyst-agent workflow deployed GLM 5.2 NVFP4 on a bare-metal NVIDIA B300 x2 cluster across both vLLM and SGLang, then ran a full benchmark suite on each stack in less than 24 hours. The thread also says the limiting factor was HBM capacity rather than raw compute, with DRAM becoming relevant when KV cache spills, which makes the post a concrete operational note for teams evaluating local inference economics and hardware bottlenecks.
+
+Type: Evaluation | Date: 2026-06-28
+
+---
+
+<a id="case-139"></a>
+### Case 139: [oMLX M3 Ultra Prefill Speedup](https://x.com/jundotkim/status/2071287585297887510) (by [@jundotkim](https://x.com/jundotkim))
+
+**Use this case to re-check Apple-silicon local viability after recent kernel work, because the reported GLM-5.2 prefill speed on an M3 Ultra 512GB nearly doubled without obvious quality collapse in quick tests.**
+
+jundotkim says oMLX 0.4.5.dev1 adds custom MLX kernels that raise GLM-5.2-oQ4 32k prefill from 87.7 tok/s to 174.4 tok/s on an M3 Ultra 512GB machine, a 98.9% jump. The same post says the path is still experimental, but needle-in-a-haystack checks and Claude Code-style coding tests did not show obvious regressions, making it a practical local-inference update rather than only a release note.
+
+Type: Evaluation | Date: 2026-06-28
+
+---
+
+<a id="case-138"></a>
+### Case 138: [20M Token Signup Credit Burst](https://x.com/Bitbro4crypto/status/2071150218872283262) (by [@Bitbro4crypto](https://x.com/Bitbro4crypto))
+
+**Use this case to evaluate whether direct signup credits are enough for a real GLM-5.2 trial, because the post claims new accounts get 20M free tokens, no card, and full OpenAI-compatible access.**
+
+Bitbro4crypto says the current GLM 5.2 signup path gives 20 million free tokens, 120 image and video credits, high and max thinking modes, a 1M-context window, and an OpenAI-compatible API that drops into tools like Cursor or Claude Code without a subscription. Treat it as a concrete access-and-pricing signal for short-term testing, while assuming the promotional quota can change.
+
+Type: Integration | Date: 2026-06-28
+
+---
+
 <a id="case-131"></a>
 ### Case 131: [4x DGX Spark Local GLM Runbook](https://x.com/TraffAlex/status/2071020631072616698) (by [@TraffAlex](https://x.com/TraffAlex))
 
@@ -1543,6 +1616,17 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Limits, Caveats & Safety Signals
+
+<a id="case-134"></a>
+### Case 134: [Semgrep IDOR Narrow-Win Caveat](https://x.com/leploutos/status/2071121981551047039) (by [@leploutos](https://x.com/leploutos))
+
+**Use this case to separate a real security signal from headline inflation, because the source says GLM-5.2 beat Claude Code on one IDOR benchmark but was never tested against Mythos itself.**
+
+leploutos says the viral "GLM equals Mythos" reading is wrong: the Semgrep result was a single IDOR detection benchmark where GLM-5.2 scored 39% F1, ahead of Claude Code configurations in the 28-37% range, at about $0.17 per bug and roughly one-sixth frontier-model cost. The same post also flags the limits that matter for practitioners: it was one bug class, one dataset, one run, and a vendor-owned benchmark, so treat it as a narrow but real vulnerability-detection signal rather than proof that GLM matches Anthropic's dedicated cyber model.
+
+Type: Limit | Date: 2026-06-28
+
+---
 
 <a id="case-132"></a>
 ### Case 132: [LisanBench Reasoning Efficiency Gap](https://x.com/scaling01/status/2070961852008509918) (by [@scaling01](https://x.com/scaling01))

@@ -37,7 +37,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **133 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **140 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -78,11 +78,11 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | Bölüm | Vakalar |
 |---|---|
 | [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136 |
 | [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82, 92, 99-100, 123 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131 |
-| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75, 103, 108, 114, 126, 132-133 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
+| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
 ### [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation)
@@ -117,6 +117,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 136: Cursor + Fireworks 455M-Token Field Test](#case-136) | GLM-5.2’yi ciddi bir Cursor günlük sürücüsü olarak değerlendirmek için bu vakayı kullanın; çünkü yazar hızlı Fireworks serving ile 455M token’lık gerçek kullanım bildirdiğini ve Opus ya da GPT-5.5’e hemen geri dönme isteği duymadığını söylüyor. | Evaluation |
+| [Case 135: Devin Desktop Harness With Skill Portability](#case-135) | Z.ai’nin kendi coding yüzeyi istikrarsız hissettirdiğinde GLM-5.2’yi Devin Desktop içinde denemek için bu vakayı kullanın; çünkü yazar daha kolay skill taşıma, daha yüksek hız ve daha iyi hacklenebilirlik bildirdi. | Evaluation |
 | [Case 127: Pi Inline GLM Reviewer](#case-127) | Yazara göre GLM-5.2, yaklaşık %10 ek maliyetle Opus’u tur tur yönlendirebildiği için Pi benzeri bir kod ajanı döngüsüne ikinci bir reviewer eklemek üzere bu vakayı kullanın. | Integration |
 | [Case 122: One-Shot Telegram Bot With AgentRouter](#case-122) | GLM-5.2'nin bir one-shot kod ajanı yapısında yalnızca minimum çalışan yolu üretmek yerine üretim düşüncesine yakın varsayımlar çıkarıp çıkaramadığını test etmek için bu vakayı kullanın. | Demo |
 | [Case 117: OpenCode Go Refactor First-Pass Win](#case-117) | GLM-5.2’yi yalnızca benchmark iddialarıyla değil, OpenCode içindeki orta ölçekli Go refactor işiyle değerlendirmek için bu vakayı kullanın. | Değerlendirme |
@@ -164,6 +166,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 137: Free GLM API Service For Coding Agents](#case-137) | Hermes veya diğer coding agent’larda GLM-5.2’yi kayıt olmadan test etmek için bu vakayı kullanın; çünkü paylaşılan servis kısa ömürlü API key’ler veriyor ve kurulumu hafif tutuyor. | Integration |
 | [Case 128: Cloudflare Workers AI OpenCode Setup](#case-128) | Kendi model barındırıcınızı kurmadan coding agent’lar için ücretsiz OpenAI uyumlu bir rota istediğinizde GLM-5.2’yi Cloudflare Workers AI üzerinden çalıştırmak için bu vakayı kullanın. | Tutorial |
 | [Case 129: Puter.js Zero-Setup Browser Client](#case-129) | API key, faturalama ya da backend kurulumuna dokunmadan önce GLM-5.2’yi yalnızca tarayıcı tabanlı bir prototipte test etmek için bu vakayı kullanın. | Tutorial |
 | [Case 130: SiliconFlow Unified Endpoint Access](#case-130) | Gönderi, ücretsiz deneme kredisiyle Çinli ve Batılı modelleri kapsayan tek bir OpenAI uyumlu SiliconFlow endpoint’i anlattığı için GLM-5.2’yi daha geniş bir çok-modelli stack içine yerleştirmek üzere bu vakayı kullanın. | Integration |
@@ -205,6 +208,9 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 140: B300 x2 Agent-Led Dual-Stack Bring-Up](#case-140) | Ciddi bir self-hosted GLM-5.2 deployment kapsamı çıkarmak için bu vakayı kullanın; çünkü thread, analistlerin çıplak-metal B300’lerde hem vLLM hem de SGLang üzerinde bir günden kısa sürede NVFP4 inference ayağa kaldırdığını gösteriyor. | Evaluation |
+| [Case 139: oMLX M3 Ultra Prefill Speedup](#case-139) | Son kernel çalışmalarından sonra Apple-silicon üzerinde yerel kullanımın durumunu yeniden kontrol etmek için bu vakayı kullanın; çünkü M3 Ultra 512GB üzerinde bildirilen GLM-5.2 prefill hızı, hızlı testlerde bariz kalite çöküşü olmadan neredeyse iki katına çıktı. | Evaluation |
+| [Case 138: 20M Token Signup Credit Burst](#case-138) | Doğrudan kayıt kredilerinin gerçek bir GLM-5.2 denemesi için yeterli olup olmadığını değerlendirmek için bu vakayı kullanın; çünkü gönderi yeni hesapların 20M ücretsiz token, kart gereksinimi olmadan ve tam OpenAI uyumlu erişim aldığını iddia ediyor. | Integration |
 | [Case 131: 4x DGX Spark Local GLM Runbook](#case-131) | Toplanan kılavuz somut donanım maliyeti, küme topolojisi ve vLLM komutlarını 1M bağlamlı bir GLM hedefine bağladığı için DGX Spark kümesinin gerçekçi bir yerel GLM-5.2 yolu olup olmadığını ölçmek üzere bu vakayı kullanın. | Tutorial |
 | [Case 112: 4x RTX PRO 6000 Terminal-Bench 2.0 Run](#case-112) | Pahalı bir workstation kurulumuna geçmeden önce, dört GPU’lu yerel GLM-5.2 sistemini sert bir terminal benchmark’a göre boyutlandırmak için bu vakayı kullanın. | Değerlendirme |
 | [Case 118: Local Crackme Solve On 2x RTX PRO 6000 Blackwells](#case-118) | Ciddi bir yerel GLM-5.2 kurulumunun debugger erişimi olmadan uzun reverse-engineering görevlerini tamamlayıp tamamlayamayacağını görmek için bu vakayı kullanın. | Demo |
@@ -230,6 +236,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | Gerçek bir güvenlik sinyalini başlık şişirmesinden ayırmak için bu vakayı kullanın; çünkü kaynak, GLM-5.2’nin bir IDOR benchmark’ında Claude Code’u geçtiğini ama hiçbir zaman Mythos’un kendisine karşı test edilmediğini söylüyor. | Limit |
 | [Case 132: LisanBench Reasoning Efficiency Gap](#case-132) | Yayınlanan LisanBench sonucu GLM-5’ten daha iyi olsa da diğer açık modellere kıyasla hâlâ verimsiz kaldığı için, coding gücünün temiz biçimde aktarıldığını varsaymadan önce GLM-5.2’yi reasoning ağırlıklı iş yüklerinde kontrol etmek üzere bu vakayı kullanın. | Limit |
 | [Case 133: PrinzBench Domain-Mismatch Caveat](#case-133) | Gönderi zayıf bir PrinzBench skorunu çok daha güçlü yazılım ve tool-use benchmark’larıyla karşılaştırdığı için GLM-5.2’yi hukuk araştırmasından çok coding ve agent execution tarafında tutmak üzere bu vakayı kullanın. | Limit |
 | [Case 126: Rust Bug Harness Pass With 7x Turn Gap](#case-126) | GLM-5.2'nin kod kalitesi tarafındaki artısını mevcut ajan harness yükünden ayırmak için bu vakayı kullanın; çünkü model hatayı geçebiliyor ama Opus'tan çok daha fazla tur harcıyor. | Değerlendirme |
@@ -695,6 +702,28 @@ Tür: Entegrasyon | Tarih: 2026-06-23
 
 ---
 
+<a id="case-136"></a>
+### Case 136: [Cursor + Fireworks 455M-Token Field Test](https://x.com/robinebers/status/2071246749210190132) (yazan [@robinebers](https://x.com/robinebers))
+
+**GLM-5.2’yi ciddi bir Cursor günlük sürücüsü olarak değerlendirmek için bu vakayı kullanın; çünkü yazar hızlı Fireworks serving ile 455M token’lık gerçek kullanım bildirdiğini ve Opus ya da GPT-5.5’e hemen geri dönme isteği duymadığını söylüyor.**
+
+robinebers, Cursor içinde GLM 5.2’ye 36 saatlik geçişin, model Fireworks ile eşlendiğinde ona bakışını değiştirdiğini söylüyor. Gönderi özellikle image support, iddia edilen zero data retention, saniyede yaklaşık 80-100 token throughput ve 455 milyon token için yaklaşık 145 dolar harcamayı öne çıkarıyor. Bu da onu, sağlayıcı seçiminin pratik deneyimi gerçekten değiştirebildiğine dair somut kanıt sunan, genel benchmark övgüsünden daha güçlü bir harness-özel değerlendirme haline getiriyor.
+
+Tür: Evaluation | Tarih: 2026-06-28
+
+---
+
+<a id="case-135"></a>
+### Case 135: [Devin Desktop Harness With Skill Portability](https://x.com/lily_gpupoor/status/2071297351801794850) (yazan [@lily_gpupoor](https://x.com/lily_gpupoor))
+
+**Z.ai’nin kendi coding yüzeyi istikrarsız hissettirdiğinde GLM-5.2’yi Devin Desktop içinde denemek için bu vakayı kullanın; çünkü yazar daha kolay skill taşıma, daha yüksek hız ve daha iyi hacklenebilirlik bildirdi.**
+
+lily_gpupoor, API istikrarsızlığı yaşanan bir dönemde Devin Desktop üzerinden yoğun GLM-5.2 kullanımının, doğrudan Z.ai coding planından belirgin biçimde daha iyi hissettirdiğini söylüyor. Gönderi üç somut workflow kazanımını vurguluyor: GLM özel bir Solarized Green tema JSON’unu düzenleyip extension’ı başarıyla kaydetti, Devin alışılmadık derecede hızlı hissettirdi ve daha önce inşa edilmiş skill’ler, varsayılan Windsurf Cascade agent’ından Devin Local’e geçildikten sonra büyük ölçüde taşınabildi.
+
+Tür: Evaluation | Tarih: 2026-06-28
+
+---
+
 <a id="case-127"></a>
 ### Case 127: [Pi Inline GLM Reviewer](https://x.com/xpasky/status/2070831715518460177) (yazan [@xpasky](https://x.com/xpasky))
 
@@ -921,6 +950,17 @@ Tür: Demo | Tarih: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Sağlayıcı ve araç entegrasyonları
+
+<a id="case-137"></a>
+### Case 137: [Free GLM API Service For Coding Agents](https://x.com/mcwangcn/status/2071261128575897901) (yazan [@mcwangcn](https://x.com/mcwangcn))
+
+**Hermes veya diğer coding agent’larda GLM-5.2’yi kayıt olmadan test etmek için bu vakayı kullanın; çünkü paylaşılan servis kısa ömürlü API key’ler veriyor ve kurulumu hafif tutuyor.**
+
+mcwangcn, kayıt ya da giriş gerektirmediği bildirilen ve Lobster, Hermes ya da diğer coding agent’lardan kullanılabilen ücretsiz bir GLM-5.2 API servisi paylaştı. Aynı gönderi, üretilen her API key’in yenilenmeden önce bir saat geçerli olduğunu söylüyor; bu da somut bir kötüye kullanım önleme kısıtı oluşturuyor ve servisi gözetimsiz uzun vadeli production kullanımından çok hızlı workflow testleri için daha uygun hale getiriyor.
+
+Tür: Integration | Tarih: 2026-06-28
+
+---
 
 <a id="case-31"></a>
 ### Case 31: [OpenCode Go Availability](https://x.com/opencode/status/2067207923122479242) (yazan [@opencode](https://x.com/opencode))
@@ -1322,6 +1362,39 @@ Tür: Entegrasyon | Tarih: 2026-06-24
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
 
+<a id="case-140"></a>
+### Case 140: [B300 x2 Agent-Led Dual-Stack Bring-Up](https://x.com/TheValueist/status/2071261052080148607) (yazan [@TheValueist](https://x.com/TheValueist))
+
+**Ciddi bir self-hosted GLM-5.2 deployment kapsamı çıkarmak için bu vakayı kullanın; çünkü thread, analistlerin çıplak-metal B300’lerde hem vLLM hem de SGLang üzerinde bir günden kısa sürede NVFP4 inference ayağa kaldırdığını gösteriyor.**
+
+TheValueist, bir analyst-agent workflow’unun GLM 5.2 NVFP4’ü çıplak-metal NVIDIA B300 x2 kümesinde hem vLLM hem de SGLang üzerinde deploy ettiğini, ardından her stack üzerinde tam benchmark paketini 24 saatten kısa sürede çalıştırdığını söylüyor. Thread ayrıca sınırlayıcı faktörün ham compute’dan çok HBM kapasitesi olduğunu, KV cache taştığında DRAM’in önem kazandığını belirtiyor. Bu da gönderiyi, yerel inference ekonomisi ve donanım darboğazlarını değerlendiren ekipler için somut bir operasyon notu haline getiriyor.
+
+Tür: Evaluation | Tarih: 2026-06-28
+
+---
+
+<a id="case-139"></a>
+### Case 139: [oMLX M3 Ultra Prefill Speedup](https://x.com/jundotkim/status/2071287585297887510) (yazan [@jundotkim](https://x.com/jundotkim))
+
+**Son kernel çalışmalarından sonra Apple-silicon üzerinde yerel kullanımın durumunu yeniden kontrol etmek için bu vakayı kullanın; çünkü M3 Ultra 512GB üzerinde bildirilen GLM-5.2 prefill hızı, hızlı testlerde bariz kalite çöküşü olmadan neredeyse iki katına çıktı.**
+
+jundotkim, oMLX 0.4.5.dev1’in özel MLX kernel’leri ekleyerek M3 Ultra 512GB makinede GLM-5.2-oQ4 32k prefill hızını 87.7 tok/s’den 174.4 tok/s’ye çıkardığını, bunun da %98.9’luk bir sıçrama olduğunu söylüyor. Aynı gönderi bu yolun hâlâ deneysel olduğunu belirtiyor; ancak needle-in-a-haystack kontrolleri ile Claude Code tarzı coding testlerinde bariz regresyon görünmediğini de ekliyor. Böylece bu vaka, yalnızca bir sürüm notundan çok pratik bir yerel inference güncellemesi sunuyor.
+
+Tür: Evaluation | Tarih: 2026-06-28
+
+---
+
+<a id="case-138"></a>
+### Case 138: [20M Token Signup Credit Burst](https://x.com/Bitbro4crypto/status/2071150218872283262) (yazan [@Bitbro4crypto](https://x.com/Bitbro4crypto))
+
+**Doğrudan kayıt kredilerinin gerçek bir GLM-5.2 denemesi için yeterli olup olmadığını değerlendirmek için bu vakayı kullanın; çünkü gönderi yeni hesapların 20M ücretsiz token, kart gereksinimi olmadan ve tam OpenAI uyumlu erişim aldığını iddia ediyor.**
+
+Bitbro4crypto, mevcut GLM 5.2 kayıt yolunun 20 milyon ücretsiz token, 120 image ve video kredisi, high ve max thinking modları, 1M-context penceresi ve Cursor ya da Claude Code gibi araçlara abonelik gerektirmeden takılabilen OpenAI uyumlu bir API verdiğini söylüyor. Bunu, kısa vadeli testler için somut bir erişim ve fiyatlandırma sinyali olarak değerlendirin; ancak promosyon kotasının değişebileceğini varsayın.
+
+Tür: Integration | Tarih: 2026-06-28
+
+---
+
 <a id="case-131"></a>
 ### Case 131: [4x DGX Spark Local GLM Runbook](https://x.com/TraffAlex/status/2071020631072616698) (yazan [@TraffAlex](https://x.com/TraffAlex))
 
@@ -1545,6 +1618,17 @@ Tür: Demo | Tarih: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
+
+<a id="case-134"></a>
+### Case 134: [Semgrep IDOR Narrow-Win Caveat](https://x.com/leploutos/status/2071121981551047039) (yazan [@leploutos](https://x.com/leploutos))
+
+**Gerçek bir güvenlik sinyalini başlık şişirmesinden ayırmak için bu vakayı kullanın; çünkü kaynak, GLM-5.2’nin bir IDOR benchmark’ında Claude Code’u geçtiğini ama hiçbir zaman Mythos’un kendisine karşı test edilmediğini söylüyor.**
+
+leploutos, viral “GLM equals Mythos” okumasının yanlış olduğunu söylüyor: Semgrep sonucu, GLM-5.2’nin %39 F1 aldığı tek bir IDOR tespit benchmark’ıydı; Claude Code yapılandırmaları ise %28-37 aralığındaydı, bug başına maliyet yaklaşık 0,17 dolardı ve frontier model maliyetinin yaklaşık altıda biri düzeyindeydi. Aynı gönderi uygulayıcılar için önemli sınırları da açıkça belirtiyor: bu yalnızca tek bir bug sınıfı, tek bir veri kümesi, tek bir koşu ve satıcıya ait bir benchmark’tı. Bu yüzden vakayı, GLM’nin Anthropic’in özel siber modeline denk olduğunun kanıtı olarak değil, dar ama gerçek bir zafiyet tespit sinyali olarak okuyun.
+
+Tür: Limit | Tarih: 2026-06-28
+
+---
 
 <a id="case-132"></a>
 ### Case 132: [LisanBench Reasoning Efficiency Gap](https://x.com/scaling01/status/2070961852008509918) (yazan [@scaling01](https://x.com/scaling01))

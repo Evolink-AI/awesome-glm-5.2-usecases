@@ -37,7 +37,7 @@ Cada título de caso enlaza a su fuente pública y cada usuario enlaza al perfil
 
 ## 📊 Resumen
 
-- **133 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
+- **140 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
 - Cubre evaluaciones comparativas y evaluación de frontera, agentes de código y flujos de contexto largo, demos prácticas y muestras, integraciones de proveedores y herramientas, coste, precios y despliegue local, límites, advertencias y señales de seguridad.
 - Cada caso incluye la fuente original, la atribución del creador, un takeaway de uso conciso, el tipo de evidencia y la fecha de publicación.
 - Usa este repo para encontrar flujos prácticos, comparar fortalezas y límites, descubrir rutas de proveedor y seguir experimentos reales.
@@ -78,11 +78,11 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 | Sección | Casos |
 |---|---|
 | [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation) | Caso 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Caso 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127 |
+| [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Caso 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136 |
 | [🎮 Demos prácticas y muestras](#hands-on-demos-showcase-builds) | Caso 23-30, 71, 78, 81-82, 92, 99-100, 123 |
-| [🔌 Integraciones de proveedores y herramientas](#provider-tool-integrations) | Caso 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130 |
-| [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Caso 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131 |
-| [🧭 Límites, advertencias y señales de seguridad](#limits-caveats-safety-signals) | Caso 52-59, 67, 73, 75, 103, 108, 114, 126, 132-133 |
+| [🔌 Integraciones de proveedores y herramientas](#provider-tool-integrations) | Caso 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137 |
+| [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Caso 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
+| [🧭 Límites, advertencias y señales de seguridad](#limits-caveats-safety-signals) | Caso 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
 | [🙏 Agradecimientos](#acknowledge) | Créditos y política de correcciones |
 
 ### [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation)
@@ -117,6 +117,8 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 136: Cursor + Fireworks 455M-Token Field Test](#case-136) | Usa este caso para juzgar GLM-5.2 como un modelo serio para el uso diario en Cursor, porque el autor informa 455M tokens de uso real con serving rápido de Fireworks y sin ganas inmediatas de volver a Opus o GPT-5.5. | Evaluation |
+| [Case 135: Devin Desktop Harness With Skill Portability](#case-135) | Usa este caso para probar GLM-5.2 dentro de Devin Desktop cuando la propia superficie de coding de Z.ai se sienta inestable, porque el autor informa portabilidad de skills más fácil, mayor velocidad y mejor capacidad de hackeo. | Evaluation |
 | [Case 127: Pi Inline GLM Reviewer](#case-127) | Usa este caso para añadir un segundo revisor a un loop de agente de código estilo Pi, porque el autor informa que GLM-5.2 puede asesorar a Opus turno a turno por un aumento de coste de alrededor del 10%. | Integration |
 | [Case 122: One-Shot Telegram Bot With AgentRouter](#case-122) | Usa este caso para probar si GLM-5.2 puede inferir decisiones orientadas a producción en una build one-shot con agente de código, en lugar de limitarse a generar el camino mínimo que funciona. | Demo |
 | [Case 117: OpenCode Go Refactor First-Pass Win](#case-117) | Usa este caso para evaluar GLM-5.2 en refactorizaciones medianas de Go dentro de OpenCode en lugar de apoyarte solo en afirmaciones de benchmark. | Evaluation |
@@ -161,6 +163,7 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 137: Free GLM API Service For Coding Agents](#case-137) | Usa este caso para probar GLM-5.2 en Hermes u otros agentes de código sin registro, porque el servicio compartido emite API keys de corta duración y mantiene la configuración ligera. | Integration |
 | [Case 128: Cloudflare Workers AI OpenCode Setup](#case-128) | Usa este caso para ejecutar GLM-5.2 a través de Cloudflare Workers AI cuando quieras una ruta gratuita compatible con OpenAI para agentes de código sin aprovisionar tu propio host del modelo. | Tutorial |
 | [Case 129: Puter.js Zero-Setup Browser Client](#case-129) | Usa este caso para probar GLM-5.2 en un prototipo solo de navegador antes de tocar API keys, facturación o configuración de backend. | Tutorial |
 | [Case 130: SiliconFlow Unified Endpoint Access](#case-130) | Usa este caso para situar GLM-5.2 dentro de una pila multimodelo más amplia, porque la publicación describe un único endpoint compatible con OpenAI de SiliconFlow que cubre modelos chinos y occidentales con crédito de prueba gratis. | Integration |
@@ -197,6 +200,9 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 140: B300 x2 Agent-Led Dual-Stack Bring-Up](#case-140) | Usa este caso para dimensionar un despliegue autoalojado serio de GLM-5.2, porque el hilo muestra a analistas levantando inferencia NVFP4 sobre B300 bare-metal en vLLM y SGLang en menos de un día. | Evaluation |
+| [Case 139: oMLX M3 Ultra Prefill Speedup](#case-139) | Usa este caso para volver a comprobar la viabilidad local en Apple silicon tras trabajo reciente de kernels, porque la velocidad de prefill reportada para GLM-5.2 en un M3 Ultra 512GB casi se duplicó sin un colapso obvio de calidad en pruebas rápidas. | Evaluation |
+| [Case 138: 20M Token Signup Credit Burst](#case-138) | Usa este caso para evaluar si los créditos de registro bastan para una prueba real de GLM-5.2, porque la publicación afirma que las cuentas nuevas reciben 20M tokens gratis, sin tarjeta y con acceso completo compatible con OpenAI. | Integration |
 | [Case 131: 4x DGX Spark Local GLM Runbook](#case-131) | Usa este caso para medir si un clúster DGX Spark es una ruta local realista para GLM-5.2, porque la guía recopilada conecta coste de hardware, topología de clúster y comandos de vLLM con un objetivo GLM de contexto 1M. | Tutorial |
 | [Case 112: 4x RTX PRO 6000 Terminal-Bench 2.0 Run](#case-112) | Usa este caso para dimensionar una configuración local de GLM-5.2 con cuatro GPU frente a un benchmark duro de terminal antes de comprometerte con una workstation de alta gama. | Evaluation |
 | [Case 118: Local Crackme Solve On 2x RTX PRO 6000 Blackwells](#case-118) | Usa este caso para juzgar si una configuración local seria de GLM-5.2 puede terminar tareas largas de ingeniería inversa sin acceso a depurador. | Demo |
@@ -220,6 +226,7 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | Usa este caso para separar una señal de seguridad real de la exageración del titular, porque la fuente dice que GLM-5.2 superó a Claude Code en un benchmark de IDOR pero nunca se probó contra Mythos. | Limit |
 | [Case 132: LisanBench Reasoning Efficiency Gap](#case-132) | Usa este caso para revisar GLM-5.2 en cargas con mucho razonamiento antes de asumir que su fortaleza en coding se traslada de forma limpia, porque el resultado publicado de LisanBench mejora a GLM-5 pero sigue siendo ineficiente frente a otros modelos abiertos. | Limit |
 | [Case 133: PrinzBench Domain-Mismatch Caveat](#case-133) | Usa este caso para mantener GLM-5.2 centrado en coding y ejecución de agentes en lugar de investigación legal, porque la publicación contrasta una puntuación floja en PrinzBench con benchmarks mucho más fuertes de software y uso de herramientas. | Limit |
 | [Case 126: Rust Bug Harness Pass With 7x Turn Gap](#case-126) | Usa este caso para separar la ventaja de GLM-5.2 en calidad de código de su sobrecarga actual en el harness de agentes, porque puede resolver el bug gastando muchas más vueltas que Opus. | Evaluation |
@@ -685,6 +692,28 @@ Tipo: Integración | Fecha: 2026-06-23
 
 ---
 
+<a id="case-136"></a>
+### Case 136: [Prueba de campo de 455M tokens con Cursor + Fireworks](https://x.com/robinebers/status/2071246749210190132) (por [@robinebers](https://x.com/robinebers))
+
+**Usa este caso para juzgar GLM-5.2 como un modelo serio para el uso diario en Cursor, porque el autor informa 455M tokens de uso real con serving rápido de Fireworks y sin ganas inmediatas de volver a Opus o GPT-5.5.**
+
+robinebers dice que cambiar durante 36 horas a GLM 5.2 en Cursor le hizo cambiar de opinión sobre el modelo una vez que lo emparejó con Fireworks. La publicación destaca en concreto soporte de imágenes, supuesta retención cero de datos, throughput de unas 80-100 tokens por segundo y un gasto aproximado de 145 dólares para 455 millones de tokens. Eso lo convierte en una evaluación más concreta del harness que el elogio genérico de benchmarks, con evidencia práctica de que la elección del proveedor puede cambiar la experiencia real.
+
+Tipo: Evaluation | Fecha: 2026-06-28
+
+---
+
+<a id="case-135"></a>
+### Case 135: [Arnés de Devin Desktop con portabilidad de skills](https://x.com/lily_gpupoor/status/2071297351801794850) (por [@lily_gpupoor](https://x.com/lily_gpupoor))
+
+**Usa este caso para probar GLM-5.2 dentro de Devin Desktop cuando la propia superficie de coding de Z.ai se sienta inestable, porque el autor informa portabilidad de skills más fácil, mayor velocidad y mejor capacidad de hackeo.**
+
+lily_gpupoor dice que usar GLM-5.2 intensivamente a través de Devin Desktop se sintió materialmente mejor que el plan de coding directo de Z.ai durante un periodo de inestabilidad de API. La publicación destaca tres victorias de workflow concretas: GLM editó un JSON personalizado del tema Solarized Green y registró la extensión correctamente, Devin se sintió inusualmente rápido y la mayoría de los skills ya construidos se trasladaron casi sin cambios tras pasar del agente predeterminado Windsurf Cascade a Devin Local.
+
+Tipo: Evaluation | Fecha: 2026-06-28
+
+---
+
 <a id="case-127"></a>
 ### Case 127: [Pi Inline GLM Reviewer](https://x.com/xpasky/status/2070831715518460177) (por [@xpasky](https://x.com/xpasky))
 
@@ -911,6 +940,17 @@ Tipo: Demo | Fecha: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Integraciones de proveedores y herramientas
+
+<a id="case-137"></a>
+### Case 137: [Servicio gratuito de API GLM para agentes de código](https://x.com/mcwangcn/status/2071261128575897901) (por [@mcwangcn](https://x.com/mcwangcn))
+
+**Usa este caso para probar GLM-5.2 en Hermes u otros agentes de código sin registro, porque el servicio compartido emite API keys de corta duración y mantiene la configuración ligera.**
+
+mcwangcn compartió un servicio gratuito de API de GLM-5.2 que, según indica, no requiere registro ni inicio de sesión y puede usarse desde Lobster, Hermes u otros agentes de código. La misma publicación dice que cada API key generada dura una hora antes de renovarse, lo que constituye una restricción concreta contra abusos y hace que el servicio encaje mejor en pruebas rápidas de workflow que en uso productivo desatendido a largo plazo.
+
+Tipo: Integration | Fecha: 2026-06-28
+
+---
 
 <a id="case-31"></a>
 ### Case 31: [OpenCode Go Availability](https://x.com/opencode/status/2067207923122479242) (por [@opencode](https://x.com/opencode))
@@ -1310,6 +1350,39 @@ Tipo: Integración | Fecha: 2026-06-22
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Coste, precios y despliegue local
 
+<a id="case-140"></a>
+### Case 140: [Puesta en marcha dual-stack guiada por agentes en B300 x2](https://x.com/TheValueist/status/2071261052080148607) (por [@TheValueist](https://x.com/TheValueist))
+
+**Usa este caso para dimensionar un despliegue autoalojado serio de GLM-5.2, porque el hilo muestra a analistas levantando inferencia NVFP4 sobre B300 bare-metal en vLLM y SGLang en menos de un día.**
+
+TheValueist dice que un workflow de agentes analistas desplegó GLM 5.2 NVFP4 en un clúster bare-metal NVIDIA B300 x2 tanto sobre vLLM como sobre SGLang y luego ejecutó una batería completa de benchmarks sobre cada stack en menos de 24 horas. El hilo también dice que el factor limitante fue la capacidad de HBM y no el cómputo bruto, y que la DRAM pasa a importar cuando el KV cache se derrama, lo que convierte esta publicación en una nota operativa concreta para equipos que evalúan economía de inferencia local y cuellos de botella de hardware.
+
+Tipo: Evaluation | Fecha: 2026-06-28
+
+---
+
+<a id="case-139"></a>
+### Case 139: [Aceleración de prefill en oMLX M3 Ultra](https://x.com/jundotkim/status/2071287585297887510) (por [@jundotkim](https://x.com/jundotkim))
+
+**Usa este caso para volver a comprobar la viabilidad local en Apple silicon tras trabajo reciente de kernels, porque la velocidad de prefill reportada para GLM-5.2 en un M3 Ultra 512GB casi se duplicó sin un colapso obvio de calidad en pruebas rápidas.**
+
+jundotkim dice que oMLX 0.4.5.dev1 añade kernels MLX personalizados que elevan el prefill de GLM-5.2-oQ4 32k de 87.7 tok/s a 174.4 tok/s en una máquina M3 Ultra 512GB, un salto del 98.9%. La misma publicación dice que la ruta sigue siendo experimental, pero las comprobaciones tipo needle-in-a-haystack y las pruebas de coding estilo Claude Code no mostraron regresiones obvias, por lo que se trata de una actualización práctica de inferencia local y no solo de una nota de lanzamiento.
+
+Tipo: Evaluation | Fecha: 2026-06-28
+
+---
+
+<a id="case-138"></a>
+### Case 138: [Explosión de crédito de registro de 20M tokens](https://x.com/Bitbro4crypto/status/2071150218872283262) (por [@Bitbro4crypto](https://x.com/Bitbro4crypto))
+
+**Usa este caso para evaluar si los créditos de registro bastan para una prueba real de GLM-5.2, porque la publicación afirma que las cuentas nuevas reciben 20M tokens gratis, sin tarjeta y con acceso completo compatible con OpenAI.**
+
+Bitbro4crypto dice que la ruta actual de registro de GLM 5.2 da 20 millones de tokens gratuitos, 120 créditos de imagen y vídeo, modos high y max thinking, una ventana de contexto de 1M y una API compatible con OpenAI que encaja en herramientas como Cursor o Claude Code sin suscripción. Tómalo como una señal concreta de acceso y precios para pruebas a corto plazo, asumiendo a la vez que la cuota promocional puede cambiar.
+
+Tipo: Integration | Fecha: 2026-06-28
+
+---
+
 <a id="case-131"></a>
 ### Case 131: [4x DGX Spark Local GLM Runbook](https://x.com/TraffAlex/status/2071020631072616698) (por [@TraffAlex](https://x.com/TraffAlex))
 
@@ -1533,6 +1606,17 @@ Tipo: Demo | Fecha: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Límites, advertencias y señales de seguridad
+
+<a id="case-134"></a>
+### Case 134: [Advertencia sobre la estrecha victoria de Semgrep en IDOR](https://x.com/leploutos/status/2071121981551047039) (por [@leploutos](https://x.com/leploutos))
+
+**Usa este caso para separar una señal de seguridad real de la exageración del titular, porque la fuente dice que GLM-5.2 superó a Claude Code en un benchmark de IDOR pero nunca se probó contra Mythos.**
+
+leploutos dice que la lectura viral de "GLM equivale a Mythos" es incorrecta: el resultado de Semgrep fue un único benchmark de detección de IDOR donde GLM-5.2 obtuvo un F1 del 39%, por delante de configuraciones de Claude Code en el rango del 28-37%, a unos 0.17 dólares por bug y aproximadamente a una sexta parte del coste de modelos frontier. La misma publicación también subraya los límites que importan en la práctica: fue una sola clase de bug, un solo dataset, una sola ejecución y un benchmark propiedad del proveedor, así que conviene tratarlo como una señal estrecha pero real de detección de vulnerabilidades y no como prueba de que GLM iguala al modelo ciber dedicado de Anthropic.
+
+Tipo: Limit | Fecha: 2026-06-28
+
+---
 
 <a id="case-132"></a>
 ### Case 132: [LisanBench Reasoning Efficiency Gap](https://x.com/scaling01/status/2070961852008509918) (por [@scaling01](https://x.com/scaling01))
