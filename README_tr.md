@@ -37,7 +37,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **140 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **145 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -78,9 +78,9 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | Bölüm | Vakalar |
 |---|---|
 | [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136 |
-| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82, 92, 99-100, 123 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145 |
+| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82, 92, 99-100, 123, 144 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141 |
 | [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
 | [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
@@ -117,6 +117,9 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 145: OpenCode + Fireworks ile maliyet düşüren geçiş](#case-145) | Sadece open-model harness değişiminin yeterli olup olmadığını test etmek istiyorsanız bu vakayı kullanın; çünkü yazar kişisel coding ve loop görevlerini Fireworks üzerindeki GLM-5.2 + OpenCode'a taşıdıktan sonra token faturasının üçte bire düştüğünü ve günlük kalite kaybı hissetmediğini söylüyor. | Değerlendirme |
+| [Case 143: GLM toplayıcılı Hermes MoA iş akışı](#case-143) | Yüksek değerli bir agent turu için ekstra orkestrasyon mantıklıysa bu vakayı kullanın; çünkü Hermes Agent'ın Mixture of Agents kurulumu, GLM-5.2'yi diğer modellerle birleştirip yayımlanan demoda görev başına küçük bir ek maliyetle görünür biçimde daha iyi çıktı üretti. | Entegrasyon |
+| [Case 142: Cline reasoning anahtarıyla oluşan harness farkı](#case-142) | Sadece model ağırlıklarını değil harness tasarımını değerlendirmek istiyorsanız bu vakayı kullanın; çünkü aynı GLM-5.2, aynı coding görevlerinde reasoning açılınca 57,3%'ten 68,5%'e çıktı. | Değerlendirme |
 | [Case 136: Cursor + Fireworks 455M-Token Field Test](#case-136) | GLM-5.2’yi ciddi bir Cursor günlük sürücüsü olarak değerlendirmek için bu vakayı kullanın; çünkü yazar hızlı Fireworks serving ile 455M token’lık gerçek kullanım bildirdiğini ve Opus ya da GPT-5.5’e hemen geri dönme isteği duymadığını söylüyor. | Evaluation |
 | [Case 135: Devin Desktop Harness With Skill Portability](#case-135) | Z.ai’nin kendi coding yüzeyi istikrarsız hissettirdiğinde GLM-5.2’yi Devin Desktop içinde denemek için bu vakayı kullanın; çünkü yazar daha kolay skill taşıma, daha yüksek hız ve daha iyi hacklenebilirlik bildirdi. | Evaluation |
 | [Case 127: Pi Inline GLM Reviewer](#case-127) | Yazara göre GLM-5.2, yaklaşık %10 ek maliyetle Opus’u tur tur yönlendirebildiği için Pi benzeri bir kod ajanı döngüsüne ikinci bir reviewer eklemek üzere bu vakayı kullanın. | Integration |
@@ -145,6 +148,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 144: Açık kaynak DevRel araştırma ajanı](#case-144) | GLM-5.2'yi genel amaçlı bir sohbet modeli yerine dikey bir araştırma yardımcısına dönüştürmek istiyorsanız bu vakayı kullanın; çünkü yazar, ürün ve hedef kitle girdilerini kanıtlı ve taslaklı içerik fırsatlarına dönüştüren açık kaynak bir DevRel ajanı kurdu. | Demo |
 | [Case 123: Recast Six-Variation Landing-Page Loop](#case-123) | Önce birkaç GLM-5.2 varyasyonu üretip ardından en güçlü sonucu bir kod ajanına taşıyarak landing page prototiplemeyi ucuzlatmak için bu vakayı kullanın. | Öğretici |
 | [Playable Backrooms One-Shot](#case-23) | GLM-5.2 ile Opus 4.8 arasındaki aynı istemde oyun oluşturma çıktısını, çalışma süresini ve maliyetini karşılaştırmak için bu durumu kullanın. | Demo |
 | [Karışık Sonuçlara Sahip Üç Gerçek Yapı](#case-24) | Bu durumu uyarıcı bir demo seti olarak kullanın: üretim oyunu veya video görevleri için bir modele güvenmeden önce birden fazla gerçek yapıyı test edin. | Değerlendirme |
@@ -166,6 +170,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 141: Open-weight modeller için ClinePass sabit aboneliği](#case-141) | Birden fazla open-weight coding modelini tek bir agent harness içinde toplamak istiyorsanız bu vakayı kullanın; çünkü ClinePass, GLM-5.2 ve ilgili modelleri ayrı provider anahtarları ve panelleri yerine sabit aylık ücret altında birleştiriyor. | Entegrasyon |
 | [Case 137: Free GLM API Service For Coding Agents](#case-137) | Hermes veya diğer coding agent’larda GLM-5.2’yi kayıt olmadan test etmek için bu vakayı kullanın; çünkü paylaşılan servis kısa ömürlü API key’ler veriyor ve kurulumu hafif tutuyor. | Integration |
 | [Case 128: Cloudflare Workers AI OpenCode Setup](#case-128) | Kendi model barındırıcınızı kurmadan coding agent’lar için ücretsiz OpenAI uyumlu bir rota istediğinizde GLM-5.2’yi Cloudflare Workers AI üzerinden çalıştırmak için bu vakayı kullanın. | Tutorial |
 | [Case 129: Puter.js Zero-Setup Browser Client](#case-129) | API key, faturalama ya da backend kurulumuna dokunmadan önce GLM-5.2’yi yalnızca tarayıcı tabanlı bir prototipte test etmek için bu vakayı kullanın. | Tutorial |
@@ -702,6 +707,37 @@ Tür: Entegrasyon | Tarih: 2026-06-23
 
 ---
 
+<a id="case-145"></a>
+### Case 145: [OpenCode + Fireworks ile maliyet düşüren geçiş](https://x.com/SeekingN0rth/status/2071484711327985696) (yazan [@SeekingN0rth](https://x.com/SeekingN0rth))
+
+**Sadece open-model harness değişiminin yeterli olup olmadığını test etmek istiyorsanız bu vakayı kullanın; çünkü yazar kişisel coding ve loop görevlerini Fireworks üzerindeki GLM-5.2 + OpenCode'a taşıdıktan sonra token faturasının üçte bire düştüğünü ve günlük kalite kaybı hissetmediğini söylüyor.**
+
+SeekingN0rth, kişisel coding ve loop görevlerini hafta sonunda Fireworks üzerindeki GLM 5.2 + OpenCode'a taşıdıktan sonra token harcamasının yaklaşık üçte bire indiğini söylüyor. Gönderi, deneyimi belirleyenin frontier statüsü değil harness olduğunu savunuyor: OpenCode terminalde Claude Code'a benzer hissettirdi, günlük görevlerde belirgin kalite düşüşü olmadı ve bu örnek, mutlak SOTA performansından çok maliyeti önemseyen daha büyük işletmeler için de uygulanabilecek bir model değiştirme paterni olarak sunuluyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-29
+
+---
+
+<a id="case-143"></a>
+### Case 143: [GLM toplayıcılı Hermes MoA iş akışı](https://x.com/IBuzovskyi/status/2071601107944571249) (yazan [@IBuzovskyi](https://x.com/IBuzovskyi))
+
+**Yüksek değerli bir agent turu için ekstra orkestrasyon mantıklıysa bu vakayı kullanın; çünkü Hermes Agent'ın Mixture of Agents kurulumu, GLM-5.2'yi diğer modellerle birleştirip yayımlanan demoda görev başına küçük bir ek maliyetle görünür biçimde daha iyi çıktı üretti.**
+
+IBuzovskyi, Hermes Agent'ın Mixture of Agents modunu araç erişimi olan bir toplayıcı model ve yalnızca özel tavsiye veren referans modeller olarak açıklıyor. Gönderi, GLM 5.2 tek başına kullanıldığında 13 dakika ve 0,38 dolar süren bir coding testinin; GLM 5.2 toplayıcısına Kimi K2.6 ve MiniMax M3 eklendiğinde 35 dakika ve 0,47 dolara çıktığını, ama daha akıcı animasyonlar, daha iyi görseller ve daha temiz oyun mekanikleri ürettiğini söylüyor. Preset tasarımı, özelliğin nereden açılacağı ve ek gecikmenin hangi durumlarda değerli olduğu da anlatılıyor.
+
+Tür: Entegrasyon | Tarih: 2026-06-29
+
+---
+
+<a id="case-142"></a>
+### Case 142: [Cline reasoning anahtarıyla oluşan harness farkı](https://x.com/akshay_pachaar/status/2071638409022763292) (yazan [@akshay_pachaar](https://x.com/akshay_pachaar))
+
+**Sadece model ağırlıklarını değil harness tasarımını değerlendirmek istiyorsanız bu vakayı kullanın; çünkü aynı GLM-5.2, aynı coding görevlerinde reasoning açılınca 57,3%'ten 68,5%'e çıktı.**
+
+akshay_pachaar, GLM 5.2'nin aynı coding görev setini iki farklı şekilde çalıştırdığı bir Cline testine işaret ediyor: reasoning kapalıyken 57,3%, açıkken 68,5%. Gönderi bu farkı kullanarak, teslim edilebilir kod üretmek istiyorsanız bağlamın taşınması, araç erişimi, edit uygulama biçimi ve doğrulama döngülerinin temel model kadar önemli olabileceğini savunuyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-29
+
 <a id="case-136"></a>
 ### Case 136: [Cursor + Fireworks 455M-Token Field Test](https://x.com/robinebers/status/2071246749210190132) (yazan [@robinebers](https://x.com/robinebers))
 
@@ -770,6 +806,17 @@ Tür: Değerlendirme | Tarih: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Uygulamalı demolar ve vitrin derlemeleri
+
+---
+
+<a id="case-144"></a>
+### Case 144: [Açık kaynak DevRel araştırma ajanı](https://x.com/Astrodevil_/status/2071572680470655253) (yazan [@Astrodevil_](https://x.com/Astrodevil_))
+
+**GLM-5.2'yi genel amaçlı bir sohbet modeli yerine dikey bir araştırma yardımcısına dönüştürmek istiyorsanız bu vakayı kullanın; çünkü yazar, ürün ve hedef kitle girdilerini kanıtlı ve taslaklı içerik fırsatlarına dönüştüren açık kaynak bir DevRel ajanı kurdu.**
+
+Astrodevil_, ürün ve kitle özetini alan, Hacker News'de talep sinyalleri arayan, DEV üzerindeki içerik boşluklarını kontrol eden, Engram memory ile gerçekleri güncelleyen ve ardından kanıtlı, taslaklı, sıralı konu fikirleri döndüren chat-first bir DevRel araştırma uygulamasını GLM-5.2 üzerinde kurdu. Gönderi ayrıca kullanılan yığını da veriyor: Agno, Weaviate Engram, Nebius inference ve açık kaynak kod tabanı.
+
+Tür: Demo | Tarih: 2026-06-29
 
 <a id="case-123"></a>
 ### Case 123: [Recast Six-Variation Landing-Page Loop](https://x.com/nutlope/status/2070199649818779914) (yazan [@nutlope](https://x.com/nutlope))
@@ -950,6 +997,17 @@ Tür: Demo | Tarih: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Sağlayıcı ve araç entegrasyonları
+
+---
+
+<a id="case-141"></a>
+### Case 141: [Open-weight modeller için ClinePass sabit aboneliği](https://x.com/iam_elias1/status/2071655509611151674) (yazan [@iam_elias1](https://x.com/iam_elias1))
+
+**Birden fazla open-weight coding modelini tek bir agent harness içinde toplamak istiyorsanız bu vakayı kullanın; çünkü ClinePass, GLM-5.2 ve ilgili modelleri ayrı provider anahtarları ve panelleri yerine sabit aylık ücret altında birleştiriyor.**
+
+iam_elias1, ClinePass'i GLM-5.2, DeepSeek, Kimi, Qwen, MiniMax, MiMo ve benzeri open-weight modelleri Cline'ın IDE uzantısı ve CLI'ında kullanmak için aylık 9,99 dolarlık bir yol olarak anlatıyor. Gönderiye göre bu yapı provider bazlı API key dağınıklığını kaldırıyor, standart API limitlerinin 2-5 katını veriyor, coding aşamasına göre oturum içinde model değiştirmeye izin veriyor ve CLI üzerinden kayıt olursanız ilk ayı 1,99 dolara indiriyor.
+
+Tür: Entegrasyon | Tarih: 2026-06-29
 
 <a id="case-137"></a>
 ### Case 137: [Free GLM API Service For Coding Agents](https://x.com/mcwangcn/status/2071261128575897901) (yazan [@mcwangcn](https://x.com/mcwangcn))

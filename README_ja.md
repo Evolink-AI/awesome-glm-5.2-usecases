@@ -37,7 +37,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **140 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **145 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -78,9 +78,9 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | セクション | ケース |
 |---|---|
 | [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | ケース 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | ケース 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136 |
-| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | ケース 23-30, 71, 78, 81-82, 92, 99-100, 123 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | ケース 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137 |
+| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | ケース 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145 |
+| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | ケース 23-30, 71, 78, 81-82, 92, 99-100, 123, 144 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | ケース 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141 |
 | [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | ケース 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
 | [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | ケース 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
@@ -115,6 +115,9 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 145: OpenCode と Fireworks へのコスト削減移行](#case-145) | open-model harness への切り替えだけで十分か確かめたいならこの事例が役立ちます。作者は個人の coding と loop task を Fireworks 上の GLM-5.2 + OpenCode に移し、日常品質をほぼ保ったまま token コストが 3 分の 1 になったと言っているからです。 | 評価 |
+| [Case 143: Hermes MoA の GLM アグリゲーターワークフロー](#case-143) | 価値の高い agent の 1 ターンに追加のオーケストレーションをかける価値があるなら、この事例が役立ちます。Hermes Agent の Mixture of Agents 構成は、GLM-5.2 と他モデルを組み合わせ、小さな追加コストで目に見えて良い出力を出したからです。 | 統合 |
+| [Case 142: Cline の推論オン/オフによるハーネス差分](#case-142) | モデルの重みだけでなく harness 設計を見たいならこの事例が役立ちます。同じ GLM-5.2 が同じ coding task で、reasoning を有効にしただけで 57.3% から 68.5% に伸びたからです。 | 評価 |
 | [Case 136: Cursor + Fireworks 455M-Token Field Test](#case-136) | 高速な Fireworks 提供と 4.55 億 tokens の実運用を作者が報告しており、すぐに Opus や GPT-5.5 に戻る気がないとしているため、GLM-5.2 を Cursor の本格的な常用モデルとして判断するためのケースです。 | 評価 |
 | [Case 135: Devin Desktop Harness With Skill Portability](#case-135) | Z.ai 自身の coding surface が不安定に感じられるときに、GLM-5.2 を Devin Desktop 内で試すためのケースです。作者は、より簡単な skill 移植、高速さ、そして hackability の高さを報告しています。 | 評価 |
 | [Case 127: Pi インライン GLM レビュアー](#case-127) | Pi スタイルの coding-agent loop に第 2 のレビュー担当を加えたいときに使うケースです。作者によれば、GLM-5.2 は Opus に turn ごとに助言でき、コスト増はおよそ 10% に収まるとのことです。 | 統合 |
@@ -143,6 +146,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 144: オープンソースの DevRel リサーチエージェント](#case-144) | GLM-5.2 を汎用チャットではなく縦型の調査アシスタントに変えたいならこの事例が役立ちます。作者は、製品とオーディエンスの入力を根拠付きのコンテンツ候補とアウトラインに変えるオープンソース DevRel エージェントを作ったからです。 | デモ |
 | [Case 123: Recast 6 バリエーションの LP 反復ループ](#case-123) | まず複数の GLM-5.2 案を作ってから最良案を coding agent に引き継ぎ、低コストで landing page を試作するためのケースです。 | チュートリアル |
 | [Playable Backrooms One-Shot](#case-23) | このケースを使用して、GLM-5.2 と Opus 4.8 の間で同じプロンプトのゲーム構築の出力、ランタイム、コストを比較します。 | デモ |
 | [結果がまちまちの 3 つの実際のビルド](#case-24) | このケースは、注意深いデモ セットとして使用してください。実稼働ゲームやビデオ タスクのモデルを信頼する前に、複数の実際のビルドをテストしてください。 | 評価 |
@@ -164,6 +168,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 141: ClinePass のオープンウェイト定額購読](#case-141) | 複数のオープンウェイト coding model を 1 つの agent harness にまとめたいならこの事例が役立ちます。ClinePass は GLM-5.2 と関連モデルを、個別の provider key や請求管理ではなく月額固定で束ねているからです。 | 統合 |
 | [Case 137: Free GLM API Service For Coding Agents](#case-137) | 登録なしで Hermes や他の coding agent で GLM-5.2 を試すためのケースです。共有サービスは短時間有効な API key を発行し、セットアップを軽量に保ちます。 | 統合 |
 | [Case 128: Cloudflare Workers AI での OpenCode セットアップ](#case-128) | 独自のモデルホストを用意せず、coding agent 向けの無料の OpenAI 互換ルートとして Cloudflare Workers AI 経由で GLM-5.2 を動かしたいときに使うケースです。 | チュートリアル |
 | [Case 129: Puter.js ノーセットアップのブラウザクライアント](#case-129) | API key、課金、バックエンド設定に触れる前に、ブラウザだけの試作で GLM-5.2 を試したいときに使うケースです。 | チュートリアル |
@@ -700,6 +705,37 @@ colemurray は、Modal Inference 上の OpenInspect を、GLM-5.2 を FP8 で動
 
 ---
 
+<a id="case-145"></a>
+### Case 145: [OpenCode と Fireworks へのコスト削減移行](https://x.com/SeekingN0rth/status/2071484711327985696) (作者 [@SeekingN0rth](https://x.com/SeekingN0rth))
+
+**open-model harness への切り替えだけで十分か確かめたいならこの事例が役立ちます。作者は個人の coding と loop task を Fireworks 上の GLM-5.2 + OpenCode に移し、日常品質をほぼ保ったまま token コストが 3 分の 1 になったと言っているからです。**
+
+SeekingN0rth は、個人の coding と loop task を週末のうちに Fireworks 上の GLM 5.2 + OpenCode へ移したことで、token 支出が約 3 分の 1 になったと述べています。投稿では、体験を決めたのは frontier かどうかより harness だとされており、OpenCode は terminal での Claude Code に近い感触で、日常タスクでは目立った品質低下もなかったといいます。この例は、コストを絶対的な SOTA より重視する大企業にも通じるモデル切り替えパターンとして語られています。
+
+タイプ: 評価 | 日付: 2026-06-29
+
+---
+
+<a id="case-143"></a>
+### Case 143: [Hermes MoA の GLM アグリゲーターワークフロー](https://x.com/IBuzovskyi/status/2071601107944571249) (作者 [@IBuzovskyi](https://x.com/IBuzovskyi))
+
+**価値の高い agent の 1 ターンに追加のオーケストレーションをかける価値があるなら、この事例が役立ちます。Hermes Agent の Mixture of Agents 構成は、GLM-5.2 と他モデルを組み合わせ、小さな追加コストで目に見えて良い出力を出したからです。**
+
+IBuzovskyi は Hermes Agent の Mixture of Agents モードを、ツールアクセスを持つ 1 つのアグリゲーターモデルと、私的な助言だけを返す複数の参照モデルの組み合わせとして説明しています。投稿では、GLM 5.2 単体だと 13 分・0.38 ドルだった coding テストが、GLM 5.2 をアグリゲーターにして Kimi K2.6 と MiniMax M3 を組み合わせると 35 分・0.47 ドルになった一方で、アニメーション、ビジュアル、ゲームメカニクスはより良くなったと報告しています。プリセット設計、機能の有効化場所、追加レイテンシを許容すべき場面も整理されています。
+
+タイプ: 統合 | 日付: 2026-06-29
+
+---
+
+<a id="case-142"></a>
+### Case 142: [Cline の推論オン/オフによるハーネス差分](https://x.com/akshay_pachaar/status/2071638409022763292) (作者 [@akshay_pachaar](https://x.com/akshay_pachaar))
+
+**モデルの重みだけでなく harness 設計を見たいならこの事例が役立ちます。同じ GLM-5.2 が同じ coding task で、reasoning を有効にしただけで 57.3% から 68.5% に伸びたからです。**
+
+akshay_pachaar は、同じ GLM 5.2 に同じ coding task 群を与えた Cline のテストを引用しています。reasoning をオフにすると 57.3%、オンにすると 68.5% でした。この差を使って投稿は、出力が単なるテキストではなく出荷可能なコードになるかどうかは、コンテキスト保持、ツール利用、編集適用、検証ループが基盤モデルと同じくらい重要だと論じています。
+
+タイプ: 評価 | 日付: 2026-06-29
+
 <a id="case-136"></a>
 ### Case 136: [Cursor + Fireworks 455M-Token Field Test](https://x.com/robinebers/status/2071246749210190132) (作者 [@robinebers](https://x.com/robinebers))
 
@@ -768,6 +804,17 @@ clairevo は、GLM 5.2 が Claude Code と Cursor におけるデフォルトモ
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 実演デモとショーケースビルド
+
+---
+
+<a id="case-144"></a>
+### Case 144: [オープンソースの DevRel リサーチエージェント](https://x.com/Astrodevil_/status/2071572680470655253) (作者 [@Astrodevil_](https://x.com/Astrodevil_))
+
+**GLM-5.2 を汎用チャットではなく縦型の調査アシスタントに変えたいならこの事例が役立ちます。作者は、製品とオーディエンスの入力を根拠付きのコンテンツ候補とアウトラインに変えるオープンソース DevRel エージェントを作ったからです。**
+
+Astrodevil_ は GLM-5.2 上に、製品とターゲットの説明を受け取る chat-first の DevRel 調査アプリを構築しました。Hacker News から需要シグナルを探し、DEV のコンテンツギャップを調べ、Engram memory で事実を更新し、根拠付きで優先順位付けされたトピック案とアウトラインを返します。投稿では Agno、Weaviate Engram、Nebius inference、そしてオープンソースのコードベースも明示しています。
+
+タイプ: デモ | 日付: 2026-06-29
 
 <a id="case-123"></a>
 ### Case 123: [Recast 6 バリエーションの LP 反復ループ](https://x.com/nutlope/status/2070199649818779914) (作者 [@nutlope](https://x.com/nutlope))
@@ -948,6 +995,17 @@ atmoio は、AI を破壊する Plague Inc 風のユーモアゲームが Claude
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 プロバイダ・ツール統合
+
+---
+
+<a id="case-141"></a>
+### Case 141: [ClinePass のオープンウェイト定額購読](https://x.com/iam_elias1/status/2071655509611151674) (作者 [@iam_elias1](https://x.com/iam_elias1))
+
+**複数のオープンウェイト coding model を 1 つの agent harness にまとめたいならこの事例が役立ちます。ClinePass は GLM-5.2 と関連モデルを、個別の provider key や請求管理ではなく月額固定で束ねているからです。**
+
+iam_elias1 は ClinePass を、GLM-5.2、DeepSeek、Kimi、Qwen、MiniMax、MiMo などのオープンウェイトモデルを Cline の IDE 拡張と CLI で使える月額 9.99 ドルの導線として紹介しています。投稿によれば、provider ごとの API key を置き換え、標準 API 制限の 2-5 倍を使え、作業フェーズごとにセッション途中でモデルを切り替えられ、CLI 経由の登録なら初月は 1.99 ドルです。
+
+タイプ: 統合 | 日付: 2026-06-29
 
 <a id="case-137"></a>
 ### Case 137: [Free GLM API Service For Coding Agents](https://x.com/mcwangcn/status/2071261128575897901) (作者 [@mcwangcn](https://x.com/mcwangcn))

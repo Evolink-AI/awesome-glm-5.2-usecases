@@ -37,7 +37,7 @@ Each case title links to its public source, and each author handle links to the 
 
 ## 📊 Overview
 
-- **140 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
+- **145 selected GLM-5.2 cases** from public creators, benchmark teams, tool builders, providers, and hands-on reviewers.
 - Covers Benchmarks & Frontier Evaluation, Coding Agents & Long-Context Workflows, Hands-On Demos & Showcase Builds, Provider & Tool Integrations, Cost, Pricing & Local Deployment, Limits, Caveats & Safety Signals.
 - Each case includes the original source, creator attribution, concise usage takeaway, evidence type, and publication date.
 - Use this repo to find practical workflows, compare strengths and limits, discover provider routes, and follow real hands-on experiments.
@@ -78,9 +78,9 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 | Section | Cases |
 |---|---|
 | [📏 Benchmarks & Frontier Evaluation](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136 |
-| [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123 |
-| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137 |
+| [💻 Coding Agents & Long-Context Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145 |
+| [🎮 Hands-On Demos & Showcase Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144 |
+| [🔌 Provider & Tool Integrations](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141 |
 | [💸 Cost, Pricing & Local Deployment](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
 | [🧭 Limits, Caveats & Safety Signals](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
 | [🙏 Acknowledge](#acknowledge) | Credits and correction policy |
@@ -117,6 +117,9 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 145: OpenCode Fireworks Cost-Cut Migration](#case-145) | Use this case to test whether an open-model harness swap is enough for your own workflow, because the author moved personal coding and loop tasks to GLM-5.2 on Fireworks plus OpenCode and says the token bill fell to one third without an obvious day-to-day quality loss. | Evaluation |
+| [Case 143: Hermes MoA GLM Aggregator Workflow](#case-143) | Use this case when one high-stakes agent turn is worth extra orchestration, because Hermes Agent's mixture-of-agents setup paired GLM-5.2 with other models for visibly better output at only a small per-task cost increase in the posted demo. | Integration |
+| [Case 142: Cline Reasoning Toggle Harness Delta](#case-142) | Use this case to judge harness design, not just raw weights, because the same GLM-5.2 model jumped from 57.3% to 68.5% on the same coding tasks when the harness turned reasoning on. | Evaluation |
 | [Case 136: Cursor + Fireworks 455M-Token Field Test](#case-136) | Use this case to judge GLM-5.2 as a serious Cursor daily driver, because the author reports 455M tokens of real usage with fast Fireworks serving and no immediate desire to go back to Opus or GPT-5.5. | Evaluation |
 | [Case 135: Devin Desktop Harness With Skill Portability](#case-135) | Use this case to test GLM-5.2 inside Devin Desktop when Z.ai's own coding surface feels unstable, because the author reports easier skill porting, higher speed, and better hackability there. | Evaluation |
 | [Case 127: Pi Inline GLM Reviewer](#case-127) | Use this case to add a second reviewer to a Pi-style coding-agent loop, because the author reports GLM-5.2 can advise Opus turn by turn for roughly a 10% cost increase. | Integration |
@@ -145,6 +148,7 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 144: Open-Source DevRel Research Agent](#case-144) | Use this case to turn GLM-5.2 into a vertical research assistant instead of a generic chat model, because the author built an open-source DevRel agent that turns product and audience inputs into ranked content opportunities with evidence and outlines. | Demo |
 | [Case 123: Recast Six-Variation Landing-Page Loop](#case-123) | Use this case to prototype landing pages cheaply by generating several GLM-5.2 variants first, then carrying the strongest result forward into a coding agent. | Tutorial |
 | [Playable Backrooms One-Shot](#case-23) | Use this case to compare same-prompt game-building output, runtime, and cost between GLM-5.2 and Opus 4.8. | Demo |
 | [Three Real Builds With Mixed Results](#case-24) | Use this case as a cautionary demo set: test multiple real builds before trusting a model for production game or video tasks. | Evaluation |
@@ -166,6 +170,7 @@ Read the full GLM-5.2 API reference: [Open GLM-5.2 API docs](https://docs.evolin
 
 | Case | What it shows | Type |
 |---|---|---|
+| [Case 141: ClinePass Flat Subscription For Open Weights](#case-141) | Use this case to consolidate multiple open-weight coding models inside one agent harness, because ClinePass bundles GLM-5.2 and related coding models under flat monthly pricing instead of separate provider keys and billing dashboards. | Integration |
 | [Case 137: Free GLM API Service For Coding Agents](#case-137) | Use this case to test GLM-5.2 in Hermes or other coding agents without registration, because the shared service issues short-lived API keys and keeps the setup lightweight. | Integration |
 | [Case 128: Cloudflare Workers AI OpenCode Setup](#case-128) | Use this case to run GLM-5.2 through Cloudflare Workers AI when you want a free OpenAI-compatible route for coding agents without provisioning your own model host. | Tutorial |
 | [Case 129: Puter.js Zero-Setup Browser Client](#case-129) | Use this case to test GLM-5.2 in a browser-only prototype before touching API keys, billing, or backend setup. | Tutorial |
@@ -702,6 +707,37 @@ Type: Integration | Date: 2026-06-23
 
 ---
 
+<a id="case-145"></a>
+### Case 145: [OpenCode Fireworks Cost-Cut Migration](https://x.com/SeekingN0rth/status/2071484711327985696) (by [@SeekingN0rth](https://x.com/SeekingN0rth))
+
+**Use this case to test whether an open-model harness swap is enough for your own workflow, because the author moved personal coding and loop tasks to GLM-5.2 on Fireworks plus OpenCode and says the token bill fell to one third without an obvious day-to-day quality loss.**
+
+SeekingN0rth says a weekend migration of personal coding and loop tasks to GLM 5.2 on Fireworks with OpenCode cut token spending to roughly one third. The thread argues the harness mattered more than raw frontier status: OpenCode felt comparable to Claude Code in terminal use, the user did not notice a meaningful quality drop for everyday tasks, and the example is framed as a model-switching pattern that larger enterprises could also apply when cost matters more than absolute SOTA performance.
+
+Type: Evaluation | Date: 2026-06-29
+
+---
+
+<a id="case-143"></a>
+### Case 143: [Hermes MoA GLM Aggregator Workflow](https://x.com/IBuzovskyi/status/2071601107944571249) (by [@IBuzovskyi](https://x.com/IBuzovskyi))
+
+**Use this case when one high-stakes agent turn is worth extra orchestration, because Hermes Agent's mixture-of-agents setup paired GLM-5.2 with other models for visibly better output at only a small per-task cost increase in the posted demo.**
+
+IBuzovskyi explains Hermes Agent's Mixture of Agents mode as one aggregator model with tool access plus reference models that provide private advice. The thread reports a coding test where solo GLM 5.2 took 13 minutes and 0.38 dollars, while a GLM 5.2 aggregator with Kimi K2.6 and MiniMax M3 took 35 minutes and 0.47 dollars but produced smoother animations, better visuals, and cleaner game mechanics. It also outlines preset design, where to enable the feature, and when the extra latency is or is not worth it.
+
+Type: Integration | Date: 2026-06-29
+
+---
+
+<a id="case-142"></a>
+### Case 142: [Cline Reasoning Toggle Harness Delta](https://x.com/akshay_pachaar/status/2071638409022763292) (by [@akshay_pachaar](https://x.com/akshay_pachaar))
+
+**Use this case to judge harness design, not just raw weights, because the same GLM-5.2 model jumped from 57.3% to 68.5% on the same coding tasks when the harness turned reasoning on.**
+
+akshay_pachaar points to a Cline test where GLM 5.2 ran the same coding task set two ways: 57.3% with reasoning off and 68.5% with reasoning on. The thread uses that delta to argue that context carryover, tool access, edit application, and verification loops can matter as much as the base model when you want shipping code rather than text output.
+
+Type: Evaluation | Date: 2026-06-29
+
 <a id="case-136"></a>
 ### Case 136: [Cursor + Fireworks 455M-Token Field Test](https://x.com/robinebers/status/2071246749210190132) (by [@robinebers](https://x.com/robinebers))
 
@@ -770,6 +806,17 @@ Type: Evaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Hands-On Demos & Showcase Builds
+
+---
+
+<a id="case-144"></a>
+### Case 144: [Open-Source DevRel Research Agent](https://x.com/Astrodevil_/status/2071572680470655253) (by [@Astrodevil_](https://x.com/Astrodevil_))
+
+**Use this case to turn GLM-5.2 into a vertical research assistant instead of a generic chat model, because the author built an open-source DevRel agent that turns product and audience inputs into ranked content opportunities with evidence and outlines.**
+
+Astrodevil_ built a chat-first DevRel research app on GLM-5.2 that accepts a product and audience brief, searches Hacker News for demand signals, checks DEV for content gaps, updates facts through Engram memory, and returns ranked topic ideas with evidence and outlines. The post also names the stack: Agno, Weaviate Engram, Nebius inference, and an open-source codebase.
+
+Type: Demo | Date: 2026-06-29
 
 <a id="case-123"></a>
 ### Case 123: [Recast Six-Variation Landing-Page Loop](https://x.com/nutlope/status/2070199649818779914) (by [@nutlope](https://x.com/nutlope))
@@ -950,6 +997,17 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Provider & Tool Integrations
+
+---
+
+<a id="case-141"></a>
+### Case 141: [ClinePass Flat Subscription For Open Weights](https://x.com/iam_elias1/status/2071655509611151674) (by [@iam_elias1](https://x.com/iam_elias1))
+
+**Use this case to consolidate multiple open-weight coding models inside one agent harness, because ClinePass bundles GLM-5.2 and related coding models under flat monthly pricing instead of separate provider keys and billing dashboards.**
+
+iam_elias1 describes ClinePass as a 9.99-dollar monthly route for GLM-5.2, DeepSeek, Kimi, Qwen, MiniMax, MiMo, and related open-weight models inside Cline's IDE extension and CLI. The thread says it replaces per-provider API keys, offers 2-5x the standard API rate limits, lets users switch models mid-session for different coding phases, and dropped the first-month launch price to 1.99 dollars through the CLI signup path.
+
+Type: Integration | Date: 2026-06-29
 
 <a id="case-137"></a>
 ### Case 137: [Free GLM API Service For Coding Agents](https://x.com/mcwangcn/status/2071261128575897901) (by [@mcwangcn](https://x.com/mcwangcn))
