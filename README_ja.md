@@ -77,12 +77,12 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | セクション | ケース |
 |---|---|
-| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | ケース 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | ケース 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145 |
+| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | ケース 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146 |
+| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | ケース 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150 |
 | [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | ケース 23-30, 71, 78, 81-82, 92, 99-100, 123, 144 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | ケース 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | ケース 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
-| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | ケース 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | ケース 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | ケース 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151 |
+| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | ケース 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149 |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
 ### [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation)
@@ -259,6 +259,17 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 安全計画のシグナルとして、open-weight の GLM-5.2 が offensive security agents の運用摩擦を下げる点を確認するためのケースです。 | 制限 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
+
+<a id="case-146"></a>
+### Case 146: [CyberBench Open-Weight Patch Runner-Up](https://x.com/ValsAI/status/2072099011398627639) (作者 [@ValsAI](https://x.com/ValsAI))
+
+**GLM-5.2 を攻撃寄りの脆弱性発見とパッチ作成で測りたいならこの事例が役立ちます。CyberBench で 60 件の実在 OSS-Fuzz 脆弱性に対して総合 2 位になっているからです。**
+
+ValsAI は、CyberBench が「脆弱ビルドだけを落とす PoC 提出」と「挙動を壊さないパッチ作成」を組み合わせた評価だと説明しています。60 件の OSS-Fuzz メモリ安全性脆弱性では GPT-5.5 が首位で、GLM 5.2 は最も強い open-weight 群の一つとして示されています。
+
+タイプ: 評価 | 日付: 2026-06-30
+
+---
 
 <a id="case-1"></a>
 ### Case 1: [Artificial Analysis Intelligence Index](https://x.com/ArtificialAnlys/status/2067135640249209175) (作者 [@ArtificialAnlys](https://x.com/ArtificialAnlys))
@@ -516,6 +527,28 @@ Scale AI Labs は、GLM 5.2 が SWE Atlas の 3 つのリーダーボード、Co
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 コーディングエージェントと長文脈ワークフロー
+
+<a id="case-150"></a>
+### Case 150: [Mac Studio Browser-Use Local Loop](https://x.com/MaziyarPanahi/status/2071955191260151862) (作者 [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**完全ローカルな GLM-5.2 スタックが consumer hardware 上で軽い browser agent 作業をこなせるか試したいならこの事例が役立ちます。作者は Mac Studio 上の llama.cpp と browser-use で Hugging Face の PII モデルを探しました。**
+
+MaziyarPanahi は、Mac Studio 上で llama.cpp により GLM-5.2 をローカル実行し、その上に browser-use の agent loop を載せたと述べています。公開例では Hugging Face を操作して `privacy-filter-nemotron` を見つけています。
+
+タイプ: デモ | 日付: 2026-06-30
+
+---
+
+<a id="case-148"></a>
+### Case 148: [Gumloop Agent Swap Cost Cut](https://x.com/aronkor/status/2072032854675218538) (作者 [@aronkor](https://x.com/aronkor))
+
+**既存の agent harness の中で単純なモデル差し替えを試したいならこの事例が役立ちます。Gumloop は GLM-5.2 へ移した後、品質低下をほぼ感じずに credit 消費を約 50% 下げたと言っているからです。**
+
+aronkor は、同じ harness と同じ prompt のまま、Gumloop で最も使われる agent 群を GLM 5.2 に置き換えた内部実験を説明しています。報告では、出力品質の差はほとんど気づかれず、credit 消費だけがほぼ半分になりました。
+
+タイプ: 評価 | 日付: 2026-06-30
+
+---
 
 <a id="case-13"></a>
 ### Case 13: [One Hour Forty Two Minute Refactor Loop](https://x.com/KELMAND1/status/2066012493315723610) (作者 [@KELMAND1](https://x.com/KELMAND1))
@@ -996,6 +1029,17 @@ atmoio は、AI を破壊する Plague Inc 風のユーモアゲームが Claude
 <a id="provider-tool-integrations"></a>
 ## 🔌 プロバイダ・ツール統合
 
+<a id="case-147"></a>
+### Case 147: [Braintrust GLM Eval Workbench](https://x.com/ankrgyl/status/2072042305108722040) (作者 [@ankrgyl](https://x.com/ankrgyl))
+
+**GLM-5.2 と Opus を同じ eval スタックで比べたいならこの事例が役立ちます。Braintrust と Baseten が、long-context の精度とコスト差を具体例つきで公開したからです。**
+
+ankrgyl は、Braintrust が Baseten 対応付きで GLM-5.2 を追加し、チームが eval と production trace の両方で回せるようにしたと述べています。公開例では 25K / 50K token の long-context retrieval を比較し、Opus 4.8 は約 3.5 ポイント上回る一方で trace あたり 4.1 倍から 4.5 倍ほど高いとされています。
+
+タイプ: 統合 | 日付: 2026-06-30
+
+---
+
 ---
 
 <a id="case-141"></a>
@@ -1418,6 +1462,17 @@ wafer_ai は、GLM-5.2 Fast が Vercel AI Gateway で利用可能になり、速
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 コスト、価格、ローカル運用
 
+<a id="case-151"></a>
+### Case 151: [Local NVFP4 Rust Port At 140 Tok/s](https://x.com/mov_axbx/status/2071839859723882771) (作者 [@mov_axbx](https://x.com/mov_axbx))
+
+**調整済みローカル GLM-5.2 配置が実際の coding 作業で何をできるか見積もりたいならこの事例が役立ちます。作者は NVFP4 で 140 tok/s と、Python から Rust への全面移植を数分で終えたと報告しています。**
+
+mov_axbx は、OMP 上のローカル GLM-5.2 NVFP4 構成で毎秒約 140 token に達したと報告しています。同じ投稿では、Python 製の衛星位置計算サービスを約 10 分で Rust に移植し、その数分後にデモ web app まで作ったと述べています。
+
+タイプ: 評価 | 日付: 2026-06-30
+
+---
+
 <a id="case-140"></a>
 ### Case 140: [B300 x2 Agent-Led Dual-Stack Bring-Up](https://x.com/TheValueist/status/2071261052080148607) (作者 [@TheValueist](https://x.com/TheValueist))
 
@@ -1674,6 +1729,17 @@ CardilloSamuel は、約 300GB RAM を積んだ 2x RTX PRO 6000 Blackwell 上の
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 制約、注意点、安全性シグナル
+
+<a id="case-149"></a>
+### Case 149: [AA Verbosity And Reasoning Tradeoff](https://x.com/ArtificialAnlys/status/2072022576394821859) (作者 [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**GLM-5.2 の frontier 級 open-weight 性能と reasoning 効率コストを切り分けたいならこの事例が役立ちます。Artificial Analysis が、open-weight 首位でありながら出力 token 消費が極端に大きいことも示しているからです。**
+
+Artificial Analysis は、GLM-5.2 Max が Intelligence Index を回すのに約 1.41 億の出力 token を使い、その 95% が reasoning token だったと述べています。Opus 4.8 の 1.17 億、GPT-5.5 の 7200 万と比べても多い一方で、GLM-5.2 を最強 open weight と位置づけています。
+
+タイプ: 評価 | 日付: 2026-06-30
+
+---
 
 <a id="case-134"></a>
 ### Case 134: [Semgrep IDOR Narrow-Win Caveat](https://x.com/leploutos/status/2071121981551047039) (作者 [@leploutos](https://x.com/leploutos))

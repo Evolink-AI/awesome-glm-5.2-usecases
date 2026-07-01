@@ -77,12 +77,12 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150 |
 | [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82, 92, 99-100, 123, 144 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
-| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151 |
+| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
 ### [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation)
@@ -261,6 +261,17 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | open-weight GLM-5.2’nin offensive security agents için operasyonel sürtünmeyi düşürdüğünü gösteren bir güvenlik sinyali olarak bu vakayı kullanın. | Sınır |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
+
+<a id="case-146"></a>
+### Case 146: [CyberBench Open-Weight Patch Runner-Up](https://x.com/ValsAI/status/2072099011398627639) (yazan [@ValsAI](https://x.com/ValsAI))
+
+**GLM-5.2'yi saldırı odaklı zafiyet bulma ve yama üretiminde ölçmek istiyorsanız bu vakayı kullanın; CyberBench modeli 60 gerçek OSS-Fuzz zafiyetinde ikinci sıraya koyuyor.**
+
+ValsAI, CyberBench'in zafiyetli build'i tek başına çökerten bir PoC ile davranışı bozmadan yapılan yamayı birlikte değerlendirdiğini söylüyor. 60 OSS-Fuzz bellek güvenliği zafiyetinde GPT-5.5 lider olurken GLM 5.2 en güçlü open-weight girişlerden biri olarak öne çıkıyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-30
+
+---
 
 <a id="case-1"></a>
 ### Case 1: [Artificial Analysis Intelligence Index](https://x.com/ArtificialAnlys/status/2067135640249209175) (yazan [@ArtificialAnlys](https://x.com/ArtificialAnlys))
@@ -518,6 +529,28 @@ Tür: Kıyaslama | Tarih: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Kod ajanları ve uzun bağlamlı iş akışları
+
+<a id="case-150"></a>
+### Case 150: [Mac Studio Browser-Use Local Loop](https://x.com/MaziyarPanahi/status/2071955191260151862) (yazan [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**Tamamen yerel bir GLM-5.2 yığınının tüketici donanımında hafif browser agent işi yapıp yapamayacağını test etmek istiyorsanız bu vakayı kullanın; yazar Mac Studio üzerinde llama.cpp ve browser-use ile Hugging Face'te bir PII modeli buldu.**
+
+MaziyarPanahi, GLM-5.2'yi Mac Studio üzerinde llama.cpp ile yerelde çalıştırdığını ve ardından browser-use loop'una bağladığını söylüyor. Paylaşılan örnekte model Hugging Face üzerinde gezinip `privacy-filter-nemotron` modelini buluyor.
+
+Tür: Demo | Tarih: 2026-06-30
+
+---
+
+<a id="case-148"></a>
+### Case 148: [Gumloop Agent Swap Cost Cut](https://x.com/aronkor/status/2072032854675218538) (yazan [@aronkor](https://x.com/aronkor))
+
+**Mevcut bir agent harness içinde doğrudan model değişimini test etmek istiyorsanız bu vakayı kullanın; Gumloop en çok kullandığı agentları GLM-5.2'ye taşıdıktan sonra yaklaşık %50 daha az credit harcadığını ve görünür kalite kaybı yaşamadığını söylüyor.**
+
+aronkor, aynı harness ve aynı prompt korunarak Gumloop'un en çok kullanılan agentlarının GLM 5.2 ile değiştirildiği iç deneyi anlatıyor. Bildirilen sonuç, kimsenin çıktı kalitesinde belirgin fark fark etmemesi ve credit tüketiminin neredeyse yarıya inmesi.
+
+Tür: Değerlendirme | Tarih: 2026-06-30
+
+---
 
 <a id="case-13"></a>
 ### Case 13: [One Hour Forty Two Minute Refactor Loop](https://x.com/KELMAND1/status/2066012493315723610) (yazan [@KELMAND1](https://x.com/KELMAND1))
@@ -998,6 +1031,17 @@ Tür: Demo | Tarih: 2026-06-23
 <a id="provider-tool-integrations"></a>
 ## 🔌 Sağlayıcı ve araç entegrasyonları
 
+<a id="case-147"></a>
+### Case 147: [Braintrust GLM Eval Workbench](https://x.com/ankrgyl/status/2072042305108722040) (yazan [@ankrgyl](https://x.com/ankrgyl))
+
+**GLM-5.2 ile Opus'u aynı eval yığını içinde karşılaştırmak istiyorsanız bu vakayı kullanın; Braintrust ve Baseten bunu somut bir long-context maliyet-doğruluk örneğiyle birlikte yayına aldı.**
+
+ankrgyl, Braintrust'ın Baseten desteğiyle GLM-5.2'yi eklediğini ve ekiplerin modeli hem eval hem de production trace akışlarında çalıştırabileceğini söylüyor. Yayın örneğinde 25K ve 50K token long-context retrieval karşılaştırılıyor: Opus 4.8 yaklaşık 3,5 puan önde, ancak trace başına yaklaşık 4,1x ila 4,5x daha pahalı.
+
+Tür: Entegrasyon | Tarih: 2026-06-30
+
+---
+
 ---
 
 <a id="case-141"></a>
@@ -1420,6 +1464,17 @@ Tür: Entegrasyon | Tarih: 2026-06-24
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
 
+<a id="case-151"></a>
+### Case 151: [Local NVFP4 Rust Port At 140 Tok/s](https://x.com/mov_axbx/status/2071839859723882771) (yazan [@mov_axbx](https://x.com/mov_axbx))
+
+**Ayarlanmış yerel bir GLM-5.2 kurulumunun gerçek coding işinde neler yapabildiğini ölçmek istiyorsanız bu vakayı kullanın; yazar 140 tok/s NVFP4 ve dakikalar içinde tamamlanan bir Python'dan Rust'a port raporluyor.**
+
+mov_axbx, OMP üzerinde yerel GLM-5.2 NVFP4 kurulumunun saniyede yaklaşık 140 token hızına ulaştığını bildiriyor. Aynı paylaşımda modelin bir Python uydu-konum servisini yaklaşık 10 dakikada Rust'a taşıdığı ve kısa süre sonra bir demo web uygulaması oluşturduğu söyleniyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-30
+
+---
+
 <a id="case-140"></a>
 ### Case 140: [B300 x2 Agent-Led Dual-Stack Bring-Up](https://x.com/TheValueist/status/2071261052080148607) (yazan [@TheValueist](https://x.com/TheValueist))
 
@@ -1676,6 +1731,17 @@ Tür: Demo | Tarih: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
+
+<a id="case-149"></a>
+### Case 149: [AA Verbosity And Reasoning Tradeoff](https://x.com/ArtificialAnlys/status/2072022576394821859) (yazan [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**GLM-5.2'nin frontier seviyesindeki open-weight zekasını reasoning verimlilik maliyetinden ayırmak istiyorsanız bu vakayı kullanın; Artificial Analysis modelin açıklar arasında lider olduğunu ama çok yüksek output token harcadığını gösteriyor.**
+
+Artificial Analysis, GLM-5.2 Max'in Intelligence Index'i çalıştırmak için yaklaşık 141M output token kullandığını ve bunun %95'inin reasoning token olduğunu söylüyor. Bu rakam Opus 4.8'in 117M'inden ve GPT-5.5'in 72M'inden yüksek olsa da GLM-5.2 yine en güçlü open-weight model olarak tutuluyor.
+
+Tür: Değerlendirme | Tarih: 2026-06-30
+
+---
 
 <a id="case-134"></a>
 ### Case 134: [Semgrep IDOR Narrow-Win Caveat](https://x.com/leploutos/status/2071121981551047039) (yazan [@leploutos](https://x.com/leploutos))

@@ -37,7 +37,7 @@ Cada título de caso enlaza a su fuente pública y cada usuario enlaza al perfil
 
 ## 📊 Resumen
 
-- **145 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
+- **151 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
 - Cubre evaluaciones comparativas y evaluación de frontera, agentes de código y flujos de contexto largo, demos prácticas y muestras, integraciones de proveedores y herramientas, coste, precios y despliegue local, límites, advertencias y señales de seguridad.
 - Cada caso incluye la fuente original, la atribución del creador, un takeaway de uso conciso, el tipo de evidencia y la fecha de publicación.
 - Usa este repo para encontrar flujos prácticos, comparar fortalezas y límites, descubrir rutas de proveedor y seguir experimentos reales.
@@ -77,12 +77,12 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Sección | Casos |
 |---|---|
-| [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation) | Caso 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121 |
-| [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Caso 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145 |
+| [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation) | Caso 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146 |
+| [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Caso 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150 |
 | [🎮 Demos prácticas y muestras](#hands-on-demos-showcase-builds) | Caso 23-30, 71, 78, 81-82, 92, 99-100, 123, 144 |
-| [🔌 Integraciones de proveedores y herramientas](#provider-tool-integrations) | Caso 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141 |
-| [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Caso 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140 |
-| [🧭 Límites, advertencias y señales de seguridad](#limits-caveats-safety-signals) | Caso 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134 |
+| [🔌 Integraciones de proveedores y herramientas](#provider-tool-integrations) | Caso 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147 |
+| [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Caso 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151 |
+| [🧭 Límites, advertencias y señales de seguridad](#limits-caveats-safety-signals) | Caso 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149 |
 | [🙏 Agradecimientos](#acknowledge) | Créditos y política de correcciones |
 
 ### [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation)
@@ -251,6 +251,17 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | Usa este caso como señal para planificar seguridad: GLM-5.2 open-weight reduce la fricción operativa para agentes ofensivos de seguridad incluso cuando las APIs cerradas siguen monitorizadas. | Límite |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Evaluaciones comparativas y evaluación de frontera
+
+<a id="case-146"></a>
+### Case 146: [CyberBench Open-Weight Patch Runner-Up](https://x.com/ValsAI/status/2072099011398627639) (por [@ValsAI](https://x.com/ValsAI))
+
+**Usa este caso para medir a GLM-5.2 en búsqueda y parcheo de vulnerabilidades de estilo ofensivo, porque CyberBench lo sitúa segundo en 60 vulnerabilidades reales de OSS-Fuzz.**
+
+ValsAI explica que CyberBench añade dos tareas: enviar una PoC que rompa solo el build vulnerable y parchear el código sin romper el comportamiento. En 60 vulnerabilidades de memoria de OSS-Fuzz, GPT-5.5 lideró y GLM 5.2 fue una de las referencias open-weight más fuertes.
+
+Tipo: Evaluación | Fecha: 2026-06-30
+
+---
 
 <a id="case-1"></a>
 ### Case 1: [Artificial Analysis Intelligence Index](https://x.com/ArtificialAnlys/status/2067135640249209175) (por [@ArtificialAnlys](https://x.com/ArtificialAnlys))
@@ -508,6 +519,28 @@ Tipo: Benchmark | Fecha: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Agentes de código y flujos de contexto largo
+
+<a id="case-150"></a>
+### Case 150: [Mac Studio Browser-Use Local Loop](https://x.com/MaziyarPanahi/status/2071955191260151862) (por [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**Usa este caso para probar si una pila totalmente local de GLM-5.2 puede hacer trabajo ligero de browser agent en hardware de consumo, porque el autor ejecutó llama.cpp en un Mac Studio y usó browser-use para encontrar un modelo de PII en Hugging Face.**
+
+MaziyarPanahi dice que ejecutó GLM-5.2 localmente en un Mac Studio mediante llama.cpp y luego lo envolvió en un loop con browser-use. En el ejemplo publicado, el modelo navega por Hugging Face e identifica `privacy-filter-nemotron`.
+
+Tipo: Demostración | Fecha: 2026-06-30
+
+---
+
+<a id="case-148"></a>
+### Case 148: [Gumloop Agent Swap Cost Cut](https://x.com/aronkor/status/2072032854675218538) (por [@aronkor](https://x.com/aronkor))
+
+**Usa este caso para probar una sustitución directa de modelo dentro de un harness existente, porque Gumloop dice que movió sus agentes más usados a GLM-5.2 con cerca de 50% menos créditos y sin caída visible de calidad.**
+
+aronkor describe un experimento interno de Gumloop en el que sustituyeron sus agentes más usados por GLM 5.2 manteniendo el mismo harness y prompt. El resultado comunicado es que nadie notó una diferencia clara en la salida y el consumo de créditos cayó casi a la mitad.
+
+Tipo: Evaluación | Fecha: 2026-06-30
+
+---
 
 <a id="case-13"></a>
 ### Case 13: [One Hour Forty Two Minute Refactor Loop](https://x.com/KELMAND1/status/2066012493315723610) (por [@KELMAND1](https://x.com/KELMAND1))
@@ -988,6 +1021,17 @@ Tipo: Demo | Fecha: 2026-06-23
 <a id="provider-tool-integrations"></a>
 ## 🔌 Integraciones de proveedores y herramientas
 
+<a id="case-147"></a>
+### Case 147: [Braintrust GLM Eval Workbench](https://x.com/ankrgyl/status/2072042305108722040) (por [@ankrgyl](https://x.com/ankrgyl))
+
+**Usa este caso para comparar GLM-5.2 y Opus dentro de una misma pila de evals, porque Braintrust y Baseten lo lanzaron con un ejemplo concreto de coste frente a precisión en contexto largo.**
+
+ankrgyl dice que Braintrust añadió GLM-5.2 con soporte de Baseten para usarlo en evals y trazas de producción. El ejemplo compara recuperación en contexto largo a 25K y 50K tokens: Opus 4.8 gana por unos 3,5 puntos, pero cuesta entre 4,1x y 4,5x más por trace.
+
+Tipo: Integración | Fecha: 2026-06-30
+
+---
+
 ---
 
 <a id="case-141"></a>
@@ -1408,6 +1452,17 @@ Tipo: Integración | Fecha: 2026-06-22
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Coste, precios y despliegue local
 
+<a id="case-151"></a>
+### Case 151: [Local NVFP4 Rust Port At 140 Tok/s](https://x.com/mov_axbx/status/2071839859723882771) (por [@mov_axbx](https://x.com/mov_axbx))
+
+**Usa este caso para medir lo que una instalación local afinada de GLM-5.2 puede hacer en trabajo real de coding, porque el autor informa de NVFP4 a 140 tok/s y de una migración completa de Python a Rust terminada en minutos.**
+
+mov_axbx informa de una configuración local de GLM-5.2 NVFP4 en OMP que alcanza unos 140 tokens por segundo. En la misma publicación dice que el modelo portó un servicio de localización satelital escrito en Python a Rust en unos 10 minutos y luego montó una demo web pocos minutos después.
+
+Tipo: Evaluación | Fecha: 2026-06-30
+
+---
+
 <a id="case-140"></a>
 ### Case 140: [Puesta en marcha dual-stack guiada por agentes en B300 x2](https://x.com/TheValueist/status/2071261052080148607) (por [@TheValueist](https://x.com/TheValueist))
 
@@ -1664,6 +1719,17 @@ Tipo: Demo | Fecha: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Límites, advertencias y señales de seguridad
+
+<a id="case-149"></a>
+### Case 149: [AA Verbosity And Reasoning Tradeoff](https://x.com/ArtificialAnlys/status/2072022576394821859) (por [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**Usa este caso para separar la inteligencia open-weight de nivel frontier de GLM-5.2 de su coste de razonamiento, porque Artificial Analysis muestra un líder abierto que también gasta demasiados tokens de salida.**
+
+Artificial Analysis dice que GLM-5.2 Max usó unos 141M tokens de salida, el 95% de razonamiento, para ejecutar su Intelligence Index. El hilo lo compara con 117M en Opus 4.8 y 72M en GPT-5.5, aunque sigue dejando a GLM-5.2 como el mejor open-weight.
+
+Tipo: Evaluación | Fecha: 2026-06-30
+
+---
 
 <a id="case-134"></a>
 ### Case 134: [Advertencia sobre la estrecha victoria de Semgrep en IDOR](https://x.com/leploutos/status/2071121981551047039) (por [@leploutos](https://x.com/leploutos))
