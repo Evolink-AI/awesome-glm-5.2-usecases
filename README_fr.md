@@ -37,7 +37,7 @@ Chaque titre de cas renvoie à sa source publique et chaque auteur renvoie au pr
 
 ## 📊 Vue d’ensemble
 
-- **151 cas GLM-5.2 sélectionnés** provenant de créateurs publics, équipes de benchmark, développeurs d’outils, fournisseurs et utilisateurs de terrain.
+- **159 cas GLM-5.2 sélectionnés** provenant de créateurs publics, équipes de benchmark, développeurs d’outils, fournisseurs et utilisateurs de terrain.
 - Couvre les évaluations comparatives et l’évaluation des modèles de pointe, les agents de code et les flux de travail à long contexte, les démos pratiques et exemples, les intégrations fournisseurs et outils, les coûts, les prix et le déploiement local, ainsi que les limites, avertissements et signaux de sécurité.
 - Chaque cas inclut la source d’origine, l’attribution du créateur, un takeaway d’usage concis, le type de preuve et la date de publication.
 - Utilisez ce repo pour trouver des workflows pratiques, comparer les forces et limites, découvrir des routes fournisseur et suivre des expériences réelles.
@@ -77,18 +77,20 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Section | Cas |
 |---|---|
-| [📏 Évaluations comparatives et modèles de pointe](#benchmarks-frontier-evaluation) | Cas 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146 |
-| [💻 Agents de code et flux de travail à long contexte](#coding-agents-long-context-workflows) | Cas 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150 |
-| [🎮 Démos pratiques et exemples](#hands-on-demos-showcase-builds) | Cas 23-30, 71, 78, 81-82, 92, 99-100, 123, 144 |
-| [🔌 Intégrations fournisseurs et outils](#provider-tool-integrations) | Cas 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147 |
-| [💸 Coût, prix et déploiement local](#cost-pricing-local-deployment) | Cas 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151 |
-| [🧭 Limites, avertissements et signaux de sécurité](#limits-caveats-safety-signals) | Cas 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149 |
+| [📏 Évaluations comparatives et modèles de pointe](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159 |
+| [💻 Agents de code et flux de travail à long contexte](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155 |
+| [🎮 Démos pratiques et exemples](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158 |
+| [🔌 Intégrations fournisseurs et outils](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152 |
+| [💸 Coût, prix et déploiement local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156 |
+| [🧭 Limites, avertissements et signaux de sécurité](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157 |
 | [🙏 Remerciements](#acknowledge) | Crédits et politique de correction |
 
 ### [📏 Évaluations comparatives et modèles de pointe](#benchmarks-frontier-evaluation)
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 159: SWE-Rebench 51.1 Percent Checkpoint](#case-159) | Utilisez ce cas pour suivre GLM-5.2 sur un leaderboard de SWE agents mis à jour en continu : le dernier post SWE rebench annonce 51,1 pour cent avec 2,62 millions de tokens, nettement devant les nouveaux runs DeepSeek, MiMo, Qwen et Gemma. | Évaluation |
+| [Case 154: LaunchDarkly Edge-Case Win At 40/41](#case-154) | Utilisez ce cas pour tester GLM-5.2 sur un travail agentique avec outils métier plutôt que sur de simples évaluations de chat : Composio annonce 40 sur 41 sur GitHub, Jira et LaunchDarkly et dit que GLM a été le seul modèle à repérer un edge case d approbation en attente. | Évaluation |
 | [Case 120: PostTrainBench Reliability Lead](#case-120) | Utilisez ce cas pour comparer GLM-5.2 Max sur la fiabilité des agents post-training, pas seulement sur le score headline, car le leaderboard signale aussi zéro run en échec sur 84 tâches. | Benchmark |
 | [Case 121: Fireworks + Faros 211-Task Repo Eval](#case-121) | Utilisez ce cas pour juger GLM-5.2 sur de vraies tâches d’ingénierie dans des repos privés plutôt que seulement sur des benchmarks publics, car le résultat publié couvre score, vitesse et coût par tâche. | Évaluation |
 | [Case 110: AA-Briefcase Time-Per-Task Frontier](#case-110) | Utilisez ce cas pour comparer GLM-5.2 sur du travail de connaissance à long horizon, où le temps par tâche compte autant que le score de benchmark. | Benchmark |
@@ -117,6 +119,8 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 155: Cotal Four-Agent TUI Loop](#case-155) | Utilisez ce cas pour répartir une boucle de codage entre agents spécialisés : l auteur a utilisé deux workers GLM-5.2 sous un lead Opus et un reviewer GPT pour terminer une TUI façon lazygit en 47 minutes sans intervention humaine. | Démo |
+| [Case 153: Legacy Migration Cost-Cut Pilot](#case-153) | Utilisez ce cas pour estimer GLM-5.2 comme ouvrier moins cher dans une boucle de modernisation legacy : selon le pilote de 8090, GLM plus Software Factory réduit le coût de 16,4 fois face à Opus 4.8 seul, mais tourne environ 3 fois plus lentement. | Évaluation |
 | [Case 145: Migration de réduction des coûts vers OpenCode + Fireworks](#case-145) | Utilisez ce cas pour tester si un simple basculement vers un harness open-model suffit, car l'auteur a déplacé ses tâches personnelles de coding et de loops vers GLM-5.2 sur Fireworks avec OpenCode et dit que la facture token est tombée à un tiers sans perte de qualité évidente au quotidien. | Évaluation |
 | [Case 143: Workflow Hermes MoA avec GLM agrégateur](#case-143) | Utilisez ce cas lorsqu'un tour d'agent à fort enjeu mérite plus d'orchestration, car la configuration Mixture of Agents de Hermes Agent a combiné GLM-5.2 avec d'autres modèles pour produire un résultat visiblement meilleur avec seulement un petit surcoût par tâche dans la démo publiée. | Intégration |
 | [Case 142: Écart du harness avec le mode reasoning de Cline](#case-142) | Utilisez ce cas pour évaluer la conception du harness et pas seulement les poids du modèle, car le même GLM-5.2 est passé de 57,3 % à 68,5 % sur les mêmes tâches de coding lorsque le harness a activé le reasoning. | Évaluation |
@@ -147,6 +151,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 158: OMP Relay iPhone Client](#case-158) | Utilisez ce cas pour emballer rapidement un agent local GLM-5.2 dans une surface mobile : selon l auteur, le plugin build-ios-app de Codex a produit en quelques heures un client iPhone propre pour un relay OMP qui utilisait déjà GLM-5.2 et des tunnels Cloudflare. | Démo |
 | [Case 144: Agent open source de recherche DevRel](#case-144) | Utilisez ce cas pour transformer GLM-5.2 en assistant de recherche vertical plutôt qu'en chat générique, car l'auteur a construit un agent DevRel open source qui transforme un produit et une audience en opportunités de contenu classées avec preuves et plans. | Démo |
 | [Case 123: Recast Six-Variation Landing-Page Loop](#case-123) | Utilisez ce cas pour prototyper des landing pages à faible coût en générant d’abord plusieurs variantes GLM-5.2, puis en faisant passer la meilleure dans un agent de code. | Tutoriel |
 | [Playable Backrooms One-Shot](#case-23) | Utilisez ce cas pour comparer le résultat, la durée d'exécution et le coût de la création de jeux avec la même invite entre GLM-5.2 et Opus 4.8. | Démo |
@@ -167,6 +172,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 152: Foundry PTUs Through FireConnect](#case-152) | Utilisez ce cas pour faire passer GLM-5.2 par des budgets Foundry d entreprise sans reconstruire vos clients agents, car Fireworks explique que FireConnect relie les PTU de Microsoft Foundry aux workflows Codex, OpenCode et Pi. | Intégration |
 | [Case 141: Abonnement ClinePass pour modèles open-weight](#case-141) | Utilisez ce cas pour regrouper plusieurs modèles de coding open-weight dans un seul agent harness, car ClinePass réunit GLM-5.2 et des modèles proches sous un forfait mensuel fixe au lieu de clés provider et de facturations séparées. | Intégration |
 | [Case 137: Free GLM API Service For Coding Agents](#case-137) | Utilisez ce cas pour tester GLM-5.2 dans Hermes ou d’autres agents de code sans inscription, car le service partagé émet des API keys de courte durée et garde un setup léger. | Integration |
 | [Case 128: Cloudflare Workers AI OpenCode Setup](#case-128) | Utilisez ce cas pour faire tourner GLM-5.2 via Cloudflare Workers AI quand vous voulez une route gratuite compatible OpenAI pour des agents de code sans provisionner votre propre hébergement de modèle. | Tutorial |
@@ -205,6 +211,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 156: 744B Local Hardware Floor](#case-156) | Utilisez ce cas pour dimensionner de façon réaliste un plan local GLM-5.2 : selon la source, même les builds quantifiés restent autour de 239 Go en 2 bits et 466 Go en 4 bits, ce qui fait de 256 Go et plus de RAM ou de VRAM un plancher pratique. | Limite |
 | [Case 140: B300 x2 Agent-Led Dual-Stack Bring-Up](#case-140) | Utilisez ce cas pour cadrer un déploiement auto-hébergé GLM-5.2 sérieux, car le thread montre des analystes mettant en place une inférence NVFP4 sur des B300 bare-metal avec vLLM et SGLang en moins d’une journée. | Evaluation |
 | [Case 139: oMLX M3 Ultra Prefill Speedup](#case-139) | Utilisez ce cas pour revalider la viabilité locale sur Apple Silicon après un travail kernel récent, car la vitesse de prefill GLM-5.2 rapportée sur un M3 Ultra 512GB a presque doublé sans effondrement évident de qualité dans des tests rapides. | Evaluation |
 | [Case 138: 20M Token Signup Credit Burst](#case-138) | Utilisez ce cas pour évaluer si les crédits d’inscription directs suffisent pour un vrai essai GLM-5.2, car le post affirme que les nouveaux comptes reçoivent 20M de tokens gratuits, sans carte, avec un accès pleinement compatible OpenAI. | Integration |
@@ -231,6 +238,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 
 | Cas | Point clé | Type |
 |---|---|---|
+| [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | Utilisez ce cas pour budgéter le coût de migration avant de changer de modèle agent : dans le test OpenRouter dun fonds, GLM-5.2 tombait à environ un huitième du coût d Opus, mais demandait quand même des réécritures de skills, de la logique de routage et l acceptation de sorties plus lentes et plus faibles. | Limite |
 | [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | Utilisez ce cas pour distinguer un vrai signal sécurité d’une inflation de headline, car la source dit que GLM-5.2 a battu Claude Code sur un benchmark IDOR mais n’a jamais été testé contre Mythos lui-même. | Limit |
 | [Case 132: LisanBench Reasoning Efficiency Gap](#case-132) | Utilisez ce cas pour vérifier GLM-5.2 sur des charges fortement orientées raisonnement avant de supposer que sa force en coding se transfère proprement, car le résultat LisanBench publié dépasse GLM-5 tout en restant inefficace face à d’autres modèles ouverts. | Limit |
 | [Case 133: PrinzBench Domain-Mismatch Caveat](#case-133) | Utilisez ce cas pour garder GLM-5.2 centré sur le coding et l’exécution d’agents plutôt que sur la recherche juridique, car le post oppose un score faible sur PrinzBench à des benchmarks bien plus forts en software et usage d’outils. | Limit |
@@ -251,6 +259,28 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | Utilisez ce cas comme signal de planification sécurité: GLM-5.2 open-weight réduit la friction opérationnelle pour des agents offensifs de sécurité même quand les API fermées restent surveillées. | Limite |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Évaluations comparatives et modèles de pointe
+<a id="case-159"></a>
+### Case 159: [SWE-Rebench 51.1 Percent Checkpoint](https://x.com/ibragim_bad/status/2072318238407483593) (par [@ibragim_bad](https://x.com/ibragim_bad))
+
+**Utilisez ce cas pour suivre GLM-5.2 sur un leaderboard de SWE agents mis à jour en continu : le dernier post SWE rebench annonce 51,1 pour cent avec 2,62 millions de tokens, nettement devant les nouveaux runs DeepSeek, MiMo, Qwen et Gemma.**
+
+ibragim_bad explique que la dernière mise à jour de SWE rebench ajoute GLM-5.2 aux côtés de plusieurs nouveaux open models. Les chiffres publiés placent GLM à 51,1 pour cent avec 2,62 millions de tokens, contre 42,7 pour cent pour DeepSeek V4 Pro, 42,4 pour cent pour MiMo V2.5 Pro et encore moins pour Qwen et Gemma. Cela en fait un checkpoint public concret du leaderboard.
+
+Type: Évaluation | Date: 2026-07-01
+
+---
+
+<a id="case-154"></a>
+### Case 154: [LaunchDarkly Edge-Case Win At 40/41](https://x.com/composio/status/2072355937415827950) (par [@composio](https://x.com/composio))
+
+**Utilisez ce cas pour tester GLM-5.2 sur un travail agentique avec outils métier plutôt que sur de simples évaluations de chat : Composio annonce 40 sur 41 sur GitHub, Jira et LaunchDarkly et dit que GLM a été le seul modèle à repérer un edge case d approbation en attente.**
+
+Composio a testé GLM-5.2 face à Claude Opus 4.8 et GPT-5.5 sur 41 tâches agentiques utilisant de vrais outils comme GitHub, Jira et LaunchDarkly. GLM a obtenu 40 sur 41, contre 39 pour Opus et GPT. Sur une tâche LaunchDarkly, GLM a vérifié les approbations en attente avant de déclarer un flag stale, alors que les deux autres modèles se sont arrêtés à l état on ou off.
+
+Type: Évaluation | Date: 2026-07-01
+
+---
+
 
 <a id="case-146"></a>
 ### Case 146: [CyberBench Open-Weight Patch Runner-Up](https://x.com/ValsAI/status/2072099011398627639) (par [@ValsAI](https://x.com/ValsAI))
@@ -594,6 +624,28 @@ Type: Démo | Date: 2026-06-23
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Agents de code et flux de travail à long contexte
+<a id="case-155"></a>
+### Case 155: [Cotal Four-Agent TUI Loop](https://x.com/silvanrec/status/2072335315822403656) (par [@silvanrec](https://x.com/silvanrec))
+
+**Utilisez ce cas pour répartir une boucle de codage entre agents spécialisés : l auteur a utilisé deux workers GLM-5.2 sous un lead Opus et un reviewer GPT pour terminer une TUI façon lazygit en 47 minutes sans intervention humaine.**
+
+Selon silvanrec, Cotal a coordonné quatre modèles : deux instances GLM-5.2 comme développeurs frontend et backend, GPT-5.5 comme reviewer en arrière-plan, et Claude Opus comme chef de boucle. À partir dun seul prompt pour construire une vraie console TUI, le système a exécuté quatre rounds, trouvé des bugs de rendu et de câblage des onglets, géré des handoffs entre agents et livré un résultat fonctionnel en 47 minutes. Le post renvoie aussi à la couche open source via npx cotal-ai setup --full.
+
+Type: Démo | Date: 2026-07-01
+
+---
+
+<a id="case-153"></a>
+### Case 153: [Legacy Migration Cost-Cut Pilot](https://x.com/chamath/status/2072390507628540213) (par [@chamath](https://x.com/chamath))
+
+**Utilisez ce cas pour estimer GLM-5.2 comme ouvrier moins cher dans une boucle de modernisation legacy : selon le pilote de 8090, GLM plus Software Factory réduit le coût de 16,4 fois face à Opus 4.8 seul, mais tourne environ 3 fois plus lentement.**
+
+Chamath a partagé un premier pilote de modernisation PHP vers Next.js. Opus 4.8 avec la Software Factory de 8090 était 1,4 fois moins cher et 1,5 fois plus rapide que Opus seul, tandis que la même factory avec GLM 5.2 réduisait le coût de 16,4 fois face à Opus seul, au prix d une vitesse environ 3 fois plus faible. Le post précise clairement que le résultat reste directionnel avec n égal à 1 et doit être rejoué sur 10 à 15 tâches legacy réelles.
+
+Type: Évaluation | Date: 2026-07-01
+
+---
+
 
 <a id="case-150"></a>
 ### Case 150: [Mac Studio Browser-Use Local Loop](https://x.com/MaziyarPanahi/status/2071955191260151862) (par [@MaziyarPanahi](https://x.com/MaziyarPanahi))
@@ -840,6 +892,17 @@ Type: Évaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Démos pratiques et exemples
+<a id="case-158"></a>
+### Case 158: [OMP Relay iPhone Client](https://x.com/mov_axbx/status/2072192903762288721) (par [@mov_axbx](https://x.com/mov_axbx))
+
+**Utilisez ce cas pour emballer rapidement un agent local GLM-5.2 dans une surface mobile : selon l auteur, le plugin build-ios-app de Codex a produit en quelques heures un client iPhone propre pour un relay OMP qui utilisait déjà GLM-5.2 et des tunnels Cloudflare.**
+
+mov_axbx explique quil voulait une app mobile pour un agent OMP hébergé localement, qu il a utilisé le plugin build-ios-app de Codex et qu il a obtenu une version propre en quelques heures. Le backend passait par un relay custom écrit avec GLM-5.2 et OMP, tandis que Cloudflare gérait le tunnel.
+
+Type: Démo | Date: 2026-07-01
+
+---
+
 
 ---
 
@@ -1020,6 +1083,17 @@ Type: Évaluation | Date: 2026-06-22
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Intégrations fournisseurs et outils
+<a id="case-152"></a>
+### Case 152: [Foundry PTUs Through FireConnect](https://x.com/FireworksAI_HQ/status/2072407689964183867) (par [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
+
+**Utilisez ce cas pour faire passer GLM-5.2 par des budgets Foundry d entreprise sans reconstruire vos clients agents, car Fireworks explique que FireConnect relie les PTU de Microsoft Foundry aux workflows Codex, OpenCode et Pi.**
+
+Fireworks indique que GLM 5.2 est désormais disponible sur Microsoft Foundry. Avec FireConnect activé, les équipes peuvent consommer des PTU Foundry tout en continuant à faire passer les requêtes par Codex, OpenCode ou Pi, sans ouvrir un chemin d accès séparé pour chaque surface agent.
+
+Type: Intégration | Date: 2026-07-01
+
+---
+
 
 <a id="case-147"></a>
 ### Case 147: [Braintrust GLM Eval Workbench](https://x.com/ankrgyl/status/2072042305108722040) (par [@ankrgyl](https://x.com/ankrgyl))
@@ -1453,6 +1527,17 @@ Type: Intégration | Date: 2026-06-22
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Coût, prix et déploiement local
+<a id="case-156"></a>
+### Case 156: [744B Local Hardware Floor](https://x.com/devjuninho/status/2072151237840007399) (par [@devjuninho](https://x.com/devjuninho))
+
+**Utilisez ce cas pour dimensionner de façon réaliste un plan local GLM-5.2 : selon la source, même les builds quantifiés restent autour de 239 Go en 2 bits et 466 Go en 4 bits, ce qui fait de 256 Go et plus de RAM ou de VRAM un plancher pratique.**
+
+devjuninho s oppose à l idée selon laquelle open weights veut automatiquement dire usage local grand public. Le thread explique que GLM-5.2 tourne autour de 744B paramètres avec environ 40B actifs, estime environ 239 Go en 2 bits et 466 Go en 4 bits, et soutient que des runs locaux utiles demandent plutôt une mémoire de classe serveur, de la marge SSD et de la patience qu un simple PC gamer.
+
+Type: Limite | Date: 2026-07-01
+
+---
+
 
 <a id="case-151"></a>
 ### Case 151: [Local NVFP4 Rust Port At 140 Tok/s](https://x.com/mov_axbx/status/2071839859723882771) (par [@mov_axbx](https://x.com/mov_axbx))
@@ -1721,6 +1806,17 @@ Type: Démo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Limites, avertissements et signaux de sécurité
+<a id="case-157"></a>
+### Case 157: [OpenRouter Spend-Cut Skill Rewrite](https://x.com/Rahul_J_Mathur/status/2072279035493900395) (par [@Rahul_J_Mathur](https://x.com/Rahul_J_Mathur))
+
+**Utilisez ce cas pour budgéter le coût de migration avant de changer de modèle agent : dans le test OpenRouter dun fonds, GLM-5.2 tombait à environ un huitième du coût d Opus, mais demandait quand même des réécritures de skills, de la logique de routage et l acceptation de sorties plus lentes et plus faibles.**
+
+Rahul J Mathur explique que les agents de son équipe tournaient jusque là uniquement sur des modèles Opus pour un rythme annualisé proche de 100 mille dollars, avant un essai multi modèles OpenRouter lancé en juin pour réduire la dépense denviron 40 pour cent. Dans ses notes de première main, GLM-5.2 était plus lent que Opus 4.8 et ratait plus souvent les edge cases ou la lecture complète des skill files, mais la qualité de sortie restait acceptable pour les destinataires à environ un huitième du coût. Le même thread avertit que les skills pensées pour Opus et GPT ne se transfèrent pas proprement et que la migration a demandé des skills mises à jour, de nouvelles habitudes et une logique de routage codée en dur.
+
+Type: Limite | Date: 2026-07-01
+
+---
+
 
 <a id="case-149"></a>
 ### Case 149: [AA Verbosity And Reasoning Tradeoff](https://x.com/ArtificialAnlys/status/2072022576394821859) (par [@ArtificialAnlys](https://x.com/ArtificialAnlys))

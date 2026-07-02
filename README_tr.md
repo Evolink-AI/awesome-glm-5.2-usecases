@@ -77,18 +77,20 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Vaka 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Vaka 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150 |
-| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Vaka 23-30, 71, 78, 81-82, 92, 99-100, 123, 144 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Vaka 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Vaka 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151 |
-| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Vaka 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155 |
+| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156 |
+| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
 ### [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation)
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 159: SWE-Rebench 51.1 Percent Checkpoint](#case-159) | Bu vakayı, sürekli güncellenen bir SWE agent leaderboardunda GLM-5.2yi izlemek için kullanın; çünkü son SWE rebench paylaşımı 2,62 milyon token ile yüzde 51,1 bildiriyor ve yeni eklenen DeepSeek, MiMo, Qwen ve Gemma sonuçlarının açık biçimde önünde yer alıyor. | Değerlendirme |
+| [Case 154: LaunchDarkly Edge-Case Win At 40/41](#case-154) | Bu vakayı, GLM-5.2yi yalnızca sohbet tabanlı değil, iş araçları kullanan agent görevlerinde test etmek için kullanın; çünkü Composio GitHub, Jira ve LaunchDarkly görevlerinde 41de 40 sonuç verdiğini ve bekleyen onay kenar durumunu yakalayan tek modelin GLM olduğunu söylüyor. | Değerlendirme |
 | [Case 120: PostTrainBench Reliability Lead](#case-120) | GLM-5.2 Max'i yalnızca başlık skoru üzerinden değil, 84 görevde sıfır başarısız koşu bildiren ajan güvenilirliği üzerinden de karşılaştırmak için bu vakayı kullanın. | Kıyaslama |
 | [Case 121: Fireworks + Faros 211-Task Repo Eval](#case-121) | Yalnızca herkese açık benchmarklara bakmak yerine GLM-5.2'yi özel repo mühendislik görevlerinde değerlendirmek için bu vakayı kullanın; çünkü yayınlanan sonuç skor, hız ve görev başına maliyet içeriyor. | Değerlendirme |
 | [Case 110: AA-Briefcase Time-Per-Task Frontier](#case-110) | GLM-5.2’yi, benchmark puanının yanında görev başına sürenin de önemli olduğu uzun ufuklu bilgi işi üzerinde karşılaştırmak için bu vakayı kullanın. | Kıyaslama |
@@ -117,6 +119,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 155: Cotal Four-Agent TUI Loop](#case-155) | Bu vakayı, bir kodlama döngüsünü uzman agentlara bölmek için kullanın; çünkü yazar, Opus lideri ve GPT reviewer altında iki GLM-5.2 worker ile lazygit tarzı tam bir TUIyi 47 dakikada insan müdahalesi olmadan tamamladı. | Demo |
+| [Case 153: Legacy Migration Cost-Cut Pilot](#case-153) | Bu vakayı, GLM-5.2yi legacy uygulama modernizasyon döngüsünde daha ucuz çalışan olarak fiyatlamak için kullanın; çünkü 8090ın pilotuna göre GLM artı Software Factory, Opus 4.8e kıyasla maliyeti 16,4 kat düşürdü ama yaklaşık 3 kat daha yavaş çalıştı. | Değerlendirme |
 | [Case 145: OpenCode + Fireworks ile maliyet düşüren geçiş](#case-145) | Sadece open-model harness değişiminin yeterli olup olmadığını test etmek istiyorsanız bu vakayı kullanın; çünkü yazar kişisel coding ve loop görevlerini Fireworks üzerindeki GLM-5.2 + OpenCode'a taşıdıktan sonra token faturasının üçte bire düştüğünü ve günlük kalite kaybı hissetmediğini söylüyor. | Değerlendirme |
 | [Case 143: GLM toplayıcılı Hermes MoA iş akışı](#case-143) | Yüksek değerli bir agent turu için ekstra orkestrasyon mantıklıysa bu vakayı kullanın; çünkü Hermes Agent'ın Mixture of Agents kurulumu, GLM-5.2'yi diğer modellerle birleştirip yayımlanan demoda görev başına küçük bir ek maliyetle görünür biçimde daha iyi çıktı üretti. | Entegrasyon |
 | [Case 142: Cline reasoning anahtarıyla oluşan harness farkı](#case-142) | Sadece model ağırlıklarını değil harness tasarımını değerlendirmek istiyorsanız bu vakayı kullanın; çünkü aynı GLM-5.2, aynı coding görevlerinde reasoning açılınca 57,3%'ten 68,5%'e çıktı. | Değerlendirme |
@@ -148,6 +152,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 158: OMP Relay iPhone Client](#case-158) | Bu vakayı, yerel bir GLM-5.2 agentını hızlıca mobil bir yüzeye sarmak için kullanın; çünkü yazar, Codexin build-ios-app plugininin GLM-5.2 ve Cloudflare tünelleri kullanan bir OMP relay için birkaç saat içinde cilalı bir iPhone istemcisi ürettiğini söylüyor. | Demo |
 | [Case 144: Açık kaynak DevRel araştırma ajanı](#case-144) | GLM-5.2'yi genel amaçlı bir sohbet modeli yerine dikey bir araştırma yardımcısına dönüştürmek istiyorsanız bu vakayı kullanın; çünkü yazar, ürün ve hedef kitle girdilerini kanıtlı ve taslaklı içerik fırsatlarına dönüştüren açık kaynak bir DevRel ajanı kurdu. | Demo |
 | [Case 123: Recast Six-Variation Landing-Page Loop](#case-123) | Önce birkaç GLM-5.2 varyasyonu üretip ardından en güçlü sonucu bir kod ajanına taşıyarak landing page prototiplemeyi ucuzlatmak için bu vakayı kullanın. | Öğretici |
 | [Playable Backrooms One-Shot](#case-23) | GLM-5.2 ile Opus 4.8 arasındaki aynı istemde oyun oluşturma çıktısını, çalışma süresini ve maliyetini karşılaştırmak için bu durumu kullanın. | Demo |
@@ -170,6 +175,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 152: Foundry PTUs Through FireConnect](#case-152) | Bu vakayı, agent istemcilerini yeniden yazmadan GLM-5.2yi kurumsal Foundry bütçeleri üzerinden yönlendirmek için kullanın; çünkü Fireworks, FireConnectin Microsoft Foundry PTUlarını Codex, OpenCode ve Pi akışlarına bağladığını söylüyor. | Entegrasyon |
 | [Case 141: Open-weight modeller için ClinePass sabit aboneliği](#case-141) | Birden fazla open-weight coding modelini tek bir agent harness içinde toplamak istiyorsanız bu vakayı kullanın; çünkü ClinePass, GLM-5.2 ve ilgili modelleri ayrı provider anahtarları ve panelleri yerine sabit aylık ücret altında birleştiriyor. | Entegrasyon |
 | [Case 137: Free GLM API Service For Coding Agents](#case-137) | Hermes veya diğer coding agent’larda GLM-5.2’yi kayıt olmadan test etmek için bu vakayı kullanın; çünkü paylaşılan servis kısa ömürlü API key’ler veriyor ve kurulumu hafif tutuyor. | Integration |
 | [Case 128: Cloudflare Workers AI OpenCode Setup](#case-128) | Kendi model barındırıcınızı kurmadan coding agent’lar için ücretsiz OpenAI uyumlu bir rota istediğinizde GLM-5.2’yi Cloudflare Workers AI üzerinden çalıştırmak için bu vakayı kullanın. | Tutorial |
@@ -213,6 +219,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 156: 744B Local Hardware Floor](#case-156) | Bu vakayı, GLM-5.2 için yerel planları gerçekçi biçimde boyutlandırmak adına kullanın; çünkü kaynak, quantized sürümlerin bile 2 bitte yaklaşık 239 GB ve 4 bitte 466 GB civarında olduğunu, dolayısıyla 256 GB ve üzeri RAM ya da VRAMin pratik alt sınır olduğunu söylüyor. | Sınır |
 | [Case 140: B300 x2 Agent-Led Dual-Stack Bring-Up](#case-140) | Ciddi bir self-hosted GLM-5.2 deployment kapsamı çıkarmak için bu vakayı kullanın; çünkü thread, analistlerin çıplak-metal B300’lerde hem vLLM hem de SGLang üzerinde bir günden kısa sürede NVFP4 inference ayağa kaldırdığını gösteriyor. | Evaluation |
 | [Case 139: oMLX M3 Ultra Prefill Speedup](#case-139) | Son kernel çalışmalarından sonra Apple-silicon üzerinde yerel kullanımın durumunu yeniden kontrol etmek için bu vakayı kullanın; çünkü M3 Ultra 512GB üzerinde bildirilen GLM-5.2 prefill hızı, hızlı testlerde bariz kalite çöküşü olmadan neredeyse iki katına çıktı. | Evaluation |
 | [Case 138: 20M Token Signup Credit Burst](#case-138) | Doğrudan kayıt kredilerinin gerçek bir GLM-5.2 denemesi için yeterli olup olmadığını değerlendirmek için bu vakayı kullanın; çünkü gönderi yeni hesapların 20M ücretsiz token, kart gereksinimi olmadan ve tam OpenAI uyumlu erişim aldığını iddia ediyor. | Integration |
@@ -241,6 +248,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | Bu vakayı, agent modelini değiştirmeden önce göç maliyetini bütçelemek için kullanın; çünkü bir fonun OpenRouter denemesinde GLM-5.2, Opus maliyetinin yaklaşık sekizde birine indi ama yine de skill yeniden yazımları, routing mantığı ve daha yavaş, daha zayıf çıktıları kabul etmeyi gerektirdi. | Sınır |
 | [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | Gerçek bir güvenlik sinyalini başlık şişirmesinden ayırmak için bu vakayı kullanın; çünkü kaynak, GLM-5.2’nin bir IDOR benchmark’ında Claude Code’u geçtiğini ama hiçbir zaman Mythos’un kendisine karşı test edilmediğini söylüyor. | Limit |
 | [Case 132: LisanBench Reasoning Efficiency Gap](#case-132) | Yayınlanan LisanBench sonucu GLM-5’ten daha iyi olsa da diğer açık modellere kıyasla hâlâ verimsiz kaldığı için, coding gücünün temiz biçimde aktarıldığını varsaymadan önce GLM-5.2’yi reasoning ağırlıklı iş yüklerinde kontrol etmek üzere bu vakayı kullanın. | Limit |
 | [Case 133: PrinzBench Domain-Mismatch Caveat](#case-133) | Gönderi zayıf bir PrinzBench skorunu çok daha güçlü yazılım ve tool-use benchmark’larıyla karşılaştırdığı için GLM-5.2’yi hukuk araştırmasından çok coding ve agent execution tarafında tutmak üzere bu vakayı kullanın. | Limit |
@@ -261,6 +269,28 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | open-weight GLM-5.2’nin offensive security agents için operasyonel sürtünmeyi düşürdüğünü gösteren bir güvenlik sinyali olarak bu vakayı kullanın. | Sınır |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
+<a id="case-159"></a>
+### Case 159: [SWE-Rebench 51.1 Percent Checkpoint](https://x.com/ibragim_bad/status/2072318238407483593) (yazan [@ibragim_bad](https://x.com/ibragim_bad))
+
+**Bu vakayı, sürekli güncellenen bir SWE agent leaderboardunda GLM-5.2yi izlemek için kullanın; çünkü son SWE rebench paylaşımı 2,62 milyon token ile yüzde 51,1 bildiriyor ve yeni eklenen DeepSeek, MiMo, Qwen ve Gemma sonuçlarının açık biçimde önünde yer alıyor.**
+
+ibragim_bad, son SWE rebench güncellemesinin GLM-5.2yi birkaç yeni açık modelle birlikte eklediğini söylüyor. Paylaşılan sayılar, GLMin 2,62 milyon token ile yüzde 51,1e ulaştığını; DeepSeek V4 Pro nun yüzde 42,7, MiMo V2.5 Pro nun yüzde 42,4te kaldığını ve Qwen ile Gemmanın daha da aşağıda olduğunu gösteriyor. Bu da onu kamuya açık leaderboard için somut bir kontrol noktası haline getiriyor.
+
+Tür: Değerlendirme | Tarih: 2026-07-01
+
+---
+
+<a id="case-154"></a>
+### Case 154: [LaunchDarkly Edge-Case Win At 40/41](https://x.com/composio/status/2072355937415827950) (yazan [@composio](https://x.com/composio))
+
+**Bu vakayı, GLM-5.2yi yalnızca sohbet tabanlı değil, iş araçları kullanan agent görevlerinde test etmek için kullanın; çünkü Composio GitHub, Jira ve LaunchDarkly görevlerinde 41de 40 sonuç verdiğini ve bekleyen onay kenar durumunu yakalayan tek modelin GLM olduğunu söylüyor.**
+
+Composio, GLM-5.2yi GitHub, Jira ve LaunchDarkly gibi gerçek araçları kullanan 41 agent görevinde Claude Opus 4.8 ve GPT-5.5 ile karşılaştırdı. GLM 41de 40 aldı; Opus ve GPT ise 39ar sonuç verdi. LaunchDarkly görevlerinden birinde GLM, bir flagi stale ilan etmeden önce bekleyen onayları kontrol etti; diğer iki model ise sadece açık veya kapalı durumunda kaldı.
+
+Tür: Değerlendirme | Tarih: 2026-07-01
+
+---
+
 
 <a id="case-146"></a>
 ### Case 146: [CyberBench Open-Weight Patch Runner-Up](https://x.com/ValsAI/status/2072099011398627639) (yazan [@ValsAI](https://x.com/ValsAI))
@@ -529,6 +559,28 @@ Tür: Kıyaslama | Tarih: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Kod ajanları ve uzun bağlamlı iş akışları
+<a id="case-155"></a>
+### Case 155: [Cotal Four-Agent TUI Loop](https://x.com/silvanrec/status/2072335315822403656) (yazan [@silvanrec](https://x.com/silvanrec))
+
+**Bu vakayı, bir kodlama döngüsünü uzman agentlara bölmek için kullanın; çünkü yazar, Opus lideri ve GPT reviewer altında iki GLM-5.2 worker ile lazygit tarzı tam bir TUIyi 47 dakikada insan müdahalesi olmadan tamamladı.**
+
+silvanrec, Cotalin dört modeli koordine ettiğini söylüyor: frontend ve backend geliştiricileri olarak iki GLM-5.2 örneği, arka planda reviewer olarak GPT-5.5 ve döngüyü yöneten Claude Opus. Gerçek bir TUI konsolu kurmak için verilen tek prompttan başlayarak sistem dört tur çalıştı, render ve sekme kablolama hatalarını buldu, agentlar arasında handoffları yönetti ve 47 dakikada çalışan bir sonuç üretti. Paylaşım, open source katman olarak npx cotal-ai setup --full komutunu da işaret ediyor.
+
+Tür: Demo | Tarih: 2026-07-01
+
+---
+
+<a id="case-153"></a>
+### Case 153: [Legacy Migration Cost-Cut Pilot](https://x.com/chamath/status/2072390507628540213) (yazan [@chamath](https://x.com/chamath))
+
+**Bu vakayı, GLM-5.2yi legacy uygulama modernizasyon döngüsünde daha ucuz çalışan olarak fiyatlamak için kullanın; çünkü 8090ın pilotuna göre GLM artı Software Factory, Opus 4.8e kıyasla maliyeti 16,4 kat düşürdü ama yaklaşık 3 kat daha yavaş çalıştı.**
+
+Chamath, PHPden Next.jse uzanan ilk modernizasyon pilotunu paylaştı. 8090ın Software Factorysi ile çalışan Opus 4.8, tek başına Opusa göre 1,4 kat daha ucuz ve 1,5 kat daha hızlıydı; aynı factory ile GLM 5.2 kullanıldığında ise maliyet Opus tek başına çalışmaya göre 16,4 kat düştü ama hız yaklaşık 3 kat yavaşladı. Paylaşım, sonucun n eşittir 1 ile yön gösterici olduğunu ve 10 ila 15 gerçek legacy görevinde yeniden denenmesi gerektiğini açıkça söylüyor.
+
+Tür: Değerlendirme | Tarih: 2026-07-01
+
+---
+
 
 <a id="case-150"></a>
 ### Case 150: [Mac Studio Browser-Use Local Loop](https://x.com/MaziyarPanahi/status/2071955191260151862) (yazan [@MaziyarPanahi](https://x.com/MaziyarPanahi))
@@ -839,6 +891,17 @@ Tür: Değerlendirme | Tarih: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Uygulamalı demolar ve vitrin derlemeleri
+<a id="case-158"></a>
+### Case 158: [OMP Relay iPhone Client](https://x.com/mov_axbx/status/2072192903762288721) (yazan [@mov_axbx](https://x.com/mov_axbx))
+
+**Bu vakayı, yerel bir GLM-5.2 agentını hızlıca mobil bir yüzeye sarmak için kullanın; çünkü yazar, Codexin build-ios-app plugininin GLM-5.2 ve Cloudflare tünelleri kullanan bir OMP relay için birkaç saat içinde cilalı bir iPhone istemcisi ürettiğini söylüyor.**
+
+mov_axbx, yerelde barındırılan bir OMP agentı için telefon uygulaması istediğini, Codexin build-ios-app pluginini kullandığını ve birkaç saat içinde cilalı bir sürüm aldığını söylüyor. Backend tarafında GLM-5.2 ve OMP ile yazılmış özel bir relay vardı; tünel işini ise Cloudflare üstleniyordu.
+
+Tür: Demo | Tarih: 2026-07-01
+
+---
+
 
 ---
 
@@ -1030,6 +1093,17 @@ Tür: Demo | Tarih: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Sağlayıcı ve araç entegrasyonları
+<a id="case-152"></a>
+### Case 152: [Foundry PTUs Through FireConnect](https://x.com/FireworksAI_HQ/status/2072407689964183867) (yazan [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
+
+**Bu vakayı, agent istemcilerini yeniden yazmadan GLM-5.2yi kurumsal Foundry bütçeleri üzerinden yönlendirmek için kullanın; çünkü Fireworks, FireConnectin Microsoft Foundry PTUlarını Codex, OpenCode ve Pi akışlarına bağladığını söylüyor.**
+
+Fireworks, GLM 5.2nin artık Microsoft Foundry üzerinde canlı olduğunu söylüyor. FireConnect açıldığında ekipler Foundry PTUlarını harcarken istekleri Codex, OpenCode veya Pi üzerinden yönlendirmeyi sürdürebiliyor; her agent yüzeyi için ayrı bir model erişim yolu kurmaları gerekmiyor.
+
+Tür: Entegrasyon | Tarih: 2026-07-01
+
+---
+
 
 <a id="case-147"></a>
 ### Case 147: [Braintrust GLM Eval Workbench](https://x.com/ankrgyl/status/2072042305108722040) (yazan [@ankrgyl](https://x.com/ankrgyl))
@@ -1463,6 +1537,17 @@ Tür: Entegrasyon | Tarih: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
+<a id="case-156"></a>
+### Case 156: [744B Local Hardware Floor](https://x.com/devjuninho/status/2072151237840007399) (yazan [@devjuninho](https://x.com/devjuninho))
+
+**Bu vakayı, GLM-5.2 için yerel planları gerçekçi biçimde boyutlandırmak adına kullanın; çünkü kaynak, quantized sürümlerin bile 2 bitte yaklaşık 239 GB ve 4 bitte 466 GB civarında olduğunu, dolayısıyla 256 GB ve üzeri RAM ya da VRAMin pratik alt sınır olduğunu söylüyor.**
+
+devjuninho, open weight olmanın otomatik olarak tüketici sınıfı yerel kullanım anlamına gelmediğini savunuyor. Thread, GLM-5.2nin yaklaşık 744B parametreye ve yaklaşık 40B aktif parametreye sahip olduğunu, 2 bitte yaklaşık 239 GB ve 4 bitte 466 GB gerektiğini tahmin ediyor; anlamlı yerel çalıştırma için sıradan bir oyuncu PCsi değil, sunucu sınıfı bellek, SSD payı ve sabır gerektiğini söylüyor.
+
+Tür: Sınır | Tarih: 2026-07-01
+
+---
+
 
 <a id="case-151"></a>
 ### Case 151: [Local NVFP4 Rust Port At 140 Tok/s](https://x.com/mov_axbx/status/2071839859723882771) (yazan [@mov_axbx](https://x.com/mov_axbx))
@@ -1731,6 +1816,17 @@ Tür: Demo | Tarih: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
+<a id="case-157"></a>
+### Case 157: [OpenRouter Spend-Cut Skill Rewrite](https://x.com/Rahul_J_Mathur/status/2072279035493900395) (yazan [@Rahul_J_Mathur](https://x.com/Rahul_J_Mathur))
+
+**Bu vakayı, agent modelini değiştirmeden önce göç maliyetini bütçelemek için kullanın; çünkü bir fonun OpenRouter denemesinde GLM-5.2, Opus maliyetinin yaklaşık sekizde birine indi ama yine de skill yeniden yazımları, routing mantığı ve daha yavaş, daha zayıf çıktıları kabul etmeyi gerektirdi.**
+
+Rahul J Mathur, ekibinin agentlarının daha önce yalnızca Opus modellerinde ve yıllık yaklaşık 100 bin dolar seviyesinde çalıştığını; haziranda ise harcamayı yaklaşık yüzde 40 azaltmak için OpenRouter üzerinde çok modelli bir deneme başlattıklarını söylüyor. Kendi gözlemlerine göre GLM-5.2, Opus 4.8den daha yavaştı ve edge case ya da tam skill file okuma gibi konularda daha sık hata yapıyordu; buna rağmen çıktının kalitesi alıcı tarafında maliyet yaklaşık sekizde bire inse bile kabul edilebilirdi. Aynı thread, Opus ve GPT odaklı skilllerin temiz biçimde taşınmadığını ve göç için güncellenmiş skilller, yeni kullanım refleksleri ve elle yazılmış routing mantığı gerektiğini uyarıyor.
+
+Tür: Sınır | Tarih: 2026-07-01
+
+---
+
 
 <a id="case-149"></a>
 ### Case 149: [AA Verbosity And Reasoning Tradeoff](https://x.com/ArtificialAnlys/status/2072022576394821859) (yazan [@ArtificialAnlys](https://x.com/ArtificialAnlys))
