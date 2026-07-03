@@ -15,9 +15,9 @@ The update automation must append one entry for every scheduled run, including n
 - Selected for update: 7
 - Deferred high confidence: 0
 - Added cases: Case 160-166
-- Latest update commit: pending
-- Verifier: pending
-- Blocker: pending push attempt
+- Latest update commit: `529d97e`
+- Verifier: PASS, 11 README files, English case count 166
+- Blocker: `git push origin main` failed with `Repository not found`
 
 ## 2026-07-02
 
