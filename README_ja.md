@@ -37,7 +37,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **145 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **166 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -77,18 +77,19 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | セクション | ケース |
 |---|---|
-| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159 |
+| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162 |
 | [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155 |
-| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156 |
-| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157 |
+| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166 |
+| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
 ### [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation)
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 162: VulcanBench 10-Task 80 Percent Tie](#case-162) | このケースは、cost と score の両方が重要な post-cutoff の実エンジニアリング課題で GLM-5.2 を比較するのに役立ちます。Morgan Linton によると、VulcanBench では GLM 5.2 High、Fable 5 Low、Sonnet 5 High が 10 repo で同じ 80 percent になり、GLM の cost は中間でした。 | 評価 |
 | [Case 159: SWE-Rebench 51.1 Percent Checkpoint](#case-159) | このケースは、更新が続く SWE エージェント系リーダーボードで GLM-5.2 を追うのに向いています。最新の SWE rebench 投稿では 2.62 million tokens で 51.1 percent とされ、新しく加わった DeepSeek、MiMo、Qwen、Gemma より明確に上です。 | 評価 |
 | [Case 154: LaunchDarkly Edge-Case Win At 40/41](#case-154) | このケースは、チャット専用評価ではなく業務ツールを使うエージェント作業で GLM-5.2 を試すのに向いています。Composio によれば、GitHub、Jira、LaunchDarkly の 41 タスク中 40 を取り、保留承認のエッジケースを拾えたのは GLM だけでした。 | 評価 |
 | [Case 110: AA-Briefcase タスク時間フロンティア](#case-110) | ベンチマークスコアだけでなく、1 タスクあたり時間も重要な長期知識労働で GLM-5.2 を比較するためのケースです。 | ベンチマーク |
@@ -150,6 +151,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | このケースは、単一プロンプトの対話型 build で GLM-5.2 を試すのに向いています。REAP-NVFP4 の demo では、1 回の prompt だけで 3D Rubiks Cube、実際の scramble、live state、solve button まで生成したと述べています。 | デモ |
 | [Case 158: OMP Relay iPhone Client](#case-158) | このケースは、ローカル GLM-5.2 エージェントを素早くモバイル面に載せたいときに使えます。著者によれば、Codex の build-ios-app plugin が、すでに GLM-5.2 と Cloudflare トンネルを使う OMP relay 向けに、数時間で整った iPhone クライアントを作りました。 | デモ |
 | [Case 144: オープンソースの DevRel リサーチエージェント](#case-144) | GLM-5.2 を汎用チャットではなく縦型の調査アシスタントに変えたいならこの事例が役立ちます。作者は、製品とオーディエンスの入力を根拠付きのコンテンツ候補とアウトラインに変えるオープンソース DevRel エージェントを作ったからです。 | デモ |
 | [Case 123: Recast 6 バリエーションの LP 反復ループ](#case-123) | まず複数の GLM-5.2 案を作ってから最良案を coding agent に引き継ぎ、低コストで landing page を試作するためのケースです。 | チュートリアル |
@@ -173,6 +175,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 165: ZCode Launch With Mobile Agent Control](#case-165) | このケースは、ZCode を GLM-5.2 の公式 coding surface として評価するのに役立ちます。launch report では、この無料の agentic IDE が Windows、macOS、Linux で動き、Telegram、WeChat、Feishu から project progress を確認できるとされています。 | 統合 |
+| [Case 160: OpenWiki Auto-Maintained Agent Docs](#case-160) | このケースは、agent が読めるドキュメントを自動で最新化したいときに役立ちます。LangChain によると、OpenWiki はコード変更に合わせて repo docs を再生成・維持し、GLM 5.2 のような open model で動きます。 | 統合 |
 | [Case 152: Foundry PTUs Through FireConnect](#case-152) | このケースを使えば、エージェント用クライアントを書き直さずに企業向け Foundry 予算で GLM-5.2 を流せます。Fireworks によれば、FireConnect が Microsoft Foundry の PTU を Codex、OpenCode、Pi のフローにつなぐからです。 | 統合 |
 | [Case 141: ClinePass のオープンウェイト定額購読](#case-141) | 複数のオープンウェイト coding model を 1 つの agent harness にまとめたいならこの事例が役立ちます。ClinePass は GLM-5.2 と関連モデルを、個別の provider key や請求管理ではなく月額固定で束ねているからです。 | 統合 |
 | [Case 137: Free GLM API Service For Coding Agents](#case-137) | 登録なしで Hermes や他の coding agent で GLM-5.2 を試すためのケースです。共有サービスは短時間有効な API key を発行し、セットアップを軽量に保ちます。 | 統合 |
@@ -217,6 +221,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 166: Full 744B On 5x ASUS GX10s](#case-166) | このケースは、極端な home-lab GLM-5.2 deployment を見積もるためのものです。著者によると、744B の full model が 5 台の ASUS GX10 上で full context 付きで動作し、real workloads 向けの causal harness にもすでに接続されています。 | デモ |
+| [Case 164: Agent Route Swap In China Stack](#case-164) | このケースは、最高品質よりコスト圧力が重要なときに、mixed-model stack の agent layer へ GLM-5.2 を routing する参考になります。著者によれば、Sonnet を GLM-5.2 に置き換えると、その slot の input cost は 5 倍安くなり、品質低下は約 3 percent でした。 | 評価 |
 | [Case 156: 744B Local Hardware Floor](#case-156) | このケースを使えば、GLM-5.2 のローカル計画を現実的に見積もれます。情報源によれば、量子化しても 2bit で約 239GB、4bit で約 466GB あり、RAM や VRAM は 256GB 超が実用ラインになるからです。 | 制限 |
 | [Case 140: B300 x2 Agent-Led Dual-Stack Bring-Up](#case-140) | 本格的なセルフホスト型 GLM-5.2 deployment の規模感を見積もるためのケースです。スレッドでは、分析 agent がベアメタル B300 上で vLLM と SGLang の両方に NVFP4 推論を 1 日未満で立ち上げています。 | 評価 |
 | [Case 139: oMLX M3 Ultra Prefill Speedup](#case-139) | 最近の kernel work 後に Apple silicon でのローカル運用可能性を再確認するためのケースです。M3 Ultra 512GB での GLM-5.2 prefill speed が、簡単なテストで品質を大きく落とさずほぼ倍増したと報告されています。 | 評価 |
@@ -246,6 +252,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 163: Preliminary Cyber Research Parity](#case-163) | このケースは、vulnerability research の部分タスクで GLM-5.2 を測るためのものです。Irregular は、狭い cyber suite で GPT-5.4 と Opus 4.6 に近い初期内部評価を報告しつつ、end-to-end の attack scenario はまだ未検証だと明言しています。 | 制約 |
 | [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | このケースは、エージェントモデルを入れ替える前に移行コストを見積もるのに役立ちます。あるファンドの OpenRouter 試行では GLM-5.2 が Opus の約 8 分の 1 のコストでしたが、skill の書き換え、routing ロジック、そして遅く弱い出力を受け入れる前提が必要でした。 | 制限 |
 | [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | ソースによれば GLM-5.2 は 1 つの IDOR benchmark で Claude Code を上回った一方、Mythos 自体とは比較されていないため、実際の security signal と見出し先行の誇張を切り分けるためのケースです。 | 制限 |
 | [Case 132: LisanBench 推論効率ギャップ](#case-132) | reasoning 負荷の高い workload で GLM-5.2 を確認したいときに使うケースです。投稿された LisanBench 結果では GLM-5 より改善していますが、他の open model と比べるとまだ効率が低いことが示されています。 | 制限 |
@@ -267,6 +274,17 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 安全計画のシグナルとして、open-weight の GLM-5.2 が offensive security agents の運用摩擦を下げる点を確認するためのケースです。 | 制限 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
+<a id="case-162"></a>
+### Case 162: [VulcanBench 10-Task 80 Percent Tie](https://x.com/morganlinton/status/2072689409011679642) (作者 [@morganlinton](https://x.com/morganlinton))
+
+**このケースは、cost と score の両方が重要な post-cutoff の実エンジニアリング課題で GLM-5.2 を比較するのに役立ちます。Morgan Linton によると、VulcanBench では GLM 5.2 High、Fable 5 Low、Sonnet 5 High が 10 repo で同じ 80 percent になり、GLM の cost は中間でした。**
+
+Morgan Linton によると、この benchmark は Flask、aiohttp、sqlglot などの project から取った 10 件の実エンジニアリング task を使っており、すべて post-training-cutoff と説明されています。Fable 5 Low、GLM 5.2 High、Sonnet 5 High はいずれも 80 percent で、reported cost は 2.27、8.41、15.81 dollars でした。単一モデルの自慢ではなく、3 者の価格対品質チェックポイントとして有用です。
+
+タイプ: 評価 | 日付: 2026-07-02
+
+---
+
 <a id="case-159"></a>
 ### Case 159: [SWE-Rebench 51.1 Percent Checkpoint](https://x.com/ibragim_bad/status/2072318238407483593) (作者 [@ibragim_bad](https://x.com/ibragim_bad))
 
@@ -889,6 +907,17 @@ clairevo は、GLM 5.2 が Claude Code と Cursor におけるデフォルトモ
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 実演デモとショーケースビルド
+<a id="case-161"></a>
+### Case 161: [REAP NVFP4 Rubiks Cube One-Shot](https://x.com/RoundtableSpace/status/2072700573145788914) (作者 [@RoundtableSpace](https://x.com/RoundtableSpace))
+
+**このケースは、単一プロンプトの対話型 build で GLM-5.2 を試すのに向いています。REAP-NVFP4 の demo では、1 回の prompt だけで 3D Rubiks Cube、実際の scramble、live state、solve button まで生成したと述べています。**
+
+RoundtableSpace によると、GLM-5.2-REAP-NVFP4 には HTML prompt を 1 つだけ渡し、live state、real scramble logic、solve action を備えた 3D Rubiks Cube app が返ってきました。コード詳細は薄いものの、generic な benchmark screenshot ではなく、具体的な one-shot build demo です。
+
+タイプ: デモ | 日付: 2026-07-02
+
+---
+
 <a id="case-158"></a>
 ### Case 158: [OMP Relay iPhone Client](https://x.com/mov_axbx/status/2072192903762288721) (作者 [@mov_axbx](https://x.com/mov_axbx))
 
@@ -1091,6 +1120,28 @@ atmoio は、AI を破壊する Plague Inc 風のユーモアゲームが Claude
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 プロバイダ・ツール統合
+<a id="case-165"></a>
+### Case 165: [ZCode Launch With Mobile Agent Control](https://x.com/Digiato/status/2072663459850829985) (作者 [@Digiato](https://x.com/Digiato))
+
+**このケースは、ZCode を GLM-5.2 の公式 coding surface として評価するのに役立ちます。launch report では、この無料の agentic IDE が Windows、macOS、Linux で動き、Telegram、WeChat、Feishu から project progress を確認できるとされています。**
+
+Digiato は、ZCode を GLM-5.2 を中心に構築された無料の agentic development environment と説明し、Cursor、Claude Code、Copilot の対抗軸として位置付けています。投稿では、Windows、macOS、Linux で提供され、GLM-5.2 と深く統合され、Telegram、WeChat、Feishu から進捗を確認できると述べています。単なる model launch よりも実務的な access surface です。
+
+タイプ: 統合 | 日付: 2026-07-02
+
+---
+
+<a id="case-160"></a>
+### Case 160: [OpenWiki Auto-Maintained Agent Docs](https://x.com/LangChain/status/2072745455788933321) (作者 [@LangChain](https://x.com/LangChain))
+
+**このケースは、agent が読めるドキュメントを自動で最新化したいときに役立ちます。LangChain によると、OpenWiki はコード変更に合わせて repo docs を再生成・維持し、GLM 5.2 のような open model で動きます。**
+
+LangChain は OpenWiki を coding agent 向けの open-source ドキュメント保守レイヤーとして紹介しています。投稿では、open harness と open CLI workflows を組み合わせ、codebase が変わるたびに docs を更新し、GLM 5.2 や Kimi K2.7 のような open model で動くと説明しています。手動 wiki に頼らず、agent に新しい repo docs を読ませたいチーム向けの実用的な file-based memory パターンです。
+
+タイプ: 統合 | 日付: 2026-07-02
+
+---
+
 <a id="case-152"></a>
 ### Case 152: [Foundry PTUs Through FireConnect](https://x.com/FireworksAI_HQ/status/2072407689964183867) (作者 [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
 
@@ -1535,6 +1586,28 @@ wafer_ai は、GLM-5.2 Fast が Vercel AI Gateway で利用可能になり、速
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 コスト、価格、ローカル運用
+<a id="case-166"></a>
+### Case 166: [Full 744B On 5x ASUS GX10s](https://x.com/thatcofffeeguy/status/2072525885077434743) (作者 [@thatcofffeeguy](https://x.com/thatcofffeeguy))
+
+**このケースは、極端な home-lab GLM-5.2 deployment を見積もるためのものです。著者によると、744B の full model が 5 台の ASUS GX10 上で full context 付きで動作し、real workloads 向けの causal harness にもすでに接続されています。**
+
+thatcofffeeguy は、744B のフル GLM-5.2 が 5 台の ASUS GX10 システム上で full context 付きで動作し、token rate も想定より良く、stack はすでに causal harness に接続されていると述べています。正確な throughput 数値はまだ公開されていませんが、この規模の local cluster で full model を載せられることを示す具体的な公開 proof point です。
+
+タイプ: デモ | 日付: 2026-07-02
+
+---
+
+<a id="case-164"></a>
+### Case 164: [Agent Route Swap In China Stack](https://x.com/0xluffy_eth/status/2072548580183900430) (作者 [@0xluffy_eth](https://x.com/0xluffy_eth))
+
+**このケースは、最高品質よりコスト圧力が重要なときに、mixed-model stack の agent layer へ GLM-5.2 を routing する参考になります。著者によれば、Sonnet を GLM-5.2 に置き換えると、その slot の input cost は 5 倍安くなり、品質低下は約 3 percent でした。**
+
+この thread は、reasoning、code generation、agent calls、batch work、image、video をまたぐ 6 つの routing 変更を示しています。agent layer では Sonnet を GLM 5.2 に置き換え、性能低下は約 3 percent、input cost は 5 倍安くなったと報告しています。30 日のまとめでは、総 AI 運用コストが 87 percent 下がり、revenue は横ばいでした。
+
+タイプ: 評価 | 日付: 2026-07-02
+
+---
+
 <a id="case-156"></a>
 ### Case 156: [744B Local Hardware Floor](https://x.com/devjuninho/status/2072151237840007399) (作者 [@devjuninho](https://x.com/devjuninho))
 
@@ -1814,6 +1887,17 @@ CardilloSamuel は、約 300GB RAM を積んだ 2x RTX PRO 6000 Blackwell 上の
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 制約、注意点、安全性シグナル
+<a id="case-163"></a>
+### Case 163: [Preliminary Cyber Research Parity](https://x.com/Irregular/status/2072682835798831168) (作者 [@Irregular](https://x.com/Irregular))
+
+**このケースは、vulnerability research の部分タスクで GLM-5.2 を測るためのものです。Irregular は、狭い cyber suite で GPT-5.4 と Opus 4.6 に近い初期内部評価を報告しつつ、end-to-end の attack scenario はまだ未検証だと明言しています。**
+
+Irregular は、限定的な内部 vulnerability research task suite で、試した範囲では GLM-5.2 が GPT-5.4 と Claude Opus 4.6 におおむね近かったと述べています。同じ投稿では、suite が狭く、CyScenarioBench や FrontierCyber のような scenario-level benchmark はまだ実施していないとも付け加えています。完全な offensive-agent parity の証明ではなく、初期の cyber capability signal として扱うべきです。
+
+タイプ: 制約 | 日付: 2026-07-02
+
+---
+
 <a id="case-157"></a>
 ### Case 157: [OpenRouter Spend-Cut Skill Rewrite](https://x.com/Rahul_J_Mathur/status/2072279035493900395) (作者 [@Rahul_J_Mathur](https://x.com/Rahul_J_Mathur))
 
@@ -2042,7 +2126,7 @@ ankrgyl は、Braintrust がリポジトリの commit と bug description から
 
 ここで紹介した高シグナルな情報源とクリエイターに感謝します: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG).
 
-最近追加したクリエイター: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky).
+最近追加したクリエイター: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy).
 
 *帰属に修正が必要な場合はご連絡ください。確認のうえ更新します。*
 

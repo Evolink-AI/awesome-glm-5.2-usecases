@@ -77,18 +77,19 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162 |
 | [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155 |
-| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156 |
-| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157 |
+| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166 |
+| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
 ### [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation)
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 162: VulcanBench 10-Task 80 Percent Tie](#case-162) | Bu vaka, maliyetin skor kadar önemli olduğu post-cutoff gerçek mühendislik görevlerinde GLM-5.2yi karşılaştırmak için yararlıdır; çünkü Morgan Linton, VulcanBenchin GLM 5.2 High, Fable 5 Low ve Sonnet 5 Higha 10 repo boyunca aynı yüzde 80 sonucu verdiğini, GLMin ise maliyette ortada kaldığını söylüyor. | Değerlendirme |
 | [Case 159: SWE-Rebench 51.1 Percent Checkpoint](#case-159) | Bu vakayı, sürekli güncellenen bir SWE agent leaderboardunda GLM-5.2yi izlemek için kullanın; çünkü son SWE rebench paylaşımı 2,62 milyon token ile yüzde 51,1 bildiriyor ve yeni eklenen DeepSeek, MiMo, Qwen ve Gemma sonuçlarının açık biçimde önünde yer alıyor. | Değerlendirme |
 | [Case 154: LaunchDarkly Edge-Case Win At 40/41](#case-154) | Bu vakayı, GLM-5.2yi yalnızca sohbet tabanlı değil, iş araçları kullanan agent görevlerinde test etmek için kullanın; çünkü Composio GitHub, Jira ve LaunchDarkly görevlerinde 41de 40 sonuç verdiğini ve bekleyen onay kenar durumunu yakalayan tek modelin GLM olduğunu söylüyor. | Değerlendirme |
 | [Case 120: PostTrainBench Reliability Lead](#case-120) | GLM-5.2 Max'i yalnızca başlık skoru üzerinden değil, 84 görevde sıfır başarısız koşu bildiren ajan güvenilirliği üzerinden de karşılaştırmak için bu vakayı kullanın. | Kıyaslama |
@@ -152,6 +153,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | Bu vaka, GLM-5.2yi tek prompt ile interaktif build görevlerinde denemek için yararlıdır; çünkü REAP-NVFP4 demosu tek bir prompt ile 3D Rubiks Cube, gerçek scramble, canlı durum ve solve button üretildiğini söylüyor. | Demo |
 | [Case 158: OMP Relay iPhone Client](#case-158) | Bu vakayı, yerel bir GLM-5.2 agentını hızlıca mobil bir yüzeye sarmak için kullanın; çünkü yazar, Codexin build-ios-app plugininin GLM-5.2 ve Cloudflare tünelleri kullanan bir OMP relay için birkaç saat içinde cilalı bir iPhone istemcisi ürettiğini söylüyor. | Demo |
 | [Case 144: Açık kaynak DevRel araştırma ajanı](#case-144) | GLM-5.2'yi genel amaçlı bir sohbet modeli yerine dikey bir araştırma yardımcısına dönüştürmek istiyorsanız bu vakayı kullanın; çünkü yazar, ürün ve hedef kitle girdilerini kanıtlı ve taslaklı içerik fırsatlarına dönüştüren açık kaynak bir DevRel ajanı kurdu. | Demo |
 | [Case 123: Recast Six-Variation Landing-Page Loop](#case-123) | Önce birkaç GLM-5.2 varyasyonu üretip ardından en güçlü sonucu bir kod ajanına taşıyarak landing page prototiplemeyi ucuzlatmak için bu vakayı kullanın. | Öğretici |
@@ -175,6 +177,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 165: ZCode Launch With Mobile Agent Control](#case-165) | Bu vaka, ZCodeu GLM-5.2 için resmi coding surface olarak değerlendirmek için yararlıdır; çünkü launch report bu ücretsiz agentic IDEnin Windows, macOS ve Linuxa geldiğini ve projeleri Telegram, WeChat ve Feishu üzerinden izleyebildiğini söylüyor. | Entegrasyon |
+| [Case 160: OpenWiki Auto-Maintained Agent Docs](#case-160) | Bu vaka, agentlerin okuyacağı dokümantasyonu otomatik olarak güncel tutmak için yararlıdır; çünkü LangChain, OpenWiki nin kod değiştikçe repo docs u yeniden ürettiğini ve sürdürdüğünü, ayrıca GLM 5.2 gibi açık modeller üzerinde çalıştığını söylüyor. | Entegrasyon |
 | [Case 152: Foundry PTUs Through FireConnect](#case-152) | Bu vakayı, agent istemcilerini yeniden yazmadan GLM-5.2yi kurumsal Foundry bütçeleri üzerinden yönlendirmek için kullanın; çünkü Fireworks, FireConnectin Microsoft Foundry PTUlarını Codex, OpenCode ve Pi akışlarına bağladığını söylüyor. | Entegrasyon |
 | [Case 141: Open-weight modeller için ClinePass sabit aboneliği](#case-141) | Birden fazla open-weight coding modelini tek bir agent harness içinde toplamak istiyorsanız bu vakayı kullanın; çünkü ClinePass, GLM-5.2 ve ilgili modelleri ayrı provider anahtarları ve panelleri yerine sabit aylık ücret altında birleştiriyor. | Entegrasyon |
 | [Case 137: Free GLM API Service For Coding Agents](#case-137) | Hermes veya diğer coding agent’larda GLM-5.2’yi kayıt olmadan test etmek için bu vakayı kullanın; çünkü paylaşılan servis kısa ömürlü API key’ler veriyor ve kurulumu hafif tutuyor. | Integration |
@@ -219,6 +223,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 166: Full 744B On 5x ASUS GX10s](#case-166) | Bu vaka, aşırı bir home-lab GLM-5.2 kurulumunu boyutlandırmak için yararlıdır; çünkü yazar tam 744B modelin artık 5 ASUS GX10 kutusunda full context ile çalıştığını ve gerçek workloadlar için bir causal harnessa bağlandığını söylüyor. | Demo |
+| [Case 164: Agent Route Swap In China Stack](#case-164) | Bu vaka, en üst kalite yerine maliyet baskısının daha önemli olduğu durumlarda GLM-5.2yi mixed-model stackin agent katmanına yönlendirmek için yararlıdır; çünkü yazara göre Sonneti GLM-5.2 ile değiştirmek bu slotun input maliyetini 5 kat düşürdü ve kalite kaybı yaklaşık yüzde 3 oldu. | Değerlendirme |
 | [Case 156: 744B Local Hardware Floor](#case-156) | Bu vakayı, GLM-5.2 için yerel planları gerçekçi biçimde boyutlandırmak adına kullanın; çünkü kaynak, quantized sürümlerin bile 2 bitte yaklaşık 239 GB ve 4 bitte 466 GB civarında olduğunu, dolayısıyla 256 GB ve üzeri RAM ya da VRAMin pratik alt sınır olduğunu söylüyor. | Sınır |
 | [Case 140: B300 x2 Agent-Led Dual-Stack Bring-Up](#case-140) | Ciddi bir self-hosted GLM-5.2 deployment kapsamı çıkarmak için bu vakayı kullanın; çünkü thread, analistlerin çıplak-metal B300’lerde hem vLLM hem de SGLang üzerinde bir günden kısa sürede NVFP4 inference ayağa kaldırdığını gösteriyor. | Evaluation |
 | [Case 139: oMLX M3 Ultra Prefill Speedup](#case-139) | Son kernel çalışmalarından sonra Apple-silicon üzerinde yerel kullanımın durumunu yeniden kontrol etmek için bu vakayı kullanın; çünkü M3 Ultra 512GB üzerinde bildirilen GLM-5.2 prefill hızı, hızlı testlerde bariz kalite çöküşü olmadan neredeyse iki katına çıktı. | Evaluation |
@@ -248,6 +254,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 163: Preliminary Cyber Research Parity](#case-163) | Bu vaka, vulnerability research alt görevlerinde GLM-5.2yi konumlandırmak için yararlıdır; çünkü Irregular, dar bir cyber suite üzerinde GPT-5.4 ve Opus 4.6 ile karşılaştırılabilir erken iç değerlendirmeler paylaşıyor ve end-to-end attack scenariolarının hâlâ test edilmediğini açıkça belirtiyor. | Sınırlama |
 | [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | Bu vakayı, agent modelini değiştirmeden önce göç maliyetini bütçelemek için kullanın; çünkü bir fonun OpenRouter denemesinde GLM-5.2, Opus maliyetinin yaklaşık sekizde birine indi ama yine de skill yeniden yazımları, routing mantığı ve daha yavaş, daha zayıf çıktıları kabul etmeyi gerektirdi. | Sınır |
 | [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | Gerçek bir güvenlik sinyalini başlık şişirmesinden ayırmak için bu vakayı kullanın; çünkü kaynak, GLM-5.2’nin bir IDOR benchmark’ında Claude Code’u geçtiğini ama hiçbir zaman Mythos’un kendisine karşı test edilmediğini söylüyor. | Limit |
 | [Case 132: LisanBench Reasoning Efficiency Gap](#case-132) | Yayınlanan LisanBench sonucu GLM-5’ten daha iyi olsa da diğer açık modellere kıyasla hâlâ verimsiz kaldığı için, coding gücünün temiz biçimde aktarıldığını varsaymadan önce GLM-5.2’yi reasoning ağırlıklı iş yüklerinde kontrol etmek üzere bu vakayı kullanın. | Limit |
@@ -269,6 +276,17 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | open-weight GLM-5.2’nin offensive security agents için operasyonel sürtünmeyi düşürdüğünü gösteren bir güvenlik sinyali olarak bu vakayı kullanın. | Sınır |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
+<a id="case-162"></a>
+### Case 162: [VulcanBench 10-Task 80 Percent Tie](https://x.com/morganlinton/status/2072689409011679642) (yazan [@morganlinton](https://x.com/morganlinton))
+
+**Bu vaka, maliyetin skor kadar önemli olduğu post-cutoff gerçek mühendislik görevlerinde GLM-5.2yi karşılaştırmak için yararlıdır; çünkü Morgan Linton, VulcanBenchin GLM 5.2 High, Fable 5 Low ve Sonnet 5 Higha 10 repo boyunca aynı yüzde 80 sonucu verdiğini, GLMin ise maliyette ortada kaldığını söylüyor.**
+
+Morgan Linton, benchmarkın Flask, aiohttp ve sqlglot gibi projelerden gelen 10 gerçek mühendislik görevini kullandığını ve bunların hepsinin post-training-cutoff olarak tanımlandığını söylüyor. Fable 5 Low, GLM 5.2 High ve Sonnet 5 High yüzde 80 aldı; bildirilen maliyetler ise sırasıyla 2.27, 8.41 ve 15.81 dolardı. Bu, tek model övünmesinden çok üçlü bir fiyat-kalite kontrol noktası.
+
+Tür: Değerlendirme | Tarih: 2026-07-02
+
+---
+
 <a id="case-159"></a>
 ### Case 159: [SWE-Rebench 51.1 Percent Checkpoint](https://x.com/ibragim_bad/status/2072318238407483593) (yazan [@ibragim_bad](https://x.com/ibragim_bad))
 
@@ -891,6 +909,17 @@ Tür: Değerlendirme | Tarih: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Uygulamalı demolar ve vitrin derlemeleri
+<a id="case-161"></a>
+### Case 161: [REAP NVFP4 Rubiks Cube One-Shot](https://x.com/RoundtableSpace/status/2072700573145788914) (yazan [@RoundtableSpace](https://x.com/RoundtableSpace))
+
+**Bu vaka, GLM-5.2yi tek prompt ile interaktif build görevlerinde denemek için yararlıdır; çünkü REAP-NVFP4 demosu tek bir prompt ile 3D Rubiks Cube, gerçek scramble, canlı durum ve solve button üretildiğini söylüyor.**
+
+RoundtableSpace, GLM-5.2-REAP-NVFP4e yalnızca bir HTML prompt verildiğini ve canlı durum, gerçek scramble mantığı ve solve action içeren çalışan bir 3D Rubiks Cube uygulaması döndüğünü söylüyor. Paylaşım kod açısından ince ama yine de genel bir benchmark ekran görüntüsü değil, somut bir one-shot build demosu.
+
+Tür: Demo | Tarih: 2026-07-02
+
+---
+
 <a id="case-158"></a>
 ### Case 158: [OMP Relay iPhone Client](https://x.com/mov_axbx/status/2072192903762288721) (yazan [@mov_axbx](https://x.com/mov_axbx))
 
@@ -1093,6 +1122,28 @@ Tür: Demo | Tarih: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Sağlayıcı ve araç entegrasyonları
+<a id="case-165"></a>
+### Case 165: [ZCode Launch With Mobile Agent Control](https://x.com/Digiato/status/2072663459850829985) (yazan [@Digiato](https://x.com/Digiato))
+
+**Bu vaka, ZCodeu GLM-5.2 için resmi coding surface olarak değerlendirmek için yararlıdır; çünkü launch report bu ücretsiz agentic IDEnin Windows, macOS ve Linuxa geldiğini ve projeleri Telegram, WeChat ve Feishu üzerinden izleyebildiğini söylüyor.**
+
+Digiato, ZCodeu GLM-5.2 etrafında kurulmuş ücretsiz bir agentic development environment olarak tanımlıyor ve Cursor, Claude Code ve Copilot karşısına konumluyor. Paylaşıma göre ürün Windows, macOS ve Linuxta çalışıyor, GLM-5.2 ile derin biçimde entegre oluyor ve proje ilerlemesini Telegram, WeChat ve Feishu üzerinden görmeyi sağlıyor. Bu onu basit bir model duyurusundan daha ayırt edici bir erişim yüzeyi yapıyor.
+
+Tür: Entegrasyon | Tarih: 2026-07-02
+
+---
+
+<a id="case-160"></a>
+### Case 160: [OpenWiki Auto-Maintained Agent Docs](https://x.com/LangChain/status/2072745455788933321) (yazan [@LangChain](https://x.com/LangChain))
+
+**Bu vaka, agentlerin okuyacağı dokümantasyonu otomatik olarak güncel tutmak için yararlıdır; çünkü LangChain, OpenWiki nin kod değiştikçe repo docs u yeniden ürettiğini ve sürdürdüğünü, ayrıca GLM 5.2 gibi açık modeller üzerinde çalıştığını söylüyor.**
+
+LangChain, OpenWiki yi coding agentler için open-source bir dokümantasyon bakım katmanı olarak tanımlıyor. Paylaşıma göre araç, açık bir harness ile açık CLI workflowlarını birleştiriyor, codebase değiştikçe docs u güncel tutuyor ve GLM 5.2 ile Kimi K2.7 gibi açık modeller üzerinde çalışıyor. Bu, agentlerin elle bakılan wikiler yerine güncel repo docs okumasını isteyen ekipler için pratik bir file-based memory kalıbı.
+
+Tür: Entegrasyon | Tarih: 2026-07-02
+
+---
+
 <a id="case-152"></a>
 ### Case 152: [Foundry PTUs Through FireConnect](https://x.com/FireworksAI_HQ/status/2072407689964183867) (yazan [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
 
@@ -1537,6 +1588,28 @@ Tür: Entegrasyon | Tarih: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
+<a id="case-166"></a>
+### Case 166: [Full 744B On 5x ASUS GX10s](https://x.com/thatcofffeeguy/status/2072525885077434743) (yazan [@thatcofffeeguy](https://x.com/thatcofffeeguy))
+
+**Bu vaka, aşırı bir home-lab GLM-5.2 kurulumunu boyutlandırmak için yararlıdır; çünkü yazar tam 744B modelin artık 5 ASUS GX10 kutusunda full context ile çalıştığını ve gerçek workloadlar için bir causal harnessa bağlandığını söylüyor.**
+
+thatcofffeeguy, tam 744B GLM-5.2nin beş ASUS GX10 sistemi üzerinde full context ile çalıştığını, token ratelerin beklenenden iyi olduğunu ve stackin zaten bir causal harnessa bağlandığını söylüyor. Kesin throughput sayıları henüz paylaşılmasa da bu, bu sınıf yerel clusterların küçültülmüş sürüm değil tam modeli taşıyabildiğine dair somut bir kamu kanıtı.
+
+Tür: Demo | Tarih: 2026-07-02
+
+---
+
+<a id="case-164"></a>
+### Case 164: [Agent Route Swap In China Stack](https://x.com/0xluffy_eth/status/2072548580183900430) (yazan [@0xluffy_eth](https://x.com/0xluffy_eth))
+
+**Bu vaka, en üst kalite yerine maliyet baskısının daha önemli olduğu durumlarda GLM-5.2yi mixed-model stackin agent katmanına yönlendirmek için yararlıdır; çünkü yazara göre Sonneti GLM-5.2 ile değiştirmek bu slotun input maliyetini 5 kat düşürdü ve kalite kaybı yaklaşık yüzde 3 oldu.**
+
+Bu thread, reasoning, code generation, agent calls, batch work, image ve video boyunca altı yönlendirme değişikliği anlatıyor. Agent katmanında yazar Sonneti GLM 5.2 ile değiştiriyor ve performansta yaklaşık yüzde 3 düşüşle birlikte input maliyetinin 5 kat ucuzladığını söylüyor. 30 günlük özet, toplam AI işletme maliyetinin yüzde 87 düştüğünü ve gelirin sabit kaldığını belirtiyor.
+
+Tür: Değerlendirme | Tarih: 2026-07-02
+
+---
+
 <a id="case-156"></a>
 ### Case 156: [744B Local Hardware Floor](https://x.com/devjuninho/status/2072151237840007399) (yazan [@devjuninho](https://x.com/devjuninho))
 
@@ -1816,6 +1889,17 @@ Tür: Demo | Tarih: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
+<a id="case-163"></a>
+### Case 163: [Preliminary Cyber Research Parity](https://x.com/Irregular/status/2072682835798831168) (yazan [@Irregular](https://x.com/Irregular))
+
+**Bu vaka, vulnerability research alt görevlerinde GLM-5.2yi konumlandırmak için yararlıdır; çünkü Irregular, dar bir cyber suite üzerinde GPT-5.4 ve Opus 4.6 ile karşılaştırılabilir erken iç değerlendirmeler paylaşıyor ve end-to-end attack scenariolarının hâlâ test edilmediğini açıkça belirtiyor.**
+
+Irregular, sınırlı bir iç vulnerability research görev setinde GLM-5.2nin test edilen alt kümede GPT-5.4 ve Claude Opus 4.6 ile kabaca karşılaştırılabilir olduğunu söylüyor. Aynı paylaşım, setin dar olduğunu ve CyScenarioBench ile FrontierCyber gibi scenario-level benchmarkların henüz çalıştırılmadığını da ekliyor. Bunu tam saldırı agenti eşdeğerliliği değil, gerçek bir erken cyber sinyali olarak görmek gerekir.
+
+Tür: Sınırlama | Tarih: 2026-07-02
+
+---
+
 <a id="case-157"></a>
 ### Case 157: [OpenRouter Spend-Cut Skill Rewrite](https://x.com/Rahul_J_Mathur/status/2072279035493900395) (yazan [@Rahul_J_Mathur](https://x.com/Rahul_J_Mathur))
 
@@ -2044,7 +2128,7 @@ Bu depo, gerçek GLM-5.2 kullanım kanıtlarını paylaşan herkese açık içer
 
 Burada yer alan yüksek sinyalli kaynaklara ve üreticilere teşekkürler: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG).
 
-Yakın zamanda eklenen üreticiler: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky).
+Yakın zamanda eklenen üreticiler: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy).
 
 *Herhangi bir atıfın düzeltilmesi gerekiyorsa bizimle iletişime geçin; güncelleriz.*
 
