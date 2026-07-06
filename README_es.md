@@ -48,10 +48,10 @@ Cada título de caso enlaza a su fuente pública y cada usuario enlaza al perfil
 > [!NOTE]
 > Los README localizados conservan el mismo orden de casos, enlaces, anchors y atribución que la fuente inglesa. Algunos títulos se mantienen cerca del idioma original para mejorar la trazabilidad.
 
-<a id="-quick-api-access"></a>
-## ⚡ Acceso rápido a la API
+<a id="quick-start"></a>
+## ⚡ Quick Start
 
-Usa GLM-5.2 mediante la API Chat Completions compatible con OpenAI de Evolink. Obtén una API key en [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases) y configúrala como `EVOLINK_API_KEY` antes de ejecutar la solicitud.
+Usa GLM-5.2 mediante la API Chat Completions compatible con OpenAI de Evolink. Obtén una API key en [Evolink](https://evolink.ai/dashboard/keys?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=api_key) y configúrala como `EVOLINK_API_KEY` antes de ejecutar la solicitud.
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

@@ -48,10 +48,10 @@
 > [!NOTE]
 > 多语言 README 会保持与英文源相同的案例顺序、链接、anchor 和署名；为了可追溯性，部分标题会保留接近原文的写法。
 
-<a id="-quick-api-access"></a>
-## ⚡ 快速 API 接入
+<a id="quick-start"></a>
+## ⚡ Quick Start
 
-通过 Evolink 的 OpenAI 兼容 Chat Completions API 使用 GLM-5.2。先在 [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases) 获取 API key，然后在执行请求前设置为 `EVOLINK_API_KEY`。
+通过 Evolink 的 OpenAI 兼容 Chat Completions API 使用 GLM-5.2。先在 [Evolink](https://evolink.ai/dashboard/keys?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=api_key) 获取 API key，然后在执行请求前设置为 `EVOLINK_API_KEY`。
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

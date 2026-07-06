@@ -48,10 +48,10 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 > [!NOTE]
 > ローカライズ版 README は英語版と同じケース順、リンク、anchor、帰属を維持します。追跡性を優先するため、ケースタイトルは原文に近い表記を残す場合があります。
 
-<a id="-quick-api-access"></a>
-## ⚡ API クイックアクセス
+<a id="quick-start"></a>
+## ⚡ Quick Start
 
-Evolink の OpenAI 互換 Chat Completions API から GLM-5.2 を使用できます。[Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases) で API key を取得し、実行前に `EVOLINK_API_KEY` として設定してください。
+Evolink の OpenAI 互換 Chat Completions API から GLM-5.2 を使用できます。[Evolink](https://evolink.ai/dashboard/keys?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=api_key) で API key を取得し、実行前に `EVOLINK_API_KEY` として設定してください。
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

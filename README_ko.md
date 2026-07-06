@@ -48,10 +48,10 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 > [!NOTE]
 > 현지화 README는 영어 원본과 같은 사례 순서, 링크, anchor, 출처 표기를 유지합니다. 추적성을 위해 일부 제목은 원문에 가깝게 유지됩니다.
 
-<a id="-quick-api-access"></a>
-## ⚡ 빠른 API 접근
+<a id="quick-start"></a>
+## ⚡ Quick Start
 
-Evolink의 OpenAI 호환 Chat Completions API로 GLM-5.2를 사용할 수 있습니다. [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)에서 API key를 받은 뒤 요청 전에 `EVOLINK_API_KEY`로 설정하세요.
+Evolink의 OpenAI 호환 Chat Completions API로 GLM-5.2를 사용할 수 있습니다. [Evolink](https://evolink.ai/dashboard/keys?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=api_key)에서 API key를 받은 뒤 요청 전에 `EVOLINK_API_KEY`로 설정하세요.
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

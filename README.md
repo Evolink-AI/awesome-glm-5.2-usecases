@@ -48,10 +48,10 @@ Each case title links to its public source, and each author handle links to the 
 > [!NOTE]
 > Localized README files preserve the same case order, links, anchors, and attribution as the English source. Case titles remain close to the source language when that improves traceability.
 
-<a id="-quick-api-access"></a>
-## ⚡ Quick API Access
+<a id="quick-start"></a>
+## ⚡ Quick Start
 
-Use GLM-5.2 through the Evolink OpenAI-compatible Chat Completions API. Get an API key from [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases), then set it as `EVOLINK_API_KEY` before running the request.
+Use GLM-5.2 through the Evolink OpenAI-compatible Chat Completions API. Get an API key from [Evolink](https://evolink.ai/dashboard/keys?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=api_key), then set it as `EVOLINK_API_KEY` before running the request.
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"

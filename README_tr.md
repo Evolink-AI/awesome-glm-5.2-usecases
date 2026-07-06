@@ -48,10 +48,10 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 > [!NOTE]
 > Yerelleştirilmiş README dosyaları İngilizce kaynakla aynı vaka sırasını, linkleri, anchor’ları ve atıfları korur. İzlenebilirlik için bazı başlıklar kaynak dile yakın tutulur.
 
-<a id="-quick-api-access"></a>
-## ⚡ Hızlı API erişimi
+<a id="quick-start"></a>
+## ⚡ Quick Start
 
-GLM-5.2’yi Evolink’in OpenAI uyumlu Chat Completions API’si üzerinden kullanın. [Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases) üzerinden API key alın ve isteği çalıştırmadan önce `EVOLINK_API_KEY` olarak ayarlayın.
+GLM-5.2’yi Evolink’in OpenAI uyumlu Chat Completions API’si üzerinden kullanın. [Evolink](https://evolink.ai/dashboard/keys?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=api_key) üzerinden API key alın ve isteği çalıştırmadan önce `EVOLINK_API_KEY` olarak ayarlayın.
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"
