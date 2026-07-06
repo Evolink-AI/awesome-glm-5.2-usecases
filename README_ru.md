@@ -71,7 +71,7 @@ curl --request POST \
   }'
 ```
 
-Полная справка по GLM-5.2 API: [Открыть GLM-5.2 API docs](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api).
+Полная справка по GLM-5.2 API: [Открыть GLM-5.2 API docs](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases).
 
 ## 📑 Меню
 

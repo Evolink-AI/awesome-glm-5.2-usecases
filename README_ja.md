@@ -71,7 +71,7 @@ curl --request POST \
   }'
 ```
 
-GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api).
+GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases).
 
 ## 📑 メニュー
 

@@ -71,7 +71,7 @@ curl --request POST \
   }'
 ```
 
-Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api).
+Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases).
 
 ## 📑 Menü
 
