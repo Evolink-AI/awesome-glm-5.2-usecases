@@ -37,7 +37,7 @@ Cada título de caso aponta para a fonte pública, e cada autor aponta para o pe
 
 ## 📊 Visão Geral
 
-- **177 casos selecionados de GLM-5.2** de criadores públicos, equipes de benchmark, desenvolvedores de ferramentas, provedores e usuários práticos.
+- **183 casos selecionados de GLM-5.2** de criadores públicos, equipes de benchmark, desenvolvedores de ferramentas, provedores e usuários práticos.
 - Cobre avaliações comparativas e avaliação de fronteira, agentes de código e fluxos de trabalho de contexto longo, demos práticas e mostras, integrações de provedores e ferramentas, custo, preços e implantação local, limites, ressalvas e sinais de segurança.
 - Cada caso inclui a fonte original, a atribuição do criador, um takeaway de uso conciso, o tipo de evidência e a data de publicação.
 - Use este repo para encontrar workflows práticos, comparar pontos fortes e limites, descobrir provedores e acompanhar experimentos reais.
@@ -77,11 +77,11 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Seção | Casos |
 |---|---|
-| [📏 Avaliações comparativas e avaliação de fronteira](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175 |
-| [💻 Agentes de código e fluxos de trabalho de contexto longo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174 |
+| [📏 Avaliações comparativas e avaliação de fronteira](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178 |
+| [💻 Agentes de código e fluxos de trabalho de contexto longo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180 |
 | [🎮 Demos práticas e mostras](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161 |
-| [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176 |
-| [💸 Custo, preços e implantação local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177 |
+| [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179 |
+| [💸 Custo, preços e implantação local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183 |
 | [🧭 Limites, ressalvas e sinais de segurança](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
 | [🙏 Agradecimentos](#acknowledge) | Créditos e política de correções |
 
@@ -89,6 +89,7 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 178: Three-Body Simulator Benchmark Win](#case-178) | Use este caso para comparar o GLM-5.2 em benchmarks de programação com física numérica, porque AlicanKiraz0 executou uma tarefa caótica de simulador de três corpos e deu ao GLM 5.2 Max a melhor nota, 91 de 100. | Avaliação |
 | [Case 175: Cursor Double Pendulum Scorecard](#case-175) | Use este caso para comparar o GLM-5.2 em um benchmark de coding no Cursor com tarefa restrita, porque AlicanKiraz0 rodou seis modelos em um simulador HTML de pêndulo duplo e deu ao GLM 5.2 Max 88 de 100, atrás de Fable e Sonnet, mas à frente de GPT-5.5, Kimi K2.7 Code e Composer. | Avaliação |
 | [Case 162: VulcanBench 10-Task 80 Percent Tie](#case-162) | Use este caso para comparar o GLM-5.2 em tarefas reais de engenharia pós-cutoff onde custo importa tanto quanto score, porque Morgan Linton diz que o VulcanBench deu a GLM 5.2 High, Fable 5 Low e Sonnet 5 High o mesmo 80 por cento em 10 repositórios, enquanto o GLM ficou no meio em custo. | Avaliação |
 | [Case 159: SWE-Rebench 51.1 Percent Checkpoint](#case-159) | Use este caso para acompanhar o GLM-5.2 em um leaderboard de SWE agents que se atualiza continuamente, porque a última postagem do SWE rebench relata 51,1 por cento com 2,62 milhões de tokens, claramente à frente das novas execuções de DeepSeek, MiMo, Qwen e Gemma. | Avaliação |
@@ -121,6 +122,7 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 180: Hermes SSD Recovery Skill Loop](#case-180) | Use este caso para testar o GLM-5.2 dentro de um loop de agente voltado para reparo, porque ShankhadeepSho1 diz que Hermes mais GLM 5.2 diagnosticou um SSD de NAS com falha, corrigiu o problema e empacotou a solução como uma skill reutilizável. | Demonstração |
 | [Case 174: Role-Routed Heavy-Duty Coder Stack](#case-174) | Use este caso para colocar o GLM-5.2 como coder pesado dentro de uma pilha pessoal com roteamento por papéis, porque denizirgin diz que um mês de testes com Codex e OpenCode o levou a mandar o trabalho de coding mais pesado para o GLM 5.2 mantendo o orçamento mensal total em cerca de 120 a 140 dólares. | Avaliação |
 | [Case 155: Cotal Four-Agent TUI Loop](#case-155) | Use este caso para dividir um loop de codificação entre agentes especializados, porque o autor usou dois workers com GLM-5.2 sob um líder Opus e um revisor GPT para terminar uma TUI estilo lazygit em 47 minutos sem intervenção humana. | Demonstração |
 | [Case 153: Legacy Migration Cost-Cut Pilot](#case-153) | Use este caso para precificar o GLM-5.2 como o trabalhador mais barato dentro de um loop de modernização de legados, porque o piloto da 8090 diz que GLM mais Software Factory reduziu o custo em 16,4 vezes versus Opus 4.8 sozinho, embora tenha sido cerca de 3 vezes mais lento. | Avaliação |
@@ -176,6 +178,7 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 179: One-Key 26-Model API Access](#case-179) | Use este caso para testar o GLM-5.2 por meio de um único provedor compatível com OpenAI, porque Alan_Earn diz que uma única API key expõe o GLM-5.2 mais 25 outros modelos e inclui 26 dólares em créditos iniciais. | Tutorial |
 | [Case 176: NVIDIA NIM OpenCode Thinking Setup](#case-176) | Use este caso para ligar o GLM-5.2 ao OpenCode pelo endpoint gratuito da NVIDIA NIM quando você quiser uma rota sem custo com thinking ativado explicitamente, porque Dracoshowumore compartilha o fluxo de API key, a base URL e uma configuração do OpenCode em que a camada de ferramentas cuida das function calls enquanto o GLM roda com enable_thinking em true. | Tutorial |
 | [Case 165: ZCode Launch With Mobile Agent Control](#case-165) | Use este caso para avaliar o ZCode como superfície oficial de coding para o GLM-5.2, porque o relato de lançamento diz que o IDE agentic gratuito chega a Windows, macOS e Linux e pode acompanhar projetos por Telegram, WeChat e Feishu. | Integração |
 | [Case 160: OpenWiki Auto-Maintained Agent Docs](#case-160) | Use este caso para manter documentação legível por agentes atualizada automaticamente, porque a LangChain diz que o OpenWiki regenera e mantém os docs do repositório conforme o código muda e roda sobre modelos abertos como GLM 5.2. | Integração |
@@ -218,6 +221,9 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 183: M3 Ultra ds4-eval Q4 Checkpoint](#case-183) | Use este caso para benchmarkear uma instalação GLM-5.2 em Apple Silicon de máquina única com ds4-eval, porque ivanfioravanti relata um run q4 em torno de 16 tok/s, com 76 de 92 casos aprovados em 8 horas e 53 minutos numa máquina M3 Ultra de 512 GB. | Avaliação |
+| [Case 182: 4x RTX PRO 6000 Build Guide](#case-182) | Use este caso para dimensionar uma build local séria de GLM-5.2-594B, porque QingQ77 compartilha um guia completo de hardware e operação baseado em quatro RTX PRO 6000, APIs expostas via opencode e uma VM sandbox para trabalho com agentes. | Tutorial |
+| [Case 181: 4x DGX Spark QuantTrio Run](#case-181) | Use este caso para estimar o que um cluster DGX Spark de quatro nós consegue fazer com GLM-5.2 QuantTrio, porque Tech2Wild relata 200K de contexto, 30 tok/s em stream único e 60,5 tok/s de throughput agregado com seis solicitações concorrentes. | Demonstração |
 | [Case 177: Single M3 Ultra 4-Bit Video Run](#case-177) | Use este caso para estimar a viabilidade do GLM-5.2 em uma única máquina Apple Silicon, porque ivanfioravanti mostra uma execução 4-bit em um M3 Ultra 512GB a cerca de 16 tok/s e a compara com um vídeo de ds4-eval em q2 perto de 17 tok/s. | Demonstração |
 | [Case 166: Full 744B On 5x ASUS GX10s](#case-166) | Use este caso para dimensionar uma implantação extrema de GLM-5.2 em home lab, porque o autor diz que o modelo completo de 744B já roda com full context em 5 caixas ASUS GX10 e já está ligado a um causal harness para workloads reais. | Demo |
 | [Case 164: Agent Route Swap In China Stack](#case-164) | Use este caso para rotear o GLM-5.2 para a camada agent de uma stack mista quando a pressão de custo importa mais do que a qualidade máxima, porque o autor relata que trocar Sonnet por GLM-5.2 reduziu em 5x o custo de entrada desse slot com uma perda de qualidade de cerca de 3 por cento dentro de uma migração de 30 dias. | Avaliação |
@@ -270,6 +276,16 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | Use este caso como sinal de planejamento de segurança: GLM-5.2 open-weight reduz a fricção operacional para agentes ofensivos de segurança mesmo quando APIs fechadas continuam monitoradas. | Limite |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Avaliações comparativas e avaliação de fronteira
+<a id="case-178"></a>
+### Case 178: [Three-Body Simulator Benchmark Win](https://x.com/AlicanKiraz0/status/2073823792543998170) (por [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**Use este caso para comparar o GLM-5.2 em benchmarks de programação com física numérica, porque AlicanKiraz0 executou uma tarefa caótica de simulador de três corpos e deu ao GLM 5.2 Max a melhor nota, 91 de 100.**
+
+O benchmark combina física de três corpos, RK4 real, estabilidade em encontros próximos, gráficos de conservação ao vivo e controles interativos. A thread diz que o GLM 5.2 Max se destacou por usar estado em Float64Array, reutilizar buffers de RK4, aplicar Plummer softening e subpassos adaptativos, tornando este caso uma avaliação concreta de qualidade de engenharia e não apenas um screenshot de leaderboard.
+
+Tipo: Avaliação | Data: 2026-07-05
+
+---
 <a id="case-167"></a>
 ### Case 167: [GameDevBench 333-Task Open-Source Lead](https://x.com/iamwaynechi/status/2073081777091182633) (por [@iamwaynechi](https://x.com/iamwaynechi))
 
@@ -624,6 +640,16 @@ Tipo: Integração | Data: 2026-07-03
 
 ---
 
+<a id="case-180"></a>
+### Case 180: [Hermes SSD Recovery Skill Loop](https://x.com/ShankhadeepSho1/status/2073658918937473444) (por [@ShankhadeepSho1](https://x.com/ShankhadeepSho1))
+
+**Use este caso para testar o GLM-5.2 dentro de um loop de agente voltado para reparo, porque ShankhadeepSho1 diz que Hermes mais GLM 5.2 diagnosticou um SSD de NAS com falha, corrigiu o problema e empacotou a solução como uma skill reutilizável.**
+
+O autor diz que um SSD de um QNAP NAS morreu, foi movido para uma máquina reserva e entregue ao Hermes para diagnóstico. O resultado publicado é incomumente concreto para um workflow de agente: o stack teria reparado o problema, criado uma skill para si mesmo e atualizado a wiki de infraestrutura com a estratégia de recuperação.
+
+Tipo: Demonstração | Data: 2026-07-05
+
+---
 <a id="case-174"></a>
 ### Case 174: [Role-Routed Heavy-Duty Coder Stack](https://x.com/denizirgin/status/2073462071639876004) (por [@denizirgin](https://x.com/denizirgin))
 
@@ -1178,6 +1204,16 @@ Tipo: Tutorial | Data: 2026-07-03
 
 ---
 
+<a id="case-179"></a>
+### Case 179: [One-Key 26-Model API Access](https://x.com/Alan_Earn/status/2073663239028924680) (por [@Alan_Earn](https://x.com/Alan_Earn))
+
+**Use este caso para testar o GLM-5.2 por meio de um único provedor compatível com OpenAI, porque Alan_Earn diz que uma única API key expõe o GLM-5.2 mais 25 outros modelos e inclui 26 dólares em créditos iniciais.**
+
+O post traz um setup curto: criar a conta, adicionar um cartão, desbloquear o dashboard, resgatar os créditos, gerar a API key e colá-la no Codex, Cursor, OpenCode, OpenClaw, Hermes ou em outros clientes compatíveis com OpenAI. Ele também observa o billing pay as you go e que modelos frontier maiores consomem rapidamente os créditos gratuitos, então funciona principalmente como nota de acesso e pricing.
+
+Tipo: Tutorial | Data: 2026-07-05
+
+---
 <a id="case-176"></a>
 ### Case 176: [NVIDIA NIM OpenCode Thinking Setup](https://x.com/Dracoshowumore/status/2073384581256929717) (por [@Dracoshowumore](https://x.com/Dracoshowumore))
 
@@ -1651,6 +1687,36 @@ Tipo: Integração | Data: 2026-06-22
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Custo, preços e implantação local
+<a id="case-183"></a>
+### Case 183: [M3 Ultra ds4-eval Q4 Checkpoint](https://x.com/ivanfioravanti/status/2073742792044446194) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**Use este caso para benchmarkear uma instalação GLM-5.2 em Apple Silicon de máquina única com ds4-eval, porque ivanfioravanti relata um run q4 em torno de 16 tok/s, com 76 de 92 casos aprovados em 8 horas e 53 minutos numa máquina M3 Ultra de 512 GB.**
+
+ivanfioravanti diz que o run q4 de ds4-eval usou uma máquina M3 Ultra de 512 GB e que o branch mais antigo será revisitado com batch inference. Isso dá ao repo um complemento mais forte para o caso M3 anterior baseado só em vídeo: a thread acrescenta contagem de passes e runtime, não apenas um clipe de throughput.
+
+Tipo: Avaliação | Data: 2026-07-05
+
+---
+<a id="case-182"></a>
+### Case 182: [4x RTX PRO 6000 Build Guide](https://x.com/QingQ77/status/2073589933567094981) (por [@QingQ77](https://x.com/QingQ77))
+
+**Use este caso para dimensionar uma build local séria de GLM-5.2-594B, porque QingQ77 compartilha um guia completo de hardware e operação baseado em quatro RTX PRO 6000, APIs expostas via opencode e uma VM sandbox para trabalho com agentes.**
+
+A guia descreve um caminho de orçamento mais alto com quatro RTX PRO 6000 e 384 GB de VRAM para GLM-5.2-594B, além de peças EPYC e DDR4 usadas. Também cobre switching PCIe Gen4, bifurcation e ASPM na BIOS, iommu=off, limites de 350W em circuitos de 110V, contêineres Docker por modelo expostos via opencode e uma VM sandbox para que agentes não baguncem o host.
+
+Tipo: Tutorial | Data: 2026-07-05
+
+---
+<a id="case-181"></a>
+### Case 181: [4x DGX Spark QuantTrio Run](https://x.com/Tech2Wild/status/2073637530960826787) (por [@Tech2Wild](https://x.com/Tech2Wild))
+
+**Use este caso para estimar o que um cluster DGX Spark de quatro nós consegue fazer com GLM-5.2 QuantTrio, porque Tech2Wild relata 200K de contexto, 30 tok/s em stream único e 60,5 tok/s de throughput agregado com seis solicitações concorrentes.**
+
+Tech2Wild diz que a execução final manteve intactos todos os 256 especialistas e usou decodificação especulativa MTP com k=4. Ao contrário de threads anteriores de planejamento para Spark, aqui há um resultado concreto de inferência local concluída: 30 tok/s em um stream, 60,5 tok/s agregados com seis requisições simultâneas e alvo de 200K de contexto no cluster.
+
+Tipo: Demonstração | Data: 2026-07-05
+
+---
 <a id="case-177"></a>
 ### Case 177: [Single M3 Ultra 4-Bit Video Run](https://x.com/ivanfioravanti/status/2073502277449486460) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
 

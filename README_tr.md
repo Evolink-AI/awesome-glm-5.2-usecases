@@ -37,7 +37,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **177 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **183 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -77,11 +77,11 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180 |
 | [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183 |
 | [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
@@ -89,6 +89,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 178: Three-Body Simulator Benchmark Win](#case-178) | Bu vakayı, sayısal fizik içeren coding benchmarklarında GLM-5.2’yi karşılaştırmak için kullanın; çünkü AlicanKiraz0 kaotik bir üç cisim simülatörü görevini çalıştırdı ve GLM 5.2 Max’e 100 üzerinden 91 vererek birinciliği verdi. | Değerlendirme |
 | [Case 175: Cursor Double Pendulum Scorecard](#case-175) | Bu vakayı, sınırlı bir Cursor coding benchmarkında GLM-5.2yi karşılaştırmak için kullanın; çünkü AlicanKiraz0, HTML double-pendulum simulator üzerinde altı modeli çalıştırdı ve GLM 5.2 Maxe 100 üzerinden 88 puan verdi; Fable ve Sonnetin gerisinde kalsa da GPT-5.5, Kimi K2.7 Code ve Composerın önünde yer aldı. | Değerlendirme |
 | [Case 162: VulcanBench 10-Task 80 Percent Tie](#case-162) | Bu vaka, maliyetin skor kadar önemli olduğu post-cutoff gerçek mühendislik görevlerinde GLM-5.2yi karşılaştırmak için yararlıdır; çünkü Morgan Linton, VulcanBenchin GLM 5.2 High, Fable 5 Low ve Sonnet 5 Higha 10 repo boyunca aynı yüzde 80 sonucu verdiğini, GLMin ise maliyette ortada kaldığını söylüyor. | Değerlendirme |
 | [Case 159: SWE-Rebench 51.1 Percent Checkpoint](#case-159) | Bu vakayı, sürekli güncellenen bir SWE agent leaderboardunda GLM-5.2yi izlemek için kullanın; çünkü son SWE rebench paylaşımı 2,62 milyon token ile yüzde 51,1 bildiriyor ve yeni eklenen DeepSeek, MiMo, Qwen ve Gemma sonuçlarının açık biçimde önünde yer alıyor. | Değerlendirme |
@@ -121,6 +122,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 180: Hermes SSD Recovery Skill Loop](#case-180) | Bu vakayı, onarım odaklı bir agent loop içinde GLM-5.2’yi test etmek için kullanın; çünkü ShankhadeepSho1, Hermes ile GLM 5.2’nin arızalanan bir NAS SSD’sini teşhis edip sorunu çözdüğünü ve çözümü yeniden kullanılabilir bir skill olarak paketlediğini söylüyor. | Demo |
 | [Case 174: Role-Routed Heavy-Duty Coder Stack](#case-174) | Bu vakayı, rol bazlı yönlendirilen kişisel bir yığında GLM-5.2yi ağır coding işleri için konumlandırmak üzere kullanın; çünkü denizirgin, Codex ve OpenCode ile geçen bir ayın ardından daha ağır coding workü GLM 5.2ye yönlendirirken aylık toplam bütçeyi 120 ila 140 dolar civarında tuttuğunu söylüyor. | Değerlendirme |
 | [Case 155: Cotal Four-Agent TUI Loop](#case-155) | Bu vakayı, bir kodlama döngüsünü uzman agentlara bölmek için kullanın; çünkü yazar, Opus lideri ve GPT reviewer altında iki GLM-5.2 worker ile lazygit tarzı tam bir TUIyi 47 dakikada insan müdahalesi olmadan tamamladı. | Demo |
 | [Case 153: Legacy Migration Cost-Cut Pilot](#case-153) | Bu vakayı, GLM-5.2yi legacy uygulama modernizasyon döngüsünde daha ucuz çalışan olarak fiyatlamak için kullanın; çünkü 8090ın pilotuna göre GLM artı Software Factory, Opus 4.8e kıyasla maliyeti 16,4 kat düşürdü ama yaklaşık 3 kat daha yavaş çalıştı. | Değerlendirme |
@@ -179,6 +181,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 179: One-Key 26-Model API Access](#case-179) | Bu vakayı, GLM-5.2’yi tek bir OpenAI uyumlu sağlayıcı üzerinden denemek için kullanın; çünkü Alan_Earn, tek bir API key’in GLM-5.2 ile birlikte 25 modeli daha açtığını ve 26 dolarlık başlangıç kredisi verdiğini söylüyor. | Öğretici |
 | [Case 176: NVIDIA NIM OpenCode Thinking Setup](#case-176) | Bu vakayı, thinking açık sıfır maliyetli bir rota istediğinizde GLM-5.2yi NVIDIA'nın ücretsiz NIM endpointi üzerinden OpenCodea bağlamak için kullanın; çünkü Dracoshowumore API key akışını, base URLyi ve araç katmanının function callsı yönettiği, GLMin ise enable_thinking=true ile çalıştığı OpenCode yapılandırmasını paylaşıyor. | Tutorial |
 | [Case 165: ZCode Launch With Mobile Agent Control](#case-165) | Bu vaka, ZCodeu GLM-5.2 için resmi coding surface olarak değerlendirmek için yararlıdır; çünkü launch report bu ücretsiz agentic IDEnin Windows, macOS ve Linuxa geldiğini ve projeleri Telegram, WeChat ve Feishu üzerinden izleyebildiğini söylüyor. | Entegrasyon |
 | [Case 160: OpenWiki Auto-Maintained Agent Docs](#case-160) | Bu vaka, agentlerin okuyacağı dokümantasyonu otomatik olarak güncel tutmak için yararlıdır; çünkü LangChain, OpenWiki nin kod değiştikçe repo docs u yeniden ürettiğini ve sürdürdüğünü, ayrıca GLM 5.2 gibi açık modeller üzerinde çalıştığını söylüyor. | Entegrasyon |
@@ -226,6 +229,9 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 183: M3 Ultra ds4-eval Q4 Checkpoint](#case-183) | Bu vakayı, Apple Silicon tek kutu GLM-5.2 kurulumunu ds4-eval ile benchmark etmek için kullanın; çünkü ivanfioravanti, M3 Ultra 512GB makinede q4 çalışmasını yaklaşık 16 tok/s, 92 testten 76 geçiş ve 8 saat 53 dakikalık süreyle raporluyor. | Değerlendirme |
+| [Case 182: 4x RTX PRO 6000 Build Guide](#case-182) | Bu vakayı, ciddi bir yerel GLM-5.2-594B kurulumunun kapsamını çıkarmak için kullanın; çünkü QingQ77 dört RTX PRO 6000 GPU, opencode üzerinden açılan API’ler ve agent çalışması için bir sandbox VM etrafında tam bir donanım ve operasyon rehberi paylaşıyor. | Öğretici |
+| [Case 181: 4x DGX Spark QuantTrio Run](#case-181) | Bu vakayı, dört düğümlü bir DGX Spark kümesinin GLM-5.2 QuantTrio ile neler yapabildiğini tahmin etmek için kullanın; çünkü Tech2Wild 200K context ile tek akışta 30 tok/s ve altı eşzamanlı istekte toplam 60,5 tok/s bildiriyor. | Demo |
 | [Case 177: Single M3 Ultra 4-Bit Video Run](#case-177) | Bu vakayı, Apple Silicon üzerinde tek kutuluk GLM-5.2 uygulanabilirliğini tahmin etmek için kullanın; çünkü ivanfioravanti, tek bir M3 Ultra 512GB makinede yaklaşık 16 tok/s hızında 4-bit bir çalıştırma gösteriyor ve bunu q2 ds4-eval videosundaki yaklaşık 17 tok/s ile karşılaştırıyor. | Demo |
 | [Case 166: Full 744B On 5x ASUS GX10s](#case-166) | Bu vaka, aşırı bir home-lab GLM-5.2 kurulumunu boyutlandırmak için yararlıdır; çünkü yazar tam 744B modelin artık 5 ASUS GX10 kutusunda full context ile çalıştığını ve gerçek workloadlar için bir causal harnessa bağlandığını söylüyor. | Demo |
 | [Case 164: Agent Route Swap In China Stack](#case-164) | Bu vaka, en üst kalite yerine maliyet baskısının daha önemli olduğu durumlarda GLM-5.2yi mixed-model stackin agent katmanına yönlendirmek için yararlıdır; çünkü yazara göre Sonneti GLM-5.2 ile değiştirmek bu slotun input maliyetini 5 kat düşürdü ve kalite kaybı yaklaşık yüzde 3 oldu. | Değerlendirme |
@@ -280,6 +286,16 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | open-weight GLM-5.2’nin offensive security agents için operasyonel sürtünmeyi düşürdüğünü gösteren bir güvenlik sinyali olarak bu vakayı kullanın. | Sınır |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
+<a id="case-178"></a>
+### Case 178: [Three-Body Simulator Benchmark Win](https://x.com/AlicanKiraz0/status/2073823792543998170) (yazan [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**Bu vakayı, sayısal fizik içeren coding benchmarklarında GLM-5.2’yi karşılaştırmak için kullanın; çünkü AlicanKiraz0 kaotik bir üç cisim simülatörü görevini çalıştırdı ve GLM 5.2 Max’e 100 üzerinden 91 vererek birinciliği verdi.**
+
+Benchmark; üç cisim fiziği, gerçek RK4, yakın geçiş kararlılığı, canlı korunum grafikleri ve etkileşimli kontrolleri birleştiriyor. Thread, GLM 5.2 Max’in Float64Array state, yeniden kullanılan RK4 buffer’ları, Plummer softening ve adaptive substep ile öne çıktığını söylüyor; bu yüzden yalnızca bir sıralama ekranı değil, somut bir mühendislik kalitesi değerlendirmesi sunuyor.
+
+Tür: Değerlendirme | Tarih: 2026-07-05
+
+---
 <a id="case-167"></a>
 ### Case 167: [GameDevBench 333-Task Open-Source Lead](https://x.com/iamwaynechi/status/2073081777091182633) (yazan [@iamwaynechi](https://x.com/iamwaynechi))
 
@@ -612,6 +628,16 @@ Tür: Entegrasyon | Tarih: 2026-07-03
 
 ---
 
+<a id="case-180"></a>
+### Case 180: [Hermes SSD Recovery Skill Loop](https://x.com/ShankhadeepSho1/status/2073658918937473444) (yazan [@ShankhadeepSho1](https://x.com/ShankhadeepSho1))
+
+**Bu vakayı, onarım odaklı bir agent loop içinde GLM-5.2’yi test etmek için kullanın; çünkü ShankhadeepSho1, Hermes ile GLM 5.2’nin arızalanan bir NAS SSD’sini teşhis edip sorunu çözdüğünü ve çözümü yeniden kullanılabilir bir skill olarak paketlediğini söylüyor.**
+
+Yazar, bir QNAP NAS SSD’sinin öldüğünü, bunu yedek bir makineye taktığını ve teşhis için Hermes’e verdiğini söylüyor. Yayınlanan sonuç oldukça somut: stack sorunu düzeltti, kendisi için bir skill oluşturdu ve kurtarma stratejisini infrastructure wiki’ye yazdı.
+
+Tür: Demo | Tarih: 2026-07-05
+
+---
 <a id="case-174"></a>
 ### Case 174: [Role-Routed Heavy-Duty Coder Stack](https://x.com/denizirgin/status/2073462071639876004) (yazan [@denizirgin](https://x.com/denizirgin))
 
@@ -1188,6 +1214,16 @@ Tür: Öğretici | Tarih: 2026-07-03
 
 ---
 
+<a id="case-179"></a>
+### Case 179: [One-Key 26-Model API Access](https://x.com/Alan_Earn/status/2073663239028924680) (yazan [@Alan_Earn](https://x.com/Alan_Earn))
+
+**Bu vakayı, GLM-5.2’yi tek bir OpenAI uyumlu sağlayıcı üzerinden denemek için kullanın; çünkü Alan_Earn, tek bir API key’in GLM-5.2 ile birlikte 25 modeli daha açtığını ve 26 dolarlık başlangıç kredisi verdiğini söylüyor.**
+
+Gönderi kısa bir setup veriyor: hesap oluştur, kart ekle, dashboard’u aç, kredileri al, API key üret ve bunu Codex, Cursor, OpenCode, OpenClaw, Hermes ya da başka bir OpenAI uyumlu istemciye yapıştır. Pay as you go ve büyük frontier modellerin ücretsiz krediyi hızla tüketmesi de not edilmiş; bu yüzden thread daha çok erişim ve fiyatlandırma notu olarak işe yarıyor.
+
+Tür: Öğretici | Tarih: 2026-07-05
+
+---
 <a id="case-176"></a>
 ### Case 176: [NVIDIA NIM OpenCode Thinking Setup](https://x.com/Dracoshowumore/status/2073384581256929717) (yazan [@Dracoshowumore](https://x.com/Dracoshowumore))
 
@@ -1663,6 +1699,36 @@ Tür: Entegrasyon | Tarih: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
+<a id="case-183"></a>
+### Case 183: [M3 Ultra ds4-eval Q4 Checkpoint](https://x.com/ivanfioravanti/status/2073742792044446194) (yazan [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**Bu vakayı, Apple Silicon tek kutu GLM-5.2 kurulumunu ds4-eval ile benchmark etmek için kullanın; çünkü ivanfioravanti, M3 Ultra 512GB makinede q4 çalışmasını yaklaşık 16 tok/s, 92 testten 76 geçiş ve 8 saat 53 dakikalık süreyle raporluyor.**
+
+ivanfioravanti, q4 ds4-eval çalışmasının M3 Ultra 512GB makinede yapıldığını ve eski branch’i batch inference ile yeniden deneyeceğini söylüyor. Böylece bu thread, yalnızca videoya dayanan önceki M3 vakasına daha güçlü bir tamamlayıcı oluyor: artık yalnızca throughput klibi değil, geçiş sayısı ve çalışma süresi de var.
+
+Tür: Değerlendirme | Tarih: 2026-07-05
+
+---
+<a id="case-182"></a>
+### Case 182: [4x RTX PRO 6000 Build Guide](https://x.com/QingQ77/status/2073589933567094981) (yazan [@QingQ77](https://x.com/QingQ77))
+
+**Bu vakayı, ciddi bir yerel GLM-5.2-594B kurulumunun kapsamını çıkarmak için kullanın; çünkü QingQ77 dört RTX PRO 6000 GPU, opencode üzerinden açılan API’ler ve agent çalışması için bir sandbox VM etrafında tam bir donanım ve operasyon rehberi paylaşıyor.**
+
+Rehber, GLM-5.2-594B için dört RTX PRO 6000 ve 384 GB VRAM içeren daha yüksek bütçeli bir yolu ve ikinci el EPYC ile DDR4 parçalarını anlatıyor. Bunun yanında PCIe Gen4 switching, BIOS bifurcation ve ASPM, iommu=off, 110V devrelerde 350W sınırları, opencode üzerinden açılan Docker container’ları ve host’u koruyan bir sandbox VM de yer alıyor.
+
+Tür: Öğretici | Tarih: 2026-07-05
+
+---
+<a id="case-181"></a>
+### Case 181: [4x DGX Spark QuantTrio Run](https://x.com/Tech2Wild/status/2073637530960826787) (yazan [@Tech2Wild](https://x.com/Tech2Wild))
+
+**Bu vakayı, dört düğümlü bir DGX Spark kümesinin GLM-5.2 QuantTrio ile neler yapabildiğini tahmin etmek için kullanın; çünkü Tech2Wild 200K context ile tek akışta 30 tok/s ve altı eşzamanlı istekte toplam 60,5 tok/s bildiriyor.**
+
+Tech2Wild, son ölçülen çalışmanın 256 uzmanın tamamını koruduğunu ve k=4 ile MTP speculative decoding kullandığını söylüyor. Önceki Spark planlama thread’lerinden farklı olarak burada tamamlanmış bir local inference sonucu var: tek akışta 30 tok/s, altı eşzamanlı istekte toplam 60,5 tok/s ve küme üzerinde 200K context hedefi.
+
+Tür: Demo | Tarih: 2026-07-05
+
+---
 <a id="case-177"></a>
 ### Case 177: [Single M3 Ultra 4-Bit Video Run](https://x.com/ivanfioravanti/status/2073502277449486460) (yazan [@ivanfioravanti](https://x.com/ivanfioravanti))
 

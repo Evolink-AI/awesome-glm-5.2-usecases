@@ -37,7 +37,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **177 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **183 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -77,11 +77,11 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | セクション | ケース |
 |---|---|
-| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175 |
-| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174 |
+| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178 |
+| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180 |
 | [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183 |
 | [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
@@ -89,6 +89,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 178: Three-Body Simulator Benchmark Win](#case-178) | このケースは、数値物理を含むコーディングベンチマークで GLM-5.2 を比較したいときに使えます。AlicanKiraz0 がカオス的な三体シミュレータ課題を走らせ、GLM 5.2 Max に 100 点中 91 点の最高評価を付けたためです。 | 評価 |
 | [Case 175: Cursor Double Pendulum Scorecard](#case-175) | このケースは、制約付きの Cursor coding benchmark で GLM-5.2 を比較したいときに使えます。AlicanKiraz0 は HTML の double-pendulum simulator で 6 モデルを比較し、GLM 5.2 Max に 100 点中 88 点を付け、Fable と Sonnet には届かなかったものの、GPT-5.5、Kimi K2.7 Code、Composer を上回りました。 | 評価 |
 | [Case 162: VulcanBench 10-Task 80 Percent Tie](#case-162) | このケースは、cost と score の両方が重要な post-cutoff の実エンジニアリング課題で GLM-5.2 を比較するのに役立ちます。Morgan Linton によると、VulcanBench では GLM 5.2 High、Fable 5 Low、Sonnet 5 High が 10 repo で同じ 80 percent になり、GLM の cost は中間でした。 | 評価 |
 | [Case 159: SWE-Rebench 51.1 Percent Checkpoint](#case-159) | このケースは、更新が続く SWE エージェント系リーダーボードで GLM-5.2 を追うのに向いています。最新の SWE rebench 投稿では 2.62 million tokens で 51.1 percent とされ、新しく加わった DeepSeek、MiMo、Qwen、Gemma より明確に上です。 | 評価 |
@@ -119,6 +120,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 180: Hermes SSD Recovery Skill Loop](#case-180) | このケースは、修復志向の agent loop の中で GLM-5.2 を試したいときに使えます。ShankhadeepSho1 によると、Hermes と GLM 5.2 が故障した NAS SSD を診断し、問題を直したうえで、その修復方法を再利用可能な skill としてまとめたためです。 | デモ |
 | [Case 174: Role-Routed Heavy-Duty Coder Stack](#case-174) | このケースは、役割ごとにルーティングする個人スタックで GLM-5.2 を重い coding 作業の担当に置くときに役立ちます。denizirgin は、Codex と OpenCode を 1 か月試した結果、月額 120 から 140 dollars 前後に抑えながら、より重い coding work を GLM 5.2 に回す運用に落ち着いたと述べています。 | 評価 |
 | [Case 155: Cotal Four-Agent TUI Loop](#case-155) | このケースは、コーディングループを専門エージェントに分担させるのに使えます。著者は Opus のリードと GPT のレビュー役の下で GLM-5.2 ワーカーを 2 体使い、lazygit 風 TUI を 47 分で人手なしに仕上げました。 | デモ |
 | [Case 153: Legacy Migration Cost-Cut Pilot](#case-153) | このケースは、レガシーアプリ刷新ループの中で GLM-5.2 を低コスト側の実行役として評価するのに使えます。8090 のパイロットでは、GLM と Software Factory の組み合わせが Opus 4.8 単体比で 16.4 倍安く、ただし約 3 倍遅いとされています。 | 評価 |
@@ -177,6 +179,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 179: One-Key 26-Model API Access](#case-179) | このケースは、単一の OpenAI 互換プロバイダ経由で GLM-5.2 を試したいときに使えます。Alan_Earn によると、1 本の API key で GLM-5.2 を含む 26 モデルにアクセスでき、開始時に 26 ドル分のクレジットも付くためです。 | チュートリアル |
 | [Case 176: NVIDIA NIM OpenCode Thinking Setup](#case-176) | このケースは、thinking を明示的に有効にしたゼロコスト経路として NVIDIA の無料 NIM endpoint 経由で GLM-5.2 を OpenCode に接続したいときに使えます。Dracoshowumore は API key の取得手順、base URL、そして tool layer が function calls を引き受ける一方で GLM を enable_thinking=true で動かす OpenCode 設定を共有しています。 | チュートリアル |
 | [Case 165: ZCode Launch With Mobile Agent Control](#case-165) | このケースは、ZCode を GLM-5.2 の公式 coding surface として評価するのに役立ちます。launch report では、この無料の agentic IDE が Windows、macOS、Linux で動き、Telegram、WeChat、Feishu から project progress を確認できるとされています。 | 統合 |
 | [Case 160: OpenWiki Auto-Maintained Agent Docs](#case-160) | このケースは、agent が読めるドキュメントを自動で最新化したいときに役立ちます。LangChain によると、OpenWiki はコード変更に合わせて repo docs を再生成・維持し、GLM 5.2 のような open model で動きます。 | 統合 |
@@ -224,6 +227,9 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 183: M3 Ultra ds4-eval Q4 Checkpoint](#case-183) | このケースは、Apple Silicon の単機 GLM-5.2 構成を ds4-eval で benchmark したいときに使えます。ivanfioravanti が、M3 Ultra 512GB マシンで q4 実行を約 16 tok/s、92 件中 76 件通過、所要 8 時間 53 分と報告しているためです。 | 評価 |
+| [Case 182: 4x RTX PRO 6000 Build Guide](#case-182) | このケースは、本気のローカル GLM-5.2-594B 構成を見積もるときに使えます。QingQ77 が、4 枚の RTX PRO 6000、opencode 経由で公開する API、そして agent 作業用の sandbox VM を中心にしたハードウェアと運用の完全ガイドを共有しているためです。 | チュートリアル |
+| [Case 181: 4x DGX Spark QuantTrio Run](#case-181) | このケースは、4 ノードの DGX Spark クラスタで GLM-5.2 QuantTrio がどこまで出るか見積もりたいときに使えます。Tech2Wild が 200K context、単一ストリームで 30 tok/s、6 並列で合計 60.5 tok/s を報告しているためです。 | デモ |
 | [Case 177: Single M3 Ultra 4-Bit Video Run](#case-177) | このケースは、Apple Silicon の単体マシンで GLM-5.2 がどこまで実用になるかを見積もるのに役立ちます。ivanfioravanti は 1 台の M3 Ultra 512GB で 4-bit 実行を約 16 tok/s で示し、q2 の ds4-eval 動画がおよそ 17 tok/s であることと比較しています。 | デモ |
 | [Case 166: Full 744B On 5x ASUS GX10s](#case-166) | このケースは、極端な home-lab GLM-5.2 deployment を見積もるためのものです。著者によると、744B の full model が 5 台の ASUS GX10 上で full context 付きで動作し、real workloads 向けの causal harness にもすでに接続されています。 | デモ |
 | [Case 164: Agent Route Swap In China Stack](#case-164) | このケースは、最高品質よりコスト圧力が重要なときに、mixed-model stack の agent layer へ GLM-5.2 を routing する参考になります。著者によれば、Sonnet を GLM-5.2 に置き換えると、その slot の input cost は 5 倍安くなり、品質低下は約 3 percent でした。 | 評価 |
@@ -278,6 +284,16 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 安全計画のシグナルとして、open-weight の GLM-5.2 が offensive security agents の運用摩擦を下げる点を確認するためのケースです。 | 制限 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
+<a id="case-178"></a>
+### Case 178: [Three-Body Simulator Benchmark Win](https://x.com/AlicanKiraz0/status/2073823792543998170) (作者 [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**このケースは、数値物理を含むコーディングベンチマークで GLM-5.2 を比較したいときに使えます。AlicanKiraz0 がカオス的な三体シミュレータ課題を走らせ、GLM 5.2 Max に 100 点中 91 点の最高評価を付けたためです。**
+
+この benchmark では三体物理、実際の RK4、近接時の安定性、保存量のライブグラフ、対話的な操作が同時に求められます。thread では、GLM 5.2 Max が Float64Array state、再利用する RK4 buffer、Plummer softening、adaptive substep で優れていたと説明されており、単なる順位画像ではなく具体的な engineering quality の評価になっています。
+
+タイプ: 評価 | 日付: 2026-07-05
+
+---
 <a id="case-167"></a>
 ### Case 167: [GameDevBench 333-Task Open-Source Lead](https://x.com/iamwaynechi/status/2073081777091182633) (作者 [@iamwaynechi](https://x.com/iamwaynechi))
 
@@ -610,6 +626,16 @@ TracNetwork は、OpenRouter 上で qwen3-coder-next を synthesizer に、GLM-5
 
 ---
 
+<a id="case-180"></a>
+### Case 180: [Hermes SSD Recovery Skill Loop](https://x.com/ShankhadeepSho1/status/2073658918937473444) (作者 [@ShankhadeepSho1](https://x.com/ShankhadeepSho1))
+
+**このケースは、修復志向の agent loop の中で GLM-5.2 を試したいときに使えます。ShankhadeepSho1 によると、Hermes と GLM 5.2 が故障した NAS SSD を診断し、問題を直したうえで、その修復方法を再利用可能な skill としてまとめたためです。**
+
+投稿者によれば、QNAP NAS の SSD が故障し、それを予備マシンへ移して Hermes に診断させたとのことです。公開された結果はかなり具体的で、stack が問題を修復し、自分用の skill を作成し、復旧戦略を infrastructure wiki に追記したとされています。
+
+タイプ: デモ | 日付: 2026-07-05
+
+---
 <a id="case-174"></a>
 ### Case 174: [Role-Routed Heavy-Duty Coder Stack](https://x.com/denizirgin/status/2073462071639876004) (作者 [@denizirgin](https://x.com/denizirgin))
 
@@ -1186,6 +1212,16 @@ ClaudeCode_UT は、Cloudflare の無料アカウント作成、Workers AI の a
 
 ---
 
+<a id="case-179"></a>
+### Case 179: [One-Key 26-Model API Access](https://x.com/Alan_Earn/status/2073663239028924680) (作者 [@Alan_Earn](https://x.com/Alan_Earn))
+
+**このケースは、単一の OpenAI 互換プロバイダ経由で GLM-5.2 を試したいときに使えます。Alan_Earn によると、1 本の API key で GLM-5.2 を含む 26 モデルにアクセスでき、開始時に 26 ドル分のクレジットも付くためです。**
+
+投稿では、アカウント作成、カード追加、dashboard 解放、credits 受け取り、API key 作成、そしてそれを Codex、Cursor、OpenCode、OpenClaw、Hermes などへ貼り付ける短い setup が示されています。pay as you go であることや、大きな frontier model は無料 credits を早く消費することも書かれており、主に access と pricing のメモとして役立ちます。
+
+タイプ: チュートリアル | 日付: 2026-07-05
+
+---
 <a id="case-176"></a>
 ### Case 176: [NVIDIA NIM OpenCode Thinking Setup](https://x.com/Dracoshowumore/status/2073384581256929717) (作者 [@Dracoshowumore](https://x.com/Dracoshowumore))
 
@@ -1661,6 +1697,36 @@ wafer_ai は、GLM-5.2 Fast が Vercel AI Gateway で利用可能になり、速
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 コスト、価格、ローカル運用
+<a id="case-183"></a>
+### Case 183: [M3 Ultra ds4-eval Q4 Checkpoint](https://x.com/ivanfioravanti/status/2073742792044446194) (作者 [@ivanfioravanti](https://x.com/ivanfioravanti))
+
+**このケースは、Apple Silicon の単機 GLM-5.2 構成を ds4-eval で benchmark したいときに使えます。ivanfioravanti が、M3 Ultra 512GB マシンで q4 実行を約 16 tok/s、92 件中 76 件通過、所要 8 時間 53 分と報告しているためです。**
+
+ivanfioravanti によると、この q4 の ds4-eval run は M3 Ultra 512GB マシンで行われ、古い branch についても batch inference で再挑戦する予定とのことです。これにより、以前の動画中心の M3 ケースよりも強い補完が repo に加わり、throughput 動画だけでなく pass 数と実行時間も確認できます。
+
+タイプ: 評価 | 日付: 2026-07-05
+
+---
+<a id="case-182"></a>
+### Case 182: [4x RTX PRO 6000 Build Guide](https://x.com/QingQ77/status/2073589933567094981) (作者 [@QingQ77](https://x.com/QingQ77))
+
+**このケースは、本気のローカル GLM-5.2-594B 構成を見積もるときに使えます。QingQ77 が、4 枚の RTX PRO 6000、opencode 経由で公開する API、そして agent 作業用の sandbox VM を中心にしたハードウェアと運用の完全ガイドを共有しているためです。**
+
+guide では、GLM-5.2-594B 向けに 4 枚の RTX PRO 6000 と 384GB VRAM を使う上位構成に加え、中古の EPYC と DDR4 も使っています。さらに PCIe Gen4 switching、BIOS の bifurcation と ASPM、iommu=off、110V 回路での 350W 制限、opencode 経由の Docker container、agent が host を荒らさないための sandbox VM まで触れています。
+
+タイプ: チュートリアル | 日付: 2026-07-05
+
+---
+<a id="case-181"></a>
+### Case 181: [4x DGX Spark QuantTrio Run](https://x.com/Tech2Wild/status/2073637530960826787) (作者 [@Tech2Wild](https://x.com/Tech2Wild))
+
+**このケースは、4 ノードの DGX Spark クラスタで GLM-5.2 QuantTrio がどこまで出るか見積もりたいときに使えます。Tech2Wild が 200K context、単一ストリームで 30 tok/s、6 並列で合計 60.5 tok/s を報告しているためです。**
+
+Tech2Wild によると、最終計測ランでは 256 experts をすべて保持したまま、k=4 の MTP speculative decoding を使ったとのことです。以前の Spark 計画系 thread と違い、これは完成した local inference の具体的結果で、1 ストリーム 30 tok/s、6 同時リクエストで合計 60.5 tok/s、そして 200K context を狙った構成です。
+
+タイプ: デモ | 日付: 2026-07-05
+
+---
 <a id="case-177"></a>
 ### Case 177: [Single M3 Ultra 4-Bit Video Run](https://x.com/ivanfioravanti/status/2073502277449486460) (作者 [@ivanfioravanti](https://x.com/ivanfioravanti))
 
