@@ -1767,7 +1767,7 @@ Type: Évaluation | Date: 2026-06-16
 ---
 
 <a id="case-64"></a>
-### Case 64: [Basement Local Inference Speed](https://x.com/volatilemrkts/status/2068077319986516031) (par [@volatilemrkts](https://x.com/volatilemrkts))
+### Case 64: [Basement Local Inference Speed](https://web.archive.org/web/*/https://web.archive.org/web/*/https://x.com/volatilemrkts/status/2068077319986516031) (par [@volatilemrkts](https://web.archive.org/web/*/https://x.com/volatilemrkts))
 
 **Utilisez ce cas pour estimer le débit d’inférence GLM-5.2 local sur du matériel Apple à grande mémoire avant de planifier une configuration de codage hors ligne.**
 

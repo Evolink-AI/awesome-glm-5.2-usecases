@@ -1775,7 +1775,7 @@ TraffAlex собрал в одном DGX Spark guide материалы NVIDIA �
 ---
 
 <a id="case-64"></a>
-### Case 64: [Basement Local Inference Speed](https://x.com/volatilemrkts/status/2068077319986516031) (от [@volatilemrkts](https://x.com/volatilemrkts))
+### Case 64: [Basement Local Inference Speed](https://web.archive.org/web/*/https://web.archive.org/web/*/https://x.com/volatilemrkts/status/2068077319986516031) (от [@volatilemrkts](https://web.archive.org/web/*/https://x.com/volatilemrkts))
 
 **Используйте этот случай, чтобы оценить локальную пропускную способность вывода GLM-5.2 на оборудовании Apple с большим объемом памяти, прежде чем планировать настройку автономного кодирования.**
 

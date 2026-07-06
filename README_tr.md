@@ -1788,7 +1788,7 @@ Tür: Değerlendirme | Tarih: 2026-06-16
 ---
 
 <a id="case-64"></a>
-### Case 64: [Basement Local Inference Speed](https://x.com/volatilemrkts/status/2068077319986516031) (yazan [@volatilemrkts](https://x.com/volatilemrkts))
+### Case 64: [Basement Local Inference Speed](https://web.archive.org/web/*/https://web.archive.org/web/*/https://x.com/volatilemrkts/status/2068077319986516031) (yazan [@volatilemrkts](https://web.archive.org/web/*/https://x.com/volatilemrkts))
 
 **Çevrimdışı kodlama kurulumunu planlamadan önce, geniş bellekli Apple donanımındaki yerel GLM-5.2 çıkarım verimini tahmin etmek için bu durumu kullanın.**
 
