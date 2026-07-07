@@ -37,7 +37,7 @@
 
 ## 📊 总览
 
-- **183 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
+- **187 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
 - 覆盖基准与前沿评测、编码代理与长上下文工作流、上手演示与作品展示、供应商与工具集成、成本、定价与本地部署、限制、注意事项与安全信号。
 - 每个案例都包含原始来源、创作者署名、简洁的使用结论、证据类型和发布日期。
 - 你可以用这个 repo 查找实用工作流、比较优势和限制、发现供应商路径，并跟踪真实上手实验。
@@ -77,11 +77,11 @@ curl --request POST \
 
 | 章节 | 案例 |
 |---|---|
-| [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178 |
+| [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184 |
 | [💻 编码代理与长上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180 |
 | [🎮 上手演示与作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161 |
-| [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179 |
-| [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183 |
+| [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185 |
+| [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187 |
 | [🧭 限制、注意事项与安全信号](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
 | [🙏 致谢](#acknowledge) | 来源致谢与修正政策 |
 
@@ -89,6 +89,7 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 184: AutomationBench-AA Open-Weights Lead](#case-184) | 如果你想比较 GLM-5.2 在遵守业务规则的 SaaS automation 里的表现，而不只是看 coding benchmark，可以看这个案例，因为 Artificial Analysis 报告 GLM-5.2 Max 在 AutomationBench-AA 上拿到 27.8%，并称它是 open weights 里的第一名。 | 评测 |
 | [Case 178: Three-Body Simulator Benchmark Win](#case-178) | 如果你想在带数值物理约束的 coding benchmark 里比较 GLM-5.2，可以看这个案例，因为 AlicanKiraz0 跑了一个混沌三体模拟器任务，并给 GLM 5.2 Max 打出了 91/100 的最高分。 | 评测 |
 | [Case 175: Cursor Double Pendulum Scorecard](#case-175) | 如果你想在一个受限的 Cursor coding benchmark 里比较 GLM-5.2，可以看这个案例，因为 AlicanKiraz0 用 HTML double-pendulum simulator 跑了 6 个模型，给 GLM 5.2 Max 打了 88/100，虽然落后于 Fable 和 Sonnet，但仍高于 GPT-5.5、Kimi K2.7 Code 和 Composer。 | 评测 |
 | [Case 162: VulcanBench 10-Task 80 Percent Tie](#case-162) | 如果你想在成本和分数同样重要的 post-cutoff 真实工程任务中比较 GLM-5.2，可以看这个案例，因为 Morgan Linton 说 VulcanBench 让 GLM 5.2 High、Fable 5 Low 和 Sonnet 5 High 在 10 个 repo 上都拿到 80%，而 GLM 的成本落在中间。 | 评测 |
@@ -179,6 +180,7 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 185: DuckDB Flock Open-SQL PR](#case-185) | 如果你想把 GLM-5.2 带进完全开源的本地 SQL analysis，可以看这个案例，因为 lhoestq 说，一个 duckdb + flock 的 PR 已经让 GLM-5.2 进入 100% open-source 的数据栈。 | 集成 |
 | [Case 179: One-Key 26-Model API Access](#case-179) | 如果你想先通过单一 OpenAI 兼容 provider 试用 GLM-5.2，可以看这个案例，因为 Alan_Earn 说一把 API key 就能访问 GLM-5.2 和另外 25 个模型，还带 26 美元起始 credits。 | 教程 |
 | [Case 176: NVIDIA NIM OpenCode Thinking Setup](#case-176) | 如果你想通过 NVIDIA 免费 NIM endpoint 把 GLM-5.2 接进 OpenCode，并且走一条明确开启 thinking 的零成本路线，可以看这个案例，因为 Dracoshowumore 分享了 API key 流程、base URL，以及一份由工具层接管 function calls、让 GLM 以 enable_thinking=true 运行的 OpenCode 配置。 | 教程 |
 | [Case 165: ZCode Launch With Mobile Agent Control](#case-165) | 如果你想把 ZCode 当成 GLM-5.2 的官方 coding surface 来评估，可以看这个案例，因为 launch report 说这个免费的 agentic IDE 会上 Windows、macOS、Linux，还能通过 Telegram、WeChat、Feishu 跟踪项目进度。 | 集成 |
@@ -227,6 +229,8 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 187: Dual M5 Max Offline Droneship Sim](#case-187) | 如果你想估算一套完全离线的 Apple Silicon GLM-5.2 agent 到底能做什么，可以看这个案例，因为 XavierLocalAI 报告了一个 753B 配置：在两台 128GB M5 Max 上以 26 tok/s 编写 droneship landing simulator。 | 演示 |
+| [Case 186: 5x DGX Spark Production Harness](#case-186) | 如果你想判断 5 节点 DGX Spark 配置是否已经够支撑生产级 GLM-5.2 工作，可以看这个案例，因为 thatcofffeeguy 报告了在 400K context 下单流约 13.9 tok/s，以及 3 条 lane 合计 19.9 tok/s 的 live harness 结果。 | 演示 |
 | [Case 183: M3 Ultra ds4-eval Q4 Checkpoint](#case-183) | 如果你想用 ds4-eval 真正 benchmark 一台 Apple Silicon 单机上的 GLM-5.2，可以看这个案例，因为 ivanfioravanti 报告了一次 q4 运行：M3 Ultra 512GB 机器上约 16 tok/s，92 项里过了 76 项，总时长 8 小时 53 分。 | 评测 |
 | [Case 182: 4x RTX PRO 6000 Build Guide](#case-182) | 如果你想评估一套严肃的本地 GLM-5.2-594B 方案，可以看这个案例，因为 QingQ77 分享了一份完整的硬件与运维指南，核心是 4 张 RTX PRO 6000、通过 opencode 暴露的 API，以及给 agent 用的 sandbox VM。 | 教程 |
 | [Case 181: 4x DGX Spark QuantTrio Run](#case-181) | 如果你想估算 4 节点 DGX Spark 集群跑 GLM-5.2 QuantTrio 的上限，可以看这个案例，因为 Tech2Wild 给出了 200K context、单流 30 tok/s，以及 6 并发下总计 60.5 tok/s 的结果。 | 演示 |
@@ -284,6 +288,16 @@ curl --request POST \
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 如果你在做安全规划，可以用这个案例理解开放权重 GLM-5.2 如何降低进攻性安全 agent 的实际操作门槛。 | 限制 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 基准与前沿评测
+<a id="case-184"></a>
+### Case 184: [AutomationBench-AA Open-Weights Lead](https://x.com/ArtificialAnlys/status/2074194764510208230) (作者 [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**如果你想比较 GLM-5.2 在遵守业务规则的 SaaS automation 里的表现，而不只是看 coding benchmark，可以看这个案例，因为 Artificial Analysis 报告 GLM-5.2 Max 在 AutomationBench-AA 上拿到 27.8%，并称它是 open weights 里的第一名。**
+
+Artificial Analysis 说，AutomationBench-AA 会在 40 个模拟 SaaS 应用上跑 657 个私有工作流任务，并用接近 12,000 条 objective 与 guardrail assertions 来打分。首发帖子里，GLM-5.2 Max 以 27.8% 领跑 open weights，但同时也明确写到，它仍然落后于更强的 closed models，而且每个任务的 guardrail violation 明显更高。所以这条案例既是 agentic business automation 的能力信号，也是限制信号。
+
+类型: 评测 | 日期: 2026-07-06
+
+---
 <a id="case-178"></a>
 ### Case 178: [Three-Body Simulator Benchmark Win](https://x.com/AlicanKiraz0/status/2073823792543998170) (作者 [@AlicanKiraz0](https://x.com/AlicanKiraz0))
 
@@ -1212,6 +1226,16 @@ ClaudeCode_UT 给出六个步骤：建立免费 Cloudflare 账号、复制 Worke
 
 ---
 
+<a id="case-185"></a>
+### Case 185: [DuckDB Flock Open-SQL PR](https://x.com/lhoestq/status/2074143736624275629) (作者 [@lhoestq](https://x.com/lhoestq))
+
+**如果你想把 GLM-5.2 带进完全开源的本地 SQL analysis，可以看这个案例，因为 lhoestq 说，一个 duckdb + flock 的 PR 已经让 GLM-5.2 进入 100% open-source 的数据栈。**
+
+帖子说，作者开了一个 PR，把 GLM-5.2 接进 duckdb 和 flock，并把它描述成一种把 frontier 级 open intelligence 直接用于数据工作的方式。因为这里的来源是“PR 已开”而不是“已经 merge 的 release note”，所以它更适合作为本地 analytics 和 SQL-native workflow 的 integration-in-progress 信号。
+
+类型: 集成 | 日期: 2026-07-06
+
+---
 <a id="case-179"></a>
 ### Case 179: [One-Key 26-Model API Access](https://x.com/Alan_Earn/status/2073663239028924680) (作者 [@Alan_Earn](https://x.com/Alan_Earn))
 
@@ -1223,7 +1247,7 @@ ClaudeCode_UT 给出六个步骤：建立免费 Cloudflare 账号、复制 Worke
 
 ---
 <a id="case-176"></a>
-### Case 176: [NVIDIA NIM OpenCode Thinking Setup](https://x.com/Dracoshowumore/status/2073384581256929717) (作者 [@Dracoshowumore](https://x.com/Dracoshowumore))
+### Case 176: [NVIDIA NIM OpenCode Thinking Setup](https://x.com/Dracoshowumore/status/2073384581256929717) (作者 [@Dracoshowumore](https://x.com/Dracoshowumore), [@lhoestq](https://x.com/lhoestq), [@XavierLocalAI](https://x.com/XavierLocalAI))
 
 **如果你想通过 NVIDIA 免费 NIM endpoint 把 GLM-5.2 接进 OpenCode，并且走一条明确开启 thinking 的零成本路线，可以看这个案例，因为 Dracoshowumore 分享了 API key 流程、base URL，以及一份由工具层接管 function calls、让 GLM 以 enable_thinking=true 运行的 OpenCode 配置。**
 
@@ -1697,6 +1721,26 @@ wafer_ai 表示，GLM-5.2 Fast 已经上线 Vercel AI Gateway，速度为 150-25
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 成本、定价与本地部署
+<a id="case-187"></a>
+### Case 187: [Dual M5 Max Offline Droneship Sim](https://x.com/XavierLocalAI/status/2073938465121833452) (作者 [@XavierLocalAI](https://x.com/XavierLocalAI))
+
+**如果你想估算一套完全离线的 Apple Silicon GLM-5.2 agent 到底能做什么，可以看这个案例，因为 XavierLocalAI 报告了一个 753B 配置：在两台 128GB M5 Max 上以 26 tok/s 编写 droneship landing simulator。**
+
+原帖说，这套配置使用的是 GLM-5.2 753B build、约 222GB 磁盘占用的 Unsloth dynamic IQ2_M quant、通过 Thunderbolt 5 连接起来、合计约 256GB pooled memory 的两台 M5 Max，以及 llama.cpp RPC。这里的结果不只是 throughput：模型当时正在完全离线地 live-coding 一个 Falcon 9 的 droneship landing simulator，所以它是一条很具体的本地部署与 privacy-first agent demo。
+
+类型: 演示 | 日期: 2026-07-06
+
+---
+<a id="case-186"></a>
+### Case 186: [5x DGX Spark Production Harness](https://x.com/thatcofffeeguy/status/2074245620207058981) (作者 [@thatcofffeeguy](https://x.com/thatcofffeeguy))
+
+**如果你想判断 5 节点 DGX Spark 配置是否已经够支撑生产级 GLM-5.2 工作，可以看这个案例，因为 thatcofffeeguy 报告了在 400K context 下单流约 13.9 tok/s，以及 3 条 lane 合计 19.9 tok/s 的 live harness 结果。**
+
+帖子说，这是作者在多轮实验后跑出来的最佳配置，而且当天就已经在没有 pruning 的情况下上线生产。它对应的 workload 也比纯实验室测试更具体：这套 harness 已经被拿来在约 30 分钟内生成内容，并审查当天的 ERP 数据。所以它更像一条实用 deployment checkpoint，而不只是硬件炫耀。
+
+类型: 演示 | 日期: 2026-07-06
+
+---
 <a id="case-183"></a>
 ### Case 183: [M3 Ultra ds4-eval Q4 Checkpoint](https://x.com/ivanfioravanti/status/2073742792044446194) (作者 [@ivanfioravanti](https://x.com/ivanfioravanti))
 
