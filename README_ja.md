@@ -37,7 +37,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **195 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **201 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -77,18 +77,20 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | セクション | ケース |
 |---|---|
-| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190 |
+| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
 | [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
-| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195 |
+| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201 |
 | [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
-| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
+| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197 |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
 ### [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation)
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 199: Epoch Open-Weight Index Lead](#case-199) | このケースは、GLM-5.2 を長期的な capability curve の中で位置づけたいときに使えます。Epoch AI が Capabilities Index で推定 152 を与え、評価済み open-weight model の中で最高だとしているためです。 | ベンチマーク |
+| [Case 196: Databricks Internal Harness Eval](#case-196) | このケースは、GLM-5.2 を大規模な private engineering codebase 上で benchmark したいときに使えます。Databricks によると、3,000 人超の engineer の仕事を含む内部評価で GLM 5.2 は非常に強く、harness の選び方だけでコストを約 2x 下げられるためです。 | 評価 |
 | [Case 190: NatureBench Open-Weight Runner-Up](#case-190) | このケースは、GLM-5.2 を scientific-agent workflow で benchmark したいときに使えます。NatureBench が、6 つの scientific domain、90 task において GLM-5.2 が総合 2 位かつ open-weight 首位で debut したと述べているためです。 | ベンチマーク |
 | [Case 189: Terminal-Bench 45-Task Cost Tradeoff](#case-189) | このケースは、同じ agent harness で GLM-5.2 と GPT-5.5 を比較したいときに使えます。45 件の Terminal-Bench で GLM-5.2 が 25 勝、GPT-5.5 が 29 勝となり、GLM は prompt caching 込みで約 40% 安かったためです。 | 評価 |
 | [Case 188: Harvey LAB-AA Legal-Agent Tie](#case-188) | このケースは、GLM-5.2 を実際の法務エージェント業務で benchmark したいときに使えます。Harvey LAB-AA で GLM-5.2 Max が 24 の practice area、120 の private task で Claude Opus 4.8 と同率の 7.5% all-pass を出しているためです。 | ベンチマーク |
@@ -160,6 +162,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 200: ZCode Nintendo DS Emulator](#case-200) | このケースは、長時間にわたる local coding build を見たいときに使えます。作者が 4x RTX 6000 上の ZCode で GLM-5.2 を動かし、Nintendo DS emulator を C++ でゼロから作ることを目標にしたためです。 | デモ |
 | [Case 192: Command Code Flappy Bird UX Split](#case-192) | このケースは、GLM-5.2 を軽い design-game task で比較したいときに使えます。作者が同じ Flappy Bird prompt を Command Code で流し、Fable 5 は GLM-5.2 の約 9 倍近い価格にもかかわらず UX で決定的優位を示さなかったと結論づけているためです。 | 評価 |
 | [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | このケースは、単一プロンプトの対話型 build で GLM-5.2 を試すのに向いています。REAP-NVFP4 の demo では、1 回の prompt だけで 3D Rubiks Cube、実際の scramble、live state、solve button まで生成したと述べています。 | デモ |
 | [Case 158: OMP Relay iPhone Client](#case-158) | このケースは、ローカル GLM-5.2 エージェントを素早くモバイル面に載せたいときに使えます。著者によれば、Codex の build-ios-app plugin が、すでに GLM-5.2 と Cloudflare トンネルを使う OMP relay 向けに、数時間で整った iPhone クライアントを作りました。 | デモ |
@@ -185,6 +188,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 201: DotCode Context Upload Workflow](#case-201) | このケースは、private coding sandbox の中で GLM-5.2 により豊かな project context を与えたいときに使えます。DotCode が GLM 5.2 対応に加えて、screenshot、image、CSV、PDF、source file、zip の upload を同じ filesystem-and-terminal workflow に流せるようにしたためです。 | 統合 |
+| [Case 198: Dahl 100M Free GLM Endpoint](#case-198) | このケースは、クレジットカード不要の OpenAI-compatible route で GLM-5.2 を試したいときに使えます。Dahl Inference が GLM 5.2 FP8 向けに 100M free token を出し、key の作成方法と `/v1/chat/completions` の呼び方を示しているためです。 | チュートリアル |
 | [Case 195: NVIDIA Free Endpoint GLM Setup](#case-195) | このケースは、GLM-5.2 を self-hosting なしで coding tool に入れて試したいときに使えます。source が、無料 NVIDIA endpoint の流れで GLM-5.2 の API key を Claude Code、Cursor、Cline に入れる手順を示しているためです。 | チュートリアル |
 | [Case 193: 0G TeeML Private Inference Route](#case-193) | このケースは、GLM-5.2 を privacy-first な provider path に流したいときに使えます。0G が、GLM 5.2 は TeeML 上で TEE enclave の中に prompt を閉じ込めたまま動き、価格も公式ルートより低いと述べているためです。 | 統合 |
 | [Case 185: DuckDB Flock Open-SQL PR](#case-185) | このケースは、GLM-5.2 を完全に open なローカル SQL analysis に持ち込みたいときに使えます。lhoestq によると、duckdb と flock の PR で GLM-5.2 が 100% open-source の data stack に入るためです。 | 統合 |
@@ -274,6 +279,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 197: Composio 47-Task Agent Gaps](#case-197) | このケースは、GLM-5.2 が live SaaS-agent work でどこでまだ崩れるかを理解したいときに使えます。Composio が 17 の tool、47 task につなぎ、45 件は通した一方で、completeness check と曖昧な SLA judgment で失敗したためです。 | 評価 |
 | [Case 163: Preliminary Cyber Research Parity](#case-163) | このケースは、vulnerability research の部分タスクで GLM-5.2 を測るためのものです。Irregular は、狭い cyber suite で GPT-5.4 と Opus 4.6 に近い初期内部評価を報告しつつ、end-to-end の attack scenario はまだ未検証だと明言しています。 | 制約 |
 | [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | このケースは、エージェントモデルを入れ替える前に移行コストを見積もるのに役立ちます。あるファンドの OpenRouter 試行では GLM-5.2 が Opus の約 8 分の 1 のコストでしたが、skill の書き換え、routing ロジック、そして遅く弱い出力を受け入れる前提が必要でした。 | 制限 |
 | [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | ソースによれば GLM-5.2 は 1 つの IDOR benchmark で Claude Code を上回った一方、Mythos 自体とは比較されていないため、実際の security signal と見出し先行の誇張を切り分けるためのケースです。 | 制限 |
@@ -296,6 +302,26 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 安全計画のシグナルとして、open-weight の GLM-5.2 が offensive security agents の運用摩擦を下げる点を確認するためのケースです。 | 制限 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
+<a id="case-199"></a>
+### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (作者 [@EpochAIResearch](https://x.com/EpochAIResearch))
+
+**このケースは、GLM-5.2 を長期的な capability curve の中で位置づけたいときに使えます。Epoch AI が Capabilities Index で推定 152 を与え、評価済み open-weight model の中で最高だとしているためです。**
+
+Epoch AI は、GLM-5.2 が Epoch Capabilities Index で推定 152 を記録し、自分たちが評価した open-weight model の中で最も高いスコアだと述べています。そのためこの投稿は、狭い coding leaderboard ではなく、単一の capability-positioning signal が欲しいときの benchmark reference として使えます。
+
+タイプ: ベンチマーク | 日付: 2026-07-08
+
+---
+<a id="case-196"></a>
+### Case 196: [Databricks Internal Harness Eval](https://x.com/alighodsi/status/2074996561306955958) (作者 [@alighodsi](https://x.com/alighodsi))
+
+**このケースは、GLM-5.2 を大規模な private engineering codebase 上で benchmark したいときに使えます。Databricks によると、3,000 人超の engineer の仕事を含む内部評価で GLM 5.2 は非常に強く、harness の選び方だけでコストを約 2x 下げられるためです。**
+
+Ali Ghodsi は、Databricks が自社の task、codebase、infrastructure に対して包括的な評価を行い、その対象は 3,000 人超の software engineer、3 つの hyperscaler cloud、多数の language にまたがったと述べています。投稿では GLM 5.2 が非常に良い結果を出し、同じ model でも正しい harness を選ぶだけでコストを約 2x 下げられるとされ、Omnigent が task ごとに model と harness を multiplex したと説明しています。
+
+タイプ: 評価 | 日付: 2026-07-08
+
+---
 <a id="case-190"></a>
 ### Case 190: [NatureBench Open-Weight Runner-Up](https://x.com/OkhayIea/status/2074498200262889837) (作者 [@OkhayIea](https://x.com/OkhayIea))
 
@@ -1039,6 +1065,16 @@ clairevo は、GLM 5.2 が Claude Code と Cursor におけるデフォルトモ
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 実演デモとショーケースビルド
+<a id="case-200"></a>
+### Case 200: [ZCode Nintendo DS Emulator](https://x.com/0xSero/status/2074870153267818638) (作者 [@0xSero](https://x.com/0xSero))
+
+**このケースは、長時間にわたる local coding build を見たいときに使えます。作者が 4x RTX 6000 上の ZCode で GLM-5.2 を動かし、Nintendo DS emulator を C++ でゼロから作ることを目標にしたためです。**
+
+source では、4 枚の RTX 6000 を積んだ setup 上の ZCode で GLM-5.2 が動いており、ready-made emulator を使わずに C++ で Nintendo DS emulator を作り、Mario 64 DS の ROM が動くまで止まらないという具体的な目標が与えられています。つまりこれは、曖昧な『小さなアプリを作った』話ではなく、明確な終点を持つ本物の coding-agent demo です。
+
+タイプ: デモ | 日付: 2026-07-08
+
+---
 <a id="case-192"></a>
 ### Case 192: [Command Code Flappy Bird UX Split](https://x.com/MrAhmadAwais/status/2074536879308026031) (作者 [@MrAhmadAwais](https://x.com/MrAhmadAwais))
 
@@ -1284,6 +1320,26 @@ ClaudeCode_UT は、Cloudflare の無料アカウント作成、Workers AI の a
 
 ---
 
+<a id="case-201"></a>
+### Case 201: [DotCode Context Upload Workflow](https://x.com/stagedhappen/status/2074775356867789241) (作者 [@stagedhappen](https://x.com/stagedhappen))
+
+**このケースは、private coding sandbox の中で GLM-5.2 により豊かな project context を与えたいときに使えます。DotCode が GLM 5.2 対応に加えて、screenshot、image、CSV、PDF、source file、zip の upload を同じ filesystem-and-terminal workflow に流せるようにしたためです。**
+
+DotCode は、GLM 5.2 が contextual workspace upload と一緒に動くようになり、agent が file を確認し、project structure をたどり、code を編集し、terminal command を実行し、同じ sandbox から継続できると述べています。投稿では対応 input が列挙され、prompt plus files から sandbox execution までの flow も示されており、real project context から始まる真の coding-agent work への一歩として位置づけられています。
+
+タイプ: 統合 | 日付: 2026-07-08
+
+---
+<a id="case-198"></a>
+### Case 198: [Dahl 100M Free GLM Endpoint](https://x.com/pengsonal/status/2074908680106180669) (作者 [@pengsonal](https://x.com/pengsonal))
+
+**このケースは、クレジットカード不要の OpenAI-compatible route で GLM-5.2 を試したいときに使えます。Dahl Inference が GLM 5.2 FP8 向けに 100M free token を出し、key の作成方法と `/v1/chat/completions` の呼び方を示しているためです。**
+
+投稿では、GLM 5.2 FP8 が Dahl の無料 open-model endpoint の一つとして挙げられ、registration も card も不要だと説明されています。さらに、web UI で key を作り、OpenAI-compatible な `/v1/chat/completions` endpoint を使う具体的な setup flow があり、direct `curl` request は Cloudflare 403 に当たることがある一方で web chat は動くという注意点も含まれています。
+
+タイプ: チュートリアル | 日付: 2026-07-08
+
+---
 <a id="case-195"></a>
 ### Case 195: [NVIDIA Free Endpoint GLM Setup](https://x.com/undefinedKi/status/2074491917333655948) (作者 [@undefinedKi](https://x.com/undefinedKi))
 
@@ -2202,6 +2258,16 @@ CardilloSamuel は、約 300GB RAM を積んだ 2x RTX PRO 6000 Blackwell 上の
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 制約、注意点、安全性シグナル
+<a id="case-197"></a>
+### Case 197: [Composio 47-Task Agent Gaps](https://x.com/composio/status/2074908761970393265) (作者 [@composio](https://x.com/composio))
+
+**このケースは、GLM-5.2 が live SaaS-agent work でどこでまだ崩れるかを理解したいときに使えます。Composio が 17 の tool、47 task につなぎ、45 件は通した一方で、completeness check と曖昧な SLA judgment で失敗したためです。**
+
+Composio によると、GLM-5.2 と Fable 5 は GitHub、LaunchDarkly、Zendesk を含む 17 個の live SaaS product に agent として接続されました。GLM-5.2 は 47 件中 45 件を解き、Fable 5 は 47 件中 47 件でした。trace review では、130 件想定の GitHub secret audit で途中終了したことと、出力は整っているのに Zendesk の SLA breach 判定を誤ったことが、2 つの具体的 failure mode として挙げられています。
+
+タイプ: 評価 | 日付: 2026-07-08
+
+---
 <a id="case-163"></a>
 ### Case 163: [Preliminary Cyber Research Parity](https://x.com/Irregular/status/2072682835798831168) (作者 [@Irregular](https://x.com/Irregular))
 
@@ -2439,7 +2505,7 @@ ankrgyl は、Braintrust がリポジトリの commit と bug description から
 
 このリポジトリは、実際の GLM-5.2 利用の証拠を公開で共有してくれたクリエイター、開発者、ベンチマークチーム、プロバイダー、コミュニティに触発されて作られました。
 
-ここで紹介した高シグナルな情報源とクリエイターに感謝します: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG)., [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi)
+ここで紹介した高シグナルな情報源とクリエイターに感謝します: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG)., [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi), [@alighodsi](https://x.com/alighodsi), [@composio](https://x.com/composio), [@pengsonal](https://x.com/pengsonal), [@EpochAIResearch](https://x.com/EpochAIResearch), [@stagedhappen](https://x.com/stagedhappen)
 
 最近追加したクリエイター: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy).
 

@@ -37,7 +37,7 @@ Jeder Case-Titel verlinkt auf die öffentliche Quelle, jeder Autor auf das jewei
 
 ## 📊 Überblick
 
-- **195 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
+- **201 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
 - Deckt Vergleichstests und Grenzmodell-Bewertung, Coding-Agenten und Langkontext-Workflows, Praxisdemos und Beispiel-Builds, Anbieter- und Tool-Integrationen, Kosten, Preise und lokale Bereitstellung sowie Grenzen, Hinweise und Sicherheitssignale ab.
 - Jeder Case enthält die Originalquelle, die Creator-Attribution, ein knappes Nutzungs-Takeaway, den Evidenztyp und das Veröffentlichungsdatum.
 - Nutze dieses Repo, um praktische Workflows zu finden, Stärken und Grenzen zu vergleichen, Provider-Routen zu entdecken und echte Experimente nachzuvollziehen.
@@ -77,18 +77,20 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Abschnitt | Fälle |
 |---|---|
-| [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190 |
+| [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
 | [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
-| [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192 |
-| [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195 |
+| [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200 |
+| [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201 |
 | [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
-| [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
+| [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197 |
 | [🙏 Danksagung](#acknowledge) | Credits und Korrekturrichtlinie |
 
 ### [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation)
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 199: Epoch Open-Weight Index Lead](#case-199) | Nutze diesen Fall, um GLM-5.2 auf einer langfristigen Fähigkeitskurve einzuordnen, denn Epoch AI schätzt 152 Punkte auf seinem Capabilities Index und bezeichnet es als das stärkste Open-Weight-Modell im eigenen Evaluationssatz. | Benchmark |
+| [Case 196: Databricks Internal Harness Eval](#case-196) | Nutze diesen Fall, um GLM-5.2 auf einer großen privaten Engineering-Codebasis zu benchmarken, denn Databricks sagt, dass die interne Auswertung über Arbeit von mehr als 3.000 Engineers zeigte, dass GLM 5.2 sehr stark performte und die Wahl des Harness allein die Kosten um etwa 2x senken kann. | Bewertung |
 | [Case 190: NatureBench Open-Weight Runner-Up](#case-190) | Nutze diesen Fall, um GLM-5.2 bei Scientific-Agent-Arbeit zu benchmarken, denn NatureBench sagt, dass GLM-5.2 direkt auf Platz zwei insgesamt debütierte und das Open-Weight-Feld über 90 Aufgaben in sechs wissenschaftlichen Domänen anführte. | Benchmark |
 | [Case 189: Terminal-Bench 45-Task Cost Tradeoff](#case-189) | Nutze diesen Fall, um GLM-5.2 gegen GPT-5.5 im selben Agent-Harness zu vergleichen, denn ein 45-Task-Terminal-Bench-Lauf setzte GLM-5.2 auf 25 Siege gegenüber 29 für GPT-5.5 bei rund 40% geringeren Kosten mit Prompt Caching. | Bewertung |
 | [Case 188: Harvey LAB-AA Legal-Agent Tie](#case-188) | Nutze diesen Fall, um GLM-5.2 bei echter Legal-Agent-Arbeit zu benchmarken, denn Harvey LAB-AA setzt GLM-5.2 Max auf 7,5% All-Pass, gleichauf mit Claude Opus 4.8 über 120 private Aufgaben in 24 Rechtsgebieten. | Benchmark |
@@ -161,6 +163,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 200: ZCode Nintendo DS Emulator](#case-200) | Nutze diesen Fall, um einen langfristigen lokalen Coding-Build zu untersuchen, denn der Autor ließ GLM-5.2 in ZCode auf 4x RTX 6000s mit dem Ziel laufen, einen Nintendo-DS-Emulator in C++ von Grund auf zu bauen. | Demo |
 | [Case 192: Command Code Flappy Bird UX Split](#case-192) | Nutze diesen Fall, um GLM-5.2 bei leichten Design-Game-Aufgaben zu vergleichen, denn der Autor jagte denselben Flappy-Bird-Prompt durch Command Code und kam zu dem Schluss, dass Fable 5 beim UX nicht sinnvoll besser war, obwohl es fast neunmal so viel kostete wie GLM-5.2. | Bewertung |
 | [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | Verwenden Sie diesen Fall, um GLM-5.2 bei interaktiven Build-Aufgaben mit nur einem Prompt zu testen, denn die REAP-NVFP4-Demo sagt, dass ein einziger Prompt einen 3D-Rubiks-Cube mit echten Scrambles, Live-State und Solve-Button erzeugt hat. | Demo |
 | [Case 158: OMP Relay iPhone Client](#case-158) | Verwenden Sie diesen Fall, um einen lokalen GLM-5.2-Agenten schnell auf eine mobile Oberfläche zu bringen. Der Autor sagt, dass Codexs build-ios-app-Plugin in wenigen Stunden einen sauberen iPhone-Client für ein OMP-Relay erzeugte, das bereits GLM-5.2 und Cloudflare-Tunnel nutzte. | Demo |
@@ -184,6 +187,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 201: DotCode Context Upload Workflow](#case-201) | Nutze diesen Fall, um GLM-5.2 in einer privaten Coding-Sandbox mehr Projektkontext zu geben, denn DotCode hat GLM 5.2 zusammen mit Uploads für Screenshots, Bilder, CSVs, PDFs, Source-Dateien und ZIPs ergänzt, die in denselben Filesystem-und-Terminal-Workflow fließen. | Integration |
+| [Case 198: Dahl 100M Free GLM Endpoint](#case-198) | Nutze diesen Fall, um GLM-5.2 über einen OpenAI-kompatiblen Weg ohne Kreditkarte auszuprobieren, denn Dahl Inference bietet 100M freie Tokens für GLM 5.2 FP8 und zeigt, wie man einen Schlüssel erstellt und `/v1/chat/completions` aufruft. | Tutorial |
 | [Case 195: NVIDIA Free Endpoint GLM Setup](#case-195) | Nutze diesen Fall, um GLM-5.2 ohne Self-Hosting in Coding-Tools zu testen, denn die Quelle skizziert einen kostenlosen NVIDIA-Endpoint-Flow, der GLM-5.2-API-Keys in Claude Code, Cursor oder Cline bringt. | Tutorial |
 | [Case 193: 0G TeeML Private Inference Route](#case-193) | Nutze diesen Fall, um GLM-5.2 über einen Privacy-First-Provider-Pfad zu routen, denn 0G sagt, dass GLM 5.2 jetzt in TeeML läuft, mit Prompts in einer TEE-Enklave und Preisen unterhalb der offiziellen Route. | Integration |
 | [Case 185: DuckDB Flock Open-SQL PR](#case-185) | Nutze diesen Fall, um GLM-5.2 in eine vollständig offene lokale SQL-Analyse zu bringen, denn lhoestq sagt, dass ein duckdb-plus-flock-PR GLM-5.2 jetzt in einem 100% Open-Source-Datenstack aktiviert. | Integration |
@@ -266,6 +271,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 197: Composio 47-Task Agent Gaps](#case-197) | Nutze diesen Fall, um zu verstehen, wo GLM-5.2 bei echter SaaS-Agent-Arbeit noch bricht, denn Composio verband es mit 17 Tools über 47 Aufgaben und fand 45 Erfolge, mit Ausfällen bei Vollständigkeitsprüfungen und unscharfer SLA-Beurteilung. | Bewertung |
 | [Case 163: Preliminary Cyber Research Parity](#case-163) | Verwenden Sie diesen Fall, um GLM-5.2 bei Teilaufgaben der Schwachstellenforschung einzuordnen, denn Irregular meldet frühe interne Evaluierungen auf einer schmalen Cyber-Suite, die mit GPT-5.4 und Opus 4.6 vergleichbar seien, warnt aber ausdrücklich davor, dass End-to-End-Angriffsszenarien noch ungetestet sind. | Einschränkung |
 | [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | Verwenden Sie diesen Fall, um die Migrationskosten vor einem Agent-Modellwechsel zu budgetieren. In einem OpenRouter-Test eines Fonds lag GLM-5.2 bei etwa einem Achtel der Opus-Kosten, verlangte aber dennoch Skill-Umschreibungen, Routing-Logik und die Akzeptanz langsamerer, schwächerer Ausgaben. | Einschränkung |
 | [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | Nutze diesen Fall, um ein echtes Security-Signal von überzogener Schlagzeilen-Interpretation zu trennen, weil die Quelle sagt, GLM-5.2 habe Claude Code auf einem IDOR-Benchmark geschlagen, sei aber nie gegen Mythos selbst getestet worden. | Limit |
@@ -288,6 +294,26 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | Nutze diesen Fall als Signal für die Sicherheitsplanung: Open-Weight-GLM-5.2 senkt die operative Reibung für offensive Sicherheitsagenten, selbst wenn geschlossene APIs weiterhin überwacht werden. | Einschränkung |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Vergleichstests und Grenzmodell-Bewertung
+<a id="case-199"></a>
+### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (von [@EpochAIResearch](https://x.com/EpochAIResearch))
+
+**Nutze diesen Fall, um GLM-5.2 auf einer langfristigen Fähigkeitskurve einzuordnen, denn Epoch AI schätzt 152 Punkte auf seinem Capabilities Index und bezeichnet es als das stärkste Open-Weight-Modell im eigenen Evaluationssatz.**
+
+Epoch AI sagt, dass GLM-5.2 einen geschätzten Wert von 152 auf dem Epoch Capabilities Index erreicht hat und damit unter den von ihnen bewerteten Open-Weight-Modellen an der Spitze liegt. Dadurch ist der Post ein nützlicher Benchmark-Referenzpunkt, wenn man ein einzelnes Capability-Signal statt nur einer engen Coding-Bestenliste braucht.
+
+Typ: Benchmark | Datum: 2026-07-08
+
+---
+<a id="case-196"></a>
+### Case 196: [Databricks Internal Harness Eval](https://x.com/alighodsi/status/2074996561306955958) (von [@alighodsi](https://x.com/alighodsi))
+
+**Nutze diesen Fall, um GLM-5.2 auf einer großen privaten Engineering-Codebasis zu benchmarken, denn Databricks sagt, dass die interne Auswertung über Arbeit von mehr als 3.000 Engineers zeigte, dass GLM 5.2 sehr stark performte und die Wahl des Harness allein die Kosten um etwa 2x senken kann.**
+
+Ali Ghodsi sagt, Databricks habe eine umfassende Auswertung auf den eigenen Tasks, der eigenen Codebasis und Infrastruktur gefahren, die mehr als 3.000 Software Engineers, drei Hyperscaler-Clouds und viele Sprachen umfasste. Laut dem Post performte GLM 5.2 sehr stark, und das richtige Harness kann beim gleichen Modell die Kosten um etwa 2x senken, wobei Omnigent Modelle und Harnesses je nach Aufgabe multiplexte.
+
+Typ: Bewertung | Datum: 2026-07-08
+
+---
 <a id="case-190"></a>
 ### Case 190: [NatureBench Open-Weight Runner-Up](https://x.com/OkhayIea/status/2074498200262889837) (von [@OkhayIea](https://x.com/OkhayIea))
 
@@ -1031,6 +1057,16 @@ Typ: Bewertung | Datum: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Praxisdemos und Beispiel-Builds
+<a id="case-200"></a>
+### Case 200: [ZCode Nintendo DS Emulator](https://x.com/0xSero/status/2074870153267818638) (von [@0xSero](https://x.com/0xSero))
+
+**Nutze diesen Fall, um einen langfristigen lokalen Coding-Build zu untersuchen, denn der Autor ließ GLM-5.2 in ZCode auf 4x RTX 6000s mit dem Ziel laufen, einen Nintendo-DS-Emulator in C++ von Grund auf zu bauen.**
+
+Die Quelle zeigt GLM-5.2 in ZCode auf einem Vier-GPU-Setup mit RTX 6000 und setzt ein klares Ziel: einen Nintendo-DS-Emulator in C++ bauen, ohne einen fertigen Emulator zu nutzen, und weitermachen, bis die Mario-64-DS-ROM läuft. Dadurch wird daraus ein echter Coding-Agent-Demo-Case mit hartem Endzustand statt einer vagen 'ich habe eine kleine App gebaut'-Behauptung.
+
+Typ: Demo | Datum: 2026-07-08
+
+---
 <a id="case-192"></a>
 ### Case 192: [Command Code Flappy Bird UX Split](https://x.com/MrAhmadAwais/status/2074536879308026031) (von [@MrAhmadAwais](https://x.com/MrAhmadAwais))
 
@@ -1276,6 +1312,26 @@ Typ: Tutorial | Datum: 2026-07-03
 
 ---
 
+<a id="case-201"></a>
+### Case 201: [DotCode Context Upload Workflow](https://x.com/stagedhappen/status/2074775356867789241) (von [@stagedhappen](https://x.com/stagedhappen))
+
+**Nutze diesen Fall, um GLM-5.2 in einer privaten Coding-Sandbox mehr Projektkontext zu geben, denn DotCode hat GLM 5.2 zusammen mit Uploads für Screenshots, Bilder, CSVs, PDFs, Source-Dateien und ZIPs ergänzt, die in denselben Filesystem-und-Terminal-Workflow fließen.**
+
+DotCode sagt, dass GLM 5.2 jetzt mit kontextreichen Workspace-Uploads arbeitet, sodass Agenten Dateien prüfen, Projektstrukturen durchsuchen, Code bearbeiten, Terminalbefehle ausführen und im selben Sandbox-Kontext weiterarbeiten können. Der Post nennt die unterstützten Eingaben, zeigt den Flow von Prompt plus Dateien bis zur Sandbox-Ausführung und rahmt das als Schritt zu echter Coding-Agent-Arbeit aus realem Projektkontext.
+
+Typ: Integration | Datum: 2026-07-08
+
+---
+<a id="case-198"></a>
+### Case 198: [Dahl 100M Free GLM Endpoint](https://x.com/pengsonal/status/2074908680106180669) (von [@pengsonal](https://x.com/pengsonal))
+
+**Nutze diesen Fall, um GLM-5.2 über einen OpenAI-kompatiblen Weg ohne Kreditkarte auszuprobieren, denn Dahl Inference bietet 100M freie Tokens für GLM 5.2 FP8 und zeigt, wie man einen Schlüssel erstellt und `/v1/chat/completions` aufruft.**
+
+Der Post listet GLM 5.2 FP8 unter Dahls kostenlosen Open-Model-Endpunkten und sagt, dass weder Registrierung noch Karte nötig sind. Er gibt außerdem einen konkreten Setup-Ablauf: Schlüssel in der Web-UI erzeugen, den OpenAI-kompatiblen Endpunkt `/v1/chat/completions` nutzen und beachten, dass direkte `curl`-Anfragen an Cloudflare-403s scheitern können, obwohl der Web-Chat-Pfad funktioniert.
+
+Typ: Tutorial | Datum: 2026-07-08
+
+---
 <a id="case-195"></a>
 ### Case 195: [NVIDIA Free Endpoint GLM Setup](https://x.com/undefinedKi/status/2074491917333655948) (von [@undefinedKi](https://x.com/undefinedKi))
 
@@ -2194,6 +2250,16 @@ Typ: Demo | Datum: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Grenzen, Hinweise und Sicherheitssignale
+<a id="case-197"></a>
+### Case 197: [Composio 47-Task Agent Gaps](https://x.com/composio/status/2074908761970393265) (von [@composio](https://x.com/composio))
+
+**Nutze diesen Fall, um zu verstehen, wo GLM-5.2 bei echter SaaS-Agent-Arbeit noch bricht, denn Composio verband es mit 17 Tools über 47 Aufgaben und fand 45 Erfolge, mit Ausfällen bei Vollständigkeitsprüfungen und unscharfer SLA-Beurteilung.**
+
+Composio sagt, dass GLM-5.2 und Fable 5 beide als Agenten gegen 17 Live-SaaS-Produkte liefen, darunter GitHub, LaunchDarkly und Zendesk. GLM-5.2 löste 45 von 47 Aufgaben gegenüber 47 von 47 für Fable 5, und die Trace-Analyse zeigte zwei konkrete Fehlermodi: zu frühes Stoppen bei einem GitHub-Secret-Audit mit 130 erwarteten Treffern sowie eine falsche Einstufung von Zendesk-SLA-Verstößen, obwohl die Ausgabe sauber strukturiert wirkte.
+
+Typ: Bewertung | Datum: 2026-07-08
+
+---
 <a id="case-163"></a>
 ### Case 163: [Preliminary Cyber Research Parity](https://x.com/Irregular/status/2072682835798831168) (von [@Irregular](https://x.com/Irregular))
 
@@ -2432,7 +2498,7 @@ Typ: Einschränkung | Datum: 2026-06-20
 
 Dieses Repository wurde von öffentlichen Erstellern, Entwicklern, Benchmark-Teams, Anbietern und Communities inspiriert, die echte GLM-5.2-Nutzungsnachweise teilten.
 
-Danke an diese hier vertretenen High-Signal-Quellen und Creator: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi).
+Danke an diese hier vertretenen High-Signal-Quellen und Creator: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi), [@alighodsi](https://x.com/alighodsi), [@composio](https://x.com/composio), [@pengsonal](https://x.com/pengsonal), [@EpochAIResearch](https://x.com/EpochAIResearch), [@stagedhappen](https://x.com/stagedhappen).
 
 [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), Neu hinzugekommene Creator: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@lhoestq](https://x.com/lhoestq), [@XavierLocalAI](https://x.com/XavierLocalAI).
 

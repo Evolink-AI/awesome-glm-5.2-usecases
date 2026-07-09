@@ -37,7 +37,7 @@
 
 ## 📊 总览
 
-- **195 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
+- **201 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
 - 覆盖基准与前沿评测、编码代理与长上下文工作流、上手演示与作品展示、供应商与工具集成、成本、定价与本地部署、限制、注意事项与安全信号。
 - 每个案例都包含原始来源、创作者署名、简洁的使用结论、证据类型和发布日期。
 - 你可以用这个 repo 查找实用工作流、比较优势和限制、发现供应商路径，并跟踪真实上手实验。
@@ -77,18 +77,20 @@ curl --request POST \
 
 | 章节 | 案例 |
 |---|---|
-| [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190 |
+| [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
 | [💻 编码代理与长上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
-| [🎮 上手演示与作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192 |
-| [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195 |
+| [🎮 上手演示与作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200 |
+| [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201 |
 | [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
-| [🧭 限制、注意事项与安全信号](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163 |
+| [🧭 限制、注意事项与安全信号](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197 |
 | [🙏 致谢](#acknowledge) | 来源致谢与修正政策 |
 
 ### [📏 基准与前沿评测](#benchmarks-frontier-evaluation)
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 199: Epoch Open-Weight Index Lead](#case-199) | 如果你想把 GLM-5.2 放到一条更长期的能力曲线上看，可以看这个案例，因为 Epoch AI 给它的 Capabilities Index 估分是 152，并称它是自己评估过的 open-weight 模型里最高的。 | 基准 |
+| [Case 196: Databricks Internal Harness Eval](#case-196) | 如果你想看 GLM-5.2 在大型私有工程 codebase 上的表现，可以看这个案例，因为 Databricks 说，他们覆盖 3000 多名工程师工作的内部评估发现 GLM 5.2 表现非常强，而且仅仅 harness 选择不同就能把成本压到约 2x。 | 评测 |
 | [Case 190: NatureBench Open-Weight Runner-Up](#case-190) | 如果你想看 GLM-5.2 在 scientific-agent 工作里的基准表现，可以看这个案例，因为 NatureBench 说它在 6 个科学领域、90 个任务上首发即总榜第二，并拿到 open-weight 第一。 | 基准 |
 | [Case 189: Terminal-Bench 45-Task Cost Tradeoff](#case-189) | 如果你想在同一套 agent harness 下比较 GLM-5.2 和 GPT-5.5，可以看这个案例，因为一组 45 个 Terminal-Bench 任务里，GLM-5.2 解出 25 个，GPT-5.5 解出 29 个，但前者在 prompt caching 下便宜约 40%。 | 评测 |
 | [Case 188: Harvey LAB-AA Legal-Agent Tie](#case-188) | 如果你想看 GLM-5.2 在真实法律 agent 工作里的基准表现，可以看这个案例，因为 Harvey LAB-AA 显示 GLM-5.2 Max 在 24 个法律领域、120 个私有任务上拿到 7.5% all-pass，并列 Claude Opus 4.8。 | 基准 |
@@ -160,6 +162,7 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 200: ZCode Nintendo DS Emulator](#case-200) | 如果你想看一个长时程、本地执行的 coding build，可以看这个案例，因为作者让 GLM-5.2 在 4x RTX 6000 的 ZCode 里，从零开始用 C++ 去做一个 Nintendo DS 模拟器。 | 演示 |
 | [Case 192: Command Code Flappy Bird UX Split](#case-192) | 如果你想看 GLM-5.2 在轻量设计类小游戏任务里的性价比，可以看这个案例，因为作者用同一个 Flappy Bird prompt 跑了 Command Code，最后认为 Fable 5 虽然价格接近 GLM-5.2 的 9 倍，但在 UX 上并没有明显更好。 | 评测 |
 | [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | 如果你想测试 GLM-5.2 在单一 prompt 的互动式 build 任务上的表现，可以看这个案例，因为 REAP-NVFP4 的 demo 说它只靠一个 prompt 就做出了 3D Rubiks Cube、真实 scramble、实时状态和 solve 按钮。 | 演示 |
 | [Case 158: OMP Relay iPhone Client](#case-158) | 如果你想把一个本地 GLM-5.2 agent 很快包进移动端界面，可以看这个案例，因为作者说 Codex 的 build-ios-app plugin 只用了几个小时，就给一个已经接了 GLM-5.2 和 Cloudflare 隧道的 OMP relay 做出了成品感很强的 iPhone 客户端。 | 演示 |
@@ -185,6 +188,8 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 201: DotCode Context Upload Workflow](#case-201) | 如果你想在私有 coding sandbox 里给 GLM-5.2 更多项目上下文，可以看这个案例，因为 DotCode 给 GLM 5.2 加上了 screenshot、图片、CSV、PDF、源码文件和 zip 上传，并把这些都接进同一条 filesystem + terminal 工作流。 | 集成 |
+| [Case 198: Dahl 100M Free GLM Endpoint](#case-198) | 如果你想走一条不用绑卡、又兼容 OpenAI 的路径来试 GLM-5.2，可以看这个案例，因为 Dahl Inference 给 GLM 5.2 FP8 提供了 1 亿免费 tokens，并且写清了如何建 key、如何调用 `/v1/chat/completions`。 | 教程 |
 | [Case 195: NVIDIA Free Endpoint GLM Setup](#case-195) | 如果你想在不 self-hosting 的情况下把 GLM-5.2 接进 coding tools 里测试，可以看这个案例，因为原帖给出了一条免费的 NVIDIA endpoint 路线，直接把 GLM-5.2 的 API key 用到 Claude Code、Cursor 或 Cline。 | 教程 |
 | [Case 193: 0G TeeML Private Inference Route](#case-193) | 如果你想把 GLM-5.2 接到一条更注重隐私的 provider 路线上，可以看这个案例，因为 0G 说 GLM 5.2 已经跑在 TeeML 上，prompts 被封装在 TEE enclave 里，而且价格低于官方路线。 | 集成 |
 | [Case 185: DuckDB Flock Open-SQL PR](#case-185) | 如果你想把 GLM-5.2 带进完全开源的本地 SQL analysis，可以看这个案例，因为 lhoestq 说，一个 duckdb + flock 的 PR 已经让 GLM-5.2 进入 100% open-source 的数据栈。 | 集成 |
@@ -274,6 +279,7 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 197: Composio 47-Task Agent Gaps](#case-197) | 如果你想看 GLM-5.2 在真实 SaaS agent 工作里还会在哪里出错，可以看这个案例，因为 Composio 把它接到 17 个工具、47 个任务上后，只通过了 45 个，主要失误点在完整性检查和模糊 SLA 判断。 | 评测 |
 | [Case 163: Preliminary Cyber Research Parity](#case-163) | 如果你想衡量 GLM-5.2 在漏洞研究子任务上的能力，可以看这个案例，因为 Irregular 报告说，在一组范围很窄的 cyber suite 上，它的早期内部评测可与 GPT-5.4 和 Opus 4.6 接近，同时也明确提醒 end-to-end 攻击场景尚未测试。 | 限制 |
 | [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | 如果你想在切换 agent 模型前把迁移成本算清楚，可以看这个案例，因为某个基金团队的 OpenRouter 试验里，GLM-5.2 的成本大约只有 Opus 的八分之一，但依然要重写 skill、补 routing 逻辑，还得接受更慢、更弱一些的输出。 | 限制 |
 | [Case 134: Semgrep IDOR 窄胜场景提醒](#case-134) | 如果你想把真实安全信号和标题党式放大区分开，可以用这个案例，因为来源明确说 GLM-5.2 只是在一个 IDOR benchmark 上赢过 Claude Code，并没有直接测试 Mythos 本身。 | 限制 |
@@ -296,6 +302,26 @@ curl --request POST \
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 如果你在做安全规划，可以用这个案例理解开放权重 GLM-5.2 如何降低进攻性安全 agent 的实际操作门槛。 | 限制 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 基准与前沿评测
+<a id="case-199"></a>
+### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (作者 [@EpochAIResearch](https://x.com/EpochAIResearch))
+
+**如果你想把 GLM-5.2 放到一条更长期的能力曲线上看，可以看这个案例，因为 Epoch AI 给它的 Capabilities Index 估分是 152，并称它是自己评估过的 open-weight 模型里最高的。**
+
+Epoch AI 说，GLM-5.2 在 Epoch Capabilities Index 上拿到了估算 152 分，而且这是他们评估过的 open-weight 模型里最高的分数。所以当你需要一个更总览的能力定位信号，而不只是狭义 coding 榜单时，这条帖子就很适合作为 benchmark 参考。
+
+类型: 基准 | 日期: 2026-07-08
+
+---
+<a id="case-196"></a>
+### Case 196: [Databricks Internal Harness Eval](https://x.com/alighodsi/status/2074996561306955958) (作者 [@alighodsi](https://x.com/alighodsi))
+
+**如果你想看 GLM-5.2 在大型私有工程 codebase 上的表现，可以看这个案例，因为 Databricks 说，他们覆盖 3000 多名工程师工作的内部评估发现 GLM 5.2 表现非常强，而且仅仅 harness 选择不同就能把成本压到约 2x。**
+
+Ali Ghodsi 说，Databricks 在自家任务、codebase 和基础设施上做了一次全面评估，覆盖 3000 多名软件工程师、三家 hyperscaler cloud，以及很多编程语言。帖子里说 GLM 5.2 表现非常好，而且同一个模型只要选对 harness，成本就能大约降低 2x，同时前面还用了 Omnigent 按任务去复用不同模型和 harness。
+
+类型: 评测 | 日期: 2026-07-08
+
+---
 <a id="case-190"></a>
 ### Case 190: [NatureBench Open-Weight Runner-Up](https://x.com/OkhayIea/status/2074498200262889837) (作者 [@OkhayIea](https://x.com/OkhayIea))
 
@@ -1039,6 +1065,16 @@ clairevo 表示，GLM 5.2 已经成为她在 Claude Code 和 Cursor 里的默认
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 上手演示与作品展示
+<a id="case-200"></a>
+### Case 200: [ZCode Nintendo DS Emulator](https://x.com/0xSero/status/2074870153267818638) (作者 [@0xSero](https://x.com/0xSero))
+
+**如果你想看一个长时程、本地执行的 coding build，可以看这个案例，因为作者让 GLM-5.2 在 4x RTX 6000 的 ZCode 里，从零开始用 C++ 去做一个 Nintendo DS 模拟器。**
+
+原帖展示的是 GLM-5.2 在四张 RTX 6000 GPU 的 ZCode 环境里运行，并给了一个非常明确的目标：不要用现成模拟器，而是从零开始用 C++ 做一个 Nintendo DS emulator，并一直做下去直到 Mario 64 DS 的 ROM 能跑起来。这就让它成为一个真正有硬终点的 coding-agent demo，而不是泛泛的“做了个小玩具应用”。
+
+类型: 演示 | 日期: 2026-07-08
+
+---
 <a id="case-192"></a>
 ### Case 192: [Command Code Flappy Bird UX Split](https://x.com/MrAhmadAwais/status/2074536879308026031) (作者 [@MrAhmadAwais](https://x.com/MrAhmadAwais))
 
@@ -1284,6 +1320,26 @@ ClaudeCode_UT 给出六个步骤：建立免费 Cloudflare 账号、复制 Worke
 
 ---
 
+<a id="case-201"></a>
+### Case 201: [DotCode Context Upload Workflow](https://x.com/stagedhappen/status/2074775356867789241) (作者 [@stagedhappen](https://x.com/stagedhappen))
+
+**如果你想在私有 coding sandbox 里给 GLM-5.2 更多项目上下文，可以看这个案例，因为 DotCode 给 GLM 5.2 加上了 screenshot、图片、CSV、PDF、源码文件和 zip 上传，并把这些都接进同一条 filesystem + terminal 工作流。**
+
+DotCode 说，GLM 5.2 现在已经能配合 contextual workspace uploads 使用，agent 可以检查文件、浏览项目结构、编辑代码、运行 terminal 命令，并且在同一个 sandbox 里连续工作。帖子列出了支持的输入类型，也写出了从 prompt + files 到 sandbox execution 的流程，把这件事定义成朝“基于真实项目上下文的 coding agent 工作”迈出的一步。
+
+类型: 集成 | 日期: 2026-07-08
+
+---
+<a id="case-198"></a>
+### Case 198: [Dahl 100M Free GLM Endpoint](https://x.com/pengsonal/status/2074908680106180669) (作者 [@pengsonal](https://x.com/pengsonal))
+
+**如果你想走一条不用绑卡、又兼容 OpenAI 的路径来试 GLM-5.2，可以看这个案例，因为 Dahl Inference 给 GLM 5.2 FP8 提供了 1 亿免费 tokens，并且写清了如何建 key、如何调用 `/v1/chat/completions`。**
+
+帖子把 GLM 5.2 FP8 列进了 Dahl 的免费开源模型 endpoint，并说不需要注册也不需要银行卡。它还给出了一条很具体的配置流程：在 web UI 里生成 key，使用兼容 OpenAI 的 `/v1/chat/completions` endpoint，同时提醒直接用 `curl` 可能会撞上 Cloudflare 403，但 web chat 这条路是能用的。
+
+类型: 教程 | 日期: 2026-07-08
+
+---
 <a id="case-195"></a>
 ### Case 195: [NVIDIA Free Endpoint GLM Setup](https://x.com/undefinedKi/status/2074491917333655948) (作者 [@undefinedKi](https://x.com/undefinedKi))
 
@@ -2202,6 +2258,16 @@ CardilloSamuel 表示，一个运行在 2x RTX PRO 6000 Blackwell 和约 300GB R
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 限制、注意事项与安全信号
+<a id="case-197"></a>
+### Case 197: [Composio 47-Task Agent Gaps](https://x.com/composio/status/2074908761970393265) (作者 [@composio](https://x.com/composio))
+
+**如果你想看 GLM-5.2 在真实 SaaS agent 工作里还会在哪里出错，可以看这个案例，因为 Composio 把它接到 17 个工具、47 个任务上后，只通过了 45 个，主要失误点在完整性检查和模糊 SLA 判断。**
+
+Composio 说，GLM-5.2 和 Fable 5 都以 agent 形式跑在 17 个真实 SaaS 产品上，包括 GitHub、LaunchDarkly 和 Zendesk。GLM-5.2 完成了 47 个任务中的 45 个，而 Fable 5 是 47 个全过。trace 复盘指出了两个具体失效模式：在一个本应找到 130 个结果的 GitHub secret audit 上提前停下，以及在 Zendesk SLA breach 判断上虽然输出结构很好看，但分类仍然做错。
+
+类型: 评测 | 日期: 2026-07-08
+
+---
 <a id="case-163"></a>
 ### Case 163: [Preliminary Cyber Research Parity](https://x.com/Irregular/status/2072682835798831168) (作者 [@Irregular](https://x.com/Irregular))
 
@@ -2440,7 +2506,7 @@ ankrgyl 表示，Braintrust 对一个从仓库 commit 和 bug 描述出发、再
 
 本仓库来自公开分享 GLM-5.2 使用证据的创作者、开发者、benchmark 团队、供应商和社区。
 
-感谢这里收录的高信号来源创作者：[@ArtificialAnlys](https://x.com/ArtificialAnlys)、[@arena](https://x.com/arena)、[@Designarena](https://x.com/Designarena)、[@ProximalHQ](https://x.com/ProximalHQ)、[@AiBattle_](https://x.com/AiBattle_)、[@cline](https://x.com/cline)、[@gosrum](https://x.com/gosrum)、[@bridgemindai](https://x.com/bridgemindai)、[@bridgebench](https://x.com/bridgebench)、[@elliotarledge](https://x.com/elliotarledge)、[@maxbittker](https://x.com/maxbittker)、[@KELMAND1](https://x.com/KELMAND1)、[@altudev](https://x.com/altudev)、[@AskVenice](https://x.com/AskVenice)、[@atomic_chat_hq](https://x.com/atomic_chat_hq)、[@anshuc](https://x.com/anshuc)、[@laozhang2579](https://x.com/laozhang2579)、[@zcode_ai](https://x.com/zcode_ai)、[@0xSero](https://x.com/0xSero)、[@laogui](https://x.com/laogui)、[@aimlapi](https://x.com/aimlapi)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@grx_xce](https://x.com/grx_xce)、[@askalphaxiv](https://x.com/askalphaxiv)、[@emollick](https://x.com/emollick)、[@opencode](https://x.com/opencode)、[@ollama](https://x.com/ollama)、[@OpenRouter](https://x.com/OpenRouter)、[@vllm_project](https://x.com/vllm_project)、[@NotionHQ](https://x.com/NotionHQ)、[@FireworksAI_HQ](https://x.com/FireworksAI_HQ)、[@CarolGLMs](https://x.com/CarolGLMs)、[@CommandCodeAI](https://x.com/CommandCodeAI)、[@Teknium](https://x.com/Teknium)、[@ionet](https://x.com/ionet)、[@clattner_llvm](https://x.com/clattner_llvm)、[@Hesamation](https://x.com/Hesamation)、[@Jeyffre](https://x.com/Jeyffre)、[@pcuenq](https://x.com/pcuenq)、[@ai_xiaomu](https://x.com/ai_xiaomu)、[@RoundtableSpace](https://x.com/RoundtableSpace)、[@JZiyue_](https://x.com/JZiyue_)、[@nahcrof](https://x.com/nahcrof)、[@scaling01](https://x.com/scaling01)、[@sawyerhood](https://x.com/sawyerhood)、[@ml_angelopoulos](https://x.com/ml_angelopoulos)、[@VittoStack](https://x.com/VittoStack)、[@josepha_mayo](https://x.com/josepha_mayo)、[@k_matsumaru](https://x.com/k_matsumaru)、[@nikhilchandak29](https://x.com/nikhilchandak29)、[@datacurve](https://x.com/datacurve)、[@pseudokid](https://x.com/pseudokid)、[@LechMazur](https://x.com/LechMazur)、[@wongmjane](https://x.com/wongmjane)、[@browser_use](https://x.com/browser_use)、[@s_batzoglou](https://x.com/s_batzoglou)、[@yuhasbeentaken](https://x.com/yuhasbeentaken)、[@DeRonin_](https://x.com/DeRonin_)、[@LyalinDotCom](https://x.com/LyalinDotCom)、[@Alan_Earn](https://x.com/Alan_Earn)、[@hxiao](https://x.com/hxiao)、[@DeryaTR_](https://x.com/DeryaTR_)、[@threepointone](https://x.com/threepointone)、[@skirano](https://x.com/skirano)、[@vulcanbench](https://x.com/vulcanbench)、[@OpenCodeLog](https://x.com/OpenCodeLog)、[@0x_kaize](https://x.com/0x_kaize)、[@buildwithhassan](https://x.com/buildwithhassan)、[@OpenDesignHQ](https://x.com/OpenDesignHQ)、[@_xjdr](https://x.com/_xjdr)、[@thealexker](https://x.com/thealexker)、[@cramforce](https://x.com/cramforce)、[@CardilloSamuel](https://x.com/CardilloSamuel)、[@karminski3](https://x.com/karminski3)、[@atmoio](https://x.com/atmoio)、[@RayFernando1337](https://x.com/RayFernando1337)、[@colemurray](https://x.com/colemurray)、[@dyfan22](https://x.com/dyfan22)、[@Marktechpost](https://x.com/Marktechpost)、[@perplexitydevs](https://x.com/perplexitydevs)、[@joshua_saxe](https://x.com/joshua_saxe)、[@aqaderb](https://x.com/aqaderb)、[@ScaleAILabs](https://x.com/ScaleAILabs)、[@wafer_ai](https://x.com/wafer_ai)、[@ankrgyl](https://x.com/ankrgyl)、[@vedovelli74](https://x.com/vedovelli74)、[@clairevo](https://x.com/clairevo)、[@AlicanKiraz0](https://x.com/AlicanKiraz0)、[@denizirgin](https://x.com/denizirgin)、[@Dracoshowumore](https://x.com/Dracoshowumore)、[@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar)、[@OkhayIea](https://x.com/OkhayIea)、[@MrAhmadAwais](https://x.com/MrAhmadAwais)、[@0G_labs](https://x.com/0G_labs)、[@SubhoGhosh02](https://x.com/SubhoGhosh02)、[@undefinedKi](https://x.com/undefinedKi)。
+感谢这里收录的高信号来源创作者：[@ArtificialAnlys](https://x.com/ArtificialAnlys)、[@arena](https://x.com/arena)、[@Designarena](https://x.com/Designarena)、[@ProximalHQ](https://x.com/ProximalHQ)、[@AiBattle_](https://x.com/AiBattle_)、[@cline](https://x.com/cline)、[@gosrum](https://x.com/gosrum)、[@bridgemindai](https://x.com/bridgemindai)、[@bridgebench](https://x.com/bridgebench)、[@elliotarledge](https://x.com/elliotarledge)、[@maxbittker](https://x.com/maxbittker)、[@KELMAND1](https://x.com/KELMAND1)、[@altudev](https://x.com/altudev)、[@AskVenice](https://x.com/AskVenice)、[@atomic_chat_hq](https://x.com/atomic_chat_hq)、[@anshuc](https://x.com/anshuc)、[@laozhang2579](https://x.com/laozhang2579)、[@zcode_ai](https://x.com/zcode_ai)、[@0xSero](https://x.com/0xSero)、[@laogui](https://x.com/laogui)、[@aimlapi](https://x.com/aimlapi)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@grx_xce](https://x.com/grx_xce)、[@askalphaxiv](https://x.com/askalphaxiv)、[@emollick](https://x.com/emollick)、[@opencode](https://x.com/opencode)、[@ollama](https://x.com/ollama)、[@OpenRouter](https://x.com/OpenRouter)、[@vllm_project](https://x.com/vllm_project)、[@NotionHQ](https://x.com/NotionHQ)、[@FireworksAI_HQ](https://x.com/FireworksAI_HQ)、[@CarolGLMs](https://x.com/CarolGLMs)、[@CommandCodeAI](https://x.com/CommandCodeAI)、[@Teknium](https://x.com/Teknium)、[@ionet](https://x.com/ionet)、[@clattner_llvm](https://x.com/clattner_llvm)、[@Hesamation](https://x.com/Hesamation)、[@Jeyffre](https://x.com/Jeyffre)、[@pcuenq](https://x.com/pcuenq)、[@ai_xiaomu](https://x.com/ai_xiaomu)、[@RoundtableSpace](https://x.com/RoundtableSpace)、[@JZiyue_](https://x.com/JZiyue_)、[@nahcrof](https://x.com/nahcrof)、[@scaling01](https://x.com/scaling01)、[@sawyerhood](https://x.com/sawyerhood)、[@ml_angelopoulos](https://x.com/ml_angelopoulos)、[@VittoStack](https://x.com/VittoStack)、[@josepha_mayo](https://x.com/josepha_mayo)、[@k_matsumaru](https://x.com/k_matsumaru)、[@nikhilchandak29](https://x.com/nikhilchandak29)、[@datacurve](https://x.com/datacurve)、[@pseudokid](https://x.com/pseudokid)、[@LechMazur](https://x.com/LechMazur)、[@wongmjane](https://x.com/wongmjane)、[@browser_use](https://x.com/browser_use)、[@s_batzoglou](https://x.com/s_batzoglou)、[@yuhasbeentaken](https://x.com/yuhasbeentaken)、[@DeRonin_](https://x.com/DeRonin_)、[@LyalinDotCom](https://x.com/LyalinDotCom)、[@Alan_Earn](https://x.com/Alan_Earn)、[@hxiao](https://x.com/hxiao)、[@DeryaTR_](https://x.com/DeryaTR_)、[@threepointone](https://x.com/threepointone)、[@skirano](https://x.com/skirano)、[@vulcanbench](https://x.com/vulcanbench)、[@OpenCodeLog](https://x.com/OpenCodeLog)、[@0x_kaize](https://x.com/0x_kaize)、[@buildwithhassan](https://x.com/buildwithhassan)、[@OpenDesignHQ](https://x.com/OpenDesignHQ)、[@_xjdr](https://x.com/_xjdr)、[@thealexker](https://x.com/thealexker)、[@cramforce](https://x.com/cramforce)、[@CardilloSamuel](https://x.com/CardilloSamuel)、[@karminski3](https://x.com/karminski3)、[@atmoio](https://x.com/atmoio)、[@RayFernando1337](https://x.com/RayFernando1337)、[@colemurray](https://x.com/colemurray)、[@dyfan22](https://x.com/dyfan22)、[@Marktechpost](https://x.com/Marktechpost)、[@perplexitydevs](https://x.com/perplexitydevs)、[@joshua_saxe](https://x.com/joshua_saxe)、[@aqaderb](https://x.com/aqaderb)、[@ScaleAILabs](https://x.com/ScaleAILabs)、[@wafer_ai](https://x.com/wafer_ai)、[@ankrgyl](https://x.com/ankrgyl)、[@vedovelli74](https://x.com/vedovelli74)、[@clairevo](https://x.com/clairevo)、[@AlicanKiraz0](https://x.com/AlicanKiraz0)、[@denizirgin](https://x.com/denizirgin)、[@Dracoshowumore](https://x.com/Dracoshowumore)、[@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar)、[@OkhayIea](https://x.com/OkhayIea)、[@MrAhmadAwais](https://x.com/MrAhmadAwais)、[@0G_labs](https://x.com/0G_labs)、[@SubhoGhosh02](https://x.com/SubhoGhosh02)、[@undefinedKi](https://x.com/undefinedKi)、[@alighodsi](https://x.com/alighodsi)、[@composio](https://x.com/composio)、[@pengsonal](https://x.com/pengsonal)、[@EpochAIResearch](https://x.com/EpochAIResearch)、[@stagedhappen](https://x.com/stagedhappen)。
 
 最近新增的创作者：[@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ)、[@_xjdr](https://x.com/_xjdr)、[@thealexker](https://x.com/thealexker)、[@cramforce](https://x.com/cramforce)、[@CardilloSamuel](https://x.com/CardilloSamuel)、[@karminski3](https://x.com/karminski3)、[@atmoio](https://x.com/atmoio)、[@RayFernando1337](https://x.com/RayFernando1337)、[@colemurray](https://x.com/colemurray)、[@dyfan22](https://x.com/dyfan22)、[@Marktechpost](https://x.com/Marktechpost)、[@perplexitydevs](https://x.com/perplexitydevs)、[@joshua_saxe](https://x.com/joshua_saxe)、[@aqaderb](https://x.com/aqaderb)、[@TraffAlex](https://x.com/TraffAlex)、[@FareaNFts](https://x.com/FareaNFts)、[@xpasky](https://x.com/xpasky)。
 
