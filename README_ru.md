@@ -37,7 +37,7 @@
 
 ## 📊 Обзор
 
-- **201 отобранных кейсов GLM-5.2** от публичных авторов, benchmark-команд, создателей инструментов, провайдеров и практических обзорщиков.
+- **205 отобранных кейсов GLM-5.2** от публичных авторов, benchmark-команд, создателей инструментов, провайдеров и практических обзорщиков.
 - Охватывает сравнительные оценки и оценку передовых моделей, кодовых агентов и длинноконтекстные рабочие процессы, практические демо и showcase-сборки, интеграции провайдеров и инструментов, стоимость, цены и локальное развертывание, ограничения, предупреждения и сигналы безопасности.
 - Каждый кейс включает исходный источник, указание автора, краткий практический вывод, тип доказательства и дату публикации.
 - Используйте этот repo, чтобы находить практические workflow, сравнивать сильные стороны и ограничения, находить provider routes и изучать реальные эксперименты.
@@ -79,10 +79,10 @@ curl --request POST \
 |---|---|
 | [📏 Сравнительные оценки и оценка передовых моделей](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
 | [💻 Кодовые агенты и длинноконтекстные рабочие процессы](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
-| [🎮 Практические демо и showcase-сборки](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200 |
-| [🔌 Интеграции провайдеров и инструментов](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201 |
+| [🎮 Практические демо и showcase-сборки](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
+| [🔌 Интеграции провайдеров и инструментов](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204 |
 | [💸 Стоимость, цены и локальное развертывание](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
-| [🧭 Ограничения, предупреждения и сигналы безопасности](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197 |
+| [🧭 Ограничения, предупреждения и сигналы безопасности](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
 | [🙏 Благодарности](#acknowledge) | Указание источников и политика исправлений |
 
 ### [📏 Сравнительные оценки и оценка передовых моделей](#benchmarks-frontier-evaluation)
@@ -163,6 +163,7 @@ curl --request POST \
 
 | Кейс | Фокус | Тип |
 |---|---|---|
+| [Case 202: Command Code Space Shooter Feature Win](#case-202) | Используйте этот кейс, чтобы сравнить GLM-5.2 на one-shot interactive UI build: Command Code прогнал один и тот же retro space-shooter prompt через Fable 5, GPT 5.5, GLM 5.2 и DeepSeek V4 Pro и поставил GLM на первое место по features. | Оценка |
 | [Case 200: ZCode Nintendo DS Emulator](#case-200) | Используйте этот кейс, чтобы посмотреть на долгий локальный coding build: автор запустил GLM-5.2 в ZCode на 4x RTX 6000 с целью с нуля построить Nintendo DS emulator на C++. | Демонстрация |
 | [Case 192: Command Code Flappy Bird UX Split](#case-192) | Используйте этот кейс, чтобы сравнить GLM-5.2 на легких design-game задачах: автор прогнал один и тот же Flappy Bird prompt через Command Code и пришел к выводу, что Fable 5 не был заметно лучше по UX, хотя стоил почти в девять раз дороже GLM-5.2. | Оценка |
 | [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | Используйте этот кейс, чтобы проверить GLM-5.2 на интерактивных build-задачах с одним prompt: demo REAP-NVFP4 утверждает, что одного prompt хватило для 3D Rubiks Cube с реальными scramble, live state и кнопкой solve. | Демо |
@@ -187,6 +188,8 @@ curl --request POST \
 
 | Кейс | Фокус | Тип |
 |---|---|---|
+| [Case 204: Perplexity Advisor WANDR Cost Baseline](#case-204) | Используйте этот кейс, чтобы оценить экономику GLM-5.2 внутри routed computer-use harness: Perplexity говорит, что его связка GLM 5.2 plus advisor дает 2.1x на WANDR против 6.1x у Opus и в среднем стоит почти вдвое дешевле. | Оценка |
+| [Case 203: Coworker Open Artifacts Routing](#case-203) | Используйте этот кейс, чтобы встроить GLM-5.2 в enterprise artifact workflow: Coworker говорит, что Open Artifacts может создавать docs, decks, PDF, spreadsheets, dashboards и apps, а optimized router снижает расход токенов примерно в 5 раз и при этом оставляет US-hosted GLM 5.2. | Интеграция |
 | [Case 201: DotCode Context Upload Workflow](#case-201) | Используйте этот кейс, чтобы дать GLM-5.2 более богатый project context внутри private coding sandbox: DotCode добавил поддержку GLM 5.2 вместе с загрузкой screenshot, image, CSV, PDF, source file и zip в один и тот же filesystem-and-terminal workflow. | Интеграция |
 | [Case 198: Dahl 100M Free GLM Endpoint](#case-198) | Используйте этот кейс, чтобы попробовать GLM-5.2 через OpenAI-compatible маршрут без карты: Dahl Inference дает 100M бесплатных токенов для GLM 5.2 FP8 и показывает, как создать ключ и вызвать `/v1/chat/completions`. | Руководство |
 | [Case 195: NVIDIA Free Endpoint GLM Setup](#case-195) | Используйте этот кейс, чтобы попробовать GLM-5.2 в coding tools без self-hosting: источник описывает бесплатный NVIDIA endpoint flow, который заводит API-ключи GLM-5.2 в Claude Code, Cursor или Cline. | Руководство |
@@ -271,6 +274,7 @@ curl --request POST \
 
 | Кейс | Фокус | Тип |
 |---|---|---|
+| [Case 205: Static HTML Rewrite Executor Misses](#case-205) | Используйте этот кейс, чтобы не отдавать GLM-5.2 полный executor-контроль на 1:1 legacy rewrite: при большой миграции со static HTML на React и Vite через OpenCode Go и Cline потерялось слишком много деталей, и автор стал больше доверять GLM как planner, а не как executor. | Ограничение |
 | [Case 197: Composio 47-Task Agent Gaps](#case-197) | Используйте этот кейс, чтобы понять, где GLM-5.2 все еще ломается на реальной SaaS-agent работе: Composio подключила его к 17 инструментам на 47 задачах и получила 45 успешных проходов, а сбои возникли на проверке полноты и в нечетком SLA judgment. | Оценка |
 | [Case 163: Preliminary Cyber Research Parity](#case-163) | Используйте этот кейс, чтобы оценить GLM-5.2 на подзадачах исследования уязвимостей: Irregular сообщает о ранних внутренних оценках, сопоставимых с GPT-5.4 и Opus 4.6 на узкой cyber suite, но прямо предупреждает, что end-to-end attack scenarios пока не проверялись. | Ограничение |
 | [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | Используйте этот кейс, чтобы заранее заложить стоимость миграции перед сменой агентской модели: в OpenRouter-тесте одного фонда GLM-5.2 стоил примерно одну восьмую от Opus, но все равно потребовал переписывания skills, routing-логики и готовности принять более медленные и слабые ответы. | Ограничение |
@@ -1056,6 +1060,17 @@ clairevo пишет, что GLM 5.2 уже стал для нее моделью
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Практические демо и showcase-сборки
+<a id="case-202"></a>
+### Case 202: [Command Code Space Shooter Feature Win](https://x.com/CommandCodeAI/status/2075264795817972107) (автор [@CommandCodeAI](https://x.com/CommandCodeAI))
+
+**Используйте этот кейс, чтобы сравнить GLM-5.2 на one-shot interactive UI build: Command Code прогнал один и тот же retro space-shooter prompt через Fable 5, GPT 5.5, GLM 5.2 и DeepSeek V4 Pro и поставил GLM на первое место по features.**
+
+Command Code пишет, что один и тот же `/design` prompt дал на всех четырех моделях похожие retro pixel-art space-shooter layouts, но GLM 5.2 особенно выделился по sound, controls, leveling и общей UX, при этом стоил $0.07 против $0.80 у Fable 5. Это делает пост практическим сравнением для легких game/UI build, а не просто screenshot из benchmark.
+
+Тип: Оценка | Дата: 2026-07-09
+
+---
+
 <a id="case-200"></a>
 ### Case 200: [ZCode Nintendo DS Emulator](https://x.com/0xSero/status/2074870153267818638) (автор [@0xSero](https://x.com/0xSero))
 
@@ -1307,6 +1322,28 @@ hqmank пишет, что GLM-5.2 появился в бесплатном API N
 ClaudeCode_UT описывает шесть шагов: создать бесплатный аккаунт Cloudflare, скопировать account ID из Workers AI, выпустить API token, добавить Cloudflare как provider в OpenAI-compatible инструментах, выбрать `cf/zai-org/glm-5.2`, а затем запустить Claude Code, Cursor, Aider или OpenCode. Это практичный access tutorial для команд, которые хотят сначала проверить coding-agent workflow, а уже потом платить за token billing.
 
 Тип: Руководство | Дата: 2026-07-03
+
+---
+
+<a id="case-204"></a>
+### Case 204: [Perplexity Advisor WANDR Cost Baseline](https://x.com/perplexity_ai/status/2075229779716973030) (автор [@perplexity_ai](https://x.com/perplexity_ai))
+
+**Используйте этот кейс, чтобы оценить экономику GLM-5.2 внутри routed computer-use harness: Perplexity говорит, что его связка GLM 5.2 plus advisor дает 2.1x на WANDR против 6.1x у Opus и в среднем стоит почти вдвое дешевле.**
+
+Perplexity говорит, что измерял стоимость на задачу, используя GLM 5.2 как baseline, и что маршрут GLM 5.2 plus advisor на WANDR дал 2.1x, тогда как Opus показал 6.1x. Это можно читать как конкретный сигнал для open-weight-first routing в computer-agent сценариях, где более дешевое ядро GLM сочетается с выборочной эскалацией вместо запуска более дорогой closed model на каждом шаге.
+
+Тип: Оценка | Дата: 2026-07-09
+
+---
+
+<a id="case-203"></a>
+### Case 203: [Coworker Open Artifacts Routing](https://x.com/coworkerapp/status/2075233366266310905) (автор [@coworkerapp](https://x.com/coworkerapp))
+
+**Используйте этот кейс, чтобы встроить GLM-5.2 в enterprise artifact workflow: Coworker говорит, что Open Artifacts может создавать docs, decks, PDF, spreadsheets, dashboards и apps, а optimized router снижает расход токенов примерно в 5 раз и при этом оставляет US-hosted GLM 5.2.**
+
+Coworker пишет, что Open Artifacts умеет генерировать shareable deliverables вроде docs, decks, dashboards, spreadsheets, PDF и полноценных apps. В том же launch post говорится, что optimized mode подбирает подходящую model для каждой задачи, чтобы тратить примерно в пять раз меньше токенов, и при этом команды могут использовать GLM 5.2 в US-hosted, SOC 2 и connector-rich среде.
+
+Тип: Интеграция | Дата: 2026-07-09
 
 ---
 
@@ -2246,6 +2283,17 @@ CardilloSamuel пишет, что локальный экземпляр GLM 5.2 
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Ограничения, предупреждения и сигналы безопасности
+<a id="case-205"></a>
+### Case 205: [Static HTML Rewrite Executor Misses](https://x.com/petruknisme/status/2075092910182387759) (автор [@petruknisme](https://x.com/petruknisme))
+
+**Используйте этот кейс, чтобы не отдавать GLM-5.2 полный executor-контроль на 1:1 legacy rewrite: при большой миграции со static HTML на React и Vite через OpenCode Go и Cline потерялось слишком много деталей, и автор стал больше доверять GLM как planner, а не как executor.**
+
+Автор описывает переписывание большого проекта на static HTML в React и Vite с помощью GLM-5.2 уже после заметного расхода OpenCode Go и Cline. Результат потерял слишком много деталей для точной 1:1-миграции, поэтому практический вывод простой: GLM стоит оставлять в planning loop, но execution review на high-fidelity legacy migration нужно делать гораздо строже.
+
+Тип: Ограничение | Дата: 2026-07-09
+
+---
+
 <a id="case-197"></a>
 ### Case 197: [Composio 47-Task Agent Gaps](https://x.com/composio/status/2074908761970393265) (автор [@composio](https://x.com/composio))
 

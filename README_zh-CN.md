@@ -37,7 +37,7 @@
 
 ## 📊 总览
 
-- **201 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
+- **205 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
 - 覆盖基准与前沿评测、编码代理与长上下文工作流、上手演示与作品展示、供应商与工具集成、成本、定价与本地部署、限制、注意事项与安全信号。
 - 每个案例都包含原始来源、创作者署名、简洁的使用结论、证据类型和发布日期。
 - 你可以用这个 repo 查找实用工作流、比较优势和限制、发现供应商路径，并跟踪真实上手实验。
@@ -79,10 +79,10 @@ curl --request POST \
 |---|---|
 | [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
 | [💻 编码代理与长上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
-| [🎮 上手演示与作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200 |
-| [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201 |
+| [🎮 上手演示与作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
+| [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204 |
 | [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
-| [🧭 限制、注意事项与安全信号](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197 |
+| [🧭 限制、注意事项与安全信号](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
 | [🙏 致谢](#acknowledge) | 来源致谢与修正政策 |
 
 ### [📏 基准与前沿评测](#benchmarks-frontier-evaluation)
@@ -162,6 +162,7 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 202: Command Code Space Shooter Feature Win](#case-202) | 如果你想看 GLM-5.2 在 one-shot 交互式 UI build 里的表现，可以看这个案例，因为 Command Code 把同一个 retro space-shooter prompt 跑在 Fable 5、GPT 5.5、GLM 5.2 和 DeepSeek V4 Pro 上，并把 GLM 排在 features 第一。 | 评测 |
 | [Case 200: ZCode Nintendo DS Emulator](#case-200) | 如果你想看一个长时程、本地执行的 coding build，可以看这个案例，因为作者让 GLM-5.2 在 4x RTX 6000 的 ZCode 里，从零开始用 C++ 去做一个 Nintendo DS 模拟器。 | 演示 |
 | [Case 192: Command Code Flappy Bird UX Split](#case-192) | 如果你想看 GLM-5.2 在轻量设计类小游戏任务里的性价比，可以看这个案例，因为作者用同一个 Flappy Bird prompt 跑了 Command Code，最后认为 Fable 5 虽然价格接近 GLM-5.2 的 9 倍，但在 UX 上并没有明显更好。 | 评测 |
 | [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | 如果你想测试 GLM-5.2 在单一 prompt 的互动式 build 任务上的表现，可以看这个案例，因为 REAP-NVFP4 的 demo 说它只靠一个 prompt 就做出了 3D Rubiks Cube、真实 scramble、实时状态和 solve 按钮。 | 演示 |
@@ -188,6 +189,8 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 204: Perplexity Advisor WANDR Cost Baseline](#case-204) | 如果你想估算 GLM-5.2 在 routing 式 computer-use harness 里的成本结构，可以看这个案例，因为 Perplexity 说它的 GLM 5.2 加 advisor 配置在 WANDR 上是 2.1x，而 Opus 是 6.1x，整体 benchmark 成本也接近一半。 | 评测 |
+| [Case 203: Coworker Open Artifacts Routing](#case-203) | 如果你想把 GLM-5.2 放进企业 artifact 工作流，可以看这个案例，因为 Coworker 说 Open Artifacts 能做 docs、decks、PDF、spreadsheets、dashboards 和 apps，而且 optimized router 能把 token 使用量压到约 5 分之 1，同时仍提供美国托管的 GLM 5.2。 | 集成 |
 | [Case 201: DotCode Context Upload Workflow](#case-201) | 如果你想在私有 coding sandbox 里给 GLM-5.2 更多项目上下文，可以看这个案例，因为 DotCode 给 GLM 5.2 加上了 screenshot、图片、CSV、PDF、源码文件和 zip 上传，并把这些都接进同一条 filesystem + terminal 工作流。 | 集成 |
 | [Case 198: Dahl 100M Free GLM Endpoint](#case-198) | 如果你想走一条不用绑卡、又兼容 OpenAI 的路径来试 GLM-5.2，可以看这个案例，因为 Dahl Inference 给 GLM 5.2 FP8 提供了 1 亿免费 tokens，并且写清了如何建 key、如何调用 `/v1/chat/completions`。 | 教程 |
 | [Case 195: NVIDIA Free Endpoint GLM Setup](#case-195) | 如果你想在不 self-hosting 的情况下把 GLM-5.2 接进 coding tools 里测试，可以看这个案例，因为原帖给出了一条免费的 NVIDIA endpoint 路线，直接把 GLM-5.2 的 API key 用到 Claude Code、Cursor 或 Cline。 | 教程 |
@@ -279,6 +282,7 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 205: Static HTML Rewrite Executor Misses](#case-205) | 如果你不想把 1:1 legacy rewrite 完全交给 GLM-5.2 当 executor，可以看这个案例，因为一个大型 static HTML 到 React/Vite 的迁移在 OpenCode Go 和 Cline 上仍掉了太多细节，让作者更倾向把 GLM 当 planner 而不是 executor。 | 限制 |
 | [Case 197: Composio 47-Task Agent Gaps](#case-197) | 如果你想看 GLM-5.2 在真实 SaaS agent 工作里还会在哪里出错，可以看这个案例，因为 Composio 把它接到 17 个工具、47 个任务上后，只通过了 45 个，主要失误点在完整性检查和模糊 SLA 判断。 | 评测 |
 | [Case 163: Preliminary Cyber Research Parity](#case-163) | 如果你想衡量 GLM-5.2 在漏洞研究子任务上的能力，可以看这个案例，因为 Irregular 报告说，在一组范围很窄的 cyber suite 上，它的早期内部评测可与 GPT-5.4 和 Opus 4.6 接近，同时也明确提醒 end-to-end 攻击场景尚未测试。 | 限制 |
 | [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | 如果你想在切换 agent 模型前把迁移成本算清楚，可以看这个案例，因为某个基金团队的 OpenRouter 试验里，GLM-5.2 的成本大约只有 Opus 的八分之一，但依然要重写 skill、补 routing 逻辑，还得接受更慢、更弱一些的输出。 | 限制 |
@@ -1065,6 +1069,17 @@ clairevo 表示，GLM 5.2 已经成为她在 Claude Code 和 Cursor 里的默认
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 上手演示与作品展示
+<a id="case-202"></a>
+### Case 202: [Command Code Space Shooter Feature Win](https://x.com/CommandCodeAI/status/2075264795817972107) (作者 [@CommandCodeAI](https://x.com/CommandCodeAI))
+
+**如果你想看 GLM-5.2 在 one-shot 交互式 UI build 里的表现，可以看这个案例，因为 Command Code 把同一个 retro space-shooter prompt 跑在 Fable 5、GPT 5.5、GLM 5.2 和 DeepSeek V4 Pro 上，并把 GLM 排在 features 第一。**
+
+Command Code 说，同一个 `/design` prompt 在四个模型上都做出了相近的 retro pixel-art space-shooter 布局，但 GLM 5.2 在声音、控制、关卡节奏和整体 UX 等 features 上特别突出，而且成本只有 $0.07，对比 Fable 5 的 $0.80。它更像是一个轻量 game/UI build 的实战对比，而不只是 benchmark 截图。
+
+类型: 评测 | 日期: 2026-07-09
+
+---
+
 <a id="case-200"></a>
 ### Case 200: [ZCode Nintendo DS Emulator](https://x.com/0xSero/status/2074870153267818638) (作者 [@0xSero](https://x.com/0xSero))
 
@@ -1317,6 +1332,28 @@ hqmank 表示，GLM-5.2 已上线 NVIDIA 的免费 API，并且在快速 hands-o
 ClaudeCode_UT 给出六个步骤：建立免费 Cloudflare 账号、复制 Workers AI 的 account ID、签发 API token、在 OpenAI 兼容工具中加入 Cloudflare provider、选择 `cf/zai-org/glm-5.2`，然后开始运行 Claude Code、Cursor、Aider 或 OpenCode。对于想先测试 coding-agent workflow、再决定是否承担 token 计费的团队来说，这是一个很实用的 access tutorial。
 
 类型: 教程 | 日期: 2026-07-03
+
+---
+
+<a id="case-204"></a>
+### Case 204: [Perplexity Advisor WANDR Cost Baseline](https://x.com/perplexity_ai/status/2075229779716973030) (作者 [@perplexity_ai](https://x.com/perplexity_ai))
+
+**如果你想估算 GLM-5.2 在 routing 式 computer-use harness 里的成本结构，可以看这个案例，因为 Perplexity 说它的 GLM 5.2 加 advisor 配置在 WANDR 上是 2.1x，而 Opus 是 6.1x，整体 benchmark 成本也接近一半。**
+
+Perplexity 说，它是以 GLM 5.2 作为 baseline 来衡量每任务成本，而在 WANDR 上，GLM 5.2 加 advisor 的路线是 2.1x，Opus 则是 6.1x。这可以视为一个很具体的 open-weight-first computer agent routing 信号：不是每一步都跑更贵的 closed model，而是用更便宜的 GLM 核心配合选择性升级。
+
+类型: 评测 | 日期: 2026-07-09
+
+---
+
+<a id="case-203"></a>
+### Case 203: [Coworker Open Artifacts Routing](https://x.com/coworkerapp/status/2075233366266310905) (作者 [@coworkerapp](https://x.com/coworkerapp))
+
+**如果你想把 GLM-5.2 放进企业 artifact 工作流，可以看这个案例，因为 Coworker 说 Open Artifacts 能做 docs、decks、PDF、spreadsheets、dashboards 和 apps，而且 optimized router 能把 token 使用量压到约 5 分之 1，同时仍提供美国托管的 GLM 5.2。**
+
+Coworker 说，Open Artifacts 可以生成 docs、decks、dashboards、spreadsheets、PDF 和完整 apps 这类可分享成果物。同一篇 launch 帖子也说，它的 optimized mode 会为每个 task 挑选合适模型，把 token 消耗压到大约五分之一，同时仍让团队在美国托管、SOC 2、connector 丰富的环境里使用 GLM 5.2。
+
+类型: 集成 | 日期: 2026-07-09
 
 ---
 
@@ -2258,6 +2295,17 @@ CardilloSamuel 表示，一个运行在 2x RTX PRO 6000 Blackwell 和约 300GB R
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 限制、注意事项与安全信号
+<a id="case-205"></a>
+### Case 205: [Static HTML Rewrite Executor Misses](https://x.com/petruknisme/status/2075092910182387759) (作者 [@petruknisme](https://x.com/petruknisme))
+
+**如果你不想把 1:1 legacy rewrite 完全交给 GLM-5.2 当 executor，可以看这个案例，因为一个大型 static HTML 到 React/Vite 的迁移在 OpenCode Go 和 Cline 上仍掉了太多细节，让作者更倾向把 GLM 当 planner 而不是 executor。**
+
+作者描述了一个大型 static HTML 项目改写成 React 与 Vite 的过程，即使已经消耗了不少 OpenCode Go 和 Cline 的使用量，最后仍漏掉了太多 1:1 迁移需要保留的细节。它给出的实务结论是：在高保真 legacy migration 里，可以让 GLM 留在 planning loop，但 execution review 必须严格很多。
+
+类型: 限制 | 日期: 2026-07-09
+
+---
+
 <a id="case-197"></a>
 ### Case 197: [Composio 47-Task Agent Gaps](https://x.com/composio/status/2074908761970393265) (作者 [@composio](https://x.com/composio))
 

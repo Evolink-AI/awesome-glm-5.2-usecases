@@ -37,7 +37,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **201 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **205 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -79,10 +79,10 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 |---|---|
 | [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
 | [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
-| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201 |
+| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204 |
 | [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
-| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197 |
+| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
 ### [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation)
@@ -162,6 +162,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 202: Command Code Space Shooter Feature Win](#case-202) | このケースは、one-shot の interactive UI build で GLM-5.2 を比べたいときに使えます。Command Code が同じ retro space-shooter prompt を Fable 5、GPT 5.5、GLM 5.2、DeepSeek V4 Pro に流し、features では GLM を最上位に置いたためです。 | 評価 |
 | [Case 200: ZCode Nintendo DS Emulator](#case-200) | このケースは、長時間にわたる local coding build を見たいときに使えます。作者が 4x RTX 6000 上の ZCode で GLM-5.2 を動かし、Nintendo DS emulator を C++ でゼロから作ることを目標にしたためです。 | デモ |
 | [Case 192: Command Code Flappy Bird UX Split](#case-192) | このケースは、GLM-5.2 を軽い design-game task で比較したいときに使えます。作者が同じ Flappy Bird prompt を Command Code で流し、Fable 5 は GLM-5.2 の約 9 倍近い価格にもかかわらず UX で決定的優位を示さなかったと結論づけているためです。 | 評価 |
 | [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | このケースは、単一プロンプトの対話型 build で GLM-5.2 を試すのに向いています。REAP-NVFP4 の demo では、1 回の prompt だけで 3D Rubiks Cube、実際の scramble、live state、solve button まで生成したと述べています。 | デモ |
@@ -188,6 +189,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 204: Perplexity Advisor WANDR Cost Baseline](#case-204) | このケースは、routing された computer-use harness の中で GLM-5.2 の economics を見積もりたいときに使えます。Perplexity が GLM 5.2 plus advisor setup で WANDR 2.1x、Opus 6.1x と述べ、benchmark 全体でもほぼ半額だとしているためです。 | 評価 |
+| [Case 203: Coworker Open Artifacts Routing](#case-203) | このケースは、GLM-5.2 を enterprise artifact workflow に入れたいときに使えます。Coworker は Open Artifacts で docs、decks、PDF、spreadsheets、dashboards、apps を作れ、optimized router で token 使用量を約 5x 減らしつつ US-hosted GLM 5.2 を提供すると述べています。 | 統合 |
 | [Case 201: DotCode Context Upload Workflow](#case-201) | このケースは、private coding sandbox の中で GLM-5.2 により豊かな project context を与えたいときに使えます。DotCode が GLM 5.2 対応に加えて、screenshot、image、CSV、PDF、source file、zip の upload を同じ filesystem-and-terminal workflow に流せるようにしたためです。 | 統合 |
 | [Case 198: Dahl 100M Free GLM Endpoint](#case-198) | このケースは、クレジットカード不要の OpenAI-compatible route で GLM-5.2 を試したいときに使えます。Dahl Inference が GLM 5.2 FP8 向けに 100M free token を出し、key の作成方法と `/v1/chat/completions` の呼び方を示しているためです。 | チュートリアル |
 | [Case 195: NVIDIA Free Endpoint GLM Setup](#case-195) | このケースは、GLM-5.2 を self-hosting なしで coding tool に入れて試したいときに使えます。source が、無料 NVIDIA endpoint の流れで GLM-5.2 の API key を Claude Code、Cursor、Cline に入れる手順を示しているためです。 | チュートリアル |
@@ -279,6 +282,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 205: Static HTML Rewrite Executor Misses](#case-205) | このケースは、1:1 の legacy rewrite を GLM-5.2 に executor として丸ごと任せないために使えます。大きな static HTML から React/Vite への移行で OpenCode Go と Cline を使っても detail がかなり落ち、author が GLM を executor より planner 寄りに見るようになったためです。 | 制約 |
 | [Case 197: Composio 47-Task Agent Gaps](#case-197) | このケースは、GLM-5.2 が live SaaS-agent work でどこでまだ崩れるかを理解したいときに使えます。Composio が 17 の tool、47 task につなぎ、45 件は通した一方で、completeness check と曖昧な SLA judgment で失敗したためです。 | 評価 |
 | [Case 163: Preliminary Cyber Research Parity](#case-163) | このケースは、vulnerability research の部分タスクで GLM-5.2 を測るためのものです。Irregular は、狭い cyber suite で GPT-5.4 と Opus 4.6 に近い初期内部評価を報告しつつ、end-to-end の attack scenario はまだ未検証だと明言しています。 | 制約 |
 | [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | このケースは、エージェントモデルを入れ替える前に移行コストを見積もるのに役立ちます。あるファンドの OpenRouter 試行では GLM-5.2 が Opus の約 8 分の 1 のコストでしたが、skill の書き換え、routing ロジック、そして遅く弱い出力を受け入れる前提が必要でした。 | 制限 |
@@ -1065,6 +1069,17 @@ clairevo は、GLM 5.2 が Claude Code と Cursor におけるデフォルトモ
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 実演デモとショーケースビルド
+<a id="case-202"></a>
+### Case 202: [Command Code Space Shooter Feature Win](https://x.com/CommandCodeAI/status/2075264795817972107) (作者 [@CommandCodeAI](https://x.com/CommandCodeAI))
+
+**このケースは、one-shot の interactive UI build で GLM-5.2 を比べたいときに使えます。Command Code が同じ retro space-shooter prompt を Fable 5、GPT 5.5、GLM 5.2、DeepSeek V4 Pro に流し、features では GLM を最上位に置いたためです。**
+
+Command Code は、同じ `/design` prompt で 4 モデルとも近い retro pixel-art space-shooter layout を出したものの、GLM 5.2 は sound、controls、leveling、overall UX で特に目立ち、cost も Fable 5 の $0.80 に対して $0.07 だったと述べています。単なる benchmark screenshot ではなく、軽量な game/UI build の実地比較として見られます。
+
+タイプ: 評価 | 日付: 2026-07-09
+
+---
+
 <a id="case-200"></a>
 ### Case 200: [ZCode Nintendo DS Emulator](https://x.com/0xSero/status/2074870153267818638) (作者 [@0xSero](https://x.com/0xSero))
 
@@ -1317,6 +1332,28 @@ hqmank は、GLM-5.2 が NVIDIA の無料 API に追加され、簡単な hands-
 ClaudeCode_UT は、Cloudflare の無料アカウント作成、Workers AI の account ID 取得、API token 発行、OpenAI 互換ツールへの Cloudflare provider 追加、`cf/zai-org/glm-5.2` の選択、Claude Code や Cursor、Aider、OpenCode の起動という 6 ステップを示しています。token 課金の前に coding-agent workflow を試したいチーム向けの実用的な access tutorial です。
 
 タイプ: チュートリアル | 日付: 2026-07-03
+
+---
+
+<a id="case-204"></a>
+### Case 204: [Perplexity Advisor WANDR Cost Baseline](https://x.com/perplexity_ai/status/2075229779716973030) (作者 [@perplexity_ai](https://x.com/perplexity_ai))
+
+**このケースは、routing された computer-use harness の中で GLM-5.2 の economics を見積もりたいときに使えます。Perplexity が GLM 5.2 plus advisor setup で WANDR 2.1x、Opus 6.1x と述べ、benchmark 全体でもほぼ半額だとしているためです。**
+
+Perplexity は、task あたりの cost を GLM 5.2 baseline で測り、WANDR では GLM 5.2 plus advisor route が 2.1x、Opus が 6.1x だったと述べています。より高価な closed model を毎 step 回す代わりに、安い GLM core を selective escalation と組み合わせる computer-agent routing の具体的シグナルとして読めます。
+
+タイプ: 評価 | 日付: 2026-07-09
+
+---
+
+<a id="case-203"></a>
+### Case 203: [Coworker Open Artifacts Routing](https://x.com/coworkerapp/status/2075233366266310905) (作者 [@coworkerapp](https://x.com/coworkerapp))
+
+**このケースは、GLM-5.2 を enterprise artifact workflow に入れたいときに使えます。Coworker は Open Artifacts で docs、decks、PDF、spreadsheets、dashboards、apps を作れ、optimized router で token 使用量を約 5x 減らしつつ US-hosted GLM 5.2 を提供すると述べています。**
+
+Coworker は、Open Artifacts が docs、decks、dashboards、spreadsheets、PDF、full apps などの共有可能な成果物を作れると説明しています。同じ launch post では、optimized mode が task ごとに適切な model を選んで token 使用量を約 5 倍削減しつつ、team が US-hosted、SOC 2、connector-rich な環境で GLM 5.2 を使えるとも述べています。
+
+タイプ: 統合 | 日付: 2026-07-09
 
 ---
 
@@ -2258,6 +2295,17 @@ CardilloSamuel は、約 300GB RAM を積んだ 2x RTX PRO 6000 Blackwell 上の
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 制約、注意点、安全性シグナル
+<a id="case-205"></a>
+### Case 205: [Static HTML Rewrite Executor Misses](https://x.com/petruknisme/status/2075092910182387759) (作者 [@petruknisme](https://x.com/petruknisme))
+
+**このケースは、1:1 の legacy rewrite を GLM-5.2 に executor として丸ごと任せないために使えます。大きな static HTML から React/Vite への移行で OpenCode Go と Cline を使っても detail がかなり落ち、author が GLM を executor より planner 寄りに見るようになったためです。**
+
+作者は、大きな static HTML project を React と Vite に書き換える作業を GLM-5.2 で進めたものの、すでに OpenCode Go と Cline をかなり消費した後でも 1:1 移行に必要な detail を多く落としたと述べています。高忠実度の legacy migration では、GLM を planning loop に残しつつ execution review をかなり厳しくするべきだという実務的な示唆です。
+
+タイプ: 制約 | 日付: 2026-07-09
+
+---
+
 <a id="case-197"></a>
 ### Case 197: [Composio 47-Task Agent Gaps](https://x.com/composio/status/2074908761970393265) (作者 [@composio](https://x.com/composio))
 
