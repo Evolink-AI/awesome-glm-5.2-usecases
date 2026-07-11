@@ -306,6 +306,16 @@ curl --request POST \
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 如果你在做安全规划，可以用这个案例理解开放权重 GLM-5.2 如何降低进攻性安全 agent 的实际操作门槛。 | 限制 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 基准与前沿评测
+---
+<a id="case-207"></a>
+### Case 207: [Stable Fluids Browser Benchmark](https://x.com/AlicanKiraz0/status/2075639232169705781) (作者 [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**如果你想在算法负载很重的浏览器物理 build 上比较 GLM-5.2，可以看这个案例，因为 AlicanKiraz0 跑了一个 Stable Fluids HTML benchmark，给 GLM 5.2 Max 打了 88/100、成本约 1.17 美元，高于 Opus 4.8 和 Fable 5，但仍低于 GPT 5.6 Sol。**
+
+这个 benchmark 要求每个模型交付一个单文件、self-contained 的 HTML，实现 Jos Stam stable fluids，并包含 semi-Lagrangian advection、iterative diffusion、pressure projection、实时 divergence 报告，以及交互式 paint 和 velocity injection。AlicanKiraz0 表示，GLM 5.2 Max 拿到 88/100，高于 Opus 4.8 的 86 分和 Fable 5 的 81 分，而且成本明显更低，因此这更像是一条检验数值正确性与实时浏览器性能的 engineering-style 评测，而不是只看审美的 frontend 比较。
+
+类型: 评测 | 日期: 2026-07-10
+
 <a id="case-199"></a>
 ### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (作者 [@EpochAIResearch](https://x.com/EpochAIResearch))
 
@@ -1365,6 +1375,16 @@ Coworker 说，Open Artifacts 可以生成 docs、decks、dashboards、spreadshe
 DotCode 说，GLM 5.2 现在已经能配合 contextual workspace uploads 使用，agent 可以检查文件、浏览项目结构、编辑代码、运行 terminal 命令，并且在同一个 sandbox 里连续工作。帖子列出了支持的输入类型，也写出了从 prompt + files 到 sandbox execution 的流程，把这件事定义成朝“基于真实项目上下文的 coding agent 工作”迈出的一步。
 
 类型: 集成 | 日期: 2026-07-08
+
+---
+<a id="case-206"></a>
+### Case 206: [SGLang NVFP4 Production Throughput](https://x.com/sgl_project/status/2075721488456654861) (作者 [@sgl_project](https://x.com/sgl_project))
+
+**如果你想估算 GLM-5.2 NVFP4 的正式生产 SGLang serving 规模，可以看这个案例，因为官方 SGLang v0.5.15 release 说它现在在 8x B300 上可达每位用户 500+ tok/s，在 4x GB300 上则是 450 tok/s，batch size 为 1。**
+
+SGLang v0.5.15 的官方公告表示，这一轮 release cycle 主要在做 GLM-5.2 NVFP4 的 production tuning。帖子指出，在 bs=1 下，8x B300 可达每位用户每秒 500 多 token，4x GB300 则可达 450 token/s。对正在评估 hosted 或 self-managed inference stack 的团队来说，这是一个很具体的 deployment throughput 检查点。同一则公告也把这项工作定位为 upstream 产品支持，而不是一次性的实验室 hack。
+
+类型: 评测 | 日期: 2026-07-10
 
 ---
 <a id="case-198"></a>

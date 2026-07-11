@@ -306,6 +306,16 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 安全計画のシグナルとして、open-weight の GLM-5.2 が offensive security agents の運用摩擦を下げる点を確認するためのケースです。 | 制限 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
+---
+<a id="case-207"></a>
+### Case 207: [Stable Fluids Browser Benchmark](https://x.com/AlicanKiraz0/status/2075639232169705781) (作者 [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**このケースは、algorithm-heavy な browser physics build で GLM-5.2 を比較したいときに使えます。AlicanKiraz0 が Stable Fluids の HTML benchmark を実行し、GLM 5.2 Max に 100 点中 88 点、コスト約 1.17 ドルを付け、Opus 4.8 と Fable 5 を上回りつつ GPT 5.6 Sol は下回ったためです。**
+
+この benchmark では、各 model に対して Jos Stam の stable fluids を、semi-Lagrangian advection、iterative diffusion、pressure projection、live divergence reporting、interactive な paint と velocity injection 付きで、単一の self-contained HTML file として実装させます。AlicanKiraz0 は、GLM 5.2 Max が 100 点中 88 点で、Opus 4.8 の 86 点と Fable 5 の 81 点を上回りながら大幅に安価だったと述べており、これは単なる好みの frontend 比較ではなく、数値的正しさと real-time browser performance を見る engineering-style evaluation になっています。
+
+タイプ: 評価 | 日付: 2026-07-10
+
 <a id="case-199"></a>
 ### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (作者 [@EpochAIResearch](https://x.com/EpochAIResearch))
 
@@ -1365,6 +1375,16 @@ Coworker は、Open Artifacts が docs、decks、dashboards、spreadsheets、PDF
 DotCode は、GLM 5.2 が contextual workspace upload と一緒に動くようになり、agent が file を確認し、project structure をたどり、code を編集し、terminal command を実行し、同じ sandbox から継続できると述べています。投稿では対応 input が列挙され、prompt plus files から sandbox execution までの flow も示されており、real project context から始まる真の coding-agent work への一歩として位置づけられています。
 
 タイプ: 統合 | 日付: 2026-07-08
+
+---
+<a id="case-206"></a>
+### Case 206: [SGLang NVFP4 Production Throughput](https://x.com/sgl_project/status/2075721488456654861) (作者 [@sgl_project](https://x.com/sgl_project))
+
+**このケースは、GLM-5.2 NVFP4 向けの本番 SGLang serving を見積もるときに使えます。公式の SGLang v0.5.15 release が、batch size 1 で 8x B300 なら user あたり 500+ tok/s、4x GB300 なら 450 tok/s に達したと述べているためです。**
+
+SGLang v0.5.15 の公式 announcement によると、この release cycle は GLM-5.2 NVFP4 の production tuning に集中していました。post では bs=1 で 8x B300 なら user あたり 500 超 tok/s、4x GB300 なら 450 tok/s とされており、hosted または self-managed な inference stack を評価する team にとって、具体的な deployment throughput のチェックポイントになります。同じ announcement は、これを一回限りの lab hack ではなく upstream な product support として位置づけています。
+
+タイプ: 評価 | 日付: 2026-07-10
 
 ---
 <a id="case-198"></a>

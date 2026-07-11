@@ -306,6 +306,16 @@ curl --request POST \
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | open-weight GLM-5.2가 offensive security agent의 운영 마찰을 낮춘다는 안전 계획 신호로 이 사례를 사용하십시오. | 한계 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 벤치마크와 프런티어 평가
+---
+<a id="case-207"></a>
+### Case 207: [Stable Fluids Browser Benchmark](https://x.com/AlicanKiraz0/status/2075639232169705781) (작성자 [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**이 사례는 알고리즘 비중이 큰 브라우저 물리 빌드에서 GLM-5.2를 비교할 때 유용합니다. AlicanKiraz0가 Stable Fluids HTML benchmark를 실행해 GLM 5.2 Max에 100점 만점 중 88점과 약 1.17달러의 비용을 매겼고, Opus 4.8과 Fable 5를 앞섰지만 GPT 5.6 Sol에는 뒤졌기 때문입니다.**
+
+이 benchmark는 각 모델에게 semi-Lagrangian advection, iterative diffusion, pressure projection, live divergence reporting, 그리고 interactive paint와 velocity injection이 들어간 Jos Stam stable fluids를 하나의 self-contained HTML file로 구현하게 합니다. AlicanKiraz0는 GLM 5.2 Max가 100점 중 88점을 기록해 Opus 4.8의 86점과 Fable 5의 81점을 앞섰고 비용도 훨씬 낮았다고 말하며, 이 포스트를 단순 취향형 frontend 비교가 아니라 수치적 정확성과 실시간 브라우저 성능을 보는 engineering-style evaluation으로 만듭니다.
+
+유형: 평가 | 날짜: 2026-07-10
+
 <a id="case-199"></a>
 ### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (작성자 [@EpochAIResearch](https://x.com/EpochAIResearch))
 
@@ -1365,6 +1375,16 @@ Coworker는 Open Artifacts가 docs, decks, dashboards, spreadsheets, PDF, full a
 DotCode는 GLM 5.2가 contextual workspace upload와 함께 동작해 agent가 파일을 검사하고, 프로젝트 구조를 탐색하고, 코드를 수정하고, terminal command를 실행하고, 같은 sandbox에서 이어서 작업할 수 있다고 말합니다. 게시물은 지원 입력 형식을 나열하고 prompt plus files에서 sandbox execution으로 가는 흐름도 설명하며, 이를 실제 프로젝트 context에서 시작하는 진짜 coding-agent 작업으로 가는 한 걸음으로 제시합니다.
 
 유형: 통합 | 날짜: 2026-07-08
+
+---
+<a id="case-206"></a>
+### Case 206: [SGLang NVFP4 Production Throughput](https://x.com/sgl_project/status/2075721488456654861) (작성자 [@sgl_project](https://x.com/sgl_project))
+
+**이 사례는 GLM-5.2 NVFP4용 프로덕션 SGLang serving 규모를 가늠할 때 유용합니다. 공식 SGLang v0.5.15 릴리스가 batch size 1 기준 8x B300에서 사용자당 500+ tok/s, 4x GB300에서 450 tok/s에 도달했다고 밝혔기 때문입니다.**
+
+SGLang v0.5.15의 공식 발표에 따르면 이번 릴리스 사이클은 GLM-5.2 NVFP4의 프로덕션 튜닝에 집중했습니다. 이 포스트는 bs=1 기준 8x B300에서 사용자당 500이 넘는 tok/s, 4x GB300에서 450 tok/s를 보고하고 있어, hosted 또는 self-managed inference stack을 평가하는 팀에게 구체적인 배포 throughput 기준점을 제공합니다. 같은 발표는 이것을 일회성 실험실 해킹이 아니라 업스트림 제품 지원으로 설명합니다.
+
+유형: 평가 | 날짜: 2026-07-10
 
 ---
 <a id="case-198"></a>

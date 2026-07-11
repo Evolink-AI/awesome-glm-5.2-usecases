@@ -298,6 +298,16 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | Usa este caso como señal para planificar seguridad: GLM-5.2 open-weight reduce la fricción operativa para agentes ofensivos de seguridad incluso cuando las APIs cerradas siguen monitorizadas. | Límite |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Evaluaciones comparativas y evaluación de frontera
+---
+<a id="case-207"></a>
+### Case 207: [Stable Fluids Browser Benchmark](https://x.com/AlicanKiraz0/status/2075639232169705781) (por [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**Usa este caso para comparar GLM-5.2 en builds de física para navegador cargados de algoritmo, porque AlicanKiraz0 ejecutó un benchmark HTML de Stable Fluids y dio a GLM 5.2 Max un 88 sobre 100 por unos 1,17 dólares, por delante de Opus 4.8 y Fable 5 pero por detrás de GPT 5.6 Sol.**
+
+El benchmark pide a cada modelo un único archivo HTML autocontenido que implemente stable fluids de Jos Stam con advección semi-Lagrangiana, difusión iterativa, proyección de presión, informe en vivo de divergencia e inyección interactiva de pintura y velocidad. AlicanKiraz0 dice que GLM 5.2 Max alcanzó 88 sobre 100, por delante de Opus 4.8 con 86 y Fable 5 con 81, manteniéndose mucho más barato, así que sirve como evaluación de ingeniería sobre corrección numérica y rendimiento en navegador en tiempo real, no como una comparación frontend basada en gustos.
+
+Tipo: Evaluation | Fecha: 2026-07-10
+
 <a id="case-199"></a>
 ### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (por [@EpochAIResearch](https://x.com/EpochAIResearch))
 
@@ -1357,6 +1367,16 @@ Tipo: Integración | Fecha: 2026-07-09
 DotCode dice que GLM 5.2 ahora funciona con uploads contextuales de workspace para que los agentes puedan inspeccionar archivos, navegar la estructura del proyecto, editar código, ejecutar comandos de terminal y continuar dentro de la misma sandbox. El post enumera las entradas soportadas, muestra el flujo de prompt más archivos hacia la ejecución en sandbox y lo presenta como un paso hacia trabajo real de coding agent basado en contexto auténtico de proyecto.
 
 Tipo: Integración | Fecha: 2026-07-08
+
+---
+<a id="case-206"></a>
+### Case 206: [SGLang NVFP4 Production Throughput](https://x.com/sgl_project/status/2075721488456654861) (por [@sgl_project](https://x.com/sgl_project))
+
+**Usa este caso para dimensionar serving productivo de SGLang para GLM-5.2 NVFP4, porque la release oficial de SGLang v0.5.15 dice que ahora alcanza más de 500 tok/s por usuario en 8x B300 y 450 en 4x GB300 con batch size 1.**
+
+El anuncio oficial de SGLang v0.5.15 dice que este ciclo se centró en ajustar GLM-5.2 NVFP4 para serving productivo. El post informa de más de 500 tokens por segundo por usuario en 8x B300 y 450 en 4x GB300 con bs=1, lo que lo convierte en un punto de referencia concreto de throughput de despliegue para equipos que evalúan stacks de inferencia alojados o autogestionados. El mismo anuncio también presenta el trabajo como soporte upstream del producto, no como un hack puntual de laboratorio.
+
+Tipo: Evaluation | Fecha: 2026-07-10
 
 ---
 <a id="case-198"></a>

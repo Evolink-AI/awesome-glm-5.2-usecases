@@ -298,6 +298,16 @@ curl --request POST \
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | Используйте этот кейс как safety-сигнал: open-weight GLM-5.2 снижает операционное трение для offensive security agents даже при сохраняющемся мониторинге закрытых API. | Ограничение |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Сравнительные оценки и оценка передовых моделей
+---
+<a id="case-207"></a>
+### Case 207: [Stable Fluids Browser Benchmark](https://x.com/AlicanKiraz0/status/2075639232169705781) (автор [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**Используйте этот кейс, чтобы сравнить GLM-5.2 на algorithm-heavy browser physics build: AlicanKiraz0 запустил HTML-бенчмарк Stable Fluids и поставил GLM 5.2 Max 88 из 100 при стоимости около $1.17, выше Opus 4.8 и Fable 5, но ниже GPT 5.6 Sol.**
+
+Этот benchmark просит каждый model отдать один self-contained HTML-файл, который реализует Jos Stam stable fluids с semi-Lagrangian advection, iterative diffusion, pressure projection, live divergence reporting и интерактивными paint и velocity injection. По словам AlicanKiraz0, GLM 5.2 Max набрал 88 из 100, обошёл Opus 4.8 с 86 и Fable 5 с 81 и при этом остался заметно дешевле, так что это скорее engineering-style оценка численной корректности и производительности браузера в реальном времени, а не вкусовое frontend-сравнение.
+
+Тип: Evaluation | Дата: 2026-07-10
+
 <a id="case-199"></a>
 ### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (автор [@EpochAIResearch](https://x.com/EpochAIResearch))
 
@@ -1355,6 +1365,16 @@ Coworker пишет, что Open Artifacts умеет генерировать s
 DotCode пишет, что GLM 5.2 теперь работает с contextual workspace upload, поэтому agent может просматривать файлы, исследовать структуру проекта, редактировать код, выполнять terminal command и продолжать в той же sandbox. В посте перечислены поддерживаемые input, показан flow от prompt plus files до sandbox execution, и все это подается как шаг к настоящей coding-agent работе из реального project context.
 
 Тип: Интеграция | Дата: 2026-07-08
+
+---
+<a id="case-206"></a>
+### Case 206: [SGLang NVFP4 Production Throughput](https://x.com/sgl_project/status/2075721488456654861) (автор [@sgl_project](https://x.com/sgl_project))
+
+**Используйте этот кейс, чтобы прикинуть production SGLang serving для GLM-5.2 NVFP4: официальный релиз SGLang v0.5.15 говорит о 500+ tok/s на пользователя на 8x B300 и 450 tok/s на 4x GB300 при batch size 1.**
+
+Официальный анонс SGLang v0.5.15 говорит, что этот release cycle был сосредоточен на production tuning для GLM-5.2 NVFP4. В посте сообщается о более чем 500 токенах в секунду на пользователя на 8x B300 и 450 на 4x GB300 при bs=1, что делает его конкретной точкой отсчёта по deployment throughput для команд, оценивающих hosted или self-managed inference stack. Тот же анонс подаёт эту работу как upstream product support, а не как разовый лабораторный хак.
+
+Тип: Evaluation | Дата: 2026-07-10
 
 ---
 <a id="case-198"></a>

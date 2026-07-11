@@ -306,6 +306,16 @@ curl --request POST \
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | 如果你在做安全規劃，可以用這個案例理解開放權重 GLM-5.2 如何降低進攻性安全 agent 的實際操作門檻。 | 限制 |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 基準與前沿評測
+---
+<a id="case-207"></a>
+### Case 207: [Stable Fluids Browser Benchmark](https://x.com/AlicanKiraz0/status/2075639232169705781) (作者 [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**如果你想在演算法負載很重的瀏覽器物理 build 上比較 GLM-5.2，可以看這個案例，因為 AlicanKiraz0 跑了一個 Stable Fluids HTML benchmark，給 GLM 5.2 Max 打了 88/100、成本約 1.17 美元，高於 Opus 4.8 與 Fable 5，但仍低於 GPT 5.6 Sol。**
+
+這個 benchmark 要求每個模型交付一個單檔、self-contained 的 HTML，實作 Jos Stam stable fluids，並包含 semi-Lagrangian advection、iterative diffusion、pressure projection、即時 divergence 回報，以及互動式 paint 與 velocity injection。AlicanKiraz0 表示，GLM 5.2 Max 拿到 88/100，高於 Opus 4.8 的 86 分與 Fable 5 的 81 分，而且成本明顯更低，因此這更像是一條檢驗數值正確性與即時瀏覽器效能的 engineering-style 評測，而不是只看審美的 frontend 比較。
+
+類型: 評測 | 日期: 2026-07-10
+
 <a id="case-199"></a>
 ### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (作者 [@EpochAIResearch](https://x.com/EpochAIResearch))
 
@@ -1365,6 +1375,16 @@ Coworker 說，Open Artifacts 可以生成 docs、decks、dashboards、spreadshe
 DotCode 說，GLM 5.2 現在已經能配合 contextual workspace uploads 使用，agent 可以檢查檔案、瀏覽專案結構、編輯程式碼、執行 terminal 命令，並且在同一個 sandbox 裡連續工作。貼文列出了支援的輸入類型，也寫出了從 prompt + files 到 sandbox execution 的流程，把這件事定義成朝「基於真實專案上下文的 coding agent 工作」邁出的一步。
 
 類型: 整合 | 日期: 2026-07-08
+
+---
+<a id="case-206"></a>
+### Case 206: [SGLang NVFP4 Production Throughput](https://x.com/sgl_project/status/2075721488456654861) (作者 [@sgl_project](https://x.com/sgl_project))
+
+**如果你想估算 GLM-5.2 NVFP4 的正式生產 SGLang serving 規模，可以看這個案例，因為官方 SGLang v0.5.15 release 說它現在在 8x B300 上可達每位使用者 500+ tok/s，在 4x GB300 上則是 450 tok/s，batch size 為 1。**
+
+SGLang v0.5.15 的官方公告表示，這一輪 release cycle 主要在做 GLM-5.2 NVFP4 的 production tuning。貼文指出，在 bs=1 下，8x B300 可達每位使用者每秒 500 多 token，4x GB300 則可達 450 token/s。對正在評估 hosted 或 self-managed inference stack 的團隊來說，這是一個很具體的 deployment throughput 檢查點。同一則公告也把這件事定位成 upstream 產品支援，而不是一次性的實驗室 hack。
+
+類型: 評測 | 日期: 2026-07-10
 
 ---
 <a id="case-198"></a>

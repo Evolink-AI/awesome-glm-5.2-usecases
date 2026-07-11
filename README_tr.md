@@ -308,6 +308,16 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | [Case 108: Open-Weight Security Emergency Warning](#case-108) | open-weight GLM-5.2’nin offensive security agents için operasyonel sürtünmeyi düşürdüğünü gösteren bir güvenlik sinyali olarak bu vakayı kullanın. | Sınır |
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
+---
+<a id="case-207"></a>
+### Case 207: [Stable Fluids Browser Benchmark](https://x.com/AlicanKiraz0/status/2075639232169705781) (yazan [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**Bu vakayı, algoritma ağırlıklı tarayıcı fizik yapılarında GLM-5.2’yi karşılaştırmak için kullanın; çünkü AlicanKiraz0 bir Stable Fluids HTML benchmarkı çalıştırdı ve GLM 5.2 Max’e yaklaşık 1,17 dolar maliyetle 100 üzerinden 88 verdi; Opus 4.8 ve Fable 5’in önüne koydu ama GPT 5.6 Sol’un arkasında bıraktı.**
+
+Benchmark, her modelden Jos Stam stable fluids yaklaşımını semi-Lagrangian advection, iteratif diffusion, pressure projection, canlı divergence raporu ve etkileşimli boya ile velocity injection içerecek şekilde tek bir self-contained HTML dosyasında uygulamasını istiyor. AlicanKiraz0, GLM 5.2 Max’in 100 üzerinden 88 aldığını, Opus 4.8’in 86 ve Fable 5’in 81 puanını geçtiğini ve bunu çok daha düşük maliyetle yaptığını söylüyor; bu da postu zevke dayalı bir frontend karşılaştırmasından ziyade sayısal doğruluk ve gerçek zamanlı tarayıcı performansına odaklanan bir engineering-style evaluation haline getiriyor.
+
+Tür: Evaluation | Tarih: 2026-07-10
+
 <a id="case-199"></a>
 ### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (yazan [@EpochAIResearch](https://x.com/EpochAIResearch))
 
@@ -1367,6 +1377,16 @@ Tür: Entegrasyon | Tarih: 2026-07-09
 DotCode, GLM 5.2’nin artık bağlamsal workspace upload’larla çalıştığını ve böylece agent’ların dosyaları inceleyebildiğini, proje yapısında gezinebildiğini, kod düzenleyebildiğini, terminal komutları çalıştırabildiğini ve aynı sandbox içinde devam edebildiğini söylüyor. Gönderi desteklenen girdileri listeliyor, prompt plus files’tan sandbox execution’a giden akışı anlatıyor ve bunu gerçek proje bağlamından başlayan gerçek coding-agent işi için bir adım olarak konumluyor.
 
 Tür: Entegrasyon | Tarih: 2026-07-08
+
+---
+<a id="case-206"></a>
+### Case 206: [SGLang NVFP4 Production Throughput](https://x.com/sgl_project/status/2075721488456654861) (yazan [@sgl_project](https://x.com/sgl_project))
+
+**Bu vakayı, GLM-5.2 NVFP4 için üretim SGLang serving ölçeğini tahmin etmekte kullanın; çünkü resmi SGLang v0.5.15 sürümü batch size 1 ile 8x B300 üzerinde kullanıcı başına 500+ tok/s, 4x GB300 üzerinde 450 tok/s ulaşıldığını söylüyor.**
+
+Resmi SGLang v0.5.15 duyurusu, bu sürüm döngüsünün GLM-5.2 NVFP4 için üretim ayarlarına odaklandığını söylüyor. Post, bs=1 ile 8x B300 üzerinde kullanıcı başına 500’den fazla token/saniye ve 4x GB300 üzerinde 450 token/saniye bildirdiği için, hosted ya da self-managed inference stack değerlendiren ekipler için somut bir deployment throughput kontrol noktası oluşturuyor. Aynı duyuru, bu işi tek seferlik bir laboratuvar hack’i değil, upstream ürün desteği olarak çerçeveliyor.
+
+Tür: Evaluation | Tarih: 2026-07-10
 
 ---
 <a id="case-198"></a>
