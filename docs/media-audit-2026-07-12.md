@@ -50,4 +50,10 @@
 
 ## Rendered GitHub Verification
 
-Post-push GitHub/camo verification is required before the modification can be reported as `published`. It is intentionally not marked passed from R2 origin evidence alone.
+- Post-push audit date: `2026-07-12`
+- Public implementation commit: `ae8091c867ebbc5a63eb988f7cd9f791cf362826`
+- Rendered images checked: 16
+- GitHub/camo failures: 0
+- Banner: HTTP 200 `image/jpeg`, 142,123 bytes at both canonical R2 and rendered camo URLs
+- Star History snapshot: HTTP 200 `image/svg+xml`, 2,093 bytes at both canonical R2 and rendered camo URLs
+- Result: **PASS**

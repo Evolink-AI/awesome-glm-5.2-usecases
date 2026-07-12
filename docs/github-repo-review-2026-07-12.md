@@ -16,6 +16,7 @@
 - Normalized the URL/UTM matrix and action-oriented key/docs links.
 - Added localized Related Repositories sections and the Skill/API ownership boundary.
 - Migrated the shared banner to R2 and recorded upload/origin evidence.
+- Replaced the timing-out live Star History embed with an honest, reproducible zero-star snapshot hosted on R2 while preserving the canonical Star History link.
 - Expanded maintenance and PR contribution checks.
 - Added a reproducible data builder and public-surface link auditor.
 
@@ -32,18 +33,17 @@
 | Community standards | PASS | GitHub community profile reports 100%; README, LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, SECURITY and PR/issue forms are present. |
 | Adoption value | PASS | 209 source-backed cases, 11 languages and verified current-model API routing provide clear star/fork/reference value. |
 
-## 4. Remaining Public Gates
+## 4. Public Gate Results
 
-- A passing real API smoke or explicit owner-approved waiver.
-- Commit and push approval, followed by raw README, rendered README/media, and GitHub/camo readback.
-
-These are publication gates, not remaining general repository-quality findings.
+- Real API smoke: PASS within the owner-approved 256 output-token boundary.
+- Commit and push: PASS after owner approval.
+- Remote branch/raw README readback: PASS.
+- Rendered README/media and GitHub/camo readback: PASS, 16 images checked and zero failures.
 
 ## 5. Action List
 
 - Path: `github-repo-review-action-list.md`
-- All locally actionable P0/P1 items are implemented.
-- Public-action items remain open until approval and readback.
+- All P0/P1 items, including public-action and readback items, are complete.
 
 ## 6. Recheck Result
 
@@ -51,4 +51,4 @@ These are publication gates, not remaining general repository-quality findings.
 - Legacy 11-README verifier: PASS.
 - Public surface links: PASS (P0=0, P1=0).
 - GitHub community profile: 100%.
-- Local review verdict: PASS.
+- Final review verdict: PASS / PUBLISHED.

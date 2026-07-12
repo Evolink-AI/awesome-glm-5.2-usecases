@@ -66,15 +66,16 @@ The initial findings above remain unchanged as audit evidence. After remediation
 | Localization semantic gate | PASS | No localized title remains identical to English; source/author/Type/Date parity passes |
 | README/data equality | PASS | 209 generated JSON items equal the parsed English public-case records |
 | Public surface link audit | PASS | P0=0, P1=0 across README/docs links, assets, relative files, fragments and UTM slots |
-| R2 origin/media gate | PASS | Full one-file media inventory; 11 README rewrites; origin HTTP 200 `image/jpeg` |
+| R2 origin/media gate | PASS | Full two-file media inventory; 11 README rewrites; banner and Star History origins return HTTP 200 |
+| GitHub rendered media | PASS | All 16 rendered images and canonical sources return HTTP 200; failures=0 |
 | GitHub general review | PASS locally | Community profile 100%; About/SEO/front door/maintenance checks pass |
 | Real API smoke | PASS | Approved 256-token-boundary retry returned HTTP 200, `finish_reason=stop`, and exact visible content `contract-smoke-ok` |
 | Usecase handoff verifier | APPROVED N/A WAIVER | This run added no candidate cases and made only contract/structure/localization changes; waiver is scoped to this run |
-| Commit/push/public render | IN PROGRESS | Owner replied `继续` after the explicit three-gate confirmation request |
+| Commit/push/public render | PASS | Owner replied `继续`; commits `84fbd27` and `ae8091c` were pushed to `main`; remote HEAD matched local and raw/rendered readback passed |
 
 ### Current Verdict
 
 - Repository content and local contract layers: **PASS**
-- Final contract state: **not yet published**
-- Remaining action: commit/push followed by GitHub raw/rendered README and media readback.
+- Final contract state: **PUBLISHED / PASS**
+- Public verification: remote `main` matched local implementation commit; raw README, R2 origins, and all GitHub/camo-rendered media passed.
 - Agent runtime note: the workspace copy of `completion-gate` currently calls an undefined `has_complete_github_utm`; the canonical installed framework copy was used instead and correctly reported the remaining external gates.

@@ -14,7 +14,7 @@ Review mode: Review + Fix
   - Why: untranslated titles and structural metadata drift block the 11-language contract.
   - Owner: repository maintainer
   - Expected result: source/author/type/date parity passes and no non-exempt title remains unchanged from English.
-- [ ] Verify the migrated R2 banner on GitHub/camo after push.
+- [x] Verify the migrated R2 banner and Star History snapshot on GitHub/camo after push.
   - Why: local README media and missing rendered evidence violate the current publication contract.
   - Owner: repository maintainer
   - Expected result: R2 origin and rendered GitHub media audits have no P0/P1 failures.
@@ -51,7 +51,7 @@ Review mode: Review + Fix
 
 ## Notes
 
-- Blockers: real API credit budget/waiver and explicit approval for commit/push remain separate owner gates.
+- Blockers: none. The owner-approved API smoke, commit/push, remote readback, and GitHub/camo render gates passed.
 - Out of scope: repository rename/archive/delete, npm/skill release and announcements.
 - Follow-up check: rerun template audit, usecase verifier, localization gate, link audit and general GitHub review after fixes.
 - Link copy issues: replace labels that depend on surrounding text with self-contained actions such as `Get your API key` and `Read GLM-5.2 API docs`.

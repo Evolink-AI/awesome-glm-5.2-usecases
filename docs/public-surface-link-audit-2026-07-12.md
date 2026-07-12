@@ -1,6 +1,6 @@
 # Public Surface Link Audit
 
-- Timestamp: 2026-07-12T10:11:56.617239+00:00
+- Timestamp: 2026-07-12T10:13:42.605996+00:00
 - Repository: `/Users/evolink/Desktop/github-repo/awesome-glm-5.2-usecases`
 - Scope: root `README*.md` and `docs/**/*.md`; generated output report excluded from its own scan
 - Extraction: Markdown links/images, HTML href/src, raw HTTP(S) URLs, relative files, and fragment anchors
