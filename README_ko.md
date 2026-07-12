@@ -37,7 +37,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 ## 📊 개요
 
-- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **205개의 선별된 GLM-5.2 사례**입니다.
+- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **209개의 선별된 GLM-5.2 사례**입니다.
 - 벤치마크와 프런티어 평가, 코딩 에이전트와 장기 컨텍스트 워크플로, 실사용 데모와 쇼케이스 빌드, 공급자 및 도구 통합, 비용, 가격, 로컬 배포, 한계, 주의점, 안전 신호를 다룹니다.
 - 각 사례에는 원본 출처, 작성자 표기, 간결한 활용 포인트, 근거 유형, 게시 날짜가 포함됩니다.
 - 실용 워크플로, 강점과 한계 비교, 공급자 경로, 실제 실험을 찾는 데 사용하세요.
@@ -77,11 +77,11 @@ curl --request POST \
 
 | 섹션 | 사례 |
 |---|---|
-| [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
+| [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
 | [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
 | [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
-| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204 |
-| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
+| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
+| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
 | [🧭 한계, 주의점, 안전 신호](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
 | [🙏 감사의 말](#acknowledge) | 출처 표기 및 수정 정책 |
 
@@ -89,6 +89,7 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 207: Stable Fluids Browser Benchmark](#case-207) | 이 사례는 알고리즘 비중이 큰 브라우저 물리 빌드에서 GLM-5.2를 비교할 때 유용합니다. AlicanKiraz0가 Stable Fluids HTML benchmark를 돌려 GLM 5.2 Max에 100점 만점 중 88점을 줬기 때문입니다. | 평가 |
 | [Case 199: Epoch Open-Weight Index Lead](#case-199) | 이 사례는 GLM-5.2를 장기 capability curve 위에 놓고 볼 때 유용합니다. Epoch AI가 Capabilities Index 추정 점수 152를 제시했고, 자신들이 평가한 open-weight 모델 중 최고라고 했기 때문입니다. | 벤치마크 |
 | [Case 196: Databricks Internal Harness Eval](#case-196) | 이 사례는 GLM-5.2를 대규모 private engineering codebase에서 benchmark할 때 유용합니다. Databricks에 따르면 3,000명 넘는 엔지니어의 작업을 포함한 내부 평가에서 GLM 5.2가 매우 강했고, harness 선택만으로도 비용을 약 2x 줄일 수 있었기 때문입니다. | 평가 |
 | [Case 190: NatureBench Open-Weight Runner-Up](#case-190) | 이 사례는 GLM-5.2를 scientific-agent workflow에서 benchmark할 때 유용합니다. NatureBench가 6개 scientific domain, 90개 task에서 GLM-5.2가 전체 2위이자 open-weight 1위로 데뷔했다고 말하기 때문입니다. | 벤치마크 |
@@ -189,6 +190,7 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 208: Open Molecular Viewer Agent Stack](#case-208) | 이 사례는 GLM-5.2를 열린 scientific inspection workflow에 연결할 때 유용합니다. MaziyarPanahi가 Hugging Face Inference Providers 경유 GLM-5.2를 llama.cpp 위의 Qwen3-VL, Mol*, PydanticAI와 묶어 하나의 prompt로 EGFR와 erlotinib 구조를 렌더링하고 비평했기 때문입니다. | 통합 |
 | [Case 204: Perplexity Advisor WANDR Cost Baseline](#case-204) | 이 사례는 routing된 computer-use harness 안에서 GLM-5.2의 경제성을 추정할 때 유용합니다. Perplexity가 GLM 5.2 plus advisor setup이 WANDR 2.1x, Opus 6.1x라고 밝히며 전체 benchmark에서도 비용이 거의 절반 수준이라고 했기 때문입니다. | 평가 |
 | [Case 203: Coworker Open Artifacts Routing](#case-203) | 이 사례는 GLM-5.2를 enterprise artifact workflow에 넣고 싶을 때 유용합니다. Coworker는 Open Artifacts가 docs, decks, PDF, spreadsheets, dashboards, apps를 만들 수 있고, optimized router가 토큰 사용량을 약 5배 줄이면서도 미국 호스팅 GLM 5.2를 제공한다고 말합니다. | 통합 |
 | [Case 201: DotCode Context Upload Workflow](#case-201) | 이 사례는 private coding sandbox 안에서 GLM-5.2에 더 풍부한 project context를 주고 싶을 때 유용합니다. DotCode가 GLM 5.2 지원과 함께 screenshot, image, CSV, PDF, source file, zip 업로드를 같은 filesystem-and-terminal workflow로 넣을 수 있게 했기 때문입니다. | 통합 |
@@ -244,6 +246,8 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 209: Colibri 25GB RAM Sparse Streaming](#case-209) | 이 사례는 로컬 GLM-5.2 실험의 새로운 하한을 파악할 때 유용합니다. techNmak이 Colibrì가 NVMe에서 expert를 스트리밍해 약 25GB RAM으로 744B MoE를 돌리지만, 가장 작은 구성은 대략 0.05~0.1 tok/s에 머문다고 설명하기 때문입니다. | 데모 |
+| [Case 206: SGLang NVFP4 Production Throughput](#case-206) | 이 사례는 GLM-5.2 NVFP4용 프로덕션 SGLang serving 규모를 가늠할 때 유용합니다. 공식 SGLang v0.5.15 release가 batch size 1에서 8x B300은 사용자당 500+ tok/s, 4x GB300은 450 tok/s에 도달했다고 말하기 때문입니다. | 평가 |
 | [Case 191: Hermes-Built LiteLLM Local Lab](#case-191) | 이 사례는 GLM-5.2를 coding agent로 써서 local inference lab을 부트스트랩할 때 유용합니다. source에서 Hermes Agent와 GLM-5.2가 M3 Ultra 기반으로 LiteLLM, Postgres, Prometheus, Grafana를 연결했다고 말하기 때문입니다. | 통합 |
 | [Case 187: Dual M5 Max Offline Droneship Sim](#case-187) | 이 사례는 완전 offline Apple Silicon 환경에서 GLM-5.2 agent가 어디까지 가능한지 가늠할 때 유용합니다. XavierLocalAI가 두 대의 128GB M5 Max로 753B 구성을 돌리며 droneship landing simulator를 26 tok/s로 작성했다고 보고했기 때문입니다. | 데모 |
 | [Case 186: 5x DGX Spark Production Harness](#case-186) | 이 사례는 5노드 DGX Spark 구성이 production GLM-5.2 작업에 충분한지 판단할 때 유용합니다. thatcofffeeguy가 400K context에서 단일 스트림 약 13.9 tok/s와 3개 lane 합산 19.9 tok/s를 live harness에서 보고했기 때문입니다. | 데모 |
@@ -1345,6 +1349,16 @@ ClaudeCode_UT는 Cloudflare 무료 계정 생성, Workers AI account ID 복사, 
 
 ---
 
+<a id="case-208"></a>
+### Case 208: [Open Molecular Viewer Agent Stack](https://x.com/MaziyarPanahi/status/2075913552854933869) (작성자 [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**이 사례는 GLM-5.2를 열린 scientific inspection workflow에 연결할 때 유용합니다. MaziyarPanahi가 Hugging Face Inference Providers 경유 GLM-5.2를 llama.cpp 위의 Qwen3-VL, Mol*, PydanticAI와 묶어 하나의 prompt로 EGFR와 erlotinib 구조를 렌더링하고 비평했기 때문입니다.**
+
+MaziyarPanahi는 GLM-5.2가 Hugging Face Inference Providers를 통해 language brain 역할을 하고, Qwen3-VL이 llama.cpp로 시각 검토를 맡고, Mol*가 구조를 렌더링하며, PydanticAI가 agent layer를 조정하는 완전히 열린 스택을 설명합니다. 게시물에 따르면 이 workflow는 RCSB PDB의 EGFR와 erlotinib 예제를 하나의 prompt에서 여섯 개의 render로 만들었고, 그래서 단순한 availability announcement가 아니라 여러 도구를 잇는 과학 워크플로 통합 사례가 됩니다.
+
+유형: 통합 | 날짜: 2026-07-11
+
+---
 <a id="case-204"></a>
 ### Case 204: [Perplexity Advisor WANDR Cost Baseline](https://x.com/perplexity_ai/status/2075229779716973030) (작성자 [@perplexity_ai](https://x.com/perplexity_ai))
 
@@ -1375,6 +1389,16 @@ Coworker는 Open Artifacts가 docs, decks, dashboards, spreadsheets, PDF, full a
 DotCode는 GLM 5.2가 contextual workspace upload와 함께 동작해 agent가 파일을 검사하고, 프로젝트 구조를 탐색하고, 코드를 수정하고, terminal command를 실행하고, 같은 sandbox에서 이어서 작업할 수 있다고 말합니다. 게시물은 지원 입력 형식을 나열하고 prompt plus files에서 sandbox execution으로 가는 흐름도 설명하며, 이를 실제 프로젝트 context에서 시작하는 진짜 coding-agent 작업으로 가는 한 걸음으로 제시합니다.
 
 유형: 통합 | 날짜: 2026-07-08
+
+---
+<a id="case-209"></a>
+### Case 209: [Colibri 25GB RAM Sparse Streaming](https://x.com/techNmak/status/2075872446197158361) (작성자 [@techNmak](https://x.com/techNmak))
+
+**이 사례는 로컬 GLM-5.2 실험의 새로운 하한을 파악할 때 유용합니다. techNmak이 Colibrì가 NVMe에서 expert를 스트리밍해 약 25GB RAM으로 744B MoE를 돌리지만, 가장 작은 구성은 대략 0.05~0.1 tok/s에 머문다고 설명하기 때문입니다.**
+
+techNmak은 Colibrì를 항상 뜨거운 가중치만 RAM에 두고 라우팅된 expert는 NVMe에 보관하는 순수 C 기반 로컬 inference 엔진으로 요약합니다. 상주 메모리는 약 9.9GB, 채팅 중 RAM 피크는 약 20GB, int4 가중치는 디스크에서 약 370GB 수준이며, 게시물은 이를 빠른 프로덕션 serving이 아니라 시스템 차원의 proof of concept라고 분명히 말합니다. 25GB 머신의 cold generation은 0.05~0.1 tok/s 정도에 그치고 int4 양자화가 품질에 미치는 영향도 아직 충분히 benchmark되지 않았기 때문입니다.
+
+유형: 데모 | 날짜: 2026-07-11
 
 ---
 <a id="case-206"></a>

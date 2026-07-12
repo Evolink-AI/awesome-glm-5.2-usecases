@@ -37,7 +37,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **205 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **209 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -77,11 +77,11 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
 | [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
 | [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
 | [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
@@ -89,6 +89,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 207: Stable Fluids Browser Benchmark](#case-207) | Bu vakayı, algoritmik ağırlığı yüksek tarayıcı fiziği build’lerinde GLM-5.2’yi karşılaştırmak için kullanın; çünkü AlicanKiraz0 bir Stable Fluids HTML benchmark’ı çalıştırdı ve GLM 5.2 Max’e 100 üzerinden 88 verdi. | Değerlendirme |
 | [Case 199: Epoch Open-Weight Index Lead](#case-199) | Bu vakayı, GLM-5.2’yi uzun vadeli bir yetenek eğrisi üzerinde konumlandırmak için kullanın; çünkü Epoch AI kendi Capabilities Index’inde 152 puan tahmin ediyor ve onu değerlendirdiği open-weight modeller arasında en yükseği olarak tanımlıyor. | Benchmark |
 | [Case 196: Databricks Internal Harness Eval](#case-196) | Bu vakayı, GLM-5.2’yi büyük bir özel engineering codebase üzerinde benchmark etmek için kullanın; çünkü Databricks, 3.000’den fazla engineer’ın işini kapsayan iç değerlendirmesinde GLM 5.2’nin çok güçlü çıktığını ve yalnızca harness seçiminin maliyeti yaklaşık 2x azaltabildiğini söylüyor. | Değerlendirme |
 | [Case 190: NatureBench Open-Weight Runner-Up](#case-190) | Bu vakayı, GLM-5.2’yi scientific-agent işlerinde benchmark etmek için kullanın; çünkü NatureBench, GLM-5.2’nin altı bilimsel alandaki 90 görevde genel sıralamada ikinci olduğunu ve open-weight liderliğini aldığını söylüyor. | Benchmark |
@@ -191,6 +192,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 208: Open Molecular Viewer Agent Stack](#case-208) | Bu vakayı, GLM-5.2’yi açık bir bilimsel inceleme workflow’una bağlamak için kullanın; çünkü MaziyarPanahi, Hugging Face Inference Providers üzerinden GLM-5.2’yi llama.cpp üzerindeki Qwen3-VL, Mol* ve PydanticAI ile birleştirip tek prompttan EGFR artı erlotinib yapısını render edip yorumladı. | Entegrasyon |
 | [Case 204: Perplexity Advisor WANDR Cost Baseline](#case-204) | Bu vakayı, yönlendirmeli bir computer-use harness içinde GLM-5.2 ekonomisini tahmin etmek için kullanın; çünkü Perplexity, GLM 5.2 plus advisor kurulumunun WANDR’da Opus’un 6.1x seviyesine karşı 2.1x çıktığını ve ortalama maliyetin yaklaşık yarı yarıya olduğunu söylüyor. | Değerlendirme |
 | [Case 203: Coworker Open Artifacts Routing](#case-203) | Bu vakayı, GLM-5.2’yi kurumsal artifact workflow’larına taşımak için kullanın; çünkü Coworker, Open Artifacts’in docs, decks, PDF, spreadsheets, dashboards ve apps üretebildiğini, optimize router’ın token kullanımını yaklaşık 5x azalttığını ve yine de ABD barındırmalı GLM 5.2 sunduğunu söylüyor. | Entegrasyon |
 | [Case 201: DotCode Context Upload Workflow](#case-201) | Bu vakayı, özel bir coding sandbox içinde GLM-5.2’ye daha zengin proje bağlamı vermek için kullanın; çünkü DotCode, GLM 5.2 desteğine ek olarak screenshot, image, CSV, PDF, source file ve zip yüklemelerini aynı filesystem-and-terminal workflow’a bağladı. | Entegrasyon |
@@ -246,6 +248,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 209: Colibri 25GB RAM Sparse Streaming](#case-209) | Bu vakayı, yerel GLM-5.2 deneylerinin yeni alt sınırını anlamak için kullanın; çünkü techNmak, Colibrì’nin expert’leri NVMe’den akıtarak 744B MoE’yi yaklaşık 25 GB RAM ile çalıştırdığını, ancak en küçük kurulumun yalnızca yaklaşık 0,05 ila 0,1 tok/s verdiğini anlatıyor. | Demo |
+| [Case 206: SGLang NVFP4 Production Throughput](#case-206) | Bu vakayı, GLM-5.2 NVFP4 için üretim SGLang serving ölçeğini tahmin etmek için kullanın; çünkü resmi SGLang v0.5.15 release’i batch size 1’de 8x B300 üzerinde kullanıcı başına 500+ tok/s ve 4x GB300 üzerinde 450 tok/s’e ulaşıldığını söylüyor. | Değerlendirme |
 | [Case 191: Hermes-Built LiteLLM Local Lab](#case-191) | Bu vakayı, GLM-5.2’yi coding agent olarak kullanıp yerel bir inference laboratuvarı kurmak için kullanın; çünkü kaynak, Hermes Agent ile GLM-5.2’nin M3 Ultra etrafında LiteLLM, Postgres, Prometheus ve Grafana’yı bağladığını söylüyor. | Entegrasyon |
 | [Case 187: Dual M5 Max Offline Droneship Sim](#case-187) | Bu vakayı, tamamen offline çalışan bir Apple Silicon GLM-5.2 agent’ın neler yapabildiğini tahmin etmek için kullanın; çünkü XavierLocalAI, iki adet 128GB M5 Max üzerinde çalışan 753B kurulumun 26 tok/s hızla bir droneship iniş simülatörü yazdığını bildiriyor. | Demo |
 | [Case 186: 5x DGX Spark Production Harness](#case-186) | Bu vakayı, beş düğümlü bir DGX Spark kurulumunun üretim GLM-5.2 işi için yeterli olup olmadığını görmek için kullanın; çünkü thatcofffeeguy, canlı bir harness içinde 400K context’te tek akışta yaklaşık 13,9 tok/s ve üç lane’de toplam 19,9 tok/s bildiriyor. | Demo |
@@ -1347,6 +1351,16 @@ Tür: Öğretici | Tarih: 2026-07-03
 
 ---
 
+<a id="case-208"></a>
+### Case 208: [Open Molecular Viewer Agent Stack](https://x.com/MaziyarPanahi/status/2075913552854933869) (yazan [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**Bu vakayı, GLM-5.2’yi açık bir bilimsel inceleme workflow’una bağlamak için kullanın; çünkü MaziyarPanahi, Hugging Face Inference Providers üzerinden GLM-5.2’yi llama.cpp üzerindeki Qwen3-VL, Mol* ve PydanticAI ile birleştirip tek prompttan EGFR artı erlotinib yapısını render edip yorumladı.**
+
+MaziyarPanahi, GLM-5.2’nin Hugging Face Inference Providers üzerinden dil beyni olarak çalıştığı, Qwen3-VL’nin llama.cpp ile görsel incelemeyi üstlendiği, Mol*’un yapıyı render ettiği ve PydanticAI’nin agent katmanını koordine ettiği tamamen açık bir yığın anlatıyor. Gönderi, bu workflow’un RCSB PDB’deki EGFR artı erlotinib örneği etrafında tek bir prompttan altı render ürettiğini söylüyor; bu da onu yalnızca genel bir erişilebilirlik duyurusu değil, somut bir çok araçlı bilimsel agent entegrasyonu yapıyor.
+
+Tür: Entegrasyon | Tarih: 2026-07-11
+
+---
 <a id="case-204"></a>
 ### Case 204: [Perplexity Advisor WANDR Cost Baseline](https://x.com/perplexity_ai/status/2075229779716973030) (yazan [@perplexity_ai](https://x.com/perplexity_ai))
 
@@ -1377,6 +1391,16 @@ Tür: Entegrasyon | Tarih: 2026-07-09
 DotCode, GLM 5.2’nin artık bağlamsal workspace upload’larla çalıştığını ve böylece agent’ların dosyaları inceleyebildiğini, proje yapısında gezinebildiğini, kod düzenleyebildiğini, terminal komutları çalıştırabildiğini ve aynı sandbox içinde devam edebildiğini söylüyor. Gönderi desteklenen girdileri listeliyor, prompt plus files’tan sandbox execution’a giden akışı anlatıyor ve bunu gerçek proje bağlamından başlayan gerçek coding-agent işi için bir adım olarak konumluyor.
 
 Tür: Entegrasyon | Tarih: 2026-07-08
+
+---
+<a id="case-209"></a>
+### Case 209: [Colibri 25GB RAM Sparse Streaming](https://x.com/techNmak/status/2075872446197158361) (yazan [@techNmak](https://x.com/techNmak))
+
+**Bu vakayı, yerel GLM-5.2 deneylerinin yeni alt sınırını anlamak için kullanın; çünkü techNmak, Colibrì’nin expert’leri NVMe’den akıtarak 744B MoE’yi yaklaşık 25 GB RAM ile çalıştırdığını, ancak en küçük kurulumun yalnızca yaklaşık 0,05 ila 0,1 tok/s verdiğini anlatıyor.**
+
+techNmak, Colibrì’yi yalnızca sürekli sıcak ağırlıkları RAM’de tutan ve yönlendirilen expert’leri NVMe’de bırakan saf C tabanlı yerel bir inference motoru olarak özetliyor; kalıcı olarak yaklaşık 9,9 GB resident bellek, sohbet sırasında yaklaşık 20 GB tepe RAM ve diskte yaklaşık 370 GB int4 ağırlık var. Gönderi, sonucu açıkça hızlı üretim serving’i değil bir sistemler proof of concept’i olarak çerçeveliyor; çünkü 25 GB makinedeki cold generation yalnızca yaklaşık 0,05 ila 0,1 tok/s düzeyinde ve int4 quantization’ın kalite etkisi henüz tam benchmark edilmiş değil.
+
+Tür: Demo | Tarih: 2026-07-11
 
 ---
 <a id="case-206"></a>

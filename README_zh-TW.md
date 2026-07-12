@@ -37,7 +37,7 @@
 
 ## 📊 總覽
 
-- **205 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
+- **209 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
 - 覆蓋基準與前沿評測、編碼代理與長上下文工作流、上手演示與作品展示、供應商與工具整合、成本、定價與本地部署、限制、注意事項與安全訊號。
 - 每個案例都包含原始來源、創作者署名、精簡的使用結論、證據類型與發布日期。
 - 你可以用這個 repo 尋找實用工作流、比較優勢與限制、探索供應商路徑，並追蹤真實上手實驗。
@@ -77,11 +77,11 @@ curl --request POST \
 
 | 章節 | 案例 |
 |---|---|
-| [📏 基準與前沿評測](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
+| [📏 基準與前沿評測](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
 | [💻 編碼代理與長上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
 | [🎮 上手演示與作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
-| [🔌 供應商與工具整合](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204 |
-| [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
+| [🔌 供應商與工具整合](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
+| [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
 | [🧭 限制、注意事項與安全訊號](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
 | [🙏 致謝](#acknowledge) | 來源致謝與修正政策 |
 
@@ -89,6 +89,7 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 207: Stable Fluids Browser Benchmark](#case-207) | 如果你想比較 GLM-5.2 在高演算法密度的瀏覽器物理 build 上的表現，可以看這個案例，因為 AlicanKiraz0 跑了一個 Stable Fluids HTML benchmark，並給 GLM 5.2 Max 打了 88/100。 | 評估 |
 | [Case 199: Epoch Open-Weight Index Lead](#case-199) | 如果你想把 GLM-5.2 放到一條更長期的能力曲線上看，可以看這個案例，因為 Epoch AI 給它的 Capabilities Index 估分是 152，並稱它是自己評估過的 open-weight model 裡最高的。 | 基準 |
 | [Case 196: Databricks Internal Harness Eval](#case-196) | 如果你想看 GLM-5.2 在大型私有工程 codebase 上的表現，可以看這個案例，因為 Databricks 說，他們覆蓋 3000 多名工程師工作的內部評估發現 GLM 5.2 表現非常強，而且只靠 harness 選擇不同就能把成本壓到約 2x。 | 評測 |
 | [Case 190: NatureBench Open-Weight Runner-Up](#case-190) | 如果你想看 GLM-5.2 在 scientific-agent 工作裡的基準表現，可以看這個案例，因為 NatureBench 說它在 6 個科學領域、90 個任務上首發即總榜第二，並拿到 open-weight 第一。 | 基準 |
@@ -189,6 +190,7 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 208: Open Molecular Viewer Agent Stack](#case-208) | 如果你想把 GLM-5.2 接到一條開放的科學檢視 workflow，可以看這個案例，因為 MaziyarPanahi 把經由 Hugging Face Inference Providers 的 GLM-5.2，和跑在 llama.cpp 上的 Qwen3-VL、Mol*、PydanticAI 串在一起，用單一 prompt 就把 EGFR 加 erlotinib 的結構 render 並做出評論。 | 整合 |
 | [Case 204: Perplexity Advisor WANDR Cost Baseline](#case-204) | 如果你想估算 GLM-5.2 在 routing 式 computer-use harness 裡的成本結構，可以看這個案例，因為 Perplexity 說它的 GLM 5.2 加 advisor 配置在 WANDR 上是 2.1x，而 Opus 是 6.1x，整體 benchmark 成本也接近一半。 | 評測 |
 | [Case 203: Coworker Open Artifacts Routing](#case-203) | 如果你想把 GLM-5.2 放進企業 artifact 工作流，可以看這個案例，因為 Coworker 說 Open Artifacts 能做 docs、decks、PDF、spreadsheets、dashboards 和 apps，而且 optimized router 能把 token 使用量壓到約 5 分之 1，同時仍提供美國託管的 GLM 5.2。 | 整合 |
 | [Case 201: DotCode Context Upload Workflow](#case-201) | 如果你想在私有 coding sandbox 裡給 GLM-5.2 更多專案上下文，可以看這個案例，因為 DotCode 給 GLM 5.2 加上了 screenshot、圖片、CSV、PDF、原始碼檔案和 zip 上傳，並把這些都接進同一條 filesystem + terminal 工作流。 | 整合 |
@@ -244,6 +246,8 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 209: Colibri 25GB RAM Sparse Streaming](#case-209) | 如果你想理解本地 GLM-5.2 實驗的新下限，可以看這個案例，因為 techNmak 詳細說明 Colibrì 如何靠著從 NVMe 串流 experts，用大約 25GB RAM 跑起 744B MoE，不過最小配置只有大約 0.05 到 0.1 tok/s。 | 示範 |
+| [Case 206: SGLang NVFP4 Production Throughput](#case-206) | 如果你想估算 GLM-5.2 NVFP4 的正式 SGLang serving 規模，可以看這個案例，因為官方 SGLang v0.5.15 release 說在 batch size 1 下，8x B300 可達每位使用者 500+ tok/s，4x GB300 可達 450 tok/s。 | 評估 |
 | [Case 191: Hermes-Built LiteLLM Local Lab](#case-191) | 如果你想把 GLM-5.2 當作 coding agent 來搭一個本地 inference lab，可以看這個案例，因為原貼文說 Hermes Agent + GLM-5.2 把 LiteLLM、Postgres、Prometheus 和 Grafana 都接在了一套 M3 Ultra 環境上。 | 整合 |
 | [Case 187: Dual M5 Max Offline Droneship Sim](#case-187) | 如果你想估算一套完全離線的 Apple Silicon GLM-5.2 agent 到底能做什麼，可以看這個案例，因為 XavierLocalAI 報告了一個 753B 配置：在兩台 128GB M5 Max 上以 26 tok/s 編寫 droneship landing simulator。 | 示範 |
 | [Case 186: 5x DGX Spark Production Harness](#case-186) | 如果你想判斷 5 節點 DGX Spark 配置是否已經足夠支撐 production 級 GLM-5.2 工作，可以看這個案例，因為 thatcofffeeguy 報告了在 400K context 下單流約 13.9 tok/s，以及 3 條 lane 合計 19.9 tok/s 的 live harness 結果。 | 示範 |
@@ -1345,6 +1349,16 @@ ClaudeCode_UT 給出六個步驟：建立免費 Cloudflare 帳號、複製 Worke
 
 ---
 
+<a id="case-208"></a>
+### Case 208: [Open Molecular Viewer Agent Stack](https://x.com/MaziyarPanahi/status/2075913552854933869) (作者 [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**如果你想把 GLM-5.2 接到一條開放的科學檢視 workflow，可以看這個案例，因為 MaziyarPanahi 把經由 Hugging Face Inference Providers 的 GLM-5.2，和跑在 llama.cpp 上的 Qwen3-VL、Mol*、PydanticAI 串在一起，用單一 prompt 就把 EGFR 加 erlotinib 的結構 render 並做出評論。**
+
+MaziyarPanahi 描述了一套完全開放的 stack：GLM-5.2 透過 Hugging Face Inference Providers 擔任語言核心，Qwen3-VL 透過 llama.cpp 做視覺檢查，Mol* 負責把結構 render 出來，而 PydanticAI 協調 agent layer。貼文說，這條 workflow 以 RCSB PDB 的 EGFR 加 erlotinib 範例為核心，用單一 prompt 產出六個 render，因此它不是單純的可用性公告，而是一條具體的多工具科學 agent 整合案例。
+
+類型：整合 | 日期：2026-07-11
+
+---
 <a id="case-204"></a>
 ### Case 204: [Perplexity Advisor WANDR Cost Baseline](https://x.com/perplexity_ai/status/2075229779716973030) (作者 [@perplexity_ai](https://x.com/perplexity_ai))
 
@@ -1375,6 +1389,16 @@ Coworker 說，Open Artifacts 可以生成 docs、decks、dashboards、spreadshe
 DotCode 說，GLM 5.2 現在已經能配合 contextual workspace uploads 使用，agent 可以檢查檔案、瀏覽專案結構、編輯程式碼、執行 terminal 命令，並且在同一個 sandbox 裡連續工作。貼文列出了支援的輸入類型，也寫出了從 prompt + files 到 sandbox execution 的流程，把這件事定義成朝「基於真實專案上下文的 coding agent 工作」邁出的一步。
 
 類型: 整合 | 日期: 2026-07-08
+
+---
+<a id="case-209"></a>
+### Case 209: [Colibri 25GB RAM Sparse Streaming](https://x.com/techNmak/status/2075872446197158361) (作者 [@techNmak](https://x.com/techNmak))
+
+**如果你想理解本地 GLM-5.2 實驗的新下限，可以看這個案例，因為 techNmak 詳細說明 Colibrì 如何靠著從 NVMe 串流 experts，用大約 25GB RAM 跑起 744B MoE，不過最小配置只有大約 0.05 到 0.1 tok/s。**
+
+techNmak 把 Colibrì 總結成一個純 C 的本地 inference engine：只把持續會用到的 hot weights 留在 RAM，把路由到的 experts 放在 NVMe，上線後大約有 9.9GB 長駐、聊天時 RAM 峰值約 20GB，而 int4 權重大約占 370GB 磁碟。貼文也明確把這件事定位成 systems proof of concept，而不是快速的 production serving，因為 25GB 機器上的 cold generation 只有大約 0.05 到 0.1 tok/s，而且 int4 量化對品質的影響還沒有被完整 benchmark。
+
+類型：示範 | 日期：2026-07-11
 
 ---
 <a id="case-206"></a>

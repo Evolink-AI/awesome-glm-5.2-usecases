@@ -37,7 +37,7 @@ Cada título de caso enlaza a su fuente pública y cada usuario enlaza al perfil
 
 ## 📊 Resumen
 
-- **205 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
+- **209 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
 - Cubre evaluaciones comparativas y evaluación de frontera, agentes de código y flujos de contexto largo, demos prácticas y muestras, integraciones de proveedores y herramientas, coste, precios y despliegue local, límites, advertencias y señales de seguridad.
 - Cada caso incluye la fuente original, la atribución del creador, un takeaway de uso conciso, el tipo de evidencia y la fecha de publicación.
 - Usa este repo para encontrar flujos prácticos, comparar fortalezas y límites, descubrir rutas de proveedor y seguir experimentos reales.
@@ -77,11 +77,11 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Sección | Casos |
 |---|---|
-| [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199 |
+| [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
 | [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
 | [🎮 Demos prácticas y muestras](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
-| [🔌 Integraciones de proveedores y herramientas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204 |
-| [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191 |
+| [🔌 Integraciones de proveedores y herramientas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
+| [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
 | [🧭 Límites, advertencias y señales de seguridad](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
 | [🙏 Agradecimientos](#acknowledge) | Créditos y política de correcciones |
 
@@ -89,6 +89,7 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 207: Stable Fluids Browser Benchmark](#case-207) | Usa este caso para comparar GLM-5.2 en builds de física de navegador con mucha carga algorítmica, porque AlicanKiraz0 ejecutó un benchmark HTML de Stable Fluids y dio a GLM 5.2 Max 88 sobre 100 por unos 1,17 dólares. | Evaluación |
 | [Case 199: Epoch Open-Weight Index Lead](#case-199) | Usa este caso para ubicar GLM-5.2 en una curva de capacidad de largo plazo, porque Epoch AI estima una puntuación de 152 en su Capabilities Index y lo llama el mejor open weight de su conjunto evaluado. | Benchmark |
 | [Case 196: Databricks Internal Harness Eval](#case-196) | Usa este caso para benchmarkear GLM-5.2 sobre una gran codebase privada de ingeniería, porque Databricks dice que su evaluación interna sobre trabajo de más de 3.000 engineers mostró que GLM 5.2 rindió muy bien y que solo elegir mejor el harness puede recortar el coste alrededor de 2x. | Evaluación |
 | [Case 190: NatureBench Open-Weight Runner-Up](#case-190) | Usa este caso para benchmarkear GLM-5.2 en trabajo de agentes científicos, porque NatureBench dice que GLM-5.2 debutó como número dos global y lideró a los open weights en 90 tareas de seis dominios científicos. | Benchmark |
@@ -188,6 +189,7 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 208: Open Molecular Viewer Agent Stack](#case-208) | Usa este caso para conectar GLM-5.2 a un flujo abierto de inspección científica, porque MaziyarPanahi combinó GLM-5.2 vía Hugging Face Inference Providers con Qwen3-VL sobre llama.cpp, Mol* y PydanticAI para renderizar y criticar una estructura EGFR más erlotinib con un solo prompt. | Integración |
 | [Case 204: Perplexity Advisor WANDR Cost Baseline](#case-204) | Usa este caso para estimar la economía de GLM-5.2 dentro de un harness de computer use con routing, porque Perplexity dice que su configuración de GLM 5.2 más advisor marca 2.1x en WANDR frente a 6.1x de Opus, con un coste medio cercano a la mitad en los benchmarks. | Evaluación |
 | [Case 203: Coworker Open Artifacts Routing](#case-203) | Usa este caso para llevar GLM-5.2 a workflows empresariales de artifacts, porque Coworker dice que Open Artifacts puede construir docs, decks, PDF, spreadsheets, dashboards y apps mientras su router optimizado reduce el uso de tokens en torno a 5x y sigue ofreciendo GLM 5.2 alojado en EE. UU. | Integración |
 | [Case 201: DotCode Context Upload Workflow](#case-201) | Usa este caso para dar a GLM-5.2 más contexto de proyecto dentro de una sandbox privada de coding, porque DotCode añadió soporte para GLM 5.2 junto con uploads de screenshots, imágenes, CSV, PDF, source files y zips que alimentan el mismo flujo de filesystem y terminal. | Integración |
@@ -238,6 +240,8 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 209: Colibri 25GB RAM Sparse Streaming](#case-209) | Usa este caso para entender el nuevo suelo práctico del despliegue local de GLM-5.2, porque techNmak explica cómo Colibrì ejecuta el MoE 744B con unos 25 GB de RAM mediante streaming de expertos desde NVMe, aunque la configuración más pequeña solo logra alrededor de 0,05 a 0,1 tok/s. | Demostración |
+| [Case 206: SGLang NVFP4 Production Throughput](#case-206) | Usa este caso para dimensionar serving productivo de SGLang para GLM-5.2 NVFP4, porque la release oficial de SGLang v0.5.15 dice que ahora alcanza más de 500 tok/s por usuario en 8x B300 y 450 en 4x GB300 con batch size 1. | Evaluación |
 | [Case 191: Hermes-Built LiteLLM Local Lab](#case-191) | Usa este caso para arrancar un laboratorio local de inferencia con GLM-5.2 como agente de código, porque la fuente dice que Hermes Agent más GLM-5.2 conectaron LiteLLM, Postgres, Prometheus y Grafana alrededor de una configuración con M3 Ultra. | Integración |
 | [Case 187: Dual M5 Max Offline Droneship Sim](#case-187) | Usa este caso para estimar qué puede hacer un agente GLM-5.2 sobre Apple Silicon funcionando totalmente offline, porque XavierLocalAI reporta una instalación 753B escribiendo un simulador de aterrizaje en droneship a 26 tok/s sobre dos máquinas M5 Max de 128 GB. | Demostración |
 | [Case 186: 5x DGX Spark Production Harness](#case-186) | Usa este caso para juzgar si una configuración de cinco nodos DGX Spark basta para trabajo productivo con GLM-5.2, porque thatcofffeeguy reporta unos 13,9 tok/s en un solo stream con 400K de contexto y 19,9 tok/s agregados en tres lanes dentro de un harness en vivo. | Demostración |
@@ -1337,6 +1341,16 @@ Tipo: Tutorial | Fecha: 2026-07-03
 
 ---
 
+<a id="case-208"></a>
+### Case 208: [Open Molecular Viewer Agent Stack](https://x.com/MaziyarPanahi/status/2075913552854933869) (por [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**Usa este caso para conectar GLM-5.2 a un flujo abierto de inspección científica, porque MaziyarPanahi combinó GLM-5.2 vía Hugging Face Inference Providers con Qwen3-VL sobre llama.cpp, Mol* y PydanticAI para renderizar y criticar una estructura EGFR más erlotinib con un solo prompt.**
+
+MaziyarPanahi describe una pila completamente abierta donde GLM-5.2 actúa como cerebro de lenguaje mediante Hugging Face Inference Providers, Qwen3-VL se ocupa de la inspección visual sobre llama.cpp, Mol* renderiza la estructura y PydanticAI coordina la capa de agente. El post dice que el flujo produjo seis renders desde un solo prompt sobre un ejemplo de EGFR más erlotinib tomado del RCSB PDB, lo que lo convierte en una integración científica multiherramienta concreta y no en un simple anuncio de disponibilidad.
+
+Tipo: Integración | Fecha: 2026-07-11
+
+---
 <a id="case-204"></a>
 ### Case 204: [Perplexity Advisor WANDR Cost Baseline](https://x.com/perplexity_ai/status/2075229779716973030) (por [@perplexity_ai](https://x.com/perplexity_ai))
 
@@ -1367,6 +1381,16 @@ Tipo: Integración | Fecha: 2026-07-09
 DotCode dice que GLM 5.2 ahora funciona con uploads contextuales de workspace para que los agentes puedan inspeccionar archivos, navegar la estructura del proyecto, editar código, ejecutar comandos de terminal y continuar dentro de la misma sandbox. El post enumera las entradas soportadas, muestra el flujo de prompt más archivos hacia la ejecución en sandbox y lo presenta como un paso hacia trabajo real de coding agent basado en contexto auténtico de proyecto.
 
 Tipo: Integración | Fecha: 2026-07-08
+
+---
+<a id="case-209"></a>
+### Case 209: [Colibri 25GB RAM Sparse Streaming](https://x.com/techNmak/status/2075872446197158361) (por [@techNmak](https://x.com/techNmak))
+
+**Usa este caso para entender el nuevo suelo práctico del despliegue local de GLM-5.2, porque techNmak explica cómo Colibrì ejecuta el MoE 744B con unos 25 GB de RAM mediante streaming de expertos desde NVMe, aunque la configuración más pequeña solo logra alrededor de 0,05 a 0,1 tok/s.**
+
+techNmak resume Colibrì como un motor local de inferencia en C puro que mantiene en RAM solo los pesos siempre calientes y deja los expertos enrutados en NVMe, con unos 9,9 GB residentes de forma permanente, alrededor de 20 GB de pico de RAM durante el chat y unos 370 GB de pesos int4 en disco. El post presenta explícitamente el resultado como una prueba de concepto de sistemas y no como serving rápido en producción, porque la generación en frío sobre la máquina de 25 GB se queda en torno a 0,05 a 0,1 tok/s y el impacto de calidad de la cuantización int4 todavía no está completamente benchmarkeado.
+
+Tipo: Demostración | Fecha: 2026-07-11
 
 ---
 <a id="case-206"></a>
