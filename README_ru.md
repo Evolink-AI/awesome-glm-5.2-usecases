@@ -2626,4 +2626,4 @@ Type: Limit | Date: 2026-06-23
 
 Если у вас есть еще интересные реальные кейсы использования GLM-5.2, откройте issue или pull request и помогите расширить библиотеку usecase от Evolink.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=EvoLinkAI/awesome-glm-5.2-usecases&type=Date)](https://www.star-history.com/#EvoLinkAI/awesome-glm-5.2-usecases&Date)
+[![Star History Chart](https://pub-62cf7640cd0f4066b60933bd2e9b85ef.r2.dev/github-repo-media/awesome-glm-5.2-usecases/images/star-history.svg)](https://www.star-history.com/#EvoLinkAI/awesome-glm-5.2-usecases&Date)
