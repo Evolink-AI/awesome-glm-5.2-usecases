@@ -1,0 +1,24 @@
+{
+  "public_artifact_boundary": {
+    "json": "public-tracked",
+    "scripts": "public-tracked"
+  },
+  "namespace": {
+    "heading_prefix": "Case",
+    "anchor_prefix": "case",
+    "section_anchor": "",
+    "numbering_order": "set-contiguous",
+    "menu_policy": "per-case",
+    "category_anchors": []
+  },
+  "requirements": {
+    "takeaway": true,
+    "localized_title_translation": true,
+    "localized_title_translation_exempt_numbers": []
+  },
+  "structured_data": {
+    "path": "data/glm-5.2-usecase-curated.json",
+    "items_key": "items",
+    "source_field": "source_url"
+  }
+}

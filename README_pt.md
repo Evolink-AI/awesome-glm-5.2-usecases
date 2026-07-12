@@ -1,11 +1,10 @@
 <div align="center">
 
-<a href="https://evolink.ai/glm-5-2?utm_source=github&utm_medium=banner&utm_campaign=awesome-glm-5.2-usecases"><img src="images/en.jpg" alt="Repositório de use cases GLM-5.2 banner" width="760"></a>
+<a href="https://evolink.ai/glm-5-2?utm_source=github&utm_medium=banner&utm_campaign=awesome-glm-5.2-usecases&utm_content=readme_banner"><img src="https://pub-62cf7640cd0f4066b60933bd2e9b85ef.r2.dev/github-repo-media/awesome-glm-5.2-usecases/images/en.jpg" alt="Repositório de use cases GLM-5.2 banner" width="760"></a>
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](LICENSE)
-[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=badge&utm_campaign=awesome-glm-5.2-usecases)
-[![Website](https://img.shields.io/badge/Website-Live-orange)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=badge&utm_campaign=awesome-glm-5.2-usecases)
-[![Docs](https://img.shields.io/badge/Docs-Read-blue)](https://docs.evolink.ai?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[![Try it on Evolink](https://img.shields.io/badge/Try_it_on-Evolink-black)](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=badge&utm_campaign=awesome-glm-5.2-usecases&utm_content=top_badge)
+[![Docs](https://img.shields.io/badge/Docs-Read-blue)](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api?utm_source=github&utm_medium=docs&utm_campaign=awesome-glm-5.2-usecases&utm_content=docs_link)
 
 [![English](https://img.shields.io/badge/English-111111)](README.md)
 [![Español](https://img.shields.io/badge/Espa%C3%B1ol-ffb703)](README_es.md)
@@ -33,7 +32,7 @@ Este README localizado foca casos com workflows concretos, evidência pública d
 
 Cada título de caso aponta para a fonte pública, e cada autor aponta para o perfil do criador.
 
-[Testar GLM-5.2 no Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases)
+[Testar GLM-5.2 no Evolink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases&utm_content=introduction_cta)
 
 ## 📊 Visão Geral
 
@@ -51,7 +50,9 @@ Cada título de caso aponta para a fonte pública, e cada autor aponta para o pe
 <a id="quick-start"></a>
 ## ⚡ Quick Start
 
-Use o GLM-5.2 pela API Chat Completions compatível com OpenAI da Evolink. Obtenha uma API key na [Evolink](https://evolink.ai/dashboard/keys?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=api_key) e defina-a como `EVOLINK_API_KEY` antes de executar a chamada.
+[Abrir GLM-5.2 na EvoLink](https://evolink.ai/glm-5-2?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=model_link).
+
+Use o GLM-5.2 pela API Chat Completions compatível com OpenAI da Evolink. Obtenha uma API key na [Obtenha sua chave de API](https://evolink.ai/dashboard/keys?utm_source=github&utm_medium=quickstart&utm_campaign=awesome-glm-5.2-usecases&utm_content=api_key) e defina-a como `EVOLINK_API_KEY` antes de executar a chamada.
 
 ```bash
 export EVOLINK_API_KEY="your_api_key_here"
@@ -71,7 +72,7 @@ curl --request POST \
   }'
 ```
 
-Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api?utm_source=github&utm_medium=readme&utm_campaign=awesome-glm-5.2-usecases).
+Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api?utm_source=github&utm_medium=docs&utm_campaign=awesome-glm-5.2-usecases&utm_content=first_run).
 
 ## 📑 Menu
 
@@ -83,1059 +84,1084 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 | [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
 | [💸 Custo, preços e implantação local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
 | [🧭 Limites, ressalvas e sinais de segurança](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
+| [Repositórios relacionados](#related-repositories) | Rota de API verificada e superfícies adjacentes |
 | [🙏 Agradecimentos](#acknowledge) | Créditos e política de correções |
 
 ### [📏 Avaliações comparativas e avaliação de fronteira](#benchmarks-frontier-evaluation)
 
 | Caso | Foco | Tipo |
 |---|---|---|
-| [Case 207: Stable Fluids Browser Benchmark](#case-207) | Use este caso para comparar o GLM-5.2 em builds de física de navegador com carga algorítmica, porque AlicanKiraz0 executou um benchmark HTML de Stable Fluids e deu ao GLM 5.2 Max 88 em 100 por cerca de 1,17 dólar. | Avaliação |
-| [Case 199: Epoch Open-Weight Index Lead](#case-199) | Use este caso para posicionar o GLM-5.2 numa curva de capacidade de longo prazo, porque a Epoch AI estima uma pontuação de 152 no seu Capabilities Index e diz que é o melhor modelo open weight do conjunto que avaliou. | Benchmark |
-| [Case 196: Databricks Internal Harness Eval](#case-196) | Use este caso para benchmarkear o GLM-5.2 numa grande codebase privada de engenharia, porque a Databricks diz que a sua avaliação interna sobre trabalho de mais de 3.000 engineers mostrou que o GLM 5.2 teve um desempenho muito forte e que só a escolha do harness pode cortar o custo em cerca de 2x. | Avaliação |
-| [Case 190: NatureBench Open-Weight Runner-Up](#case-190) | Use este caso para benchmarkear o GLM-5.2 em trabalho de agente científico, porque o NatureBench diz que o GLM-5.2 estreou em segundo lugar geral e liderou os open weights em 90 tarefas de seis domínios científicos. | Benchmark |
-| [Case 189: Terminal-Bench 45-Task Cost Tradeoff](#case-189) | Use este caso para comparar GLM-5.2 com GPT-5.5 no mesmo harness de agente, porque uma rodada de 45 tarefas do Terminal-Bench colocou o GLM-5.2 em 25 vitórias contra 29 do GPT-5.5, com cerca de 40% menos custo usando prompt caching. | Avaliação |
-| [Case 188: Harvey LAB-AA Legal-Agent Tie](#case-188) | Use este caso para benchmarkear o GLM-5.2 em trabalho real de agente jurídico, porque o Harvey LAB-AA coloca o GLM-5.2 Max em 7,5% de all-pass, empatado com Claude Opus 4.8 em 120 tarefas privadas de 24 áreas legais. | Benchmark |
-| [Case 184: AutomationBench-AA Open-Weights Lead](#case-184) | Use este caso para comparar o GLM-5.2 em automação SaaS com regras de negócio, e não apenas em benchmarks de código, porque a Artificial Analysis reporta 27,8% para o GLM-5.2 Max e o chama de líder open weights no AutomationBench-AA. | Avaliação |
-| [Case 178: Three-Body Simulator Benchmark Win](#case-178) | Use este caso para comparar o GLM-5.2 em benchmarks de programação com física numérica, porque AlicanKiraz0 executou uma tarefa caótica de simulador de três corpos e deu ao GLM 5.2 Max a melhor nota, 91 de 100. | Avaliação |
-| [Case 175: Cursor Double Pendulum Scorecard](#case-175) | Use este caso para comparar o GLM-5.2 em um benchmark de coding no Cursor com tarefa restrita, porque AlicanKiraz0 rodou seis modelos em um simulador HTML de pêndulo duplo e deu ao GLM 5.2 Max 88 de 100, atrás de Fable e Sonnet, mas à frente de GPT-5.5, Kimi K2.7 Code e Composer. | Avaliação |
-| [Case 162: VulcanBench 10-Task 80 Percent Tie](#case-162) | Use este caso para comparar o GLM-5.2 em tarefas reais de engenharia pós-cutoff onde custo importa tanto quanto score, porque Morgan Linton diz que o VulcanBench deu a GLM 5.2 High, Fable 5 Low e Sonnet 5 High o mesmo 80 por cento em 10 repositórios, enquanto o GLM ficou no meio em custo. | Avaliação |
-| [Case 159: SWE-Rebench 51.1 Percent Checkpoint](#case-159) | Use este caso para acompanhar o GLM-5.2 em um leaderboard de SWE agents que se atualiza continuamente, porque a última postagem do SWE rebench relata 51,1 por cento com 2,62 milhões de tokens, claramente à frente das novas execuções de DeepSeek, MiMo, Qwen e Gemma. | Avaliação |
-| [Case 154: LaunchDarkly Edge-Case Win At 40/41](#case-154) | Use este caso para testar o GLM-5.2 em trabalho de agentes com ferramentas de negócio em vez de avaliações só de chat, porque a Composio relata 40 de 41 em tarefas com GitHub, Jira e LaunchDarkly e diz que o GLM foi o único modelo a captar um caso de borda de aprovação pendente. | Avaliação |
-| [Case 120: PostTrainBench Reliability Lead](#case-120) | Use este caso para comparar o GLM-5.2 Max em confiabilidade de agentes pós-treinamento, não só pela pontuação principal, porque a tabela também registra zero execuções falhas em 84 tarefas. | Benchmark |
-| [Case 121: Fireworks + Faros 211-Task Repo Eval](#case-121) | Use este caso para julgar o GLM-5.2 em tarefas reais de engenharia em repositórios privados, em vez de depender apenas de benchmarks públicos, porque o resultado publicado inclui nota, velocidade e custo por tarefa. | Evaluation |
-| [Case 110: AA-Briefcase Time-Per-Task Frontier](#case-110) | Use este caso para comparar o GLM-5.2 em tarefas de conhecimento de longo horizonte em que o tempo por tarefa importa junto com a pontuação de benchmark. | Benchmark |
-| [Case 111: Code Arena Frontend Head-to-Head Margins](#case-111) | Use este caso para inspecionar a vantagem do GLM-5.2 em frontend por resultados pareados cara a cara, em vez de depender de uma única captura de ranking. | Benchmark |
-| [Case 113: SWE Atlas Codebase QnA Runner-Up](#case-113) | Use este caso para acompanhar o GLM-5.2 em Codebase QnA, escrita de testes e refatoração, em vez de olhar apenas rankings SWE de tarefa única. | Benchmark |
-| [Artificial Analysis Intelligence Index](#case-1) | Use a postagem de Análise Artificial para comparar o GLM-5.2 com outros modelos de fronteira proprietários e de peso aberto em inteligência e custo por tarefa. | Referência |
-| [Code Arena Frontend Ranking](#case-2) | Use este caso para avaliar o GLM-5.2 em tarefas reais de codificação de front-end avaliadas por comparações no estilo arena. | Referência |
-| [Design Arena First Place](#case-3) | Use este caso para julgar se o GLM-5.2 pode lidar com tarefas de design mais código em vez de apenas benchmarks de codificação com muito texto. | Referência |
-| [FrontierSWE Result](#case-4) | Use a postagem FrontierSWE para comparar o GLM-5.2 com os modelos GPT-5.5, Opus e estilo Fable em tarefas de engenharia de software. | Referência |
-| [DeepSWE Open-Source Lead](#case-5) | Use o caso DeepSWE para entender o GLM-5.2 como um modelo aberto forte para tarefas difíceis de avaliação de engenharia de software. | Referência |
-| [Terminal-Bench Over 80 Percent](#case-6) | Use este caso ao avaliar o GLM-5.2 para codificação orientada a terminal e fluxos de trabalho de agente. | Referência |
-| [Comparação do SWELancer com GPT-5.5](#case-7) | Use este caso SWELancer como uma comparação multimétrica concreta entre GLM-5.2 e GPT-5.5 sobre sucesso de tarefa, recompensa e tempo de conclusão. | Avaliação |
-| [BridgeBench Perfect Score Signal](#case-8) | Use este caso para inspecionar o GLM-5.2 com base no raciocínio fundamentado em várias etapas, em vez de apenas codificar tabelas de classificação. | Referência |
-| [BridgeBench Reasoning Number One](#case-9) | Use este caso para comparar o GLM-5.2 com modelos de fronteira fechada em tarefas de raciocínio fundamentado. | Referência |
-| [KernelBench-Hard Without Shortcutting](#case-10) | Use este caso ao verificar se os ganhos de benchmark provêm de um comportamento de implementação válido em vez de atalhos. | Avaliação |
-| [Runescape Bench Catch-Up](#case-11) | Use este caso como um sinal rápido para o progresso do modelo de peso aberto em tarefas de benchmark semelhantes a jogos. | Referência |
-| [BridgeBench Speed Improvement](#case-12) | Use este caso para avaliar fluxos de trabalho sensíveis à latência, onde a velocidade é importante junto com a inteligência. | Referência |
-| [Codificação KernelBench Hard e Mega GPU](#case-60) | Use este caso para avaliar o GLM-5.2 na codificação do kernel da GPU em KernelBench-Hard e KernelBench-Mega, onde os rastreamentos de agente aberto tornam o resultado inspecionável. | Referência |
-| [Liderança open-source no DeepSWE em esforço máximo](#case-70) | Use este caso para acompanhar o GLM-5.2 no DeepSWE em esforço máximo, onde o leaderboard publicado o coloca em primeiro entre os modelos abertos com 44% de pass@1. | Referência |
-| [Vice-campeão em benchmark de debate LLM](#case-72) | Use este caso para avaliar o GLM-5.2 além de tarefas de código em debates adversariais multi-turno, onde a variante de raciocínio máximo ficou em segundo atrás dos modelos Claude. | Referência |
-| [Taxa de alucinação no AA-Omniscience](#case-76) | Use este caso para comparar o GLM-5.2 em tratamento de incerteza, onde o resultado publicado do AA-Omniscience mostra taxa de alucinação menor que a de vários outros modelos frontier. | Avaliação |
-| [Case 90: GDPval-AA Agentic Work Index](#case-90) | Use este caso para comparar o GLM-5.2 em trabalho de conhecimento de longo horizonte, em vez de rankings focados apenas em código. | Avaliação |
-| [Case 94: Game Dev Arena Runner-Up](#case-94) | Use este caso para julgar a qualidade do GLM-5.2 em criação de jogos, em que o modelo chegou ao segundo lugar no Game Dev Arena e se tornou o laboratório open-weight mais bem colocado nesse ranking. | Avaliação |
+| [Case 207: Referência de navegador de fluidos estáveis](#case-207) | Use este caso para comparar o GLM-5.2 em builds de física para browser carregados de algoritmo, porque AlicanKiraz0 executou um benchmark HTML de Stable Fluids e deu ao GLM 5.2 Max 88 em 100 por cerca de 1,17 dólares, à frente de Opus 4.8 e Fable 5 mas atrás de GPT 5.6 Sol. | Evaluation |
+| [Case 199: Líder do índice Epoch Open-Weight](#case-199) | Use este caso para posicionar o GLM-5.2 numa curva de capacidade de longo prazo, porque a Epoch AI estima uma pontuação de 152 no seu Capabilities Index e diz que é o melhor modelo open weight do conjunto que avaliou. | Benchmark |
+| [Case 196: Avaliação do chicote interno do Databricks](#case-196) | Use este caso para benchmarkear o GLM-5.2 numa grande codebase privada de engenharia, porque a Databricks diz que a sua avaliação interna sobre trabalho de mais de 3.000 engineers mostrou que o GLM 5.2 teve um desempenho muito forte e que só a escolha do harness pode cortar o custo em cerca de 2x. | Evaluation |
+| [Case 190: Vice-campeão de peso aberto do NatureBench](#case-190) | Use este caso para benchmarkear o GLM-5.2 em trabalho de agente científico, porque o NatureBench diz que o GLM-5.2 estreou em segundo lugar geral e liderou os open weights em 90 tarefas de seis domínios científicos. | Benchmark |
+| [Case 189: Troca de custo de 45 tarefas entre terminal e banco](#case-189) | Use este caso para comparar GLM-5.2 com GPT-5.5 no mesmo harness de agente, porque uma rodada de 45 tarefas do Terminal-Bench colocou o GLM-5.2 em 25 vitórias contra 29 do GPT-5.5, com cerca de 40% menos custo usando prompt caching. | Evaluation |
+| [Case 188: Empate de agente jurídico Harvey LAB-AA](#case-188) | Use este caso para benchmarkear o GLM-5.2 em trabalho real de agente jurídico, porque o Harvey LAB-AA coloca o GLM-5.2 Max em 7,5% de all-pass, empatado com Claude Opus 4.8 em 120 tarefas privadas de 24 áreas legais. | Benchmark |
+| [Case 184: Líder de pesos abertos do AutomationBench-AA](#case-184) | Use este caso para comparar o GLM-5.2 em automação SaaS com regras de negócio, e não apenas em benchmarks de código, porque a Artificial Analysis reporta 27,8% para o GLM-5.2 Max e o chama de líder open weights no AutomationBench-AA. | Evaluation |
+| [Case 178: Vitória no benchmark do simulador de três corpos](#case-178) | Use este caso para comparar o GLM-5.2 em benchmarks de programação com física numérica, porque AlicanKiraz0 executou uma tarefa caótica de simulador de três corpos e deu ao GLM 5.2 Max a melhor nota, 91 de 100. | Evaluation |
+| [Case 167: Líder de código aberto GameDevBench 333-Task](#case-167) | Use este caso para acompanhar o GLM-5.2 em benchmarks de desenvolvimento de jogos agentic, porque o GameDevBench foi ampliado para 333 tarefas e diz que o GLM-5.2 agora é o modelo open-source mais forte do leaderboard mesmo sem visão. | Evaluation |
+| [Case 175: Pontuação do Pêndulo Duplo do Cursor](#case-175) | Use este caso para comparar o GLM-5.2 em um benchmark de coding no Cursor com tarefa restrita, porque AlicanKiraz0 rodou seis modelos em um simulador HTML de pêndulo duplo e deu ao GLM 5.2 Max 88 de 100, atrás de Fable e Sonnet, mas à frente de GPT-5.5, Kimi K2.7 Code e Composer. | Evaluation |
+| [Case 162: VulcanBench 10 tarefas com empate de 80 por cento](#case-162) | Use este caso para comparar o GLM-5.2 em tarefas reais de engenharia pós-cutoff onde custo importa tanto quanto score, porque Morgan Linton diz que o VulcanBench deu a GLM 5.2 High, Fable 5 Low e Sonnet 5 High o mesmo 80 por cento em 10 repositórios, enquanto o GLM ficou no meio em custo. | Evaluation |
+| [Case 159: Ponto de verificação SWE-Rebench de 51,1 por cento](#case-159) | Use este caso para acompanhar o GLM-5.2 em um leaderboard de SWE agents que se atualiza continuamente, porque a última postagem do SWE rebench relata 51,1 por cento com 2,62 milhões de tokens, claramente à frente das novas execuções de DeepSeek, MiMo, Qwen e Gemma. | Evaluation |
+| [Case 154: LaunchDarkly Edge-Case vence em 40/41](#case-154) | Use este caso para testar o GLM-5.2 em trabalho de agentes com ferramentas de negócio em vez de avaliações só de chat, porque a Composio relata 40 de 41 em tarefas com GitHub, Jira e LaunchDarkly e diz que o GLM foi o único modelo a captar um caso de borda de aprovação pendente. | Evaluation |
+| [Case 146: Vice-campeão do patch de peso aberto do CyberBench](#case-146) | Use este caso para medir o GLM-5.2 em busca e correção de vulnerabilidades com perfil ofensivo, porque o CyberBench o coloca em segundo lugar em 60 vulnerabilidades reais do OSS-Fuzz. | Evaluation |
+| [Case 1: Índice de Inteligência de Análise Artificial](#case-1) | Use a postagem de Análise Artificial para comparar o GLM-5.2 com outros modelos de fronteira proprietários e de peso aberto em inteligência e custo por tarefa. | Benchmark |
+| [Case 2: Classificação de front-end do Code Arena](#case-2) | Use este caso para avaliar o GLM-5.2 em tarefas reais de codificação de front-end avaliadas por comparações no estilo arena. | Benchmark |
+| [Case 3: Design Arena Primeiro Lugar](#case-3) | Use este caso para julgar se o GLM-5.2 pode lidar com tarefas de design mais código em vez de apenas benchmarks de codificação com muito texto. | Benchmark |
+| [Case 4: Resultado FrontierSWE](#case-4) | Use a postagem FrontierSWE para comparar o GLM-5.2 com os modelos GPT-5.5, Opus e estilo Fable em tarefas de engenharia de software. | Benchmark |
+| [Case 5: Líder de código aberto DeepSWE](#case-5) | Use o caso DeepSWE para entender o GLM-5.2 como um modelo aberto forte para tarefas difíceis de avaliação de engenharia de software. | Benchmark |
+| [Case 6: Terminal-banco acima de 80 por cento](#case-6) | Use este caso ao avaliar o GLM-5.2 para codificação orientada a terminal e fluxos de trabalho de agente. | Benchmark |
+| [Case 7: Comparação do SWELancer com GPT-5.5](#case-7) | Use este caso SWELancer como uma comparação multimétrica concreta entre GLM-5.2 e GPT-5.5 sobre sucesso de tarefa, recompensa e tempo de conclusão. | Evaluation |
+| [Case 8: Sinal de pontuação perfeita do BridgeBench](#case-8) | Use este caso para inspecionar o GLM-5.2 com base no raciocínio fundamentado em várias etapas, em vez de apenas codificar tabelas de classificação. | Benchmark |
+| [Case 9: Raciocínio número um do BridgeBench](#case-9) | Use este caso para comparar o GLM-5.2 com modelos de fronteira fechada em tarefas de raciocínio fundamentado. | Benchmark |
+| [Case 10: KernelBench-Hard sem atalhos](#case-10) | Use este caso ao verificar se os ganhos de benchmark provêm de um comportamento de implementação válido em vez de atalhos. | Evaluation |
+| [Case 11: Atualização do banco Runescape](#case-11) | Use este caso como um sinal rápido para o progresso do modelo de peso aberto em tarefas de benchmark semelhantes a jogos. | Benchmark |
+| [Case 12: Melhoria de velocidade do BridgeBench](#case-12) | Use este caso para avaliar fluxos de trabalho sensíveis à latência, onde a velocidade é importante junto com a inteligência. | Benchmark |
+| [Case 60: Codificação KernelBench Hard e Mega GPU](#case-60) | Use este caso para avaliar o GLM-5.2 na codificação do kernel da GPU em KernelBench-Hard e KernelBench-Mega, onde os rastreamentos de agente aberto tornam o resultado inspecionável. | Benchmark |
+| [Case 70: Liderança open-source no DeepSWE em esforço máximo](#case-70) | Use este caso para acompanhar o GLM-5.2 no DeepSWE em esforço máximo, onde o leaderboard publicado o coloca em primeiro entre os modelos abertos com 44% de pass@1. | Benchmark |
+| [Case 72: Vice-campeão em benchmark de debate LLM](#case-72) | Use este caso para avaliar o GLM-5.2 além de tarefas de código em debates adversariais multi-turno, onde a variante de raciocínio máximo ficou em segundo atrás dos modelos Claude. | Benchmark |
+| [Case 76: Taxa de alucinação no AA-Omniscience](#case-76) | Use este caso para comparar o GLM-5.2 em tratamento de incerteza, onde o resultado publicado do AA-Omniscience mostra taxa de alucinação menor que a de vários outros modelos frontier. | Evaluation |
+| [Case 90: Índice de Trabalho Agente GDPval-AA](#case-90) | Use este caso para comparar o GLM-5.2 em trabalho de conhecimento de longo horizonte, em vez de rankings focados apenas em código. | Evaluation |
+| [Case 102: Agente em segundo plano OpenInspect FP8](#case-102) | Use este caso para estudar uma pilha de agente em segundo plano auto-hospedada com GLM-5.2 em vez de um workflow de chat hospedado. | Integration |
+| [Case 94: Vice-campeão da Game Dev Arena](#case-94) | Use este caso para julgar a qualidade do GLM-5.2 em criação de jogos, em que o modelo chegou ao segundo lugar no Game Dev Arena e se tornou o laboratório open-weight mais bem colocado nesse ranking. | Evaluation |
+| [Case 120: Líder de confiabilidade PostTrainBench](#case-120) | Use este caso para comparar o GLM-5.2 Max em confiabilidade de agentes pós-treinamento, não só pela pontuação principal, porque a tabela também registra zero execuções falhas em 84 tarefas. | Benchmark |
+| [Case 121: Fireworks + Faros 211-Task Repo Avaliação](#case-121) | Use este caso para julgar o GLM-5.2 em tarefas reais de engenharia em repositórios privados, em vez de depender apenas de benchmarks públicos, porque o resultado publicado inclui nota, velocidade e custo por tarefa. | Evaluation |
+| [Case 110: Fronteira de tempo por tarefa da pasta AA](#case-110) | Use este caso para comparar o GLM-5.2 em tarefas de conhecimento de longo horizonte em que o tempo por tarefa importa junto com a pontuação de benchmark. | Benchmark |
+| [Case 111: Margens de confronto direto do Code Arena Frontend](#case-111) | Use este caso para inspecionar a vantagem do GLM-5.2 em frontend por resultados pareados cara a cara, em vez de depender de uma única captura de ranking. | Benchmark |
+| [Case 113: Vice-campeão SWE Atlas Codebase QnA](#case-113) | Use este caso para acompanhar o GLM-5.2 em Codebase QnA, escrita de testes e refatoração, em vez de olhar apenas rankings SWE de tarefa única. | Benchmark |
+| [Case 100: Jogo ludita após recusa de Claude](#case-100) | Use este caso para prototipar conceitos de jogo sensíveis a políticas com GLM-5.2 quando um modelo fechado recusa o pedido, e depois inspecionar por conta própria o resultado jogável. | Demo |
 
 ### [💻 Agentes de código e fluxos de trabalho de contexto longo](#coding-agents-long-context-workflows)
 
 | Caso | Foco | Tipo |
 |---|---|---|
-| [Case 194: CuTeDSL Kernel Skill Open Source](#case-194) | Use este caso para estudar o GLM-5.2 dentro de uma skill reutilizável de depuração de kernels, porque o autor open-sourcou uma skill Hermes para CuTeDSL e diz que o GLM-5.2 foi especialmente eficiente em custo ao depurar e escrever kernels. | Tutorial |
-| [Case 180: Hermes SSD Recovery Skill Loop](#case-180) | Use este caso para testar o GLM-5.2 dentro de um loop de agente voltado para reparo, porque ShankhadeepSho1 diz que Hermes mais GLM 5.2 diagnosticou um SSD de NAS com falha, corrigiu o problema e empacotou a solução como uma skill reutilizável. | Demonstração |
-| [Case 174: Role-Routed Heavy-Duty Coder Stack](#case-174) | Use este caso para colocar o GLM-5.2 como coder pesado dentro de uma pilha pessoal com roteamento por papéis, porque denizirgin diz que um mês de testes com Codex e OpenCode o levou a mandar o trabalho de coding mais pesado para o GLM 5.2 mantendo o orçamento mensal total em cerca de 120 a 140 dólares. | Avaliação |
-| [Case 155: Cotal Four-Agent TUI Loop](#case-155) | Use este caso para dividir um loop de codificação entre agentes especializados, porque o autor usou dois workers com GLM-5.2 sob um líder Opus e um revisor GPT para terminar uma TUI estilo lazygit em 47 minutos sem intervenção humana. | Demonstração |
-| [Case 153: Legacy Migration Cost-Cut Pilot](#case-153) | Use este caso para precificar o GLM-5.2 como o trabalhador mais barato dentro de um loop de modernização de legados, porque o piloto da 8090 diz que GLM mais Software Factory reduziu o custo em 16,4 vezes versus Opus 4.8 sozinho, embora tenha sido cerca de 3 vezes mais lento. | Avaliação |
-| [Case 145: Migração de redução de custo com OpenCode e Fireworks](#case-145) | Use este caso para testar se uma troca para um harness de open models já basta, porque o autor moveu tarefas pessoais de coding e loops para GLM-5.2 sobre Fireworks com OpenCode e diz que a conta de tokens caiu para um terço sem perda clara de qualidade no dia a dia. | Avaliação |
-| [Case 143: Fluxo com agregador GLM no Hermes MoA](#case-143) | Use este caso quando um turno de agente de alto valor justificar mais orquestração, porque a configuração Mixture of Agents do Hermes Agent combinou GLM-5.2 com outros modelos e obteve uma saída visivelmente melhor com um pequeno aumento de custo por tarefa no demo publicado. | Integração |
-| [Case 142: Diferença do harness com reasoning no Cline](#case-142) | Use este caso para avaliar o desenho do harness, e não apenas os pesos do modelo, porque o mesmo GLM-5.2 saltou de 57,3% para 68,5% nas mesmas tarefas de coding quando o harness ativou reasoning. | Avaliação |
-| [Case 136: Cursor + Fireworks 455M-Token Field Test](#case-136) | Use este caso para julgar o GLM-5.2 como um modelo diário sério no Cursor, porque o autor relata 455M tokens de uso real com serving rápido da Fireworks e nenhuma vontade imediata de voltar para Opus ou GPT-5.5. | Evaluation |
-| [Case 135: Devin Desktop Harness With Skill Portability](#case-135) | Use este caso para testar o GLM-5.2 dentro do Devin Desktop quando a própria superfície de coding da Z.ai parecer instável, porque o autor relata portabilidade mais fácil de skills, maior velocidade e melhor hackeabilidade ali. | Evaluation |
-| [Case 127: Pi Inline GLM Reviewer](#case-127) | Use este caso para adicionar um segundo revisor a um loop de agente de código estilo Pi, porque o autor relata que o GLM-5.2 pode aconselhar o Opus turno a turno com um aumento de custo de cerca de 10%. | Integration |
-| [Case 122: One-Shot Telegram Bot With AgentRouter](#case-122) | Use este caso para testar se o GLM-5.2 consegue inferir defaults com mentalidade de produção em uma build one-shot com agente de código, em vez de gerar apenas o caminho mínimo que funciona. | Demo |
-| [Case 117: OpenCode Go Refactor First-Pass Win](#case-117) | Use este caso para avaliar o GLM-5.2 em refatorações médias de Go dentro do OpenCode, em vez de se apoiar apenas em alegações de benchmark. | Evaluation |
-| [Case 119: Claude Code + Cursor $3.36 Default Run](#case-119) | Use este caso para medir o GLM-5.2 como modelo diário no Claude Code e no Cursor antes de mover mais trabalho autônomo de programação para pesos abertos. | Evaluation |
-| [One Hour Forty Two Minute Refactor Loop](#case-13) | Use este caso como um padrão para refatoração de front-end autônoma longa com TDD, feedback do revisor e verificações de regressão. | Demonstração |
-| [OpenCode Bug Fix And Implementation Test](#case-14) | Use este caso para testar o GLM-5.2 como um agente de codificação OpenCode para correções de bugs, além de uma pequena tarefa de implementação. | Demonstração |
-| [OpenCode Retro Video Game Walkthrough](#case-15) | Use este passo a passo para criar um pequeno jogo com GLM-5.2 e OpenCode a partir de um único prompt e, em seguida, inspecione como o modelo lida com os detalhes de implementação. | Tutorial |
-| [HTML5 Physics Simulations Contest](#case-16) | Use este caso para comparar o código GLM-5.2 e Kimi K2.7 em simulações de física HTML5 independentes sem bibliotecas. | Avaliação |
-| [Personal Site UI UX Build](#case-17) | Use este caso para solicitar ao GLM-5.2 um site pessoal sofisticado e inspecionar até que ponto várias voltas podem melhorar a UI/UX. | Demonstração |
-| [AI Contract Review Product Build](#case-18) | Use este caso para avaliar o GLM-5.2 em uma tarefa de construção de produto com PRD, orçamento de tempo, contagem de etapas, cota de uso e comparação de qualidade de código. | Avaliação |
-| [ZCode Goal Feature For Larger Development Objectives](#case-19) | Use este caso para entender como o GLM-5.2 é integrado ao ZCode 3.0 para tarefas maiores de desenvolvimento de agentes. | Integração |
-| [Linux Wrapper para ZCode construído com GLM-5.2](#case-20) | Use este caso como um exemplo de assistência do GLM-5.2 com ferramentas em ambientes de agente de codificação. | Demonstração |
-| [Computer Use Skill Packaging](#case-21) | Use este caso para estudar o GLM-5.2 como um auxiliar para transformar um repositório de uso de computador de código aberto em uma habilidade reutilizável. | Demonstração |
-| [ZCode 3.0 Agentic Development Environment Review](#case-22) | Use este caso para avaliar o GLM-5.2 dentro de um ambiente de desenvolvimento de agente completo, em vez de uma única sessão de chat. | Demonstração |
-| [Chicote OpenCode com veiculação local](#case-62) | Use este caso para testar o GLM-5.2 com o chicote OpenCode, serviço local e fluxos de trabalho de codificação com muitas ferramentas antes de compará-lo com Claude Opus. | Avaliação |
-| [Fast-RLM Long-Context Instruction Injection](#case-65) | Use este caso para melhorar a contagem de contexto longo do GLM-5.2 e o comportamento do agente REPL movendo instruções para o prompt do sistema RLM. | Integração |
-| [DeepAgents Code Open Harness Trial](#case-66) | Use este caso para testar o GLM-5.2 com um chicote de agente de codificação aberto e compare o modelo em um shell de agente reproduzível. | Demonstração |
-| [Roteamento de stack de agentes de marketing em produção](#case-77) | Use este caso para rotear o GLM-5.2 para workflows de agentes em produção que valorizam estrutura, velocidade e self-hosting, mantendo modelos fechados mais fortes para julgamentos ambíguos. | Avaliação |
-| [Case 91: Cline Repo Bug Fix Showdown](#case-91) | Use este caso para comparar GLM-5.2 e Opus 4.8 em uma correção de bug de repositório real, em que o GLM gastou mais tokens, mas entregou o patch final mais barato e mais limpo. | Avaliação |
-| [Case 102: OpenInspect FP8 Background Agent](#case-102) | Use este caso para estudar uma pilha de agente em segundo plano auto-hospedada com GLM-5.2 em vez de um workflow de chat hospedado. | Integração |
+| [Case 168: Conjunto Synthwave Hard-Slice por US$ 2,66](#case-168) | Use este caso para testar o GLM-5.2 dentro de um ensemble de coding com vários modelos, e não sozinho, porque a TracNetwork informa que uma mistura Synthwave com GLM marcou 46.3 por cento no LiveCodeBench hard por cerca de 2.66 dólares e superou cada gerador individual. | Integration |
+| [Case 194: Código aberto de habilidades do kernel CuTeDSL](#case-194) | Use este caso para estudar o GLM-5.2 dentro de uma skill reutilizável de depuração de kernels, porque o autor open-sourcou uma skill Hermes para CuTeDSL e diz que o GLM-5.2 foi especialmente eficiente em custo ao depurar e escrever kernels. | Tutorial |
+| [Case 180: Loop de habilidade de recuperação de SSD Hermes](#case-180) | Use este caso para testar o GLM-5.2 dentro de um loop de agente voltado para reparo, porque ShankhadeepSho1 diz que Hermes mais GLM 5.2 diagnosticou um SSD de NAS com falha, corrigiu o problema e empacotou a solução como uma skill reutilizável. | Demo |
+| [Case 174: Pilha de codificadores para serviço pesado com roteamento por função](#case-174) | Use este caso para colocar o GLM-5.2 como coder pesado dentro de uma pilha pessoal com roteamento por papéis, porque denizirgin diz que um mês de testes com Codex e OpenCode o levou a mandar o trabalho de coding mais pesado para o GLM 5.2 mantendo o orçamento mensal total em cerca de 120 a 140 dólares. | Evaluation |
+| [Case 155: Loop TUI de quatro agentes da Cotal](#case-155) | Use este caso para dividir um loop de codificação entre agentes especializados, porque o autor usou dois workers com GLM-5.2 sob um líder Opus e um revisor GPT para terminar uma TUI estilo lazygit em 47 minutos sem intervenção humana. | Demo |
+| [Case 153: Piloto legado de redução de custos de migração](#case-153) | Use este caso para precificar o GLM-5.2 como o trabalhador mais barato dentro de um loop de modernização de legados, porque o piloto da 8090 diz que GLM mais Software Factory reduziu o custo em 16,4 vezes versus Opus 4.8 sozinho, embora tenha sido cerca de 3 vezes mais lento. | Evaluation |
+| [Case 150: Navegador Mac Studio - Use Loop Local](#case-150) | Use este caso para testar se uma pilha totalmente local de GLM-5.2 consegue fazer trabalho leve de browser agent em hardware de consumo, porque o autor rodou llama.cpp num Mac Studio e usou browser-use para encontrar um modelo de PII no Hugging Face. | Demo |
+| [Case 148: Corte de custos de troca de agente Gumloop](#case-148) | Use este caso para testar uma troca direta de modelo dentro de um harness já existente, porque a Gumloop diz que moveu seus agentes mais usados para GLM-5.2 com cerca de 50% menos créditos e sem queda visível de qualidade. | Evaluation |
+| [Case 13: Loop de refatoração de uma hora e quarenta e dois minutos](#case-13) | Use este caso como um padrão para refatoração de front-end autônoma longa com TDD, feedback do revisor e verificações de regressão. | Demo |
+| [Case 14: Correção de bug e teste de implementação do OpenCode](#case-14) | Use este caso para testar o GLM-5.2 como um agente de codificação OpenCode para correções de bugs, além de uma pequena tarefa de implementação. | Demo |
+| [Case 15: Passo a passo do videogame retrô OpenCode](#case-15) | Use este passo a passo para criar um pequeno jogo com GLM-5.2 e OpenCode a partir de um único prompt e, em seguida, inspecione como o modelo lida com os detalhes de implementação. | Tutorial |
+| [Case 16: Concurso de Simulações de Física HTML5](#case-16) | Use este caso para comparar o código GLM-5.2 e Kimi K2.7 em simulações de física HTML5 independentes sem bibliotecas. | Evaluation |
+| [Case 17: Construção de UI UX de site pessoal](#case-17) | Use este caso para solicitar ao GLM-5.2 um site pessoal sofisticado e inspecionar até que ponto várias voltas podem melhorar a UI/UX. | Demo |
+| [Case 18: Construção de produto de revisão de contrato de IA](#case-18) | Use este caso para avaliar o GLM-5.2 em uma tarefa de construção de produto com PRD, orçamento de tempo, contagem de etapas, cota de uso e comparação de qualidade de código. | Evaluation |
+| [Case 19: Recurso de meta ZCode para objetivos de desenvolvimento maiores](#case-19) | Use este caso para entender como o GLM-5.2 é integrado ao ZCode 3.0 para tarefas maiores de desenvolvimento de agentes. | Integration |
+| [Case 20: Linux Wrapper para ZCode construído com GLM-5.2](#case-20) | Use este caso como um exemplo de assistência do GLM-5.2 com ferramentas em ambientes de agente de codificação. | Demo |
+| [Case 21: Pacote de habilidades para uso de computador](#case-21) | Use este caso para estudar o GLM-5.2 como um auxiliar para transformar um repositório de uso de computador de código aberto em uma habilidade reutilizável. | Demo |
+| [Case 22: Revisão do ambiente de desenvolvimento agente ZCode 3.0](#case-22) | Use este caso para avaliar o GLM-5.2 dentro de um ambiente de desenvolvimento de agente completo, em vez de uma única sessão de chat. | Demo |
+| [Case 62: Chicote OpenCode com veiculação local](#case-62) | Use este caso para testar o GLM-5.2 com o chicote OpenCode, serviço local e fluxos de trabalho de codificação com muitas ferramentas antes de compará-lo com Claude Opus. | Evaluation |
+| [Case 65: Injeção de instruções de longo contexto Fast-RLM](#case-65) | Use este caso para melhorar a contagem de contexto longo do GLM-5.2 e o comportamento do agente REPL movendo instruções para o prompt do sistema RLM. | Integration |
+| [Case 66: Teste de chicote aberto do código DeepAgents](#case-66) | Use este caso para testar o GLM-5.2 com um chicote de agente de codificação aberto e compare o modelo em um shell de agente reproduzível. | Demo |
+| [Case 77: Roteamento de stack de agentes de marketing em produção](#case-77) | Use este caso para rotear o GLM-5.2 para workflows de agentes em produção que valorizam estrutura, velocidade e self-hosting, mantendo modelos fechados mais fortes para julgamentos ambíguos. | Evaluation |
+| [Case 80: Recriação de Pokemon Red no M3 Ultra](#case-80) | Use este caso para avaliar o GLM-5.2 em uma execução local de agente de código de longo horizonte, na qual o modelo passou cerca de meio dia tentando recriar Pokemon Red em HTML em uma máquina M3 Ultra. | Demo |
+| [Case 91: Confronto de correção de bug do Cline Repo](#case-91) | Use este caso para comparar GLM-5.2 e Opus 4.8 em uma correção de bug de repositório real, em que o GLM gastou mais tokens, mas entregou o patch final mais barato e mais limpo. | Evaluation |
+| [Case 145: Migração de redução de custo com OpenCode e Fireworks](#case-145) | Use este caso para testar se uma troca para um harness de open models já basta, porque o autor moveu tarefas pessoais de coding e loops para GLM-5.2 sobre Fireworks com OpenCode e diz que a conta de tokens caiu para um terço sem perda clara de qualidade no dia a dia. | Evaluation |
+| [Case 143: Fluxo com agregador GLM no Hermes MoA](#case-143) | Use este caso quando um turno de agente de alto valor justificar mais orquestração, porque a configuração Mixture of Agents do Hermes Agent combinou GLM-5.2 com outros modelos e obteve uma saída visivelmente melhor com um pequeno aumento de custo por tarefa no demo publicado. | Integration |
+| [Case 142: Diferença do harness com reasoning no Cline](#case-142) | Use este caso para avaliar o desenho do harness, e não apenas os pesos do modelo, porque o mesmo GLM-5.2 saltou de 57,3% para 68,5% nas mesmas tarefas de coding quando o harness ativou reasoning. | Evaluation |
+| [Case 136: Teste de campo Cursor + Fireworks 455M-Token](#case-136) | Use este caso para julgar o GLM-5.2 como um modelo diário sério no Cursor, porque o autor relata 455M tokens de uso real com serving rápido da Fireworks e nenhuma vontade imediata de voltar para Opus ou GPT-5.5. | Evaluation |
+| [Case 135: Chicote de desktop Devin com portabilidade de habilidades](#case-135) | Use este caso para testar o GLM-5.2 dentro do Devin Desktop quando a própria superfície de coding da Z.ai parecer instável, porque o autor relata portabilidade mais fácil de skills, maior velocidade e melhor hackeabilidade ali. | Evaluation |
+| [Case 127: Revisor Pi Inline GLM](#case-127) | Use este caso para adicionar um segundo revisor a um loop de agente de código estilo Pi, porque o autor relata que o GLM-5.2 pode aconselhar o Opus turno a turno com um aumento de custo de cerca de 10%. | Integration |
+| [Case 122: Bot de telegrama único com AgentRouter](#case-122) | Use este caso para testar se o GLM-5.2 consegue inferir defaults com mentalidade de produção em uma build one-shot com agente de código, em vez de gerar apenas o caminho mínimo que funciona. | Demo |
+| [Case 117: Vitória de primeira passagem do OpenCode Go Refactor](#case-117) | Use este caso para avaliar o GLM-5.2 em refatorações médias de Go dentro do OpenCode, em vez de se apoiar apenas em alegações de benchmark. | Evaluation |
+| [Case 119: Código Claude + Cursor $ 3,36 Execução padrão](#case-119) | Use este caso para medir o GLM-5.2 como modelo diário no Claude Code e no Cursor antes de mover mais trabalho autônomo de programação para pesos abertos. | Evaluation |
 
 ### [🎮 Demos práticas e mostras](#hands-on-demos-showcase-builds)
 
 | Caso | Foco | Tipo |
 |---|---|---|
-| [Case 202: Command Code Space Shooter Feature Win](#case-202) | Use este caso para comparar o GLM-5.2 em builds de UI interativa com um único prompt, porque o Command Code executou o mesmo prompt de space shooter retro em Fable 5, GPT 5.5, GLM 5.2 e DeepSeek V4 Pro e colocou o GLM no topo em features por $0.07. | Avaliação |
-| [Case 200: ZCode Nintendo DS Emulator](#case-200) | Use este caso para inspecionar uma build local de coding de longo horizonte, porque o autor executou o GLM-5.2 em ZCode sobre 4x RTX 6000 com o objetivo de construir um emulador de Nintendo DS em C++ a partir do zero. | Demonstração |
-| [Case 192: Command Code Flappy Bird UX Split](#case-192) | Use este caso para comparar o GLM-5.2 em tarefas leves de design e jogo, porque o autor passou o mesmo prompt de Flappy Bird pelo Command Code e concluiu que o Fable 5 não foi significativamente melhor em UX apesar de custar quase nove vezes mais do que o GLM-5.2. | Avaliação |
-| [Case 161: REAP NVFP4 Rubiks Cube One-Shot](#case-161) | Use este caso para testar o GLM-5.2 em tarefas interativas de build com um único prompt, porque a demo REAP-NVFP4 afirma que um prompt só gerou um cubo de Rubik 3D com scrambles reais, estado ao vivo e botão de resolver. | Demo |
-| [Case 158: OMP Relay iPhone Client](#case-158) | Use este caso para empacotar rapidamente um agente local com GLM-5.2 numa superfície móvel, porque o autor diz que o plugin build-ios-app do Codex produziu em poucas horas um cliente polido de iPhone para um relay OMP que já usava GLM-5.2 e túneis da Cloudflare. | Demonstração |
-| [Case 144: Agente open source de pesquisa DevRel](#case-144) | Use este caso para transformar o GLM-5.2 em um assistente de pesquisa vertical, e não em um chat genérico, porque o autor construiu um agente DevRel open source que transforma produto e público em oportunidades ranqueadas de conteúdo com evidências e esboços. | Demonstração |
-| [Case 123: Recast Six-Variation Landing-Page Loop](#case-123) | Use este caso para prototipar landing pages com baixo custo gerando várias variantes com GLM-5.2 primeiro e levando depois a melhor para um agente de código. | Tutorial |
-| [Playable Backrooms One-Shot](#case-23) | Use este caso para comparar a saída, o tempo de execução e o custo da construção de jogos no mesmo prompt entre o GLM-5.2 e o Opus 4.8. | Demonstração |
-| [Três construções reais com resultados mistos](#case-24) | Use este caso como um conjunto de demonstração de advertência: teste várias compilações reais antes de confiar em um modelo para jogos de produção ou tarefas de vídeo. | Avaliação |
-| [Super Mario Clone In ZCode](#case-25) | Use este caso para avaliar a construção iterativa de jogos com GLM-5.2 e ZCode em várias passagens de correção e recursos. | Demonstração |
-| [Lunar Lander Contest](#case-26) | Use este caso para comparar GLM-5.2, MiniMax M3 e Kimi K2.7 Code em uma tarefa interativa de estilo de jogo. | Avaliação |
-| [One-Prompt Design Arena Creation](#case-27) | Use este caso para inspecionar o que o GLM-5.2 pode gerar a partir de um único prompt de design em um contexto de arena. | Demonstração |
-| [Artigo de pesquisa Compreendendo o fluxo de trabalho](#case-28) | Use este caso para aplicar o GLM-5.2 a fluxos de trabalho de leitura de artigos com perguntas contextuais e referências entre artigos. | Integração |
-| [Constrained Poem Comparison](#case-29) | Use este caso para separar a correção da qualidade criativa ao comparar o GLM-5.2 com modelos no estilo Fable. | Avaliação |
-| [Design Sense Example](#case-30) | Use este caso como um sinal de design visual leve e, em seguida, verifique com seu próprio prompt e revisão da IU. | Demonstração |
-| [Jogo voxel estilo Temple Run em one-shot](#case-71) | Use este caso para estressar o GLM-5.2 em geração de jogos com um único prompt e depois inspecionar o que ainda precisa de correções iterativas em uma build visualmente rica. | Demonstração |
-| [Conjunto de exemplos one-shot no OpenCode Go](#case-78) | Use este caso para medir o GLM-5.2 em builds rápidas de um único tiro dentro do OpenCode Go antes de comprometê-lo com loops de agentes mais abertos. | Demonstração |
-| [Case 92: Open Design Reference URL Rebuild](#case-92) | Use este caso para testar o GLM-5.2 em recriação web guiada por referência, em que um prompt mais uma URL de origem reproduziram um site com fidelidade quase em nível de pixel. | Demonstração |
-| [Case 99: Trader Desk Cost-Quality Test](#case-99) | Use este caso para comparar o GLM-5.2 em builds full-stack de UI, em que ele chegou perto do resultado de trading desk mais refinado enquanto custava apenas uma pequena fração do melhor resultado. | Avaliação |
-| [Case 100: Luddite Game After Claude Refusal](#case-100) | Use este caso para prototipar conceitos de jogo sensíveis a políticas com GLM-5.2 quando um modelo fechado recusa o pedido, e depois inspecionar por conta própria o resultado jogável. | Demonstração |
+| [Case 202: Vitória do recurso Space Shooter com código de comando](#case-202) | Use este caso para comparar o GLM-5.2 em builds de UI interativa com um único prompt, porque o Command Code executou o mesmo prompt de space shooter retro em Fable 5, GPT 5.5, GLM 5.2 e DeepSeek V4 Pro e colocou o GLM no topo em features por $0.07. | Evaluation |
+| [Case 200: Emulador Nintendo DS ZCode](#case-200) | Use este caso para inspecionar uma build local de coding de longo horizonte, porque o autor executou o GLM-5.2 em ZCode sobre 4x RTX 6000 com o objetivo de construir um emulador de Nintendo DS em C++ a partir do zero. | Demo |
+| [Case 192: Código de comando Flappy Bird UX Split](#case-192) | Use este caso para comparar o GLM-5.2 em tarefas leves de design e jogo, porque o autor passou o mesmo prompt de Flappy Bird pelo Command Code e concluiu que o Fable 5 não foi significativamente melhor em UX apesar de custar quase nove vezes mais do que o GLM-5.2. | Evaluation |
+| [Case 161: Cubo de Rubik REAP NVFP4 em uma única tentativa](#case-161) | Use este caso para testar o GLM-5.2 em tarefas interativas de build com um único prompt, porque a demo REAP-NVFP4 afirma que um prompt só gerou um cubo de Rubik 3D com scrambles reais, estado ao vivo e botão de resolver. | Demo |
+| [Case 158: Cliente de retransmissão OMP para iPhone](#case-158) | Use este caso para empacotar rapidamente um agente local com GLM-5.2 numa superfície móvel, porque o autor diz que o plugin build-ios-app do Codex produziu em poucas horas um cliente polido de iPhone para um relay OMP que já usava GLM-5.2 e túneis da Cloudflare. | Demo |
+| [Case 144: Agente open source de pesquisa DevRel](#case-144) | Use este caso para transformar o GLM-5.2 em um assistente de pesquisa vertical, e não em um chat genérico, porque o autor construiu um agente DevRel open source que transforma produto e público em oportunidades ranqueadas de conteúdo com evidências e esboços. | Demo |
+| [Case 123: Reformulação do loop da página de destino de seis variações](#case-123) | Use este caso para prototipar landing pages com baixo custo gerando várias variantes com GLM-5.2 primeiro e levando depois a melhor para um agente de código. | Tutorial |
+| [Case 23: Backrooms jogáveis One-Shot](#case-23) | Use este caso para comparar a saída, o tempo de execução e o custo da construção de jogos no mesmo prompt entre o GLM-5.2 e o Opus 4.8. | Demo |
+| [Case 24: Três construções reais com resultados mistos](#case-24) | Use este caso como um conjunto de demonstração de advertência: teste várias compilações reais antes de confiar em um modelo para jogos de produção ou tarefas de vídeo. | Evaluation |
+| [Case 25: Clone de Super Mario em ZCode](#case-25) | Use este caso para avaliar a construção iterativa de jogos com GLM-5.2 e ZCode em várias passagens de correção e recursos. | Demo |
+| [Case 26: Concurso de Módulo Lunar](#case-26) | Use este caso para comparar GLM-5.2, MiniMax M3 e Kimi K2.7 Code em uma tarefa interativa de estilo de jogo. | Evaluation |
+| [Case 27: Criação de arena de design em um único prompt](#case-27) | Use este caso para inspecionar o que o GLM-5.2 pode gerar a partir de um único prompt de design em um contexto de arena. | Demo |
+| [Case 28: Artigo de pesquisa Compreendendo o fluxo de trabalho](#case-28) | Use este caso para aplicar o GLM-5.2 a fluxos de trabalho de leitura de artigos com perguntas contextuais e referências entre artigos. | Integration |
+| [Case 29: Comparação de poemas restritos](#case-29) | Use este caso para separar a correção da qualidade criativa ao comparar o GLM-5.2 com modelos no estilo Fable. | Evaluation |
+| [Case 30: Exemplo de senso de design](#case-30) | Use este caso como um sinal de design visual leve e, em seguida, verifique com seu próprio prompt e revisão da IU. | Demo |
+| [Case 71: Jogo voxel estilo Temple Run em one-shot](#case-71) | Use este caso para estressar o GLM-5.2 em geração de jogos com um único prompt e depois inspecionar o que ainda precisa de correções iterativas em uma build visualmente rica. | Demo |
+| [Case 78: Conjunto de exemplos one-shot no OpenCode Go](#case-78) | Use este caso para medir o GLM-5.2 em builds rápidas de um único tiro dentro do OpenCode Go antes de comprometê-lo com loops de agentes mais abertos. | Demo |
+| [Case 81: Build de Space Invaders com um único prompt](#case-81) | Use este caso para testar o GLM-5.2 na criação de jogos com um único prompt e depois ver como alguns passes extras lidam com trocas de assets e polimento simples. | Demo |
+| [Case 82: Laboratório de recuperação do OpenCode em one-shot](#case-82) | Use este caso para prototipar rapidamente simulações interativas de falha de agentes, porque o autor relata ter obtido um recovery lab funcional em one-shot por cerca de US$ 3,50. | Demo |
+| [Case 92: Abrir reconstrução de URL de referência de design](#case-92) | Use este caso para testar o GLM-5.2 em recriação web guiada por referência, em que um prompt mais uma URL de origem reproduziram um site com fidelidade quase em nível de pixel. | Demo |
+| [Case 99: Teste de custo-qualidade da mesa do trader](#case-99) | Use este caso para comparar o GLM-5.2 em builds full-stack de UI, em que ele chegou perto do resultado de trading desk mais refinado enquanto custava apenas uma pequena fração do melhor resultado. | Evaluation |
 
 ### [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations)
 
 | Caso | Foco | Tipo |
 |---|---|---|
-| [Case 208: Open Molecular Viewer Agent Stack](#case-208) | Use este caso para ligar o GLM-5.2 a um fluxo aberto de inspeção científica, porque MaziyarPanahi combinou GLM-5.2 via Hugging Face Inference Providers com Qwen3-VL em llama.cpp, Mol* e PydanticAI para renderizar e criticar uma estrutura EGFR mais erlotinibe a partir de um único prompt. | Integração |
-| [Case 204: Perplexity Advisor WANDR Cost Baseline](#case-204) | Use este caso para estimar a economia do GLM-5.2 dentro de um harness de computer use com routing, porque a Perplexity diz que a sua configuração de GLM 5.2 mais advisor marca 2.1x no WANDR contra 6.1x do Opus, com custo médio perto de metade nos benchmarks. | Avaliação |
-| [Case 203: Coworker Open Artifacts Routing](#case-203) | Use este caso para levar o GLM-5.2 a workflows empresariais de artifacts, porque a Coworker diz que o Open Artifacts consegue construir docs, decks, PDF, spreadsheets, dashboards e apps enquanto o seu router otimizado corta o uso de tokens em cerca de 5x e continua a oferecer GLM 5.2 alojado nos EUA. | Integração |
-| [Case 201: DotCode Context Upload Workflow](#case-201) | Use este caso para dar ao GLM-5.2 mais contexto de projeto dentro de uma sandbox privada de coding, porque o DotCode adicionou suporte para GLM 5.2 juntamente com uploads de screenshots, imagens, CSV, PDF, ficheiros source e ZIP que entram no mesmo workflow de filesystem e terminal. | Integração |
-| [Case 198: Dahl 100M Free GLM Endpoint](#case-198) | Use este caso para experimentar o GLM-5.2 por uma rota OpenAI-compatible sem cartão, porque a Dahl Inference oferece 100M de tokens grátis para GLM 5.2 FP8 e mostra como criar uma chave e chamar `/v1/chat/completions`. | Tutorial |
-| [Case 195: NVIDIA Free Endpoint GLM Setup](#case-195) | Use este caso para testar o GLM-5.2 em ferramentas de código sem self-hosting, porque a fonte descreve um fluxo gratuito de endpoint da NVIDIA que leva chaves API do GLM-5.2 para Claude Code, Cursor ou Cline. | Tutorial |
-| [Case 193: 0G TeeML Private Inference Route](#case-193) | Use este caso para encaminhar o GLM-5.2 por uma rota de fornecedor focada em privacidade, porque a 0G diz que o GLM 5.2 agora roda no TeeML com prompts selados dentro de um enclave TEE e preço abaixo da rota oficial. | Integração |
-| [Case 185: DuckDB Flock Open-SQL PR](#case-185) | Use este caso para levar o GLM-5.2 a uma análise SQL local totalmente aberta, porque lhoestq diz que um PR de duckdb mais flock já habilita o GLM-5.2 dentro de um stack de dados 100% open source. | Integração |
-| [Case 179: One-Key 26-Model API Access](#case-179) | Use este caso para testar o GLM-5.2 por meio de um único provedor compatível com OpenAI, porque Alan_Earn diz que uma única API key expõe o GLM-5.2 mais 25 outros modelos e inclui 26 dólares em créditos iniciais. | Tutorial |
-| [Case 176: NVIDIA NIM OpenCode Thinking Setup](#case-176) | Use este caso para ligar o GLM-5.2 ao OpenCode pelo endpoint gratuito da NVIDIA NIM quando você quiser uma rota sem custo com thinking ativado explicitamente, porque Dracoshowumore compartilha o fluxo de API key, a base URL e uma configuração do OpenCode em que a camada de ferramentas cuida das function calls enquanto o GLM roda com enable_thinking em true. | Tutorial |
-| [Case 165: ZCode Launch With Mobile Agent Control](#case-165) | Use este caso para avaliar o ZCode como superfície oficial de coding para o GLM-5.2, porque o relato de lançamento diz que o IDE agentic gratuito chega a Windows, macOS e Linux e pode acompanhar projetos por Telegram, WeChat e Feishu. | Integração |
-| [Case 160: OpenWiki Auto-Maintained Agent Docs](#case-160) | Use este caso para manter documentação legível por agentes atualizada automaticamente, porque a LangChain diz que o OpenWiki regenera e mantém os docs do repositório conforme o código muda e roda sobre modelos abertos como GLM 5.2. | Integração |
-| [Case 152: Foundry PTUs Through FireConnect](#case-152) | Use este caso para rotear o GLM-5.2 por orçamentos corporativos do Foundry sem reescrever clientes de agentes, porque a Fireworks diz que o FireConnect conecta as PTUs do Microsoft Foundry a fluxos no Codex, OpenCode e Pi. | Integração |
-| [Case 141: Assinatura fixa do ClinePass para modelos open-weight](#case-141) | Use este caso para reunir vários modelos de coding open-weight em um único agent harness, porque o ClinePass empacota GLM-5.2 e modelos relacionados em uma mensalidade fixa, em vez de exigir chaves e cobranças separadas por provedor. | Integração |
-| [Case 137: Free GLM API Service For Coding Agents](#case-137) | Use este caso para testar o GLM-5.2 no Hermes ou em outros agentes de código sem registro, porque o serviço compartilhado emite chaves de API de curta duração e mantém a configuração leve. | Integration |
-| [Case 128: Cloudflare Workers AI OpenCode Setup](#case-128) | Use este caso para rodar o GLM-5.2 via Cloudflare Workers AI quando você quiser uma rota gratuita compatível com OpenAI para agentes de código sem provisionar seu próprio host de modelo. | Tutorial |
-| [Case 129: Puter.js Zero-Setup Browser Client](#case-129) | Use este caso para testar o GLM-5.2 em um protótipo só de navegador antes de mexer em API keys, cobrança ou configuração de backend. | Tutorial |
-| [Case 130: SiliconFlow Unified Endpoint Access](#case-130) | Use este caso para colocar o GLM-5.2 dentro de uma stack multimodelo mais ampla, porque o post descreve um único endpoint compatível com OpenAI da SiliconFlow cobrindo modelos chineses e ocidentais com crédito grátis de teste. | Integration |
-| [Case 124: HuggingChat Website Builder To HF Space](#case-124) | Use este caso para testar o GLM-5.2 em um fluxo quase gratuito de site pessoal, da pesquisa no HuggingChat até o deploy estático no Hugging Face Spaces. | Tutorial |
-| [Case 125: DigitalOcean Inference Engine Availability](#case-125) | Use este caso para rotear o GLM-5.2 por infraestrutura gerenciada quando você quiser acesso oficial de provedor sem hospedar por conta própria o modelo de contexto 1M. | Integration |
-| [Case 115: Command Code Fast 120-250 Tok/S Tier](#case-115) | Use este caso para acessar uma variante mais rápida do GLM-5.2 no Command Code quando a velocidade de programação de longo horizonte importar mais do que apenas o menor preço de entrada. | Integration |
-| [Case 116: Vercel AI Gateway Fast GLM-5.2 API](#case-116) | Use este caso para rotear o GLM-5.2 Fast pelo Vercel AI Gateway quando você precisar de velocidade sem servidor mais preços explícitos por token. | Integration |
-| [OpenCode Go Availability](#case-31) | Use este caso para rastrear a disponibilidade do GLM-5.2 dentro de fluxos de trabalho OpenCode Go com texto, contexto de 1 milhão e preços semelhantes aos do GLM-5.1. | Integração |
-| [Ollama Cloud Availability](#case-32) | Use este caso para rotear o GLM-5.2 para Ollama Cloud para experimentos acessíveis de modelo de codificação de código aberto. | Integração |
-| [OpenRouter One API Call Access](#case-33) | Use este caso para acessar o GLM-5.2 por meio do OpenRouter ao comparar roteamento de provedor ou pilhas de vários modelos. | Integração |
-| [vLLM Day-Zero Support](#case-34) | Use este caso para auto-hospedar ou servir o GLM-5.2 por meio do vLLM com suporte do dia zero. | Integração |
-| [Notion Availability Via Baseten](#case-35) | Use este caso para identificar o GLM-5.2 como um modelo aberto disponível nos fluxos de trabalho do Notion. | Integração |
-| [Fireworks Day-Zero Serving](#case-36) | Use este caso para avaliar o Fireworks como uma rota de atendimento para cargas de trabalho do GLM-5.2 que precisam de infraestrutura hospedada. | Integração |
-| [Link do jardim do modelo do Google Cloud](#case-37) | Use este caso para encontrar o GLM-5.2 em implantação orientada ao Google Cloud e contextos de plataforma de agente. | Integração |
-| [Venice Privacy Mode](#case-38) | Use este caso quando o modo de privacidade, TEE ou criptografia ponta a ponta for um fator decisivo na tentativa do GLM-5.2. | Integração |
-| [Command Code Availability](#case-39) | Use este caso para experimentar o GLM-5.2 em código de comando com um plano inicial de baixo custo e recursos de codificação de contexto longo. | Integração |
-| [Agente Hermes do Portal Nous](#case-40) | Use este caso para conectar o GLM-5.2 aos fluxos de trabalho do Agente Hermes por meio do Nous Portal e OpenRouter. | Integração |
-| [io.net Day-Zero Launch Partner](#case-41) | Use este caso ao avaliar a veiculação baseada em computação para um modelo de contexto longo de parâmetros 753B. | Integração |
-| [Modular Cloud Day-Zero Serving](#case-42) | Use este caso para considerar a Nuvem Modular para GLM-5.2 de contexto longo servindo em escala de provedor. | Integração |
-| [Cursor Setup Through OpenRouter](#case-61) | Use este caso para configurar o GLM-5.2 no Cursor por meio do OpenRouter para um fluxo de trabalho de codificação de modelo aberto de baixo custo. | Tutorial |
-| [Amp Agentic Eyes For Visual Design](#case-63) | Use este caso para emparelhar GLM-5.2 com agentes personalizados Amp quando um modelo somente texto precisar de suporte de revisão visual para tarefas de design. | Integração |
-| [Baseten Faster One-Million-Context Serving](#case-69) | Use este caso para rotear GLM-5.2 por meio de Baseten quando a velocidade do serviço de contexto longo for importante para Factory Droid, OpenCode e chicotes de codificação. | Integração |
-| [Subagentes de QA do Browser Use para web design](#case-74) | Use este caso para combinar o GLM-5.2 com subagentes multimodais de QA do Browser Use v2 quando um modelo apenas textual precisa de inspeção visual e correções iterativas em sites. | Integração |
-| [Tokens grátis diários no IDE oficial ZCode](#case-79) | Use este caso para acessar o GLM-5.2 via ZCode quando você quiser um IDE oficial de programação gratuito com grandes cotas diárias de tokens e um workflow ao estilo Cursor. | Tutorial |
-| [Case 93: Noumena ncode GLM Default](#case-93) | Use este caso para direcionar o GLM-5.2 para ambientes de agentes no estilo ncode e Noumena com endpoints separados padrão e de contexto 1M, além de suporte como modelo padrão. | Integração |
-| [Case 95: Claude Code Through Baseten](#case-95) | Use este caso para rodar GLM-5.2 dentro do Claude Code por meio de uma chave da Baseten, uma base URL personalizada e remapeamento de modelo em `~/.claude/settings.json`. | Tutorial |
-| [Case 96: Deepsec Pi Agent Default](#case-96) | Use este caso para testar o GLM-5.2 em um harness de segurança, em que o `deepsec` o tornou o modelo padrão do Pi agent e relatou resultados competitivos nas avaliações. | Integração |
-| [Case 101: Baseten + Droid Harness Quickstart](#case-101) | Use este caso para colocar o GLM-5.2 para rodar rapidamente via Baseten e harness Droid, com um fluxo curto de configuração que também pode ser reutilizado em outros IDEs. | Tutorial |
-| [Case 104: OpenAI-Compatible GLM API Workflow](#case-104) | Use este caso para construir em Python um cliente GLM-5.2 compatível com OpenAI com controle de raciocínio, tool calling, recuperação de contexto longo e acompanhamento de custos. | Tutorial |
-| [Case 105: Perplexity Agent API Search Sandbox](#case-105) | Use este caso para conectar o GLM-5.2 à Agent API da Perplexity quando você quiser agentes sandboxados com busca por trás de uma única chamada API. | Integração |
-| [Case 109: Baseten 280 TPS GLM API](#case-109) | Use este caso quando a latência do provedor importa: a Baseten afirma um serving de GLM-5.2 muito rápido com time-to-first-token abaixo de um segundo e alto throughput de decodificação. | Integração |
+| [Case 170: Acesso plug-and-play gratuito à API NVIDIA](#case-170) | Use este caso para testar o GLM-5.2 rapidamente por meio de um endpoint hospedado sem custo, porque hqmank diz que a NVIDIA abriu uma rota de API compatível com OpenAI e confirmou que ela funcionou como um drop-in plug-and-play. | Integration |
+| [Case 169: Rota do agente de codificação de IA de trabalhadores gratuitos](#case-169) | Use este caso para montar uma rota de GLM-5.2 sem custo para coding agents, porque o tutorial conecta Workers AI ao Claude Code, OpenCode, Cursor e Aider por meio do endpoint compatível com OpenAI `cf/zai-org/glm-5.2`. | Tutorial |
+| [Case 208: Abrir pilha de agentes do visualizador molecular](#case-208) | Use este caso para ligar o GLM-5.2 a um fluxo aberto de inspeção científica, porque MaziyarPanahi combinou GLM-5.2 via Hugging Face Inference Providers com Qwen3-VL em llama.cpp, Mol* e PydanticAI para renderizar e criticar uma estrutura EGFR mais erlotinibe a partir de um único prompt. | Integration |
+| [Case 204: Linha de base de custos do Perplexity Advisor WANDR](#case-204) | Use este caso para estimar a economia do GLM-5.2 dentro de um harness de computer use com routing, porque a Perplexity diz que a sua configuração de GLM 5.2 mais advisor marca 2.1x no WANDR contra 6.1x do Opus, com custo médio perto de metade nos benchmarks. | Evaluation |
+| [Case 203: Roteamento de artefatos abertos do colega de trabalho](#case-203) | Use este caso para levar o GLM-5.2 a workflows empresariais de artifacts, porque a Coworker diz que o Open Artifacts consegue construir docs, decks, PDF, spreadsheets, dashboards e apps enquanto o seu router otimizado corta o uso de tokens em cerca de 5x e continua a oferecer GLM 5.2 alojado nos EUA. | Integration |
+| [Case 201: Fluxo de trabalho de upload de contexto DotCode](#case-201) | Use este caso para dar ao GLM-5.2 mais contexto de projeto dentro de uma sandbox privada de coding, porque o DotCode adicionou suporte para GLM 5.2 juntamente com uploads de screenshots, imagens, CSV, PDF, ficheiros source e ZIP que entram no mesmo workflow de filesystem e terminal. | Integration |
+| [Case 209: Colibri 25 GB de RAM com streaming esparso](#case-209) | Use este caso para entender o novo piso prático da implantação local do GLM-5.2, porque techNmak detalha como o Colibrì executa o MoE 744B com cerca de 25 GB de RAM por streaming de especialistas a partir de NVMe, embora a menor configuração chegue apenas a algo em torno de 0,05 a 0,1 tok/s. | Demo |
+| [Case 206: Rendimento de produção SGLang NVFP4](#case-206) | Use este caso para dimensionar serving de produção com SGLang para GLM-5.2 NVFP4, porque o release oficial do SGLang v0.5.15 diz que agora atinge mais de 500 tok/s por utilizador em 8x B300 e 450 em 4x GB300 com batch size 1. | Evaluation |
+| [Case 198: Ponto final GLM gratuito Dahl 100M](#case-198) | Use este caso para experimentar o GLM-5.2 por uma rota OpenAI-compatible sem cartão, porque a Dahl Inference oferece 100M de tokens grátis para GLM 5.2 FP8 e mostra como criar uma chave e chamar `/v1/chat/completions`. | Tutorial |
+| [Case 195: Configuração gratuita do Endpoint GLM da NVIDIA](#case-195) | Use este caso para testar o GLM-5.2 em ferramentas de código sem self-hosting, porque a fonte descreve um fluxo gratuito de endpoint da NVIDIA que leva chaves API do GLM-5.2 para Claude Code, Cursor ou Cline. | Tutorial |
+| [Case 193: Rota de inferência privada 0G TeeML](#case-193) | Use este caso para encaminhar o GLM-5.2 por uma rota de fornecedor focada em privacidade, porque a 0G diz que o GLM 5.2 agora roda no TeeML com prompts selados dentro de um enclave TEE e preço abaixo da rota oficial. | Integration |
+| [Case 185: PR Open-SQL para DuckDB Flock](#case-185) | Use este caso para levar o GLM-5.2 a uma análise SQL local totalmente aberta, porque lhoestq diz que um PR de duckdb mais flock já habilita o GLM-5.2 dentro de um stack de dados 100% open source. | Integration |
+| [Case 179: Acesso à API de 26 modelos com uma chave](#case-179) | Use este caso para testar o GLM-5.2 por meio de um único provedor compatível com OpenAI, porque Alan_Earn diz que uma única API key expõe o GLM-5.2 mais 25 outros modelos e inclui 26 dólares em créditos iniciais. | Tutorial |
+| [Case 176: Configuração de pensamento OpenCode NVIDIA NIM](#case-176) | Use este caso para ligar o GLM-5.2 ao OpenCode pelo endpoint gratuito da NVIDIA NIM quando você quiser uma rota sem custo com thinking ativado explicitamente, porque Dracoshowumore compartilha o fluxo de API key, a base URL e uma configuração do OpenCode em que a camada de ferramentas cuida das function calls enquanto o GLM roda com enable_thinking em true. | Tutorial |
+| [Case 165: Lançamento do ZCode com controle de agente móvel](#case-165) | Use este caso para avaliar o ZCode como superfície oficial de coding para o GLM-5.2, porque o relato de lançamento diz que o IDE agentic gratuito chega a Windows, macOS e Linux e pode acompanhar projetos por Telegram, WeChat e Feishu. | Integration |
+| [Case 160: Documentos do agente com manutenção automática do OpenWiki](#case-160) | Use este caso para manter documentação legível por agentes atualizada automaticamente, porque a LangChain diz que o OpenWiki regenera e mantém os docs do repositório conforme o código muda e roda sobre modelos abertos como GLM 5.2. | Integration |
+| [Case 152: PTUs de fundição por meio do FireConnect](#case-152) | Use este caso para rotear o GLM-5.2 por orçamentos corporativos do Foundry sem reescrever clientes de agentes, porque a Fireworks diz que o FireConnect conecta as PTUs do Microsoft Foundry a fluxos no Codex, OpenCode e Pi. | Integration |
+| [Case 147: Bancada de avaliação Braintrust GLM](#case-147) | Use este caso para comparar GLM-5.2 e Opus dentro da mesma pilha de evals, porque Braintrust e Baseten lançaram o modelo com um exemplo concreto de custo versus precisão em contexto longo. | Integration |
+| [Case 141: Assinatura fixa do ClinePass para modelos open-weight](#case-141) | Use este caso para reunir vários modelos de coding open-weight em um único agent harness, porque o ClinePass empacota GLM-5.2 e modelos relacionados em uma mensalidade fixa, em vez de exigir chaves e cobranças separadas por provedor. | Integration |
+| [Case 137: Serviço API GLM gratuito para agentes de codificação](#case-137) | Use este caso para testar o GLM-5.2 no Hermes ou em outros agentes de código sem registro, porque o serviço compartilhado emite chaves de API de curta duração e mantém a configuração leve. | Integration |
+| [Case 31: Disponibilidade do OpenCode Go](#case-31) | Use este caso para rastrear a disponibilidade do GLM-5.2 dentro de fluxos de trabalho OpenCode Go com texto, contexto de 1 milhão e preços semelhantes aos do GLM-5.1. | Integration |
+| [Case 32: Disponibilidade da nuvem Ollama](#case-32) | Use este caso para rotear o GLM-5.2 para Ollama Cloud para experimentos acessíveis de modelo de codificação de código aberto. | Integration |
+| [Case 33: Acesso à chamada de API do OpenRouter One](#case-33) | Use este caso para acessar o GLM-5.2 por meio do OpenRouter ao comparar roteamento de provedor ou pilhas de vários modelos. | Integration |
+| [Case 34: Suporte vLLM Dia Zero](#case-34) | Use este caso para auto-hospedar ou servir o GLM-5.2 por meio do vLLM com suporte do dia zero. | Integration |
+| [Case 35: Disponibilidade de noção via Baseten](#case-35) | Use este caso para identificar o GLM-5.2 como um modelo aberto disponível nos fluxos de trabalho do Notion. | Integration |
+| [Case 36: Serviço do dia zero de fogos de artifício](#case-36) | Use este caso para avaliar o Fireworks como uma rota de atendimento para cargas de trabalho do GLM-5.2 que precisam de infraestrutura hospedada. | Integration |
+| [Case 37: Link do jardim do modelo do Google Cloud](#case-37) | Use este caso para encontrar o GLM-5.2 em implantação orientada ao Google Cloud e contextos de plataforma de agente. | Integration |
+| [Case 38: Modo de privacidade de Veneza](#case-38) | Use este caso quando o modo de privacidade, TEE ou criptografia ponta a ponta for um fator decisivo na tentativa do GLM-5.2. | Integration |
+| [Case 39: Disponibilidade de código de comando](#case-39) | Use este caso para experimentar o GLM-5.2 em código de comando com um plano inicial de baixo custo e recursos de codificação de contexto longo. | Integration |
+| [Case 40: Agente Hermes do Portal Nous](#case-40) | Use este caso para conectar o GLM-5.2 aos fluxos de trabalho do Agente Hermes por meio do Nous Portal e OpenRouter. | Integration |
+| [Case 41: Parceiro de lançamento Day-Zero io.net](#case-41) | Use este caso ao avaliar a veiculação baseada em computação para um modelo de contexto longo de parâmetros 753B. | Integration |
+| [Case 42: Serviço modular de nuvem dia zero](#case-42) | Use este caso para considerar a Nuvem Modular para GLM-5.2 de contexto longo servindo em escala de provedor. | Integration |
+| [Case 61: Configuração do cursor através do OpenRouter](#case-61) | Use este caso para configurar o GLM-5.2 no Cursor por meio do OpenRouter para um fluxo de trabalho de codificação de modelo aberto de baixo custo. | Tutorial |
+| [Case 63: Amp Agentic Eyes para design visual](#case-63) | Use este caso para emparelhar GLM-5.2 com agentes personalizados Amp quando um modelo somente texto precisar de suporte de revisão visual para tarefas de design. | Integration |
+| [Case 69: Baseten Fornecimento mais rápido de um milhão de contextos](#case-69) | Use este caso para rotear GLM-5.2 por meio de Baseten quando a velocidade do serviço de contexto longo for importante para Factory Droid, OpenCode e chicotes de codificação. | Integration |
+| [Case 74: Subagentes de QA do Browser Use para web design](#case-74) | Use este caso para combinar o GLM-5.2 com subagentes multimodais de QA do Browser Use v2 quando um modelo apenas textual precisa de inspeção visual e correções iterativas em sites. | Integration |
+| [Case 79: Tokens grátis diários no IDE oficial ZCode](#case-79) | Use este caso para acessar o GLM-5.2 via ZCode quando você quiser um IDE oficial de programação gratuito com grandes cotas diárias de tokens e um workflow ao estilo Cursor. | Tutorial |
+| [Case 83: Configuração do Cursor via Fireworks](#case-83) | Use este caso para conectar o GLM-5.2 ao Cursor via Fireworks com uma configuração mínima compatível com OpenAI e sem código cliente customizado. | Tutorial |
+| [Case 84: Suporte ao provedor ZAI no VulcanBench](#case-84) | Use este caso para executar o GLM-5.2 em um harness aberto de benchmark com suporte de primeira classe ao provedor ZAI e um caminho dedicado de API key. | Integration |
+| [Case 85: Variantes de raciocínio High/Max no OpenCode](#case-85) | Use este caso para acessar as variantes de raciocínio High e Max do GLM-5.2 dentro do OpenCode, ao mesmo tempo em que ganha um tratamento mais confiável do limite de passos. | Integration |
+| [Case 86: Seleção do endpoint de código do Z.ai](#case-86) | Use este caso para rotear o tráfego de coding plan do GLM-5.2 para o endpoint do Z.ai otimizado para código em vez do caminho genérico de API. | Tutorial |
+| [Case 87: Configuração gratuita da API GLM-5.2 no ZenMux](#case-87) | Use este caso para obter uma API key e uma base URL gratuitas do GLM-5.2 e depois conectá-las ao Claude, Cursor, Hermes e ferramentas similares. | Tutorial |
+| [Case 93: Numena ncode GLM Padrão](#case-93) | Use este caso para direcionar o GLM-5.2 para ambientes de agentes no estilo ncode e Noumena com endpoints separados padrão e de contexto 1M, além de suporte como modelo padrão. | Integration |
+| [Case 101: Início rápido do Baseten + Droid Harness](#case-101) | Use este caso para colocar o GLM-5.2 para rodar rapidamente via Baseten e harness Droid, com um fluxo curto de configuração que também pode ser reutilizado em outros IDEs. | Tutorial |
+| [Case 104: Fluxo de trabalho da API GLM compatível com OpenAI](#case-104) | Use este caso para construir em Python um cliente GLM-5.2 compatível com OpenAI com controle de raciocínio, tool calling, recuperação de contexto longo e acompanhamento de custos. | Tutorial |
+| [Case 105: Sandbox de pesquisa da API do agente Perplexity](#case-105) | Use este caso para conectar o GLM-5.2 à Agent API da Perplexity quando você quiser agentes sandboxados com busca por trás de uma única chamada API. | Integration |
+| [Case 109: Baseado 280 TPS GLM API](#case-109) | Use este caso quando a latência do provedor importa: a Baseten afirma um serving de GLM-5.2 muito rápido com time-to-first-token abaixo de um segundo e alto throughput de decodificação. | Integration |
+| [Case 128: Configuração do Cloudflare Workers AI OpenCode](#case-128) | Use este caso para rodar o GLM-5.2 via Cloudflare Workers AI quando você quiser uma rota gratuita compatível com OpenAI para agentes de código sem provisionar seu próprio host de modelo. | Tutorial |
+| [Case 129: Cliente de navegador de configuração zero Puter.js](#case-129) | Use este caso para testar o GLM-5.2 em um protótipo só de navegador antes de mexer em API keys, cobrança ou configuração de backend. | Tutorial |
+| [Case 130: Acesso unificado ao endpoint SiliconFlow](#case-130) | Use este caso para colocar o GLM-5.2 dentro de uma stack multimodelo mais ampla, porque o post descreve um único endpoint compatível com OpenAI da SiliconFlow cobrindo modelos chineses e ocidentais com crédito grátis de teste. | Integration |
+| [Case 124: Construtor de sites HuggingChat para espaço HF](#case-124) | Use este caso para testar o GLM-5.2 em um fluxo quase gratuito de site pessoal, da pesquisa no HuggingChat até o deploy estático no Hugging Face Spaces. | Tutorial |
+| [Case 125: Disponibilidade do mecanismo de inferência DigitalOcean](#case-125) | Use este caso para rotear o GLM-5.2 por infraestrutura gerenciada quando você quiser acesso oficial de provedor sem hospedar por conta própria o modelo de contexto 1M. | Integration |
+| [Case 115: Código de Comando Rápido 120-250 Tok/S Tier](#case-115) | Use este caso para acessar uma variante mais rápida do GLM-5.2 no Command Code quando a velocidade de programação de longo horizonte importar mais do que apenas o menor preço de entrada. | Integration |
+| [Case 116: API Vercel AI Gateway rápida GLM-5.2](#case-116) | Use este caso para rotear o GLM-5.2 Fast pelo Vercel AI Gateway quando você precisar de velocidade sem servidor mais preços explícitos por token. | Integration |
+| [Case 95: Código Claude através de Baseten](#case-95) | Use este caso para rodar GLM-5.2 dentro do Claude Code por meio de uma chave da Baseten, uma base URL personalizada e remapeamento de modelo em `~/.claude/settings.json`. | Tutorial |
+| [Case 96: Padrão do agente Deepsec Pi](#case-96) | Use este caso para testar o GLM-5.2 em um harness de segurança, em que o `deepsec` o tornou o modelo padrão do Pi agent e relatou resultados competitivos nas avaliações. | Integration |
 
 ### [💸 Custo, preços e implantação local](#cost-pricing-local-deployment)
 
 | Caso | Foco | Tipo |
 |---|---|---|
-| [Case 209: Colibri 25GB RAM Sparse Streaming](#case-209) | Use este caso para entender o novo piso prático da implantação local do GLM-5.2, porque techNmak detalha como o Colibrì executa o MoE 744B com cerca de 25 GB de RAM por streaming de especialistas a partir de NVMe, embora a menor configuração chegue apenas a algo em torno de 0,05 a 0,1 tok/s. | Demonstração |
-| [Case 206: SGLang NVFP4 Production Throughput](#case-206) | Use este caso para dimensionar serving produtivo de SGLang para GLM-5.2 NVFP4, porque o release oficial do SGLang v0.5.15 diz que agora alcança mais de 500 tok/s por usuário em 8x B300 e 450 em 4x GB300 com batch size 1. | Avaliação |
-| [Case 191: Hermes-Built LiteLLM Local Lab](#case-191) | Use este caso para iniciar um laboratório local de inferência com o GLM-5.2 como agente de código, porque a fonte diz que Hermes Agent mais GLM-5.2 montaram LiteLLM, Postgres, Prometheus e Grafana em torno de uma configuração com M3 Ultra. | Integração |
-| [Case 187: Dual M5 Max Offline Droneship Sim](#case-187) | Use este caso para estimar o que um agente GLM-5.2 em Apple Silicon totalmente offline consegue fazer, porque XavierLocalAI relata uma instalação 753B escrevendo um simulador de pouso em droneship a 26 tok/s em duas máquinas M5 Max de 128 GB. | Demonstração |
-| [Case 186: 5x DGX Spark Production Harness](#case-186) | Use este caso para avaliar se uma configuração DGX Spark de cinco nós já basta para trabalho produtivo com GLM-5.2, porque thatcofffeeguy relata cerca de 13,9 tok/s em stream único com 400K de contexto e 19,9 tok/s agregados em três lanes num harness ao vivo. | Demonstração |
-| [Case 183: M3 Ultra ds4-eval Q4 Checkpoint](#case-183) | Use este caso para benchmarkear uma instalação GLM-5.2 em Apple Silicon de máquina única com ds4-eval, porque ivanfioravanti relata um run q4 em torno de 16 tok/s, com 76 de 92 casos aprovados em 8 horas e 53 minutos numa máquina M3 Ultra de 512 GB. | Avaliação |
-| [Case 182: 4x RTX PRO 6000 Build Guide](#case-182) | Use este caso para dimensionar uma build local séria de GLM-5.2-594B, porque QingQ77 compartilha um guia completo de hardware e operação baseado em quatro RTX PRO 6000, APIs expostas via opencode e uma VM sandbox para trabalho com agentes. | Tutorial |
-| [Case 181: 4x DGX Spark QuantTrio Run](#case-181) | Use este caso para estimar o que um cluster DGX Spark de quatro nós consegue fazer com GLM-5.2 QuantTrio, porque Tech2Wild relata 200K de contexto, 30 tok/s em stream único e 60,5 tok/s de throughput agregado com seis solicitações concorrentes. | Demonstração |
-| [Case 177: Single M3 Ultra 4-Bit Video Run](#case-177) | Use este caso para estimar a viabilidade do GLM-5.2 em uma única máquina Apple Silicon, porque ivanfioravanti mostra uma execução 4-bit em um M3 Ultra 512GB a cerca de 16 tok/s e a compara com um vídeo de ds4-eval em q2 perto de 17 tok/s. | Demonstração |
-| [Case 166: Full 744B On 5x ASUS GX10s](#case-166) | Use este caso para dimensionar uma implantação extrema de GLM-5.2 em home lab, porque o autor diz que o modelo completo de 744B já roda com full context em 5 caixas ASUS GX10 e já está ligado a um causal harness para workloads reais. | Demo |
-| [Case 164: Agent Route Swap In China Stack](#case-164) | Use este caso para rotear o GLM-5.2 para a camada agent de uma stack mista quando a pressão de custo importa mais do que a qualidade máxima, porque o autor relata que trocar Sonnet por GLM-5.2 reduziu em 5x o custo de entrada desse slot com uma perda de qualidade de cerca de 3 por cento dentro de uma migração de 30 dias. | Avaliação |
-| [Case 156: 744B Local Hardware Floor](#case-156) | Use este caso para dimensionar com realismo os planos locais do GLM-5.2, porque a fonte diz que até builds quantizados ainda ficam em torno de 239 GB em 2 bits e 466 GB em 4 bits, o que torna 256 GB ou mais de RAM ou VRAM um piso prático. | Limite |
-| [Case 140: B300 x2 Agent-Led Dual-Stack Bring-Up](#case-140) | Use este caso para dimensionar uma implantação self-hosted séria de GLM-5.2, porque a thread mostra analistas levantando inferência NVFP4 em B300s bare-metal nas stacks vLLM e SGLang em menos de um dia. | Evaluation |
-| [Case 139: oMLX M3 Ultra Prefill Speedup](#case-139) | Use este caso para reavaliar a viabilidade local em Apple silicon após trabalhos recentes de kernel, porque a velocidade de prefill reportada do GLM-5.2 em um M3 Ultra 512GB quase dobrou sem colapso óbvio de qualidade em testes rápidos. | Evaluation |
-| [Case 138: 20M Token Signup Credit Burst](#case-138) | Use este caso para avaliar se créditos de cadastro direto bastam para um teste real de GLM-5.2, porque o post afirma que novas contas recebem 20M tokens grátis, sem cartão, e acesso totalmente compatível com OpenAI. | Integration |
-| [Case 131: 4x DGX Spark Local GLM Runbook](#case-131) | Use este caso para medir se um cluster DGX Spark é uma rota local realista para o GLM-5.2, porque o guia reunido conecta custo de hardware, topologia de cluster e comandos de vLLM a um alvo GLM de contexto 1M. | Tutorial |
-| [Case 112: 4x RTX PRO 6000 Terminal-Bench 2.0 Run](#case-112) | Use este caso para dimensionar um setup local de GLM-5.2 com quatro GPUs contra um benchmark pesado de terminal antes de assumir uma workstation de alto nível. | Evaluation |
-| [Case 118: Local Crackme Solve On 2x RTX PRO 6000 Blackwells](#case-118) | Use este caso para julgar se um setup local sério de GLM-5.2 consegue concluir tarefas longas de engenharia reversa sem acesso a depurador. | Demo |
-| [Output Token Cost Comparison](#case-43) | Use este caso para comparar a economia do token de saída GLM-5.2 com os modelos estilo Opus, Fable e GPT-5.5. | Avaliação |
-| [Local Near-Frontier Hardware ROI](#case-44) | Use este caso para raciocinar se os modelos auto-hospedados do tipo GLM-5.2 podem compensar os custos de hardware para usuários pesados ​​de agentes. | Avaliação |
-| [MLX On Two Mac Studios](#case-45) | Use este caso para explorar execuções locais do GLM-5.2 em hardware Apple e configurações orientadas a MLX. | Demonstração |
-| [H100 Monthly Local Deployment Claim](#case-46) | Use este caso como um prompt de comparação de custos para verificar as suposições de implantação local antes de escolher entre assinatura e auto-hospedagem. | Avaliação |
-| [Daily Credits And Claude Replacement Claim](#case-47) | Use este caso para inspecionar a narrativa de crédito gratuito e agente de substituição em torno do GLM-5.2, enquanto separa as reivindicações de marketing do ajuste verificado da carga de trabalho. | Avaliação |
-| [Free ZCode Token Window](#case-48) | Use este caso para testar o GLM-5.2 por meio de um subsídio ZCode gratuito antes de se comprometer com um provedor pago ou implantação local. | Integração |
-| [ZenMux Free Week Offer](#case-49) | Use este caso para encontrar janelas de acesso livre com limite de tempo para testes do GLM-5.2. | Integração |
-| [Preço crofAI por token](#case-50) | Use este caso para comparar preços de fornecedores terceirizados para o GLM-5.2 antes de selecionar uma rota. | Integração |
-| [API Price Margin Comparison](#case-51) | Use este caso como uma crítica ao preço de mercado ao comparar o GLM-5.2 com outros laboratórios de fronteira e modelos abertos. | Avaliação |
-| [Basement Local Inference Speed](#case-64) | Use este caso para estimar a taxa de transferência de inferência GLM-5.2 local em hardware Apple com grande memória antes de planejar uma configuração de codificação offline. | Demonstração |
-| [Unsloth Quantized Local Deployment](#case-68) | Use este caso para avaliar caminhos de implantação quantizados do GLM-5.2 quando os pesos completos do modelo forem muito grandes para hardware local comum. | Tutorial |
-| [Case 97: RTX PRO 6000 Local Throughput](#case-97) | Use este caso para dimensionar uma workstation local de alto nível para GLM-5.2, em que um desktop com duas Blackwell sustentou velocidade de decodificação de dois dígitos em uma build quantizada em 4 bits. | Demonstração |
-| [Case 98: Mac Studio API ROI Reality Check](#case-98) | Use este caso para validar se faz sentido comprar um Mac Studio para inferência local de GLM-5.2, porque a conta de retorno publicada favorece fortemente acesso via API ou plano para a maioria dos usuários. | Avaliação |
-| [Case 106: LiteLLM Local Outage Save](#case-106) | Use este caso para manter um entregável avançando quando APIs frontier hospedadas caem ou ficam limitadas, redirecionando o trabalho por um GLM-5.2 implantado localmente com LiteLLM. | Demonstração |
-| [Case 107: Individual Versus Team Local ROI](#case-107) | Use este caso para decidir se uma implantação local de GLM-5.2 faz sentido para uma pessoa sozinha ou mais para uma equipe de desenvolvimento maior. | Avaliação |
+| [Case 191: Laboratório local LiteLLM construído pela Hermes](#case-191) | Use este caso para iniciar um laboratório local de inferência com o GLM-5.2 como agente de código, porque a fonte diz que Hermes Agent mais GLM-5.2 montaram LiteLLM, Postgres, Prometheus e Grafana em torno de uma configuração com M3 Ultra. | Integration |
+| [Case 187: Simulador de drone off-line Dual M5 Max](#case-187) | Use este caso para estimar o que um agente GLM-5.2 em Apple Silicon totalmente offline consegue fazer, porque XavierLocalAI relata uma instalação 753B escrevendo um simulador de pouso em droneship a 26 tok/s em duas máquinas M5 Max de 128 GB. | Demo |
+| [Case 186: 5x arnês de produção de faísca DGX](#case-186) | Use este caso para avaliar se uma configuração DGX Spark de cinco nós já basta para trabalho produtivo com GLM-5.2, porque thatcofffeeguy relata cerca de 13,9 tok/s em stream único com 400K de contexto e 19,9 tok/s agregados em três lanes num harness ao vivo. | Demo |
+| [Case 183: Ponto de verificação M3 Ultra ds4-eval Q4](#case-183) | Use este caso para benchmarkear uma instalação GLM-5.2 em Apple Silicon de máquina única com ds4-eval, porque ivanfioravanti relata um run q4 em torno de 16 tok/s, com 76 de 92 casos aprovados em 8 horas e 53 minutos numa máquina M3 Ultra de 512 GB. | Evaluation |
+| [Case 182: Guia de construção 4x RTX PRO 6000](#case-182) | Use este caso para dimensionar uma build local séria de GLM-5.2-594B, porque QingQ77 compartilha um guia completo de hardware e operação baseado em quatro RTX PRO 6000, APIs expostas via opencode e uma VM sandbox para trabalho com agentes. | Tutorial |
+| [Case 181: Execução do QuantTrio em quatro DGX Spark](#case-181) | Use este caso para estimar o que um cluster DGX Spark de quatro nós consegue fazer com GLM-5.2 QuantTrio, porque Tech2Wild relata 200K de contexto, 30 tok/s em stream único e 60,5 tok/s de throughput agregado com seis solicitações concorrentes. | Demo |
+| [Case 177: Execução de vídeo M3 Ultra de 4 bits única](#case-177) | Use este caso para estimar a viabilidade do GLM-5.2 em uma única máquina Apple Silicon, porque ivanfioravanti mostra uma execução 4-bit em um M3 Ultra 512GB a cerca de 16 tok/s e a compara com um vídeo de ds4-eval em q2 perto de 17 tok/s. | Demo |
+| [Case 173: Serviço de nó AMD MI355X 2626 Tok/s](#case-173) | Use este caso para dimensionar inferência GLM-5.2 de alta vazão em hardware AMD, porque a wafer_ai diz que o MI355X alcançou 2626 tok/s por nó e 213 tok/s em fluxo único com custo mais de 2 vezes menor que o Blackwell. | Demo |
+| [Case 172: Vercel Gateway 287 Tok/s sem servidor](#case-172) | Use este caso para estimar a latência real do GLM-5.2 para usuários por meio de um gateway serverless, porque a wafer_ai diz que sua rota GLM 5.2 Fast atingiu 287 tokens por segundo no Vercel AI Gateway em vez de apenas em um harness de benchmark. | Demo |
+| [Case 171: Implantação RTX PRO 6000 com um clique](#case-171) | Use este caso para estimar o piso de uma implantação hospedada e isolada do GLM-5.2, porque XciD_ diz que o GLM-5.2-NVFP4 agora pode ser implantado com um clique no Inference Endpoints em 8x RTX PRO 6000 por 22 dólares por hora. | Integration |
+| [Case 166: 744B completo em 5x ASUS GX10s](#case-166) | Use este caso para dimensionar uma implantação extrema de GLM-5.2 em home lab, porque o autor diz que o modelo completo de 744B já roda com full context em 5 caixas ASUS GX10 e já está ligado a um causal harness para workloads reais. | Demo |
+| [Case 164: Troca de rota de agente na pilha da China](#case-164) | Use este caso para rotear o GLM-5.2 para a camada agent de uma stack mista quando a pressão de custo importa mais do que a qualidade máxima, porque o autor relata que trocar Sonnet por GLM-5.2 reduziu em 5x o custo de entrada desse slot com uma perda de qualidade de cerca de 3 por cento dentro de uma migração de 30 dias. | Evaluation |
+| [Case 156: Piso de Hardware Local 744B](#case-156) | Use este caso para dimensionar com realismo os planos locais do GLM-5.2, porque a fonte diz que até builds quantizados ainda ficam em torno de 239 GB em 2 bits e 466 GB em 4 bits, o que torna 256 GB ou mais de RAM ou VRAM um piso prático. | Limit |
+| [Case 151: Porta de ferrugem NVFP4 local a 140 Tok/s](#case-151) | Use este caso para medir o que uma implantação local ajustada de GLM-5.2 consegue fazer em trabalho real de coding, porque o autor relata NVFP4 a 140 tok/s e uma migração completa de Python para Rust concluída em minutos. | Evaluation |
+| [Case 140: Atualização de pilha dupla liderada por agente B300 x2](#case-140) | Use este caso para dimensionar uma implantação self-hosted séria de GLM-5.2, porque a thread mostra analistas levantando inferência NVFP4 em B300s bare-metal nas stacks vLLM e SGLang em menos de um dia. | Evaluation |
+| [Case 139: Aceleração de pré-preenchimento oMLX M3 Ultra](#case-139) | Use este caso para reavaliar a viabilidade local em Apple silicon após trabalhos recentes de kernel, porque a velocidade de prefill reportada do GLM-5.2 em um M3 Ultra 512GB quase dobrou sem colapso óbvio de qualidade em testes rápidos. | Evaluation |
+| [Case 138: Explosão de crédito de inscrição de token de 20 milhões](#case-138) | Use este caso para avaliar se créditos de cadastro direto bastam para um teste real de GLM-5.2, porque o post afirma que novas contas recebem 20M tokens grátis, sem cartão, e acesso totalmente compatível com OpenAI. | Integration |
+| [Case 131: 4x runbook de GLM local DGX Spark](#case-131) | Use este caso para medir se um cluster DGX Spark é uma rota local realista para o GLM-5.2, porque o guia reunido conecta custo de hardware, topologia de cluster e comandos de vLLM a um alvo GLM de contexto 1M. | Tutorial |
+| [Case 43: Comparação de custos de token de saída](#case-43) | Use este caso para comparar a economia do token de saída GLM-5.2 com os modelos estilo Opus, Fable e GPT-5.5. | Evaluation |
+| [Case 44: ROI de hardware local próximo da fronteira](#case-44) | Use este caso para raciocinar se os modelos auto-hospedados do tipo GLM-5.2 podem compensar os custos de hardware para usuários pesados ​​de agentes. | Evaluation |
+| [Case 45: MLX em dois estúdios Mac](#case-45) | Use este caso para explorar execuções locais do GLM-5.2 em hardware Apple e configurações orientadas a MLX. | Demo |
+| [Case 46: Solicitação mensal de implantação local H100](#case-46) | Use este caso como um prompt de comparação de custos para verificar as suposições de implantação local antes de escolher entre assinatura e auto-hospedagem. | Evaluation |
+| [Case 47: Créditos diários e reivindicação de substituição de Claude](#case-47) | Use este caso para inspecionar a narrativa de crédito gratuito e agente de substituição em torno do GLM-5.2, enquanto separa as reivindicações de marketing do ajuste verificado da carga de trabalho. | Evaluation |
+| [Case 48: Janela de token ZCode grátis](#case-48) | Use este caso para testar o GLM-5.2 por meio de um subsídio ZCode gratuito antes de se comprometer com um provedor pago ou implantação local. | Integration |
+| [Case 49: Oferta de semana grátis ZenMux](#case-49) | Use este caso para encontrar janelas de acesso livre com limite de tempo para testes do GLM-5.2. | Integration |
+| [Case 50: Preço crofAI por token](#case-50) | Use este caso para comparar preços de fornecedores terceirizados para o GLM-5.2 antes de selecionar uma rota. | Integration |
+| [Case 51: Comparação de margem de preço de API](#case-51) | Use este caso como uma crítica ao preço de mercado ao comparar o GLM-5.2 com outros laboratórios de fronteira e modelos abertos. | Evaluation |
+| [Case 64: Velocidade de inferência local no porão](#case-64) | Use este caso para estimar a taxa de transferência de inferência GLM-5.2 local em hardware Apple com grande memória antes de planejar uma configuração de codificação offline. | Demo |
+| [Case 68: Implantação local quantizada sem preguiça](#case-68) | Use este caso para avaliar caminhos de implantação quantizados do GLM-5.2 quando os pesos completos do modelo forem muito grandes para hardware local comum. | Tutorial |
+| [Case 88: Execução distribuída de MLX em dois M3 Ultra](#case-88) | Use este caso para estimar como é servir o GLM-5.2 em 8 bits em duas máquinas M3 Ultra antes de montar uma configuração maior sobre Apple Silicon. | Demo |
+| [Case 89: Corte do multiplicador do ZCode até setembro](#case-89) | Use este caso para esticar os créditos do plano do GLM-5.2 com multiplicadores menores do ZCode tanto nos horários de pico quanto fora deles. | Integration |
+| [Case 97: Taxa de transferência local RTX PRO 6000](#case-97) | Use este caso para dimensionar uma workstation local de alto nível para GLM-5.2, em que um desktop com duas Blackwell sustentou velocidade de decodificação de dois dígitos em uma build quantizada em 4 bits. | Demo |
+| [Case 98: Verificação da realidade do ROI da API do Mac Studio](#case-98) | Use este caso para validar se faz sentido comprar um Mac Studio para inferência local de GLM-5.2, porque a conta de retorno publicada favorece fortemente acesso via API ou plano para a maioria dos usuários. | Evaluation |
+| [Case 106: Economia de interrupção local LiteLLM](#case-106) | Use este caso para manter um entregável avançando quando APIs frontier hospedadas caem ou ficam limitadas, redirecionando o trabalho por um GLM-5.2 implantado localmente com LiteLLM. | Demo |
+| [Case 107: ROI local individual versus equipe](#case-107) | Use este caso para decidir se uma implantação local de GLM-5.2 faz sentido para uma pessoa sozinha ou mais para uma equipe de desenvolvimento maior. | Evaluation |
+| [Case 112: Execução do Terminal-Bench 2.0 em quatro RTX PRO 6000](#case-112) | Use este caso para dimensionar um setup local de GLM-5.2 com quatro GPUs contra um benchmark pesado de terminal antes de assumir uma workstation de alto nível. | Evaluation |
+| [Case 118: Solução local de crackme em 2x RTX PRO 6000 Blackwells](#case-118) | Use este caso para julgar se um setup local sério de GLM-5.2 consegue concluir tarefas longas de engenharia reversa sem acesso a depurador. | Demo |
 
 ### [🧭 Limites, ressalvas e sinais de segurança](#limits-caveats-safety-signals)
 
 | Caso | Foco | Tipo |
 |---|---|---|
-| [Case 205: Static HTML Rewrite Executor Misses](#case-205) | Use este caso para evitar dar ao GLM-5.2 controlo total como executor em reescritas legacy 1:1, porque uma migração grande de HTML estático para React e Vite falhou demasiados detalhes com OpenCode Go e Cline, levando o autor a confiar mais no GLM como planner do que como executor. | Limite |
-| [Case 197: Composio 47-Task Agent Gaps](#case-197) | Use este caso para perceber onde o GLM-5.2 ainda falha em trabalho real de agentes SaaS, porque a Composio ligou-o a 17 ferramentas em 47 tarefas e encontrou 45 acertos, com falhas em verificações de completude e em julgamentos ambíguos de SLA. | Avaliação |
-| [Case 163: Preliminary Cyber Research Parity](#case-163) | Use este caso para medir o GLM-5.2 em subtarefas de pesquisa de vulnerabilidades, porque a Irregular relata avaliações internas iniciais comparáveis ao GPT-5.4 e ao Opus 4.6 em uma suite cyber estreita, ao mesmo tempo em que avisa que cenários de ataque end-to-end ainda não foram testados. | Limite |
-| [Case 157: OpenRouter Spend-Cut Skill Rewrite](#case-157) | Use este caso para orçar o custo de migração antes de trocar o modelo do agente, porque o teste com OpenRouter de um fundo colocou o GLM-5.2 em cerca de um oitavo do custo do Opus, mas ainda exigiu reescritas de skills, lógica de roteamento e aceitação de saídas mais lentas e mais fracas. | Limite |
-| [Case 134: Semgrep IDOR Narrow-Win Caveat](#case-134) | Use este caso para separar um sinal real de segurança de inflação de manchete, porque a fonte diz que o GLM-5.2 superou o Claude Code em um benchmark de IDOR, mas nunca foi testado contra o Mythos em si. | Limit |
-| [Case 132: LisanBench Reasoning Efficiency Gap](#case-132) | Use este caso para revisar o GLM-5.2 em cargas pesadas de raciocínio antes de assumir que sua força em coding se transfere de forma limpa, porque o resultado publicado do LisanBench é melhor que o do GLM-5, mas ainda ineficiente frente a outros modelos abertos. | Limit |
-| [Case 133: PrinzBench Domain-Mismatch Caveat](#case-133) | Use este caso para manter o GLM-5.2 focado em coding e execução de agentes em vez de pesquisa jurídica, porque o post contrasta um score fraco no PrinzBench com benchmarks muito mais fortes de software e uso de ferramentas. | Limit |
-| [Case 126: Rust Bug Harness Pass With 7x Turn Gap](#case-126) | Use este caso para separar a vantagem do GLM-5.2 em qualidade de código da sua sobrecarga atual no harness de agentes, porque o modelo consegue passar no bug gastando muito mais turnos que o Opus. | Evaluation |
-| [Case 114: Braintrust Model-Swap Cost Caveat](#case-114) | Use este caso para evitar presumir que trocar para um modelo mais barato preservará a qualidade em um fluxo real de programação com agentes. | Evaluation |
-| [No Vision Caveat](#case-52) | Use este caso para lembrar que o GLM-5.2 pode ser menos útil para fluxos de trabalho que exigem capacidade de visão nativa. | Limite |
-| [Advertência sobre a lacuna do agente no mundo real](#case-53) | Use este caso para evitar a leitura excessiva de ganhos de benchmark como prova de que o GLM-5.2 corresponde aos melhores modelos proprietários em todas as tarefas de agente implantadas. | Limite |
-| [Safety Guardrail Concern](#case-54) | Use este caso como um lembrete para executar avaliações de segurança antes de implantar o GLM-5.2 em domínios confidenciais. | Limite |
-| [Crítica da Metodologia de Referência](#case-55) | Use este caso para questionar a metodologia de benchmark mesmo quando o resultado principal favorece o GLM-5.2. | Limite |
-| [Peak-Time Latency Concern](#case-56) | Use este caso para testar a latência do provedor antes de mudar os planos de codificação ou rotear fluxos de trabalho no estilo Claude Code para GLM-5.2. | Limite |
-| [FutureSim Non-Improvement Result](#case-57) | Use este caso para verificar se os ganhos de codificação se generalizam para domínios sem codificação antes da implantação ampla. | Limite |
-| [Launch Readiness Critique](#case-58) | Use este caso para separar a capacidade do modelo da execução de lançamento, documentação e prontidão da API. | Limite |
-| [Aumento de preço do plano de codificação](#case-59) | Use este caso para verificar o preço do plano antes de recomendar o GLM-5.2 como um substituto de baixo custo. | Limite |
-| [Trabalho paralelo curto versus execuções longas do agente](#case-67) | Use este caso para encaminhar o GLM-5.2 para tarefas de codificação limitadas e curtas, reservando modelos mais fortes para execuções mais profundas do agente de várias horas. | Limite |
-| [Verificação de censura em código e viés](#case-73) | Use este caso como um sinal prático de segurança para testes de código e viés político, não como prova de que preocupações mais amplas de alinhamento já estejam resolvidas. | Limite |
-| [Falha de cobrança em raciocínio difícil](#case-75) | Use este caso para testar o GLM-5.2 com cuidado em cargas de raciocínio difíceis, porque o relato público mostra longos tempos de execução, baixa conclusão e cobrança inesperadamente alta. | Limite |
-| [Case 103: HalluHard Multiturn Hallucination Signal](#case-103) | Use este caso para testar o GLM-5.2 em tarefas multiturno sensíveis a alucinação antes de confiar em scores fortes de benchmark em outros cenários. | Limite |
-| [Case 108: Open-Weight Security Emergency Warning](#case-108) | Use este caso como sinal de planejamento de segurança: GLM-5.2 open-weight reduz a fricção operacional para agentes ofensivos de segurança mesmo quando APIs fechadas continuam monitoradas. | Limite |
+| [Case 205: Faltas no executor de reescrita de HTML estático](#case-205) | Use este caso para evitar dar ao GLM-5.2 controlo total como executor em reescritas legacy 1:1, porque uma migração grande de HTML estático para React e Vite falhou demasiados detalhes com OpenCode Go e Cline, levando o autor a confiar mais no GLM como planner do que como executor. | Limit |
+| [Case 197: Composição 47-Lacunas do Agente de Tarefas](#case-197) | Use este caso para perceber onde o GLM-5.2 ainda falha em trabalho real de agentes SaaS, porque a Composio ligou-o a 17 ferramentas em 47 tarefas e encontrou 45 acertos, com falhas em verificações de completude e em julgamentos ambíguos de SLA. | Evaluation |
+| [Case 163: Paridade preliminar de pesquisa cibernética](#case-163) | Use este caso para medir o GLM-5.2 em subtarefas de pesquisa de vulnerabilidades, porque a Irregular relata avaliações internas iniciais comparáveis ao GPT-5.4 e ao Opus 4.6 em uma suite cyber estreita, ao mesmo tempo em que avisa que cenários de ataque end-to-end ainda não foram testados. | Limit |
+| [Case 157: Reescrita da habilidade de redução de gastos do OpenRouter](#case-157) | Use este caso para orçar o custo de migração antes de trocar o modelo do agente, porque o teste com OpenRouter de um fundo colocou o GLM-5.2 em cerca de um oitavo do custo do Opus, mas ainda exigiu reescritas de skills, lógica de roteamento e aceitação de saídas mais lentas e mais fracas. | Limit |
+| [Case 149: Compensação de Verbosidade e Raciocínio AA](#case-149) | Use este caso para separar a inteligência open-weight de nível frontier do GLM-5.2 do seu custo de raciocínio, porque a Artificial Analysis mostra um líder aberto que também gasta tokens de saída demais. | Evaluation |
+| [Case 134: Advertência de vitória estreita do Semgrep IDOR](#case-134) | Use este caso para separar um sinal real de segurança de inflação de manchete, porque a fonte diz que o GLM-5.2 superou o Claude Code em um benchmark de IDOR, mas nunca foi testado contra o Mythos em si. | Limit |
+| [Case 132: Lacuna de eficiência de raciocínio do LisanBench](#case-132) | Use este caso para revisar o GLM-5.2 em cargas pesadas de raciocínio antes de assumir que sua força em coding se transfere de forma limpa, porque o resultado publicado do LisanBench é melhor que o do GLM-5, mas ainda ineficiente frente a outros modelos abertos. | Limit |
+| [Case 133: Advertência de incompatibilidade de domínio do PrinzBench](#case-133) | Use este caso para manter o GLM-5.2 focado em coding e execução de agentes em vez de pesquisa jurídica, porque o post contrasta um score fraco no PrinzBench com benchmarks muito mais fortes de software e uso de ferramentas. | Limit |
+| [Case 52: Nenhuma advertência de visão](#case-52) | Use este caso para lembrar que o GLM-5.2 pode ser menos útil para fluxos de trabalho que exigem capacidade de visão nativa. | Limit |
+| [Case 53: Advertência sobre a lacuna do agente no mundo real](#case-53) | Use este caso para evitar a leitura excessiva de ganhos de benchmark como prova de que o GLM-5.2 corresponde aos melhores modelos proprietários em todas as tarefas de agente implantadas. | Limit |
+| [Case 54: Preocupação com o guarda-corpo de segurança](#case-54) | Use este caso como um lembrete para executar avaliações de segurança antes de implantar o GLM-5.2 em domínios confidenciais. | Limit |
+| [Case 55: Crítica da Metodologia de Referência](#case-55) | Use este caso para questionar a metodologia de benchmark mesmo quando o resultado principal favorece o GLM-5.2. | Limit |
+| [Case 56: Preocupação com a latência no horário de pico](#case-56) | Use este caso para testar a latência do provedor antes de mudar os planos de codificação ou rotear fluxos de trabalho no estilo Claude Code para GLM-5.2. | Limit |
+| [Case 57: Resultado de não melhoria do FutureSim](#case-57) | Use este caso para verificar se os ganhos de codificação se generalizam para domínios sem codificação antes da implantação ampla. | Limit |
+| [Case 58: Crítica de preparação para lançamento](#case-58) | Use este caso para separar a capacidade do modelo da execução de lançamento, documentação e prontidão da API. | Limit |
+| [Case 59: Aumento de preço do plano de codificação](#case-59) | Use este caso para verificar o preço do plano antes de recomendar o GLM-5.2 como um substituto de baixo custo. | Limit |
+| [Case 67: Trabalho paralelo curto versus execuções longas do agente](#case-67) | Use este caso para encaminhar o GLM-5.2 para tarefas de codificação limitadas e curtas, reservando modelos mais fortes para execuções mais profundas do agente de várias horas. | Limit |
+| [Case 103: Sinal de alucinação multivoltas HalluHard](#case-103) | Use este caso para testar o GLM-5.2 em tarefas multiturno sensíveis a alucinação antes de confiar em scores fortes de benchmark em outros cenários. | Limit |
+| [Case 108: Aviso de emergência de segurança de peso aberto](#case-108) | Use este caso como sinal de planejamento de segurança: GLM-5.2 open-weight reduz a fricção operacional para agentes ofensivos de segurança mesmo quando APIs fechadas continuam monitoradas. | Limit |
+| [Case 126: Passe de arnês Rust Bug com intervalo de giro de 7x](#case-126) | Use este caso para separar a vantagem do GLM-5.2 em qualidade de código da sua sobrecarga atual no harness de agentes, porque o modelo consegue passar no bug gastando muito mais turnos que o Opus. | Evaluation |
+| [Case 114: Advertência de custo de troca de modelo Braintrust](#case-114) | Use este caso para evitar presumir que trocar para um modelo mais barato preservará a qualidade em um fluxo real de programação com agentes. | Evaluation |
+| [Case 73: Verificação de censura em código e viés](#case-73) | Use este caso como um sinal prático de segurança para testes de código e viés político, não como prova de que preocupações mais amplas de alinhamento já estejam resolvidas. | Limit |
+| [Case 75: Falha de cobrança em raciocínio difícil](#case-75) | Use este caso para testar o GLM-5.2 com cuidado em cargas de raciocínio difíceis, porque o relato público mostra longos tempos de execução, baixa conclusão e cobrança inesperadamente alta. | Limit |
+
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Avaliações comparativas e avaliação de fronteira
 ---
 <a id="case-207"></a>
-### Case 207: [Stable Fluids Browser Benchmark](https://x.com/AlicanKiraz0/status/2075639232169705781) (por [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+### Case 207: [Referência de navegador de fluidos estáveis](https://x.com/AlicanKiraz0/status/2075639232169705781) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
 
 **Use este caso para comparar o GLM-5.2 em builds de física para browser carregados de algoritmo, porque AlicanKiraz0 executou um benchmark HTML de Stable Fluids e deu ao GLM 5.2 Max 88 em 100 por cerca de 1,17 dólares, à frente de Opus 4.8 e Fable 5 mas atrás de GPT 5.6 Sol.**
 
 O benchmark pede a cada modelo um único ficheiro HTML autocontido que implemente stable fluids de Jos Stam com advecção semi-Lagrangiana, difusão iterativa, projeção de pressão, relatório ao vivo de divergência e injeção interativa de tinta e velocidade. AlicanKiraz0 diz que o GLM 5.2 Max chegou a 88 em 100, à frente do Opus 4.8 com 86 e do Fable 5 com 81, mantendo-se muito mais barato, o que faz deste caso uma avaliação de engenharia sobre correção numérica e desempenho em browser em tempo real, e não uma comparação frontend baseada em gosto.
 
-Tipo: Evaluation | Data: 2026-07-10
+Type: Evaluation | Date: 2026-07-10
 
 <a id="case-199"></a>
-### Case 199: [Epoch Open-Weight Index Lead](https://x.com/EpochAIResearch/status/2074894535558300103) (por [@EpochAIResearch](https://x.com/EpochAIResearch))
+### Case 199: [Líder do índice Epoch Open-Weight](https://x.com/EpochAIResearch/status/2074894535558300103) (by [@EpochAIResearch](https://x.com/EpochAIResearch))
 
 **Use este caso para posicionar o GLM-5.2 numa curva de capacidade de longo prazo, porque a Epoch AI estima uma pontuação de 152 no seu Capabilities Index e diz que é o melhor modelo open weight do conjunto que avaliou.**
 
 A Epoch AI diz que o GLM-5.2 alcançou uma pontuação estimada de 152 no Epoch Capabilities Index, a mais alta entre os modelos open weight que avaliou. Isso torna o post uma referência útil de benchmark quando se precisa de um único sinal de posicionamento de capacidade, e não apenas de um leaderboard estreito focado em coding.
 
-Tipo: Benchmark | Data: 2026-07-08
+Type: Benchmark | Date: 2026-07-08
 
 ---
 <a id="case-196"></a>
-### Case 196: [Databricks Internal Harness Eval](https://x.com/alighodsi/status/2074996561306955958) (por [@alighodsi](https://x.com/alighodsi))
+### Case 196: [Avaliação do chicote interno do Databricks](https://x.com/alighodsi/status/2074996561306955958) (by [@alighodsi](https://x.com/alighodsi))
 
 **Use este caso para benchmarkear o GLM-5.2 numa grande codebase privada de engenharia, porque a Databricks diz que a sua avaliação interna sobre trabalho de mais de 3.000 engineers mostrou que o GLM 5.2 teve um desempenho muito forte e que só a escolha do harness pode cortar o custo em cerca de 2x.**
 
 Ali Ghodsi diz que a Databricks executou uma avaliação abrangente sobre as suas próprias tarefas, codebase e infraestrutura, cobrindo mais de 3.000 software engineers, três clouds hyperscaler e muitas linguagens. O post diz que o GLM 5.2 teve um desempenho extremamente bom e que escolher o harness certo para o mesmo modelo pode reduzir o custo em cerca de 2x, com o Omnigent à frente a multiplexar modelos e harnesses por tarefa.
 
-Tipo: Avaliação | Data: 2026-07-08
+Type: Evaluation | Date: 2026-07-08
 
 ---
 <a id="case-190"></a>
-### Case 190: [NatureBench Open-Weight Runner-Up](https://x.com/OkhayIea/status/2074498200262889837) (por [@OkhayIea](https://x.com/OkhayIea))
+### Case 190: [Vice-campeão de peso aberto do NatureBench](https://x.com/OkhayIea/status/2074498200262889837) (by [@OkhayIea](https://x.com/OkhayIea))
 
 **Use este caso para benchmarkear o GLM-5.2 em trabalho de agente científico, porque o NatureBench diz que o GLM-5.2 estreou em segundo lugar geral e liderou os open weights em 90 tarefas de seis domínios científicos.**
 
 O NatureBench pergunta se um agente de código consegue descobrir um método que supere o SOTA publicado de artigos reais da família Nature em 90 tarefas e seis domínios científicos, sem pesquisa web. A atualização diz que o GLM-5.2 estreou em segundo lugar geral, atrás apenas do Claude Opus 4.7, e liderou o campo open weight. Isso faz dele um benchmark concreto para workflows de agente científico, e não apenas para geração de código comum.
 
-Tipo: Benchmark | Data: 2026-07-07
+Type: Benchmark | Date: 2026-07-07
 
 ---
 <a id="case-189"></a>
-### Case 189: [Terminal-Bench 45-Task Cost Tradeoff](https://x.com/Aiswarya_Sankar/status/2074554064856314219) (por [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar))
+### Case 189: [Troca de custo de 45 tarefas entre terminal e banco](https://x.com/Aiswarya_Sankar/status/2074554064856314219) (by [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar))
 
 **Use este caso para comparar GLM-5.2 com GPT-5.5 no mesmo harness de agente, porque uma rodada de 45 tarefas do Terminal-Bench colocou o GLM-5.2 em 25 vitórias contra 29 do GPT-5.5, com cerca de 40% menos custo usando prompt caching.**
 
 A nota de benchmark diz que a equipa executou GPT-5.5 e GLM-5.2 em 45 tarefas do Terminal-Bench com o mesmo agente, os mesmos prompts, a mesma avaliação e o mesmo harness, mudando apenas o modelo. O GLM resolveu 25 de 45 contra 29 de 45 do GPT-5.5, mas custou cerca de 40% menos com prompt caching. Isso faz do post um checkpoint concreto de preço versus sucesso, e não apenas uma preferência vaga de workflow.
 
-Tipo: Avaliação | Data: 2026-07-07
+Type: Evaluation | Date: 2026-07-07
 
 ---
 <a id="case-188"></a>
-### Case 188: [Harvey LAB-AA Legal-Agent Tie](https://x.com/ArtificialAnlys/status/2074541975186165887) (por [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+### Case 188: [Empate de agente jurídico Harvey LAB-AA](https://x.com/ArtificialAnlys/status/2074541975186165887) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
 **Use este caso para benchmarkear o GLM-5.2 em trabalho real de agente jurídico, porque o Harvey LAB-AA coloca o GLM-5.2 Max em 7,5% de all-pass, empatado com Claude Opus 4.8 em 120 tarefas privadas de 24 áreas legais.**
 
 A Artificial Analysis diz que o Harvey LAB-AA avalia trabalho jurídico real em 120 tarefas privadas distribuídas por 24 practice areas e pontua as saídas com rubricas binárias. No lançamento, o GLM-5.2 Max atinge 7,5% de all-pass e 91,0% de criteria-pass, empatado com Claude Opus 4.8, enquanto custa por tarefa cerca de 6% do Claude Fable 5. Isso faz do caso tanto um benchmark de domínio frontier quanto um sinal de eficiência de custo.
 
-Tipo: Benchmark | Data: 2026-07-07
+Type: Benchmark | Date: 2026-07-07
 
 ---
 <a id="case-184"></a>
-### Case 184: [AutomationBench-AA Open-Weights Lead](https://x.com/ArtificialAnlys/status/2074194764510208230) (por [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+### Case 184: [Líder de pesos abertos do AutomationBench-AA](https://x.com/ArtificialAnlys/status/2074194764510208230) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
 **Use este caso para comparar o GLM-5.2 em automação SaaS com regras de negócio, e não apenas em benchmarks de código, porque a Artificial Analysis reporta 27,8% para o GLM-5.2 Max e o chama de líder open weights no AutomationBench-AA.**
 
 A Artificial Analysis diz que o AutomationBench-AA executa 657 tarefas privadas de workflow em 40 apps SaaS simulados e as avalia com quase 12 mil assertions de objetivos e guardrails. O post de lançamento coloca o GLM-5.2 Max em 27,8%, à frente entre os open weights, mas também observa que ele ainda fica atrás de modelos fechados mais fortes e apresenta bem mais violações de guardrails por tarefa. Por isso, este caso serve ao mesmo tempo como sinal de capacidade e de limite para automação empresarial agentic.
 
-Tipo: Avaliação | Data: 2026-07-06
+Type: Evaluation | Date: 2026-07-06
 
 ---
 <a id="case-178"></a>
-### Case 178: [Three-Body Simulator Benchmark Win](https://x.com/AlicanKiraz0/status/2073823792543998170) (por [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+### Case 178: [Vitória no benchmark do simulador de três corpos](https://x.com/AlicanKiraz0/status/2073823792543998170) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
 
 **Use este caso para comparar o GLM-5.2 em benchmarks de programação com física numérica, porque AlicanKiraz0 executou uma tarefa caótica de simulador de três corpos e deu ao GLM 5.2 Max a melhor nota, 91 de 100.**
 
 O benchmark combina física de três corpos, RK4 real, estabilidade em encontros próximos, gráficos de conservação ao vivo e controles interativos. A thread diz que o GLM 5.2 Max se destacou por usar estado em Float64Array, reutilizar buffers de RK4, aplicar Plummer softening e subpassos adaptativos, tornando este caso uma avaliação concreta de qualidade de engenharia e não apenas um screenshot de leaderboard.
 
-Tipo: Avaliação | Data: 2026-07-05
+Type: Evaluation | Date: 2026-07-05
 
 ---
 <a id="case-167"></a>
-### Case 167: [GameDevBench 333-Task Open-Source Lead](https://x.com/iamwaynechi/status/2073081777091182633) (por [@iamwaynechi](https://x.com/iamwaynechi))
+### Case 167: [Líder de código aberto GameDevBench 333-Task](https://x.com/iamwaynechi/status/2073081777091182633) (by [@iamwaynechi](https://x.com/iamwaynechi))
 
 **Use este caso para acompanhar o GLM-5.2 em benchmarks de desenvolvimento de jogos agentic, porque o GameDevBench foi ampliado para 333 tarefas e diz que o GLM-5.2 agora é o modelo open-source mais forte do leaderboard mesmo sem visão.**
 
 iamwaynechi diz que o GameDevBench triplicou para 333 tarefas, atualizou o paper e adicionou GLM-5.2 e Opus 4.8 ao leaderboard. O post afirma que o Opus lidera por pequena margem, enquanto o GLM-5.2 fica como o open-source mais forte, o que o torna um sinal útil para workflows de construção de jogos agentic e não apenas para coding em texto.
 
-Tipo: Avaliação | Data: 2026-07-03
+Type: Evaluation | Date: 2026-07-03
 
 ---
 
 <a id="case-175"></a>
-### Case 175: [Cursor Double Pendulum Scorecard](https://x.com/AlicanKiraz0/status/2073386918813778143) (por [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+### Case 175: [Pontuação do Pêndulo Duplo do Cursor](https://x.com/AlicanKiraz0/status/2073386918813778143) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
 
 **Use este caso para comparar o GLM-5.2 em um benchmark de coding no Cursor com tarefa restrita, porque AlicanKiraz0 rodou seis modelos em um simulador HTML de pêndulo duplo e deu ao GLM 5.2 Max 88 de 100, atrás de Fable e Sonnet, mas à frente de GPT-5.5, Kimi K2.7 Code e Composer.**
 
 AlicanKiraz0 comparou seis modelos dentro do Cursor em uma única tarefa de simulador HTML de pêndulo duplo e publicou tanto a pontuação total quanto as fraquezas específicas de cada modelo. A execução do GLM 5.2 Max é descrita como visualmente forte e didática, porém menos refinada que Fable ou Sonnet na arquitetura de desempenho, com risco extra de allocation no wrapper RK4 e uma rota menos robusta ao redimensionar o trail buffer. Isso torna o fio uma avaliação comparativa concreta, e não um julgamento vago de gosto.
 
-Tipo: Avaliação | Data: 2026-07-04
+Type: Evaluation | Date: 2026-07-04
 
 <a id="case-162"></a>
-### Case 162: [VulcanBench 10-Task 80 Percent Tie](https://x.com/morganlinton/status/2072689409011679642) (por [@morganlinton](https://x.com/morganlinton))
+### Case 162: [VulcanBench 10 tarefas com empate de 80 por cento](https://x.com/morganlinton/status/2072689409011679642) (by [@morganlinton](https://x.com/morganlinton))
 
 **Use este caso para comparar o GLM-5.2 em tarefas reais de engenharia pós-cutoff onde custo importa tanto quanto score, porque Morgan Linton diz que o VulcanBench deu a GLM 5.2 High, Fable 5 Low e Sonnet 5 High o mesmo 80 por cento em 10 repositórios, enquanto o GLM ficou no meio em custo.**
 
 Morgan Linton diz que o benchmark usou 10 tarefas reais de engenharia em projetos como Flask, aiohttp e sqlglot, todas descritas como post-training-cutoff. Fable 5 Low, GLM 5.2 High e Sonnet 5 High marcaram 80 por cento, com custos reportados de 2,27, 8,41 e 15,81 dólares. É um checkpoint útil de preço versus qualidade entre três modelos.
 
-Tipo: Avaliação | Data: 2026-07-02
+Type: Evaluation | Date: 2026-07-02
 
 ---
 
 <a id="case-159"></a>
-### Case 159: [SWE-Rebench 51.1 Percent Checkpoint](https://x.com/ibragim_bad/status/2072318238407483593) (por [@ibragim_bad](https://x.com/ibragim_bad))
+### Case 159: [Ponto de verificação SWE-Rebench de 51,1 por cento](https://x.com/ibragim_bad/status/2072318238407483593) (by [@ibragim_bad](https://x.com/ibragim_bad))
 
 **Use este caso para acompanhar o GLM-5.2 em um leaderboard de SWE agents que se atualiza continuamente, porque a última postagem do SWE rebench relata 51,1 por cento com 2,62 milhões de tokens, claramente à frente das novas execuções de DeepSeek, MiMo, Qwen e Gemma.**
 
 ibragim_bad diz que a última atualização do SWE rebench adiciona o GLM-5.2 ao lado de vários novos modelos abertos. Os números publicados mostram o GLM em 51,1 por cento usando 2,62 milhões de tokens, contra 42,7 por cento do DeepSeek V4 Pro, 42,4 por cento do MiMo V2.5 Pro e pontuações ainda menores para Qwen e Gemma, o que vira um checkpoint público concreto do leaderboard.
 
-Tipo: Avaliação | Data: 2026-07-01
+Type: Evaluation | Date: 2026-07-01
 
 ---
 
 <a id="case-154"></a>
-### Case 154: [LaunchDarkly Edge-Case Win At 40/41](https://x.com/composio/status/2072355937415827950) (por [@composio](https://x.com/composio))
+### Case 154: [LaunchDarkly Edge-Case vence em 40/41](https://x.com/composio/status/2072355937415827950) (by [@composio](https://x.com/composio))
 
 **Use este caso para testar o GLM-5.2 em trabalho de agentes com ferramentas de negócio em vez de avaliações só de chat, porque a Composio relata 40 de 41 em tarefas com GitHub, Jira e LaunchDarkly e diz que o GLM foi o único modelo a captar um caso de borda de aprovação pendente.**
 
 A Composio testou o GLM-5.2 contra Claude Opus 4.8 e GPT-5.5 em 41 tarefas agenticas que usam ferramentas reais como GitHub, Jira e LaunchDarkly. O GLM fez 40 de 41, enquanto Opus e GPT ficaram com 39 cada. Em uma tarefa do LaunchDarkly, o GLM verificou aprovações pendentes antes de declarar uma flag obsoleta, enquanto os outros dois modelos pararam no estado ligado ou desligado.
 
-Tipo: Avaliação | Data: 2026-07-01
+Type: Evaluation | Date: 2026-07-01
 
 ---
 
 
 <a id="case-146"></a>
-### Case 146: [CyberBench Open-Weight Patch Runner-Up](https://x.com/ValsAI/status/2072099011398627639) (por [@ValsAI](https://x.com/ValsAI))
+### Case 146: [Vice-campeão do patch de peso aberto do CyberBench](https://x.com/ValsAI/status/2072099011398627639) (by [@ValsAI](https://x.com/ValsAI))
 
 **Use este caso para medir o GLM-5.2 em busca e correção de vulnerabilidades com perfil ofensivo, porque o CyberBench o coloca em segundo lugar em 60 vulnerabilidades reais do OSS-Fuzz.**
 
 A ValsAI explica que o CyberBench adiciona duas tarefas: enviar uma PoC que derruba apenas o build vulnerável e corrigir o código sem quebrar o comportamento. Em 60 vulnerabilidades de memória do OSS-Fuzz, o GPT-5.5 liderou e o GLM 5.2 apareceu como uma das referências open-weight mais fortes.
 
-Tipo: Avaliação | Data: 2026-06-30
+Type: Evaluation | Date: 2026-06-30
 
 ---
 
 <a id="case-1"></a>
-### Case 1: [Artificial Analysis Intelligence Index](https://x.com/ArtificialAnlys/status/2067135640249209175) (por [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+### Case 1: [Índice de Inteligência de Análise Artificial](https://x.com/ArtificialAnlys/status/2067135640249209175) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
 **Use a postagem de Análise Artificial para comparar o GLM-5.2 com outros modelos de fronteira proprietários e de peso aberto em inteligência e custo por tarefa.**
 
 A Artificial Analysis relatou o GLM-5.2 como o modelo de pesos abertos líder em seu Índice de Inteligência, com uma pontuação de 51 e uma posição na fronteira de Pareto em inteligência versus custo por tarefa. A postagem também registra o tamanho do modelo, janela de contexto, preços e disponibilidade do fornecedor.
 
-Tipo: Referência | Data: 2026-06-17
+Type: Benchmark | Date: 2026-06-17
 
 ---
 
 <a id="case-2"></a>
-### Case 2: [Code Arena Frontend Ranking](https://x.com/arena/status/2066957802741043641) (por [@arena](https://x.com/arena))
+### Case 2: [Classificação de front-end do Code Arena](https://x.com/arena/status/2066957802741043641) (by [@arena](https://x.com/arena))
 
 **Use este caso para avaliar o GLM-5.2 em tarefas reais de codificação de front-end avaliadas por comparações no estilo arena.**
 
 A conta da Arena relatou que o GLM-5.2 Max ficou em segundo lugar no Code Arena Frontend, à frente de outros modelos abertos e perto da entrada de fronteira superior. A postagem é especialmente útil para casos de uso de front-end, React, HTML, jogos, simulação e design baseado em referência.
 
-Tipo: Referência | Data: 2026-06-16
+Type: Benchmark | Date: 2026-06-16
 
 ---
 
 <a id="case-3"></a>
-### Case 3: [Design Arena First Place](https://x.com/Designarena/status/2066940737011560652) (por [@Designarena](https://x.com/Designarena))
+### Case 3: [Design Arena Primeiro Lugar](https://x.com/Designarena/status/2066940737011560652) (by [@Designarena](https://x.com/Designarena))
 
 **Use este caso para julgar se o GLM-5.2 pode lidar com tarefas de design mais código em vez de apenas benchmarks de codificação com muito texto.**
 
 A Design Arena relatou que o GLM-5.2 alcançou o primeiro lugar com uma pontuação Elo de 1360, destacando um salto no desempenho do código de design para um modelo de peso aberto. Trate-o como um sinal de referência de design, não como um substituto para a revisão da IU específica do projeto.
 
-Tipo: Referência | Data: 2026-06-16
+Type: Benchmark | Date: 2026-06-16
 
 ---
 
 <a id="case-4"></a>
-### Case 4: [FrontierSWE Result](https://x.com/ProximalHQ/status/2066939701026787583) (por [@ProximalHQ](https://x.com/ProximalHQ))
+### Case 4: [Resultado FrontierSWE](https://x.com/ProximalHQ/status/2066939701026787583) (by [@ProximalHQ](https://x.com/ProximalHQ))
 
 **Use a postagem FrontierSWE para comparar o GLM-5.2 com os modelos GPT-5.5, Opus e estilo Fable em tarefas de engenharia de software.**
 
 A postagem relata que o GLM-5.2 ocupa o terceiro lugar no FrontierSWE e o enquadra como um dos primeiros modelos de peso aberto a diminuir a lacuna com os principais modelos proprietários em trabalhos de engenharia de implementação pesada.
 
-Tipo: Referência | Data: 2026-06-16
+Type: Benchmark | Date: 2026-06-16
 
 ---
 
 <a id="case-5"></a>
-### Case 5: [DeepSWE Open-Source Lead](https://x.com/AiBattle_/status/2066938378512126024) (por [@AiBattle_](https://x.com/AiBattle_))
+### Case 5: [Líder de código aberto DeepSWE](https://x.com/AiBattle_/status/2066938378512126024) (by [@AiBattle_](https://x.com/AiBattle_))
 
 **Use o caso DeepSWE para entender o GLM-5.2 como um modelo aberto forte para tarefas difíceis de avaliação de engenharia de software.**
 
 AiBattle relatou uma pontuação DeepSWE de 46,2% para GLM-5.2 e descreveu-a como a pontuação mais alta para um modelo de código aberto nesse contexto de benchmark.
 
-Tipo: Referência | Data: 2026-06-16
+Type: Benchmark | Date: 2026-06-16
 
 ---
 
 <a id="case-6"></a>
-### Case 6: [Terminal-Bench Over 80 Percent](https://x.com/cline/status/2066951439793242193) (por [@cline](https://x.com/cline))
+### Case 6: [Terminal-banco acima de 80 por cento](https://x.com/cline/status/2066951439793242193) (by [@cline](https://x.com/cline))
 
 **Use este caso ao avaliar o GLM-5.2 para codificação orientada a terminal e fluxos de trabalho de agente.**
 
 Cline destacou o GLM-5.2 como o primeiro modelo de pesos abertos a ultrapassar 80% no Terminal-Bench e o posicionou como uma opção de nível de fronteira para o desenvolvimento acessível baseado em ferramentas.
 
-Tipo: Referência | Data: 2026-06-16
+Type: Benchmark | Date: 2026-06-16
 
 ---
 
 <a id="case-7"></a>
-### Case 7: [Comparação do SWELancer com GPT-5.5](https://x.com/gosrum/status/2067153091842203676) (por [@gosrum](https://x.com/gosrum))
+### Case 7: [Comparação do SWELancer com GPT-5.5](https://x.com/gosrum/status/2067153091842203676) (by [@gosrum](https://x.com/gosrum))
 
 **Use este caso SWELancer como uma comparação multimétrica concreta entre GLM-5.2 e GPT-5.5 sobre sucesso de tarefa, recompensa e tempo de conclusão.**
 
 O autor compartilhou uma atualização de benchmark japonês onde o GLM-5.2 liderou inesperadamente o GPT-5.5 nos resultados mais recentes do SWELancer em termos de sucesso de tarefas, recompensa obtida e tempo para conclusão, com duas tarefas inacessíveis excluídas.
 
-Tipo: Avaliação | Data: 2026-06-17
+Type: Evaluation | Date: 2026-06-17
 
 ---
 
 <a id="case-8"></a>
-### Case 8: [BridgeBench Perfect Score Signal](https://x.com/bridgemindai/status/2065874542321426819) (por [@bridgemindai](https://x.com/bridgemindai))
+### Case 8: [Sinal de pontuação perfeita do BridgeBench](https://x.com/bridgemindai/status/2065874542321426819) (by [@bridgemindai](https://x.com/bridgemindai))
 
 **Use este caso para inspecionar o GLM-5.2 com base no raciocínio fundamentado em várias etapas, em vez de apenas codificar tabelas de classificação.**
 
 A BridgeMind relatou o GLM-5.2 como o primeiro modelo a receber uma pontuação perfeita no benchmark BridgeBench BS, tornando-o uma fonte útil para afirmações de avaliação pesadas.
 
-Tipo: Referência | Data: 2026-06-13
+Type: Benchmark | Date: 2026-06-13
 
 ---
 
 <a id="case-9"></a>
-### Case 9: [BridgeBench Reasoning Number One](https://x.com/bridgebench/status/2066123398816624743) (por [@bridgebench](https://x.com/bridgebench))
+### Case 9: [Raciocínio número um do BridgeBench](https://x.com/bridgebench/status/2066123398816624743) (by [@bridgebench](https://x.com/bridgebench))
 
 **Use este caso para comparar o GLM-5.2 com modelos de fronteira fechada em tarefas de raciocínio fundamentado.**
 
 BridgeBench relatou que o GLM-5.2 ocupa o primeiro lugar em um benchmark de raciocínio e vence Claude Fable 5 nesse contexto de medição.
 
-Tipo: Referência | Data: 2026-06-14
+Type: Benchmark | Date: 2026-06-14
 
 ---
 
 <a id="case-10"></a>
-### Case 10: [KernelBench-Hard Without Shortcutting](https://x.com/elliotarledge/status/2065735912370417760) (por [@elliotarledge](https://x.com/elliotarledge))
+### Case 10: [KernelBench-Hard sem atalhos](https://x.com/elliotarledge/status/2065735912370417760) (by [@elliotarledge](https://x.com/elliotarledge))
 
 **Use este caso ao verificar se os ganhos de benchmark provêm de um comportamento de implementação válido em vez de atalhos.**
 
 A postagem do KernelBench-Hard diz que o resultado interessante não foi apenas a pontuação, mas que o GLM-5.2 parou de usar um atalho inadequado em um problema GEMM fp8, tornando-o relevante para a integridade do benchmark.
 
-Tipo: Avaliação | Data: 2026-06-13
+Type: Evaluation | Date: 2026-06-13
 
 ---
 
 <a id="case-11"></a>
-### Case 11: [Runescape Bench Catch-Up](https://x.com/maxbittker/status/2066985743197577433) (por [@maxbittker](https://x.com/maxbittker))
+### Case 11: [Atualização do banco Runescape](https://x.com/maxbittker/status/2066985743197577433) (by [@maxbittker](https://x.com/maxbittker))
 
 **Use este caso como um sinal rápido para o progresso do modelo de peso aberto em tarefas de benchmark semelhantes a jogos.**
 
 A postagem relata a pontuação do GLM-5.2 melhor do que os modelos proprietários recentes no banco Runescape, usando esse resultado para enquadrar a rapidez com que a capacidade de fronteira de código aberto está se atualizando.
 
-Tipo: Referência | Data: 2026-06-16
+Type: Benchmark | Date: 2026-06-16
 
 ---
 
 <a id="case-12"></a>
-### Case 12: [BridgeBench Speed Improvement](https://x.com/bridgebench/status/2065845045752648159) (por [@bridgebench](https://x.com/bridgebench))
+### Case 12: [Melhoria de velocidade do BridgeBench](https://x.com/bridgebench/status/2065845045752648159) (by [@bridgebench](https://x.com/bridgebench))
 
 **Use este caso para avaliar fluxos de trabalho sensíveis à latência, onde a velocidade é importante junto com a inteligência.**
 
 BridgeBench relatou o GLM-5.2 como três vezes mais rápido que o GLM-5.1 e o quarto em seu benchmark de velocidade, tornando-o relevante para fluxos de trabalho onde a velocidade de iteração afeta a usabilidade.
 
-Tipo: Referência | Data: 2026-06-13
+Type: Benchmark | Date: 2026-06-13
 
 ---
 
 <a id="case-60"></a>
-### Case 60: [Codificação KernelBench Hard e Mega GPU](https://x.com/elliotarledge/status/2068177175640240323) (por [@elliotarledge](https://x.com/elliotarledge))
+### Case 60: [Codificação KernelBench Hard e Mega GPU](https://x.com/elliotarledge/status/2068177175640240323) (by [@elliotarledge](https://x.com/elliotarledge))
 
 **Use este caso para avaliar o GLM-5.2 na codificação do kernel da GPU em KernelBench-Hard e KernelBench-Mega, onde os rastreamentos de agente aberto tornam o resultado inspecionável.**
 
 A atualização do KernelBench relata testes H100, B200 e RTX PRO 6000, rastreamentos de agentes de código aberto e GLM-5.2 como o modelo aberto principal na comparação.
 
-Tipo: Referência | Data: 2026-06-20
+Type: Benchmark | Date: 2026-06-20
 
 ---
 
 <a id="case-70"></a>
-### Case 70: [Liderança open-source no DeepSWE em esforço máximo](https://x.com/datacurve/status/2068473057107476680) (por [@datacurve](https://x.com/datacurve))
+### Case 70: [Liderança open-source no DeepSWE em esforço máximo](https://x.com/datacurve/status/2068473057107476680) (by [@datacurve](https://x.com/datacurve))
 
 **Use este caso para acompanhar o GLM-5.2 no DeepSWE em esforço máximo, onde o leaderboard publicado o coloca em primeiro entre os modelos abertos com 44% de pass@1.**
 
 DataCurve compartilhou uma atualização do leaderboard do DeepSWE mostrando o GLM-5.2 com 44% de pass@1 e 17 pontos à frente do Kimi K2.7 Code entre os modelos abertos. Trate isso como uma atualização de benchmark, não como prova de que todo workflow real de agente já esteja resolvido.
 
-Tipo: Referência | Data: 2026-06-20
+Type: Benchmark | Date: 2026-06-20
 
 ---
 
 <a id="case-72"></a>
-### Case 72: [Vice-campeão em benchmark de debate LLM](https://x.com/LechMazur/status/2068428300460974279) (por [@LechMazur](https://x.com/LechMazur))
+### Case 72: [Vice-campeão em benchmark de debate LLM](https://x.com/LechMazur/status/2068428300460974279) (by [@LechMazur](https://x.com/LechMazur))
 
 **Use este caso para avaliar o GLM-5.2 além de tarefas de código em debates adversariais multi-turno, onde a variante de raciocínio máximo ficou em segundo atrás dos modelos Claude.**
 
 Lech Mazur compartilhou um resultado do LLM Debate Benchmark que coloca o GLM-5.2 Max em segundo lugar. O benchmark mede debates adversariais multi-turno sobre temas amplos, servindo como um sinal de raciocínio fora dos leaderboards de código tradicionais.
 
-Tipo: Referência | Data: 2026-06-20
+Type: Benchmark | Date: 2026-06-20
 
 ---
 
 <a id="case-76"></a>
-### Case 76: [Taxa de alucinação no AA-Omniscience](https://x.com/yuhasbeentaken/status/2068259921519423855) (por [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+### Case 76: [Taxa de alucinação no AA-Omniscience](https://x.com/yuhasbeentaken/status/2068259921519423855) (by [@yuhasbeentaken](https://x.com/yuhasbeentaken))
 
 **Use este caso para comparar o GLM-5.2 em tratamento de incerteza, onde o resultado publicado do AA-Omniscience mostra taxa de alucinação menor que a de vários outros modelos frontier.**
 
 O post relata uma taxa de alucinação de 28% para o GLM-5.2 no AA-Omniscience, em comparação com taxas mais altas para Fable 5 e DeepSeek V4 Pro. O benchmark é apresentado em torno de saber se os modelos recusam responder ou admitem incerteza em vez de chutar.
 
-Tipo: Avaliação | Data: 2026-06-20
+Type: Evaluation | Date: 2026-06-20
 
 ---
 
 
 <a id="case-90"></a>
-### Case 90: [GDPval-AA Agentic Work Index](https://x.com/ArtificialAnlys/status/2069121548670406947) (por [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+### Case 90: [Índice de Trabalho Agente GDPval-AA](https://x.com/ArtificialAnlys/status/2069121548670406947) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
 **Use este caso para comparar o GLM-5.2 em trabalho de conhecimento de longo horizonte, em vez de rankings focados apenas em código.**
 
 A Artificial Analysis informa o GLM-5.2 com 1524 Elo no GDPval-AA, #3 no geral atrás de Claude Fable 5 e Opus 4.8, e ligeiramente à frente do GPT-5.5 xhigh com 1509. É o modelo open-weights líder com ampla margem, e o post diz que o benchmark teve média de cerca de 31 turnos por tarefa em 1,999 confrontos.
 
-Tipo: Avaliação | Data: 2026-06-22
+Type: Evaluation | Date: 2026-06-22
 
 ---
 
 <a id="case-102"></a>
-### Case 102: [OpenInspect FP8 Background Agent](https://x.com/colemurray/status/2069485572339707938) (por [@colemurray](https://x.com/colemurray))
+### Case 102: [Agente em segundo plano OpenInspect FP8](https://x.com/colemurray/status/2069485572339707938) (by [@colemurray](https://x.com/colemurray))
 
 **Use este caso para estudar uma pilha de agente em segundo plano auto-hospedada com GLM-5.2 em vez de um workflow de chat hospedado.**
 
 Cole Murray compartilhou uma stack com OpenInspect, remote code runner e Fireworks FP8 GLM-5.2 que executa agentes em segundo plano sobre infraestrutura auto-hospedada. O post apresenta o setup como uma alternativa aberta aos produtos de agentes hospedados e aponta para um runbook já publicado.
 
-Tipo: Integração | Data: 2026-06-23
+Type: Integration | Date: 2026-06-23
 
 ---
 
 <a id="case-94"></a>
-### Case 94: [Game Dev Arena Runner-Up](https://x.com/Designarena/status/2069166634976371084) (por [@Designarena](https://x.com/Designarena))
+### Case 94: [Vice-campeão da Game Dev Arena](https://x.com/Designarena/status/2069166634976371084) (by [@Designarena](https://x.com/Designarena))
 
 **Use este caso para julgar a qualidade do GLM-5.2 em criação de jogos, em que o modelo chegou ao segundo lugar no Game Dev Arena e se tornou o laboratório open-weight mais bem colocado nesse ranking.**
 
 A Design Arena informou o GLM-5.2 com 1368 Elo no Game Dev Arena, um salto de 29 pontos e melhora de seis posições em relação ao GLM-5.1. O post o coloca na mesma faixa de desempenho de Claude Fable 5 e diz que ele ficou em segundo no geral, à frente da OpenAI e atrás apenas da Anthropic no nível de laboratório.
 
-Tipo: Avaliação | Data: 2026-06-22
+Type: Evaluation | Date: 2026-06-22
 
 ---
 
 <a id="case-120"></a>
-### Case 120: [PostTrainBench Reliability Lead](https://x.com/hrdkbhatnagar/status/2070244540108423427) (por [@hrdkbhatnagar](https://x.com/hrdkbhatnagar))
+### Case 120: [Líder de confiabilidade PostTrainBench](https://x.com/hrdkbhatnagar/status/2070244540108423427) (by [@hrdkbhatnagar](https://x.com/hrdkbhatnagar))
 
 **Use este caso para comparar o GLM-5.2 Max em confiabilidade de agentes pós-treinamento, não só pela pontuação principal, porque a tabela também registra zero execuções falhas em 84 tarefas.**
 
 hrdkbhatnagar compartilhou um leaderboard do PostTrainBench em que o GLM 5.2 Max reasoning atingiu 34,29%, ligeiramente acima do Opus 4.8 Max com 34,08%. O mesmo post diz que o GLM registrou zero runs com falha em 84 execuções, contra uma taxa de falha de cerca de 10% nos agentes com Opus, o que torna esse benchmark útil para equipes que valorizam confiabilidade do agente tanto quanto pass rate.
 
-Tipo: Benchmark | Data: 2026-06-25
+Type: Benchmark | Date: 2026-06-25
 
 ---
 
 <a id="case-121"></a>
-### Case 121: [Fireworks + Faros 211-Task Repo Eval](https://x.com/FireworksAI_HQ/status/2070181898962534570) (por [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
+### Case 121: [Fireworks + Faros 211-Task Repo Avaliação](https://x.com/FireworksAI_HQ/status/2070181898962534570) (by [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
 
 **Use este caso para julgar o GLM-5.2 em tarefas reais de engenharia em repositórios privados, em vez de depender apenas de benchmarks públicos, porque o resultado publicado inclui nota, velocidade e custo por tarefa.**
 
 A Fireworks diz que uma avaliação conjunta com a Faros em 211 tarefas reais de engenharia colocou Claude Code + GLM-5.2 à frente de Claude Code + Opus 4.8 e de Codex + GPT-5.5. Os números publicados foram judge score de 0,568 versus 0,521 e 0,466, 321 segundos por tarefa versus 775 e 392, e 0,92 dólar por tarefa versus 1,76 e 2,06, além da observação de que a Faros usou seus próprios repositórios e trabalho, e não apenas benchmarks públicos.
 
-Tipo: Evaluation | Data: 2026-06-25
+Type: Evaluation | Date: 2026-06-25
 
 ---
 
 <a id="case-110"></a>
-### Case 110: [AA-Briefcase Time-Per-Task Frontier](https://x.com/ArtificialAnlys/status/2069914443639635978) (por [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+### Case 110: [Fronteira de tempo por tarefa da pasta AA](https://x.com/ArtificialAnlys/status/2069914443639635978) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
 **Use este caso para comparar o GLM-5.2 em tarefas de conhecimento de longo horizonte em que o tempo por tarefa importa junto com a pontuação de benchmark.**
 
 A Artificial Analysis diz que o GLM-5.2 está na fronteira de Pareto do AA-Briefcase com pontuação de 1261 e tempo médio por tarefa de 16.3 minutos, à frente do GPT-5.5 xhigh com 1159 e permanecendo como o melhor modelo open-weights do benchmark. Isso transforma o post em uma referência útil para equipes que comparam qualidade de entregáveis de longo horizonte versus tempo de execução, não apenas posição bruta em ranking.
 
-Tipo: Benchmark | Data: 2026-06-24
+Type: Benchmark | Date: 2026-06-24
 
 ---
 
 <a id="case-111"></a>
-### Case 111: [Code Arena Frontend Head-to-Head Margins](https://x.com/arena/status/2069885722333769963) (por [@arena](https://x.com/arena))
+### Case 111: [Margens de confronto direto do Code Arena Frontend](https://x.com/arena/status/2069885722333769963) (by [@arena](https://x.com/arena))
 
 **Use este caso para inspecionar a vantagem do GLM-5.2 em frontend por resultados pareados cara a cara, em vez de depender de uma única captura de ranking.**
 
 arena detalha por que o GLM-5.2 Max chegou ao topo do Code Arena: Frontend e diz que ele obtém participação de vitória maior que a do oponente em todos os pareamentos menos um. A thread destaca 61.0% contra Kimi-K2.6, 59.4% contra Sonnet 4.6, 55.0% contra Opus 4.7 Thinking, um apertado 41.7% contra 40.0% frente ao GPT-5.5 xHigh e um empate de 45.5% contra o GLM-5.1.
 
-Tipo: Benchmark | Data: 2026-06-24
+Type: Benchmark | Date: 2026-06-24
 
 ---
 
 <a id="case-113"></a>
-### Case 113: [SWE Atlas Codebase QnA Runner-Up](https://x.com/ScaleAILabs/status/2069864932913631617) (por [@ScaleAILabs](https://x.com/ScaleAILabs))
+### Case 113: [Vice-campeão SWE Atlas Codebase QnA](https://x.com/ScaleAILabs/status/2069864932913631617) (by [@ScaleAILabs](https://x.com/ScaleAILabs))
 
 **Use este caso para acompanhar o GLM-5.2 em Codebase QnA, escrita de testes e refatoração, em vez de olhar apenas rankings SWE de tarefa única.**
 
 A Scale AI Labs diz que o GLM 5.2 agora está ao vivo nos três rankings do SWE Atlas: Codebase QnA, Test Writing e Refactoring. O post destaca um resultado de #2 em Codebase QnA e descreve os modelos abertos como já competindo com sistemas frontier em toda a linha.
 
-Tipo: Benchmark | Data: 2026-06-24
+Type: Benchmark | Date: 2026-06-24
 
 ---
 
 <a id="case-100"></a>
-### Case 100: [Luddite Game After Claude Refusal](https://x.com/atmoio/status/2069559053114577088) (por [@atmoio](https://x.com/atmoio))
+### Case 100: [Jogo ludita após recusa de Claude](https://x.com/atmoio/status/2069559053114577088) (by [@atmoio](https://x.com/atmoio))
 
 **Use este caso para prototipar conceitos de jogo sensíveis a políticas com GLM-5.2 quando um modelo fechado recusa o pedido, e depois inspecionar por conta própria o resultado jogável.**
 
 atmoio diz que Claude marcou como violação de uso aceitável um jogo humorístico no estilo Plague Inc. sobre destruir IA, então o autor construiu com GLM 5.2 o jogo chamado Luddite e anexou um clipe de demo. Trate isso como um exemplo prático de fallback para tarefas de creative coding que modelos fechados podem recusar por motivos de política.
 
-Tipo: Demonstração | Data: 2026-06-23
+Type: Demo | Date: 2026-06-23
 
 ---
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Agentes de código e fluxos de trabalho de contexto longo
 <a id="case-168"></a>
-### Case 168: [Synthwave Hard-Slice Ensemble At $2.66](https://x.com/TracNetwork/status/2073038214592360522) (por [@TracNetwork](https://x.com/TracNetwork))
+### Case 168: [Conjunto Synthwave Hard-Slice por US$ 2,66](https://x.com/TracNetwork/status/2073038214592360522) (by [@TracNetwork](https://x.com/TracNetwork))
 
 **Use este caso para testar o GLM-5.2 dentro de um ensemble de coding com vários modelos, e não sozinho, porque a TracNetwork informa que uma mistura Synthwave com GLM marcou 46.3 por cento no LiveCodeBench hard por cerca de 2.66 dólares e superou cada gerador individual.**
 
 A TracNetwork diz que usou o OpenRouter para montar um ensemble Synthwave com qwen3-coder-next como sintetizador e GLM-5.2 mais qwen3.5-122b e qwen3-coder-next como geradores de código. Em 82 tarefas hard do LiveCodeBench, o post relata 46.3 por cento por cerca de 2.66 dólares e afirma que nenhum dos geradores isolados alcançou esse resultado. É um exemplo concreto de GLM-5.2 atuando como parte de um ensemble orientado a custo, e não como único modelo de coding.
 
-Tipo: Integração | Data: 2026-07-03
+Type: Integration | Date: 2026-07-03
 
 ---
 
 <a id="case-194"></a>
-### Case 194: [CuTeDSL Kernel Skill Open Source](https://x.com/SubhoGhosh02/status/2074466050557739469) (por [@SubhoGhosh02](https://x.com/SubhoGhosh02))
+### Case 194: [Código aberto de habilidades do kernel CuTeDSL](https://x.com/SubhoGhosh02/status/2074466050557739469) (by [@SubhoGhosh02](https://x.com/SubhoGhosh02))
 
 **Use este caso para estudar o GLM-5.2 dentro de uma skill reutilizável de depuração de kernels, porque o autor open-sourcou uma skill Hermes para CuTeDSL e diz que o GLM-5.2 foi especialmente eficiente em custo ao depurar e escrever kernels.**
 
 O post diz que a maior parte da skill foi construída através de conversas agentic no Hermes com vários modelos, e que o GLM-5.2 se destacou pela eficiência de custo durante o debugging e a escrita de kernels. A fonte também traz os comandos exatos de instalação e arranque, `hermes skills install ighoshsubho/awesome-kernel-skills/cutedsl-kernels` e `hermes chat -s cutedsl-kernels`, o que transforma isto num workflow reutilizável em estilo tutorial, e não num elogio vago.
 
-Tipo: Tutorial | Data: 2026-07-07
+Type: Tutorial | Date: 2026-07-07
 
 ---
 <a id="case-180"></a>
-### Case 180: [Hermes SSD Recovery Skill Loop](https://x.com/ShankhadeepSho1/status/2073658918937473444) (por [@ShankhadeepSho1](https://x.com/ShankhadeepSho1))
+### Case 180: [Loop de habilidade de recuperação de SSD Hermes](https://x.com/ShankhadeepSho1/status/2073658918937473444) (by [@ShankhadeepSho1](https://x.com/ShankhadeepSho1))
 
 **Use este caso para testar o GLM-5.2 dentro de um loop de agente voltado para reparo, porque ShankhadeepSho1 diz que Hermes mais GLM 5.2 diagnosticou um SSD de NAS com falha, corrigiu o problema e empacotou a solução como uma skill reutilizável.**
 
 O autor diz que um SSD de um QNAP NAS morreu, foi movido para uma máquina reserva e entregue ao Hermes para diagnóstico. O resultado publicado é incomumente concreto para um workflow de agente: o stack teria reparado o problema, criado uma skill para si mesmo e atualizado a wiki de infraestrutura com a estratégia de recuperação.
 
-Tipo: Demonstração | Data: 2026-07-05
+Type: Demo | Date: 2026-07-05
 
 ---
 <a id="case-174"></a>
-### Case 174: [Role-Routed Heavy-Duty Coder Stack](https://x.com/denizirgin/status/2073462071639876004) (por [@denizirgin](https://x.com/denizirgin))
+### Case 174: [Pilha de codificadores para serviço pesado com roteamento por função](https://x.com/denizirgin/status/2073462071639876004) (by [@denizirgin](https://x.com/denizirgin))
 
 **Use este caso para colocar o GLM-5.2 como coder pesado dentro de uma pilha pessoal com roteamento por papéis, porque denizirgin diz que um mês de testes com Codex e OpenCode o levou a mandar o trabalho de coding mais pesado para o GLM 5.2 mantendo o orçamento mensal total em cerca de 120 a 140 dólares.**
 
 denizirgin diz que a configuração pessoal atual combina Codex, OpenCode, DeepSeek, OpenRouter e uma skill própria de sub-agents com uma decision table para coding, review, research, speed e cost. Nesse esquema, o GLM 5.2 atua como heavy-duty coder por meio de um provedor complementar, enquanto o Codex fica como backbone principal e o OpenRouter é usado de forma mais seletiva para testar modelos. É uma nota prática de workflow sensível a custo, e não um ranking genérico de modelos.
 
-Tipo: Avaliação | Data: 2026-07-04
+Type: Evaluation | Date: 2026-07-04
 
 <a id="case-155"></a>
-### Case 155: [Cotal Four-Agent TUI Loop](https://x.com/silvanrec/status/2072335315822403656) (por [@silvanrec](https://x.com/silvanrec))
+### Case 155: [Loop TUI de quatro agentes da Cotal](https://x.com/silvanrec/status/2072335315822403656) (by [@silvanrec](https://x.com/silvanrec))
 
 **Use este caso para dividir um loop de codificação entre agentes especializados, porque o autor usou dois workers com GLM-5.2 sob um líder Opus e um revisor GPT para terminar uma TUI estilo lazygit em 47 minutos sem intervenção humana.**
 
 silvanrec diz que o Cotal coordenou quatro modelos: duas instâncias de GLM-5.2 como desenvolvedores de frontend e backend, GPT-5.5 como revisor em segundo plano e Claude Opus como líder do loop. Partindo de um único prompt para construir uma console TUI real, o sistema rodou quatro rodadas, encontrou bugs de renderização e de ligação entre abas, geriu handoffs entre agentes e produziu um resultado funcional em 47 minutos. A postagem também aponta para a camada open source com npx cotal-ai setup --full.
 
-Tipo: Demonstração | Data: 2026-07-01
+Type: Demo | Date: 2026-07-01
 
 ---
 
 <a id="case-153"></a>
-### Case 153: [Legacy Migration Cost-Cut Pilot](https://x.com/chamath/status/2072390507628540213) (por [@chamath](https://x.com/chamath))
+### Case 153: [Piloto legado de redução de custos de migração](https://x.com/chamath/status/2072390507628540213) (by [@chamath](https://x.com/chamath))
 
 **Use este caso para precificar o GLM-5.2 como o trabalhador mais barato dentro de um loop de modernização de legados, porque o piloto da 8090 diz que GLM mais Software Factory reduziu o custo em 16,4 vezes versus Opus 4.8 sozinho, embora tenha sido cerca de 3 vezes mais lento.**
 
 Chamath compartilhou um piloto inicial de modernização de PHP para Next.js. Opus 4.8 com o Software Factory da 8090 ficou 1,4 vez mais barato e 1,5 vez mais rápido do que Opus sozinho, enquanto a mesma fábrica com GLM 5.2 reduziu o custo em 16,4 vezes versus Opus sozinho, mas rodou cerca de 3 vezes mais devagar. A postagem deixa claro que o resultado é direcional, com n igual a 1, e precisa ser repetido em 10 a 15 tarefas reais de modernização.
 
-Tipo: Avaliação | Data: 2026-07-01
+Type: Evaluation | Date: 2026-07-01
 
 ---
 
 
 <a id="case-150"></a>
-### Case 150: [Mac Studio Browser-Use Local Loop](https://x.com/MaziyarPanahi/status/2071955191260151862) (por [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+### Case 150: [Navegador Mac Studio - Use Loop Local](https://x.com/MaziyarPanahi/status/2071955191260151862) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
 
 **Use este caso para testar se uma pilha totalmente local de GLM-5.2 consegue fazer trabalho leve de browser agent em hardware de consumo, porque o autor rodou llama.cpp num Mac Studio e usou browser-use para encontrar um modelo de PII no Hugging Face.**
 
 MaziyarPanahi diz que rodou o GLM-5.2 localmente em um Mac Studio via llama.cpp e depois o colocou em um loop com browser-use. No exemplo publicado, o modelo navega pelo Hugging Face e identifica `privacy-filter-nemotron`.
 
-Tipo: Demonstração | Data: 2026-06-30
+Type: Demo | Date: 2026-06-30
 
 ---
 
 <a id="case-148"></a>
-### Case 148: [Gumloop Agent Swap Cost Cut](https://x.com/aronkor/status/2072032854675218538) (por [@aronkor](https://x.com/aronkor))
+### Case 148: [Corte de custos de troca de agente Gumloop](https://x.com/aronkor/status/2072032854675218538) (by [@aronkor](https://x.com/aronkor))
 
 **Use este caso para testar uma troca direta de modelo dentro de um harness já existente, porque a Gumloop diz que moveu seus agentes mais usados para GLM-5.2 com cerca de 50% menos créditos e sem queda visível de qualidade.**
 
 aronkor descreve um experimento interno da Gumloop em que os agentes mais usados foram trocados por GLM 5.2 mantendo o mesmo harness e prompt. O resultado relatado é que ninguém percebeu diferença clara na qualidade e o consumo de créditos caiu quase pela metade.
 
-Tipo: Avaliação | Data: 2026-06-30
+Type: Evaluation | Date: 2026-06-30
 
 ---
 
 <a id="case-13"></a>
-### Case 13: [One Hour Forty Two Minute Refactor Loop](https://x.com/KELMAND1/status/2066012493315723610) (por [@KELMAND1](https://x.com/KELMAND1))
+### Case 13: [Loop de refatoração de uma hora e quarenta e dois minutos](https://x.com/KELMAND1/status/2066012493315723610) (by [@KELMAND1](https://x.com/KELMAND1))
 
 **Use este caso como um padrão para refatoração de front-end autônoma longa com TDD, feedback do revisor e verificações de regressão.**
 
 A postagem descreve uma tarefa de refatoração GLM-5.2 de 1 hora e 42 minutos com 88 giros de modelo e 102 chamadas de ferramenta. O fluxo de trabalho incluiu uma transferência, quatro correções de bloqueadores, implementação de TDD de 12 testes, duas rodadas de correções P2 e regressão final.
 
-Tipo: Demonstração | Data: 2026-06-14
+Type: Demo | Date: 2026-06-14
 
 ---
 
 <a id="case-14"></a>
-### Case 14: [OpenCode Bug Fix And Implementation Test](https://x.com/altudev/status/2065868921341632881) (por [@altudev](https://x.com/altudev))
+### Case 14: [Correção de bug e teste de implementação do OpenCode](https://x.com/altudev/status/2065868921341632881) (by [@altudev](https://x.com/altudev))
 
 **Use este caso para testar o GLM-5.2 como um agente de codificação OpenCode para correções de bugs, além de uma pequena tarefa de implementação.**
 
 O autor relata ter testado o GLM-5.2 com seis correções de bugs e uma implementação em OpenCode, dizendo que as mudanças foram realizadas de forma limpa, com planejamento sólido e melhor velocidade do que o GLM-5.1.
 
-Tipo: Demonstração | Data: 2026-06-13
+Type: Demo | Date: 2026-06-13
 
 ---
 
 <a id="case-15"></a>
-### Case 15: [OpenCode Retro Video Game Walkthrough](https://x.com/AskVenice/status/2067047775783534789) (por [@AskVenice](https://x.com/AskVenice))
+### Case 15: [Passo a passo do videogame retrô OpenCode](https://x.com/AskVenice/status/2067047775783534789) (by [@AskVenice](https://x.com/AskVenice))
 
 **Use este passo a passo para criar um pequeno jogo com GLM-5.2 e OpenCode a partir de um único prompt e, em seguida, inspecione como o modelo lida com os detalhes de implementação.**
 
 Venice compartilhou um passo a passo completo para construir um videogame retrô com GLM-5.2 e OpenCode, posicionando-o como um fluxo de trabalho de codificação privado, de código aberto e de longo horizonte.
 
-Tipo: Tutorial | Data: 2026-06-17
+Type: Tutorial | Date: 2026-06-17
 
 ---
 
 <a id="case-16"></a>
-### Case 16: [HTML5 Physics Simulations Contest](https://x.com/atomic_chat_hq/status/2067038851139334588) (por [@atomic_chat_hq](https://x.com/atomic_chat_hq))
+### Case 16: [Concurso de Simulações de Física HTML5](https://x.com/atomic_chat_hq/status/2067038851139334588) (by [@atomic_chat_hq](https://x.com/atomic_chat_hq))
 
 **Use este caso para comparar o código GLM-5.2 e Kimi K2.7 em simulações de física HTML5 independentes sem bibliotecas.**
 
 O Atomic Chat relatou ter solicitado a ambos os modelos que construíssem simulações de pool break, spring block e Galton board. A postagem deles diz que o GLM-5.2 lidou com todos os três com mais detalhes e polimento, enquanto Kimi lutou com o comportamento físico.
 
-Tipo: Avaliação | Data: 2026-06-17
+Type: Evaluation | Date: 2026-06-17
 
 ---
 
 <a id="case-17"></a>
-### Case 17: [Personal Site UI UX Build](https://x.com/anshuc/status/2067034697704857615) (por [@anshuc](https://x.com/anshuc))
+### Case 17: [Construção de UI UX de site pessoal](https://x.com/anshuc/status/2067034697704857615) (by [@anshuc](https://x.com/anshuc))
 
 **Use este caso para solicitar ao GLM-5.2 um site pessoal sofisticado e inspecionar até que ponto várias voltas podem melhorar a UI/UX.**
 
 O autor diz que o GLM-5.2 produziu um site pessoal criativo após ser pressionado com a orientação certa e compartilhou um vídeo do resultado. É útil para iteração de design de front-end, em vez de afirmações de benchmark únicas.
 
-Tipo: Demonstração | Data: 2026-06-17
+Type: Demo | Date: 2026-06-17
 
 ---
 
 <a id="case-18"></a>
-### Case 18: [AI Contract Review Product Build](https://x.com/laozhang2579/status/2066339734956499301) (por [@laozhang2579](https://x.com/laozhang2579))
+### Case 18: [Construção de produto de revisão de contrato de IA](https://x.com/laozhang2579/status/2066339734956499301) (by [@laozhang2579](https://x.com/laozhang2579))
 
 **Use este caso para avaliar o GLM-5.2 em uma tarefa de construção de produto com PRD, orçamento de tempo, contagem de etapas, cota de uso e comparação de qualidade de código.**
 
 A postagem chinesa compara GLM-5.2, Kimi K2.7 e Claude Opus 4.8 em um produto PRD de revisão de contrato de IA. Ele relata a duração da construção, contagem de etapas, uso da cota de cinco horas e pontuação de qualidade do código.
 
-Tipo: Avaliação | Data: 2026-06-15
+Type: Evaluation | Date: 2026-06-15
 
 ---
 
 <a id="case-19"></a>
-### Case 19: [ZCode Goal Feature For Larger Development Objectives](https://x.com/zcode_ai/status/2066236605917188228) (por [@zcode_ai](https://x.com/zcode_ai))
+### Case 19: [Recurso de meta ZCode para objetivos de desenvolvimento maiores](https://x.com/zcode_ai/status/2066236605917188228) (by [@zcode_ai](https://x.com/zcode_ai))
 
 **Use este caso para entender como o GLM-5.2 é integrado ao ZCode 3.0 para tarefas maiores de desenvolvimento de agentes.**
 
 ZCode anunciou a disponibilidade do GLM-5.2 para usuários do Plano de Codificação, execução mais forte de tarefas de agente, melhor codificação de contexto longo e um recurso de meta para gerenciar objetivos maiores desde o planejamento até a conclusão.
 
-Tipo: Integração | Data: 2026-06-14
+Type: Integration | Date: 2026-06-14
 
 ---
 
 <a id="case-20"></a>
-### Case 20: [Linux Wrapper para ZCode construído com GLM-5.2](https://x.com/gosrum/status/2066484949755269510) (por [@gosrum](https://x.com/gosrum))
+### Case 20: [Linux Wrapper para ZCode construído com GLM-5.2](https://x.com/gosrum/status/2066484949755269510) (by [@gosrum](https://x.com/gosrum))
 
 **Use este caso como um exemplo de assistência do GLM-5.2 com ferramentas em ambientes de agente de codificação.**
 
 O autor relata a conclusão do zcode-linux usando GLM-5.2 e Claude Code para que os usuários do Linux possam executar o ZCode em um ambiente Linux e adicionar endpoints de API arbitrários, incluindo endpoints LLM locais.
 
-Tipo: Demonstração | Data: 2026-06-15
+Type: Demo | Date: 2026-06-15
 
 ---
 
 <a id="case-21"></a>
-### Case 21: [Computer Use Skill Packaging](https://x.com/0xSero/status/2065952130054382079) (por [@0xSero](https://x.com/0xSero))
+### Case 21: [Pacote de habilidades para uso de computador](https://x.com/0xSero/status/2065952130054382079) (by [@0xSero](https://x.com/0xSero))
 
 **Use este caso para estudar o GLM-5.2 como um auxiliar para transformar um repositório de uso de computador de código aberto em uma habilidade reutilizável.**
 
 A postagem diz que o GLM-5.2 estava configurando o uso do computador, encontrou um repositório avançado de código aberto e o converteu em uma habilidade. É um sinal prático para o trabalho de preparação de ferramentas e integração de agentes.
 
-Tipo: Demonstração | Data: 2026-06-14
+Type: Demo | Date: 2026-06-14
 
 ---
 
 <a id="case-22"></a>
-### Case 22: [ZCode 3.0 Agentic Development Environment Review](https://x.com/laogui/status/2066190262993559963) (por [@laogui](https://x.com/laogui))
+### Case 22: [Revisão do ambiente de desenvolvimento agente ZCode 3.0](https://x.com/laogui/status/2066190262993559963) (by [@laogui](https://x.com/laogui))
 
 **Use este caso para avaliar o GLM-5.2 dentro de um ambiente de desenvolvimento de agente completo, em vez de uma única sessão de chat.**
 
 A análise chinesa diz que o ZCode 3.0 foi reescrito a partir de versões anteriores semelhantes a shell em um núcleo de agente autodesenvolvido emparelhado com GLM-5.2, com uma melhor experiência entre ambientes de desenvolvimento de agentes domésticos.
 
-Tipo: Demonstração | Data: 2026-06-14
+Type: Demo | Date: 2026-06-14
 
 ---
 
 <a id="case-62"></a>
-### Case 62: [Chicote OpenCode com veiculação local](https://x.com/PatrickToulme/status/2068134212587184442) (por [@PatrickToulme](https://x.com/PatrickToulme))
+### Case 62: [Chicote OpenCode com veiculação local](https://x.com/PatrickToulme/status/2068134212587184442) (by [@PatrickToulme](https://x.com/PatrickToulme))
 
 **Use este caso para testar o GLM-5.2 com o chicote OpenCode, serviço local e fluxos de trabalho de codificação com muitas ferramentas antes de compará-lo com Claude Opus.**
 
 O autor relata uma implantação local, subagentes aninhados, comportamento de pesquisa/planejamento e uma construção de aplicativo funcional.
 
-Tipo: Avaliação | Data: 2026-06-20
+Type: Evaluation | Date: 2026-06-20
 
 ---
 
 <a id="case-65"></a>
-### Case 65: [Fast-RLM Long-Context Instruction Injection](https://x.com/neural_avb/status/2067992817625088439) (por [@neural_avb](https://x.com/neural_avb))
+### Case 65: [Injeção de instruções de longo contexto Fast-RLM](https://x.com/neural_avb/status/2067992817625088439) (by [@neural_avb](https://x.com/neural_avb))
 
 **Use este caso para melhorar a contagem de contexto longo do GLM-5.2 e o comportamento do agente REPL movendo instruções para o prompt do sistema RLM.**
 
 As notas de lançamento descrevem uma mudança concreta na estrutura do agente e um efeito de benchmark de longo contexto do GLM-5.2.
 
-Tipo: Integração | Data: 2026-06-20
+Type: Integration | Date: 2026-06-20
 
 ---
 
 <a id="case-66"></a>
-### Case 66: [DeepAgents Code Open Harness Trial](https://x.com/sydneyrunkle/status/2067947260369854830) (por [@sydneyrunkle](https://x.com/sydneyrunkle))
+### Case 66: [Teste de chicote aberto do código DeepAgents](https://x.com/sydneyrunkle/status/2067947260369854830) (by [@sydneyrunkle](https://x.com/sydneyrunkle))
 
 **Use este caso para testar o GLM-5.2 com um chicote de agente de codificação aberto e compare o modelo em um shell de agente reproduzível.**
 
 O autor relata o uso do GLM-5.2 com código DeepAgents e modelo aberto de quadros mais chicote aberto como padrão de teste.
 
-Tipo: Demonstração | Data: 2026-06-20
+Type: Demo | Date: 2026-06-20
 
 ---
 
 <a id="case-77"></a>
-### Case 77: [Roteamento de stack de agentes de marketing em produção](https://x.com/DeRonin_/status/2068303752671477820) (por [@DeRonin_](https://x.com/DeRonin_))
+### Case 77: [Roteamento de stack de agentes de marketing em produção](https://x.com/DeRonin_/status/2068303752671477820) (by [@DeRonin_](https://x.com/DeRonin_))
 
 **Use este caso para rotear o GLM-5.2 para workflows de agentes em produção que valorizam estrutura, velocidade e self-hosting, mantendo modelos fechados mais fortes para julgamentos ambíguos.**
 
 Depois de uma execução lado a lado de seis dias em uma stack de agência, o autor diz que o GLM-5.2 sustentou mais de 60 passos de agente antes de derivar, manteve formatos estruturados mais de 800 vezes seguidas e entregou respostas self-hosted de baixa latência. O mesmo post ainda prefere Opus para tarefas críticas de voz ou ambíguas, tornando a própria regra de roteamento a principal conclusão útil.
 
-Tipo: Avaliação | Data: 2026-06-20
+Type: Evaluation | Date: 2026-06-20
 
 ---
 
 
 
 <a id="case-80"></a>
-### Case 80: [Recriação de Pokemon Red no M3 Ultra](https://x.com/hxiao/status/2068800750554378434) (por [@hxiao](https://x.com/hxiao))
+### Case 80: [Recriação de Pokemon Red no M3 Ultra](https://x.com/hxiao/status/2068800750554378434) (by [@hxiao](https://x.com/hxiao))
 
 **Use este caso para avaliar o GLM-5.2 em uma execução local de agente de código de longo horizonte, na qual o modelo passou cerca de meio dia tentando recriar Pokemon Red em HTML em uma máquina M3 Ultra.**
 
 O autor trocou o modelo do Claude Code por um GLM 5.2 local em uma máquina M3 Ultra de 512 GB e executou por 12 horas a tarefa `/goal replicate Pokemon Red in HTML, make no mistakes, verify it end-to-end.`. O post compartilha tempo de execução, uso de tokens, churn de código, uso de RAM e a configuração de GGUF mais KV-cache, ao mesmo tempo em que observa que a qualidade do modelo pareceu nível frontier, mas o throughput de inferência local foi o gargalo.
 
-Tipo: Demonstração | Data: 2026-06-21
+Type: Demo | Date: 2026-06-21
 
 ---
 <a id="case-91"></a>
-### Case 91: [Cline Repo Bug Fix Showdown](https://x.com/cline/status/2069171146994729078) (por [@cline](https://x.com/cline))
+### Case 91: [Confronto de correção de bug do Cline Repo](https://x.com/cline/status/2069171146994729078) (by [@cline](https://x.com/cline))
 
 **Use este caso para comparar GLM-5.2 e Opus 4.8 em uma correção de bug de repositório real, em que o GLM gastou mais tokens, mas entregou o patch final mais barato e mais limpo.**
 
 A Cline testou os dois modelos no mesmo bug do repositório Cline com o mesmo harness e as mesmas ferramentas. O post diz que o GLM usou cerca de 1.1M tokens contra 660K do Opus, custou $0.41 contra $0.81, levou 4.7 minutos e 28 chamadas de ferramenta contra 1.6 minutos e 12 chamadas, e terminou com limpeza de código morto e build de produção bem-sucedida, enquanto o Opus deixou erros de tipagem que ainda passavam nos testes.
 
-Tipo: Avaliação | Data: 2026-06-22
+Type: Evaluation | Date: 2026-06-22
 
 ---
 
 <a id="case-145"></a>
-### Case 145: [Migração de redução de custo com OpenCode e Fireworks](https://x.com/SeekingN0rth/status/2071484711327985696) (por [@SeekingN0rth](https://x.com/SeekingN0rth))
+### Case 145: [Migração de redução de custo com OpenCode e Fireworks](https://x.com/SeekingN0rth/status/2071484711327985696) (by [@SeekingN0rth](https://x.com/SeekingN0rth))
 
 **Use este caso para testar se uma troca para um harness de open models já basta, porque o autor moveu tarefas pessoais de coding e loops para GLM-5.2 sobre Fireworks com OpenCode e diz que a conta de tokens caiu para um terço sem perda clara de qualidade no dia a dia.**
 
 SeekingN0rth diz que uma migração de fim de semana das suas tarefas pessoais de coding e loops para GLM 5.2 sobre Fireworks com OpenCode reduziu o gasto em tokens para cerca de um terço. O fio defende que o harness importou mais do que o status frontier: o OpenCode pareceu comparável ao Claude Code no terminal, não houve queda perceptível de qualidade nas tarefas cotidianas e o exemplo é apresentado como um padrão de troca de modelo que empresas maiores também podem aplicar quando custo pesa mais do que desempenho SOTA absoluto.
 
-Tipo: Avaliação | Data: 2026-06-29
+Type: Evaluation | Date: 2026-06-29
 
 ---
 
 <a id="case-143"></a>
-### Case 143: [Fluxo com agregador GLM no Hermes MoA](https://x.com/IBuzovskyi/status/2071601107944571249) (por [@IBuzovskyi](https://x.com/IBuzovskyi))
+### Case 143: [Fluxo com agregador GLM no Hermes MoA](https://x.com/IBuzovskyi/status/2071601107944571249) (by [@IBuzovskyi](https://x.com/IBuzovskyi))
 
 **Use este caso quando um turno de agente de alto valor justificar mais orquestração, porque a configuração Mixture of Agents do Hermes Agent combinou GLM-5.2 com outros modelos e obteve uma saída visivelmente melhor com um pequeno aumento de custo por tarefa no demo publicado.**
 
 IBuzovskyi explica o modo Mixture of Agents do Hermes Agent como um modelo agregador com acesso a ferramentas mais modelos de referência que fornecem aconselhamento privado. O fio relata um teste de coding em que o GLM 5.2 sozinho levou 13 minutos e custou 0,38 dólar, enquanto um agregador GLM 5.2 com Kimi K2.6 e MiniMax M3 levou 35 minutos e custou 0,47 dólar, mas entregou animações mais suaves, visuais melhores e mecânicas de jogo mais limpas. O post também explica o desenho de presets, onde ativar o recurso e quando a latência extra compensa.
 
-Tipo: Integração | Data: 2026-06-29
+Type: Integration | Date: 2026-06-29
 
 ---
 
 <a id="case-142"></a>
-### Case 142: [Diferença do harness com reasoning no Cline](https://x.com/akshay_pachaar/status/2071638409022763292) (por [@akshay_pachaar](https://x.com/akshay_pachaar))
+### Case 142: [Diferença do harness com reasoning no Cline](https://x.com/akshay_pachaar/status/2071638409022763292) (by [@akshay_pachaar](https://x.com/akshay_pachaar))
 
 **Use este caso para avaliar o desenho do harness, e não apenas os pesos do modelo, porque o mesmo GLM-5.2 saltou de 57,3% para 68,5% nas mesmas tarefas de coding quando o harness ativou reasoning.**
 
 akshay_pachaar aponta para um teste do Cline em que o GLM 5.2 executou o mesmo conjunto de tarefas de coding de duas formas: 57,3% com reasoning desligado e 68,5% com reasoning ligado. O fio usa essa diferença para argumentar que continuidade de contexto, acesso a ferramentas, aplicação de edições e loops de verificação podem importar tanto quanto o modelo base quando o objetivo é entregar código pronto, e não apenas texto.
 
-Tipo: Avaliação | Data: 2026-06-29
+Type: Evaluation | Date: 2026-06-29
 
 <a id="case-136"></a>
-### Case 136: [Cursor + Fireworks 455M-Token Field Test](https://x.com/robinebers/status/2071246749210190132) (por [@robinebers](https://x.com/robinebers))
+### Case 136: [Teste de campo Cursor + Fireworks 455M-Token](https://x.com/robinebers/status/2071246749210190132) (by [@robinebers](https://x.com/robinebers))
 
 **Use este caso para julgar o GLM-5.2 como um modelo diário sério no Cursor, porque o autor relata 455M tokens de uso real com serving rápido da Fireworks e nenhuma vontade imediata de voltar para Opus ou GPT-5.5.**
 
 robinebers diz que uma migração de 36 horas para GLM 5.2 no Cursor mudou sua visão do modelo assim que ele foi combinado com a Fireworks. O post destaca especificamente suporte a imagem, retenção zero de dados declarada, throughput em torno de 80-100 tokens por segundo e cerca de US$ 145 gastos para 455 milhões de tokens. Isso o torna uma avaliação mais forte e específica de harness do que elogios genéricos de benchmark, com evidência concreta de que a escolha do provedor pode mudar a experiência prática.
 
-Tipo: Evaluation | Data: 2026-06-28
+Type: Evaluation | Date: 2026-06-28
 
 ---
 
 <a id="case-135"></a>
-### Case 135: [Devin Desktop Harness With Skill Portability](https://x.com/lily_gpupoor/status/2071297351801794850) (por [@lily_gpupoor](https://x.com/lily_gpupoor))
+### Case 135: [Chicote de desktop Devin com portabilidade de habilidades](https://x.com/lily_gpupoor/status/2071297351801794850) (by [@lily_gpupoor](https://x.com/lily_gpupoor))
 
 **Use este caso para testar o GLM-5.2 dentro do Devin Desktop quando a própria superfície de coding da Z.ai parecer instável, porque o autor relata portabilidade mais fácil de skills, maior velocidade e melhor hackeabilidade ali.**
 
 lily_gpupoor diz que o uso intenso de GLM-5.2 via Devin Desktop pareceu materialmente melhor do que o plano de coding direto da Z.ai durante um período de instabilidade de API. O post destaca três ganhos concretos de workflow: o GLM editou um JSON personalizado do tema Solarized Green e registrou a extensão com sucesso, o Devin pareceu incomumente rápido e skills construídas anteriormente quase todas foram reaproveitadas depois da troca do agente padrão Windsurf Cascade para Devin Local.
 
-Tipo: Evaluation | Data: 2026-06-28
+Type: Evaluation | Date: 2026-06-28
 
 ---
 
 <a id="case-127"></a>
-### Case 127: [Pi Inline GLM Reviewer](https://x.com/xpasky/status/2070831715518460177) (por [@xpasky](https://x.com/xpasky))
+### Case 127: [Revisor Pi Inline GLM](https://x.com/xpasky/status/2070831715518460177) (by [@xpasky](https://x.com/xpasky))
 
 **Use este caso para adicionar um segundo revisor a um loop de agente de código estilo Pi, porque o autor relata que o GLM-5.2 pode aconselhar o Opus turno a turno com um aumento de custo de cerca de 10%.**
 
 xpasky diz que usuários do Pi podem copiar um padrão estilo OMP em que um segundo modelo revisa cada turno e injeta orientação inline. O post cita especificamente o GLM 5.2 observando o Opus continuamente, diz que a dupla parece "brigar" visivelmente e estima que esse revisor extra de GLM adiciona cerca de 10% ao custo médio da API do Opus. Isso o torna um padrão concreto de supervisão multimodelo, e não uma troca completa de modelo.
 
-Tipo: Integration | Data: 2026-06-27
+Type: Integration | Date: 2026-06-27
 
 ---
 
 <a id="case-122"></a>
-### Case 122: [One-Shot Telegram Bot With AgentRouter](https://x.com/MatinSenPai/status/2070259817818812701) (por [@MatinSenPai](https://x.com/MatinSenPai))
+### Case 122: [Bot de telegrama único com AgentRouter](https://x.com/MatinSenPai/status/2070259817818812701) (by [@MatinSenPai](https://x.com/MatinSenPai))
 
 **Use este caso para testar se o GLM-5.2 consegue inferir defaults com mentalidade de produção em uma build one-shot com agente de código, em vez de gerar apenas o caminho mínimo que funciona.**
 
 MatinSenPai relata que construiu um bot do Telegram em uma única passada com GLM 5.2 usando o mesmo prompt do vídeo e que o modelo adicionou detalhes práticos sem ser solicitado. O post destaca limpeza automática de arquivos depois de enviar vídeos, respeito aos limites da Telegram Bot API com teto padrão de 50 MB, auto-testes repetidos antes de encerrar, estrutura mais limpa do que uma build anterior com MiMo e cerca de 140 mil tokens ou aproximadamente 5 dólares de uso reportado via AgentRouter.
 
-Tipo: Demo | Data: 2026-06-25
+Type: Demo | Date: 2026-06-25
 
 ---
 
 <a id="case-117"></a>
-### Case 117: [OpenCode Go Refactor First-Pass Win](https://x.com/vedovelli74/status/2069889605969592500) (por [@vedovelli74](https://x.com/vedovelli74))
+### Case 117: [Vitória de primeira passagem do OpenCode Go Refactor](https://x.com/vedovelli74/status/2069889605969592500) (by [@vedovelli74](https://x.com/vedovelli74))
 
 **Use este caso para avaliar o GLM-5.2 em refatorações médias de Go dentro do OpenCode, em vez de se apoiar apenas em alegações de benchmark.**
 
 vedovelli74 relata uma primeira execução do OpenCode em uma refatoração de codebase Go de tamanho médio e diz que o GLM-5.2 foi mais rápido que o Opus 4.8, mais eficiente em tokens e correto já na primeira avaliação do que precisava ser refatorado. O autor acrescenta que depois validou o resultado contra Codex e Opus e o GLM continuou à frente em qualidade de entrega.
 
-Tipo: Evaluation | Data: 2026-06-24
+Type: Evaluation | Date: 2026-06-24
 
 ---
 
 <a id="case-119"></a>
-### Case 119: [Claude Code + Cursor $3.36 Default Run](https://x.com/clairevo/status/2069828122640548204) (por [@clairevo](https://x.com/clairevo))
+### Case 119: [Código Claude + Cursor $ 3,36 Execução padrão](https://x.com/clairevo/status/2069828122640548204) (by [@clairevo](https://x.com/clairevo))
 
 **Use este caso para medir o GLM-5.2 como modelo diário no Claude Code e no Cursor antes de mover mais trabalho autônomo de programação para pesos abertos.**
 
 clairevo diz que o GLM 5.2 se tornou o modelo padrão no Claude Code e no Cursor com custo acumulado de US$ 3.36, enquanto passa uma qualidade de programação parecida com a do Opus. O post também aponta um caminho de configuração com OpenRouter, impressões sobre design de front-end e a revisão de uma tarefa autônoma de longa duração como os motivos que fizeram o modelo vencer para a autora.
 
-Tipo: Evaluation | Data: 2026-06-24
+Type: Evaluation | Date: 2026-06-24
 
 ---
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Demos práticas e mostras
 <a id="case-202"></a>
-### Case 202: [Command Code Space Shooter Feature Win](https://x.com/CommandCodeAI/status/2075264795817972107) (por [@CommandCodeAI](https://x.com/CommandCodeAI))
+### Case 202: [Vitória do recurso Space Shooter com código de comando](https://x.com/CommandCodeAI/status/2075264795817972107) (by [@CommandCodeAI](https://x.com/CommandCodeAI))
 
 **Use este caso para comparar o GLM-5.2 em builds de UI interativa com um único prompt, porque o Command Code executou o mesmo prompt de space shooter retro em Fable 5, GPT 5.5, GLM 5.2 e DeepSeek V4 Pro e colocou o GLM no topo em features por $0.07.**
 
 O Command Code diz que o mesmo prompt de `/design` produziu layouts retro pixel-art de space shooter bastante parecidos nos quatro modelos, mas o GLM 5.2 destacou-se em features como som, controlos, progressão de níveis e UX geral, ao mesmo tempo que custou $0.07 contra $0.80 do Fable 5. Isso faz deste post uma comparação prática para builds leves de jogos e UI, e não apenas um screenshot de benchmark.
 
-Tipo: Avaliação | Data: 2026-07-09
+Type: Evaluation | Date: 2026-07-09
 
 ---
 
 <a id="case-200"></a>
-### Case 200: [ZCode Nintendo DS Emulator](https://x.com/0xSero/status/2074870153267818638) (por [@0xSero](https://x.com/0xSero))
+### Case 200: [Emulador Nintendo DS ZCode](https://x.com/0xSero/status/2074870153267818638) (by [@0xSero](https://x.com/0xSero))
 
 **Use este caso para inspecionar uma build local de coding de longo horizonte, porque o autor executou o GLM-5.2 em ZCode sobre 4x RTX 6000 com o objetivo de construir um emulador de Nintendo DS em C++ a partir do zero.**
 
 A fonte mostra o GLM-5.2 a correr dentro do ZCode num setup com quatro GPUs RTX 6000 e define um objetivo concreto: construir um emulador de Nintendo DS em C++ sem usar um emulador pronto, e continuar até a ROM de Mario 64 DS correr. Isso faz deste um demo real de coding agent com um estado final duro, em vez de uma alegação vaga de 'fiz uma app de brinquedo'.
 
-Tipo: Demonstração | Data: 2026-07-08
+Type: Demo | Date: 2026-07-08
 
 ---
 <a id="case-192"></a>
-### Case 192: [Command Code Flappy Bird UX Split](https://x.com/MrAhmadAwais/status/2074536879308026031) (por [@MrAhmadAwais](https://x.com/MrAhmadAwais))
+### Case 192: [Código de comando Flappy Bird UX Split](https://x.com/MrAhmadAwais/status/2074536879308026031) (by [@MrAhmadAwais](https://x.com/MrAhmadAwais))
 
 **Use este caso para comparar o GLM-5.2 em tarefas leves de design e jogo, porque o autor passou o mesmo prompt de Flappy Bird pelo Command Code e concluiu que o Fable 5 não foi significativamente melhor em UX apesar de custar quase nove vezes mais do que o GLM-5.2.**
 
 O post diz que a experiência usou o mesmo prompt do jogo e a mesma configuração `/design` do Command Code em DeepSeek V4 Pro, GLM 5.2 e Fable 5. O GLM 5.2 ficou entre DeepSeek e Fable em preço bruto, mas o autor afirma que o Fable não mostrou uma vantagem de UX grande o suficiente para justificar a diferença de preço. Por isso, trata-se de uma comparação prática de UX versus custo, e não de uma afirmação genérica de arena.
 
-Tipo: Avaliação | Data: 2026-07-07
+Type: Evaluation | Date: 2026-07-07
 
 ---
 <a id="case-161"></a>
-### Case 161: [REAP NVFP4 Rubiks Cube One-Shot](https://x.com/RoundtableSpace/status/2072700573145788914) (por [@RoundtableSpace](https://x.com/RoundtableSpace))
+### Case 161: [Cubo de Rubik REAP NVFP4 em uma única tentativa](https://x.com/RoundtableSpace/status/2072700573145788914) (by [@RoundtableSpace](https://x.com/RoundtableSpace))
 
 **Use este caso para testar o GLM-5.2 em tarefas interativas de build com um único prompt, porque a demo REAP-NVFP4 afirma que um prompt só gerou um cubo de Rubik 3D com scrambles reais, estado ao vivo e botão de resolver.**
 
 A RoundtableSpace diz que o GLM-5.2-REAP-NVFP4 recebeu apenas um prompt HTML e devolveu um app funcional de cubo de Rubik 3D com estado ao vivo, lógica real de scramble e ação de resolver. O post tem pouco código, mas ainda assim é uma demo concreta de one-shot build e não apenas uma captura genérica de benchmark.
 
-Tipo: Demo | Data: 2026-07-02
+Type: Demo | Date: 2026-07-02
 
 ---
 
 <a id="case-158"></a>
-### Case 158: [OMP Relay iPhone Client](https://x.com/mov_axbx/status/2072192903762288721) (por [@mov_axbx](https://x.com/mov_axbx))
+### Case 158: [Cliente de retransmissão OMP para iPhone](https://x.com/mov_axbx/status/2072192903762288721) (by [@mov_axbx](https://x.com/mov_axbx))
 
 **Use este caso para empacotar rapidamente um agente local com GLM-5.2 numa superfície móvel, porque o autor diz que o plugin build-ios-app do Codex produziu em poucas horas um cliente polido de iPhone para um relay OMP que já usava GLM-5.2 e túneis da Cloudflare.**
 
 mov_axbx diz que queria um app de telefone para um agente OMP hospedado localmente, usou o plugin build-ios-app do Codex e conseguiu uma versão polida em poucas horas. O caminho de backend usava um relay personalizado escrito com GLM-5.2 e OMP, enquanto a Cloudflare cuidava do túnel.
 
-Tipo: Demonstração | Data: 2026-07-01
+Type: Demo | Date: 2026-07-01
 
 ---
 
@@ -1143,1445 +1169,1452 @@ Tipo: Demonstração | Data: 2026-07-01
 ---
 
 <a id="case-144"></a>
-### Case 144: [Agente open source de pesquisa DevRel](https://x.com/Astrodevil_/status/2071572680470655253) (por [@Astrodevil_](https://x.com/Astrodevil_))
+### Case 144: [Agente open source de pesquisa DevRel](https://x.com/Astrodevil_/status/2071572680470655253) (by [@Astrodevil_](https://x.com/Astrodevil_))
 
 **Use este caso para transformar o GLM-5.2 em um assistente de pesquisa vertical, e não em um chat genérico, porque o autor construiu um agente DevRel open source que transforma produto e público em oportunidades ranqueadas de conteúdo com evidências e esboços.**
 
 Astrodevil_ construiu um app de pesquisa DevRel chat-first sobre GLM-5.2 que recebe um briefing de produto e público, procura sinais de demanda no Hacker News, verifica lacunas de conteúdo no DEV, atualiza fatos com Engram memory e devolve ideias de temas ranqueadas com evidências e outlines. O post também nomeia a stack: Agno, Weaviate Engram, inferência da Nebius e um código open source.
 
-Tipo: Demonstração | Data: 2026-06-29
+Type: Demo | Date: 2026-06-29
 
 <a id="case-123"></a>
-### Case 123: [Recast Six-Variation Landing-Page Loop](https://x.com/nutlope/status/2070199649818779914) (por [@nutlope](https://x.com/nutlope))
+### Case 123: [Reformulação do loop da página de destino de seis variações](https://x.com/nutlope/status/2070199649818779914) (by [@nutlope](https://x.com/nutlope))
 
 **Use este caso para prototipar landing pages com baixo custo gerando várias variantes com GLM-5.2 primeiro e levando depois a melhor para um agente de código.**
 
 nutlope descreve um workflow de iteração web baseado em GLM 5.2 e Recast: gerar seis variações de landing page a partir de um único prompt, escolher o melhor design, baixar esse código e continuar iterando em outro agente de coding. O autor diz que o GLM-5.2 funciona bem aqui porque é rápido, barato e forte em design, e afirma que o mesmo orçamento costuma produzir de três a seis variantes com GLM para cada página gerada com Opus 4.8.
 
-Tipo: Tutorial | Data: 2026-06-25
+Type: Tutorial | Date: 2026-06-25
 
 ---
 
 <a id="case-23"></a>
-### Case 23: [Playable Backrooms One-Shot](https://x.com/aimlapi/status/2066996493257408639) (por [@aimlapi](https://x.com/aimlapi))
+### Case 23: [Backrooms jogáveis One-Shot](https://x.com/aimlapi/status/2066996493257408639) (by [@aimlapi](https://x.com/aimlapi))
 
 **Use este caso para comparar a saída, o tempo de execução e o custo da construção de jogos no mesmo prompt entre o GLM-5.2 e o Opus 4.8.**
 
 A API AI/ML relatou ter solicitado ao GLM-5.2 e Opus 4.8 para criar um jogo Backrooms jogável. A postagem deles diz que o GLM-5.2 construiu uma mecânica mais completa em 1:08 a US$ 0,37, enquanto o Opus levou 2:14 a US$ 1,94.
 
-Tipo: Demonstração | Data: 2026-06-16
+Type: Demo | Date: 2026-06-16
 
 ---
 
 <a id="case-24"></a>
-### Case 24: [Três construções reais com resultados mistos](https://x.com/bridgemindai/status/2065840871929442319) (por [@bridgemindai](https://x.com/bridgemindai))
+### Case 24: [Três construções reais com resultados mistos](https://x.com/bridgemindai/status/2065840871929442319) (by [@bridgemindai](https://x.com/bridgemindai))
 
 **Use este caso como um conjunto de demonstração de advertência: teste várias compilações reais antes de confiar em um modelo para jogos de produção ou tarefas de vídeo.**
 
 A BridgeMind testou o GLM-5.2 em um jogo de terror, um jogo furtivo 3D e um vídeo de marketing Remotion. A postagem relata resultados mistos, incluindo lógica de jogo quebrada, tornando-a útil como um sinal de limitação aterrado.
 
-Tipo: Avaliação | Data: 2026-06-13
+Type: Evaluation | Date: 2026-06-13
 
 ---
 
 <a id="case-25"></a>
-### Case 25: [Super Mario Clone In ZCode](https://x.com/ivanfioravanti/status/2066272681406980208) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 25: [Clone de Super Mario em ZCode](https://x.com/ivanfioravanti/status/2066272681406980208) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **Use este caso para avaliar a construção iterativa de jogos com GLM-5.2 e ZCode em várias passagens de correção e recursos.**
 
 O autor testou o ZCode 3.0 com GLM-5.2 criando um clone no estilo Super Mario e depois compartilhou o resultado após cinco iterações de correções de problemas e adições de recursos.
 
-Tipo: Demonstração | Data: 2026-06-14
+Type: Demo | Date: 2026-06-14
 
 ---
 
 <a id="case-26"></a>
-### Case 26: [Lunar Lander Contest](https://x.com/ivanfioravanti/status/2066193134984319173) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 26: [Concurso de Módulo Lunar](https://x.com/ivanfioravanti/status/2066193134984319173) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **Use este caso para comparar GLM-5.2, MiniMax M3 e Kimi K2.7 Code em uma tarefa interativa de estilo de jogo.**
 
 A postagem descreve uma competição do Lunar Lander entre MiniMax M3, GLM-5.2 e Kimi K2.7 Code, usando um resultado de vídeo como referência prática antes de retornar ao desenvolvimento do modelo local.
 
-Tipo: Avaliação | Data: 2026-06-14
+Type: Evaluation | Date: 2026-06-14
 
 ---
 
 <a id="case-27"></a>
-### Case 27: [One-Prompt Design Arena Creation](https://x.com/grx_xce/status/2066951779154374907) (por [@grx_xce](https://x.com/grx_xce))
+### Case 27: [Criação de arena de design em um único prompt](https://x.com/grx_xce/status/2066951779154374907) (by [@grx_xce](https://x.com/grx_xce))
 
 **Use este caso para inspecionar o que o GLM-5.2 pode gerar a partir de um único prompt de design em um contexto de arena.**
 
 O autor compartilhou um exemplo de criação do GLM-5.2 no Design Arena feita a partir de um prompt, usando-o para mostrar a lacuna cada vez menor entre os modelos de peso aberto e fechado.
 
-Tipo: Demonstração | Data: 2026-06-16
+Type: Demo | Date: 2026-06-16
 
 ---
 
 <a id="case-28"></a>
-### Case 28: [Artigo de pesquisa Compreendendo o fluxo de trabalho](https://x.com/askalphaxiv/status/2066996976445706745) (por [@askalphaxiv](https://x.com/askalphaxiv))
+### Case 28: [Artigo de pesquisa Compreendendo o fluxo de trabalho](https://x.com/askalphaxiv/status/2066996976445706745) (by [@askalphaxiv](https://x.com/askalphaxiv))
 
 **Use este caso para aplicar o GLM-5.2 a fluxos de trabalho de leitura de artigos com perguntas contextuais e referências entre artigos.**
 
 AlphaXiv introduziu o GLM-5.2 para compreensão de artigos de pesquisa, onde os usuários destacam uma seção, fazem perguntas e referenciam outros artigos para contexto, comparações e referências de benchmark.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-29"></a>
-### Case 29: [Constrained Poem Comparison](https://x.com/emollick/status/2067056226337186146) (por [@emollick](https://x.com/emollick))
+### Case 29: [Comparação de poemas restritos](https://x.com/emollick/status/2067056226337186146) (by [@emollick](https://x.com/emollick))
 
 **Use este caso para separar a correção da qualidade criativa ao comparar o GLM-5.2 com modelos no estilo Fable.**
 
 Ethan Mollick deu crédito ao GLM-5.2 Max por produzir um poema restrito correto, ao mesmo tempo em que observou que Fable incorporou a restrição de letras desaparecidas no tema do poema de forma mais criativa.
 
-Tipo: Avaliação | Data: 2026-06-17
+Type: Evaluation | Date: 2026-06-17
 
 ---
 
 <a id="case-30"></a>
-### Case 30: [Design Sense Example](https://x.com/0xSero/status/2067074877941796994) (por [@0xSero](https://x.com/0xSero))
+### Case 30: [Exemplo de senso de design](https://x.com/0xSero/status/2067074877941796994) (by [@0xSero](https://x.com/0xSero))
 
 **Use este caso como um sinal de design visual leve e, em seguida, verifique com seu próprio prompt e revisão da IU.**
 
 O autor diz que gostou do senso de design do GLM-5.2 e compartilhou um exemplo visual. É útil como um indicador para inspecionar, não como uma prova independente da qualidade do projeto de produção.
 
-Tipo: Demonstração | Data: 2026-06-17
+Type: Demo | Date: 2026-06-17
 
 ---
 
 <a id="case-71"></a>
-### Case 71: [Jogo voxel estilo Temple Run em one-shot](https://x.com/pseudokid/status/2068431546143649829) (por [@pseudokid](https://x.com/pseudokid))
+### Case 71: [Jogo voxel estilo Temple Run em one-shot](https://x.com/pseudokid/status/2068431546143649829) (by [@pseudokid](https://x.com/pseudokid))
 
 **Use este caso para estressar o GLM-5.2 em geração de jogos com um único prompt e depois inspecionar o que ainda precisa de correções iterativas em uma build visualmente rica.**
 
 O autor relata ter obtido a maior parte de um jogo de moto voxel inspirado em Temple Run já no primeiro turno, usando depois algumas passagens de ajuste para corrigir câmera e movimento. O post também observa que as ferramentas da Z.ai podem gerar screenshots e vídeos de gameplay para ajudar o modelo de texto a avaliar o resultado.
 
-Tipo: Demonstração | Data: 2026-06-20
+Type: Demo | Date: 2026-06-20
 
 ---
 
 <a id="case-78"></a>
-### Case 78: [Conjunto de exemplos one-shot no OpenCode Go](https://x.com/LyalinDotCom/status/2068378281636982990) (por [@LyalinDotCom](https://x.com/LyalinDotCom))
+### Case 78: [Conjunto de exemplos one-shot no OpenCode Go](https://x.com/LyalinDotCom/status/2068378281636982990) (by [@LyalinDotCom](https://x.com/LyalinDotCom))
 
 **Use este caso para medir o GLM-5.2 em builds rápidas de um único tiro dentro do OpenCode Go antes de comprometê-lo com loops de agentes mais abertos.**
 
 O autor relata exemplos one-shot que incluem um app web do sistema solar, um app Electron de informações do sistema e um jogo web simples de exploração de ilha via OpenCode Go. O mesmo post também diz que o GLM-5.2 é o melhor modelo aberto que ele usou, sem chegar a chamá-lo de igual à fronteira.
 
-Tipo: Demonstração | Data: 2026-06-20
+Type: Demo | Date: 2026-06-20
 
 ---
 
 
 
 <a id="case-81"></a>
-### Case 81: [Build de Space Invaders com um único prompt](https://x.com/DeryaTR_/status/2068803754611069128) (por [@DeryaTR_](https://x.com/DeryaTR_))
+### Case 81: [Build de Space Invaders com um único prompt](https://x.com/DeryaTR_/status/2068803754611069128) (by [@DeryaTR_](https://x.com/DeryaTR_))
 
 **Use este caso para testar o GLM-5.2 na criação de jogos com um único prompt e depois ver como alguns passes extras lidam com trocas de assets e polimento simples.**
 
 A autora diz que o GLM-5.2 construiu um jogo jogável no estilo Space Invaders a partir de um prompt principal e depois usou três prompts de acompanhamento para substituir sprites e adicionar pequenos extras como um leaderboard. O resultado publicado é um exemplo público leve de qualidade de criação de jogos, não um benchmark completo.
 
-Tipo: Demonstração | Data: 2026-06-21
+Type: Demo | Date: 2026-06-21
 
 ---
 
 <a id="case-82"></a>
-### Case 82: [Laboratório de recuperação do OpenCode em one-shot](https://x.com/threepointone/status/2068718370581536816) (por [@threepointone](https://x.com/threepointone))
+### Case 82: [Laboratório de recuperação do OpenCode em one-shot](https://x.com/threepointone/status/2068718370581536816) (by [@threepointone](https://x.com/threepointone))
 
 **Use este caso para prototipar rapidamente simulações interativas de falha de agentes, porque o autor relata ter obtido um recovery lab funcional em one-shot por cerca de US$ 3,50.**
 
 O autor construiu um recovery lab totalmente interativo com OpenCode e GLM-5.2 depois de fornecer ao modelo uma análise de 4.000 palavras e o repositório do Agents SDK. O post relata uma execução de 176k tokens, um resultado one-shot e um custo end-to-end em torno de US$ 3,50 antes do polimento.
 
-Tipo: Demonstração | Data: 2026-06-21
+Type: Demo | Date: 2026-06-21
 
 ---
 <a id="case-92"></a>
-### Case 92: [Open Design Reference URL Rebuild](https://x.com/OpenDesignHQ/status/2069046584134778995) (por [@OpenDesignHQ](https://x.com/OpenDesignHQ))
+### Case 92: [Abrir reconstrução de URL de referência de design](https://x.com/OpenDesignHQ/status/2069046584134778995) (by [@OpenDesignHQ](https://x.com/OpenDesignHQ))
 
 **Use este caso para testar o GLM-5.2 em recriação web guiada por referência, em que um prompt mais uma URL de origem reproduziram um site com fidelidade quase em nível de pixel.**
 
 A Open Design diz que testou o GLM-5.2 em seu AMR embutido usando apenas uma URL de referência e um prompt simples, e o modelo recriou o site quase perfeitamente na demo. Trate isso como uma prova prática de geração de UI baseada em referência, não como um benchmark completo.
 
-Tipo: Demonstração | Data: 2026-06-22
+Type: Demo | Date: 2026-06-22
 
 ---
 
 <a id="case-99"></a>
-### Case 99: [Trader Desk Cost-Quality Test](https://x.com/atomic_chat_hq/status/2069171121044513273) (por [@atomic_chat_hq](https://x.com/atomic_chat_hq))
+### Case 99: [Teste de custo-qualidade da mesa do trader](https://x.com/atomic_chat_hq/status/2069171121044513273) (by [@atomic_chat_hq](https://x.com/atomic_chat_hq))
 
 **Use este caso para comparar o GLM-5.2 em builds full-stack de UI, em que ele chegou perto do resultado de trading desk mais refinado enquanto custava apenas uma pequena fração do melhor resultado.**
 
 A Atomic Chat comparou quatro modelos com o mesmo prompt real de build do Trader Desk, com frontend, backend, dados de mercado de oito símbolos e uma UI customizada em tema escuro. O post relata o GLM-5.2 com 13,677 tokens e $0.03, contra o Fugu Ultra com 22,225 tokens e $0.51, e diz que o GLM produziu uma interface multipainel igualmente completa com dados ao vivo por um custo muito menor.
 
-Tipo: Avaliação | Data: 2026-06-22
+Type: Evaluation | Date: 2026-06-22
 
 ---
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Integrações de provedores e ferramentas
 <a id="case-170"></a>
-### Case 170: [NVIDIA Free API Plug-And-Play Access](https://x.com/hqmank/status/2072855265612030010) (por [@hqmank](https://x.com/hqmank))
+### Case 170: [Acesso plug-and-play gratuito à API NVIDIA](https://x.com/hqmank/status/2072855265612030010) (by [@hqmank](https://x.com/hqmank))
 
 **Use este caso para testar o GLM-5.2 rapidamente por meio de um endpoint hospedado sem custo, porque hqmank diz que a NVIDIA abriu uma rota de API compatível com OpenAI e confirmou que ela funcionou como um drop-in plug-and-play.**
 
 hqmank diz que o GLM-5.2 chegou à API gratuita da NVIDIA e que o endpoint funcionou em um teste rápido. O post o descreve como compatível com OpenAI e plug-and-play, mas também avisa que camadas gratuitas costumam apertar quando a demanda cresce. Isso o torna uma nota prática de acesso para avaliações rápidas ou roteamento temporário de agentes.
 
-Tipo: Integração | Data: 2026-07-03
+Type: Integration | Date: 2026-07-03
 
 ---
 
 <a id="case-169"></a>
-### Case 169: [Free Workers AI Coding-Agent Route](https://x.com/ClaudeCode_UT/status/2072881775408456066) (por [@ClaudeCode_UT](https://x.com/ClaudeCode_UT))
+### Case 169: [Rota do agente de codificação de IA de trabalhadores gratuitos](https://x.com/ClaudeCode_UT/status/2072881775408456066) (by [@ClaudeCode_UT](https://x.com/ClaudeCode_UT))
 
 **Use este caso para montar uma rota de GLM-5.2 sem custo para coding agents, porque o tutorial conecta Workers AI ao Claude Code, OpenCode, Cursor e Aider por meio do endpoint compatível com OpenAI `cf/zai-org/glm-5.2`.**
 
 ClaudeCode_UT descreve um caminho de seis etapas: criar uma conta gratuita da Cloudflare, copiar o account ID do Workers AI, emitir um API token, adicionar a Cloudflare como provedora em ferramentas compatíveis com OpenAI, escolher `cf/zai-org/glm-5.2` e começar a rodar Claude Code, Cursor, Aider ou OpenCode. Isso faz do post um tutorial prático de acesso para equipes que querem testar workflows de coding agents antes de pagar por cobrança por token.
 
-Tipo: Tutorial | Data: 2026-07-03
+Type: Tutorial | Date: 2026-07-03
 
 ---
 
 <a id="case-208"></a>
-### Case 208: [Open Molecular Viewer Agent Stack](https://x.com/MaziyarPanahi/status/2075913552854933869) (por [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+### Case 208: [Abrir pilha de agentes do visualizador molecular](https://x.com/MaziyarPanahi/status/2075913552854933869) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
 
 **Use este caso para ligar o GLM-5.2 a um fluxo aberto de inspeção científica, porque MaziyarPanahi combinou GLM-5.2 via Hugging Face Inference Providers com Qwen3-VL em llama.cpp, Mol* e PydanticAI para renderizar e criticar uma estrutura EGFR mais erlotinibe a partir de um único prompt.**
 
 MaziyarPanahi descreve uma pilha totalmente aberta em que o GLM-5.2 atua como cérebro de linguagem por meio do Hugging Face Inference Providers, o Qwen3-VL cuida da inspeção visual via llama.cpp, o Mol* renderiza a estrutura e o PydanticAI coordena a camada de agente. O post diz que o fluxo produziu seis renders a partir de um único prompt em torno de um exemplo de EGFR mais erlotinibe do RCSB PDB, o que faz dele uma integração científica multi-ferramenta concreta, e não apenas um anúncio genérico de disponibilidade.
 
-Tipo: Integração | Data: 2026-07-11
+Type: Integration | Date: 2026-07-11
 
 ---
 <a id="case-204"></a>
-### Case 204: [Perplexity Advisor WANDR Cost Baseline](https://x.com/perplexity_ai/status/2075229779716973030) (por [@perplexity_ai](https://x.com/perplexity_ai))
+### Case 204: [Linha de base de custos do Perplexity Advisor WANDR](https://x.com/perplexity_ai/status/2075229779716973030) (by [@perplexity_ai](https://x.com/perplexity_ai))
 
 **Use este caso para estimar a economia do GLM-5.2 dentro de um harness de computer use com routing, porque a Perplexity diz que a sua configuração de GLM 5.2 mais advisor marca 2.1x no WANDR contra 6.1x do Opus, com custo médio perto de metade nos benchmarks.**
 
 A Perplexity diz que mediu o custo por tarefa usando o GLM 5.2 como baseline e que a rota GLM 5.2 mais advisor no WANDR ficou em 2.1x, contra 6.1x do Opus. Tome isto como um sinal concreto para routing de computer agents com open weights primeiro, onde um núcleo GLM mais barato é combinado com escalada seletiva em vez de executar um modelo fechado mais forte em cada passo.
 
-Tipo: Avaliação | Data: 2026-07-09
+Type: Evaluation | Date: 2026-07-09
 
 ---
 
 <a id="case-203"></a>
-### Case 203: [Coworker Open Artifacts Routing](https://x.com/coworkerapp/status/2075233366266310905) (por [@coworkerapp](https://x.com/coworkerapp))
+### Case 203: [Roteamento de artefatos abertos do colega de trabalho](https://x.com/coworkerapp/status/2075233366266310905) (by [@coworkerapp](https://x.com/coworkerapp))
 
 **Use este caso para levar o GLM-5.2 a workflows empresariais de artifacts, porque a Coworker diz que o Open Artifacts consegue construir docs, decks, PDF, spreadsheets, dashboards e apps enquanto o seu router otimizado corta o uso de tokens em cerca de 5x e continua a oferecer GLM 5.2 alojado nos EUA.**
 
 A Coworker diz que o Open Artifacts pode gerar produtos partilháveis como docs, decks, dashboards, spreadsheets, PDF e apps completas. O mesmo post de lançamento diz que o seu modo otimizado escolhe o modelo certo para cada tarefa para usar cerca de cinco vezes menos tokens, ao mesmo tempo que continua a permitir que as equipas executem GLM 5.2 num ambiente alojado nos EUA, com SOC 2 e muitas integrações.
 
-Tipo: Integração | Data: 2026-07-09
+Type: Integration | Date: 2026-07-09
 
 ---
 
 <a id="case-201"></a>
-### Case 201: [DotCode Context Upload Workflow](https://x.com/stagedhappen/status/2074775356867789241) (por [@stagedhappen](https://x.com/stagedhappen))
+### Case 201: [Fluxo de trabalho de upload de contexto DotCode](https://x.com/stagedhappen/status/2074775356867789241) (by [@stagedhappen](https://x.com/stagedhappen))
 
 **Use este caso para dar ao GLM-5.2 mais contexto de projeto dentro de uma sandbox privada de coding, porque o DotCode adicionou suporte para GLM 5.2 juntamente com uploads de screenshots, imagens, CSV, PDF, ficheiros source e ZIP que entram no mesmo workflow de filesystem e terminal.**
 
 O DotCode diz que o GLM 5.2 agora funciona com uploads contextuais de workspace para que os agentes possam inspecionar ficheiros, navegar a estrutura do projeto, editar código, correr comandos de terminal e continuar a partir da mesma sandbox. O post enumera os inputs suportados, mostra o fluxo de prompt mais ficheiros até à execução em sandbox e enquadra isso como um passo em direção a trabalho real de coding agent a partir do contexto real do projeto.
 
-Tipo: Integração | Data: 2026-07-08
+Type: Integration | Date: 2026-07-08
 
 ---
 <a id="case-209"></a>
-### Case 209: [Colibri 25GB RAM Sparse Streaming](https://x.com/techNmak/status/2075872446197158361) (por [@techNmak](https://x.com/techNmak))
+### Case 209: [Colibri 25 GB de RAM com streaming esparso](https://x.com/techNmak/status/2075872446197158361) (by [@techNmak](https://x.com/techNmak))
 
 **Use este caso para entender o novo piso prático da implantação local do GLM-5.2, porque techNmak detalha como o Colibrì executa o MoE 744B com cerca de 25 GB de RAM por streaming de especialistas a partir de NVMe, embora a menor configuração chegue apenas a algo em torno de 0,05 a 0,1 tok/s.**
 
 techNmak resume o Colibrì como um motor local de inferência em C puro que mantém na RAM apenas os pesos sempre quentes e deixa os especialistas roteados no NVMe, com cerca de 9,9 GB permanentemente residentes, cerca de 20 GB de pico de RAM durante o chat e algo em torno de 370 GB de pesos int4 em disco. O post apresenta explicitamente o resultado como uma prova de conceito de sistemas, e não como serving rápido de produção, porque a geração fria na máquina de 25 GB fica em torno de 0,05 a 0,1 tok/s e o impacto de qualidade da quantização int4 ainda não foi totalmente benchmarkado.
 
-Tipo: Demonstração | Data: 2026-07-11
+Type: Demo | Date: 2026-07-11
 
 ---
 <a id="case-206"></a>
-### Case 206: [SGLang NVFP4 Production Throughput](https://x.com/sgl_project/status/2075721488456654861) (por [@sgl_project](https://x.com/sgl_project))
+### Case 206: [Rendimento de produção SGLang NVFP4](https://x.com/sgl_project/status/2075721488456654861) (by [@sgl_project](https://x.com/sgl_project))
 
 **Use este caso para dimensionar serving de produção com SGLang para GLM-5.2 NVFP4, porque o release oficial do SGLang v0.5.15 diz que agora atinge mais de 500 tok/s por utilizador em 8x B300 e 450 em 4x GB300 com batch size 1.**
 
 O anúncio oficial do SGLang v0.5.15 diz que este ciclo se concentrou em afinar o GLM-5.2 NVFP4 para serving de produção. O post informa mais de 500 tokens por segundo por utilizador em 8x B300 e 450 em 4x GB300 com bs=1, o que o torna um ponto de referência concreto de throughput de deploy para equipas que avaliam stacks de inferência alojados ou autogeridos. O mesmo anúncio também apresenta o trabalho como suporte upstream do produto, não como um hack laboratorial pontual.
 
-Tipo: Evaluation | Data: 2026-07-10
+Type: Evaluation | Date: 2026-07-10
 
 ---
 <a id="case-198"></a>
-### Case 198: [Dahl 100M Free GLM Endpoint](https://x.com/pengsonal/status/2074908680106180669) (por [@pengsonal](https://x.com/pengsonal))
+### Case 198: [Ponto final GLM gratuito Dahl 100M](https://x.com/pengsonal/status/2074908680106180669) (by [@pengsonal](https://x.com/pengsonal))
 
 **Use este caso para experimentar o GLM-5.2 por uma rota OpenAI-compatible sem cartão, porque a Dahl Inference oferece 100M de tokens grátis para GLM 5.2 FP8 e mostra como criar uma chave e chamar `/v1/chat/completions`.**
 
 O post lista o GLM 5.2 FP8 entre os endpoints gratuitos de modelos abertos da Dahl e diz que não é preciso registo nem cartão. Também fornece um fluxo de configuração concreto: gerar uma chave na web UI, usar o endpoint OpenAI-compatible `/v1/chat/completions` e notar que pedidos diretos com `curl` podem bater em Cloudflare 403, mesmo que o caminho de web chat funcione.
 
-Tipo: Tutorial | Data: 2026-07-08
+Type: Tutorial | Date: 2026-07-08
 
 ---
 <a id="case-195"></a>
-### Case 195: [NVIDIA Free Endpoint GLM Setup](https://x.com/undefinedKi/status/2074491917333655948) (por [@undefinedKi](https://x.com/undefinedKi))
+### Case 195: [Configuração gratuita do Endpoint GLM da NVIDIA](https://x.com/undefinedKi/status/2074491917333655948) (by [@undefinedKi](https://x.com/undefinedKi))
 
 **Use este caso para testar o GLM-5.2 em ferramentas de código sem self-hosting, porque a fonte descreve um fluxo gratuito de endpoint da NVIDIA que leva chaves API do GLM-5.2 para Claude Code, Cursor ou Cline.**
 
 O post diz que a NVIDIA lançou chaves API gratuitas para modelos topo, incluindo o GLM-5.2, e depois fornece um caminho direto de configuração: criar uma conta NVIDIA, abrir o separador Build de um modelo free endpoint, gerar a API key e colar a base URL junto com a chave no Claude Code, Cursor ou Cline. Isso faz deste um tutorial prático de acesso para experimentar o GLM-5.2 sem cobrança por token nem stack local de GPU.
 
-Tipo: Tutorial | Data: 2026-07-07
+Type: Tutorial | Date: 2026-07-07
 
 ---
 <a id="case-193"></a>
-### Case 193: [0G TeeML Private Inference Route](https://x.com/0G_labs/status/2074496704959676682) (por [@0G_labs](https://x.com/0G_labs))
+### Case 193: [Rota de inferência privada 0G TeeML](https://x.com/0G_labs/status/2074496704959676682) (by [@0G_labs](https://x.com/0G_labs))
 
 **Use este caso para encaminhar o GLM-5.2 por uma rota de fornecedor focada em privacidade, porque a 0G diz que o GLM 5.2 agora roda no TeeML com prompts selados dentro de um enclave TEE e preço abaixo da rota oficial.**
 
 A 0G apresenta o TeeML como a sua camada de inferência privada e diz que o GLM 5.2 agora roda ali com execução verificável dentro de um trusted execution environment. O post é curto, mas ainda assim traz uma integração concreta de fornecedor junto com um ângulo de privacidade e preço, por isso encaixa melhor como sinal de rota de deployment do que como afirmação sobre qualidade do modelo.
 
-Tipo: Integração | Data: 2026-07-07
+Type: Integration | Date: 2026-07-07
 
 ---
 <a id="case-185"></a>
-### Case 185: [DuckDB Flock Open-SQL PR](https://x.com/lhoestq/status/2074143736624275629) (por [@lhoestq](https://x.com/lhoestq))
+### Case 185: [PR Open-SQL para DuckDB Flock](https://x.com/lhoestq/status/2074143736624275629) (by [@lhoestq](https://x.com/lhoestq))
 
 **Use este caso para levar o GLM-5.2 a uma análise SQL local totalmente aberta, porque lhoestq diz que um PR de duckdb mais flock já habilita o GLM-5.2 dentro de um stack de dados 100% open source.**
 
 O post diz que o autor abriu um PR para habilitar o GLM-5.2 no duckdb com flock e o apresenta como uma forma de colocar inteligência open de nível frontier diretamente a serviço dos seus dados. Como a fonte é um sinal de PR aberto e não uma release note já mergeada, este caso se encaixa melhor como integração em andamento para analytics local e workflows nativos de SQL.
 
-Tipo: Integração | Data: 2026-07-06
+Type: Integration | Date: 2026-07-06
 
 ---
 <a id="case-179"></a>
-### Case 179: [One-Key 26-Model API Access](https://x.com/Alan_Earn/status/2073663239028924680) (por [@Alan_Earn](https://x.com/Alan_Earn))
+### Case 179: [Acesso à API de 26 modelos com uma chave](https://x.com/Alan_Earn/status/2073663239028924680) (by [@Alan_Earn](https://x.com/Alan_Earn))
 
 **Use este caso para testar o GLM-5.2 por meio de um único provedor compatível com OpenAI, porque Alan_Earn diz que uma única API key expõe o GLM-5.2 mais 25 outros modelos e inclui 26 dólares em créditos iniciais.**
 
 O post traz um setup curto: criar a conta, adicionar um cartão, desbloquear o dashboard, resgatar os créditos, gerar a API key e colá-la no Codex, Cursor, OpenCode, OpenClaw, Hermes ou em outros clientes compatíveis com OpenAI. Ele também observa o billing pay as you go e que modelos frontier maiores consomem rapidamente os créditos gratuitos, então funciona principalmente como nota de acesso e pricing.
 
-Tipo: Tutorial | Data: 2026-07-05
+Type: Tutorial | Date: 2026-07-05
 
 ---
 <a id="case-176"></a>
-### Case 176: [NVIDIA NIM OpenCode Thinking Setup](https://x.com/Dracoshowumore/status/2073384581256929717) (por [@Dracoshowumore](https://x.com/Dracoshowumore), [@lhoestq](https://x.com/lhoestq), [@XavierLocalAI](https://x.com/XavierLocalAI))
+### Case 176: [Configuração de pensamento OpenCode NVIDIA NIM](https://x.com/Dracoshowumore/status/2073384581256929717) (by [@Dracoshowumore](https://x.com/Dracoshowumore))
 
 **Use este caso para ligar o GLM-5.2 ao OpenCode pelo endpoint gratuito da NVIDIA NIM quando você quiser uma rota sem custo com thinking ativado explicitamente, porque Dracoshowumore compartilha o fluxo de API key, a base URL e uma configuração do OpenCode em que a camada de ferramentas cuida das function calls enquanto o GLM roda com enable_thinking em true.**
 
 Dracoshowumore descreve um caminho completo: registrar-se na plataforma de desenvolvedores da NVIDIA, gerar uma API key do GLM-5.2, apontar o OpenCode para a base URL publicada, desativar o tool calling nativo do modelo e passar chat_template_kwargs.enable_thinking=true nas opções do provedor. O mesmo post diz que a rota NIM não expõe function calling nem reasoning traces por padrão, então o OpenCode precisa assumir a orquestração de ferramentas. Isso faz do post uma nota prática de configuração, não apenas outro anúncio de endpoint gratuito.
 
-Tipo: Tutorial | Data: 2026-07-04
+Type: Tutorial | Date: 2026-07-04
 
 <a id="case-165"></a>
-### Case 165: [ZCode Launch With Mobile Agent Control](https://x.com/Digiato/status/2072663459850829985) (por [@Digiato](https://x.com/Digiato))
+### Case 165: [Lançamento do ZCode com controle de agente móvel](https://x.com/Digiato/status/2072663459850829985) (by [@Digiato](https://x.com/Digiato))
 
 **Use este caso para avaliar o ZCode como superfície oficial de coding para o GLM-5.2, porque o relato de lançamento diz que o IDE agentic gratuito chega a Windows, macOS e Linux e pode acompanhar projetos por Telegram, WeChat e Feishu.**
 
 A Digiato descreve o ZCode como um ambiente de desenvolvimento agentic gratuito construído em torno do GLM-5.2 e posicionado contra Cursor, Claude Code e Copilot. O post diz que ele chega a Windows, macOS e Linux, se integra profundamente ao GLM-5.2 e permite acompanhar o progresso do projeto por Telegram, WeChat e Feishu. Isso o torna uma superfície de acesso mais distinta do que um simples anúncio de modelo.
 
-Tipo: Integração | Data: 2026-07-02
+Type: Integration | Date: 2026-07-02
 
 ---
 
 <a id="case-160"></a>
-### Case 160: [OpenWiki Auto-Maintained Agent Docs](https://x.com/LangChain/status/2072745455788933321) (por [@LangChain](https://x.com/LangChain))
+### Case 160: [Documentos do agente com manutenção automática do OpenWiki](https://x.com/LangChain/status/2072745455788933321) (by [@LangChain](https://x.com/LangChain))
 
 **Use este caso para manter documentação legível por agentes atualizada automaticamente, porque a LangChain diz que o OpenWiki regenera e mantém os docs do repositório conforme o código muda e roda sobre modelos abertos como GLM 5.2.**
 
 A LangChain apresenta o OpenWiki como uma camada open-source de manutenção de documentação para coding agents. O post diz que ele combina um harness aberto com workflows CLI abertos, mantém a documentação atualizada quando o codebase muda e roda sobre modelos abertos como GLM 5.2 e Kimi K2.7. É um padrão prático de memória em arquivos para equipes que querem agentes lendo docs frescos em vez de wikis mantidas manualmente.
 
-Tipo: Integração | Data: 2026-07-02
+Type: Integration | Date: 2026-07-02
 
 ---
 
 <a id="case-152"></a>
-### Case 152: [Foundry PTUs Through FireConnect](https://x.com/FireworksAI_HQ/status/2072407689964183867) (por [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
+### Case 152: [PTUs de fundição por meio do FireConnect](https://x.com/FireworksAI_HQ/status/2072407689964183867) (by [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
 
 **Use este caso para rotear o GLM-5.2 por orçamentos corporativos do Foundry sem reescrever clientes de agentes, porque a Fireworks diz que o FireConnect conecta as PTUs do Microsoft Foundry a fluxos no Codex, OpenCode e Pi.**
 
 A Fireworks afirma que o GLM 5.2 já está disponível no Microsoft Foundry. Com o FireConnect ativado, as equipes podem gastar PTUs do Foundry enquanto continuam roteando solicitações por Codex, OpenCode ou Pi, em vez de montar uma rota separada para cada superfície de agente.
 
-Tipo: Integração | Data: 2026-07-01
+Type: Integration | Date: 2026-07-01
 
 ---
 
 
 <a id="case-147"></a>
-### Case 147: [Braintrust GLM Eval Workbench](https://x.com/ankrgyl/status/2072042305108722040) (por [@ankrgyl](https://x.com/ankrgyl))
+### Case 147: [Bancada de avaliação Braintrust GLM](https://x.com/ankrgyl/status/2072042305108722040) (by [@ankrgyl](https://x.com/ankrgyl))
 
 **Use este caso para comparar GLM-5.2 e Opus dentro da mesma pilha de evals, porque Braintrust e Baseten lançaram o modelo com um exemplo concreto de custo versus precisão em contexto longo.**
 
 ankrgyl diz que a Braintrust adicionou GLM-5.2 com suporte da Baseten para uso em evals e traces de produção. O exemplo compara recuperação em contexto longo com 25K e 50K tokens: o Opus 4.8 fica cerca de 3,5 pontos à frente, mas custa algo entre 4,1x e 4,5x mais por trace.
 
-Tipo: Integração | Data: 2026-06-30
+Type: Integration | Date: 2026-06-30
 
 ---
 
 ---
 
 <a id="case-141"></a>
-### Case 141: [Assinatura fixa do ClinePass para modelos open-weight](https://x.com/iam_elias1/status/2071655509611151674) (por [@iam_elias1](https://x.com/iam_elias1))
+### Case 141: [Assinatura fixa do ClinePass para modelos open-weight](https://x.com/iam_elias1/status/2071655509611151674) (by [@iam_elias1](https://x.com/iam_elias1))
 
 **Use este caso para reunir vários modelos de coding open-weight em um único agent harness, porque o ClinePass empacota GLM-5.2 e modelos relacionados em uma mensalidade fixa, em vez de exigir chaves e cobranças separadas por provedor.**
 
 iam_elias1 descreve o ClinePass como uma rota de 9,99 dólares por mês para usar GLM-5.2, DeepSeek, Kimi, Qwen, MiniMax, MiMo e outros modelos open-weight dentro da extensão IDE e da CLI do Cline. O fio diz que ele substitui API keys por provedor, oferece de 2 a 5 vezes os limites padrão de API, permite trocar de modelo no meio da sessão conforme a fase do trabalho e reduz o primeiro mês para 1,99 dólar no cadastro pela CLI.
 
-Tipo: Integração | Data: 2026-06-29
+Type: Integration | Date: 2026-06-29
 
 <a id="case-137"></a>
-### Case 137: [Free GLM API Service For Coding Agents](https://x.com/mcwangcn/status/2071261128575897901) (por [@mcwangcn](https://x.com/mcwangcn))
+### Case 137: [Serviço API GLM gratuito para agentes de codificação](https://x.com/mcwangcn/status/2071261128575897901) (by [@mcwangcn](https://x.com/mcwangcn))
 
 **Use este caso para testar o GLM-5.2 no Hermes ou em outros agentes de código sem registro, porque o serviço compartilhado emite chaves de API de curta duração e mantém a configuração leve.**
 
 mcwangcn compartilhou um serviço gratuito de API GLM-5.2 que supostamente não exige cadastro nem login e pode ser usado a partir de Lobster, Hermes ou outros agentes de código. O mesmo post diz que cada chave de API gerada dura uma hora antes da renovação, o que é uma restrição concreta contra abuso e torna o serviço mais adequado para testes rápidos de workflow do que para uso de produção autônomo de longo prazo.
 
-Tipo: Integration | Data: 2026-06-28
+Type: Integration | Date: 2026-06-28
 
 ---
 
 <a id="case-31"></a>
-### Case 31: [OpenCode Go Availability](https://x.com/opencode/status/2067207923122479242) (por [@opencode](https://x.com/opencode))
+### Case 31: [Disponibilidade do OpenCode Go](https://x.com/opencode/status/2067207923122479242) (by [@opencode](https://x.com/opencode))
 
 **Use este caso para rastrear a disponibilidade do GLM-5.2 dentro de fluxos de trabalho OpenCode Go com texto, contexto de 1 milhão e preços semelhantes aos do GLM-5.1.**
 
 OpenCode anunciou a disponibilidade do GLM-5.2 em Go, destacando suporte de texto, uma janela de contexto de 1 milhão e o mesmo preço do 5.1.
 
-Tipo: Integração | Data: 2026-06-17
+Type: Integration | Date: 2026-06-17
 
 ---
 
 <a id="case-32"></a>
-### Case 32: [Ollama Cloud Availability](https://x.com/ollama/status/2066949797316350361) (por [@ollama](https://x.com/ollama))
+### Case 32: [Disponibilidade da nuvem Ollama](https://x.com/ollama/status/2066949797316350361) (by [@ollama](https://x.com/ollama))
 
 **Use este caso para rotear o GLM-5.2 para Ollama Cloud para experimentos acessíveis de modelo de codificação de código aberto.**
 
 Ollama anunciou a disponibilidade do GLM-5.2, descrevendo-o como uma codificação de longo horizonte e um modelo de tarefa de agente com contexto de 1M.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-33"></a>
-### Case 33: [OpenRouter One API Call Access](https://x.com/OpenRouter/status/2066941552208056561) (por [@OpenRouter](https://x.com/OpenRouter))
+### Case 33: [Acesso à chamada de API do OpenRouter One](https://x.com/OpenRouter/status/2066941552208056561) (by [@OpenRouter](https://x.com/OpenRouter))
 
 **Use este caso para acessar o GLM-5.2 por meio do OpenRouter ao comparar roteamento de provedor ou pilhas de vários modelos.**
 
 OpenRouter anunciou a disponibilidade do GLM-5.2 como um modelo de longo horizonte de 1 milhão de tokens, oferecendo aos usuários um caminho neutro em termos de provedor para chamá-lo.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-34"></a>
-### Case 34: [vLLM Day-Zero Support](https://x.com/vllm_project/status/2066950636428775693) (por [@vllm_project](https://x.com/vllm_project))
+### Case 34: [Suporte vLLM Dia Zero](https://x.com/vllm_project/status/2066950636428775693) (by [@vllm_project](https://x.com/vllm_project))
 
 **Use este caso para auto-hospedar ou servir o GLM-5.2 por meio do vLLM com suporte do dia zero.**
 
 O projeto vLLM anunciou suporte ao GLM-5.2 na v0.23.0, enquadrando-o como um modelo principal para agentes de codificação de longo horizonte com contexto de 1M.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-35"></a>
-### Case 35: [Notion Availability Via Baseten](https://x.com/NotionHQ/status/2066963258985320550) (por [@NotionHQ](https://x.com/NotionHQ))
+### Case 35: [Disponibilidade de noção via Baseten](https://x.com/NotionHQ/status/2066963258985320550) (by [@NotionHQ](https://x.com/NotionHQ))
 
 **Use este caso para identificar o GLM-5.2 como um modelo aberto disponível nos fluxos de trabalho do Notion.**
 
 A Notion anunciou a disponibilidade do GLM-5.2 como um modelo aberto construído para tarefas de longo horizonte e servido via Baseten.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-36"></a>
-### Case 36: [Fireworks Day-Zero Serving](https://x.com/FireworksAI_HQ/status/2067007200426680509) (por [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
+### Case 36: [Serviço do dia zero de fogos de artifício](https://x.com/FireworksAI_HQ/status/2067007200426680509) (by [@FireworksAI_HQ](https://x.com/FireworksAI_HQ))
 
 **Use este caso para avaliar o Fireworks como uma rota de atendimento para cargas de trabalho do GLM-5.2 que precisam de infraestrutura hospedada.**
 
 A Fireworks anunciou o GLM-5.2 ao vivo no dia zero, enfatizando o contexto 1M, posicionamento de codificação primeiro e validação independente em SWE-Bench, Terminal-Bench, GPQA e AIME.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-37"></a>
-### Case 37: [Link do jardim do modelo do Google Cloud](https://x.com/CarolGLMs/status/2067127223216419088) (por [@CarolGLMs](https://x.com/CarolGLMs))
+### Case 37: [Link do jardim do modelo do Google Cloud](https://x.com/CarolGLMs/status/2067127223216419088) (by [@CarolGLMs](https://x.com/CarolGLMs))
 
 **Use este caso para encontrar o GLM-5.2 em implantação orientada ao Google Cloud e contextos de plataforma de agente.**
 
 CarolGLMs compartilhou um link do Google Cloud para GLM-5.2, tornando-o um indicador direto para equipes que trabalham por meio de catálogos de modelos de nuvem.
 
-Tipo: Integração | Data: 2026-06-17
+Type: Integration | Date: 2026-06-17
 
 ---
 
 <a id="case-38"></a>
-### Case 38: [Venice Privacy Mode](https://x.com/AskVenice/status/2066990725439361251) (por [@AskVenice](https://x.com/AskVenice))
+### Case 38: [Modo de privacidade de Veneza](https://x.com/AskVenice/status/2066990725439361251) (by [@AskVenice](https://x.com/AskVenice))
 
 **Use este caso quando o modo de privacidade, TEE ou criptografia ponta a ponta for um fator decisivo na tentativa do GLM-5.2.**
 
 Veneza anunciou a disponibilidade do GLM-5.2 em modo de privacidade com enquadramento TEE/E2EE, voltado para codificação de agentes privados e tarefas de longo horizonte.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-39"></a>
-### Case 39: [Command Code Availability](https://x.com/CommandCodeAI/status/2066950478194503990) (por [@CommandCodeAI](https://x.com/CommandCodeAI))
+### Case 39: [Disponibilidade de código de comando](https://x.com/CommandCodeAI/status/2066950478194503990) (by [@CommandCodeAI](https://x.com/CommandCodeAI))
 
 **Use este caso para experimentar o GLM-5.2 em código de comando com um plano inicial de baixo custo e recursos de codificação de contexto longo.**
 
 O Command Code anunciou a disponibilidade do GLM-5.2, observando o contexto 1M, raciocínio forte, status de código aberto e acesso por meio de seu plano Go de um dólar.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-40"></a>
-### Case 40: [Agente Hermes do Portal Nous](https://x.com/Teknium/status/2066954081575592282) (por [@Teknium](https://x.com/Teknium))
+### Case 40: [Agente Hermes do Portal Nous](https://x.com/Teknium/status/2066954081575592282) (by [@Teknium](https://x.com/Teknium))
 
 **Use este caso para conectar o GLM-5.2 aos fluxos de trabalho do Agente Hermes por meio do Nous Portal e OpenRouter.**
 
 Teknium relatou a disponibilidade do GLM-5.2 no Hermes Agent do Nous Portal e OpenRouter, útil para experimentos de roteamento de estrutura de agente.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-41"></a>
-### Case 41: [io.net Day-Zero Launch Partner](https://x.com/ionet/status/2067140436095803763) (por [@ionet](https://x.com/ionet))
+### Case 41: [Parceiro de lançamento Day-Zero io.net](https://x.com/ionet/status/2067140436095803763) (by [@ionet](https://x.com/ionet))
 
 **Use este caso ao avaliar a veiculação baseada em computação para um modelo de contexto longo de parâmetros 753B.**
 
 A io.net se anunciou como parceira de lançamento do dia zero para o GLM-5.2, enfatizando o contexto 1M, o design que prioriza o agente, a codificação de horizonte longo e as necessidades de computação de um modelo de parâmetros 753B.
 
-Tipo: Integração | Data: 2026-06-17
+Type: Integration | Date: 2026-06-17
 
 ---
 
 <a id="case-42"></a>
-### Case 42: [Modular Cloud Day-Zero Serving](https://x.com/clattner_llvm/status/2066974950293147950) (por [@clattner_llvm](https://x.com/clattner_llvm))
+### Case 42: [Serviço modular de nuvem dia zero](https://x.com/clattner_llvm/status/2066974950293147950) (by [@clattner_llvm](https://x.com/clattner_llvm))
 
 **Use este caso para considerar a Nuvem Modular para GLM-5.2 de contexto longo servindo em escala de provedor.**
 
 Chris Lattner postou que o GLM-5.2 estava ativo no Modular Cloud no dia zero, destacando pesos abertos, codificação, agentes de longo horizonte e contexto 1M.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-61"></a>
-### Case 61: [Cursor Setup Through OpenRouter](https://x.com/agentnative_/status/2068148384846746107) (por [@agentnative_](https://x.com/agentnative_))
+### Case 61: [Configuração do cursor através do OpenRouter](https://x.com/agentnative_/status/2068148384846746107) (by [@agentnative_](https://x.com/agentnative_))
 
 **Use este caso para configurar o GLM-5.2 no Cursor por meio do OpenRouter para um fluxo de trabalho de codificação de modelo aberto de baixo custo.**
 
 A fonte fornece um caminho concreto de configuração do Cursor/OpenRouter em vez de apenas anunciar a disponibilidade do modelo.
 
-Tipo: Tutorial | Data: 2026-06-20
+Type: Tutorial | Date: 2026-06-20
 
 ---
 
 <a id="case-63"></a>
-### Case 63: [Amp Agentic Eyes For Visual Design](https://x.com/beyang/status/2068087124818317374) (por [@beyang](https://x.com/beyang))
+### Case 63: [Amp Agentic Eyes para design visual](https://x.com/beyang/status/2068087124818317374) (by [@beyang](https://x.com/beyang))
 
 **Use este caso para emparelhar GLM-5.2 com agentes personalizados Amp quando um modelo somente texto precisar de suporte de revisão visual para tarefas de design.**
 
 A postagem conecta um resultado de benchmark de design visual GLM-5.2 com agentes de plug-in Amp que podem fornecer uma camada de revisão.
 
-Tipo: Integração | Data: 2026-06-20
+Type: Integration | Date: 2026-06-20
 
 ---
 
 <a id="case-69"></a>
-### Case 69: [Baseten Faster One-Million-Context Serving](https://x.com/alphatozeta8148/status/2067852860499562821) (por [@alphatozeta8148](https://x.com/alphatozeta8148))
+### Case 69: [Baseten Fornecimento mais rápido de um milhão de contextos](https://x.com/alphatozeta8148/status/2067852860499562821) (by [@alphatozeta8148](https://x.com/alphatozeta8148))
 
 **Use este caso para rotear GLM-5.2 por meio de Baseten quando a velocidade do serviço de contexto longo for importante para Factory Droid, OpenCode e chicotes de codificação.**
 
 A fonte relata que o GLM-5.2 está sendo executado quatro vezes mais rápido no contexto completo de 1M e mostra isso em chicotes de codificação.
 
-Tipo: Integração | Data: 2026-06-20
+Type: Integration | Date: 2026-06-20
 
 <a id="case-74"></a>
-### Case 74: [Subagentes de QA do Browser Use para web design](https://x.com/browser_use/status/2068405699340853541) (por [@browser_use](https://x.com/browser_use))
+### Case 74: [Subagentes de QA do Browser Use para web design](https://x.com/browser_use/status/2068405699340853541) (by [@browser_use](https://x.com/browser_use))
 
 **Use este caso para combinar o GLM-5.2 com subagentes multimodais de QA do Browser Use v2 quando um modelo apenas textual precisa de inspeção visual e correções iterativas em sites.**
 
 O Browser Use relata que o GLM-5.2 superou o Fable 5 em uma tarefa de web design e depois adicionou subagentes de QA que inspecionam o resultado, julgam a estética, encontram bugs e devolvem correções direcionadas ao GLM. Segundo o post, o loop completo de construção mais QA custou menos de US$ 0,75.
 
-Tipo: Integração | Data: 2026-06-20
+Type: Integration | Date: 2026-06-20
 
 ---
 
 <a id="case-79"></a>
-### Case 79: [Tokens grátis diários no IDE oficial ZCode](https://x.com/Alan_Earn/status/2068223665268006924) (por [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan))
+### Case 79: [Tokens grátis diários no IDE oficial ZCode](https://x.com/Alan_Earn/status/2068223665268006924) (by [@Alan_Earn](https://x.com/Alan_Earn))
 
 **Use este caso para acessar o GLM-5.2 via ZCode quando você quiser um IDE oficial de programação gratuito com grandes cotas diárias de tokens e um workflow ao estilo Cursor.**
 
 O post descreve o ZCode como o IDE oficial de programação da Zhipu, com GLM-5.2 como modelo padrão, 3M de tokens diários, 1M de contexto e clientes para Mac e Windows. Ele também inclui um fluxo curto de configuração, o que o torna mais acionável do que um anúncio genérico de lançamento.
 
-Tipo: Tutorial | Data: 2026-06-20
+Type: Tutorial | Date: 2026-06-20
 
 ---
 
 
 
 <a id="case-83"></a>
-### Case 83: [Configuração do Cursor via Fireworks](https://x.com/skirano/status/2068777440986513647) (por [@skirano](https://x.com/skirano))
+### Case 83: [Configuração do Cursor via Fireworks](https://x.com/skirano/status/2068777440986513647) (by [@skirano](https://x.com/skirano))
 
 **Use este caso para conectar o GLM-5.2 ao Cursor via Fireworks com uma configuração mínima compatível com OpenAI e sem código cliente customizado.**
 
 Skirano mostra um fluxo mínimo de configuração no Cursor: colar uma chave da Fireworks no campo de API key da OpenAI, usar `https://api.fireworks.ai/inference/v1` como base URL, selecionar `accounts/fireworks/models/glm-5p2` e reiniciar o Cursor. Isso o torna uma rota concreta para testar o GLM-5.2 dentro de um IDE de programação familiar.
 
-Tipo: Tutorial | Data: 2026-06-21
+Type: Tutorial | Date: 2026-06-21
 
 ---
 
 <a id="case-84"></a>
-### Case 84: [Suporte ao provedor ZAI no VulcanBench](https://x.com/vulcanbench/status/2068724843856707676) (por [@vulcanbench](https://x.com/vulcanbench))
+### Case 84: [Suporte ao provedor ZAI no VulcanBench](https://x.com/vulcanbench/status/2068724843856707676) (by [@vulcanbench](https://x.com/vulcanbench))
 
 **Use este caso para executar o GLM-5.2 em um harness aberto de benchmark com suporte de primeira classe ao provedor ZAI e um caminho dedicado de API key.**
 
 O VulcanBench v0.2.0 adicionou suporte de primeira classe ao ZAI, permitindo que os usuários executem o GLM-5.2 como `zai:glm-5.2` ao lado de modelos da OpenAI e da Anthropic com uma `ZAI_API_KEY` dedicada. Isso é útil para quem quer um harness aberto de benchmark em vez de screenshots isolados.
 
-Tipo: Integração | Data: 2026-06-21
+Type: Integration | Date: 2026-06-21
 
 ---
 
 <a id="case-85"></a>
-### Case 85: [Variantes de raciocínio High/Max no OpenCode](https://x.com/OpenCodeLog/status/2068487086576156705) (por [@OpenCodeLog](https://x.com/OpenCodeLog))
+### Case 85: [Variantes de raciocínio High/Max no OpenCode](https://x.com/OpenCodeLog/status/2068487086576156705) (by [@OpenCodeLog](https://x.com/OpenCodeLog))
 
 **Use este caso para acessar as variantes de raciocínio High e Max do GLM-5.2 dentro do OpenCode, ao mesmo tempo em que ganha um tratamento mais confiável do limite de passos.**
 
 O OpenCode v1.17.9 adicionou variantes de thinking High e Max para o GLM-5.2 em provedores compatíveis com OpenAI e Anthropic, além do mapeamento nativo de esforço para o OpenRouter. A mesma versão também corrigiu o comportamento do limite de passos do agente, tornando a integração mais prática para execuções mais longas.
 
-Tipo: Integração | Data: 2026-06-21
+Type: Integration | Date: 2026-06-21
 
 ---
 
 <a id="case-86"></a>
-### Case 86: [Seleção do endpoint de código do Z.ai](https://x.com/ivanfioravanti/status/2068574700721082400) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 86: [Seleção do endpoint de código do Z.ai](https://x.com/ivanfioravanti/status/2068574700721082400) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **Use este caso para rotear o tráfego de coding plan do GLM-5.2 para o endpoint do Z.ai otimizado para código em vez do caminho genérico de API.**
 
 O post orienta os usuários a usar `https://api.z.ai/api/coding/paas/v4` em vez do endpoint geral `https://api.z.ai/api/paas/v4/` para workloads de coding plan, e observa que `https://api.z.ai/api/anthropic` é o que ferramentas como Claude Code e OpenCode costumam usar quando há suporte. Trate isso como uma correção concreta de configuração quando o GLM-5.2 parecer mal roteado.
 
-Tipo: Tutorial | Data: 2026-06-21
+Type: Tutorial | Date: 2026-06-21
 
 ---
 
 <a id="case-87"></a>
-### Case 87: [Configuração gratuita da API GLM-5.2 no ZenMux](https://x.com/0x_kaize/status/2068676992782811607) (por [@0x_kaize](https://x.com/0x_kaize))
+### Case 87: [Configuração gratuita da API GLM-5.2 no ZenMux](https://x.com/0x_kaize/status/2068676992782811607) (by [@0x_kaize](https://x.com/0x_kaize))
 
 **Use este caso para obter uma API key e uma base URL gratuitas do GLM-5.2 e depois conectá-las ao Claude, Cursor, Hermes e ferramentas similares.**
 
 O autor compartilha um fluxo de configuração de cinco minutos para obter uma API key e uma base URL gratuitas do ZenMux e depois conectar o GLM-5.2 ao Claude, Cursor, Hermes e ferramentas similares. O post também observa que o rate limit da camada gratuita chega rápido, então isso é mais útil como nota de acesso do que como garantia de durabilidade.
 
-Tipo: Tutorial | Data: 2026-06-21
+Type: Tutorial | Date: 2026-06-21
 
 ---
 <a id="case-93"></a>
-### Case 93: [Noumena ncode GLM Default](https://x.com/_xjdr/status/2069030608727408993) (por [@_xjdr](https://x.com/_xjdr))
+### Case 93: [Numena ncode GLM Padrão](https://x.com/_xjdr/status/2069030608727408993) (by [@_xjdr](https://x.com/_xjdr))
 
 **Use este caso para direcionar o GLM-5.2 para ambientes de agentes no estilo ncode e Noumena com endpoints separados padrão e de contexto 1M, além de suporte como modelo padrão.**
 
 A atualização da Noumena diz que a equipe adicionou suporte de primeira classe ao GLM em tool calling, parsing de funções, roteamento de apps e traces de raciocínio, depois dividiu a API em endpoints `glm-5.2` e `glm-5.2[1m]` para controlar o TTFT sob tráfego pesado de contexto 1M. Também diz que builds recentes do ncode trocaram seu modelo opus-class padrão de Kimi para GLM após feedback positivo de uso.
 
-Tipo: Integração | Data: 2026-06-22
+Type: Integration | Date: 2026-06-22
 
 ---
 
 <a id="case-101"></a>
-### Case 101: [Baseten + Droid Harness Quickstart](https://x.com/RayFernando1337/status/2069523126384525639) (por [@RayFernando1337](https://x.com/RayFernando1337))
+### Case 101: [Início rápido do Baseten + Droid Harness](https://x.com/RayFernando1337/status/2069523126384525639) (by [@RayFernando1337](https://x.com/RayFernando1337))
 
 **Use este caso para colocar o GLM-5.2 para rodar rapidamente via Baseten e harness Droid, com um fluxo curto de configuração que também pode ser reutilizado em outros IDEs.**
 
 RayFernando1337 resume um tutorial com etapas marcadas por tempo: obter uma API key da Baseten, automatizar a configuração do Droid AI, testar a integração do GLM-5.2, revisar setups alternativos e limitações, e terminar com notas extras de configuração para outros IDEs.
 
-Tipo: Tutorial | Data: 2026-06-23
+Type: Tutorial | Date: 2026-06-23
 
 ---
 
 <a id="case-104"></a>
-### Case 104: [OpenAI-Compatible GLM API Workflow](https://x.com/Marktechpost/status/2069308807570915500) (por [@Marktechpost](https://x.com/Marktechpost))
+### Case 104: [Fluxo de trabalho da API GLM compatível com OpenAI](https://x.com/Marktechpost/status/2069308807570915500) (by [@Marktechpost](https://x.com/Marktechpost))
 
 **Use este caso para construir em Python um cliente GLM-5.2 compatível com OpenAI com controle de raciocínio, tool calling, recuperação de contexto longo e acompanhamento de custos.**
 
 Marktechpost compartilhou um tutorial junto com um notebook de código vinculado para envolver o GLM-5.2 em um único cliente compatível com OpenAI. O post diz que o workflow cobre controle de thinking effort (`off`/`high`/`max`), canais em streaming de raciocínio versus resposta, tool calling com um agente de várias etapas, saída JSON estruturada, recuperação de contexto longo e acompanhamento de custo por tokens.
 
-Tipo: Tutorial | Data: 2026-06-23
+Type: Tutorial | Date: 2026-06-23
 
 ---
 
 <a id="case-105"></a>
-### Case 105: [Perplexity Agent API Search Sandbox](https://x.com/perplexitydevs/status/2069252848647606584) (por [@perplexitydevs](https://x.com/perplexitydevs))
+### Case 105: [Sandbox de pesquisa da API do agente Perplexity](https://x.com/perplexitydevs/status/2069252848647606584) (by [@perplexitydevs](https://x.com/perplexitydevs))
 
 **Use este caso para conectar o GLM-5.2 à Agent API da Perplexity quando você quiser agentes sandboxados com busca por trás de uma única chamada API.**
 
 Perplexity Devs anunciou o GLM-5.2 na Agent API e o descreveu como uma boa opção para workflows de coding e agentes de longo horizonte. O post destaca especificamente Search as Code, uma interface compatível com OpenAI e preços first-party sem margem extra.
 
-Tipo: Integração | Data: 2026-06-23
+Type: Integration | Date: 2026-06-23
 
 ---
 
 <a id="case-109"></a>
-### Case 109: [Baseten 280 TPS GLM API](https://x.com/aqaderb/status/2069220126272999501) (por [@aqaderb](https://x.com/aqaderb))
+### Case 109: [Baseado 280 TPS GLM API](https://x.com/aqaderb/status/2069220126272999501) (by [@aqaderb](https://x.com/aqaderb))
 
 **Use este caso quando a latência do provedor importa: a Baseten afirma um serving de GLM-5.2 muito rápido com time-to-first-token abaixo de um segundo e alto throughput de decodificação.**
 
 aqaderb anunciou a API GLM-5.2 da Baseten com 280 tokens por segundo e menos de 0.8 segundo de TTFT. O post atribui o resultado a PD disaggregation, speculative decoding com multi-token prediction heads, routing consciente de KV-cache e outras otimizações de serving, com link para uma nota de engenharia.
 
-Tipo: Integração | Data: 2026-06-23
+Type: Integration | Date: 2026-06-23
 
 ---
 
 <a id="case-128"></a>
-### Case 128: [Cloudflare Workers AI OpenCode Setup](https://x.com/RoundtableSpace/status/2070820686243959276) (por [@RoundtableSpace](https://x.com/RoundtableSpace))
+### Case 128: [Configuração do Cloudflare Workers AI OpenCode](https://x.com/RoundtableSpace/status/2070820686243959276) (by [@RoundtableSpace](https://x.com/RoundtableSpace))
 
 **Use este caso para rodar o GLM-5.2 via Cloudflare Workers AI quando você quiser uma rota gratuita compatível com OpenAI para agentes de código sem provisionar seu próprio host de modelo.**
 
 RoundtableSpace diz que você pode criar uma conta gratuita na Cloudflare, copiar seu Account ID, criar um API token, adicionar a Cloudflare como provider no OpenCode e apontar para o modelo `@cf/zai-org/glm-5.2`. O post também diz que a mesma rota funciona em OpenCode, Cursor, Aider, Hermes Agent, Claude Code e outras ferramentas compatíveis com OpenAI, tornando isso um atalho prático de acesso hospedado para agentes de código.
 
-Tipo: Tutorial | Data: 2026-06-27
+Type: Tutorial | Date: 2026-06-27
 
 ---
 
 <a id="case-129"></a>
-### Case 129: [Puter.js Zero-Setup Browser Client](https://x.com/FareaNFts/status/2070848321212792945) (por [@FareaNFts](https://x.com/FareaNFts))
+### Case 129: [Cliente de navegador de configuração zero Puter.js](https://x.com/FareaNFts/status/2070848321212792945) (by [@FareaNFts](https://x.com/FareaNFts))
 
 **Use este caso para testar o GLM-5.2 em um protótipo só de navegador antes de mexer em API keys, cobrança ou configuração de backend.**
 
 FareaNFts diz que o Puter.js expõe a linha GLM no lado do cliente por meio de uma única tag de script CDN, com `z-ai/glm-5.2` chamável diretamente no código do navegador e sem configuração de servidor ou cobrança do lado do desenvolvedor. O post o posiciona como uma forma rápida de prototipar ferramentas pessoais, apps de vibe coding e agentes leves, ao mesmo tempo em que destaca o trade-off: o Puter usa um modelo de pagamento pelo usuário no navegador e não foi feito para tráfego de produção de alto volume.
 
-Tipo: Tutorial | Data: 2026-06-27
+Type: Tutorial | Date: 2026-06-27
 
 ---
 
 <a id="case-130"></a>
-### Case 130: [SiliconFlow Unified Endpoint Access](https://x.com/FareaNFts/status/2070900056736379288) (por [@FareaNFts](https://x.com/FareaNFts))
+### Case 130: [Acesso unificado ao endpoint SiliconFlow](https://x.com/FareaNFts/status/2070900056736379288) (by [@FareaNFts](https://x.com/FareaNFts))
 
 **Use este caso para colocar o GLM-5.2 dentro de uma stack multimodelo mais ampla, porque o post descreve um único endpoint compatível com OpenAI da SiliconFlow cobrindo modelos chineses e ocidentais com crédito grátis de teste.**
 
 FareaNFts diz que a SiliconFlow oferece acesso unificado por API ao GLM-5.2 junto com DeepSeek, Qwen, Llama 4, Hunyuan, Mistral, Yi, Gemma, Phi e mais de 200 modelos por meio de um único endpoint compatível com OpenAI. O post também afirma que o cadastro dá 1 dólar de crédito grátis sem cartão, que alguns modelos continuam gratuitos, que há limites de gasto e que a chave pode ser usada no Cursor, Claude Code, Aider e ferramentas semelhantes.
 
-Tipo: Integration | Data: 2026-06-27
+Type: Integration | Date: 2026-06-27
 
 ---
 
 <a id="case-124"></a>
-### Case 124: [HuggingChat Website Builder To HF Space](https://x.com/victormustar/status/2070190742991994967) (por [@victormustar](https://x.com/victormustar))
+### Case 124: [Construtor de sites HuggingChat para espaço HF](https://x.com/victormustar/status/2070190742991994967) (by [@victormustar](https://x.com/victormustar))
 
 **Use este caso para testar o GLM-5.2 em um fluxo quase gratuito de site pessoal, da pesquisa no HuggingChat até o deploy estático no Hugging Face Spaces.**
 
 victormustar diz que uma conta do Hugging Face oferece créditos gratuitos suficientes para pedir ao GLM-5.2 no HuggingChat que construa um site, com o Exa usado para pesquisar informações sobre o usuário. O mesmo post acrescenta que o site resultante pode ser publicado gratuitamente como um Hugging Face Space estático, o que cria um caminho concreto e de baixo custo para experimentos com sites pessoais.
 
-Tipo: Tutorial | Data: 2026-06-25
+Type: Tutorial | Date: 2026-06-25
 
 ---
 
 <a id="case-125"></a>
-### Case 125: [DigitalOcean Inference Engine Availability](https://x.com/digitalocean/status/2070177703911719301) (por [@digitalocean](https://x.com/digitalocean))
+### Case 125: [Disponibilidade do mecanismo de inferência DigitalOcean](https://x.com/digitalocean/status/2070177703911719301) (by [@digitalocean](https://x.com/digitalocean))
 
 **Use este caso para rotear o GLM-5.2 por infraestrutura gerenciada quando você quiser acesso oficial de provedor sem hospedar por conta própria o modelo de contexto 1M.**
 
 A DigitalOcean anunciou GLM-5.1 e GLM-5.2 no seu Inference Engine, posicionando o modelo para workflows de coding agentic de até oito horas com uma janela de contexto de 1M tokens. O post também apresenta essa rota como integração direta ao stack existente com preços por uso e infraestrutura totalmente gerenciada.
 
-Tipo: Integration | Data: 2026-06-25
+Type: Integration | Date: 2026-06-25
 
 ---
 
 <a id="case-115"></a>
-### Case 115: [Command Code Fast 120-250 Tok/S Tier](https://x.com/CommandCodeAI/status/2069891896881857016) (por [@CommandCodeAI](https://x.com/CommandCodeAI))
+### Case 115: [Código de Comando Rápido 120-250 Tok/S Tier](https://x.com/CommandCodeAI/status/2069891896881857016) (by [@CommandCodeAI](https://x.com/CommandCodeAI))
 
 **Use este caso para acessar uma variante mais rápida do GLM-5.2 no Command Code quando a velocidade de programação de longo horizonte importar mais do que apenas o menor preço de entrada.**
 
 O Command Code anunciou o GLM-5.2 Fast como uma variante de alto desempenho que mantém o posicionamento frontier para programação enquanto eleva a velocidade para 120-250 tokens por segundo. O post também diz que a variante preserva 1M de contexto, uso de ferramentas e raciocínio, e que está disponível a partir do plano Go de US$ 1 com US$ 10 em créditos de uso e acima.
 
-Tipo: Integration | Data: 2026-06-24
+Type: Integration | Date: 2026-06-24
 
 ---
 
 <a id="case-116"></a>
-### Case 116: [Vercel AI Gateway Fast GLM-5.2 API](https://x.com/wafer_ai/status/2069869501190152528) (por [@wafer_ai](https://x.com/wafer_ai))
+### Case 116: [API Vercel AI Gateway rápida GLM-5.2](https://x.com/wafer_ai/status/2069869501190152528) (by [@wafer_ai](https://x.com/wafer_ai))
 
 **Use este caso para rotear o GLM-5.2 Fast pelo Vercel AI Gateway quando você precisar de velocidade sem servidor mais preços explícitos por token.**
 
 wafer_ai diz que o GLM-5.2 Fast está ao vivo no Vercel AI Gateway com 150-250 tokens por segundo, janela de contexto de 1M tokens e preços listados de US$ 3.00 de entrada, US$ 10.25 de saída e US$ 0.50 de cache por 1M tokens. Isso o torna uma nota concreta de acesso hospedado para equipes que priorizam desempenho e preços previsíveis da passarela.
 
-Tipo: Integration | Data: 2026-06-24
+Type: Integration | Date: 2026-06-24
 
 ---
 
 <a id="case-95"></a>
-### Case 95: [Claude Code Through Baseten](https://x.com/thealexker/status/2069163621469335757) (por [@thealexker](https://x.com/thealexker))
+### Case 95: [Código Claude através de Baseten](https://x.com/thealexker/status/2069163621469335757) (by [@thealexker](https://x.com/thealexker))
 
 **Use este caso para rodar GLM-5.2 dentro do Claude Code por meio de uma chave da Baseten, uma base URL personalizada e remapeamento de modelo em `~/.claude/settings.json`.**
 
 O tutorial mostra como instalar o Claude Code, criar uma conta na Baseten, obter uma API key e editar `~/.claude/settings.json` para que os três tiers de modelos Claude apontem para `zai-org/GLM-5.2` por meio de variáveis de ambiente Anthropic personalizadas. É um padrão concreto de configuração drop-in para usar GLM-5.2 no cliente Claude Code.
 
-Tipo: Tutorial | Data: 2026-06-22
+Type: Tutorial | Date: 2026-06-22
 
 ---
 
 <a id="case-96"></a>
-### Case 96: [Deepsec Pi Agent Default](https://x.com/cramforce/status/2069057402524082622) (por [@cramforce](https://x.com/cramforce))
+### Case 96: [Padrão do agente Deepsec Pi](https://x.com/cramforce/status/2069057402524082622) (by [@cramforce](https://x.com/cramforce))
 
 **Use este caso para testar o GLM-5.2 em um harness de segurança, em que o `deepsec` o tornou o modelo padrão do Pi agent e relatou resultados competitivos nas avaliações.**
 
 O post anuncia suporte do `deepsec` ao Pi agent de `@badlogicgames` com GLM-5.2 como modelo padrão e traz um comando executável, `pnpm deepsec process --agent pi`. Também diz que o autor rodou os evals do Deepsec e encontrou um resultado competitivo em relação a outros modelos frontier, tornando esta uma superfície concreta de integração voltada para segurança.
 
-Tipo: Integração | Data: 2026-06-22
+Type: Integration | Date: 2026-06-22
 
 ---
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Custo, preços e implantação local
 <a id="case-191"></a>
-### Case 191: [Hermes-Built LiteLLM Local Lab](https://x.com/ivanfioravanti/status/2074609005272375329) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 191: [Laboratório local LiteLLM construído pela Hermes](https://x.com/ivanfioravanti/status/2074609005272375329) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **Use este caso para iniciar um laboratório local de inferência com o GLM-5.2 como agente de código, porque a fonte diz que Hermes Agent mais GLM-5.2 montaram LiteLLM, Postgres, Prometheus e Grafana em torno de uma configuração com M3 Ultra.**
 
 O post diz que o LiteLLM já estava a correr num M3 Ultra e expunha como rota inicial de teste um modelo Qwen apoiado por DGX Spark. O ponto mais útil para este repo é que o autor atribui ao Hermes Agent mais GLM-5.2 a configuração de LiteLLM, Postgres, Prometheus e Grafana. Isso transforma o caso num exemplo concreto de integração de laboratório local para routing, persistência e observability, e não apenas num elogio vago.
 
-Tipo: Integração | Data: 2026-07-07
+Type: Integration | Date: 2026-07-07
 
 ---
 <a id="case-187"></a>
-### Case 187: [Dual M5 Max Offline Droneship Sim](https://x.com/XavierLocalAI/status/2073938465121833452) (por [@XavierLocalAI](https://x.com/XavierLocalAI))
+### Case 187: [Simulador de drone off-line Dual M5 Max](https://x.com/XavierLocalAI/status/2073938465121833452) (by [@XavierLocalAI](https://x.com/XavierLocalAI))
 
 **Use este caso para estimar o que um agente GLM-5.2 em Apple Silicon totalmente offline consegue fazer, porque XavierLocalAI relata uma instalação 753B escrevendo um simulador de pouso em droneship a 26 tok/s em duas máquinas M5 Max de 128 GB.**
 
 Segundo o post, a configuração usa uma build GLM-5.2 753B, uma quant Unsloth dynamic IQ2_M de cerca de 222 GB em disco, duas máquinas M5 Max ligadas por Thunderbolt 5 para aproximadamente 256 GB de memória combinada e llama.cpp RPC. O resultado não é só throughput: o modelo estava codando ao vivo, totalmente offline, um simulador de pouso de Falcon 9 em droneship. Isso faz deste um demo concreto de deployment local e agente privacy-first.
 
-Tipo: Demonstração | Data: 2026-07-06
+Type: Demo | Date: 2026-07-06
 
 ---
 <a id="case-186"></a>
-### Case 186: [5x DGX Spark Production Harness](https://x.com/thatcofffeeguy/status/2074245620207058981) (por [@thatcofffeeguy](https://x.com/thatcofffeeguy))
+### Case 186: [5x arnês de produção de faísca DGX](https://x.com/thatcofffeeguy/status/2074245620207058981) (by [@thatcofffeeguy](https://x.com/thatcofffeeguy))
 
 **Use este caso para avaliar se uma configuração DGX Spark de cinco nós já basta para trabalho produtivo com GLM-5.2, porque thatcofffeeguy relata cerca de 13,9 tok/s em stream único com 400K de contexto e 19,9 tok/s agregados em três lanes num harness ao vivo.**
 
 O post diz que esta foi a melhor configuração após vários experimentos e que ela entrou em produção no mesmo dia, sem pruning. A carga descrita também é mais concreta do que um teste de laboratório puro: o harness já estava sendo usado para gerar conteúdo em cerca de 30 minutos e revisar dados diários de ERP. Isso faz do caso um checkpoint prático de deployment, e não apenas um post de hardware.
 
-Tipo: Demonstração | Data: 2026-07-06
+Type: Demo | Date: 2026-07-06
 
 ---
 <a id="case-183"></a>
-### Case 183: [M3 Ultra ds4-eval Q4 Checkpoint](https://x.com/ivanfioravanti/status/2073742792044446194) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 183: [Ponto de verificação M3 Ultra ds4-eval Q4](https://x.com/ivanfioravanti/status/2073742792044446194) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **Use este caso para benchmarkear uma instalação GLM-5.2 em Apple Silicon de máquina única com ds4-eval, porque ivanfioravanti relata um run q4 em torno de 16 tok/s, com 76 de 92 casos aprovados em 8 horas e 53 minutos numa máquina M3 Ultra de 512 GB.**
 
 ivanfioravanti diz que o run q4 de ds4-eval usou uma máquina M3 Ultra de 512 GB e que o branch mais antigo será revisitado com batch inference. Isso dá ao repo um complemento mais forte para o caso M3 anterior baseado só em vídeo: a thread acrescenta contagem de passes e runtime, não apenas um clipe de throughput.
 
-Tipo: Avaliação | Data: 2026-07-05
+Type: Evaluation | Date: 2026-07-05
 
 ---
 <a id="case-182"></a>
-### Case 182: [4x RTX PRO 6000 Build Guide](https://x.com/QingQ77/status/2073589933567094981) (por [@QingQ77](https://x.com/QingQ77))
+### Case 182: [Guia de construção 4x RTX PRO 6000](https://x.com/QingQ77/status/2073589933567094981) (by [@QingQ77](https://x.com/QingQ77))
 
 **Use este caso para dimensionar uma build local séria de GLM-5.2-594B, porque QingQ77 compartilha um guia completo de hardware e operação baseado em quatro RTX PRO 6000, APIs expostas via opencode e uma VM sandbox para trabalho com agentes.**
 
 A guia descreve um caminho de orçamento mais alto com quatro RTX PRO 6000 e 384 GB de VRAM para GLM-5.2-594B, além de peças EPYC e DDR4 usadas. Também cobre switching PCIe Gen4, bifurcation e ASPM na BIOS, iommu=off, limites de 350W em circuitos de 110V, contêineres Docker por modelo expostos via opencode e uma VM sandbox para que agentes não baguncem o host.
 
-Tipo: Tutorial | Data: 2026-07-05
+Type: Tutorial | Date: 2026-07-05
 
 ---
 <a id="case-181"></a>
-### Case 181: [4x DGX Spark QuantTrio Run](https://x.com/Tech2Wild/status/2073637530960826787) (por [@Tech2Wild](https://x.com/Tech2Wild))
+### Case 181: [Execução do QuantTrio em quatro DGX Spark](https://x.com/Tech2Wild/status/2073637530960826787) (by [@Tech2Wild](https://x.com/Tech2Wild))
 
 **Use este caso para estimar o que um cluster DGX Spark de quatro nós consegue fazer com GLM-5.2 QuantTrio, porque Tech2Wild relata 200K de contexto, 30 tok/s em stream único e 60,5 tok/s de throughput agregado com seis solicitações concorrentes.**
 
 Tech2Wild diz que a execução final manteve intactos todos os 256 especialistas e usou decodificação especulativa MTP com k=4. Ao contrário de threads anteriores de planejamento para Spark, aqui há um resultado concreto de inferência local concluída: 30 tok/s em um stream, 60,5 tok/s agregados com seis requisições simultâneas e alvo de 200K de contexto no cluster.
 
-Tipo: Demonstração | Data: 2026-07-05
+Type: Demo | Date: 2026-07-05
 
 ---
 <a id="case-177"></a>
-### Case 177: [Single M3 Ultra 4-Bit Video Run](https://x.com/ivanfioravanti/status/2073502277449486460) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 177: [Execução de vídeo M3 Ultra de 4 bits única](https://x.com/ivanfioravanti/status/2073502277449486460) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **Use este caso para estimar a viabilidade do GLM-5.2 em uma única máquina Apple Silicon, porque ivanfioravanti mostra uma execução 4-bit em um M3 Ultra 512GB a cerca de 16 tok/s e a compara com um vídeo de ds4-eval em q2 perto de 17 tok/s.**
 
 ivanfioravanti publicou um vídeo do GLM 5.2 4-bit rodando em uma única máquina M3 Ultra 512GB a cerca de 16 tokens por segundo, observando também que o vídeo de ds4-eval usa uma build q2 em torno de 17 tokens por segundo. O autor apresenta isso como um teste local ainda em andamento, mas mesmo assim o post fornece um checkpoint concreto de throughput em caixa única no Apple Silicon para complementar os casos já existentes do repo sobre implantações multi-M3 e oMLX.
 
-Tipo: Demonstração | Data: 2026-07-04
+Type: Demo | Date: 2026-07-04
 
 <a id="case-173"></a>
-### Case 173: [AMD MI355X 2626 Tok/s Node Serve](https://x.com/wafer_ai/status/2073155792182907085) (por [@wafer_ai](https://x.com/wafer_ai))
+### Case 173: [Serviço de nó AMD MI355X 2626 Tok/s](https://x.com/wafer_ai/status/2073155792182907085) (by [@wafer_ai](https://x.com/wafer_ai))
 
 **Use este caso para dimensionar inferência GLM-5.2 de alta vazão em hardware AMD, porque a wafer_ai diz que o MI355X alcançou 2626 tok/s por nó e 213 tok/s em fluxo único com custo mais de 2 vezes menor que o Blackwell.**
 
 A wafer_ai diz que engenheiros serviram GLM 5.2 em AMD MI355X a 2626 tokens por segundo por nó e 213 tokens por segundo em modo single-stream. O post enquadra isso como cerca de 80 por cento do throughput do B200 com custo mais de 2 vezes menor, tornando-o uma referência concreta de implantação para equipes que avaliam economia de inferência open-weight além de uma pilha só com NVIDIA.
 
-Tipo: Demo | Data: 2026-07-03
+Type: Demo | Date: 2026-07-03
 
 ---
 
 <a id="case-172"></a>
-### Case 172: [Vercel Gateway 287 Tok/s Serverless](https://x.com/wafer_ai/status/2072861749104288074) (por [@wafer_ai](https://x.com/wafer_ai))
+### Case 172: [Vercel Gateway 287 Tok/s sem servidor](https://x.com/wafer_ai/status/2072861749104288074) (by [@wafer_ai](https://x.com/wafer_ai))
 
 **Use este caso para estimar a latência real do GLM-5.2 para usuários por meio de um gateway serverless, porque a wafer_ai diz que sua rota GLM 5.2 Fast atingiu 287 tokens por segundo no Vercel AI Gateway em vez de apenas em um harness de benchmark.**
 
 A wafer_ai diz que sua rota GLM 5.2 Fast chegou a 287 tokens por segundo no Vercel AI Gateway e apresenta isso como o número que usuários finais realmente veriam em uma configuração serverless. Isso o transforma em uma ponte útil entre benchmarks brutos de inferência e acesso hospedado mais próximo da produção, em que o overhead do gateway importa.
 
-Tipo: Demo | Data: 2026-07-03
+Type: Demo | Date: 2026-07-03
 
 ---
 
 <a id="case-171"></a>
-### Case 171: [One-Click RTX PRO 6000 Deployment](https://x.com/XciD_/status/2073035324272328733) (por [@XciD_](https://x.com/XciD_))
+### Case 171: [Implantação RTX PRO 6000 com um clique](https://x.com/XciD_/status/2073035324272328733) (by [@XciD_](https://x.com/XciD_))
 
 **Use este caso para estimar o piso de uma implantação hospedada e isolada do GLM-5.2, porque XciD_ diz que o GLM-5.2-NVFP4 agora pode ser implantado com um clique no Inference Endpoints em 8x RTX PRO 6000 por 22 dólares por hora.**
 
 XciD_ diz que o GLM-5.2-NVFP4, a variante MoE de 753B, está disponível como implantação de um clique no Inference Endpoints usando uma instância dedicada de 8x RTX PRO 6000. O post destaca preço previsível de 22 dólares por hora, zero setup e isolamento total, funcionando como referência concreta para equipes que não querem operar a pilha por conta própria.
 
-Tipo: Integração | Data: 2026-07-03
+Type: Integration | Date: 2026-07-03
 
 ---
 
 <a id="case-166"></a>
-### Case 166: [Full 744B On 5x ASUS GX10s](https://x.com/thatcofffeeguy/status/2072525885077434743) (por [@thatcofffeeguy](https://x.com/thatcofffeeguy))
+### Case 166: [744B completo em 5x ASUS GX10s](https://x.com/thatcofffeeguy/status/2072525885077434743) (by [@thatcofffeeguy](https://x.com/thatcofffeeguy))
 
 **Use este caso para dimensionar uma implantação extrema de GLM-5.2 em home lab, porque o autor diz que o modelo completo de 744B já roda com full context em 5 caixas ASUS GX10 e já está ligado a um causal harness para workloads reais.**
 
 thatcofffeeguy diz que o GLM-5.2 completo de 744B agora roda em cinco sistemas ASUS GX10 com full context, com token rates melhores do que o esperado e a stack já ligada a um causal harness. O post ainda não publica números exatos de throughput, mas continua sendo uma prova pública concreta de que esse tipo de cluster local pode hospedar o modelo completo.
 
-Tipo: Demo | Data: 2026-07-02
+Type: Demo | Date: 2026-07-02
 
 ---
 
 <a id="case-164"></a>
-### Case 164: [Agent Route Swap In China Stack](https://x.com/0xluffy_eth/status/2072548580183900430) (por [@0xluffy_eth](https://x.com/0xluffy_eth))
+### Case 164: [Troca de rota de agente na pilha da China](https://x.com/0xluffy_eth/status/2072548580183900430) (by [@0xluffy_eth](https://x.com/0xluffy_eth))
 
 **Use este caso para rotear o GLM-5.2 para a camada agent de uma stack mista quando a pressão de custo importa mais do que a qualidade máxima, porque o autor relata que trocar Sonnet por GLM-5.2 reduziu em 5x o custo de entrada desse slot com uma perda de qualidade de cerca de 3 por cento dentro de uma migração de 30 dias.**
 
 A thread descreve uma mudança de roteamento em seis partes entre raciocínio, geração de código, chamadas agent, processamento em lote, imagem e vídeo. Na camada agent, o autor substituiu Sonnet por GLM 5.2 e relata queda de cerca de 3 por cento no desempenho com input 5x mais barato. O resumo de 30 dias diz que o custo operacional total de IA caiu 87 por cento enquanto a receita ficou estável.
 
-Tipo: Avaliação | Data: 2026-07-02
+Type: Evaluation | Date: 2026-07-02
 
 ---
 
 <a id="case-156"></a>
-### Case 156: [744B Local Hardware Floor](https://x.com/devjuninho/status/2072151237840007399) (por [@devjuninho](https://x.com/devjuninho))
+### Case 156: [Piso de Hardware Local 744B](https://x.com/devjuninho/status/2072151237840007399) (by [@devjuninho](https://x.com/devjuninho))
 
 **Use este caso para dimensionar com realismo os planos locais do GLM-5.2, porque a fonte diz que até builds quantizados ainda ficam em torno de 239 GB em 2 bits e 466 GB em 4 bits, o que torna 256 GB ou mais de RAM ou VRAM um piso prático.**
 
 devjuninho rebate a ideia de que open weights signifique automaticamente uso local de consumo. A thread diz que o GLM-5.2 tem cerca de 744B parâmetros com uns 40B ativos, estima algo em torno de 239 GB em 2 bits e 466 GB em 4 bits, e sustenta que execuções locais úteis exigem memória de classe servidor, folga em SSD e paciência, não um PC gamer comum.
 
-Tipo: Limite | Data: 2026-07-01
+Type: Limit | Date: 2026-07-01
 
 ---
 
 
 <a id="case-151"></a>
-### Case 151: [Local NVFP4 Rust Port At 140 Tok/s](https://x.com/mov_axbx/status/2071839859723882771) (por [@mov_axbx](https://x.com/mov_axbx))
+### Case 151: [Porta de ferrugem NVFP4 local a 140 Tok/s](https://x.com/mov_axbx/status/2071839859723882771) (by [@mov_axbx](https://x.com/mov_axbx))
 
 **Use este caso para medir o que uma implantação local ajustada de GLM-5.2 consegue fazer em trabalho real de coding, porque o autor relata NVFP4 a 140 tok/s e uma migração completa de Python para Rust concluída em minutos.**
 
 mov_axbx relata uma configuração local de GLM-5.2 NVFP4 em OMP chegando a cerca de 140 tokens por segundo. No mesmo post, o modelo porta um serviço de localização de satélites em Python para Rust em cerca de 10 minutos e ainda monta uma demo web poucos minutos depois.
 
-Tipo: Avaliação | Data: 2026-06-30
+Type: Evaluation | Date: 2026-06-30
 
 ---
 
 <a id="case-140"></a>
-### Case 140: [B300 x2 Agent-Led Dual-Stack Bring-Up](https://x.com/TheValueist/status/2071261052080148607) (por [@TheValueist](https://x.com/TheValueist))
+### Case 140: [Atualização de pilha dupla liderada por agente B300 x2](https://x.com/TheValueist/status/2071261052080148607) (by [@TheValueist](https://x.com/TheValueist))
 
 **Use este caso para dimensionar uma implantação self-hosted séria de GLM-5.2, porque a thread mostra analistas levantando inferência NVFP4 em B300s bare-metal nas stacks vLLM e SGLang em menos de um dia.**
 
 TheValueist diz que um workflow de analyst-agent implantou GLM 5.2 NVFP4 em um cluster bare-metal NVIDIA B300 x2 nas stacks vLLM e SGLang, e depois executou uma suíte completa de benchmarks em cada stack em menos de 24 horas. A thread também diz que o fator limitante era a capacidade de HBM, e não o compute bruto, com a DRAM se tornando relevante quando o KV cache transborda, o que torna o post uma nota operacional concreta para equipes avaliando economia de inferência local e gargalos de hardware.
 
-Tipo: Evaluation | Data: 2026-06-28
+Type: Evaluation | Date: 2026-06-28
 
 ---
 
 <a id="case-139"></a>
-### Case 139: [oMLX M3 Ultra Prefill Speedup](https://x.com/jundotkim/status/2071287585297887510) (por [@jundotkim](https://x.com/jundotkim))
+### Case 139: [Aceleração de pré-preenchimento oMLX M3 Ultra](https://x.com/jundotkim/status/2071287585297887510) (by [@jundotkim](https://x.com/jundotkim))
 
 **Use este caso para reavaliar a viabilidade local em Apple silicon após trabalhos recentes de kernel, porque a velocidade de prefill reportada do GLM-5.2 em um M3 Ultra 512GB quase dobrou sem colapso óbvio de qualidade em testes rápidos.**
 
 jundotkim diz que o oMLX 0.4.5.dev1 adiciona kernels MLX customizados que elevam o prefill de GLM-5.2-oQ4 32k de 87.7 tok/s para 174.4 tok/s em uma máquina M3 Ultra 512GB, um salto de 98.9%. O mesmo post diz que o caminho ainda é experimental, mas checagens do tipo needle-in-a-haystack e testes de coding no estilo Claude Code não mostraram regressões óbvias, tornando isto uma atualização prática de inferência local e não apenas uma nota de release.
 
-Tipo: Evaluation | Data: 2026-06-28
+Type: Evaluation | Date: 2026-06-28
 
 ---
 
 <a id="case-138"></a>
-### Case 138: [20M Token Signup Credit Burst](https://x.com/Bitbro4crypto/status/2071150218872283262) (por [@Bitbro4crypto](https://x.com/Bitbro4crypto))
+### Case 138: [Explosão de crédito de inscrição de token de 20 milhões](https://x.com/Bitbro4crypto/status/2071150218872283262) (by [@Bitbro4crypto](https://x.com/Bitbro4crypto))
 
 **Use este caso para avaliar se créditos de cadastro direto bastam para um teste real de GLM-5.2, porque o post afirma que novas contas recebem 20M tokens grátis, sem cartão, e acesso totalmente compatível com OpenAI.**
 
 Bitbro4crypto diz que o caminho atual de cadastro do GLM 5.2 dá 20 milhões de tokens grátis, 120 créditos de imagem e vídeo, modos de pensamento high e max, uma janela de contexto de 1M e uma API compatível com OpenAI que entra diretamente em ferramentas como Cursor ou Claude Code sem assinatura. Trate isso como um sinal concreto de acesso e preço para testes de curto prazo, assumindo ao mesmo tempo que a cota promocional pode mudar.
 
-Tipo: Integration | Data: 2026-06-28
+Type: Integration | Date: 2026-06-28
 
 ---
 
 <a id="case-131"></a>
-### Case 131: [4x DGX Spark Local GLM Runbook](https://x.com/TraffAlex/status/2071020631072616698) (por [@TraffAlex](https://x.com/TraffAlex))
+### Case 131: [4x runbook de GLM local DGX Spark](https://x.com/TraffAlex/status/2071020631072616698) (by [@TraffAlex](https://x.com/TraffAlex))
 
 **Use este caso para medir se um cluster DGX Spark é uma rota local realista para o GLM-5.2, porque o guia reunido conecta custo de hardware, topologia de cluster e comandos de vLLM a um alvo GLM de contexto 1M.**
 
 TraffAlex compilou material validado pela comunidade e material oficial da NVIDIA em um guia de DGX Spark que coloca cada unidade em US$ 4.699, trata um cluster de 2x Spark como o ponto ideal para outros modelos e diz que 4x Sparks podem rodar GLM 5.2 NVFP4 a cerca de 20 tokens por segundo com contexto de 1M tokens. O mesmo post inclui configuração de rede CX7, SSH sem senha, checagens de NCCL e comandos de exemplo do Docker com vLLM, tornando isso um playbook útil de implantação local em vez de uma opinião genérica sobre hardware.
 
-Tipo: Tutorial | Data: 2026-06-27
+Type: Tutorial | Date: 2026-06-27
 
 ---
 
 <a id="case-43"></a>
-### Case 43: [Output Token Cost Comparison](https://x.com/Hesamation/status/2066999955638673891) (por [@Hesamation](https://x.com/Hesamation))
+### Case 43: [Comparação de custos de token de saída](https://x.com/Hesamation/status/2066999955638673891) (by [@Hesamation](https://x.com/Hesamation))
 
 **Use este caso para comparar a economia do token de saída GLM-5.2 com os modelos estilo Opus, Fable e GPT-5.5.**
 
 A postagem compara os preços dos tokens de produção de 1 milhão e argumenta que o GLM-5.2 pode ser significativamente mais barato do que os modelos de fronteira fechada. Trate os números como uma comparação de preços vinculada à fonte que deve ser verificada novamente antes de fazer o orçamento.
 
-Tipo: Avaliação | Data: 2026-06-16
+Type: Evaluation | Date: 2026-06-16
 
 ---
 
 <a id="case-44"></a>
-### Case 44: [Local Near-Frontier Hardware ROI](https://x.com/Jeyffre/status/2067132023576354818) (por [@Jeyffre](https://x.com/Jeyffre))
+### Case 44: [ROI de hardware local próximo da fronteira](https://x.com/Jeyffre/status/2067132023576354818) (by [@Jeyffre](https://x.com/Jeyffre))
 
 **Use este caso para raciocinar se os modelos auto-hospedados do tipo GLM-5.2 podem compensar os custos de hardware para usuários pesados ​​de agentes.**
 
 O autor estima que várias máquinas da classe DGX Spark poderiam executar um modelo da classe 700B e compara uma compra de hardware de aproximadamente US$ 20 mil com os altos gastos mensais de API para cargas de trabalho de codificação e agente.
 
-Tipo: Avaliação | Data: 2026-06-17
+Type: Evaluation | Date: 2026-06-17
 
 ---
 
 <a id="case-45"></a>
-### Case 45: [MLX On Two Mac Studios](https://x.com/pcuenq/status/2066967665726337219) (por [@pcuenq](https://x.com/pcuenq))
+### Case 45: [MLX em dois estúdios Mac](https://x.com/pcuenq/status/2066967665726337219) (by [@pcuenq](https://x.com/pcuenq))
 
 **Use este caso para explorar execuções locais do GLM-5.2 em hardware Apple e configurações orientadas a MLX.**
 
 A postagem diz que o GLM-5.2 tinha acabado de ser lançado e já estava rodando com MLX em duas máquinas Mac Studio M3 Ultra, enquadrando-o como comparável aos recentes modelos fechados com pesos abertos.
 
-Tipo: Demonstração | Data: 2026-06-16
+Type: Demo | Date: 2026-06-16
 
 ---
 
 <a id="case-46"></a>
-### Case 46: [H100 Monthly Local Deployment Claim](https://x.com/ai_xiaomu/status/2066181367340429446) (por [@ai_xiaomu](https://x.com/ai_xiaomu))
+### Case 46: [Solicitação mensal de implantação local H100](https://x.com/ai_xiaomu/status/2066181367340429446) (by [@ai_xiaomu](https://x.com/ai_xiaomu))
 
 **Use este caso como um prompt de comparação de custos para verificar as suposições de implantação local antes de escolher entre assinatura e auto-hospedagem.**
 
 A postagem chinesa compara os números SWE-Bench reivindicados, o uso comercial de código aberto e um custo estimado de implantação local do H100 com uma assinatura do Claude Pro. Os números devem ser revalidados para os actuais preços de infra-estruturas.
 
-Tipo: Avaliação | Data: 2026-06-14
+Type: Evaluation | Date: 2026-06-14
 
 ---
 
 <a id="case-47"></a>
-### Case 47: [Daily Credits And Claude Replacement Claim](https://x.com/RoundtableSpace/status/2067076011770986715) (por [@RoundtableSpace](https://x.com/RoundtableSpace))
+### Case 47: [Créditos diários e reivindicação de substituição de Claude](https://x.com/RoundtableSpace/status/2067076011770986715) (by [@RoundtableSpace](https://x.com/RoundtableSpace))
 
 **Use este caso para inspecionar a narrativa de crédito gratuito e agente de substituição em torno do GLM-5.2, enquanto separa as reivindicações de marketing do ajuste verificado da carga de trabalho.**
 
 A postagem enquadra o GLM-5.2 como um concorrente de Claude de baixo custo com créditos diários, controle de código aberto, auto-hospedagem e valor mais forte para longas sessões de codificação.
 
-Tipo: Avaliação | Data: 2026-06-17
+Type: Evaluation | Date: 2026-06-17
 
 ---
 
 <a id="case-48"></a>
-### Case 48: [Free ZCode Token Window](https://x.com/0xSero/status/2066772591319077208) (por [@0xSero](https://x.com/0xSero))
+### Case 48: [Janela de token ZCode grátis](https://x.com/0xSero/status/2066772591319077208) (by [@0xSero](https://x.com/0xSero))
 
 **Use este caso para testar o GLM-5.2 por meio de um subsídio ZCode gratuito antes de se comprometer com um provedor pago ou implantação local.**
 
 O autor descreve a disponibilidade do GLM-5.2 por meio do ZCode com uma grande quantidade de tokens diários gratuitos e observa o possível uso para configurar o vLLM Studio ou hospedagem local.
 
-Tipo: Integração | Data: 2026-06-16
+Type: Integration | Date: 2026-06-16
 
 ---
 
 <a id="case-49"></a>
-### Case 49: [ZenMux Free Week Offer](https://x.com/JZiyue_/status/2067114018079412723) (por [@JZiyue_](https://x.com/JZiyue_))
+### Case 49: [Oferta de semana grátis ZenMux](https://x.com/JZiyue_/status/2067114018079412723) (by [@JZiyue_](https://x.com/JZiyue_))
 
 **Use este caso para encontrar janelas de acesso livre com limite de tempo para testes do GLM-5.2.**
 
 A postagem anuncia o GLM-5.2 ao vivo no ZenMux com uma janela gratuita de uma semana, contexto de 1 milhão, melhorias de codificação e agentes e posicionamento com o mesmo preço do 5.1.
 
-Tipo: Integração | Data: 2026-06-17
+Type: Integration | Date: 2026-06-17
 
 ---
 
 <a id="case-50"></a>
-### Case 50: [Preço crofAI por token](https://x.com/nahcrof/status/2067166596523765781) (por [@nahcrof](https://x.com/nahcrof))
+### Case 50: [Preço crofAI por token](https://x.com/nahcrof/status/2067166596523765781) (by [@nahcrof](https://x.com/nahcrof))
 
 **Use este caso para comparar preços de fornecedores terceirizados para o GLM-5.2 antes de selecionar uma rota.**
 
 A postagem anuncia o GLM-5.2 no crofAI com preços de entrada, saída e cache listados, posicionando-o como inteligência de fronteira barata.
 
-Tipo: Integração | Data: 2026-06-17
+Type: Integration | Date: 2026-06-17
 
 ---
 
 <a id="case-51"></a>
-### Case 51: [API Price Margin Comparison](https://x.com/scaling01/status/2066952626386714906) (por [@scaling01](https://x.com/scaling01))
+### Case 51: [Comparação de margem de preço de API](https://x.com/scaling01/status/2066952626386714906) (by [@scaling01](https://x.com/scaling01))
 
 **Use este caso como uma crítica ao preço de mercado ao comparar o GLM-5.2 com outros laboratórios de fronteira e modelos abertos.**
 
 O autor compara o GLM-5.2 e outros grandes modelos abertos sobre preços de tokens de saída e usa a comparação para argumentar que algumas margens de API de laboratórios de fronteira são altas.
 
-Tipo: Avaliação | Data: 2026-06-16
+Type: Evaluation | Date: 2026-06-16
 
 ---
 
 <a id="case-64"></a>
-### Case 64: [Basement Local Inference Speed](https://web.archive.org/web/*/https://web.archive.org/web/*/https://x.com/volatilemrkts/status/2068077319986516031) (por [@volatilemrkts](https://web.archive.org/web/*/https://x.com/volatilemrkts))
+### Case 64: [Velocidade de inferência local no porão](https://web.archive.org/web/*/https://web.archive.org/web/*/https://x.com/volatilemrkts/status/2068077319986516031) (by [@volatilemrkts](https://web.archive.org/web/*/https://x.com/volatilemrkts))
 
 **Use este caso para estimar a taxa de transferência de inferência GLM-5.2 local em hardware Apple com grande memória antes de planejar uma configuração de codificação offline.**
 
 A fonte relata 44,1 tokens por segundo em uma configuração Mac local com muita memória e menciona problemas de repetição de decodificação com chamadas de ferramentas pesadas.
 
-Tipo: Demonstração | Data: 2026-06-20
+Type: Demo | Date: 2026-06-20
 
 ---
 
 <a id="case-68"></a>
-### Case 68: [Unsloth Quantized Local Deployment](https://x.com/mrblock/status/2067931982760394765) (por [@mrblock](https://x.com/mrblock))
+### Case 68: [Implantação local quantizada sem preguiça](https://x.com/mrblock/status/2067931982760394765) (by [@mrblock](https://x.com/mrblock))
 
 **Use este caso para avaliar caminhos de implantação quantizados do GLM-5.2 quando os pesos completos do modelo forem muito grandes para hardware local comum.**
 
 A postagem descreve opções GGUF dinâmicas de 2 e 1 bits do Unsloth, reduções de memória e rotas de implantação llama.cpp ou Unsloth Studio.
 
-Tipo: Tutorial | Data: 2026-06-20
+Type: Tutorial | Date: 2026-06-20
 
 ---
 
 
 
 <a id="case-88"></a>
-### Case 88: [Execução distribuída de MLX em dois M3 Ultra](https://x.com/ivanfioravanti/status/2068781499206574576) (por [@ivanfioravanti](https://x.com/ivanfioravanti))
+### Case 88: [Execução distribuída de MLX em dois M3 Ultra](https://x.com/ivanfioravanti/status/2068781499206574576) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
 **Use este caso para estimar como é servir o GLM-5.2 em 8 bits em duas máquinas M3 Ultra antes de montar uma configuração maior sobre Apple Silicon.**
 
 O post mostra o GLM-5.2 em 8 bits rodando com MLX distributed em duas máquinas M3 Ultra de 512 GB a cerca de 17,9 tokens por segundo e com aproximadamente 760 GB de memória. O autor também destaca que a configuração é um PR preliminar ainda em andamento, então use isso como sinal de deployment e não como guia finalizado.
 
-Tipo: Demonstração | Data: 2026-06-21
+Type: Demo | Date: 2026-06-21
 
 ---
 
 <a id="case-89"></a>
-### Case 89: [Corte do multiplicador do ZCode até setembro](https://x.com/buildwithhassan/status/2068534544177791376) (por [@buildwithhassan](https://x.com/buildwithhassan))
+### Case 89: [Corte do multiplicador do ZCode até setembro](https://x.com/buildwithhassan/status/2068534544177791376) (by [@buildwithhassan](https://x.com/buildwithhassan))
 
 **Use este caso para esticar os créditos do plano do GLM-5.2 com multiplicadores menores do ZCode tanto nos horários de pico quanto fora deles.**
 
 O post diz que o ZCode reduziu os multiplicadores do coding plan de GLM de 3x para 2x nos horários de pico e de 2x para 0,67x fora deles, com a nova janela valendo até o fim de setembro. Isso o torna uma nota concreta de acesso e preço para quem quer esticar créditos no GLM-5.2.
 
-Tipo: Integração | Data: 2026-06-21
+Type: Integration | Date: 2026-06-21
 
 ---
 <a id="case-97"></a>
-### Case 97: [RTX PRO 6000 Local Throughput](https://x.com/CardilloSamuel/status/2068954298596380743) (por [@CardilloSamuel](https://x.com/CardilloSamuel))
+### Case 97: [Taxa de transferência local RTX PRO 6000](https://x.com/CardilloSamuel/status/2068954298596380743) (by [@CardilloSamuel](https://x.com/CardilloSamuel))
 
 **Use este caso para dimensionar uma workstation local de alto nível para GLM-5.2, em que um desktop com duas Blackwell sustentou velocidade de decodificação de dois dígitos em uma build quantizada em 4 bits.**
 
 CardilloSamuel relata ter rodado GLM-5.2 UD-Q4_K_XL em 2x RTX PRO 6000 Blackwells com um Threadripper PRO 9995WX e 1TB de DDR5. O post cita cerca de 64 tok/s de prefill, 13-15 tok/s de decode, pontuação de 69.7% no Aider Polyglot a menos de dois pontos de BF16, e observa que a largura de banda da RAM do sistema era o gargalo, deixando uma 5090 incompatível fora da divisão.
 
-Tipo: Demonstração | Data: 2026-06-22
+Type: Demo | Date: 2026-06-22
 
 ---
 
 <a id="case-98"></a>
-### Case 98: [Mac Studio API ROI Reality Check](https://x.com/karminski3/status/2068974488973447524) (por [@karminski3](https://x.com/karminski3))
+### Case 98: [Verificação da realidade do ROI da API do Mac Studio](https://x.com/karminski3/status/2068974488973447524) (by [@karminski3](https://x.com/karminski3))
 
 **Use este caso para validar se faz sentido comprar um Mac Studio para inferência local de GLM-5.2, porque a conta de retorno publicada favorece fortemente acesso via API ou plano para a maioria dos usuários.**
 
 O post estima que um Mac Studio de RMB 32,999 equivale a aproximadamente 1,178 milhões de tokens de API do GLM-5.2 nos preços citados, e argumenta que o payback é de cerca de 209 dias mesmo para uma configuração Qwen bem menor. Em seguida, diz que um Mac Studio de 512GB rodando GLM-5.2 quantizado a cerca de 17 tok/s pode levar algo como sete anos para se pagar, então a posse local só faz sentido se você já tiver o hardware ou puder aproveitar tempo ocioso.
 
-Tipo: Avaliação | Data: 2026-06-22
+Type: Evaluation | Date: 2026-06-22
 
 ---
 
 <a id="case-106"></a>
-### Case 106: [LiteLLM Local Outage Save](https://x.com/CardilloSamuel/status/2069431311463236078) (por [@CardilloSamuel](https://x.com/CardilloSamuel))
+### Case 106: [Economia de interrupção local LiteLLM](https://x.com/CardilloSamuel/status/2069431311463236078) (by [@CardilloSamuel](https://x.com/CardilloSamuel))
 
 **Use este caso para manter um entregável avançando quando APIs frontier hospedadas caem ou ficam limitadas, redirecionando o trabalho por um GLM-5.2 implantado localmente com LiteLLM.**
 
 CardilloSamuel diz que um amigo ficou sem tokens e enfrentou uma queda do Claude, então ele emitiu uma API key do LiteLLM apontando para sua implantação local de GLM-5.2. Segundo o relato, o amigo gerou cerca de 5 milhões de tokens por US$ 0, concluiu o entregável no prazo e aceitou menor velocidade em troca de continuidade.
 
-Tipo: Demonstração | Data: 2026-06-23
+Type: Demo | Date: 2026-06-23
 
 ---
 
 <a id="case-107"></a>
-### Case 107: [Individual Versus Team Local ROI](https://x.com/yuhasbeentaken/status/2069337770493919414) (por [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+### Case 107: [ROI local individual versus equipe](https://x.com/yuhasbeentaken/status/2069337770493919414) (by [@yuhasbeentaken](https://x.com/yuhasbeentaken))
 
 **Use este caso para decidir se uma implantação local de GLM-5.2 faz sentido para uma pessoa sozinha ou mais para uma equipe de desenvolvimento maior.**
 
 O post argumenta que uma configuração local individual pode exigir 512 GB de memória do sistema, várias GPUs e uma CPU potente, e ainda assim entregar só cerca de 6-10 tokens por segundo. Também diz que um servidor interno compartilhado faz mais sentido para equipes de 10 ou mais desenvolvedores que valorizam privacidade, tokens ilimitados, ausência de limites semanais e proteção contra quedas de provedor ou mudanças de política.
 
-Tipo: Avaliação | Data: 2026-06-23
+Type: Evaluation | Date: 2026-06-23
 
 ---
 
 <a id="case-112"></a>
-### Case 112: [4x RTX PRO 6000 Terminal-Bench 2.0 Run](https://x.com/0xSero/status/2069871347010838586) (por [@0xSero](https://x.com/0xSero))
+### Case 112: [Execução do Terminal-Bench 2.0 em quatro RTX PRO 6000](https://x.com/0xSero/status/2069871347010838586) (by [@0xSero](https://x.com/0xSero))
 
 **Use este caso para dimensionar um setup local de GLM-5.2 com quatro GPUs contra um benchmark pesado de terminal antes de assumir uma workstation de alto nível.**
 
 0xSero relata uma execução do GLM-5.2-REAP-NVFP4 com 69.1% no Terminal Bench 2.0 e a apresenta como o melhor resultado de terminal-bench entre os modelos que cabem em 4x RTX PRO 6000. Isso o torna um sinal concreto de implantação local para equipes que estão pesando setups open-weight quantizados contra terminais frontier hospedados.
 
-Tipo: Evaluation | Data: 2026-06-24
+Type: Evaluation | Date: 2026-06-24
 
 ---
 
 <a id="case-118"></a>
-### Case 118: [Local Crackme Solve On 2x RTX PRO 6000 Blackwells](https://x.com/CardilloSamuel/status/2069887782508753302) (por [@CardilloSamuel](https://x.com/CardilloSamuel))
+### Case 118: [Solução local de crackme em 2x RTX PRO 6000 Blackwells](https://x.com/CardilloSamuel/status/2069887782508753302) (by [@CardilloSamuel](https://x.com/CardilloSamuel))
 
 **Use este caso para julgar se um setup local sério de GLM-5.2 consegue concluir tarefas longas de engenharia reversa sem acesso a depurador.**
 
 CardilloSamuel diz que uma instância local do GLM 5.2 rodando em 2x RTX PRO 6000 Blackwell com cerca de 300 GB de RAM resolveu um desafio crackme em 78 minutos a aproximadamente 14 tokens por segundo via OpenCode. O post diz que o harness não tinha acesso a depurador nem MCP e que, ainda assim, o modelo despejou endereços de memória, testou hipóteses e seguiu as instruções em vez de corrigir o binário por patch.
 
-Tipo: Demo | Data: 2026-06-24
+Type: Demo | Date: 2026-06-24
 
 ---
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Limites, ressalvas e sinais de segurança
 <a id="case-205"></a>
-### Case 205: [Static HTML Rewrite Executor Misses](https://x.com/petruknisme/status/2075092910182387759) (por [@petruknisme](https://x.com/petruknisme))
+### Case 205: [Faltas no executor de reescrita de HTML estático](https://x.com/petruknisme/status/2075092910182387759) (by [@petruknisme](https://x.com/petruknisme))
 
 **Use este caso para evitar dar ao GLM-5.2 controlo total como executor em reescritas legacy 1:1, porque uma migração grande de HTML estático para React e Vite falhou demasiados detalhes com OpenCode Go e Cline, levando o autor a confiar mais no GLM como planner do que como executor.**
 
 O autor descreve a reescrita de um projeto grande de HTML estático para React e Vite com GLM-5.2 depois de já ter gasto bastante uso de OpenCode Go e Cline. O resultado falhou demasiados detalhes para uma migração fiel 1:1, por isso a conclusão prática é manter o GLM dentro do loop de planeamento e rever a execução com muito mais rigor em migrações legacy de alta fidelidade.
 
-Tipo: Limite | Data: 2026-07-09
+Type: Limit | Date: 2026-07-09
 
 ---
 
 <a id="case-197"></a>
-### Case 197: [Composio 47-Task Agent Gaps](https://x.com/composio/status/2074908761970393265) (por [@composio](https://x.com/composio))
+### Case 197: [Composição 47-Lacunas do Agente de Tarefas](https://x.com/composio/status/2074908761970393265) (by [@composio](https://x.com/composio))
 
 **Use este caso para perceber onde o GLM-5.2 ainda falha em trabalho real de agentes SaaS, porque a Composio ligou-o a 17 ferramentas em 47 tarefas e encontrou 45 acertos, com falhas em verificações de completude e em julgamentos ambíguos de SLA.**
 
 A Composio diz que o GLM-5.2 e o Fable 5 correram como agentes contra 17 produtos SaaS reais, incluindo GitHub, LaunchDarkly e Zendesk. O GLM-5.2 resolveu 45 de 47 tarefas contra 47 de 47 do Fable 5, e a revisão das traces apontou dois modos de falha concretos: parar cedo demais numa auditoria de segredos do GitHub que esperava 130 resultados, e classificar mal violações de SLA no Zendesk mesmo quando a saída parecia bem estruturada.
 
-Tipo: Avaliação | Data: 2026-07-08
+Type: Evaluation | Date: 2026-07-08
 
 ---
 <a id="case-163"></a>
-### Case 163: [Preliminary Cyber Research Parity](https://x.com/Irregular/status/2072682835798831168) (por [@Irregular](https://x.com/Irregular))
+### Case 163: [Paridade preliminar de pesquisa cibernética](https://x.com/Irregular/status/2072682835798831168) (by [@Irregular](https://x.com/Irregular))
 
 **Use este caso para medir o GLM-5.2 em subtarefas de pesquisa de vulnerabilidades, porque a Irregular relata avaliações internas iniciais comparáveis ao GPT-5.4 e ao Opus 4.6 em uma suite cyber estreita, ao mesmo tempo em que avisa que cenários de ataque end-to-end ainda não foram testados.**
 
 A Irregular diz que uma suite interna limitada de tarefas de pesquisa de vulnerabilidades encontrou o GLM-5.2 aproximadamente comparável ao GPT-5.4 e ao Claude Opus 4.6 no subconjunto testado. O mesmo post acrescenta que a suite é estreita e que benchmarks de cenário como CyScenarioBench e FrontierCyber ainda precisam ser executados. Trate isso como um sinal cyber inicial real, não como prova de paridade ofensiva total.
 
-Tipo: Limite | Data: 2026-07-02
+Type: Limit | Date: 2026-07-02
 
 ---
 
 <a id="case-157"></a>
-### Case 157: [OpenRouter Spend-Cut Skill Rewrite](https://x.com/Rahul_J_Mathur/status/2072279035493900395) (por [@Rahul_J_Mathur](https://x.com/Rahul_J_Mathur))
+### Case 157: [Reescrita da habilidade de redução de gastos do OpenRouter](https://x.com/Rahul_J_Mathur/status/2072279035493900395) (by [@Rahul_J_Mathur](https://x.com/Rahul_J_Mathur))
 
 **Use este caso para orçar o custo de migração antes de trocar o modelo do agente, porque o teste com OpenRouter de um fundo colocou o GLM-5.2 em cerca de um oitavo do custo do Opus, mas ainda exigiu reescritas de skills, lógica de roteamento e aceitação de saídas mais lentas e mais fracas.**
 
 Rahul J Mathur diz que os agentes da equipe rodavam só em modelos Opus a um ritmo anualizado de cerca de 100 mil dólares antes de um teste multimodelo com OpenRouter em junho, pensado para cortar o gasto em algo como 40 por cento. Nas observações de primeira mão, o GLM-5.2 foi mais lento que o Opus 4.8 e falhou com mais frequência em casos de borda ou na leitura completa de arquivos de skills, mas a qualidade continuou aceitável para os destinatários a cerca de um oitavo do custo. A mesma thread avisa que skills orientadas a Opus e GPT não se transferem limpas e que a migração exigiu skills atualizadas, nova memória operacional e lógica de roteamento codificada à mão.
 
-Tipo: Limite | Data: 2026-07-01
+Type: Limit | Date: 2026-07-01
 
 ---
 
 
 <a id="case-149"></a>
-### Case 149: [AA Verbosity And Reasoning Tradeoff](https://x.com/ArtificialAnlys/status/2072022576394821859) (por [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+### Case 149: [Compensação de Verbosidade e Raciocínio AA](https://x.com/ArtificialAnlys/status/2072022576394821859) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
 **Use este caso para separar a inteligência open-weight de nível frontier do GLM-5.2 do seu custo de raciocínio, porque a Artificial Analysis mostra um líder aberto que também gasta tokens de saída demais.**
 
 A Artificial Analysis diz que o GLM-5.2 Max usou cerca de 141M tokens de saída, 95% deles de raciocínio, para rodar o Intelligence Index. O fio compara isso com 117M do Opus 4.8 e 72M do GPT-5.5, mas ainda deixa o GLM-5.2 como o melhor open-weight.
 
-Tipo: Avaliação | Data: 2026-06-30
+Type: Evaluation | Date: 2026-06-30
 
 ---
 
 <a id="case-134"></a>
-### Case 134: [Semgrep IDOR Narrow-Win Caveat](https://x.com/leploutos/status/2071121981551047039) (por [@leploutos](https://x.com/leploutos))
+### Case 134: [Advertência de vitória estreita do Semgrep IDOR](https://x.com/leploutos/status/2071121981551047039) (by [@leploutos](https://x.com/leploutos))
 
 **Use este caso para separar um sinal real de segurança de inflação de manchete, porque a fonte diz que o GLM-5.2 superou o Claude Code em um benchmark de IDOR, mas nunca foi testado contra o Mythos em si.**
 
 leploutos diz que a leitura viral de que "GLM equivale ao Mythos" está errada: o resultado da Semgrep foi um único benchmark de detecção de IDOR em que o GLM-5.2 marcou 39% de F1, à frente de configurações de Claude Code na faixa de 28-37%, a cerca de US$ 0.17 por bug e aproximadamente um sexto do custo de modelos frontier. O mesmo post também destaca os limites que importam para quem opera na prática: foi uma classe de bug, um dataset, uma execução e um benchmark do próprio fornecedor, então trate isso como um sinal estreito, mas real, de detecção de vulnerabilidade, e não como prova de que o GLM iguala o modelo cibernético dedicado da Anthropic.
 
-Tipo: Limit | Data: 2026-06-28
+Type: Limit | Date: 2026-06-28
 
 ---
 
 <a id="case-132"></a>
-### Case 132: [LisanBench Reasoning Efficiency Gap](https://x.com/scaling01/status/2070961852008509918) (por [@scaling01](https://x.com/scaling01))
+### Case 132: [Lacuna de eficiência de raciocínio do LisanBench](https://x.com/scaling01/status/2070961852008509918) (by [@scaling01](https://x.com/scaling01))
 
 **Use este caso para revisar o GLM-5.2 em cargas pesadas de raciocínio antes de assumir que sua força em coding se transfere de forma limpa, porque o resultado publicado do LisanBench é melhor que o do GLM-5, mas ainda ineficiente frente a outros modelos abertos.**
 
 scaling01 relata que o GLM-5.2-high ficou na posição 29 do LisanBench com score de 1834, contra 986.83 do GLM-5. O mesmo post diz que o Kimi-K2.5 Thinking chega a um score parecido com cerca de 19K tokens em média, enquanto o GLM-5.2 usa algo em torno de 32K, apresentando o modelo como uma melhora em relação às gerações anteriores de GLM, mas ainda comparativamente fraco em eficiência de raciocínio.
 
-Tipo: Limit | Data: 2026-06-27
+Type: Limit | Date: 2026-06-27
 
 ---
 
 <a id="case-133"></a>
-### Case 133: [PrinzBench Domain-Mismatch Caveat](https://x.com/yuhasbeentaken/status/2070928066797351300) (por [@yuhasbeentaken](https://x.com/yuhasbeentaken))
+### Case 133: [Advertência de incompatibilidade de domínio do PrinzBench](https://x.com/yuhasbeentaken/status/2070928066797351300) (by [@yuhasbeentaken](https://x.com/yuhasbeentaken))
 
 **Use este caso para manter o GLM-5.2 focado em coding e execução de agentes em vez de pesquisa jurídica, porque o post contrasta um score fraco no PrinzBench com benchmarks muito mais fortes de software e uso de ferramentas.**
 
 yuhasbeentaken diz que o GLM-5.2 marcou apenas 30/99 no PrinzBench, um benchmark estreito centrado em pesquisa jurídica e busca web difícil, ao mesmo tempo em que cita resultados públicos mais fortes em SWE-Bench Pro (62.1), Terminal-Bench 2.1 (81.0), MCP-Atlas (77.0) e ProgramBench (63.7). O post trata a diferença como uma questão de adequação de domínio, e não como contradição, recomendando modelos proprietários mais fortes para pesquisa jurídica e GLM-5.2 para coding e execução agentic.
 
-Tipo: Limit | Data: 2026-06-27
+Type: Limit | Date: 2026-06-27
 
 ---
 
 <a id="case-52"></a>
-### Case 52: [No Vision Caveat](https://x.com/sawyerhood/status/2067061246705426923) (por [@sawyerhood](https://x.com/sawyerhood))
+### Case 52: [Nenhuma advertência de visão](https://x.com/sawyerhood/status/2067061246705426923) (by [@sawyerhood](https://x.com/sawyerhood))
 
 **Use este caso para lembrar que o GLM-5.2 pode ser menos útil para fluxos de trabalho que exigem capacidade de visão nativa.**
 
 O autor observa que a falta de visão dos modelos GLM reduz a utilidade, citando uma postagem de classificação da Design Arena. Esta é uma advertência prática para o planejamento de produtos multimodais.
 
-Tipo: Limite | Data: 2026-06-17
+Type: Limit | Date: 2026-06-17
 
 ---
 
 <a id="case-53"></a>
-### Case 53: [Advertência sobre a lacuna do agente no mundo real](https://x.com/ml_angelopoulos/status/2067013545431269405) (por [@ml_angelopoulos](https://x.com/ml_angelopoulos))
+### Case 53: [Advertência sobre a lacuna do agente no mundo real](https://x.com/ml_angelopoulos/status/2067013545431269405) (by [@ml_angelopoulos](https://x.com/ml_angelopoulos))
 
 **Use este caso para evitar a leitura excessiva de ganhos de benchmark como prova de que o GLM-5.2 corresponde aos melhores modelos proprietários em todas as tarefas de agente implantadas.**
 
 O autor diz que o GLM-5.2 é impressionante, mas ainda não está próximo do desempenho do nível de pensamento Fable ou Opus 4.8 na distribuição geral de tarefas de agente do mundo real, com base em uma metodologia Agent Arena.
 
-Tipo: Limite | Data: 2026-06-16
+Type: Limit | Date: 2026-06-16
 
 ---
 
 <a id="case-54"></a>
-### Case 54: [Safety Guardrail Concern](https://x.com/VittoStack/status/2066984051840606436) (por [@VittoStack](https://x.com/VittoStack))
+### Case 54: [Preocupação com o guarda-corpo de segurança](https://x.com/VittoStack/status/2066984051840606436) (by [@VittoStack](https://x.com/VittoStack))
 
 **Use este caso como um lembrete para executar avaliações de segurança antes de implantar o GLM-5.2 em domínios confidenciais.**
 
 A postagem relata uma falha na recusa de conteúdo prejudicial em um teste comparativo de segurança. O repositório registra apenas o sinal de segurança, não os detalhes inseguros, e trata isso como uma advertência de risco de implantação.
 
-Tipo: Limite | Data: 2026-06-16
+Type: Limit | Date: 2026-06-16
 
 ---
 
 <a id="case-55"></a>
-### Case 55: [Crítica da Metodologia de Referência](https://x.com/josepha_mayo/status/2066951013337112661) (por [@josepha_mayo](https://x.com/josepha_mayo))
+### Case 55: [Crítica da Metodologia de Referência](https://x.com/josepha_mayo/status/2066951013337112661) (by [@josepha_mayo](https://x.com/josepha_mayo))
 
 **Use este caso para questionar a metodologia de benchmark mesmo quando o resultado principal favorece o GLM-5.2.**
 
 O autor critica a metodologia Design Arena, ao mesmo tempo que reconhece o GLM-5.2 como forte, tornando-o útil para leitores que desejam ceticismo de referência junto com as reivindicações da tabela de classificação.
 
-Tipo: Limite | Data: 2026-06-16
+Type: Limit | Date: 2026-06-16
 
 ---
 
 <a id="case-56"></a>
-### Case 56: [Peak-Time Latency Concern](https://x.com/k_matsumaru/status/2067023197166559621) (por [@k_matsumaru](https://x.com/k_matsumaru))
+### Case 56: [Preocupação com a latência no horário de pico](https://x.com/k_matsumaru/status/2067023197166559621) (by [@k_matsumaru](https://x.com/k_matsumaru))
 
 **Use este caso para testar a latência do provedor antes de mudar os planos de codificação ou rotear fluxos de trabalho no estilo Claude Code para GLM-5.2.**
 
 A postagem japonesa considera o uso do GLM-5.2 dentro de um plano de codificação, mas observa preocupações anteriores sobre a latência de resposta no horário de pico.
 
-Tipo: Limite | Data: 2026-06-16
+Type: Limit | Date: 2026-06-16
 
 ---
 
 <a id="case-57"></a>
-### Case 57: [FutureSim Non-Improvement Result](https://x.com/nikhilchandak29/status/2066970561511657913) (por [@nikhilchandak29](https://x.com/nikhilchandak29))
+### Case 57: [Resultado de não melhoria do FutureSim](https://x.com/nikhilchandak29/status/2066970561511657913) (by [@nikhilchandak29](https://x.com/nikhilchandak29))
 
 **Use este caso para verificar se os ganhos de codificação se generalizam para domínios sem codificação antes da implantação ampla.**
 
 A postagem relata que o GLM-5.2 não é melhor que o GLM-5.1 no FutureSim e usa o resultado para alertar que as melhorias de codificação podem não ser generalizadas igualmente em todos os domínios.
 
-Tipo: Limite | Data: 2026-06-16
+Type: Limit | Date: 2026-06-16
 
 ---
 
 <a id="case-58"></a>
-### Case 58: [Launch Readiness Critique](https://x.com/bridgemindai/status/2065770088821600512) (por [@bridgemindai](https://x.com/bridgemindai))
+### Case 58: [Crítica de preparação para lançamento](https://x.com/bridgemindai/status/2065770088821600512) (by [@bridgemindai](https://x.com/bridgemindai))
 
 **Use este caso para separar a capacidade do modelo da execução de lançamento, documentação e prontidão da API.**
 
 A postagem chama o lançamento antecipado de confuso porque os benchmarks e o acesso à API ainda não estavam disponíveis na época, tornando-o relevante para a revisão da preparação para o lançamento, em vez do julgamento da qualidade do modelo.
 
-Tipo: Limite | Data: 2026-06-13
+Type: Limit | Date: 2026-06-13
 
 ---
 
 <a id="case-59"></a>
-### Case 59: [Aumento de preço do plano de codificação](https://x.com/bridgemindai/status/2065799843658793092) (por [@bridgemindai](https://x.com/bridgemindai))
+### Case 59: [Aumento de preço do plano de codificação](https://x.com/bridgemindai/status/2065799843658793092) (by [@bridgemindai](https://x.com/bridgemindai))
 
 **Use este caso para verificar o preço do plano antes de recomendar o GLM-5.2 como um substituto de baixo custo.**
 
 O autor relata ter pago US$ 65 por mês por um plano GLM Coding Pro e diz que o plano quase dobrou desde a última assinatura. Use-o como um lembrete para verificar os preços atuais.
 
-Tipo: Limite | Data: 2026-06-13
+Type: Limit | Date: 2026-06-13
 
 ---
 
 <a id="case-67"></a>
-### Case 67: [Trabalho paralelo curto versus execuções longas do agente](https://x.com/thekuchh/status/2068010332501479865) (por [@thekuchh](https://x.com/thekuchh))
+### Case 67: [Trabalho paralelo curto versus execuções longas do agente](https://x.com/thekuchh/status/2068010332501479865) (by [@thekuchh](https://x.com/thekuchh))
 
 **Use este caso para encaminhar o GLM-5.2 para tarefas de codificação limitadas e curtas, reservando modelos mais fortes para execuções mais profundas do agente de várias horas.**
 
 A postagem relata uma divisão prática: o GLM-5.2 funciona bem para tarefas paralelas curtas, mas varia em uma execução de agente mais longa.
 
-Tipo: Limite | Data: 2026-06-20
+Type: Limit | Date: 2026-06-20
 
 ---
 
 <a id="case-103"></a>
-### Case 103: [HalluHard Multiturn Hallucination Signal](https://x.com/dyfan22/status/2069335764295438532) (por [@dyfan22](https://x.com/dyfan22))
+### Case 103: [Sinal de alucinação multivoltas HalluHard](https://x.com/dyfan22/status/2069335764295438532) (by [@dyfan22](https://x.com/dyfan22))
 
 **Use este caso para testar o GLM-5.2 em tarefas multiturno sensíveis a alucinação antes de confiar em scores fortes de benchmark em outros cenários.**
 
 O HalluHard adicionou o GLM-5.2 ao seu leaderboard usando adaptive thinking com máximo reasoning effort. A atualização diz que, apesar de bons resultados em outros benchmarks, o GLM-5.2 ainda alucina com frequência no benchmark multiturno exigente do HalluHard.
 
-Tipo: Limite | Data: 2026-06-23
+Type: Limit | Date: 2026-06-23
 
 ---
 
 <a id="case-108"></a>
-### Case 108: [Open-Weight Security Emergency Warning](https://x.com/joshua_saxe/status/2069289170107842572) (por [@joshua_saxe](https://x.com/joshua_saxe))
+### Case 108: [Aviso de emergência de segurança de peso aberto](https://x.com/joshua_saxe/status/2069289170107842572) (by [@joshua_saxe](https://x.com/joshua_saxe))
 
 **Use este caso como sinal de planejamento de segurança: GLM-5.2 open-weight reduz a fricção operacional para agentes ofensivos de segurança mesmo quando APIs fechadas continuam monitoradas.**
 
 Joshua Saxe argumenta que o GLM-5.2 remove grande parte da fricção de monitoramento e de contas que antes limitava atacantes usando agentes frontier de coding. A thread apresenta pesos abertos com implantação privada como uma mudança séria na capacidade ofensiva e pede adoção defensiva mais rápida em vez de depender de gatekeeping via API.
 
-Tipo: Limite | Data: 2026-06-23
+Type: Limit | Date: 2026-06-23
 
 ---
 
 <a id="case-126"></a>
-### Case 126: [Rust Bug Harness Pass With 7x Turn Gap](https://x.com/BohuTANG/status/2069979942608425364) (por [@BohuTANG](https://x.com/BohuTANG))
+### Case 126: [Passe de arnês Rust Bug com intervalo de giro de 7x](https://x.com/BohuTANG/status/2069979942608425364) (by [@BohuTANG](https://x.com/BohuTANG))
 
 **Use este caso para separar a vantagem do GLM-5.2 em qualidade de código da sua sobrecarga atual no harness de agentes, porque o modelo consegue passar no bug gastando muito mais turnos que o Opus.**
 
 BohuTANG comparou GLM-5.2 e Opus 4.6 no mesmo bug em Rust, a issue 979 do serde_json, em três agentes: evot, Claude Code e Pi. As seis sessões passaram, e o autor diz que a compreensão do bug e a qualidade final do código do GLM se mantiveram, mas o GLM precisou de 38, 43 e 61 turnos onde o Opus terminou em cerca de 18 turnos e aproximadamente 80 segundos entre os três agentes. As notas do trace atribuem a diferença a repetições com cargo e o ambiente, baixa convergência e loops de auto-verificação muito mais longos.
 
-Tipo: Evaluation | Data: 2026-06-25
+Type: Evaluation | Date: 2026-06-25
 
 ---
 
 <a id="case-114"></a>
-### Case 114: [Braintrust Model-Swap Cost Caveat](https://x.com/ankrgyl/status/2069869387549446597) (por [@ankrgyl](https://x.com/ankrgyl))
+### Case 114: [Advertência de custo de troca de modelo Braintrust](https://x.com/ankrgyl/status/2069869387549446597) (by [@ankrgyl](https://x.com/ankrgyl))
 
 **Use este caso para evitar presumir que trocar para um modelo mais barato preservará a qualidade em um fluxo real de programação com agentes.**
 
 ankrgyl diz que a Braintrust comparou Opus 4.8 e GLM-5.2 em um fluxo que parte de um commit de repositório e uma descrição de bug para depois avaliar a correção resultante. Nessa troca básica, o GLM-5.2 teria apresentado custo parecido, maior tempo de execução, menor taxa de aprovação e pior eficiência geral.
 
-Tipo: Evaluation | Data: 2026-06-24
+Type: Evaluation | Date: 2026-06-24
 
 ---
 
 <a id="case-73"></a>
-### Case 73: [Verificação de censura em código e viés](https://x.com/wongmjane/status/2068424945663893936) (por [@wongmjane](https://x.com/wongmjane))
+### Case 73: [Verificação de censura em código e viés](https://x.com/wongmjane/status/2068424945663893936) (by [@wongmjane](https://x.com/wongmjane))
 
 **Use este caso como um sinal prático de segurança para testes de código e viés político, não como prova de que preocupações mais amplas de alinhamento já estejam resolvidas.**
 
 A autora diz que o GLM-5.2 não injetou censura política chinesa no código e, separadamente, corrigiu uma alegação falsa de viés pró-EUA sobre a Guerra do Vietnã, enquanto manteve inalterados casos mais parecidos com opinião. Isso o torna um exemplo público concreto para testar comportamento em código politicamente sensível e factualidade.
 
-Tipo: Limite | Data: 2026-06-20
+Type: Limit | Date: 2026-06-20
 
 ---
 
 <a id="case-75"></a>
-### Case 75: [Falha de cobrança em raciocínio difícil](https://x.com/s_batzoglou/status/2068297051247350154) (por [@s_batzoglou](https://x.com/s_batzoglou))
+### Case 75: [Falha de cobrança em raciocínio difícil](https://x.com/s_batzoglou/status/2068297051247350154) (by [@s_batzoglou](https://x.com/s_batzoglou))
 
 **Use este caso para testar o GLM-5.2 com cuidado em cargas de raciocínio difíceis, porque o relato público mostra longos tempos de execução, baixa conclusão e cobrança inesperadamente alta.**
 
 O autor executou 11 problemas de indução e relata apenas quatro conclusões, duas respostas corretas, tempos de execução de várias horas e cobranças que pareciam muito acima da contagem visível de tokens. Este é um alerta concreto sobre eficiência de raciocínio e comportamento de cobrança, não apenas sobre score de benchmark.
 
-Tipo: Limite | Data: 2026-06-20
+Type: Limit | Date: 2026-06-20
 
 ---
 
+
+<a id="related-repositories"></a>
+## Repositórios relacionados
+
+- [Ler a documentação da API GLM-5.2](https://docs.evolink.ai/en/api-manual/language-series/glm-5.2/glm-5.2-api?utm_source=github&utm_medium=docs&utm_campaign=awesome-glm-5.2-usecases&utm_content=first_run) - Superfície de primeira execução verificada para o modelo atual.
+
+Este guia não afirma que exista um repositório de skill GLM-5.2 instalável e verificado; use a documentação da API acima.
 
 <a id="acknowledge"></a>
 ## 🙏 Agradecimentos
