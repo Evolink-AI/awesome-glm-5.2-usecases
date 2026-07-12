@@ -77,5 +77,6 @@ The initial findings above remain unchanged as audit evidence. After remediation
 
 - Repository content and local contract layers: **PASS**
 - Final contract state: **PUBLISHED / PASS**
+- Final publication label: published
 - Public verification: remote `main` matched local implementation commit; raw README, R2 origins, and all GitHub/camo-rendered media passed.
 - Agent runtime note: the workspace copy of `completion-gate` currently calls an undefined `has_complete_github_utm`; the canonical installed framework copy was used instead and correctly reported the remaining external gates.
