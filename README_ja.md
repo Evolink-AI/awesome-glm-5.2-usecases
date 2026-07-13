@@ -36,7 +36,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **209 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **210 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -79,7 +79,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | セクション | ケース |
 |---|---|
 | [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
-| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
+| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210 |
 | [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
 | [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
 | [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
@@ -134,6 +134,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | ケース | 注目点 | タイプ |
 |---|---|---|
 | [Case 168: Synthwave ハードスライス アンサンブル、$2.66](#case-168) | このケースは、GLM-5.2 を単独ではなく multi-model の coding ensemble に組み込んで試すのに向いています。TracNetwork によれば、GLM を含む Synthwave 構成は LiveCodeBench hard で 46.3 percent を約 2.66 ドルで出し、各 generator 単体を上回りました。 | Integration |
+| [Case 210: Spettro の Liquid Glass マルチエージェント刷新](#case-210) | このケースは、multi-agent な web 改修の中で GLM-5.2 を調査負荷の高い frontend fixer として試したいときに役立ちます。spettrotoken によれば、Fable 5 と GPT-5.5 が失敗したあと、GLM 5.2 が統合済みの web scraping と data fetching ツールを使い、Firefox でも動く cross-browser な Liquid Glass 実装を出荷したためです。 | Demo |
 | [Case 194: CuTeDSL カーネル スキル オープンソース](#case-194) | このケースは、GLM-5.2 を再利用可能な kernel-debugging skill の中で研究したいときに使えます。作者が CuTeDSL 向けの Hermes skill を open source 化し、kernel の debugging と writing で GLM-5.2 のコスト効率が特に良かったと述べているためです。 | Tutorial |
 | [Case 180: Hermes SSDリカバリスキルループ](#case-180) | このケースは、修復志向の agent loop の中で GLM-5.2 を試したいときに使えます。ShankhadeepSho1 によると、Hermes と GLM 5.2 が故障した NAS SSD を診断し、問題を直したうえで、その修復方法を再利用可能な skill としてまとめたためです。 | Demo |
 | [Case 174: ロールルーティングされた高耐久コーダー スタック](#case-174) | このケースは、役割ごとにルーティングする個人スタックで GLM-5.2 を重い coding 作業の担当に置くときに役立ちます。denizirgin は、Codex と OpenCode を 1 か月試した結果、月額 120 から 140 dollars 前後に抑えながら、より重い coding work を GLM 5.2 に回す運用に落ち着いたと述べています。 | Evaluation |
@@ -737,6 +738,17 @@ Type: Benchmark | Date: 2026-06-24
 TracNetwork は、OpenRouter 上で qwen3-coder-next を synthesizer に、GLM-5.2 と qwen3.5-122b、qwen3-coder-next を coding generator にした Synthwave ensemble を使ったと述べています。82 件の LiveCodeBench hard task で 46.3 percent、コストは約 2.66 ドルで、どの generator 単体もこのスコアに届かなかったとのことです。GLM-5.2 を唯一の coding model としてではなく、コスト重視 ensemble の一員として使う具体例です。
 
 Type: Integration | Date: 2026-07-03
+
+---
+
+<a id="case-210"></a>
+### Case 210: [Spettro の Liquid Glass マルチエージェント刷新](https://x.com/spettrotoken/status/2076330234492698844) (by [@spettrotoken](https://x.com/spettrotoken))
+
+**このケースは、multi-agent な web 改修の中で GLM-5.2 を調査負荷の高い frontend fixer として試したいときに役立ちます。spettrotoken によれば、Fable 5 と GPT-5.5 が失敗したあと、GLM 5.2 が統合済みの web scraping と data fetching ツールを使い、Firefox でも動く cross-browser な Liquid Glass 実装を出荷したためです。**
+
+spettrotoken は、稼働中の Spettro サイト刷新を 4 つの Spettro instance に分け、それぞれに別の frontend セクターを持たせた一方で、GLM-5.2 には Firefox で壊れがちな屈折型 Liquid Glass という最難関の視覚コンポーネントを任せたと説明しています。投稿によると、GLM 5.2 は web を自律的に調べ、CSS と SVG filter の workaround を読み、効果を reverse-engineer したうえで、本番サイトにデプロイされた動作する cross-browser 実装を作りました。広い範囲の刷新では Kimi K2.7 と並列 sub-agent も補助に回ったとされています。
+
+Type: Demo | Date: 2026-07-12
 
 ---
 

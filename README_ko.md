@@ -36,7 +36,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 ## 📊 개요
 
-- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **209개의 선별된 GLM-5.2 사례**입니다.
+- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **210개의 선별된 GLM-5.2 사례**입니다.
 - 벤치마크와 프런티어 평가, 코딩 에이전트와 장기 컨텍스트 워크플로, 실사용 데모와 쇼케이스 빌드, 공급자 및 도구 통합, 비용, 가격, 로컬 배포, 한계, 주의점, 안전 신호를 다룹니다.
 - 각 사례에는 원본 출처, 작성자 표기, 간결한 활용 포인트, 근거 유형, 게시 날짜가 포함됩니다.
 - 실용 워크플로, 강점과 한계 비교, 공급자 경로, 실제 실험을 찾는 데 사용하세요.
@@ -79,7 +79,7 @@ curl --request POST \
 | 섹션 | 사례 |
 |---|---|
 | [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
-| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
+| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210 |
 | [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
 | [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
 | [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
@@ -134,6 +134,7 @@ curl --request POST \
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
 | [Case 168: $2.66에 Synthwave 하드 슬라이스 앙상블](#case-168) | 이 사례는 GLM-5.2를 단독 모델이 아니라 multi-model coding ensemble 안에서 시험할 때 유용합니다. TracNetwork에 따르면 GLM이 포함된 Synthwave 조합은 LiveCodeBench hard에서 46.3 percent를 약 2.66달러에 기록했고, 각 generator 단독보다 더 나았습니다. | Integration |
+| [Case 210: Spettro Liquid Glass 멀티에이전트 개편](#case-210) | 이 사례는 multi-agent 웹 개편 안에서 GLM-5.2를 조사 강도가 높은 frontend fixer로 시험할 때 유용합니다. spettrotoken에 따르면 Fable 5와 GPT-5.5가 실패한 뒤 GLM 5.2가 통합된 web scraping 및 data fetching 도구를 써서 Firefox에서도 작동하는 cross-browser Liquid Glass 구현을 배포했기 때문입니다. | Demo |
 | [Case 194: CuTeDSL 커널 기술 오픈 소스](#case-194) | 이 사례는 GLM-5.2를 재사용 가능한 kernel-debugging skill 안에서 살펴볼 때 유용합니다. 작성자가 CuTeDSL용 Hermes skill을 오픈소스로 공개했고, kernel 디버깅과 작성에서 GLM-5.2의 비용 효율이 특히 좋았다고 말했기 때문입니다. | Tutorial |
 | [Case 180: 헤르메스 SSD 복구 스킬 루프](#case-180) | 이 사례는 수리 지향 agent loop 안에서 GLM-5.2를 시험할 때 유용합니다. ShankhadeepSho1에 따르면 Hermes와 GLM 5.2가 고장 난 NAS SSD를 진단하고 문제를 고친 뒤 그 해결책을 재사용 가능한 skill로 패키징했기 때문입니다. | Demo |
 | [Case 174: 역할 라우팅 헤비듀티 코더 스택](#case-174) | 이 사례는 역할별로 라우팅하는 개인 스택에서 GLM-5.2를 무거운 coding 작업 담당으로 둘 때 유용합니다. denizirgin은 Codex와 OpenCode를 한 달간 시험한 뒤, 월 120~140달러 수준의 총예산을 유지하면서 더 무거운 coding work를 GLM 5.2로 보내는 운영에 정착했다고 말합니다. | Evaluation |
@@ -737,6 +738,17 @@ Type: Benchmark | Date: 2026-06-24
 TracNetwork는 OpenRouter에서 qwen3-coder-next를 synthesizer로, GLM-5.2와 qwen3.5-122b, qwen3-coder-next를 coding generator로 묶은 Synthwave ensemble을 사용했다고 말합니다. 82개의 LiveCodeBench hard 작업에서 46.3 percent와 약 2.66달러를 기록했고, 어떤 개별 generator도 그 점수에 도달하지 못했다고 합니다. GLM-5.2를 유일한 coding model이 아니라 비용 효율적인 ensemble의 한 구성원으로 쓰는 구체적인 예시입니다.
 
 Type: Integration | Date: 2026-07-03
+
+---
+
+<a id="case-210"></a>
+### Case 210: [Spettro Liquid Glass 멀티에이전트 개편](https://x.com/spettrotoken/status/2076330234492698844) (by [@spettrotoken](https://x.com/spettrotoken))
+
+**이 사례는 multi-agent 웹 개편 안에서 GLM-5.2를 조사 강도가 높은 frontend fixer로 시험할 때 유용합니다. spettrotoken에 따르면 Fable 5와 GPT-5.5가 실패한 뒤 GLM 5.2가 통합된 web scraping 및 data fetching 도구를 써서 Firefox에서도 작동하는 cross-browser Liquid Glass 구현을 배포했기 때문입니다.**
+
+spettrotoken은 실제 Spettro 사이트 개편을 네 개의 Spettro 인스턴스로 나누고 각 인스턴스가 서로 다른 frontend 영역을 맡았다고 말합니다. 그중 GLM-5.2는 Firefox에서 자주 깨지는 굴절형 Liquid Glass 효과라는 가장 까다로운 시각 컴포넌트를 담당했습니다. 게시물에 따르면 GLM 5.2는 웹을 뒤지고 CSS 및 SVG filter workaround를 읽어 효과를 역설계한 뒤, 라이브 사이트에 배포된 동작하는 cross-browser 구현을 만들었습니다. 더 넓은 개편 작업에는 Kimi K2.7과 병렬 sub-agent도 함께 투입됐습니다.
+
+Type: Demo | Date: 2026-07-12
 
 ---
 

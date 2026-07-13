@@ -36,7 +36,7 @@ Jeder Case-Titel verlinkt auf die öffentliche Quelle, jeder Autor auf das jewei
 
 ## 📊 Überblick
 
-- **209 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
+- **210 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
 - Deckt Vergleichstests und Grenzmodell-Bewertung, Coding-Agenten und Langkontext-Workflows, Praxisdemos und Beispiel-Builds, Anbieter- und Tool-Integrationen, Kosten, Preise und lokale Bereitstellung sowie Grenzen, Hinweise und Sicherheitssignale ab.
 - Jeder Case enthält die Originalquelle, die Creator-Attribution, ein knappes Nutzungs-Takeaway, den Evidenztyp und das Veröffentlichungsdatum.
 - Nutze dieses Repo, um praktische Workflows zu finden, Stärken und Grenzen zu vergleichen, Provider-Routen zu entdecken und echte Experimente nachzuvollziehen.
@@ -79,7 +79,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | Abschnitt | Fälle |
 |---|---|
 | [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
-| [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
+| [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210 |
 | [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
 | [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
 | [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
@@ -134,6 +134,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | Fall | Fokus | Typ |
 |---|---|---|
 | [Case 168: Synthwave Hard-Slice Ensemble für 2,66 $](#case-168) | Nutze diesen Fall, um GLM-5.2 in einem Multi-Model-Coding-Ensemble statt allein zu testen, denn TracNetwork berichtet, dass ein GLM-basiertes Synthwave-Setup 46.3 Prozent auf LiveCodeBench hard für etwa 2,66 Dollar erreicht hat und jedes einzelne Generator-Modell übertroffen hat. | Integration |
+| [Case 210: Spettro-Liquid-Glass-Überarbeitung mit Multi-Agenten](#case-210) | Nutze diesen Fall, um GLM-5.2 als research-lastigen Frontend-Fixer innerhalb einer Multi-Agent-Web-Überarbeitung zu testen, denn laut spettrotoken nutzte GLM 5.2 integrierte Web-Scraping- und Data-Fetching-Tools, um eine browserübergreifende Liquid-Glass-Implementierung auszuliefern, die in Firefox funktionierte, nachdem Fable 5 und GPT-5.5 gescheitert waren. | Demo |
 | [Case 194: Open-Source CuTeDSL-Kernel-Skill](#case-194) | Nutze diesen Fall, um GLM-5.2 in einem wiederverwendbaren Skill für Kernel-Debugging zu studieren, denn der Autor hat einen CuTeDSL-Hermes-Skill open-sourced und sagt, dass GLM-5.2 beim Debuggen und Schreiben von Kernels besonders kosteneffizient war. | Tutorial |
 | [Case 180: Hermes-Schleife zur SSD-Wiederherstellung](#case-180) | Nutze diesen Fall, um GLM-5.2 in einer reparaturorientierten Agent-Schleife zu testen, denn ShankhadeepSho1 sagt, dass Hermes plus GLM 5.2 eine ausgefallene NAS-SSD diagnostizierte, das Problem behob und die Lösung als wiederverwendbares Skill paketierte. | Demo |
 | [Case 174: Rollengesteuerter Hochleistungs-Coder-Stack](#case-174) | Nutze diesen Fall, um GLM-5.2 als heavy-duty coder in einem rollenbasiert gerouteten persönlichen Stack einzusetzen, denn denizirgin sagt, dass ein Monat mit Codex und OpenCode dazu führte, schwerere coding work an GLM 5.2 zu routen und das Gesamtbudget bei etwa 120 bis 140 Dollar pro Monat zu halten. | Evaluation |
@@ -737,6 +738,17 @@ Type: Benchmark | Date: 2026-06-24
 TracNetwork sagt, dass OpenRouter genutzt wurde, um ein Synthwave-Ensemble mit qwen3-coder-next als Synthesizer sowie GLM-5.2, qwen3.5-122b und qwen3-coder-next als Coding-Generatoren aufzubauen. Für 82 LiveCodeBench-hard-Aufgaben meldet der Beitrag 46.3 Prozent bei Kosten von rund 2,66 Dollar und sagt, dass keiner der einzelnen Generatoren dieses Ergebnis allein erreicht hat. Das ist ein konkretes Beispiel für GLM-5.2 als Teil eines kostenbewussten Ensembles statt als einziges Coding-Modell.
 
 Type: Integration | Date: 2026-07-03
+
+---
+
+<a id="case-210"></a>
+### Case 210: [Spettro-Liquid-Glass-Überarbeitung mit Multi-Agenten](https://x.com/spettrotoken/status/2076330234492698844) (by [@spettrotoken](https://x.com/spettrotoken))
+
+**Nutze diesen Fall, um GLM-5.2 als research-lastigen Frontend-Fixer innerhalb einer Multi-Agent-Web-Überarbeitung zu testen, denn laut spettrotoken nutzte GLM 5.2 integrierte Web-Scraping- und Data-Fetching-Tools, um eine browserübergreifende Liquid-Glass-Implementierung auszuliefern, die in Firefox funktionierte, nachdem Fable 5 und GPT-5.5 gescheitert waren.**
+
+spettrotoken schreibt, dass eine Live-Überarbeitung der Spettro-Website auf vier Spettro-Instanzen aufgeteilt wurde, wobei jede einen anderen Frontend-Bereich übernahm, während GLM-5.2 die schwierigste visuelle Komponente bekam: einen refraktiven Liquid-Glass-Effekt, der in Firefox normalerweise kaputtgeht. Laut Post durchsuchte GLM 5.2 das Web, las CSS- und SVG-Filter-Workarounds, reverse-engineerte den Effekt und lieferte eine funktionierende browserübergreifende Implementierung, die auf der Live-Seite ausgerollt wurde. Kimi K2.7 und parallele Sub-Agenten unterstützten die breitere Überarbeitung.
+
+Type: Demo | Date: 2026-07-12
 
 ---
 

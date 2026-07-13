@@ -36,7 +36,7 @@
 
 ## 📊 总览
 
-- **209 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
+- **210 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
 - 覆盖基准与前沿评测、编码代理与长上下文工作流、上手演示与作品展示、供应商与工具集成、成本、定价与本地部署、限制、注意事项与安全信号。
 - 每个案例都包含原始来源、创作者署名、简洁的使用结论、证据类型和发布日期。
 - 你可以用这个 repo 查找实用工作流、比较优势和限制、发现供应商路径，并跟踪真实上手实验。
@@ -79,7 +79,7 @@ curl --request POST \
 | 章节 | 案例 |
 |---|---|
 | [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
-| [💻 编码代理与长上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
+| [💻 编码代理与长上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210 |
 | [🎮 上手演示与作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
 | [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
 | [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
@@ -134,6 +134,7 @@ curl --request POST \
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
 | [Case 168: Synthwave Hard-Slice Ensemble 售价 2.66 美元](#case-168) | 如果你想把 GLM-5.2 放进多模型 coding ensemble，而不是单独使用，可以看这个案例，因为 TracNetwork 表示一个含 GLM 的 Synthwave 组合在 LiveCodeBench hard 上以约 2.66 美元拿到 46.3%，并超过每个单独 generator。 | Integration |
+| [Case 210: Spettro 的 Liquid Glass 多代理改版](#case-210) | 如果你想把 GLM-5.2 当成一个研究密集型 frontend fixer，放进多代理网站改版流程里测试，可以看这个案例，因为 spettrotoken 表示在 Fable 5 和 GPT-5.5 都失败之后，GLM 5.2 通过整合好的 web scraping 和 data fetching 工具，做出了可在 Firefox 运行的跨浏览器 Liquid Glass 实现。 | Demo |
 | [Case 194: CuTeDSL 内核技能开源](#case-194) | 如果你想研究 GLM-5.2 在可复用 kernel 调试 skill 里的表现，可以看这个案例，因为作者把一个 CuTeDSL 的 Hermes skill 开源出来，并明确说 GLM-5.2 在调试和编写 kernels 时特别省成本。 | Tutorial |
 | [Case 180: Hermes SSD 恢复技能循环](#case-180) | 如果你想在面向修复的 agent loop 里测试 GLM-5.2，可以看这个案例，因为 ShankhadeepSho1 说 Hermes 加 GLM 5.2 诊断了一块故障 NAS SSD，修好了问题，然后把修复方案封装成了可复用 skill。 | Demo |
 | [Case 174: 角色路由的重型编码器堆栈](#case-174) | 如果你想把 GLM-5.2 放进一套按角色路由的个人 stack，专门承担更重的 coding 工作，可以看这个案例，因为 denizirgin 表示，在用 Codex 和 OpenCode 测了一个月之后，他把更重的 coding work 交给了 GLM 5.2，同时把总月预算控制在 120 到 140 美元左右。 | Evaluation |
@@ -737,6 +738,17 @@ Type: Benchmark | Date: 2026-06-24
 TracNetwork 表示，他们通过 OpenRouter 建立了一个 Synthwave ensemble，用 qwen3-coder-next 当 synthesizer，并以 GLM-5.2、qwen3.5-122b、qwen3-coder-next 作为 coding generator。在 82 个 LiveCodeBench hard 任务上，贴文报告成绩为 46.3%，成本约 2.66 美元，且没有任何单一 generator 能单独达到这个分数。这是一个具体例子，说明 GLM-5.2 适合作为成本导向 ensemble 的一员，而不一定要当唯一的 coding model。
 
 Type: Integration | Date: 2026-07-03
+
+---
+
+<a id="case-210"></a>
+### Case 210: [Spettro 的 Liquid Glass 多代理改版](https://x.com/spettrotoken/status/2076330234492698844) (by [@spettrotoken](https://x.com/spettrotoken))
+
+**如果你想把 GLM-5.2 当成一个研究密集型 frontend fixer，放进多代理网站改版流程里测试，可以看这个案例，因为 spettrotoken 表示在 Fable 5 和 GPT-5.5 都失败之后，GLM 5.2 通过整合好的 web scraping 和 data fetching 工具，做出了可在 Firefox 运行的跨浏览器 Liquid Glass 实现。**
+
+spettrotoken 表示，一次真实上线中的 Spettro 网站改版被拆成四个 Spettro instance，各自负责不同的 frontend 区块，而 GLM-5.2 则负责最难的视觉组件：一个通常会在 Firefox 坏掉的折射式 Liquid Glass 效果。帖子指出，GLM 5.2 会自行搜索 web、阅读 CSS 和 SVG filter workaround、逆向拆解这个效果，最后交付一个已部署到 live site 的可用跨浏览器实现；更大范围的改版则还有 Kimi K2.7 与并行 sub-agent 一起支持。
+
+Type: Demo | Date: 2026-07-12
 
 ---
 

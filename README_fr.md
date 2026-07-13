@@ -36,7 +36,7 @@ Chaque titre de cas renvoie à sa source publique et chaque auteur renvoie au pr
 
 ## 📊 Vue d’ensemble
 
-- **209 cas GLM-5.2 sélectionnés** provenant de créateurs publics, équipes de benchmark, développeurs d’outils, fournisseurs et utilisateurs de terrain.
+- **210 cas GLM-5.2 sélectionnés** provenant de créateurs publics, équipes de benchmark, développeurs d’outils, fournisseurs et utilisateurs de terrain.
 - Couvre les évaluations comparatives et l’évaluation des modèles de pointe, les agents de code et les flux de travail à long contexte, les démos pratiques et exemples, les intégrations fournisseurs et outils, les coûts, les prix et le déploiement local, ainsi que les limites, avertissements et signaux de sécurité.
 - Chaque cas inclut la source d’origine, l’attribution du créateur, un takeaway d’usage concis, le type de preuve et la date de publication.
 - Utilisez ce repo pour trouver des workflows pratiques, comparer les forces et limites, découvrir des routes fournisseur et suivre des expériences réelles.
@@ -79,7 +79,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 | Section | Cas |
 |---|---|
 | [📏 Évaluations comparatives et modèles de pointe](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
-| [💻 Agents de code et flux de travail à long contexte](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
+| [💻 Agents de code et flux de travail à long contexte](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210 |
 | [🎮 Démos pratiques et exemples](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
 | [🔌 Intégrations fournisseurs et outils](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
 | [💸 Coût, prix et déploiement local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
@@ -141,6 +141,7 @@ Référence complète de l’API GLM-5.2 : [Ouvrir la documentation API GLM-5.2]
 | Cas | Point clé | Type |
 |---|---|---|
 | [Case 168: Ensemble Synthwave Hard-Slice à 2,66 $](#case-168) | Utilisez ce cas pour tester GLM-5.2 dans un ensemble de coding multi-modèle plutôt que seul, car TracNetwork rapporte qu'un mix Synthwave basé sur GLM a atteint 46.3 pour cent sur LiveCodeBench hard pour environ 2,66 dollars et a battu chaque générateur pris séparément. | Integration |
+| [Case 210: Refonte multi-agents Liquid Glass de Spettro](#case-210) | Utilisez ce cas pour tester GLM-5.2 comme réparateur frontend très orienté recherche dans une refonte web multi-agents, car spettrotoken dit que GLM 5.2 a utilisé des outils intégrés de web scraping et de data fetching pour livrer une implémentation Liquid Glass cross-browser qui fonctionnait dans Firefox après l'échec de Fable 5 et GPT-5.5. | Demo |
 | [Case 194: Compétence du noyau CuTeDSL Open Source](#case-194) | Utilisez ce cas pour étudier GLM-5.2 dans une skill réutilisable de débogage de kernels, car l’auteur a open-sourcé une skill Hermes pour CuTeDSL et dit que GLM-5.2 était particulièrement efficace en coût pour déboguer et écrire des kernels. | Tutorial |
 | [Case 180: Boucle de compétences de récupération SSD Hermes](#case-180) | Utilisez ce cas pour tester GLM-5.2 dans une boucle d’agent orientée réparation, car ShankhadeepSho1 dit que Hermes plus GLM 5.2 a diagnostiqué un SSD de NAS en panne, corrigé le problème puis empaqueté la solution sous forme de skill réutilisable. | Demo |
 | [Case 174: Pile de codeurs robustes avec routage de rôles](#case-174) | Utilisez ce cas pour placer GLM-5.2 comme coder lourd dans une pile personnelle routée par rôles, car denizirgin dit qu’un mois de tests avec Codex et OpenCode l’a amené à envoyer le coding work le plus lourd vers GLM 5.2 tout en gardant le budget mensuel total autour de 120 à 140 dollars. | Evaluation |
@@ -812,6 +813,17 @@ Type: Demo | Date: 2026-06-23
 TracNetwork dit avoir utilisé OpenRouter pour construire un ensemble Synthwave avec qwen3-coder-next comme synthétiseur, puis GLM-5.2, qwen3.5-122b et qwen3-coder-next comme générateurs de code. Sur 82 tâches LiveCodeBench hard, le post rapporte 46.3 pour cent pour environ 2,66 dollars et affirme qu'aucun générateur individuel n'a atteint ce score seul. C'est un exemple concret de GLM-5.2 utilisé comme membre d'un ensemble optimisé pour le coût plutôt qu'en unique modèle de coding.
 
 Type: Integration | Date: 2026-07-03
+
+---
+
+<a id="case-210"></a>
+### Case 210: [Refonte multi-agents Liquid Glass de Spettro](https://x.com/spettrotoken/status/2076330234492698844) (by [@spettrotoken](https://x.com/spettrotoken))
+
+**Utilisez ce cas pour tester GLM-5.2 comme réparateur frontend très orienté recherche dans une refonte web multi-agents, car spettrotoken dit que GLM 5.2 a utilisé des outils intégrés de web scraping et de data fetching pour livrer une implémentation Liquid Glass cross-browser qui fonctionnait dans Firefox après l'échec de Fable 5 et GPT-5.5.**
+
+spettrotoken explique qu'une refonte en production du site Spettro a été répartie entre quatre instances Spettro, chacune propriétaire d'un secteur frontend différent, tandis que GLM-5.2 gérait le composant visuel le plus difficile : un effet réfractif Liquid Glass qui casse habituellement dans Firefox. Le post dit que GLM 5.2 a exploré le web, lu des contournements CSS et SVG filter, rétroconçu l'effet et livré une implémentation cross-browser fonctionnelle déployée sur le site live, avec Kimi K2.7 et des sous-agents parallèles pour soutenir la refonte plus large.
+
+Type: Demo | Date: 2026-07-12
 
 ---
 

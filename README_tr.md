@@ -36,7 +36,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **209 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **210 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -79,7 +79,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | Bölüm | Vakalar |
 |---|---|
 | [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210 |
 | [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
 | [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
 | [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
@@ -134,6 +134,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | Vaka | Odak | Tür |
 |---|---|---|
 | [Case 168: Synthwave Sert Dilim Topluluğu 2,66 Dolardan](#case-168) | Bu vakayı GLM-5.2'yi tek başına değil, çok modelli bir coding ensemble içinde denemek için kullanın; çünkü TracNetwork, GLM tabanlı bir Synthwave karışımının LiveCodeBench hard üzerinde yaklaşık 2,66 dolara 46.3 yüzde aldığını ve tekil generator modellerin her birini geçtiğini bildiriyor. | Integration |
+| [Case 210: Spettro Liquid Glass çok ajanlı yenilemesi](#case-210) | Bu vakayı, multi-agent bir web yenilemesi içinde GLM-5.2'yi araştırma yükü yüksek bir frontend fixer olarak test etmek için kullanın; çünkü spettrotoken, Fable 5 ve GPT-5.5 başarısız olduktan sonra GLM 5.2'nin entegre web scraping ve data fetching araçlarını kullanarak Firefox'ta çalışan cross-browser bir Liquid Glass uygulaması çıkardığını söylüyor. | Demo |
 | [Case 194: CuTeDSL Çekirdek Becerisi Açık Kaynak](#case-194) | Bu vakayı, GLM-5.2’yi yeniden kullanılabilir bir kernel-debugging skill içinde incelemek için kullanın; çünkü yazar CuTeDSL için bir Hermes skill’ini açık kaynak yaptı ve kernel hata ayıklama ile kernel yazımı sırasında GLM-5.2’nin özellikle maliyet verimli olduğunu söyledi. | Tutorial |
 | [Case 180: Hermes SSD Kurtarma Beceri Döngüsü](#case-180) | Bu vakayı, onarım odaklı bir agent loop içinde GLM-5.2’yi test etmek için kullanın; çünkü ShankhadeepSho1, Hermes ile GLM 5.2’nin arızalanan bir NAS SSD’sini teşhis edip sorunu çözdüğünü ve çözümü yeniden kullanılabilir bir skill olarak paketlediğini söylüyor. | Demo |
 | [Case 174: Rol Yönlendirmeli Ağır Hizmet Kodlayıcı Yığını](#case-174) | Bu vakayı, rol bazlı yönlendirilen kişisel bir yığında GLM-5.2yi ağır coding işleri için konumlandırmak üzere kullanın; çünkü denizirgin, Codex ve OpenCode ile geçen bir ayın ardından daha ağır coding workü GLM 5.2ye yönlendirirken aylık toplam bütçeyi 120 ila 140 dolar civarında tuttuğunu söylüyor. | Evaluation |
@@ -737,6 +738,17 @@ Type: Benchmark | Date: 2026-06-24
 TracNetwork, OpenRouter üzerinde qwen3-coder-next'i synthesizer olarak, GLM-5.2 ile qwen3.5-122b ve qwen3-coder-next'i de coding generator olarak kullanan bir Synthwave ensemble kurduğunu söylüyor. 82 LiveCodeBench hard görevinde gönderi yaklaşık 2,66 dolara 46.3 yüzde raporluyor ve tekil generatorların hiçbirinin bu sonuca tek başına ulaşamadığını belirtiyor. Bu, GLM-5.2'nin tek coding modeli değil, maliyet odaklı bir ensemble üyesi olarak kullanılmasına dair somut bir örnek.
 
 Type: Integration | Date: 2026-07-03
+
+---
+
+<a id="case-210"></a>
+### Case 210: [Spettro Liquid Glass çok ajanlı yenilemesi](https://x.com/spettrotoken/status/2076330234492698844) (by [@spettrotoken](https://x.com/spettrotoken))
+
+**Bu vakayı, multi-agent bir web yenilemesi içinde GLM-5.2'yi araştırma yükü yüksek bir frontend fixer olarak test etmek için kullanın; çünkü spettrotoken, Fable 5 ve GPT-5.5 başarısız olduktan sonra GLM 5.2'nin entegre web scraping ve data fetching araçlarını kullanarak Firefox'ta çalışan cross-browser bir Liquid Glass uygulaması çıkardığını söylüyor.**
+
+spettrotoken, canlı Spettro site yenilemesinin dört Spettro instance'ına bölündüğünü ve her birinin farklı bir frontend bölümünü sahiplendiğini, GLM-5.2'nin ise Firefox'ta genelde bozulan kırılmalı Liquid Glass efektini üstlendiğini söylüyor. Gönderiye göre GLM 5.2 web'i taradı, CSS ve SVG filter workaround'larını okudu, efekti tersine mühendislikle çözdü ve canlı siteye dağıtılan çalışan bir cross-browser uygulama üretti. Daha geniş yenilemede Kimi K2.7 ve paralel sub-agent'lar da destek verdi.
+
+Type: Demo | Date: 2026-07-12
 
 ---
 

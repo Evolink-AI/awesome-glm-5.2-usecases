@@ -36,7 +36,7 @@ Cada título de caso enlaza a su fuente pública y cada usuario enlaza al perfil
 
 ## 📊 Resumen
 
-- **209 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
+- **210 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
 - Cubre evaluaciones comparativas y evaluación de frontera, agentes de código y flujos de contexto largo, demos prácticas y muestras, integraciones de proveedores y herramientas, coste, precios y despliegue local, límites, advertencias y señales de seguridad.
 - Cada caso incluye la fuente original, la atribución del creador, un takeaway de uso conciso, el tipo de evidencia y la fecha de publicación.
 - Usa este repo para encontrar flujos prácticos, comparar fortalezas y límites, descubrir rutas de proveedor y seguir experimentos reales.
@@ -79,7 +79,7 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 | Sección | Casos |
 |---|---|
 | [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
-| [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194 |
+| [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210 |
 | [🎮 Demos prácticas y muestras](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
 | [🔌 Integraciones de proveedores y herramientas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
 | [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
@@ -134,6 +134,7 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 | Caso | Enfoque | Tipo |
 |---|---|---|
 | [Case 168: Conjunto Synthwave Hard-Slice a $ 2,66](#case-168) | Usa este caso para probar GLM-5.2 dentro de un ensemble de coding multi-modelo en vez de usarlo solo, porque TracNetwork informa que una mezcla de Synthwave con GLM logró 46.3 por ciento en LiveCodeBench hard por unos 2.66 dólares y superó a cada generador por separado. | Integration |
+| [Case 210: Renovación multiagente Liquid Glass de Spettro](#case-210) | Usa este caso para probar GLM-5.2 como solucionador de frontend con mucha investigación dentro de una renovación web multiagente, porque spettrotoken dice que GLM 5.2 usó herramientas integradas de web scraping y data fetching para entregar una implementación cross-browser de Liquid Glass que funcionó en Firefox después de que Fable 5 y GPT-5.5 fallaran. | Demo |
 | [Case 194: Habilidad del kernel CuTeDSL de código abierto](#case-194) | Usa este caso para estudiar GLM-5.2 dentro de una skill reutilizable de depuración de kernels, porque el autor liberó una skill de Hermes para CuTeDSL y dice que GLM-5.2 fue especialmente eficiente en coste al depurar y escribir kernels. | Tutorial |
 | [Case 180: Bucle de habilidades de recuperación de SSD de Hermes](#case-180) | Usa este caso para probar GLM-5.2 dentro de un loop de agente orientado a reparación, porque ShankhadeepSho1 dice que Hermes más GLM 5.2 diagnosticó un SSD fallido de un NAS, arregló el problema y empaquetó la solución como una skill reutilizable. | Demo |
 | [Case 174: Pila de codificador de servicio pesado enrutado por roles](#case-174) | Usa este caso para asignar GLM-5.2 como coder pesado dentro de una pila personal con routing por roles, porque denizirgin dice que un mes de pruebas con Codex y OpenCode le llevó a enviar el trabajo de coding más pesado a GLM 5.2 manteniendo el presupuesto mensual total en unos 120 a 140 dólares. | Evaluation |
@@ -737,6 +738,17 @@ Type: Benchmark | Date: 2026-06-24
 TracNetwork dice que usó OpenRouter para construir un ensemble de Synthwave con qwen3-coder-next como sintetizador y GLM-5.2 más qwen3.5-122b y qwen3-coder-next como generadores de código. En 82 tareas hard de LiveCodeBench, la publicación reporta 46.3 por ciento por unos 2.66 dólares y afirma que ninguno de los generadores individuales alcanzó ese resultado. Es un ejemplo concreto de GLM-5.2 como parte de un ensemble orientado al costo y no como único modelo de coding.
 
 Type: Integration | Date: 2026-07-03
+
+---
+
+<a id="case-210"></a>
+### Case 210: [Renovación multiagente Liquid Glass de Spettro](https://x.com/spettrotoken/status/2076330234492698844) (by [@spettrotoken](https://x.com/spettrotoken))
+
+**Usa este caso para probar GLM-5.2 como solucionador de frontend con mucha investigación dentro de una renovación web multiagente, porque spettrotoken dice que GLM 5.2 usó herramientas integradas de web scraping y data fetching para entregar una implementación cross-browser de Liquid Glass que funcionó en Firefox después de que Fable 5 y GPT-5.5 fallaran.**
+
+spettrotoken cuenta que una renovación real del sitio de Spettro se dividió entre cuatro instancias de Spettro, cada una dueña de una parte distinta del frontend, mientras GLM-5.2 se encargó del componente visual más difícil: un efecto refractivo Liquid Glass que normalmente se rompe en Firefox. El post dice que GLM 5.2 rastreó la web, leyó workarounds de filtros CSS y SVG, hizo ingeniería inversa del efecto y entregó una implementación cross-browser que se desplegó en el sitio en producción, con Kimi K2.7 y subagentes en paralelo apoyando la renovación más amplia.
+
+Type: Demo | Date: 2026-07-12
 
 ---
 

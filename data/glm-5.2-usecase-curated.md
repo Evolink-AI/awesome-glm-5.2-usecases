@@ -2,7 +2,7 @@
 
 This file is generated from `README.md` by `scripts/build_curated_data.py`.
 
-- Published cases: 209
+- Published cases: 210
 - Numbering: contiguous set from 1 through the current maximum
 - Policy: every item is source-backed and included in the public README
 
@@ -217,3 +217,4 @@ This file is generated from `README.md` by `scripts/build_curated_data.py`.
 | 207 | Stable Fluids Browser Benchmark | Benchmarks & Frontier Evaluation | Evaluation | 2026-07-10 | [Open source](https://x.com/AlicanKiraz0/status/2075639232169705781) | [@AlicanKiraz0](https://x.com/AlicanKiraz0) |
 | 208 | Open Molecular Viewer Agent Stack | Provider & Tool Integrations | Integration | 2026-07-11 | [Open source](https://x.com/MaziyarPanahi/status/2075913552854933869) | [@MaziyarPanahi](https://x.com/MaziyarPanahi) |
 | 209 | Colibri 25GB RAM Sparse Streaming | Provider & Tool Integrations | Demo | 2026-07-11 | [Open source](https://x.com/techNmak/status/2075872446197158361) | [@techNmak](https://x.com/techNmak) |
+| 210 | Spettro Liquid Glass Multi-Agent Revamp | Coding Agents & Long-Context Workflows | Demo | 2026-07-12 | [Open source](https://x.com/spettrotoken/status/2076330234492698844) | [@spettrotoken](https://x.com/spettrotoken) |
