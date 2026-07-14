@@ -2,7 +2,7 @@
 
 This file is generated from `README.md` by `scripts/build_curated_data.py`.
 
-- Published cases: 210
+- Published cases: 216
 - Numbering: contiguous set from 1 through the current maximum
 - Policy: every item is source-backed and included in the public README
 
@@ -218,3 +218,9 @@ This file is generated from `README.md` by `scripts/build_curated_data.py`.
 | 208 | Open Molecular Viewer Agent Stack | Provider & Tool Integrations | Integration | 2026-07-11 | [Open source](https://x.com/MaziyarPanahi/status/2075913552854933869) | [@MaziyarPanahi](https://x.com/MaziyarPanahi) |
 | 209 | Colibri 25GB RAM Sparse Streaming | Provider & Tool Integrations | Demo | 2026-07-11 | [Open source](https://x.com/techNmak/status/2075872446197158361) | [@techNmak](https://x.com/techNmak) |
 | 210 | Spettro Liquid Glass Multi-Agent Revamp | Coding Agents & Long-Context Workflows | Demo | 2026-07-12 | [Open source](https://x.com/spettrotoken/status/2076330234492698844) | [@spettrotoken](https://x.com/spettrotoken) |
+| 211 | 8xB200 Open-Weight Report Pipeline | Coding Agents & Long-Context Workflows | Demo | 2026-07-13 | [Open source](https://x.com/TheZachMueller/status/2076746035758502275) | [@TheZachMueller](https://x.com/TheZachMueller) |
+| 212 | Dell Hub GLM Agent Tutorial | Coding Agents & Long-Context Workflows | Tutorial | 2026-07-13 | [Open source](https://x.com/juanjucm/status/2076714987569963508) | [@juanjucm](https://x.com/juanjucm) |
+| 213 | LlamaCoder v4 GLM Rebuild | Hands-On Demos & Showcase Builds | Demo | 2026-07-13 | [Open source](https://x.com/nutlope/status/2076722464671793184) | [@nutlope](https://x.com/nutlope) |
+| 214 | Databricks AI Gateway GLM Route | Provider & Tool Integrations | Integration | 2026-07-13 | [Open source](https://x.com/QCXINT_/status/2076490318695088218) | [@QCXINT_](https://x.com/QCXINT_) |
+| 215 | llm-d H200 Prefix-Cache Route | Cost, Pricing & Local Deployment | Integration | 2026-07-13 | [Open source](https://x.com/RedHat_AI/status/2076725768034398513) | [@RedHat_AI](https://x.com/RedHat_AI) |
+| 216 | KV-Cache Debugger Edge-Case Miss | Limits, Caveats & Safety Signals | Evaluation | 2026-07-13 | [Open source](https://x.com/cyrilXBT/status/2076626517757771884) | [@cyrilXBT](https://x.com/cyrilXBT) |

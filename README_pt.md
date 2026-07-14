@@ -36,7 +36,7 @@ Cada título de caso aponta para a fonte pública, e cada autor aponta para o pe
 
 ## 📊 Visão Geral
 
-- **210 casos selecionados de GLM-5.2** de criadores públicos, equipes de benchmark, desenvolvedores de ferramentas, provedores e usuários práticos.
+- **216 casos selecionados de GLM-5.2** de criadores públicos, equipes de benchmark, desenvolvedores de ferramentas, provedores e usuários práticos.
 - Cobre avaliações comparativas e avaliação de fronteira, agentes de código e fluxos de trabalho de contexto longo, demos práticas e mostras, integrações de provedores e ferramentas, custo, preços e implantação local, limites, ressalvas e sinais de segurança.
 - Cada caso inclui a fonte original, a atribuição do criador, um takeaway de uso conciso, o tipo de evidência e a data de publicação.
 - Use este repo para encontrar workflows práticos, comparar pontos fortes e limites, descobrir provedores e acompanhar experimentos reais.
@@ -79,11 +79,11 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 | Seção | Casos |
 |---|---|
 | [📏 Avaliações comparativas e avaliação de fronteira](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
-| [💻 Agentes de código e fluxos de trabalho de contexto longo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210 |
-| [🎮 Demos práticas e mostras](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202 |
-| [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208 |
-| [💸 Custo, preços e implantação local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209 |
-| [🧭 Limites, ressalvas e sinais de segurança](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205 |
+| [💻 Agentes de código e fluxos de trabalho de contexto longo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
+| [🎮 Demos práticas e mostras](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213 |
+| [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214 |
+| [💸 Custo, preços e implantação local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215 |
+| [🧭 Limites, ressalvas e sinais de segurança](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216 |
 | [Repositórios relacionados](#related-repositories) | Rota de API verificada e superfícies adjacentes |
 | [🙏 Agradecimentos](#acknowledge) | Créditos e política de correções |
 
@@ -136,6 +136,8 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 | Caso | Foco | Tipo |
 |---|---|---|
 | [Case 168: Conjunto Synthwave Hard-Slice por US$ 2,66](#case-168) | Use este caso para testar o GLM-5.2 dentro de um ensemble de coding com vários modelos, e não sozinho, porque a TracNetwork informa que uma mistura Synthwave com GLM marcou 46.3 por cento no LiveCodeBench hard por cerca de 2.66 dólares e superou cada gerador individual. | Integration |
+| [Case 212: Tutorial Dell Hub GLM Agent](#case-212) | Use este caso se você quiser montar um coding agent com GLM-5.2 para um workflow de treino open-weight, porque juanjucm ligou uma nova guia que junta a entrada do GLM-5.2-FP8 no catálogo da Dell Enterprise Hub com um passo a passo para construir um agent em torno desse modelo. | Tutorial |
+| [Case 211: Pipeline de relatório open-weight com 8xB200](#case-211) | Use este caso se você quiser colocar o GLM-5.2 como redator principal num pipeline de relatório próximo de implantação local, porque TheZachMueller diz que dividir um nó 8xB200 em 4/4 permitiu usar GLM 5.2 NVFP4 para redação e Kimi K2.7 Code para retrieval, produzindo um relatório de 36 páginas por uma fração do custo da Claude API. | Demo |
 | [Case 210: Reforma multiagente Liquid Glass do Spettro](#case-210) | Use este caso para testar o GLM-5.2 como resolvedor de frontend guiado por pesquisa dentro de uma reforma web multiagente, porque o spettrotoken diz que o GLM 5.2 usou ferramentas integradas de web scraping e data fetching para entregar uma implementação cross-browser de Liquid Glass que funcionou no Firefox depois de Fable 5 e GPT-5.5 falharem. | Demo |
 | [Case 194: Código aberto de habilidades do kernel CuTeDSL](#case-194) | Use este caso para estudar o GLM-5.2 dentro de uma skill reutilizável de depuração de kernels, porque o autor open-sourcou uma skill Hermes para CuTeDSL e diz que o GLM-5.2 foi especialmente eficiente em custo ao depurar e escrever kernels. | Tutorial |
 | [Case 180: Loop de habilidade de recuperação de SSD Hermes](#case-180) | Use este caso para testar o GLM-5.2 dentro de um loop de agente voltado para reparo, porque ShankhadeepSho1 diz que Hermes mais GLM 5.2 diagnosticou um SSD de NAS com falha, corrigiu o problema e empacotou a solução como uma skill reutilizável. | Demo |
@@ -174,6 +176,7 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 213: Reconstrução GLM do LlamaCoder v4](#case-213) | Use este caso se você quiser prototipar um workflow de geração de apps com um único prompt apoiado nos pontos fortes de planning e design do GLM-5.2, porque nutlope diz que o LlamaCoder v4 foi refeito em torno do GLM 5.2, melhorou parsing e planning e agora entrega um renderer WebAssembly dentro de um stack gratuito e open source. | Demo |
 | [Case 202: Vitória do recurso Space Shooter com código de comando](#case-202) | Use este caso para comparar o GLM-5.2 em builds de UI interativa com um único prompt, porque o Command Code executou o mesmo prompt de space shooter retro em Fable 5, GPT 5.5, GLM 5.2 e DeepSeek V4 Pro e colocou o GLM no topo em features por $0.07. | Evaluation |
 | [Case 200: Emulador Nintendo DS ZCode](#case-200) | Use este caso para inspecionar uma build local de coding de longo horizonte, porque o autor executou o GLM-5.2 em ZCode sobre 4x RTX 6000 com o objetivo de construir um emulador de Nintendo DS em C++ a partir do zero. | Demo |
 | [Case 192: Código de comando Flappy Bird UX Split](#case-192) | Use este caso para comparar o GLM-5.2 em tarefas leves de design e jogo, porque o autor passou o mesmo prompt de Flappy Bird pelo Command Code e concluiu que o Fable 5 não foi significativamente melhor em UX apesar de custar quase nove vezes mais do que o GLM-5.2. | Evaluation |
@@ -202,10 +205,12 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 |---|---|---|
 | [Case 170: Acesso plug-and-play gratuito à API NVIDIA](#case-170) | Use este caso para testar o GLM-5.2 rapidamente por meio de um endpoint hospedado sem custo, porque hqmank diz que a NVIDIA abriu uma rota de API compatível com OpenAI e confirmou que ela funcionou como um drop-in plug-and-play. | Integration |
 | [Case 169: Rota do agente de codificação de IA de trabalhadores gratuitos](#case-169) | Use este caso para montar uma rota de GLM-5.2 sem custo para coding agents, porque o tutorial conecta Workers AI ao Claude Code, OpenCode, Cursor e Aider por meio do endpoint compatível com OpenAI `cf/zai-org/glm-5.2`. | Tutorial |
+| [Case 214: Rota GLM pelo Databricks AI Gateway](#case-214) | Use este caso se você quiser testar um caminho gerido e muito rápido de acesso ao GLM-5.2 dentro de agent tooling, porque QCXINT_ mostrou um fluxo com base URL e token próprios do Databricks AI Gateway que expõe uma rota GLM 5.2 aparentemente com 1M de contexto, embora a identidade exata do backend ainda não esteja confirmada. | Integration |
 | [Case 208: Abrir pilha de agentes do visualizador molecular](#case-208) | Use este caso para ligar o GLM-5.2 a um fluxo aberto de inspeção científica, porque MaziyarPanahi combinou GLM-5.2 via Hugging Face Inference Providers com Qwen3-VL em llama.cpp, Mol* e PydanticAI para renderizar e criticar uma estrutura EGFR mais erlotinibe a partir de um único prompt. | Integration |
 | [Case 204: Linha de base de custos do Perplexity Advisor WANDR](#case-204) | Use este caso para estimar a economia do GLM-5.2 dentro de um harness de computer use com routing, porque a Perplexity diz que a sua configuração de GLM 5.2 mais advisor marca 2.1x no WANDR contra 6.1x do Opus, com custo médio perto de metade nos benchmarks. | Evaluation |
 | [Case 203: Roteamento de artefatos abertos do colega de trabalho](#case-203) | Use este caso para levar o GLM-5.2 a workflows empresariais de artifacts, porque a Coworker diz que o Open Artifacts consegue construir docs, decks, PDF, spreadsheets, dashboards e apps enquanto o seu router otimizado corta o uso de tokens em cerca de 5x e continua a oferecer GLM 5.2 alojado nos EUA. | Integration |
 | [Case 201: Fluxo de trabalho de upload de contexto DotCode](#case-201) | Use este caso para dar ao GLM-5.2 mais contexto de projeto dentro de uma sandbox privada de coding, porque o DotCode adicionou suporte para GLM 5.2 juntamente com uploads de screenshots, imagens, CSV, PDF, ficheiros source e ZIP que entram no mesmo workflow de filesystem e terminal. | Integration |
+| [Case 215: Rota llm-d H200 com Prefix-Cache](#case-215) | Use este caso se você quiser benchmarkear a economia de serving gerido do GLM-5.2 em H200, porque RedHat_AI diz que a combinação de Wide EP com prefix-cache routing no llm-d alcançou mais de 90 por cento de cache reuse, TTFT abaixo de 3 segundos e cerca de 2 dólares por milhão de output tokens numa rota GLM-5.2 de mais de 700B. | Integration |
 | [Case 209: Colibri 25 GB de RAM com streaming esparso](#case-209) | Use este caso para entender o novo piso prático da implantação local do GLM-5.2, porque techNmak detalha como o Colibrì executa o MoE 744B com cerca de 25 GB de RAM por streaming de especialistas a partir de NVMe, embora a menor configuração chegue apenas a algo em torno de 0,05 a 0,1 tok/s. | Demo |
 | [Case 206: Rendimento de produção SGLang NVFP4](#case-206) | Use este caso para dimensionar serving de produção com SGLang para GLM-5.2 NVFP4, porque o release oficial do SGLang v0.5.15 diz que agora atinge mais de 500 tok/s por utilizador em 8x B300 e 450 em 4x GB300 com batch size 1. | Evaluation |
 | [Case 198: Ponto final GLM gratuito Dahl 100M](#case-198) | Use este caso para experimentar o GLM-5.2 por uma rota OpenAI-compatible sem cartão, porque a Dahl Inference oferece 100M de tokens grátis para GLM 5.2 FP8 e mostra como criar uma chave e chamar `/v1/chat/completions`. | Tutorial |
@@ -303,6 +308,7 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 216: Falha silenciosa no KV-Cache Debugger](#case-216) | Use este caso se você quiser testar o GLM-5.2 diante de entradas contraditórias e não apenas em números de benchmark limpos, porque cyrilXBT mostrou uma comparação direta em que o GLM acertou a configuração limpa, mas deixou passar uma variável ruim e devolveu um preset 2.667x incorreto sem qualquer aviso. | Evaluation |
 | [Case 205: Faltas no executor de reescrita de HTML estático](#case-205) | Use este caso para evitar dar ao GLM-5.2 controlo total como executor em reescritas legacy 1:1, porque uma migração grande de HTML estático para React e Vite falhou demasiados detalhes com OpenCode Go e Cline, levando o autor a confiar mais no GLM como planner do que como executor. | Limit |
 | [Case 197: Composição 47-Lacunas do Agente de Tarefas](#case-197) | Use este caso para perceber onde o GLM-5.2 ainda falha em trabalho real de agentes SaaS, porque a Composio ligou-o a 17 ferramentas em 47 tarefas e encontrou 45 acertos, com falhas em verificações de completude e em julgamentos ambíguos de SLA. | Evaluation |
 | [Case 163: Paridade preliminar de pesquisa cibernética](#case-163) | Use este caso para medir o GLM-5.2 em subtarefas de pesquisa de vulnerabilidades, porque a Irregular relata avaliações internas iniciais comparáveis ao GPT-5.4 e ao Opus 4.6 em uma suite cyber estreita, ao mesmo tempo em que avisa que cenários de ataque end-to-end ainda não foram testados. | Limit |
@@ -763,6 +769,28 @@ Type: Integration | Date: 2026-07-03
 
 ---
 
+<a id="case-212"></a>
+### Case 212: [Tutorial Dell Hub GLM Agent](https://x.com/juanjucm/status/2076714987569963508) (by [@juanjucm](https://x.com/juanjucm))
+
+**Use este caso se você quiser montar um coding agent com GLM-5.2 para um workflow de treino open-weight, porque juanjucm ligou uma nova guia que junta a entrada do GLM-5.2-FP8 no catálogo da Dell Enterprise Hub com um passo a passo para construir um agent em torno desse modelo.**
+
+juanjucm diz que escreveu uma guia pública para montar um coding agent baseado em GLM-5.2 capaz de treinar dois language models pequenos, e conectou esse tutorial à entrada do GLM-5.2-FP8 no catálogo da Dell Enterprise Hub. O artigo no Hugging Face fornece a parte prática, enquanto o post enquadra o stack como uma rota open-weight para treino hands-on e experimentos com agents, e não como um simples anúncio de disponibilidade.
+
+Type: Tutorial | Date: 2026-07-13
+
+---
+
+<a id="case-211"></a>
+### Case 211: [Pipeline de relatório open-weight com 8xB200](https://x.com/TheZachMueller/status/2076746035758502275) (by [@TheZachMueller](https://x.com/TheZachMueller))
+
+**Use este caso se você quiser colocar o GLM-5.2 como redator principal num pipeline de relatório próximo de implantação local, porque TheZachMueller diz que dividir um nó 8xB200 em 4/4 permitiu usar GLM 5.2 NVFP4 para redação e Kimi K2.7 Code para retrieval, produzindo um relatório de 36 páginas por uma fração do custo da Claude API.**
+
+TheZachMueller explica que, depois de passar um fim de semana ajustando a configuração, moveu um workflow real de trabalho do Claude Code para Pi dot dev com um stack open-weight. A configuração publicada divide um nó 8xB200 em duas metades: GLM 5.2 NVFP4 como agent principal e driver, e Kimi K2.7 Code como retriever. O resultado foi um relatório de 36 páginas, contra 21 páginas na versão com Claude. O post também deixa o tradeoff claro: o tempo total subiu de cerca de 20 minutos para algo entre 30 e 40 minutos, e a maior melhoria de qualidade veio de parar de resumir repetidamente os artigos-fonte e guardar os textos completos em disco para retrieval mais profundo.
+
+Type: Demo | Date: 2026-07-13
+
+---
+
 <a id="case-210"></a>
 ### Case 210: [Reforma multiagente Liquid Glass do Spettro](https://x.com/spettrotoken/status/2076330234492698844) (by [@spettrotoken](https://x.com/spettrotoken))
 
@@ -1124,6 +1152,17 @@ Type: Evaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Demos práticas e mostras
+<a id="case-213"></a>
+### Case 213: [Reconstrução GLM do LlamaCoder v4](https://x.com/nutlope/status/2076722464671793184) (by [@nutlope](https://x.com/nutlope))
+
+**Use este caso se você quiser prototipar um workflow de geração de apps com um único prompt apoiado nos pontos fortes de planning e design do GLM-5.2, porque nutlope diz que o LlamaCoder v4 foi refeito em torno do GLM 5.2, melhorou parsing e planning e agora entrega um renderer WebAssembly dentro de um stack gratuito e open source.**
+
+nutlope diz que o LlamaCoder v4 agora gira em torno do GLM 5.2, trocou a camada de UI para Base UI with shadcn, melhorou parsing, planning e app design e adicionou um renderer baseado em WebAssembly. O projeto é apresentado como gratuito, open source e powered by Together, então aqui há uma demo concreta e utilizável, e não apenas uma opinião vaga sobre qualidade de modelo.
+
+Type: Demo | Date: 2026-07-13
+
+---
+
 <a id="case-202"></a>
 ### Case 202: [Vitória do recurso Space Shooter com código de comando](https://x.com/CommandCodeAI/status/2075264795817972107) (by [@CommandCodeAI](https://x.com/CommandCodeAI))
 
@@ -1379,6 +1418,17 @@ Type: Tutorial | Date: 2026-07-03
 
 ---
 
+<a id="case-214"></a>
+### Case 214: [Rota GLM pelo Databricks AI Gateway](https://x.com/QCXINT_/status/2076490318695088218) (by [@QCXINT_](https://x.com/QCXINT_))
+
+**Use este caso se você quiser testar um caminho gerido e muito rápido de acesso ao GLM-5.2 dentro de agent tooling, porque QCXINT_ mostrou um fluxo com base URL e token próprios do Databricks AI Gateway que expõe uma rota GLM 5.2 aparentemente com 1M de contexto, embora a identidade exata do backend ainda não esteja confirmada.**
+
+QCXINT_ descreve um fluxo bastante concreto: criar um workspace no Databricks, abrir User Settings, gerar um access token com scope de AI Gateway, copiar a AI Gateway base URL da organização e chamar o endpoint exposto a partir de ferramentas como OpenClaw ou Hermes. Segundo o post, nos testes atuais só aparecia GLM-5.2, a velocidade parecia anormalmente alta e a rota aparentava suportar até 1M de contexto; ainda assim, o próprio autor alerta que não confirmou se o backend é exatamente o modelo GLM-5.2 anunciado.
+
+Type: Integration | Date: 2026-07-13
+
+---
+
 <a id="case-208"></a>
 ### Case 208: [Abrir pilha de agentes do visualizador molecular](https://x.com/MaziyarPanahi/status/2075913552854933869) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
 
@@ -1421,6 +1471,17 @@ O DotCode diz que o GLM 5.2 agora funciona com uploads contextuais de workspace 
 Type: Integration | Date: 2026-07-08
 
 ---
+<a id="case-215"></a>
+### Case 215: [Rota llm-d H200 com Prefix-Cache](https://x.com/RedHat_AI/status/2076725768034398513) (by [@RedHat_AI](https://x.com/RedHat_AI))
+
+**Use este caso se você quiser benchmarkear a economia de serving gerido do GLM-5.2 em H200, porque RedHat_AI diz que a combinação de Wide EP com prefix-cache routing no llm-d alcançou mais de 90 por cento de cache reuse, TTFT abaixo de 3 segundos e cerca de 2 dólares por milhão de output tokens numa rota GLM-5.2 de mais de 700B.**
+
+Red Hat AI aponta para uma explicação de robertshaw21 no vLLM Office Hours sobre uma implantação de GLM-5.2 com mais de 700B a correr em H200. O post atribui tanto o cache reuse acima de 90 por cento quanto o TTFT abaixo de 3 segundos ao routing com Wide EP e consciência de prefix cache no llm-d, e ainda compara cerca de 2 dólares por milhão de output tokens com 4.40 dólares na API hosted. É uma boa referência para comparar um stack próprio de routing com o uso direto do modelo hospedado.
+
+Type: Integration | Date: 2026-07-13
+
+---
+
 <a id="case-209"></a>
 ### Case 209: [Colibri 25 GB de RAM com streaming esparso](https://x.com/techNmak/status/2075872446197158361) (by [@techNmak](https://x.com/techNmak))
 
@@ -2367,6 +2428,17 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Limites, ressalvas e sinais de segurança
+<a id="case-216"></a>
+### Case 216: [Falha silenciosa no KV-Cache Debugger](https://x.com/cyrilXBT/status/2076626517757771884) (by [@cyrilXBT](https://x.com/cyrilXBT))
+
+**Use este caso se você quiser testar o GLM-5.2 diante de entradas contraditórias e não apenas em números de benchmark limpos, porque cyrilXBT mostrou uma comparação direta em que o GLM acertou a configuração limpa, mas deixou passar uma variável ruim e devolveu um preset 2.667x incorreto sem qualquer aviso.**
+
+cyrilXBT não mostra um vibe test, mas sim um artifact concreto: um KV-cache debugger em HTML de ficheiro único, com fórmula precisa, cinco presets, uma testing API e 11 verificações objetivas de correção sobre GPT-5.6 Sol, Fable 5, Grok 4.5 e GLM 5.2. O post diz que os quatro modelos acertaram as configurações limpas, mas o GLM 5.2 deixou escapar um caminho contraditório e produziu um preset 2.667x errado sem emitir warning. Isso o transforma num sinal prático de limitação para qualquer UI tool-like que precise de validação defensiva.
+
+Type: Evaluation | Date: 2026-07-13
+
+---
+
 <a id="case-205"></a>
 ### Case 205: [Faltas no executor de reescrita de HTML estático](https://x.com/petruknisme/status/2075092910182387759) (by [@petruknisme](https://x.com/petruknisme))
 
@@ -2635,7 +2707,7 @@ Este repositório foi inspirado por criadores públicos, desenvolvedores, equipe
 
 Agradecemos a estes criadores e fontes de alto sinal representados aqui: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG), [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi), [@alighodsi](https://x.com/alighodsi), [@composio](https://x.com/composio), [@pengsonal](https://x.com/pengsonal), [@EpochAIResearch](https://x.com/EpochAIResearch), [@stagedhappen](https://x.com/stagedhappen).
 
-Criadores adicionados recentemente: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy).
+Criadores adicionados recentemente: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 
