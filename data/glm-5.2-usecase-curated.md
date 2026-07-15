@@ -2,7 +2,7 @@
 
 This file is generated from `README.md` by `scripts/build_curated_data.py`.
 
-- Published cases: 216
+- Published cases: 222
 - Numbering: contiguous set from 1 through the current maximum
 - Policy: every item is source-backed and included in the public README
 
@@ -224,3 +224,9 @@ This file is generated from `README.md` by `scripts/build_curated_data.py`.
 | 214 | Databricks AI Gateway GLM Route | Provider & Tool Integrations | Integration | 2026-07-13 | [Open source](https://x.com/QCXINT_/status/2076490318695088218) | [@QCXINT_](https://x.com/QCXINT_) |
 | 215 | llm-d H200 Prefix-Cache Route | Cost, Pricing & Local Deployment | Integration | 2026-07-13 | [Open source](https://x.com/RedHat_AI/status/2076725768034398513) | [@RedHat_AI](https://x.com/RedHat_AI) |
 | 216 | KV-Cache Debugger Edge-Case Miss | Limits, Caveats & Safety Signals | Evaluation | 2026-07-13 | [Open source](https://x.com/cyrilXBT/status/2076626517757771884) | [@cyrilXBT](https://x.com/cyrilXBT) |
+| 217 | EvalPlus Rescue Route Beats Fable | Benchmarks & Frontier Evaluation | Evaluation | 2026-07-14 | [Open source](https://x.com/gmi_cloud/status/2077124979397947824) | [@gmi_cloud](https://x.com/gmi_cloud) |
+| 218 | OpenCode Portfolio And OS Rebuild | Hands-On Demos & Showcase Builds | Demo | 2026-07-14 | [Open source](https://x.com/MarkSShenouda/status/2077032282141978842) | [@MarkSShenouda](https://x.com/MarkSShenouda) |
+| 219 | Katana USDC GLM Access Route | Provider & Tool Integrations | Integration | 2026-07-14 | [Open source](https://x.com/imgn_ai/status/2077061568068465148) | [@imgn_ai](https://x.com/imgn_ai) |
+| 220 | OpenMed De-ID Clinical Agent | Provider & Tool Integrations | Integration | 2026-07-14 | [Open source](https://x.com/MaziyarPanahi/status/2077000157103898789) | [@MaziyarPanahi](https://x.com/MaziyarPanahi) |
+| 221 | SGLang TopK-V2 B300 Agentic Serve | Cost, Pricing & Local Deployment | Evaluation | 2026-07-14 | [Open source](https://x.com/lmsysorg/status/2077076059657548127) | [@lmsysorg](https://x.com/lmsysorg) |
+| 222 | Prod Guardrail Warning For GLM | Limits, Caveats & Safety Signals | Limit | 2026-07-14 | [Open source](https://x.com/mitsuhiko/status/2077056759282151770) | [@mitsuhiko](https://x.com/mitsuhiko) |

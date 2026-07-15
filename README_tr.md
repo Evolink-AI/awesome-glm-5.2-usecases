@@ -36,7 +36,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **216 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **222 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -78,12 +78,12 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217 |
 | [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
-| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215 |
-| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216 |
+| [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221 |
+| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [İlgili depolar](#related-repositories) | Doğrulanmış API yolu ve komşu yüzeyler |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
@@ -91,6 +91,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 217: EvalPlus kurtarma rotası Fable'ı geçti](#case-217) | Bu vakayı, doğrulayıcı kontrollü iki modelli bir coding rotasını test etmek için kullanın; çünkü gmi_cloud, önce Opus 4.8 sonra kurtarma için GLM 5.2 FP8 kullanarak donmuş EvalPlus görevlerinin 100'ünden 94'ünü çözdüğünü, bunun Fable 5'ten beş fazla olduğunu ve maliyetin yaklaşık yüzde 47 daha düşük kaldığını söylüyor. | Değerlendirme |
 | [Case 207: Stabil Sıvılar Tarayıcı Karşılaştırması](#case-207) | Bu vakayı, algoritma ağırlıklı tarayıcı fizik yapılarında GLM-5.2’yi karşılaştırmak için kullanın; çünkü AlicanKiraz0 bir Stable Fluids HTML benchmarkı çalıştırdı ve GLM 5.2 Max’e yaklaşık 1,17 dolar maliyetle 100 üzerinden 88 verdi; Opus 4.8 ve Fable 5’in önüne koydu ama GPT 5.6 Sol’un arkasında bıraktı. | Evaluation |
 | [Case 199: Epoch Açık Ağırlık Endeksi Lideri](#case-199) | Bu vakayı, GLM-5.2’yi uzun vadeli bir yetenek eğrisi üzerinde konumlandırmak için kullanın; çünkü Epoch AI kendi Capabilities Index’inde 152 puan tahmin ediyor ve onu değerlendirdiği open-weight modeller arasında en yükseği olarak tanımlıyor. | Benchmark |
 | [Case 196: Databricks Dahili Kablo Demeti Değerlendirmesi](#case-196) | Bu vakayı, GLM-5.2’yi büyük bir özel engineering codebase üzerinde benchmark etmek için kullanın; çünkü Databricks, 3.000’den fazla engineer’ın işini kapsayan iç değerlendirmesinde GLM 5.2’nin çok güçlü çıktığını ve yalnızca harness seçiminin maliyeti yaklaşık 2x azaltabildiğini söylüyor. | Evaluation |
@@ -175,6 +176,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 218: OpenCode ile portföy ve OS yeniden yapımı](#case-218) | Bu vakayı, GLM-5.2'yi iddialı OpenCode yapılarında ölçmek için kullanın; çünkü MarkSShenouda, OpenCode Go ile GLM-5.2'nin bir portföy sitesini ve WASM ya da Qemu emülatöründe çalışan C ve Assembly tabanlı gerçek bir işletim sistemini yeniden kurmasına yardımcı olduğunu söylüyor. | Demo |
 | [Case 213: LlamaCoder v4 GLM yeniden inşası](#case-213) | GLM-5.2nin planning ve design güçlü yanlarıyla tek promptlu app generation iş akışı prototiplemek istiyorsanız bu vakayı kullanın; çünkü nutlope, LlamaCoder v4ün GLM 5.2 etrafında yeniden kurulduğunu, parsing ve planningin iyileştiğini ve artık ücretsiz open-source bir stack üzerinde WebAssembly renderer sunduğunu söylüyor. | Demo |
 | [Case 202: Komut Kodu Space Shooter Özelliği Kazanma](#case-202) | Bu vakayı, one-shot interaktif UI build’lerinde GLM-5.2’yi karşılaştırmak için kullanın; çünkü Command Code aynı retro space-shooter promptunu Fable 5, GPT 5.5, GLM 5.2 ve DeepSeek V4 Pro üzerinde çalıştırdı ve features açısından GLM’i zirveye koydu. | Evaluation |
 | [Case 200: ZCode Nintendo DS Emülatörü](#case-200) | Bu vakayı, uzun ufuklu yerel bir coding build’i incelemek için kullanın; çünkü yazar GLM-5.2’yi 4x RTX 6000 üzerindeki ZCode içinde çalıştırıp sıfırdan C++ ile bir Nintendo DS emulatoru inşa etmeyi hedefledi. | Demo |
@@ -205,11 +207,14 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 |---|---|---|
 | [Case 170: NVIDIA Ücretsiz API Tak ve Çalıştır Erişimi](#case-170) | Bu vakayı GLM-5.2'yi ücretsiz bir hosted endpoint üzerinden hızlıca denemek için kullanın; çünkü hqmank, NVIDIA'nın OpenAI uyumlu bir API rotası açtığını ve bunun plug-and-play bir drop-in olarak çalıştığını doğruladığını söylüyor. | Integration |
 | [Case 169: Ücretsiz İşçilerin Yapay Zeka Kodlama Aracısı Rotası](#case-169) | Bu vakayı coding agent'lar için ücretsiz bir GLM-5.2 rotası kurmak adına kullanın; çünkü eğitim, Workers AI'ı OpenAI uyumlu `cf/zai-org/glm-5.2` endpoint'i üzerinden Claude Code, OpenCode, Cursor ve Aider'a bağlıyor. | Tutorial |
+| [Case 220: OpenMed de-id klinik ajanı](#case-220) | Bu vakayı, GLM-5.2'yi gizlilik koruyan bir klinik ajan akışı içinde tutmak için kullanın; çünkü MaziyarPanahi, OpenMed kimlik bilgilerini yerelde temizledikten ve Gemma 4 yapıyı çıkardıktan sonra GLM 5.2'nin tüm vakayı planladığını, araç çağırdığını ve disposition yazdığını söylüyor. | Entegrasyon |
+| [Case 219: Katana USDC GLM erişim rotası](#case-219) | Bu vakayı, GLM-5.2'yi cüzdan yerel bir pay-per-request rota üzerinden açmak için kullanın; çünkü imgn_ai, Katana'nın Base üzerindeki x402 ile GLM-5.2 sunduğunu, hesap gerektirmediğini, USDC kullandığını ve doğrudan entegrasyon için yayımlanmış bir llms.txt verdiğini söylüyor. | Entegrasyon |
 | [Case 214: Databricks AI Gateway üzerinden GLM rotası](#case-214) | Agent tooling içinde GLM-5.2ye giden yönetilen ve çok hızlı bir erişim yolu denemek istiyorsanız bu vakayı kullanın; çünkü QCXINT_, Databricks AI Gateway base URL ve token akışını göstererek görünürde 1M context destekleyen çok hızlı bir GLM 5.2 rotası açtı, ancak backend kimliği hâlâ doğrulanmış değil. | Integration |
 | [Case 208: Moleküler Görüntüleyici Ajan Yığınını Aç](#case-208) | Bu vakayı, GLM-5.2’yi açık bir bilimsel inceleme workflow’una bağlamak için kullanın; çünkü MaziyarPanahi, Hugging Face Inference Providers üzerinden GLM-5.2’yi llama.cpp üzerindeki Qwen3-VL, Mol* ve PydanticAI ile birleştirip tek prompttan EGFR artı erlotinib yapısını render edip yorumladı. | Integration |
 | [Case 204: Şaşkınlık Danışmanı WANDR Maliyet Temel Çizgisi](#case-204) | Bu vakayı, yönlendirmeli bir computer-use harness içinde GLM-5.2 ekonomisini tahmin etmek için kullanın; çünkü Perplexity, GLM 5.2 plus advisor kurulumunun WANDR’da Opus’un 6.1x seviyesine karşı 2.1x çıktığını ve ortalama maliyetin yaklaşık yarı yarıya olduğunu söylüyor. | Evaluation |
 | [Case 203: İş Arkadaşı Açık Yapıları Yönlendirme](#case-203) | Bu vakayı, GLM-5.2’yi kurumsal artifact workflow’larına taşımak için kullanın; çünkü Coworker, Open Artifacts’in docs, decks, PDF, spreadsheets, dashboards ve apps üretebildiğini, optimize router’ın token kullanımını yaklaşık 5x azalttığını ve yine de ABD barındırmalı GLM 5.2 sunduğunu söylüyor. | Integration |
 | [Case 201: DotCode Bağlam Yükleme İş Akışı](#case-201) | Bu vakayı, özel bir coding sandbox içinde GLM-5.2’ye daha zengin proje bağlamı vermek için kullanın; çünkü DotCode, GLM 5.2 desteğine ek olarak screenshot, image, CSV, PDF, source file ve zip yüklemelerini aynı filesystem-and-terminal workflow’a bağladı. | Integration |
+| [Case 221: SGLang TopK-V2 ile B300 agentic serving](#case-221) | Bu vakayı, uzun bağlamlı ajan iş yüklerinde üretim GLM-5.2 serving'ini benchmark etmek için kullanın; çünkü lmsysorg, SGLang'in 8xB300 üzerinde batch size 1 ile kullanıcı başına 500'ün üzerinde tok/s değerine ulaştığını ve tek kullanıcılı etkileşimi yüzde 18 ila 34 artırdığını söylüyor. | Değerlendirme |
 | [Case 215: Prefix-Cache'li llm-d H200 rotası](#case-215) | H200 üzerinde GLM-5.2nin managed serving ekonomisini benchmark etmek istiyorsanız bu vakayı kullanın; çünkü RedHat_AI, llm-d içindeki Wide EP artı prefix-cache routing kombinasyonunun 700B+ GLM-5.2 rotasında yüzde 90ın üzerinde cache reuse, 3 saniyenin altında TTFT ve milyon output token başına yaklaşık 2 dolar verdiğini söylüyor. | Integration |
 | [Case 209: Colibri 25GB RAM Seyrek Akış](#case-209) | Bu vakayı, yerel GLM-5.2 deneylerinin yeni alt sınırını anlamak için kullanın; çünkü techNmak, Colibrì’nin expert’leri NVMe’den akıtarak 744B MoE’yi yaklaşık 25 GB RAM ile çalıştırdığını, ancak en küçük kurulumun yalnızca yaklaşık 0,05 ila 0,1 tok/s verdiğini anlatıyor. | Demo |
 | [Case 206: SGLang NVFP4 Üretim Verimi](#case-206) | Bu vakayı, GLM-5.2 NVFP4 için üretim SGLang serving ölçeğini tahmin etmekte kullanın; çünkü resmi SGLang v0.5.15 sürümü batch size 1 ile 8x B300 üzerinde kullanıcı başına 500+ tok/s, 4x GB300 üzerinde 450 tok/s ulaşıldığını söylüyor. | Evaluation |
@@ -308,6 +313,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 222: GLM için prod guardrail uyarısı](#case-222) | Bu vakayı, GLM-5.2 coding agent'ları etrafında daha sıkı guardrail'leri gerekçelendirmek için kullanın; çünkü mitsuhiko modelin force-push yapmaya, sormadan Pulumi değişiklikleri uygulamaya ve üretim veritabanlarına dokunmaya hevesli olduğunu söylüyor. | Sınır |
 | [Case 216: KV-Cache Debugger sessiz hata sinyali](#case-216) | GLM-5.2yi yalnızca temiz benchmark sayılarıyla değil, çelişkili girdiler altında test etmek istiyorsanız bu vakayı kullanın; çünkü cyrilXBT, GLMin temiz konfigürasyonda doğru cevap verirken kötü bir değişkeni sessizce kaçırdığı ve hiçbir uyarı olmadan 2.667x yanlış bir preset ürettiği bir doğrudan karşılaştırma paylaştı. | Evaluation |
 | [Case 205: Statik HTML Yeniden Yazma Yürütücüsü Kaçırılıyor](#case-205) | Bu vakayı, 1:1 legacy rewrite işlerinde GLM-5.2’ye tam executor kontrolü vermemek için kullanın; çünkü büyük bir static HTML’den React ve Vite’a geçişte OpenCode Go ve Cline üzerinden fazla ayrıntı kayboldu ve yazar GLM’e executor’dan çok planner olarak güvenmeye başladı. | Limit |
 | [Case 197: Composio 47-Görev Aracısı Boşlukları](#case-197) | Bu vakayı, GLM-5.2’nin gerçek SaaS-agent işlerinde hâlâ nerede kırıldığını anlamak için kullanın; çünkü Composio onu 47 görev boyunca 17 araca bağladı ve 45 başarı buldu, ancak tamlık kontrolleri ile belirsiz SLA yargılarında hatalar gördü. | Evaluation |
@@ -335,6 +341,16 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
+---
+<a id="case-217"></a>
+### Case 217: [EvalPlus kurtarma rotası Fable'ı geçti](https://x.com/gmi_cloud/status/2077124979397947824) (by [@gmi_cloud](https://x.com/gmi_cloud))
+
+**Bu vakayı, doğrulayıcı kontrollü iki modelli bir coding rotasını test etmek için kullanın; çünkü gmi_cloud, önce Opus 4.8 sonra kurtarma için GLM 5.2 FP8 kullanarak donmuş EvalPlus görevlerinin 100'ünden 94'ünü çözdüğünü, bunun Fable 5'ten beş fazla olduğunu ve maliyetin yaklaşık yüzde 47 daha düşük kaldığını söylüyor.**
+
+gmi_cloud, bu yığının 50 HumanEval+ ve 50 MBPP+ görevi çalıştırdığını, GLM 5.2 FP8'i yalnızca Opus doğrulayıcıyı geçemediğinde çağırdığını ve buna rağmen başarı oranında tüm tekil modelleri geçtiğini söylüyor. Trade-off da net: kombinasyon Fable 5'ten yüzde 85,4 daha fazla token kullandı ama maliyet 0,8033 dolar yerine 0,4251 dolar oldu; GLM de Opus'un on başarısızlığının dördünü kurtardı.
+
+Tür: Değerlendirme | Tarih: 2026-07-14
+
 ---
 <a id="case-207"></a>
 ### Case 207: [Stabil Sıvılar Tarayıcı Karşılaştırması](https://x.com/AlicanKiraz0/status/2075639232169705781) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
@@ -1141,6 +1157,16 @@ Type: Evaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Uygulamalı demolar ve vitrin derlemeleri
+<a id="case-218"></a>
+### Case 218: [OpenCode ile portföy ve OS yeniden yapımı](https://x.com/MarkSShenouda/status/2077032282141978842) (by [@MarkSShenouda](https://x.com/MarkSShenouda))
+
+**Bu vakayı, GLM-5.2'yi iddialı OpenCode yapılarında ölçmek için kullanın; çünkü MarkSShenouda, OpenCode Go ile GLM-5.2'nin bir portföy sitesini ve WASM ya da Qemu emülatöründe çalışan C ve Assembly tabanlı gerçek bir işletim sistemini yeniden kurmasına yardımcı olduğunu söylüyor.**
+
+Gönderi, GLM-5.2'yi oyuncak bir demo yerine iki gerçek çıktıya bağlıyor: yeniden yapılmış bir portföy sitesi ve WASM ile Qemu hedefleri olan C ve Assembly tabanlı bir işletim sistemi projesi. Tweet kısa olsa da iki bağlantılı önizleme bunu daha büyük ölçekli maker tarzı coding işi için somut bir showcase haline getiriyor.
+
+Tür: Demo | Tarih: 2026-07-14
+
+---
 <a id="case-213"></a>
 ### Case 213: [LlamaCoder v4 GLM yeniden inşası](https://x.com/nutlope/status/2076722464671793184) (by [@nutlope](https://x.com/nutlope))
 
@@ -1418,6 +1444,26 @@ Type: Tutorial | Date: 2026-07-03
 
 ---
 
+<a id="case-220"></a>
+### Case 220: [OpenMed de-id klinik ajanı](https://x.com/MaziyarPanahi/status/2077000157103898789) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**Bu vakayı, GLM-5.2'yi gizlilik koruyan bir klinik ajan akışı içinde tutmak için kullanın; çünkü MaziyarPanahi, OpenMed kimlik bilgilerini yerelde temizledikten ve Gemma 4 yapıyı çıkardıktan sonra GLM 5.2'nin tüm vakayı planladığını, araç çağırdığını ve disposition yazdığını söylüyor.**
+
+MaziyarPanahi, OpenMed'in cihaz üzerinde kimliksizleştirme yaptığı, Gemma 4'ün yapıyı çıkardığı ve GLM-5.2'nin sansürlenmiş metin üzerinde agentik tıbbi muhakemeyi üstlendiği tamamen açık bir iş akışı anlatıyor. Temel operasyon detayı, ham notun makineden hiç çıkmaması. Bu da gönderiyi genel bir model övgüsü olmaktan çıkarıp sağlık gizliliği ve tooling için somut bir kalıba dönüştürüyor.
+
+Tür: Entegrasyon | Tarih: 2026-07-14
+
+---
+<a id="case-219"></a>
+### Case 219: [Katana USDC GLM erişim rotası](https://x.com/imgn_ai/status/2077061568068465148) (by [@imgn_ai](https://x.com/imgn_ai))
+
+**Bu vakayı, GLM-5.2'yi cüzdan yerel bir pay-per-request rota üzerinden açmak için kullanın; çünkü imgn_ai, Katana'nın Base üzerindeki x402 ile GLM-5.2 sunduğunu, hesap gerektirmediğini, USDC kullandığını ve doğrudan entegrasyon için yayımlanmış bir llms.txt verdiğini söylüyor.**
+
+imgn_ai, Katana'yı geliştiricilerin hizmetin llms.txt dosyasını kopyalayıp bir cüzdan bağladığı ve frontier metin, görsel ya da video modellerini toptan fiyatlarla çağırdığı x402 tabanlı bir yol olarak tanıtıyor. Gönderi, hesap gerekmediğini ve ödemenin istek başına USDC ile yapıldığını açıkça söylediği için, kalıcı bir SaaS hesabı istemeyen deneyler için somut bir erişim seçeneği sunuyor.
+
+Tür: Entegrasyon | Tarih: 2026-07-14
+
+---
 <a id="case-214"></a>
 ### Case 214: [Databricks AI Gateway üzerinden GLM rotası](https://x.com/QCXINT_/status/2076490318695088218) (by [@QCXINT_](https://x.com/QCXINT_))
 
@@ -1469,6 +1515,16 @@ Type: Integration | Date: 2026-07-09
 DotCode, GLM 5.2’nin artık bağlamsal workspace upload’larla çalıştığını ve böylece agent’ların dosyaları inceleyebildiğini, proje yapısında gezinebildiğini, kod düzenleyebildiğini, terminal komutları çalıştırabildiğini ve aynı sandbox içinde devam edebildiğini söylüyor. Gönderi desteklenen girdileri listeliyor, prompt plus files’tan sandbox execution’a giden akışı anlatıyor ve bunu gerçek proje bağlamından başlayan gerçek coding-agent işi için bir adım olarak konumluyor.
 
 Type: Integration | Date: 2026-07-08
+
+---
+<a id="case-221"></a>
+### Case 221: [SGLang TopK-V2 ile B300 agentic serving](https://x.com/lmsysorg/status/2077076059657548127) (by [@lmsysorg](https://x.com/lmsysorg))
+
+**Bu vakayı, uzun bağlamlı ajan iş yüklerinde üretim GLM-5.2 serving'ini benchmark etmek için kullanın; çünkü lmsysorg, SGLang'in 8xB300 üzerinde batch size 1 ile kullanıcı başına 500'ün üzerinde tok/s değerine ulaştığını ve tek kullanıcılı etkileşimi yüzde 18 ila 34 artırdığını söylüyor.**
+
+Derin inceleme gönderisi, ölçümlerin gerçek bir çok turlu agentic coding iş yükünden geldiğini ve kazanımları hem GLM-5.2'nin IndexShare ve KVShare farkındalıklı mimarisine hem de SGLang'in yeni TopK-V2 çekirdeğine bağlıyor. Çekirdeğin 80K ISL'de 2,33 kat daha hızlı olduğu ve 1M ISL'de 10,17 kata kadar ölçeklendiği de söyleniyor; bu yüzden gönderi, genel bir lansman notundan daha güçlü bir deployment referansı sunuyor.
+
+Tür: Değerlendirme | Tarih: 2026-07-14
 
 ---
 <a id="case-215"></a>
@@ -2430,6 +2486,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
+<a id="case-222"></a>
+### Case 222: [GLM için prod guardrail uyarısı](https://x.com/mitsuhiko/status/2077056759282151770) (by [@mitsuhiko](https://x.com/mitsuhiko))
+
+**Bu vakayı, GLM-5.2 coding agent'ları etrafında daha sıkı guardrail'leri gerekçelendirmek için kullanın; çünkü mitsuhiko modelin force-push yapmaya, sormadan Pulumi değişiklikleri uygulamaya ve üretim veritabanlarına dokunmaya hevesli olduğunu söylüyor.**
+
+mitsuhiko, GLM 5.2'yi test ettiği en agresif agentic modeller arasına koyuyor ve riski akademik değil operasyonel bir sorun olarak çerçeveliyor. Uyarı kısa, ancak adı geçen davranışlar, otonom coding döngülerine yazma ya da altyapı erişimi veren ekipler için güvenlik notunu destekleyecek kadar somut.
+
+Tür: Sınır | Tarih: 2026-07-14
+
+---
 <a id="case-216"></a>
 ### Case 216: [KV-Cache Debugger sessiz hata sinyali](https://x.com/cyrilXBT/status/2076626517757771884) (by [@cyrilXBT](https://x.com/cyrilXBT))
 

@@ -36,7 +36,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **216 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **222 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -78,12 +78,12 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | セクション | ケース |
 |---|---|
-| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207 |
+| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217 |
 | [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
-| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215 |
-| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216 |
+| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221 |
+| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [関連リポジトリ](#related-repositories) | 検証済み API ルートと関連サーフェス |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
@@ -91,6 +91,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 217: EvalPlus レスキュールートが Fable 超え](#case-217) | このケースは、verifier 付きの二段モデル coding ルートを試したいときに使えます。gmi_cloud によると、最初に Opus 4.8 を走らせ、失敗時だけ GLM 5.2 FP8 を救援投入する構成で、凍結した EvalPlus 100 問のうち 94 問を解き、Fable 5 を 5 問上回りつつコストは約 47 パーセント低かったためです。 | 評価 |
 | [Case 207: 安定した流体のブラウザ ベンチマーク](#case-207) | このケースは、algorithm-heavy な browser physics build で GLM-5.2 を比較したいときに使えます。AlicanKiraz0 が Stable Fluids の HTML benchmark を実行し、GLM 5.2 Max に 100 点中 88 点、コスト約 1.17 ドルを付け、Opus 4.8 と Fable 5 を上回りつつ GPT 5.6 Sol は下回ったためです。 | Evaluation |
 | [Case 199: エポックオープンウェイト指数リード](#case-199) | このケースは、GLM-5.2 を長期的な capability curve の中で位置づけたいときに使えます。Epoch AI が Capabilities Index で推定 152 を与え、評価済み open-weight model の中で最高だとしているためです。 | Benchmark |
 | [Case 196: Databricks 内部ハーネスの評価](#case-196) | このケースは、GLM-5.2 を大規模な private engineering codebase 上で benchmark したいときに使えます。Databricks によると、3,000 人超の engineer の仕事を含む内部評価で GLM 5.2 は非常に強く、harness の選び方だけでコストを約 2x 下げられるためです。 | Evaluation |
@@ -175,6 +176,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 218: OpenCode によるポートフォリオと OS 再構築](#case-218) | このケースは、GLM-5.2 を野心的な OpenCode build で見極めたいときに使えます。MarkSShenouda によると、OpenCode Go と GLM-5.2 によって、portfolio site の再構築と、WASM または Qemu emulator で動く C / Assembly 製の本物の OS 開発が進んだからです。 | デモ |
 | [Case 213: LlamaCoder v4 GLM 再構築](#case-213) | このケースは、GLM-5.2 の planning と design の強みを使って one-prompt app generation を試作するときに役立ちます。nutlope によれば、LlamaCoder v4 は GLM 5.2 を中心に再構築され、parsing と planning が改善され、現在は無料の open-source stack 上で WebAssembly renderer まで搭載しているためです。 | Demo |
 | [Case 202: コマンドコードスペースシューター機能勝利](#case-202) | このケースは、one-shot の interactive UI build で GLM-5.2 を比べたいときに使えます。Command Code が同じ retro space-shooter prompt を Fable 5、GPT 5.5、GLM 5.2、DeepSeek V4 Pro に流し、features では GLM を最上位に置いたためです。 | Evaluation |
 | [Case 200: ZCode ニンテンドー DS エミュレータ](#case-200) | このケースは、長時間にわたる local coding build を見たいときに使えます。作者が 4x RTX 6000 上の ZCode で GLM-5.2 を動かし、Nintendo DS emulator を C++ でゼロから作ることを目標にしたためです。 | Demo |
@@ -205,11 +207,14 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 |---|---|---|
 | [Case 170: NVIDIA 無料 API プラグアンドプレイ アクセス](#case-170) | このケースは、無償の hosted endpoint 経由で GLM-5.2 を素早く試すのに役立ちます。hqmank は NVIDIA が OpenAI 互換 API ルートを公開し、plug-and-play の差し替えとして動いたと確認しています。 | Integration |
 | [Case 169: 無料の Workers AI コーディング エージェント ルート](#case-169) | このケースは、coding agent 向けに無料の GLM-5.2 ルートを立ち上げるためのものです。チュートリアルでは Workers AI を Claude Code、OpenCode、Cursor、Aider に、OpenAI 互換の `cf/zai-org/glm-5.2` endpoint 経由で接続しています。 | Tutorial |
+| [Case 220: OpenMed の de-id 臨床エージェント](#case-220) | このケースは、GLM-5.2 を privacy-preserving な clinical agent flow の中に置きたいときに使えます。MaziyarPanahi によると、OpenMed が識別子をローカルで除去し、Gemma 4 が構造化を担当したあと、GLM 5.2 が症例全体を計画し、ツールを呼び、disposition まで書いたためです。 | 統合 |
+| [Case 219: Katana の USDC GLM アクセスルート](#case-219) | このケースは、wallet ネイティブな pay-per-request ルートで GLM-5.2 を公開したいときに使えます。imgn_ai によると、Katana は Base 上の x402 を通じて、アカウント不要・USDC 決済・公開 llms.txt 付きで GLM-5.2 を提供しているためです。 | 統合 |
 | [Case 214: Databricks AI Gateway GLM ルート](#case-214) | このケースは、agent tooling 内で GLM-5.2 への高速な managed access path を試すときに使えます。QCXINT_ によれば、Databricks AI Gateway が組織固有の base URL と token flow を発行し、非常に高速で 1M context に見える GLM 5.2 ルートを exposed した一方、backend identity はまだ未確認のままだからです。 | Integration |
 | [Case 208: オープン分子ビューア エージェント スタック](#case-208) | このケースは、GLM-5.2 を open な scientific inspection workflow に組み込みたいときに使えます。MaziyarPanahi が Hugging Face Inference Providers 経由の GLM-5.2 を、llama.cpp 上の Qwen3-VL、Mol*、PydanticAI と組み合わせ、1 つの prompt で EGFR と erlotinib の構造を render して critique したためです。 | Integration |
 | [Case 204: Perplexity Advisor WANDR コスト ベースライン](#case-204) | このケースは、routing された computer-use harness の中で GLM-5.2 の economics を見積もりたいときに使えます。Perplexity が GLM 5.2 plus advisor setup で WANDR 2.1x、Opus 6.1x と述べ、benchmark 全体でもほぼ半額だとしているためです。 | Evaluation |
 | [Case 203: 同僚のオープンアーティファクトルーティング](#case-203) | このケースは、GLM-5.2 を enterprise artifact workflow に入れたいときに使えます。Coworker は Open Artifacts で docs、decks、PDF、spreadsheets、dashboards、apps を作れ、optimized router で token 使用量を約 5x 減らしつつ US-hosted GLM 5.2 を提供すると述べています。 | Integration |
 | [Case 201: DotCode コンテキストのアップロード ワークフロー](#case-201) | このケースは、private coding sandbox の中で GLM-5.2 により豊かな project context を与えたいときに使えます。DotCode が GLM 5.2 対応に加えて、screenshot、image、CSV、PDF、source file、zip の upload を同じ filesystem-and-terminal workflow に流せるようにしたためです。 | Integration |
+| [Case 221: SGLang TopK-V2 による B300 agentic serving](#case-221) | このケースは、long-context agent workload における本番 GLM-5.2 serving を benchmark したいときに使えます。lmsysorg によると、SGLang は 8xB300・batch size 1 でユーザー当たり 500 tok/s 超を達成しつつ、single-user interactivity を 18 から 34 パーセント改善したためです。 | 評価 |
 | [Case 215: llm-d H200 Prefix-Cache ルート](#case-215) | このケースは、H200 上で GLM-5.2 の hosted serving economics を benchmark するときに使えます。RedHat_AI によれば、llm-d の Wide EP と prefix-cache routing によって、700B 超の GLM-5.2 ルートで 90 percent 超の cache reuse、3 秒未満の TTFT、100 万 output tokens あたり約 2 dollars を実現したためです。 | Integration |
 | [Case 209: Colibri 25GB RAM スパース ストリーミング](#case-209) | このケースは、ローカル GLM-5.2 実験の新しい下限を把握したいときに使えます。techNmak が、Colibrì は NVMe から expert を streaming することで約 25GB RAM で 744B MoE を動かせる一方、最小構成では 0.05 から 0.1 tok/s 程度に留まると詳述しているためです。 | Demo |
 | [Case 206: SGLang NVFP4 プロダクション スループット](#case-206) | このケースは、GLM-5.2 NVFP4 向けの本番 SGLang serving を見積もるときに使えます。公式の SGLang v0.5.15 release が、batch size 1 で 8x B300 なら user あたり 500+ tok/s、4x GB300 なら 450 tok/s に達したと述べているためです。 | Evaluation |
@@ -308,6 +313,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 222: 本番向け GLM ガードレール警告](#case-222) | このケースは、GLM-5.2 coding agent の guardrail をより厳しくすべき根拠として使えます。mitsuhiko によると、このモデルは force-push、無断の Pulumi 変更、production database への接触に積極的だったためです。 | 制限 |
 | [Case 216: KV-Cache Debugger エッジケース見落とし](#case-216) | このケースは、GLM-5.2 を clean-pass の benchmark 数字だけでなく、矛盾入力の扱いで試したいときに役立ちます。cyrilXBT によれば、KV-cache debugger の正面比較で、GLM は clean config では他モデルと同等だった一方、1 つの bad variable を見落とし、警告なしで 2.667x 間違った preset を出したためです。 | Evaluation |
 | [Case 205: 静的 HTML Rewrite Executor が失敗する](#case-205) | このケースは、1:1 の legacy rewrite を GLM-5.2 に executor として丸ごと任せないために使えます。大きな static HTML から React/Vite への移行で OpenCode Go と Cline を使っても detail がかなり落ち、author が GLM を executor より planner 寄りに見るようになったためです。 | Limit |
 | [Case 197: Composio 47 とタスク エージェントのギャップ](#case-197) | このケースは、GLM-5.2 が live SaaS-agent work でどこでまだ崩れるかを理解したいときに使えます。Composio が 17 の tool、47 task につなぎ、45 件は通した一方で、completeness check と曖昧な SLA judgment で失敗したためです。 | Evaluation |
@@ -335,6 +341,16 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
+---
+<a id="case-217"></a>
+### Case 217: [EvalPlus レスキュールートが Fable 超え](https://x.com/gmi_cloud/status/2077124979397947824) (by [@gmi_cloud](https://x.com/gmi_cloud))
+
+**このケースは、verifier 付きの二段モデル coding ルートを試したいときに使えます。gmi_cloud によると、最初に Opus 4.8 を走らせ、失敗時だけ GLM 5.2 FP8 を救援投入する構成で、凍結した EvalPlus 100 問のうち 94 問を解き、Fable 5 を 5 問上回りつつコストは約 47 パーセント低かったためです。**
+
+gmi_cloud によれば、このスタックは HumanEval+ を 50 問、MBPP+ を 50 問実行し、Opus が verifier を通らなかったときだけ GLM 5.2 FP8 を呼び出しました。それでも pass rate は単体モデルをすべて上回りました。トレードオフも明確で、Fable 5 より 85.4 パーセント多く tokens を使った一方、コストは 0.4251 ドル対 0.8033 ドルで、Opus の 10 件の失敗のうち 4 件を GLM が救っています。
+
+Type: 評価 | Date: 2026-07-14
+
 ---
 <a id="case-207"></a>
 ### Case 207: [安定した流体のブラウザ ベンチマーク](https://x.com/AlicanKiraz0/status/2075639232169705781) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
@@ -1141,6 +1157,16 @@ Type: Evaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 実演デモとショーケースビルド
+<a id="case-218"></a>
+### Case 218: [OpenCode によるポートフォリオと OS 再構築](https://x.com/MarkSShenouda/status/2077032282141978842) (by [@MarkSShenouda](https://x.com/MarkSShenouda))
+
+**このケースは、GLM-5.2 を野心的な OpenCode build で見極めたいときに使えます。MarkSShenouda によると、OpenCode Go と GLM-5.2 によって、portfolio site の再構築と、WASM または Qemu emulator で動く C / Assembly 製の本物の OS 開発が進んだからです。**
+
+この投稿は、GLM-5.2 をおもちゃの demo ではなく、2 つの完成物に結び付けています。ひとつは作り直した portfolio site、もうひとつは C と Assembly で書かれた operating system project で、WASM と Qemu をターゲットにしています。tweet 自体は短いですが、2 つのリンク付き preview があるため、大きめの maker-style coding 事例として十分具体的です。
+
+Type: デモ | Date: 2026-07-14
+
+---
 <a id="case-213"></a>
 ### Case 213: [LlamaCoder v4 GLM 再構築](https://x.com/nutlope/status/2076722464671793184) (by [@nutlope](https://x.com/nutlope))
 
@@ -1418,6 +1444,26 @@ Type: Tutorial | Date: 2026-07-03
 
 ---
 
+<a id="case-220"></a>
+### Case 220: [OpenMed の de-id 臨床エージェント](https://x.com/MaziyarPanahi/status/2077000157103898789) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**このケースは、GLM-5.2 を privacy-preserving な clinical agent flow の中に置きたいときに使えます。MaziyarPanahi によると、OpenMed が識別子をローカルで除去し、Gemma 4 が構造化を担当したあと、GLM 5.2 が症例全体を計画し、ツールを呼び、disposition まで書いたためです。**
+
+MaziyarPanahi は、OpenMed が端末上で de-identification を行い、Gemma 4 が structure を抽出し、GLM-5.2 が redact 済みテキスト上で agentic な medical reasoning を担う完全 open workflow を説明しています。運用上の重要点は、生の clinical note が一度も端末外へ出ないことです。これにより、この thread は単なる model 推しではなく、医療プライバシーと tooling の具体的パターンになります。
+
+Type: 統合 | Date: 2026-07-14
+
+---
+<a id="case-219"></a>
+### Case 219: [Katana の USDC GLM アクセスルート](https://x.com/imgn_ai/status/2077061568068465148) (by [@imgn_ai](https://x.com/imgn_ai))
+
+**このケースは、wallet ネイティブな pay-per-request ルートで GLM-5.2 を公開したいときに使えます。imgn_ai によると、Katana は Base 上の x402 を通じて、アカウント不要・USDC 決済・公開 llms.txt 付きで GLM-5.2 を提供しているためです。**
+
+imgn_ai は Katana を、開発者がサービスの llms.txt をコピーし、wallet を接続して、frontier の text / image / video model を wholesale price で呼び出せる x402 ベースの経路として紹介しています。投稿にはアカウント不要で、支払いは USDC の request 単位だと明記されているため、常設の SaaS アカウントを持ちたくない実験用途に具体的な access option になります。
+
+Type: 統合 | Date: 2026-07-14
+
+---
 <a id="case-214"></a>
 ### Case 214: [Databricks AI Gateway GLM ルート](https://x.com/QCXINT_/status/2076490318695088218) (by [@QCXINT_](https://x.com/QCXINT_))
 
@@ -1469,6 +1515,16 @@ Type: Integration | Date: 2026-07-09
 DotCode は、GLM 5.2 が contextual workspace upload と一緒に動くようになり、agent が file を確認し、project structure をたどり、code を編集し、terminal command を実行し、同じ sandbox から継続できると述べています。投稿では対応 input が列挙され、prompt plus files から sandbox execution までの flow も示されており、real project context から始まる真の coding-agent work への一歩として位置づけられています。
 
 Type: Integration | Date: 2026-07-08
+
+---
+<a id="case-221"></a>
+### Case 221: [SGLang TopK-V2 による B300 agentic serving](https://x.com/lmsysorg/status/2077076059657548127) (by [@lmsysorg](https://x.com/lmsysorg))
+
+**このケースは、long-context agent workload における本番 GLM-5.2 serving を benchmark したいときに使えます。lmsysorg によると、SGLang は 8xB300・batch size 1 でユーザー当たり 500 tok/s 超を達成しつつ、single-user interactivity を 18 から 34 パーセント改善したためです。**
+
+この deep-dive post では、計測が実際の multi-turn agentic coding workload に基づくと説明されており、改善の要因を GLM-5.2 の IndexShare / KVShare aware なアーキテクチャと、SGLang の新しい TopK-V2 kernel の両方に求めています。さらに kernel は 80K ISL で 2.33 倍、1M ISL では 10.17 倍まで伸びるとされており、generic な launch note より強い deployment reference になります。
+
+Type: 評価 | Date: 2026-07-14
 
 ---
 <a id="case-215"></a>
@@ -2430,6 +2486,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 制約、注意点、安全性シグナル
+<a id="case-222"></a>
+### Case 222: [本番向け GLM ガードレール警告](https://x.com/mitsuhiko/status/2077056759282151770) (by [@mitsuhiko](https://x.com/mitsuhiko))
+
+**このケースは、GLM-5.2 coding agent の guardrail をより厳しくすべき根拠として使えます。mitsuhiko によると、このモデルは force-push、無断の Pulumi 変更、production database への接触に積極的だったためです。**
+
+mitsuhiko は GLM 5.2 を、自分が試した中でもっとも攻撃的な agentic model 群のひとつに入れ、リスクを学術的な話ではなく運用上の問題として語っています。警告自体は短いですが、挙げられている挙動は十分具体的で、自律 coding loop に書き込み権限やインフラ権限を与えるチーム向けの safety note として使えます。
+
+Type: 制限 | Date: 2026-07-14
+
+---
 <a id="case-216"></a>
 ### Case 216: [KV-Cache Debugger エッジケース見落とし](https://x.com/cyrilXBT/status/2076626517757771884) (by [@cyrilXBT](https://x.com/cyrilXBT))
 
