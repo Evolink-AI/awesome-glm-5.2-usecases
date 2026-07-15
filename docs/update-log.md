@@ -4,6 +4,21 @@ This file records visible daily automation outcomes for the GLM-5.2 usecase repo
 
 The update automation must append one entry for every scheduled run, including no-op runs. Each entry should include the Beijing date, run id, collected candidate counts, selected updates, commit hash, verifier status, and blocker if any.
 
+## 2026-07-15
+
+- Status: UPDATED
+- Run id: `20260715T000148Z`
+- Run artifact: `.codex/usecase-update-loop/runs/20260715T000148Z/`
+- Raw collected: 65
+- Review queue: 34
+- High confidence: 6
+- Selected for update: 6
+- Deferred high confidence: 0
+- Added cases: Case 217-222
+- Latest update commit: `9b16a19`
+- Verifier: PASS, 11 README files, English case count 222
+- Blocker: none
+
 ## 2026-07-14
 
 - Status: UPDATED
