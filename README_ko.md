@@ -36,7 +36,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 ## 📊 개요
 
-- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **222개의 선별된 GLM-5.2 사례**입니다.
+- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **226개의 선별된 GLM-5.2 사례**입니다.
 - 벤치마크와 프런티어 평가, 코딩 에이전트와 장기 컨텍스트 워크플로, 실사용 데모와 쇼케이스 빌드, 공급자 및 도구 통합, 비용, 가격, 로컬 배포, 한계, 주의점, 안전 신호를 다룹니다.
 - 각 사례에는 원본 출처, 작성자 표기, 간결한 활용 포인트, 근거 유형, 게시 날짜가 포함됩니다.
 - 실용 워크플로, 강점과 한계 비교, 공급자 경로, 실제 실험을 찾는 데 사용하세요.
@@ -78,11 +78,11 @@ curl --request POST \
 
 | 섹션 | 사례 |
 |---|---|
-| [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217 |
+| [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223 |
 | [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
 | [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218 |
-| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220 |
-| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221 |
+| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225 |
+| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226 |
 | [🧭 한계, 주의점, 안전 신호](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [관련 저장소](#related-repositories) | 검증된 API 경로와 인접 표면 |
 | [🙏 감사의 말](#acknowledge) | 출처 표기 및 수정 정책 |
@@ -91,6 +91,7 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 223: Intelligence Index 토큰 효율 격차](#case-223) | 이 사례는 장기 benchmark workload에 맞춰 GLM-5.2 예산을 잡을 때 유용합니다. Artificial Analysis에 따르면 GLM-5.2 Max는 Intelligence Index 작업당 평균 약 43K output tokens를 사용했고, Inkling은 25K였으며 Kimi K2.6과 DeepSeek v4 Pro Max도 그보다 적었기 때문입니다. | Evaluation |
 | [Case 217: EvalPlus 구조 루트가 Fable을 앞섬](#case-217) | 이 사례는 verifier 기반 2모델 coding 루트를 시험할 때 유용합니다. gmi_cloud에 따르면 Opus 4.8을 먼저 쓰고 verifier 실패 시 GLM 5.2 FP8을 구조 투입하는 방식으로 고정된 EvalPlus 100개 작업 중 94개를 해결해 Fable 5보다 5개 더 많이 맞히면서도 비용은 약 47퍼센트 낮췄기 때문입니다. | 평가 |
 | [Case 207: 안정적인 유체 브라우저 벤치마크](#case-207) | 이 사례는 알고리즘 비중이 큰 브라우저 물리 빌드에서 GLM-5.2를 비교할 때 유용합니다. AlicanKiraz0가 Stable Fluids HTML benchmark를 실행해 GLM 5.2 Max에 100점 만점 중 88점과 약 1.17달러의 비용을 매겼고, Opus 4.8과 Fable 5를 앞섰지만 GPT 5.6 Sol에는 뒤졌기 때문입니다. | Evaluation |
 | [Case 199: Epoch 공개 가중치 지수 선두](#case-199) | 이 사례는 GLM-5.2를 장기 capability curve 위에 놓고 볼 때 유용합니다. Epoch AI가 Capabilities Index 추정 점수 152를 제시했고, 자신들이 평가한 open-weight 모델 중 최고라고 했기 때문입니다. | Benchmark |
@@ -341,6 +342,16 @@ curl --request POST \
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 벤치마크와 프런티어 평가
+---
+<a id="case-223"></a>
+### Case 223: [Intelligence Index Token Efficiency Gap](https://x.com/ArtificialAnlys/status/2077466596528832678) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**이 사례는 장기 benchmark workload에 맞춰 GLM-5.2 예산을 잡을 때 유용합니다. Artificial Analysis에 따르면 GLM-5.2 Max는 Intelligence Index 작업당 평균 약 43K output tokens를 사용했고, Inkling은 25K였으며 Kimi K2.6과 DeepSeek v4 Pro Max도 그보다 적었기 때문입니다.**
+
+Artificial Analysis는 leaderboard score만이 아니라 output-token usage를 따로 떼어 비교하며, 같은 benchmark family 안에서 GLM-5.2를 open-weight 진영 기준으로는 비용이 높은 편에 놓습니다. 게시물은 평균 output tokens가 Inkling 25K, GLM-5.2 Max 43K, Kimi K2.6 38K, DeepSeek v4 Pro Max 37K라고 제시하므로, GLM의 quality는 높게 보지만 agent loop의 token burn도 예측해야 하는 팀에게 실무적인 efficiency note가 됩니다.
+
+Type: Evaluation | Date: 2026-07-15
+
 ---
 <a id="case-217"></a>
 ### Case 217: [EvalPlus 구조 루트가 Fable을 앞섬](https://x.com/gmi_cloud/status/2077124979397947824) (by [@gmi_cloud](https://x.com/gmi_cloud))
@@ -1422,6 +1433,26 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 공급자 및 도구 통합
+<a id="case-225"></a>
+### Case 225: [TogetherLink Codex Harness Bridge](https://x.com/nutlope/status/2077432463685554558) (by [@nutlope](https://x.com/nutlope))
+
+**이 사례는 기존 coding-agent CLI 안에서 GLM-5.2를 실행할 때 유용합니다. nutlope에 따르면 TogetherLink는 Codex와 Claude Code가 GLM 5.2 같은 open model을 직접 호출할 수 있게 해 주는 open-source CLI이기 때문입니다.**
+
+이 발표는 TogetherLink를, 개발자가 익숙한 coding harness는 유지한 채 하부 모델만 open-weight stack으로 바꾸고 싶을 때 쓰는 bridge layer로 설명합니다. 게시물은 Codex와 Claude Code를 지원 harness로 명시하고 project를 open source로 소개하므로, 기존 terminal workflow를 버리지 않고 GLM-5.2를 시험하려는 팀에게 구체적인 access route가 됩니다.
+
+Type: Integration | Date: 2026-07-15
+
+---
+<a id="case-224"></a>
+### Case 224: [Vorflux Open Model Harness Routing](https://x.com/vorfluxai/status/2077449967711760587) (by [@vorfluxai](https://x.com/vorfluxai))
+
+**이 사례는 custom glue 없이 GLM-5.2를 전체 agent session에 라우팅할 때 유용합니다. vorfluxai에 따르면 Open Model Harness가 Vorflux의 나머지 흐름은 유지한 채 GLM 5.2를 design, build, simplify 단계에 배치하기 때문입니다.**
+
+vorfluxai에 따르면 이 harness는 dropdown 하나로 전체 session을 open models로 전환하면서도 planning, subagents, pull requests, testing에 쓰이는 기존 Vorflux flow는 그대로 유지합니다. 공개된 routing table에서는 DeepSeek V4 Pro가 main, plan, review를 맡고, DeepSeek V4 Flash가 explore를, GLM 5.2가 design, build, simplify를, Kimi 2.7 Code가 debug와 testing을 맡습니다. 따라서 이것은 단순 availability post가 아니라 구체적인 multi-model agent orchestration pattern입니다.
+
+Type: Integration | Date: 2026-07-15
+
+---
 <a id="case-170"></a>
 ### Case 170: [NVIDIA 무료 API 플러그 앤 플레이 액세스](https://x.com/hqmank/status/2072855265612030010) (by [@hqmank](https://x.com/hqmank))
 
@@ -2083,6 +2114,16 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 비용, 가격, 로컬 배포
+<a id="case-226"></a>
+### Case 226: [Bonsai Mac Studio Chart Triage](https://x.com/MaziyarPanahi/status/2077362554805117132) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**이 사례는 긴 clinical chart를 로컬에 둔 채 GLM-5.2가 추론하게 할 때 유용합니다. MaziyarPanahi에 따르면 GLM 5.2가 Mac Studio의 Bonsai 27B를 통해 3년치 patient chart를 triage했고, 17개월 전 묻혀 있던 contrast risk를 찾아냈기 때문입니다.**
+
+MaziyarPanahi에 따르면 292건의 encounter는 llama.cpp, Metal, ternary weights, 약 7.2GB의 local model storage를 사용하는 Mac Studio 안의 Bonsai 27B에 그대로 머물렀고, GLM-5.2는 세 번만 질문할 수 있는 조건에서 eGFR 39의 metformin-plus-iodinated-contrast risk를 식별했습니다. 이 thread는 chart가 기기 밖으로 전혀 나가지 않고 orchestrator도 raw patient data를 만지지 않는 설계라고 설명하므로, 단순한 model endorsement가 아니라 구체적인 local healthcare workflow가 됩니다.
+
+Type: Demo | Date: 2026-07-15
+
+---
 <a id="case-191"></a>
 ### Case 191: [Hermes가 만든 LiteLLM 로컬 연구소](https://x.com/ivanfioravanti/status/2074609005272375329) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
@@ -2774,7 +2815,7 @@ Type: Evaluation | Date: 2026-06-24
 
 여기에 포함된 고신뢰 출처와 크리에이터에게 감사드립니다: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG), [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi), [@alighodsi](https://x.com/alighodsi), [@composio](https://x.com/composio), [@pengsonal](https://x.com/pengsonal), [@EpochAIResearch](https://x.com/EpochAIResearch), [@stagedhappen](https://x.com/stagedhappen).
 
-최근 추가된 크리에이터: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_)。
+최근 추가된 크리에이터: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai)。
 
 *출처 표기에 수정이 필요하면 알려 주세요. 확인 후 업데이트하겠습니다.*
 

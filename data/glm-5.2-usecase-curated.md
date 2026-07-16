@@ -2,7 +2,7 @@
 
 This file is generated from `README.md` by `scripts/build_curated_data.py`.
 
-- Published cases: 222
+- Published cases: 226
 - Numbering: contiguous set from 1 through the current maximum
 - Policy: every item is source-backed and included in the public README
 
@@ -230,3 +230,7 @@ This file is generated from `README.md` by `scripts/build_curated_data.py`.
 | 220 | OpenMed De-ID Clinical Agent | Provider & Tool Integrations | Integration | 2026-07-14 | [Open source](https://x.com/MaziyarPanahi/status/2077000157103898789) | [@MaziyarPanahi](https://x.com/MaziyarPanahi) |
 | 221 | SGLang TopK-V2 B300 Agentic Serve | Cost, Pricing & Local Deployment | Evaluation | 2026-07-14 | [Open source](https://x.com/lmsysorg/status/2077076059657548127) | [@lmsysorg](https://x.com/lmsysorg) |
 | 222 | Prod Guardrail Warning For GLM | Limits, Caveats & Safety Signals | Limit | 2026-07-14 | [Open source](https://x.com/mitsuhiko/status/2077056759282151770) | [@mitsuhiko](https://x.com/mitsuhiko) |
+| 223 | Intelligence Index Token Efficiency Gap | Benchmarks & Frontier Evaluation | Evaluation | 2026-07-15 | [Open source](https://x.com/ArtificialAnlys/status/2077466596528832678) | [@ArtificialAnlys](https://x.com/ArtificialAnlys) |
+| 224 | Vorflux Open Model Harness Routing | Provider & Tool Integrations | Integration | 2026-07-15 | [Open source](https://x.com/vorfluxai/status/2077449967711760587) | [@vorfluxai](https://x.com/vorfluxai) |
+| 225 | TogetherLink Codex Harness Bridge | Provider & Tool Integrations | Integration | 2026-07-15 | [Open source](https://x.com/nutlope/status/2077432463685554558) | [@nutlope](https://x.com/nutlope) |
+| 226 | Bonsai Mac Studio Chart Triage | Cost, Pricing & Local Deployment | Demo | 2026-07-15 | [Open source](https://x.com/MaziyarPanahi/status/2077362554805117132) | [@MaziyarPanahi](https://x.com/MaziyarPanahi) |

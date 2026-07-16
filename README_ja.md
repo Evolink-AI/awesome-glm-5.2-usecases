@@ -36,7 +36,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **222 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **226 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -78,11 +78,11 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | セクション | ケース |
 |---|---|
-| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217 |
+| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223 |
 | [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
 | [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226 |
 | [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [関連リポジトリ](#related-repositories) | 検証済み API ルートと関連サーフェス |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
@@ -91,6 +91,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 223: Intelligence Index のトークン効率ギャップ](#case-223) | このケースは、長期的な benchmark workload 向けに GLM-5.2 の予算を見積もるときに使えます。Artificial Analysis によると、GLM-5.2 Max は Intelligence Index の 1 タスクあたり平均約 43K の output tokens を使い、Inkling は 25K、Kimi K2.6 と DeepSeek v4 Pro Max もそれより少なかったためです。 | Evaluation |
 | [Case 217: EvalPlus レスキュールートが Fable 超え](#case-217) | このケースは、verifier 付きの二段モデル coding ルートを試したいときに使えます。gmi_cloud によると、最初に Opus 4.8 を走らせ、失敗時だけ GLM 5.2 FP8 を救援投入する構成で、凍結した EvalPlus 100 問のうち 94 問を解き、Fable 5 を 5 問上回りつつコストは約 47 パーセント低かったためです。 | 評価 |
 | [Case 207: 安定した流体のブラウザ ベンチマーク](#case-207) | このケースは、algorithm-heavy な browser physics build で GLM-5.2 を比較したいときに使えます。AlicanKiraz0 が Stable Fluids の HTML benchmark を実行し、GLM 5.2 Max に 100 点中 88 点、コスト約 1.17 ドルを付け、Opus 4.8 と Fable 5 を上回りつつ GPT 5.6 Sol は下回ったためです。 | Evaluation |
 | [Case 199: エポックオープンウェイト指数リード](#case-199) | このケースは、GLM-5.2 を長期的な capability curve の中で位置づけたいときに使えます。Epoch AI が Capabilities Index で推定 152 を与え、評価済み open-weight model の中で最高だとしているためです。 | Benchmark |
@@ -341,6 +342,16 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
+---
+<a id="case-223"></a>
+### Case 223: [Intelligence Index Token Efficiency Gap](https://x.com/ArtificialAnlys/status/2077466596528832678) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
+
+**このケースは、長期的な benchmark workload 向けに GLM-5.2 の予算を見積もるときに使えます。Artificial Analysis によると、GLM-5.2 Max は Intelligence Index の 1 タスクあたり平均約 43K の output tokens を使い、Inkling は 25K、Kimi K2.6 と DeepSeek v4 Pro Max もそれより少なかったためです。**
+
+Artificial Analysis は leaderboard score だけでなく output-token usage を切り出して比較しており、同じ benchmark family の中で GLM-5.2 を open-weight 勢としてはコスト高めの側に置いています。投稿では、平均 output tokens が Inkling は 25K、GLM-5.2 Max は 43K、Kimi K2.6 は 38K、DeepSeek v4 Pro Max は 37K とされており、GLM の quality を評価しつつも agent loop の token burn を予測したいチームにとって実務的な efficiency note になります。
+
+Type: Evaluation | Date: 2026-07-15
+
 ---
 <a id="case-217"></a>
 ### Case 217: [EvalPlus レスキュールートが Fable 超え](https://x.com/gmi_cloud/status/2077124979397947824) (by [@gmi_cloud](https://x.com/gmi_cloud))
@@ -1422,6 +1433,26 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 プロバイダ・ツール統合
+<a id="case-225"></a>
+### Case 225: [TogetherLink Codex Harness Bridge](https://x.com/nutlope/status/2077432463685554558) (by [@nutlope](https://x.com/nutlope))
+
+**このケースは、既存の coding-agent CLI の中で GLM-5.2 を動かしたいときに使えます。nutlope によると、TogetherLink は Codex や Claude Code から GLM 5.2 のような open model を直接呼び出せる open-source CLI だからです。**
+
+この告知では、TogetherLink を、開発者が使い慣れた coding harness を保ったまま、下層の model だけを open-weight stack に差し替えるための bridge layer と位置付けています。投稿では Codex と Claude Code を対応 harness として明示し、project を open source だと説明しているため、既存の terminal workflow を捨てずに GLM-5.2 を試したいチームにとって具体的な access route です。
+
+Type: Integration | Date: 2026-07-15
+
+---
+<a id="case-224"></a>
+### Case 224: [Vorflux Open Model Harness Routing](https://x.com/vorfluxai/status/2077449967711760587) (by [@vorfluxai](https://x.com/vorfluxai))
+
+**このケースは、custom glue なしで GLM-5.2 をフル agent session に組み込みたいときに使えます。vorfluxai によると、その Open Model Harness では Vorflux の通常フローを維持したまま、GLM 5.2 を design、build、simplify の各 step に割り当てているためです。**
+
+vorfluxai によると、この harness は dropdown ひとつで session 全体を open models に切り替えつつ、planning、subagents、pull requests、testing では通常の Vorflux flow をそのまま保てます。公開された routing table では、DeepSeek V4 Pro が main、plan、review、DeepSeek V4 Flash が explore、GLM 5.2 が design、build、simplify、Kimi 2.7 Code が debug と testing を担当しており、これは単なる availability post ではなく、具体的な multi-model agent orchestration pattern です。
+
+Type: Integration | Date: 2026-07-15
+
+---
 <a id="case-170"></a>
 ### Case 170: [NVIDIA 無料 API プラグアンドプレイ アクセス](https://x.com/hqmank/status/2072855265612030010) (by [@hqmank](https://x.com/hqmank))
 
@@ -2083,6 +2114,16 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 コスト、価格、ローカル運用
+<a id="case-226"></a>
+### Case 226: [Bonsai Mac Studio Chart Triage](https://x.com/MaziyarPanahi/status/2077362554805117132) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
+
+**このケースは、長い clinical chart をローカルに留めたまま GLM-5.2 に推論させたいときに使えます。MaziyarPanahi によると、GLM 5.2 は Mac Studio 上の Bonsai 27B を通して 3 年分の patient chart を triage し、17 か月前に埋もれていた contrast risk を見つけたためです。**
+
+MaziyarPanahi によると、292 件の encounter は、llama.cpp、Metal、ternary weights、約 7.2GB の local model storage を使う Mac Studio 上の Bonsai 27B の内部に留まり、GLM-5.2 は 3 回だけ質問を許されたうえで、eGFR 39 における metformin と iodinated contrast の併用リスクを特定しました。この thread は、chart が一度もマシン外へ出ず、orchestrator も raw patient data に触れない設計だと説明しており、単なる model endorsement ではなく、具体的な local healthcare workflow になっています。
+
+Type: Demo | Date: 2026-07-15
+
+---
 <a id="case-191"></a>
 ### Case 191: [Hermes が構築した LiteLLM ローカル ラボ](https://x.com/ivanfioravanti/status/2074609005272375329) (by [@ivanfioravanti](https://x.com/ivanfioravanti))
 
@@ -2774,7 +2815,7 @@ Type: Evaluation | Date: 2026-06-24
 
 ここで紹介した高シグナルな情報源とクリエイターに感謝します: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG)., [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi), [@alighodsi](https://x.com/alighodsi), [@composio](https://x.com/composio), [@pengsonal](https://x.com/pengsonal), [@EpochAIResearch](https://x.com/EpochAIResearch), [@stagedhappen](https://x.com/stagedhappen)
 
-最近追加したクリエイター: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_)。
+最近追加したクリエイター: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai)。
 
 *帰属に修正が必要な場合はご連絡ください。確認のうえ更新します。*
 
