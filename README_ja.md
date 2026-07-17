@@ -36,7 +36,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **226 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **234 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -78,11 +78,11 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | セクション | ケース |
 |---|---|
-| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223 |
-| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
-| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218 |
-| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226 |
+| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227 |
+| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228 |
+| [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
+| [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234 |
 | [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [関連リポジトリ](#related-repositories) | 検証済み API ルートと関連サーフェス |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
@@ -91,6 +91,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 227: Gargantua WebGL Raytracer 勝利](#case-227) | このケースは、物理寄りの単一ファイル browser build で GLM-5.2 を benchmark したいときに使えます。AlicanKiraz0 によると、GLM 5.2 Max は Gargantua geodesic raytracer 課題で、数値的正しさと real-time rendering discipline の両立によって比較対象を上回ったためです。 | Evaluation |
 | [Case 223: Intelligence Index のトークン効率ギャップ](#case-223) | このケースは、長期的な benchmark workload 向けに GLM-5.2 の予算を見積もるときに使えます。Artificial Analysis によると、GLM-5.2 Max は Intelligence Index の 1 タスクあたり平均約 43K の output tokens を使い、Inkling は 25K、Kimi K2.6 と DeepSeek v4 Pro Max もそれより少なかったためです。 | Evaluation |
 | [Case 217: EvalPlus レスキュールートが Fable 超え](#case-217) | このケースは、verifier 付きの二段モデル coding ルートを試したいときに使えます。gmi_cloud によると、最初に Opus 4.8 を走らせ、失敗時だけ GLM 5.2 FP8 を救援投入する構成で、凍結した EvalPlus 100 問のうち 94 問を解き、Fable 5 を 5 問上回りつつコストは約 47 パーセント低かったためです。 | 評価 |
 | [Case 207: 安定した流体のブラウザ ベンチマーク](#case-207) | このケースは、algorithm-heavy な browser physics build で GLM-5.2 を比較したいときに使えます。AlicanKiraz0 が Stable Fluids の HTML benchmark を実行し、GLM 5.2 Max に 100 点中 88 点、コスト約 1.17 ドルを付け、Opus 4.8 と Fable 5 を上回りつつ GPT 5.6 Sol は下回ったためです。 | Evaluation |
@@ -136,6 +137,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | ケース | 注目点 | タイプ |
 |---|---|---|
 | [Case 168: Synthwave ハードスライス アンサンブル、$2.66](#case-168) | このケースは、GLM-5.2 を単独ではなく multi-model の coding ensemble に組み込んで試すのに向いています。TracNetwork によれば、GLM を含む Synthwave 構成は LiveCodeBench hard で 46.3 percent を約 2.66 ドルで出し、各 generator 単体を上回りました。 | Integration |
+| [Case 228: OpenCode によるローカル agentic coding 基盤](#case-228) | このケースは、frontier サブスクに課金する前にローカル coding-agent stack を検証したいときに使えます。comma_ai によると、同社は Anthropic を内部スタックから外し、GLM 5.2 と OpenCode の組み合わせで agentic coding がより良く回るようになったためです。 | Demo |
 | [Case 212: Dell Hub GLM Agent チュートリアル](#case-212) | このケースは、open-weight の学習ワークフロー向けに GLM-5.2 coding agent を立ち上げるときに使えます。juanjucm によれば、新しいガイドが Dell Enterprise Hub の GLM-5.2-FP8 カタログ追加と、そのモデルを中心にした agent のセットアップ手順をセットで示しているためです。 | Tutorial |
 | [Case 211: 8xB200 Open-Weight レポートパイプライン](#case-211) | このケースは、GLM-5.2 をローカル寄りのレポート生成パイプラインで main writer に据えるときに役立ちます。TheZachMueller によれば、1 台の 8xB200 ノードを 4/4 に分割し、GLM 5.2 NVFP4 にレポート生成、Kimi K2.7 Code に retrieval を担当させることで、Claude API よりごく小さいコストで、より密度の高い 36 ページのレポートを出せたためです。 | Demo |
 | [Case 210: Spettro の Liquid Glass マルチエージェント刷新](#case-210) | このケースは、multi-agent な web 改修の中で GLM-5.2 を調査負荷の高い frontend fixer として試したいときに役立ちます。spettrotoken によれば、Fable 5 と GPT-5.5 が失敗したあと、GLM 5.2 が統合済みの web scraping と data fetching ツールを使い、Firefox でも動く cross-browser な Liquid Glass 実装を出荷したためです。 | Demo |
@@ -177,6 +179,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 229: Hyperagent プロフィール・ポートフォリオ対決](#case-229) | このケースは、実際の browser-based agent タスクで GLM-5.2 を他の open model と比べたいときに使えます。arsh_goyal によると、GLM 5.2、DeepSeek V4、Kimi K2.6、Qwen 3.7 を Hyperagent 上で並列に走らせ、公開プロフィールから personal portfolio を作らせたためです。 | Demo |
 | [Case 218: OpenCode によるポートフォリオと OS 再構築](#case-218) | このケースは、GLM-5.2 を野心的な OpenCode build で見極めたいときに使えます。MarkSShenouda によると、OpenCode Go と GLM-5.2 によって、portfolio site の再構築と、WASM または Qemu emulator で動く C / Assembly 製の本物の OS 開発が進んだからです。 | デモ |
 | [Case 213: LlamaCoder v4 GLM 再構築](#case-213) | このケースは、GLM-5.2 の planning と design の強みを使って one-prompt app generation を試作するときに役立ちます。nutlope によれば、LlamaCoder v4 は GLM 5.2 を中心に再構築され、parsing と planning が改善され、現在は無料の open-source stack 上で WebAssembly renderer まで搭載しているためです。 | Demo |
 | [Case 202: コマンドコードスペースシューター機能勝利](#case-202) | このケースは、one-shot の interactive UI build で GLM-5.2 を比べたいときに使えます。Command Code が同じ retro space-shooter prompt を Fable 5、GPT 5.5、GLM 5.2、DeepSeek V4 Pro に流し、features では GLM を最上位に置いたためです。 | Evaluation |
@@ -206,6 +209,9 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 232: Macroscope Check Run GLM エージェント](#case-232) | このケースは、PR review agent のコストを下げつつ check-run workflow を維持したいときに使えます。kayvz によると、Macroscope の Check Run Agents は通常の `.md` ベース repo config から GLM 5.2 を選べるようになったためです。 | Integration |
+| [Case 231: Aster の 281 TPS research-agent API](#case-231) | このケースは、高速な hosted GLM-5.2 endpoint を benchmark したいときに使えます。asterailabs によると、Aster Inference は research-agent 最適化由来の API で GLM 5.2 を 281 tokens per second で提供しているためです。 | Integration |
+| [Case 230: TrueFoundry 向けネイティブ Wafer GLM ルート](#case-230) | このケースは、既存の TrueFoundry AI Gateway stack に GLM-5.2 を差し込みたいときに使えます。wafer_ai によると、native provider integration は GLM 5.2 と GLM 5.2 Fast から始まり、残りの gateway stack を変えずに使えるためです。 | Integration |
 | [Case 170: NVIDIA 無料 API プラグアンドプレイ アクセス](#case-170) | このケースは、無償の hosted endpoint 経由で GLM-5.2 を素早く試すのに役立ちます。hqmank は NVIDIA が OpenAI 互換 API ルートを公開し、plug-and-play の差し替えとして動いたと確認しています。 | Integration |
 | [Case 169: 無料の Workers AI コーディング エージェント ルート](#case-169) | このケースは、coding agent 向けに無料の GLM-5.2 ルートを立ち上げるためのものです。チュートリアルでは Workers AI を Claude Code、OpenCode、Cursor、Aider に、OpenAI 互換の `cf/zai-org/glm-5.2` endpoint 経由で接続しています。 | Tutorial |
 | [Case 220: OpenMed の de-id 臨床エージェント](#case-220) | このケースは、GLM-5.2 を privacy-preserving な clinical agent flow の中に置きたいときに使えます。MaziyarPanahi によると、OpenMed が識別子をローカルで除去し、Gemma 4 が構造化を担当したあと、GLM 5.2 が症例全体を計画し、ツールを呼び、disposition まで書いたためです。 | 統合 |
@@ -272,6 +278,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 234: Jatevo 割引 GLM アクセス](#case-234) | このケースは、公開価格付きの hosted GLM-5.2 アクセス経路をすぐに押さえたいときに使えます。JatevoId によると、GLM 5.2 は platform 上で input $1.40 / 1M、output $4.40 / 1M で提供され、対象 JTVO holder には 50% 割引があるためです。 | Integration |
+| [Case 233: MI325x で 0.1 セント未満の GLM serving](#case-233) | このケースは、AMD hardware 上で self-hosted GLM-5.2 inference の予算を見積もりたいときに使えます。picocreator によると、4xMI325x 構成で GLM 5.2 を 1,482 tok/s、100 万 tokens あたり 0.10 ドル未満で提供できたためです。 | Demo |
 | [Case 191: Hermes が構築した LiteLLM ローカル ラボ](#case-191) | このケースは、GLM-5.2 を coding agent として使いながら local inference lab を立ち上げたいときに使えます。source では Hermes Agent と GLM-5.2 が M3 Ultra 上で LiteLLM、Postgres、Prometheus、Grafana を組んだと述べているためです。 | Integration |
 | [Case 187: デュアル M5 Max オフライン ドローンシップ シム](#case-187) | このケースは、完全 offline の Apple Silicon 上で GLM-5.2 agent がどこまでできるかを見積もりたいときに使えます。XavierLocalAI が、2 台の 128GB M5 Max を使って 753B 構成で droneship-landing simulator を 26 tok/s で書いていると報告しているためです。 | Demo |
 | [Case 186: 5x DGX Spark プロダクション ハーネス](#case-186) | このケースは、5 ノードの DGX Spark 構成が production の GLM-5.2 workload に足りるかを見たいときに使えます。thatcofffeeguy が、400K context で single-stream 約 13.9 tok/s、3 lane 合計で 19.9 tok/s を live harness で報告しているためです。 | Demo |
@@ -343,6 +351,16 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
 ---
+---
+<a id="case-227"></a>
+### Case 227: [Gargantua WebGL Raytracer 勝利](https://x.com/AlicanKiraz0/status/2077885419744612597) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**このケースは、物理寄りの単一ファイル browser build で GLM-5.2 を benchmark したいときに使えます。AlicanKiraz0 によると、GLM 5.2 Max は Gargantua geodesic raytracer 課題で、数値的正しさと real-time rendering discipline の両立によって比較対象を上回ったためです。**
+
+AlicanKiraz0 は、RK4 null-geodesic integration、accretion disk、gravitational lensing、redshift、Doppler effects、camera controls、そして練られた control panel を含む Schwarzschild black-hole renderer を、one-file raw WebGL2 で実装させる課題を説明しています。投稿では、勝敗を分けたのは visuals だけでなく numerical correctness、boundary handling、solver discipline であり、GLM 5.2 Max は 92/100 で GPT5.6 Sol Ultra の 90、Kimi K3 Thinking Max の 85、Fable 5 Max の 80 を上回ったとされています。
+
+Type: Evaluation | Date: 2026-07-16
+
 <a id="case-223"></a>
 ### Case 223: [Intelligence Index Token Efficiency Gap](https://x.com/ArtificialAnlys/status/2077466596528832678) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
@@ -774,6 +792,17 @@ Type: Integration | Date: 2026-07-03
 
 ---
 
+---
+
+<a id="case-228"></a>
+### Case 228: [OpenCode によるローカル agentic coding 基盤](https://x.com/comma_ai/status/2077819467267186700) (by [@comma_ai](https://x.com/comma_ai))
+
+**このケースは、frontier サブスクに課金する前にローカル coding-agent stack を検証したいときに使えます。comma_ai によると、同社は Anthropic を内部スタックから外し、GLM 5.2 と OpenCode の組み合わせで agentic coding がより良く回るようになったためです。**
+
+comma_ai は、GLM deployment が open-source driving agent を訓練するマシンのすぐそばで動いていると述べており、これは単なる cloud 好みではなく local ownership の強いシグナルです。thread では GLM 5.2 を OpenCode と明示的に結び付け、Anthropic を stack から外した後の daily agentic coding が改善したと主張しているため、一般的な open-source 礼賛ではなく、実務的な local-first workflow の参照例になります。
+
+Type: Demo | Date: 2026-07-16
+
 <a id="case-212"></a>
 ### Case 212: [Dell Hub GLM Agent チュートリアル](https://x.com/juanjucm/status/2076714987569963508) (by [@juanjucm](https://x.com/juanjucm))
 
@@ -1168,6 +1197,16 @@ Type: Evaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 実演デモとショーケースビルド
+<a id="case-229"></a>
+### Case 229: [Hyperagent プロフィール・ポートフォリオ対決](https://x.com/arsh_goyal/status/2077764207945416949) (by [@arsh_goyal](https://x.com/arsh_goyal))
+
+**このケースは、実際の browser-based agent タスクで GLM-5.2 を他の open model と比べたいときに使えます。arsh_goyal によると、GLM 5.2、DeepSeek V4、Kimi K2.6、Qwen 3.7 を Hyperagent 上で並列に走らせ、公開プロフィールから personal portfolio を作らせたためです。**
+
+arsh_goyal は、各モデルに本物の browser を持つ別々の cloud machine を与え、YouTube、LinkedIn、X のプロフィールを読ませたうえで、同じ one-line prompt から website を組み立てさせたと説明しています。投稿は run ごとの cost と duration を公開し、さらに video と prompt も reply thread に添えているため、単なる screenshot や leaderboard repost よりも hands-on 比較としての強度が高いケースです。
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-218"></a>
 ### Case 218: [OpenCode によるポートフォリオと OS 再構築](https://x.com/MarkSShenouda/status/2077032282141978842) (by [@MarkSShenouda](https://x.com/MarkSShenouda))
 
@@ -1433,6 +1472,36 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 プロバイダ・ツール統合
+---
+<a id="case-232"></a>
+### Case 232: [Macroscope Check Run GLM エージェント](https://x.com/kayvz/status/2077810181904494631) (by [@kayvz](https://x.com/kayvz))
+
+**このケースは、PR review agent のコストを下げつつ check-run workflow を維持したいときに使えます。kayvz によると、Macroscope の Check Run Agents は通常の `.md` ベース repo config から GLM 5.2 を選べるようになったためです。**
+
+kayvz は、新しい model options が check-run `.md` ファイルの設定時にそのまま現れると述べており、これは単なる availability post より実装面に近い更新です。thread は custom code-review agents for pull requests を明示的な対象にしているため、Macroscope 経由で review automation を回していて open-weight 選択肢を探すチームにとって具体的な integration surface になります。
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-231"></a>
+### Case 231: [Aster の 281 TPS research-agent API](https://x.com/asterailabs/status/2077556435085574429) (by [@asterailabs](https://x.com/asterailabs))
+
+**このケースは、高速な hosted GLM-5.2 endpoint を benchmark したいときに使えます。asterailabs によると、Aster Inference は research-agent 最適化由来の API で GLM 5.2 を 281 tokens per second で提供しているためです。**
+
+Aster は、自社製品を AI research agents から生まれた inference API と位置付け、単なる launch 文句ではなく具体的な throughput 数値を挙げています。post では GPU 上で gpt-oss-120b が 644 tps、GLM 5.2 が 281 tps とされ、さらに自社 research system で得た inference 知見をそのまま product improvements に戻していると述べているため、ゼロから self-hosting する前に hosted provider を比較したいチームに適した route です。
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-230"></a>
+### Case 230: [TrueFoundry 向けネイティブ Wafer GLM ルート](https://x.com/wafer_ai/status/2077837999514214456) (by [@wafer_ai](https://x.com/wafer_ai))
+
+**このケースは、既存の TrueFoundry AI Gateway stack に GLM-5.2 を差し込みたいときに使えます。wafer_ai によると、native provider integration は GLM 5.2 と GLM 5.2 Fast から始まり、残りの gateway stack を変えずに使えるためです。**
+
+wafer_ai は、すでに TrueFoundry AI Gateway を使っているチームなら、stack の他の部分を変えずに Wafer models を導入できると説明しています。rollout は GLM 5.2 と GLM 5.2 Fast から始まり、post では Wafer を最速の serverless GLM route と位置付けているため、一般的な model availability 通知よりも具体的な managed-access path として読めます。
+
+Type: Integration | Date: 2026-07-16
+
 <a id="case-225"></a>
 ### Case 225: [TogetherLink Codex Harness Bridge](https://x.com/nutlope/status/2077432463685554558) (by [@nutlope](https://x.com/nutlope))
 
@@ -2114,6 +2183,26 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 コスト、価格、ローカル運用
+<a id="case-234"></a>
+### Case 234: [Jatevo 割引 GLM アクセス](https://x.com/JatevoId/status/2077770086228885536) (by [@JatevoId](https://x.com/JatevoId))
+
+**このケースは、公開価格付きの hosted GLM-5.2 アクセス経路をすぐに押さえたいときに使えます。JatevoId によると、GLM 5.2 は platform 上で input $1.40 / 1M、output $4.40 / 1M で提供され、対象 JTVO holder には 50% 割引があるためです。**
+
+JatevoId は、rollout に holder 向けの段階的な free-compute 割り当ても含まれ、標準の per-token price に加えて 50% discount policy が公開されていると述べています。明示された input / output pricing があるため、割引適用は platform 独自条件に依存するものの、この case は hosted GLM route を比較する人にとって曖昧な launch post ではなく具体的な access note になります。
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-233"></a>
+### Case 233: [MI325x で 0.1 セント未満の GLM serving](https://x.com/picocreator/status/2077817481381728268) (by [@picocreator](https://x.com/picocreator))
+
+**このケースは、AMD hardware 上で self-hosted GLM-5.2 inference の予算を見積もりたいときに使えます。picocreator によると、4xMI325x 構成で GLM 5.2 を 1,482 tok/s、100 万 tokens あたり 0.10 ドル未満で提供できたためです。**
+
+picocreator は、この route が 4 枚の MI325x GPU で 1,482 tokens per second を出し、cost は B300s の 3 分の 1、Opus の 10 分の 1だったと説明しています。これは単なる API list price の比較ではなく、専用 hardware 上で GLM capacity を値付けした checkpoint なので、自前ホスティングの economics を判断したいチームにとって実用性があります。
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-226"></a>
 ### Case 226: [Bonsai Mac Studio Chart Triage](https://x.com/MaziyarPanahi/status/2077362554805117132) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
 

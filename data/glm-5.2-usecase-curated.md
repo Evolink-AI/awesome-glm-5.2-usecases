@@ -2,7 +2,7 @@
 
 This file is generated from `README.md` by `scripts/build_curated_data.py`.
 
-- Published cases: 226
+- Published cases: 234
 - Numbering: contiguous set from 1 through the current maximum
 - Policy: every item is source-backed and included in the public README
 
@@ -234,3 +234,11 @@ This file is generated from `README.md` by `scripts/build_curated_data.py`.
 | 224 | Vorflux Open Model Harness Routing | Provider & Tool Integrations | Integration | 2026-07-15 | [Open source](https://x.com/vorfluxai/status/2077449967711760587) | [@vorfluxai](https://x.com/vorfluxai) |
 | 225 | TogetherLink Codex Harness Bridge | Provider & Tool Integrations | Integration | 2026-07-15 | [Open source](https://x.com/nutlope/status/2077432463685554558) | [@nutlope](https://x.com/nutlope) |
 | 226 | Bonsai Mac Studio Chart Triage | Cost, Pricing & Local Deployment | Demo | 2026-07-15 | [Open source](https://x.com/MaziyarPanahi/status/2077362554805117132) | [@MaziyarPanahi](https://x.com/MaziyarPanahi) |
+| 227 | Gargantua WebGL Raytracer Win | Benchmarks & Frontier Evaluation | Evaluation | 2026-07-16 | [Open source](https://x.com/AlicanKiraz0/status/2077885419744612597) | [@AlicanKiraz0](https://x.com/AlicanKiraz0) |
+| 228 | OpenCode Local Agentic Coding Floor | Coding Agents & Long-Context Workflows | Demo | 2026-07-16 | [Open source](https://x.com/comma_ai/status/2077819467267186700) | [@comma_ai](https://x.com/comma_ai) |
+| 229 | Hyperagent Profile Portfolio Shootout | Hands-On Demos & Showcase Builds | Demo | 2026-07-16 | [Open source](https://x.com/arsh_goyal/status/2077764207945416949) | [@arsh_goyal](https://x.com/arsh_goyal) |
+| 230 | TrueFoundry Native Wafer GLM Route | Provider & Tool Integrations | Integration | 2026-07-16 | [Open source](https://x.com/wafer_ai/status/2077837999514214456) | [@wafer_ai](https://x.com/wafer_ai) |
+| 231 | Aster 281 TPS Research-Agent API | Provider & Tool Integrations | Integration | 2026-07-16 | [Open source](https://x.com/asterailabs/status/2077556435085574429) | [@asterailabs](https://x.com/asterailabs) |
+| 232 | Macroscope Check-Run GLM Agents | Provider & Tool Integrations | Integration | 2026-07-16 | [Open source](https://x.com/kayvz/status/2077810181904494631) | [@kayvz](https://x.com/kayvz) |
+| 233 | MI325x Sub-Tenth-Cent GLM Serve | Cost, Pricing & Local Deployment | Demo | 2026-07-16 | [Open source](https://x.com/picocreator/status/2077817481381728268) | [@picocreator](https://x.com/picocreator) |
+| 234 | Jatevo Discounted GLM Access | Cost, Pricing & Local Deployment | Integration | 2026-07-16 | [Open source](https://x.com/JatevoId/status/2077770086228885536) | [@JatevoId](https://x.com/JatevoId) |

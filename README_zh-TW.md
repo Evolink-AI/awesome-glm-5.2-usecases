@@ -36,7 +36,7 @@
 
 ## 📊 總覽
 
-- **226 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
+- **234 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
 - 覆蓋基準與前沿評測、編碼代理與長上下文工作流、上手演示與作品展示、供應商與工具整合、成本、定價與本地部署、限制、注意事項與安全訊號。
 - 每個案例都包含原始來源、創作者署名、精簡的使用結論、證據類型與發布日期。
 - 你可以用這個 repo 尋找實用工作流、比較優勢與限制、探索供應商路徑，並追蹤真實上手實驗。
@@ -78,11 +78,11 @@ curl --request POST \
 
 | 章節 | 案例 |
 |---|---|
-| [📏 基準與前沿評測](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223 |
-| [💻 編碼代理與長上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
-| [🎮 上手演示與作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218 |
-| [🔌 供應商與工具整合](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225 |
-| [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226 |
+| [📏 基準與前沿評測](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227 |
+| [💻 編碼代理與長上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228 |
+| [🎮 上手演示與作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
+| [🔌 供應商與工具整合](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232 |
+| [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234 |
 | [🧭 限制、注意事項與安全訊號](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [相關儲存庫](#related-repositories) | 已驗證的 API 路徑與相鄰入口 |
 | [🙏 致謝](#acknowledge) | 來源致謝與修正政策 |
@@ -91,6 +91,7 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 227: Gargantua WebGL Raytracer 勝出](#case-227) | 如果你想在偏物理的單檔 browser build 上 benchmark GLM-5.2，可以看這個案例，因為 AlicanKiraz0 說 GLM 5.2 Max 在 Gargantua geodesic raytracer 任務裡更好地兼顧了數值正確性與 real-time rendering discipline。 | Evaluation |
 | [Case 223: Intelligence Index Token 效率落差](#case-223) | 如果你想為長時程 benchmark 工作負載規劃 GLM-5.2 預算，可以看這個案例，因為 Artificial Analysis 說，GLM-5.2 Max 在 Intelligence Index 每個任務上的平均輸出 token 約為 43K，而 Inkling 是 25K，Kimi K2.6 和 DeepSeek v4 Pro Max 也都更低。 | Evaluation |
 | [Case 217: EvalPlus 救援路由勝過 Fable](#case-217) | 如果你想測試一條帶 verifier 的雙模型 coding 路由，可以看這個案例，因為 gmi_cloud 說，先跑 Opus 4.8、失敗時再用 GLM 5.2 FP8 救援的方案，在 100 個凍結 EvalPlus 任務裡做對了 94 個，比 Fable 5 多 5 個，而且成本低約 47%。 | 評測 |
 | [Case 207: 穩定流體瀏覽器基準](#case-207) | 如果你想在演算法負載很重的瀏覽器物理 build 上比較 GLM-5.2，可以看這個案例，因為 AlicanKiraz0 跑了一個 Stable Fluids HTML benchmark，給 GLM 5.2 Max 打了 88/100、成本約 1.17 美元，高於 Opus 4.8 與 Fable 5，但仍低於 GPT 5.6 Sol。 | Evaluation |
@@ -136,6 +137,7 @@ curl --request POST \
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
 | [Case 168: Synthwave Hard-Slice Ensemble 售價 $2.66 美元](#case-168) | 如果你想把 GLM-5.2 放進多模型 coding ensemble，而不是單獨使用，可以看這個案例，因為 TracNetwork 表示一個含 GLM 的 Synthwave 組合在 LiveCodeBench hard 上以約 2.66 美元拿到 46.3%，並超過每個單獨 generator。 | Integration |
+| [Case 228: OpenCode 本地 agentic coding 底座](#case-228) | 如果你想在付費訂閱 frontier 模型前先驗證本地 coding-agent stack，可以看這個案例，因為 comma_ai 說他們已經移除 Anthropic，並發現 GLM 5.2 加 OpenCode 的 agentic coding 流程更好用。 | Demo |
 | [Case 212: Dell Hub GLM Agent 教學](#case-212) | 如果你想為開放權重訓練工作流搭一套 GLM-5.2 coding agent，可以看這個案例，因為 juanjucm 表示，一篇新指南把 Dell Enterprise Hub 新增 GLM-5.2-FP8 目錄更新，與一套圍繞該模型構建 agent 的逐步搭建流程放在了一起。 | Tutorial |
 | [Case 211: 8xB200 開放權重報告流水線](#case-211) | 如果你想把 GLM-5.2 作為主筆，接進一條貼近本地部署的報告流水線，可以看這個案例，因為 TheZachMueller 表示，一台 8xB200 節點按 4/4 切分後，可以讓 GLM 5.2 NVFP4 負責報告生成、Kimi K2.7 Code 負責檢索，以相對 Claude API 幾乎只是零頭的成本產出一份更紮實的 36 頁報告。 | Demo |
 | [Case 210: Spettro 的 Liquid Glass 多代理改版](#case-210) | 如果你想把 GLM-5.2 當成一個研究密集型 frontend fixer，放進多代理網站改版流程裡測試，可以看這個案例，因為 spettrotoken 表示在 Fable 5 和 GPT-5.5 都失敗之後，GLM 5.2 透過整合好的 web scraping 與 data fetching 工具，做出了可在 Firefox 運作的跨瀏覽器 Liquid Glass 實作。 | Demo |
@@ -177,6 +179,7 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 229: Hyperagent 個人首頁作品集對決](#case-229) | 如果你想在真實 browser-based agent 任務裡比較 GLM-5.2 和其他 open model，可以看這個案例，因為 arsh_goyal 把 GLM 5.2、DeepSeek V4、Kimi K2.6 和 Qwen 3.7 並排放到 Hyperagent 上，用公開資料自動生成個人作品集。 | Demo |
 | [Case 218: 用 OpenCode 重建作品集與作業系統](#case-218) | 如果你想衡量 GLM-5.2 在更有野心的 OpenCode build 裡的表現，可以看這個案例，因為 MarkSShenouda 說，OpenCode Go 加上 GLM-5.2 幫他重建了一個作品集網站，以及一個用 C 和 Assembly 編寫、能跑在 WASM 或 Qemu emulator 裡的真實作業系統。 | 示範 |
 | [Case 213: LlamaCoder v4 GLM 重構](#case-213) | 如果你想圍繞 GLM-5.2 的規劃與設計優勢，原型化一條 one-prompt app generation 工作流，可以看這個案例，因為 nutlope 表示，LlamaCoder v4 已圍繞 GLM 5.2 重構，改進了解析與規劃，並且現在在一套免費開源 stack 上直接交付 WebAssembly renderer。 | Demo |
 | [Case 202: 命令代碼太空射擊遊戲功能獲勝](#case-202) | 如果你想看 GLM-5.2 在 one-shot 互動 UI build 裡的表現，可以看這個案例，因為 Command Code 把同一個 retro space-shooter prompt 跑在 Fable 5、GPT 5.5、GLM 5.2 與 DeepSeek V4 Pro 上，並把 GLM 排在 features 第一。 | Evaluation |
@@ -206,6 +209,9 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 232: Macroscope Check Run GLM 代理](#case-232) | 如果你想在保留 check-run workflow 的同時壓低 PR review agent 成本，可以看這個案例，因為 kayvz 說 Macroscope 的 Check Run Agents 現在可以直接從一般 `.md` repo 設定裡選用 GLM 5.2。 | Integration |
+| [Case 231: Aster 281 TPS 研究代理 API](#case-231) | 如果你想 benchmark 一個高速 hosted GLM-5.2 endpoint，可以看這個案例，因為 asterailabs 說 Aster Inference 把來自 research-agent 優化的 API 路由以 281 tokens per second 提供給 GLM 5.2。 | Integration |
+| [Case 230: TrueFoundry 原生 Wafer GLM 路由](#case-230) | 如果你想把 GLM-5.2 接進現有 TrueFoundry AI Gateway stack，可以看這個案例，因為 wafer_ai 說這條 native provider integration 從 GLM 5.2 和 GLM 5.2 Fast 開始，而且不需要改動閘道其餘部分。 | Integration |
 | [Case 225: TogetherLink Codex Harness 橋接](#case-225) | 如果你想把 GLM-5.2 跑進現有 coding-agent CLI，可以看這個案例，因為 nutlope 說 TogetherLink 是一個開源 CLI，能讓 Codex 和 Claude Code 直接呼叫 GLM 5.2 這類 open model。 | Integration |
 | [Case 224: Vorflux 開放模型 Harness 路由](#case-224) | 如果你想在不寫自訂 glue code 的前提下，把 GLM-5.2 接進完整 agent session，可以看這個案例，因為 vorfluxai 說它的 Open Model Harness 會把 GLM 5.2 分配給 design、build 和 simplify 步驟，同時保留 Vorflux 其餘流程不變。 | Integration |
 | [Case 170: NVIDIA 免費 API 即插即用訪問](#case-170) | 如果你想透過免費 hosted endpoint 快速試用 GLM-5.2，可以看這個案例，因為 hqmank 表示 NVIDIA 已開放 OpenAI 相容的 API 路徑，而且確認可以直接 plug-and-play 接上。 | Integration |
@@ -274,6 +280,8 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 234: Jatevo 折扣 GLM 接入](#case-234) | 如果你想快速掌握一條帶公開定價的 hosted GLM-5.2 接入路徑，可以看這個案例，因為 JatevoId 說其平台上 GLM 5.2 的 input 價格是 $1.40 / 1M、output 價格是 $4.40 / 1M，符合條件的 JTVO holder 還能拿到 50% 折扣。 | Integration |
+| [Case 233: MI325x 上低於 0.1 美分的 GLM 服務](#case-233) | 如果你想評估 AMD 硬體上的 self-hosted GLM-5.2 inference 成本，可以看這個案例，因為 picocreator 說 4xMI325x 配置把 GLM 5.2 跑到了 1,482 tok/s，成本低於每百萬 token 0.10 美元。 | Demo |
 | [Case 226: Bonsai Mac Studio 病歷分流](#case-226) | 如果你想讓一份很長的臨床病歷留在本地，同時讓 GLM-5.2 在其上做推理，可以看這個案例，因為 MaziyarPanahi 說 GLM 5.2 透過 Mac Studio 上的 Bonsai 27B 分流一份三年期病歷，並找出了埋在 17 個月前的造影風險問題。 | Demo |
 | [Case 191: Hermes 建立的 LiteLLM 本地實驗室](#case-191) | 如果你想把 GLM-5.2 當作 coding agent 來搭一個本地 inference lab，可以看這個案例，因為原貼文說 Hermes Agent + GLM-5.2 把 LiteLLM、Postgres、Prometheus 和 Grafana 都接在了一套 M3 Ultra 環境上。 | Integration |
 | [Case 187: 雙 M5 Max 離線無人機模擬器](#case-187) | 如果你想估算一套完全離線的 Apple Silicon GLM-5.2 agent 到底能做什麼，可以看這個案例，因為 XavierLocalAI 報告了一個 753B 配置：在兩台 128GB M5 Max 上以 26 tok/s 編寫 droneship landing simulator。 | Demo |
@@ -346,6 +354,16 @@ curl --request POST \
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 基準與前沿評測
 ---
+---
+<a id="case-227"></a>
+### Case 227: [Gargantua WebGL Raytracer 勝出](https://x.com/AlicanKiraz0/status/2077885419744612597) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**如果你想在偏物理的單檔 browser build 上 benchmark GLM-5.2，可以看這個案例，因為 AlicanKiraz0 說 GLM 5.2 Max 在 Gargantua geodesic raytracer 任務裡更好地兼顧了數值正確性與 real-time rendering discipline。**
+
+AlicanKiraz0 描述的是一個 one-file raw WebGL2 任務，要實作帶有 RK4 null-geodesic integration、accretion disk、gravitational lensing、redshift、Doppler effects、camera controls 與完整 control panel 的 Schwarzschild black-hole renderer。貼文強調，決定勝負的不只是 visuals，而是 numerical correctness、boundary handling 與 solver discipline；最終 GLM 5.2 Max 拿到 92/100，高於 GPT5.6 Sol Ultra 的 90、Kimi K3 Thinking Max 的 85，以及 Fable 5 Max 的 80。
+
+Type: Evaluation | Date: 2026-07-16
+
 <a id="case-223"></a>
 ### Case 223: [Intelligence Index Token 效率落差](https://x.com/ArtificialAnlys/status/2077466596528832678) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
@@ -777,6 +795,17 @@ Type: Integration | Date: 2026-07-03
 
 ---
 
+---
+
+<a id="case-228"></a>
+### Case 228: [OpenCode 本地 agentic coding 底座](https://x.com/comma_ai/status/2077819467267186700) (by [@comma_ai](https://x.com/comma_ai))
+
+**如果你想在付費訂閱 frontier 模型前先驗證本地 coding-agent stack，可以看這個案例，因為 comma_ai 說他們已經移除 Anthropic，並發現 GLM 5.2 加 OpenCode 的 agentic coding 流程更好用。**
+
+comma_ai 說，自家的 GLM deployment 就跑在訓練 open-source driving agent 的機器旁邊，因此這更像是本地所有權訊號，而不是單純偏愛 cloud。thread 明確把 GLM 5.2 和 OpenCode 綁在一起，並說團隊在把 Anthropic 移出 stack 後，日常 agentic coding 體驗反而更好，所以它更適合被視為一條實作型的 local-first workflow 參考，而不是泛泛的開源口號。
+
+Type: Demo | Date: 2026-07-16
+
 <a id="case-212"></a>
 ### Case 212: [Dell Hub GLM Agent 教學](https://x.com/juanjucm/status/2076714987569963508) (by [@juanjucm](https://x.com/juanjucm))
 
@@ -1171,6 +1200,16 @@ Type: Evaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 上手演示與作品展示
+<a id="case-229"></a>
+### Case 229: [Hyperagent 個人首頁作品集對決](https://x.com/arsh_goyal/status/2077764207945416949) (by [@arsh_goyal](https://x.com/arsh_goyal))
+
+**如果你想在真實 browser-based agent 任務裡比較 GLM-5.2 和其他 open model，可以看這個案例，因為 arsh_goyal 把 GLM 5.2、DeepSeek V4、Kimi K2.6 和 Qwen 3.7 並排放到 Hyperagent 上，用公開資料自動生成個人作品集。**
+
+arsh_goyal 說，每個模型都在一台帶真實 browser 的獨立 cloud machine 上執行，先讀取作者的 YouTube、LinkedIn 和 X 資料，再從同一條 one-line prompt 生成網站。貼文還公開了每次 run 的 cost 和 duration，並在回覆裡附上了 video 和 prompt，因此這比普通 screenshot 或 leaderboard repost 更接近一條真正可複現的 hands-on 對比。
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-218"></a>
 ### Case 218: [用 OpenCode 重建作品集與作業系統](https://x.com/MarkSShenouda/status/2077032282141978842) (by [@MarkSShenouda](https://x.com/MarkSShenouda))
 
@@ -1436,6 +1475,36 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 供應商與工具整合
+---
+<a id="case-232"></a>
+### Case 232: [Macroscope Check Run GLM 代理](https://x.com/kayvz/status/2077810181904494631) (by [@kayvz](https://x.com/kayvz))
+
+**如果你想在保留 check-run workflow 的同時壓低 PR review agent 成本，可以看這個案例，因為 kayvz 說 Macroscope 的 Check Run Agents 現在可以直接從一般 `.md` repo 設定裡選用 GLM 5.2。**
+
+kayvz 說，新的 model options 會直接出現在配置 check-run `.md` 檔案的地方，因此這比單純 availability 貼文更接近真實整合面。thread 也明確把 pull request 裡的 custom code-review agents 當作使用情境，所以對於已經透過 Macroscope 跑 review automation、但想加入 open-weight 選項的團隊來說，它是一條很具體的 integration surface。
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-231"></a>
+### Case 231: [Aster 281 TPS 研究代理 API](https://x.com/asterailabs/status/2077556435085574429) (by [@asterailabs](https://x.com/asterailabs))
+
+**如果你想 benchmark 一個高速 hosted GLM-5.2 endpoint，可以看這個案例，因為 asterailabs 說 Aster Inference 把來自 research-agent 優化的 API 路由以 281 tokens per second 提供給 GLM 5.2。**
+
+Aster 把自己的產品定位為一條由 AI research agents 打磨出來的 inference API，並給出了具體 throughput 數字，而不是只說 launch 口號。貼文寫到 GPU 上 gpt-oss-120b 可達 644 tps、GLM 5.2 可達 281 tps，同時還說公司會把研究系統裡的 inference 經驗直接回灌到產品改進裡，因此這條路徑很適合那些想先比 hosted provider，而不是直接從零開始 self-hosting 的團隊。
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-230"></a>
+### Case 230: [TrueFoundry 原生 Wafer GLM 路由](https://x.com/wafer_ai/status/2077837999514214456) (by [@wafer_ai](https://x.com/wafer_ai))
+
+**如果你想把 GLM-5.2 接進現有 TrueFoundry AI Gateway stack，可以看這個案例，因為 wafer_ai 說這條 native provider integration 從 GLM 5.2 和 GLM 5.2 Fast 開始，而且不需要改動閘道其餘部分。**
+
+wafer_ai 說，已經在用 TrueFoundry AI Gateway 的團隊，可以在不調整 stack 其他部分的前提下直接接入 Wafer models。rollout 從 GLM 5.2 和 GLM 5.2 Fast 起步，貼文還把 Wafer 定位為最快的 serverless GLM route，因此這條訊息比普通「已支援某模型」的公告更像一條具體的 managed-access path。
+
+Type: Integration | Date: 2026-07-16
+
 <a id="case-225"></a>
 ### Case 225: [TogetherLink Codex Harness 橋接](https://x.com/nutlope/status/2077432463685554558) (by [@nutlope](https://x.com/nutlope))
 
@@ -2117,6 +2186,26 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 成本、定價與本地部署
+<a id="case-234"></a>
+### Case 234: [Jatevo 折扣 GLM 接入](https://x.com/JatevoId/status/2077770086228885536) (by [@JatevoId](https://x.com/JatevoId))
+
+**如果你想快速掌握一條帶公開定價的 hosted GLM-5.2 接入路徑，可以看這個案例，因為 JatevoId 說其平台上 GLM 5.2 的 input 價格是 $1.40 / 1M、output 價格是 $4.40 / 1M，符合條件的 JTVO holder 還能拿到 50% 折扣。**
+
+JatevoId 說，這次 rollout 還帶有面向 holder 的分層 free-compute 配額，並在標準 per-token 定價之外公開給出 50% 的 discount policy。明確的 input / output 價格，讓它即使在折扣適用條件依賴平台規則的情況下，依然是一條很具體的 access note，而不是模糊的 launch 貼文。
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-233"></a>
+### Case 233: [MI325x 上低於 0.1 美分的 GLM 服務](https://x.com/picocreator/status/2077817481381728268) (by [@picocreator](https://x.com/picocreator))
+
+**如果你想評估 AMD 硬體上的 self-hosted GLM-5.2 inference 成本，可以看這個案例，因為 picocreator 說 4xMI325x 配置把 GLM 5.2 跑到了 1,482 tok/s，成本低於每百萬 token 0.10 美元。**
+
+picocreator 說，這條 route 在四張 MI325x GPU 上實現了 1,482 tokens per second，成本大約是 B300s 的三分之一、Opus 的十分之一。它強調的不是 API 標價，而是專用硬體上實際跑出的 GLM capacity 成本，因此對於在評估 self-hosting economics 的團隊來說，這是一個很有參考價值的 checkpoint。
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-226"></a>
 ### Case 226: [Bonsai Mac Studio 病歷分流](https://x.com/MaziyarPanahi/status/2077362554805117132) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
 

@@ -36,7 +36,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 ## 📊 개요
 
-- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **226개의 선별된 GLM-5.2 사례**입니다.
+- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **234개의 선별된 GLM-5.2 사례**입니다.
 - 벤치마크와 프런티어 평가, 코딩 에이전트와 장기 컨텍스트 워크플로, 실사용 데모와 쇼케이스 빌드, 공급자 및 도구 통합, 비용, 가격, 로컬 배포, 한계, 주의점, 안전 신호를 다룹니다.
 - 각 사례에는 원본 출처, 작성자 표기, 간결한 활용 포인트, 근거 유형, 게시 날짜가 포함됩니다.
 - 실용 워크플로, 강점과 한계 비교, 공급자 경로, 실제 실험을 찾는 데 사용하세요.
@@ -78,11 +78,11 @@ curl --request POST \
 
 | 섹션 | 사례 |
 |---|---|
-| [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223 |
-| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
-| [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218 |
-| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225 |
-| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226 |
+| [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227 |
+| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228 |
+| [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
+| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232 |
+| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234 |
 | [🧭 한계, 주의점, 안전 신호](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [관련 저장소](#related-repositories) | 검증된 API 경로와 인접 표면 |
 | [🙏 감사의 말](#acknowledge) | 출처 표기 및 수정 정책 |
@@ -91,6 +91,7 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 227: Gargantua WebGL Raytracer 승리](#case-227) | 이 사례는 물리 비중이 큰 단일 파일 browser build에서 GLM-5.2를 benchmark할 때 유용합니다. AlicanKiraz0에 따르면 GLM 5.2 Max는 Gargantua geodesic raytracer 과제에서 수치적 정확성과 real-time rendering discipline을 더 잘 양립해 비교 모델을 앞섰기 때문입니다. | Evaluation |
 | [Case 223: Intelligence Index 토큰 효율 격차](#case-223) | 이 사례는 장기 benchmark workload에 맞춰 GLM-5.2 예산을 잡을 때 유용합니다. Artificial Analysis에 따르면 GLM-5.2 Max는 Intelligence Index 작업당 평균 약 43K output tokens를 사용했고, Inkling은 25K였으며 Kimi K2.6과 DeepSeek v4 Pro Max도 그보다 적었기 때문입니다. | Evaluation |
 | [Case 217: EvalPlus 구조 루트가 Fable을 앞섬](#case-217) | 이 사례는 verifier 기반 2모델 coding 루트를 시험할 때 유용합니다. gmi_cloud에 따르면 Opus 4.8을 먼저 쓰고 verifier 실패 시 GLM 5.2 FP8을 구조 투입하는 방식으로 고정된 EvalPlus 100개 작업 중 94개를 해결해 Fable 5보다 5개 더 많이 맞히면서도 비용은 약 47퍼센트 낮췄기 때문입니다. | 평가 |
 | [Case 207: 안정적인 유체 브라우저 벤치마크](#case-207) | 이 사례는 알고리즘 비중이 큰 브라우저 물리 빌드에서 GLM-5.2를 비교할 때 유용합니다. AlicanKiraz0가 Stable Fluids HTML benchmark를 실행해 GLM 5.2 Max에 100점 만점 중 88점과 약 1.17달러의 비용을 매겼고, Opus 4.8과 Fable 5를 앞섰지만 GPT 5.6 Sol에는 뒤졌기 때문입니다. | Evaluation |
@@ -136,6 +137,7 @@ curl --request POST \
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
 | [Case 168: $2.66에 Synthwave 하드 슬라이스 앙상블](#case-168) | 이 사례는 GLM-5.2를 단독 모델이 아니라 multi-model coding ensemble 안에서 시험할 때 유용합니다. TracNetwork에 따르면 GLM이 포함된 Synthwave 조합은 LiveCodeBench hard에서 46.3 percent를 약 2.66달러에 기록했고, 각 generator 단독보다 더 나았습니다. | Integration |
+| [Case 228: OpenCode 기반 로컬 agentic coding 토대](#case-228) | 이 사례는 frontier 구독료를 내기 전에 로컬 coding-agent stack을 검증할 때 유용합니다. comma_ai에 따르면 팀은 Anthropic을 내부 스택에서 제거했고, GLM 5.2와 OpenCode 조합으로 agentic coding 흐름이 더 좋아졌기 때문입니다. | Demo |
 | [Case 212: Dell Hub GLM Agent 튜토리얼](#case-212) | 이 사례는 open-weight 학습 워크플로를 위한 GLM-5.2 coding agent를 세울 때 유용합니다. juanjucm에 따르면 새 가이드는 Dell Enterprise Hub의 GLM-5.2-FP8 카탈로그 추가와, 그 모델을 중심으로 만든 agent 설정 절차를 한 번에 묶어 보여주기 때문입니다. | Tutorial |
 | [Case 211: 8xB200 Open-Weight 리포트 파이프라인](#case-211) | 이 사례는 GLM-5.2를 로컬 인접형 리포트 파이프라인의 main writer로 배치할 때 유용합니다. TheZachMueller에 따르면 8xB200 노드 한 대를 4/4로 나눠 GLM 5.2 NVFP4가 리포트 생성을 맡고 Kimi K2.7 Code가 retrieval을 맡게 하자, Claude API 대비 매우 적은 비용으로 더 밀도 높은 36페이지 리포트를 만들 수 있었기 때문입니다. | Demo |
 | [Case 210: Spettro Liquid Glass 멀티에이전트 개편](#case-210) | 이 사례는 multi-agent 웹 개편 안에서 GLM-5.2를 조사 강도가 높은 frontend fixer로 시험할 때 유용합니다. spettrotoken에 따르면 Fable 5와 GPT-5.5가 실패한 뒤 GLM 5.2가 통합된 web scraping 및 data fetching 도구를 써서 Firefox에서도 작동하는 cross-browser Liquid Glass 구현을 배포했기 때문입니다. | Demo |
@@ -177,6 +179,7 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 229: Hyperagent 프로필 포트폴리오 대결](#case-229) | 이 사례는 실제 browser-based agent 작업에서 GLM-5.2를 다른 open model과 비교할 때 유용합니다. arsh_goyal에 따르면 GLM 5.2, DeepSeek V4, Kimi K2.6, Qwen 3.7을 Hyperagent에서 병렬로 돌려 공개 프로필로 personal portfolio를 만들게 했기 때문입니다. | Demo |
 | [Case 218: OpenCode 포트폴리오와 OS 재구축](#case-218) | 이 사례는 GLM-5.2를 야심찬 OpenCode 빌드에서 가늠할 때 유용합니다. MarkSShenouda에 따르면 OpenCode Go와 GLM-5.2가 포트폴리오 사이트 재구축과 WASM 또는 Qemu 에뮬레이터에서 실행되는 C·Assembly 기반 실제 OS 작업에 도움을 줬기 때문입니다. | 데모 |
 | [Case 213: LlamaCoder v4 GLM 리빌드](#case-213) | 이 사례는 GLM-5.2의 planning과 design 강점을 중심으로 one-prompt app generation을 프로토타이핑할 때 유용합니다. nutlope에 따르면 LlamaCoder v4는 GLM 5.2를 중심으로 다시 만들어졌고, parsing과 planning이 개선됐으며, 이제 무료 오픈소스 stack 위에 WebAssembly renderer까지 실어 보낸다고 합니다. | Demo |
 | [Case 202: 명령 코드 공간 사수 기능 승리](#case-202) | 이 사례는 one-shot interactive UI build에서 GLM-5.2를 비교할 때 유용합니다. Command Code가 같은 retro space-shooter prompt를 Fable 5, GPT 5.5, GLM 5.2, DeepSeek V4 Pro에 돌렸고, features 기준으로 GLM을 가장 높게 평가했기 때문입니다. | Evaluation |
@@ -206,6 +209,9 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 232: Macroscope Check Run GLM 에이전트](#case-232) | 이 사례는 PR review agent 비용을 낮추면서 check-run workflow를 유지할 때 유용합니다. kayvz에 따르면 Macroscope의 Check Run Agents가 일반 `.md` 기반 repo config에서 GLM 5.2를 선택할 수 있게 됐기 때문입니다. | Integration |
+| [Case 231: Aster의 281 TPS 연구 에이전트 API](#case-231) | 이 사례는 빠른 hosted GLM-5.2 endpoint를 benchmark할 때 유용합니다. asterailabs에 따르면 Aster Inference는 research-agent 최적화에서 나온 API로 GLM 5.2를 281 tokens per second로 제공하기 때문입니다. | Integration |
+| [Case 230: TrueFoundry용 네이티브 Wafer GLM 경로](#case-230) | 이 사례는 기존 TrueFoundry AI Gateway stack에 GLM-5.2를 붙일 때 유용합니다. wafer_ai에 따르면 native provider integration이 GLM 5.2와 GLM 5.2 Fast부터 시작하며 나머지 gateway stack을 바꾸지 않아도 되기 때문입니다. | Integration |
 | [Case 170: NVIDIA 무료 API 플러그 앤 플레이 액세스](#case-170) | 이 사례는 무료 hosted endpoint를 통해 GLM-5.2를 빠르게 시험할 때 유용합니다. hqmank는 NVIDIA가 OpenAI 호환 API 경로를 열었고, plug-and-play 대체 경로로 바로 동작했다고 확인했습니다. | Integration |
 | [Case 169: 무료 Workers AI 코딩 에이전트 경로](#case-169) | 이 사례는 coding agent용 무료 GLM-5.2 경로를 세울 때 유용합니다. 이 튜토리얼은 OpenAI 호환 `cf/zai-org/glm-5.2` endpoint를 통해 Workers AI를 Claude Code, OpenCode, Cursor, Aider에 연결합니다. | Tutorial |
 | [Case 220: OpenMed 비식별 임상 에이전트](#case-220) | 이 사례는 GLM-5.2를 개인정보 보호형 임상 에이전트 흐름 안에 두고 싶을 때 유용합니다. MaziyarPanahi에 따르면 OpenMed가 식별자를 로컬에서 제거하고 Gemma 4가 구조를 잡은 뒤, GLM 5.2가 전체 케이스를 계획하고 도구를 호출하며 disposition까지 작성했기 때문입니다. | 통합 |
@@ -272,6 +278,8 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 234: Jatevo 할인 GLM 액세스](#case-234) | 이 사례는 공개 가격이 있는 hosted GLM-5.2 접근 경로를 빠르게 확보할 때 유용합니다. JatevoId에 따르면 GLM 5.2는 플랫폼에서 input $1.40 / 1M, output $4.40 / 1M으로 제공되고, 자격 있는 JTVO holder에게는 50% 할인이 주어지기 때문입니다. | Integration |
+| [Case 233: MI325x에서 0.1센트 미만 GLM 서빙](#case-233) | 이 사례는 AMD 하드웨어에서 self-hosted GLM-5.2 inference 예산을 잡을 때 유용합니다. picocreator에 따르면 4xMI325x 구성으로 GLM 5.2를 1,482 tok/s, 백만 token당 0.10달러 미만으로 제공했기 때문입니다. | Demo |
 | [Case 191: Hermes가 만든 LiteLLM 로컬 연구소](#case-191) | 이 사례는 GLM-5.2를 coding agent로 써서 local inference lab을 부트스트랩할 때 유용합니다. source에서 Hermes Agent와 GLM-5.2가 M3 Ultra 기반으로 LiteLLM, Postgres, Prometheus, Grafana를 연결했다고 말하기 때문입니다. | Integration |
 | [Case 187: 듀얼 M5 Max 오프라인 드론십 시뮬레이션](#case-187) | 이 사례는 완전 offline Apple Silicon 환경에서 GLM-5.2 agent가 어디까지 가능한지 가늠할 때 유용합니다. XavierLocalAI가 두 대의 128GB M5 Max로 753B 구성을 돌리며 droneship landing simulator를 26 tok/s로 작성했다고 보고했기 때문입니다. | Demo |
 | [Case 186: 5x DGX 스파크 생산 하네스](#case-186) | 이 사례는 5노드 DGX Spark 구성이 production GLM-5.2 작업에 충분한지 판단할 때 유용합니다. thatcofffeeguy가 400K context에서 단일 스트림 약 13.9 tok/s와 3개 lane 합산 19.9 tok/s를 live harness에서 보고했기 때문입니다. | Demo |
@@ -343,6 +351,16 @@ curl --request POST \
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 벤치마크와 프런티어 평가
 ---
+---
+<a id="case-227"></a>
+### Case 227: [Gargantua WebGL Raytracer 승리](https://x.com/AlicanKiraz0/status/2077885419744612597) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**이 사례는 물리 비중이 큰 단일 파일 browser build에서 GLM-5.2를 benchmark할 때 유용합니다. AlicanKiraz0에 따르면 GLM 5.2 Max는 Gargantua geodesic raytracer 과제에서 수치적 정확성과 real-time rendering discipline을 더 잘 양립해 비교 모델을 앞섰기 때문입니다.**
+
+AlicanKiraz0는 RK4 null-geodesic integration, accretion disk, gravitational lensing, redshift, Doppler effects, camera controls, 정교한 control panel을 포함한 Schwarzschild black-hole renderer를 one-file raw WebGL2로 구현하게 하는 과제를 설명합니다. 게시물에 따르면 승부를 가른 것은 visuals만이 아니라 numerical correctness, boundary handling, solver discipline이었고, GLM 5.2 Max는 92/100으로 GPT5.6 Sol Ultra의 90, Kimi K3 Thinking Max의 85, Fable 5 Max의 80을 앞섰습니다.
+
+Type: Evaluation | Date: 2026-07-16
+
 <a id="case-223"></a>
 ### Case 223: [Intelligence Index Token Efficiency Gap](https://x.com/ArtificialAnlys/status/2077466596528832678) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
 
@@ -774,6 +792,17 @@ Type: Integration | Date: 2026-07-03
 
 ---
 
+---
+
+<a id="case-228"></a>
+### Case 228: [OpenCode 기반 로컬 agentic coding 토대](https://x.com/comma_ai/status/2077819467267186700) (by [@comma_ai](https://x.com/comma_ai))
+
+**이 사례는 frontier 구독료를 내기 전에 로컬 coding-agent stack을 검증할 때 유용합니다. comma_ai에 따르면 팀은 Anthropic을 내부 스택에서 제거했고, GLM 5.2와 OpenCode 조합으로 agentic coding 흐름이 더 좋아졌기 때문입니다.**
+
+comma_ai는 GLM deployment가 open-source driving agent를 학습하는 머신 바로 옆에서 돌아간다고 설명하며, 이를 단순한 cloud 선호가 아닌 local ownership 신호로 제시합니다. thread는 GLM 5.2를 OpenCode와 직접 연결하고 Anthropic을 stack에서 제거한 뒤 daily agentic coding이 개선됐다고 주장하므로, 일반적인 open-source 찬양이 아니라 실무적인 local-first workflow 참고 사례가 됩니다.
+
+Type: Demo | Date: 2026-07-16
+
 <a id="case-212"></a>
 ### Case 212: [Dell Hub GLM Agent 튜토리얼](https://x.com/juanjucm/status/2076714987569963508) (by [@juanjucm](https://x.com/juanjucm))
 
@@ -1168,6 +1197,16 @@ Type: Evaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 실사용 데모와 쇼케이스 빌드
+<a id="case-229"></a>
+### Case 229: [Hyperagent 프로필 포트폴리오 대결](https://x.com/arsh_goyal/status/2077764207945416949) (by [@arsh_goyal](https://x.com/arsh_goyal))
+
+**이 사례는 실제 browser-based agent 작업에서 GLM-5.2를 다른 open model과 비교할 때 유용합니다. arsh_goyal에 따르면 GLM 5.2, DeepSeek V4, Kimi K2.6, Qwen 3.7을 Hyperagent에서 병렬로 돌려 공개 프로필로 personal portfolio를 만들게 했기 때문입니다.**
+
+arsh_goyal는 각 모델에 실제 browser가 포함된 별도 cloud machine을 주고, YouTube, LinkedIn, X 프로필을 읽은 뒤 같은 one-line prompt에서 website를 만들게 했다고 설명합니다. 게시물은 run별 cost와 duration을 공개하고, reply thread에 video와 prompt까지 덧붙이므로 단순 screenshot이나 leaderboard repost보다 hands-on 비교 강도가 높습니다.
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-218"></a>
 ### Case 218: [OpenCode 포트폴리오와 OS 재구축](https://x.com/MarkSShenouda/status/2077032282141978842) (by [@MarkSShenouda](https://x.com/MarkSShenouda))
 
@@ -1433,6 +1472,36 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 공급자 및 도구 통합
+---
+<a id="case-232"></a>
+### Case 232: [Macroscope Check Run GLM 에이전트](https://x.com/kayvz/status/2077810181904494631) (by [@kayvz](https://x.com/kayvz))
+
+**이 사례는 PR review agent 비용을 낮추면서 check-run workflow를 유지할 때 유용합니다. kayvz에 따르면 Macroscope의 Check Run Agents가 일반 `.md` 기반 repo config에서 GLM 5.2를 선택할 수 있게 됐기 때문입니다.**
+
+kayvz는 새 model options가 check-run `.md` 파일을 설정하는 화면에 그대로 나타난다고 설명하며, 이를 일반 availability 공지보다 더 실전적인 변화로 묘사합니다. thread는 pull request 안의 custom code-review agents를 명시적 대상로 삼고 있어, 이미 Macroscope로 review automation을 운영하면서 open-weight 선택지를 찾는 팀에 구체적인 integration surface를 제공합니다.
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-231"></a>
+### Case 231: [Aster의 281 TPS 연구 에이전트 API](https://x.com/asterailabs/status/2077556435085574429) (by [@asterailabs](https://x.com/asterailabs))
+
+**이 사례는 빠른 hosted GLM-5.2 endpoint를 benchmark할 때 유용합니다. asterailabs에 따르면 Aster Inference는 research-agent 최적화에서 나온 API로 GLM 5.2를 281 tokens per second로 제공하기 때문입니다.**
+
+Aster는 자사 제품을 AI research agents에서 출발한 inference API로 소개하며, 단순한 launch slogan 대신 구체적인 throughput 수치를 제시합니다. 게시물은 GPU 기준 gpt-oss-120b에 644 tps, GLM 5.2에 281 tps를 언급하고, 자사 research system의 inference 인사이트를 제품 개선으로 환류한다고 설명하므로, 처음부터 self-hosting하지 않고 빠른 hosted provider를 비교하려는 팀에 의미 있는 경로입니다.
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-230"></a>
+### Case 230: [TrueFoundry용 네이티브 Wafer GLM 경로](https://x.com/wafer_ai/status/2077837999514214456) (by [@wafer_ai](https://x.com/wafer_ai))
+
+**이 사례는 기존 TrueFoundry AI Gateway stack에 GLM-5.2를 붙일 때 유용합니다. wafer_ai에 따르면 native provider integration이 GLM 5.2와 GLM 5.2 Fast부터 시작하며 나머지 gateway stack을 바꾸지 않아도 되기 때문입니다.**
+
+wafer_ai는 이미 TrueFoundry AI Gateway를 쓰는 팀이 stack의 다른 부분을 건드리지 않고 Wafer models를 붙일 수 있다고 설명합니다. rollout은 GLM 5.2와 GLM 5.2 Fast부터 시작하고, 게시물은 Wafer를 가장 빠른 serverless GLM route로 포지셔닝하므로, 일반적인 model availability 공지보다 훨씬 구체적인 managed-access path가 됩니다.
+
+Type: Integration | Date: 2026-07-16
+
 <a id="case-225"></a>
 ### Case 225: [TogetherLink Codex Harness Bridge](https://x.com/nutlope/status/2077432463685554558) (by [@nutlope](https://x.com/nutlope))
 
@@ -2114,6 +2183,26 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 비용, 가격, 로컬 배포
+<a id="case-234"></a>
+### Case 234: [Jatevo 할인 GLM 액세스](https://x.com/JatevoId/status/2077770086228885536) (by [@JatevoId](https://x.com/JatevoId))
+
+**이 사례는 공개 가격이 있는 hosted GLM-5.2 접근 경로를 빠르게 확보할 때 유용합니다. JatevoId에 따르면 GLM 5.2는 플랫폼에서 input $1.40 / 1M, output $4.40 / 1M으로 제공되고, 자격 있는 JTVO holder에게는 50% 할인이 주어지기 때문입니다.**
+
+JatevoId는 rollout에 holder 대상의 단계적 free-compute 할당도 포함되며, 표준 per-token 가격 위에 50% discount policy가 공개돼 있다고 설명합니다. input / output pricing이 명시돼 있으므로, 할인 적용은 platform별 조건에 달려 있더라도 hosted GLM 경로를 비교하는 사람에게 모호한 launch post가 아니라 구체적인 access note가 됩니다.
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-233"></a>
+### Case 233: [MI325x에서 0.1센트 미만 GLM 서빙](https://x.com/picocreator/status/2077817481381728268) (by [@picocreator](https://x.com/picocreator))
+
+**이 사례는 AMD 하드웨어에서 self-hosted GLM-5.2 inference 예산을 잡을 때 유용합니다. picocreator에 따르면 4xMI325x 구성으로 GLM 5.2를 1,482 tok/s, 백만 token당 0.10달러 미만으로 제공했기 때문입니다.**
+
+picocreator는 이 route가 MI325x GPU 네 장에서 1,482 tokens per second를 냈고, cost는 B300s의 3분의 1, Opus의 10분의 1 수준이었다고 설명합니다. 이는 단순한 API list price 비교가 아니라 전용 하드웨어 위 GLM capacity 가격을 드러내는 checkpoint이므로, self-hosting economics를 판단하려는 팀에 실무적으로 유의미합니다.
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-226"></a>
 ### Case 226: [Bonsai Mac Studio Chart Triage](https://x.com/MaziyarPanahi/status/2077362554805117132) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
 

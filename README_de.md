@@ -36,7 +36,7 @@ Jeder Case-Titel verlinkt auf die öffentliche Quelle, jeder Autor auf das jewei
 
 ## 📊 Überblick
 
-- **226 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
+- **234 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
 - Deckt Vergleichstests und Grenzmodell-Bewertung, Coding-Agenten und Langkontext-Workflows, Praxisdemos und Beispiel-Builds, Anbieter- und Tool-Integrationen, Kosten, Preise und lokale Bereitstellung sowie Grenzen, Hinweise und Sicherheitssignale ab.
 - Jeder Case enthält die Originalquelle, die Creator-Attribution, ein knappes Nutzungs-Takeaway, den Evidenztyp und das Veröffentlichungsdatum.
 - Nutze dieses Repo, um praktische Workflows zu finden, Stärken und Grenzen zu vergleichen, Provider-Routen zu entdecken und echte Experimente nachzuvollziehen.
@@ -78,11 +78,11 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Abschnitt | Fälle |
 |---|---|
-| [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223 |
-| [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212 |
-| [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218 |
-| [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225 |
-| [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226 |
+| [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227 |
+| [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228 |
+| [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
+| [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232 |
+| [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234 |
 | [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [Verwandte Repositories](#related-repositories) | Verifizierte API-Route und angrenzende Oberflächen |
 | [🙏 Danksagung](#acknowledge) | Credits und Korrekturrichtlinie |
@@ -91,6 +91,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 227: Gargantua-WebGL-Raytracer-Sieg](#case-227) | Nutze diesen Fall, um GLM-5.2 bei physiklastigen Single-File-Browser-Builds zu benchmarken, denn laut AlicanKiraz0 gewann GLM 5.2 Max eine Gargantua-Geodesic-Raytracer-Aufgabe, weil es numerische Korrektheit und Real-Time-Rendering-Disziplin besser ausbalancierte als die getesteten Vergleichsmodelle. | Evaluation |
 | [Case 223: Token-Effizienzlücke im Intelligence Index](#case-223) | Nutze diesen Fall, um GLM-5.2 für Benchmark-Workloads mit langem Horizont zu budgetieren, denn laut Artificial Analysis lag GLM-5.2 Max im Intelligence Index im Schnitt bei etwa 43K Output-Tokens pro Aufgabe gegenüber 25K bei Inkling sowie niedrigeren Werten bei Kimi K2.6 und DeepSeek v4 Pro Max. | Evaluation |
 | [Case 217: EvalPlus-Rettungsroute schlägt Fable](#case-217) | Nutze diesen Fall, um eine verifier-gesteuerte Zwei-Modell-Coding-Route zu testen, denn laut gmi_cloud lösten Opus 4.8 zuerst und GLM 5.2 FP8 als Rettung 94 von 100 eingefrorenen EvalPlus-Aufgaben, also fünf mehr als Fable 5, bei rund 47 Prozent geringeren Kosten. | Bewertung |
 | [Case 207: Browser-Benchmark für stabile Flüssigkeiten](#case-207) | Nutze diesen Fall, um GLM-5.2 bei algorithmisch schweren Browser-Physics-Builds zu vergleichen, denn AlicanKiraz0 führte einen Stable-Fluids-HTML-Benchmark aus und bewertete GLM 5.2 Max mit 88 von 100 bei etwa 1,17 Dollar Kosten, vor Opus 4.8 und Fable 5, aber hinter GPT 5.6 Sol. | Evaluation |
@@ -136,6 +137,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 | Fall | Fokus | Typ |
 |---|---|---|
 | [Case 168: Synthwave Hard-Slice Ensemble für 2,66 $](#case-168) | Nutze diesen Fall, um GLM-5.2 in einem Multi-Model-Coding-Ensemble statt allein zu testen, denn TracNetwork berichtet, dass ein GLM-basiertes Synthwave-Setup 46.3 Prozent auf LiveCodeBench hard für etwa 2,66 Dollar erreicht hat und jedes einzelne Generator-Modell übertroffen hat. | Integration |
+| [Case 228: OpenCode als lokale agentische Coding-Basis](#case-228) | Nutze diesen Fall, um einen lokalen Coding-Agent-Stack zu validieren, bevor du für Frontier-Abos zahlst, denn laut comma_ai hat das Team Anthropic intern ersetzt und fährt nun mit GLM 5.2 plus OpenCode besser bei agentischem Coding. | Demo |
 | [Case 212: Dell-Hub-GLM-Agent-Tutorial](#case-212) | Nutze diesen Fall, wenn du einen GLM-5.2-Coding-Agent für einen Open-Weight-Trainingsworkflow aufsetzen willst, denn juanjucm verknüpft eine neue Anleitung mit dem GLM-5.2-FP8-Katalogeintrag im Dell Enterprise Hub und einem Schritt-für-Schritt-Aufbau für einen Agenten auf Basis dieses Modells. | Tutorial |
 | [Case 211: 8xB200 Open-Weight-Report-Pipeline](#case-211) | Nutze diesen Fall, wenn du GLM-5.2 als Hauptautor in eine lokal orientierte Report-Pipeline setzen willst, denn TheZachMueller sagt, dass die 4/4-Aufteilung eines 8xB200-Knotens GLM 5.2 NVFP4 fürs Schreiben und Kimi K2.7 Code für Retrieval nutzte und so einen 36-seitigen Bericht zu einem Bruchteil der Claude-API-Kosten erzeugte. | Demo |
 | [Case 210: Spettro-Liquid-Glass-Überarbeitung mit Multi-Agenten](#case-210) | Nutze diesen Fall, um GLM-5.2 als research-lastigen Frontend-Fixer innerhalb einer Multi-Agent-Web-Überarbeitung zu testen, denn laut spettrotoken nutzte GLM 5.2 integrierte Web-Scraping- und Data-Fetching-Tools, um eine browserübergreifende Liquid-Glass-Implementierung auszuliefern, die in Firefox funktionierte, nachdem Fable 5 und GPT-5.5 gescheitert waren. | Demo |
@@ -177,6 +179,7 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 229: Hyperagent-Profil-Portfolio-Shootout](#case-229) | Nutze diesen Fall, um GLM-5.2 gegen andere offene Modelle in einer echten browserbasierten Agent-Aufgabe zu vergleichen, denn arsh_goyal ließ GLM 5.2, DeepSeek V4, Kimi K2.6 und Qwen 3.7 parallel auf Hyperagent aus öffentlichen Profilen ein persönliches Portfolio bauen. | Demo |
 | [Case 218: OpenCode-Portfolio- und OS-Neubau](#case-218) | Nutze diesen Fall, um GLM-5.2 bei ambitionierten OpenCode-Builds einzuordnen, denn MarkSShenouda sagt, dass OpenCode Go plus GLM-5.2 beim Neuaufbau einer Portfolio-Seite und eines echten in C und Assembly geschriebenen OS geholfen hat, das in WASM oder einem Qemu-Emulator läuft. | Demo |
 | [Case 213: LlamaCoder-v4-GLM-Neubau](#case-213) | Nutze diesen Fall, wenn du einen One-Prompt-App-Generation-Workflow rund um GLM-5.2s Stärken in Planning und Design prototypen willst, denn nutlope sagt, dass LlamaCoder v4 um GLM 5.2 herum neu aufgebaut wurde, Parsing und Planning verbessert und jetzt einen WebAssembly-Renderer in einem freien Open-Source-Stack ausliefert. | Demo |
 | [Case 202: Befehlscode-Space-Shooter-Feature gewinnen](#case-202) | Nutze diesen Fall, um GLM-5.2 bei einem One-Shot-Build für interaktive UI zu vergleichen, denn Command Code ließ denselben Retro-Space-Shooter-Prompt über Fable 5, GPT 5.5, GLM 5.2 und DeepSeek V4 Pro laufen und setzte GLM bei den Features an die Spitze. | Evaluation |
@@ -206,6 +209,9 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 232: Macroscope Check-Run-GLM-Agenten](#case-232) | Nutze diesen Fall, um die Kosten von PR-Review-Agenten zu senken und trotzdem einen echten Check-Run-Workflow zu behalten, denn laut kayvz können Check Run Agents in Macroscope jetzt über die normale `.md`-basierte Repo-Konfiguration mit GLM 5.2 laufen. | Integration |
+| [Case 231: Aster 281 TPS Research-Agent-API](#case-231) | Nutze diesen Fall, um einen schnellen gehosteten GLM-5.2-Endpoint zu benchmarken, denn laut asterailabs serviert Aster Inference GLM 5.2 mit 281 tokens per second als Teil einer Inference-API, die aus Research-Agent-Optimierungen hervorgegangen ist. | Integration |
+| [Case 230: Native Wafer-GLM-Route für TrueFoundry](#case-230) | Nutze diesen Fall, um GLM-5.2 in einen bestehenden TrueFoundry AI Gateway Stack einzuklinken, denn laut wafer_ai startet die native Provider-Integration jetzt mit GLM 5.2 und GLM 5.2 Fast, ohne dass der übrige Gateway-Stack geändert werden muss. | Integration |
 | [Case 225: TogetherLink-Brücke für Codex-Harnesses](#case-225) | Nutze diesen Fall, um GLM-5.2 innerhalb bestehender Coding-Agent-CLIs auszuführen, denn laut nutlope ist TogetherLink eine Open-Source-CLI, mit der Codex und Claude Code offene Modelle wie GLM 5.2 direkt aufrufen können. | Integration |
 | [Case 224: Vorflux-Routing im Open-Model-Harness](#case-224) | Nutze diesen Fall, um GLM-5.2 ohne Custom Glue in eine vollständige Agent-Session zu routen, denn laut vorfluxai weist sein Open Model Harness GLM 5.2 die Schritte Design, Build und Simplify zu, während der restliche Vorflux-Flow intakt bleibt. | Integration |
 | [Case 170: Kostenloser Plug-and-Play-Zugriff auf die NVIDIA-API](#case-170) | Nutze diesen Fall, um GLM-5.2 schnell über einen kostenlosen Hosted-Endpoint zu testen, denn hqmank sagt, dass NVIDIA eine OpenAI-kompatible API-Route freigeschaltet und bestätigt hat, dass sie als Plug-and-Play-Drop-in lief. | Integration |
@@ -274,6 +280,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 234: Jatevo-Rabattierter GLM-Zugang](#case-234) | Nutze diesen Fall, um einen einfachen gehosteten GLM-5.2-Zugangsweg mit veröffentlichter Retail-Preisangabe zu bekommen, denn laut JatevoId ist GLM 5.2 auf seiner Plattform für $1.40 pro Million Input-Tokens und $4.40 pro Million Output-Tokens live, mit 50% Rabatt für qualifizierte JTVO-Halter. | Integration |
+| [Case 233: MI325x-GLM-Serving unter einem Zehntel Cent](#case-233) | Nutze diesen Fall, um selbstgehostete GLM-5.2-Inferenz auf AMD-Hardware zu budgetieren, denn laut picocreator lieferte ein 4xMI325x-Setup GLM 5.2 mit 1,482 tok/s für unter $0.10 pro Million Tokens aus. | Demo |
 | [Case 226: Bonsai-Mac-Studio-Triage für Patientenakten](#case-226) | Nutze diesen Fall, um eine lange klinische Patientenakte lokal zu halten, während GLM-5.2 darüber schlussfolgert, denn laut MaziyarPanahi triagierte GLM 5.2 eine dreijährige Patientenakte über Bonsai 27B auf einem Mac Studio und fand ein Kontrastmittel-Risiko, das 17 Monate zurücklag. | Demo |
 | [Case 191: Von Hermes gebautes lokales LiteLLM-Labor](#case-191) | Nutze diesen Fall, um ein lokales Inference-Lab mit GLM-5.2 als Coding Agent zu bootstrappen, denn die Quelle sagt, dass Hermes Agent plus GLM-5.2 LiteLLM, Postgres, Prometheus und Grafana rund um ein M3-Ultra-Setup verkabelt hat. | Integration |
 | [Case 187: Dual M5 Max Offline-Drohnenschiff-Sim](#case-187) | Nutze diesen Fall, um abzuschätzen, was ein vollständig offline laufender GLM-5.2-Agent auf Apple Silicon leisten kann, denn XavierLocalAI meldet ein 753B-Setup, das auf zwei 128GB-M5-Max-Maschinen mit 26 Tok/s einen Droneship-Landing-Simulator schreibt. | Demo |
@@ -345,6 +353,16 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Vergleichstests und Grenzmodell-Bewertung
+---
+<a id="case-227"></a>
+### Case 227: [Gargantua-WebGL-Raytracer-Sieg](https://x.com/AlicanKiraz0/status/2077885419744612597) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
+
+**Nutze diesen Fall, um GLM-5.2 bei physiklastigen Single-File-Browser-Builds zu benchmarken, denn laut AlicanKiraz0 gewann GLM 5.2 Max eine Gargantua-Geodesic-Raytracer-Aufgabe, weil es numerische Korrektheit und Real-Time-Rendering-Disziplin besser ausbalancierte als die getesteten Vergleichsmodelle.**
+
+AlicanKiraz0 beschreibt eine One-File-Raw-WebGL2-Aufgabe, die einen Schwarzschild-Black-Hole-Renderer mit RK4-Null-Geodesic-Integration, Accretion Disk, Gravitational Lensing, Redshift, Doppler-Effekten, Kamerasteuerung und einem ausgearbeiteten Control Panel verlangt. Laut Autor entschieden hier nicht die Visuals allein, sondern numerische Korrektheit, Boundary Handling und Solver-Disziplin, und GLM 5.2 Max erhielt 92 von 100 Punkten vor GPT5.6 Sol Ultra mit 90, Kimi K3 Thinking Max mit 85 und Fable 5 Max mit 80.
+
+Type: Evaluation | Date: 2026-07-16
+
 ---
 <a id="case-223"></a>
 ### Case 223: [Token-Effizienzlücke im Intelligence Index](https://x.com/ArtificialAnlys/status/2077466596528832678) (by [@ArtificialAnlys](https://x.com/ArtificialAnlys))
@@ -777,6 +795,16 @@ Type: Integration | Date: 2026-07-03
 
 ---
 
+<a id="case-228"></a>
+### Case 228: [OpenCode als lokale agentische Coding-Basis](https://x.com/comma_ai/status/2077819467267186700) (by [@comma_ai](https://x.com/comma_ai))
+
+**Nutze diesen Fall, um einen lokalen Coding-Agent-Stack zu validieren, bevor du für Frontier-Abos zahlst, denn laut comma_ai hat das Team Anthropic intern ersetzt und fährt nun mit GLM 5.2 plus OpenCode besser bei agentischem Coding.**
+
+comma_ai sagt, dass die eigene GLM-Deployment downstairs neben den Maschinen läuft, die den Open-Source-Driving-Agent trainieren, was den Post eher zu einem konkreten Local-Ownership-Signal als zu einer bloßen Cloud-Präferenz macht. Der Thread verknüpft GLM 5.2 ausdrücklich mit OpenCode und sagt, dass der Wechsel nach dem Entfernen von Anthropic aus dem Stack die tägliche agentische Coding-Arbeit verbessert habe, womit der Fall eher als belastbare Local-First-Workflow-Referenz dient als als allgemeiner Open-Source-Jubelpost.
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-212"></a>
 ### Case 212: [Dell-Hub-GLM-Agent-Tutorial](https://x.com/juanjucm/status/2076714987569963508) (by [@juanjucm](https://x.com/juanjucm))
 
@@ -1171,6 +1199,16 @@ Type: Evaluation | Date: 2026-06-24
 
 <a id="hands-on-demos-showcase-builds"></a>
 ## 🎮 Praxisdemos und Beispiel-Builds
+<a id="case-229"></a>
+### Case 229: [Hyperagent-Profil-Portfolio-Shootout](https://x.com/arsh_goyal/status/2077764207945416949) (by [@arsh_goyal](https://x.com/arsh_goyal))
+
+**Nutze diesen Fall, um GLM-5.2 gegen andere offene Modelle in einer echten browserbasierten Agent-Aufgabe zu vergleichen, denn arsh_goyal ließ GLM 5.2, DeepSeek V4, Kimi K2.6 und Qwen 3.7 parallel auf Hyperagent aus öffentlichen Profilen ein persönliches Portfolio bauen.**
+
+arsh_goyal sagt, dass jedes Modell seine eigene Cloud-Maschine mit echtem Browser bekam, die YouTube-, LinkedIn- und X-Profile des Autors las und danach aus demselben One-Line-Prompt eine Website baute. Der Post sagt außerdem, dass Hyperagent Kosten und Dauer pro Run offenlegte und zusätzlich ein Video sowie den Prompt im Reply-Thread verlinkte, was den Fall zu einem stärkeren Hands-on-Vergleich macht als ein bloßer Screenshot oder ein einfaches Leaderboard-Repost.
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-218"></a>
 ### Case 218: [OpenCode-Portfolio- und OS-Neubau](https://x.com/MarkSShenouda/status/2077032282141978842) (by [@MarkSShenouda](https://x.com/MarkSShenouda))
 
@@ -1529,6 +1567,36 @@ Type: Integration | Date: 2026-07-09
 DotCode sagt, dass GLM 5.2 jetzt mit kontextreichen Workspace-Uploads arbeitet, sodass Agenten Dateien prüfen, Projektstrukturen durchsuchen, Code bearbeiten, Terminalbefehle ausführen und im selben Sandbox-Kontext weiterarbeiten können. Der Post nennt die unterstützten Eingaben, zeigt den Flow von Prompt plus Dateien bis zur Sandbox-Ausführung und rahmt das als Schritt zu echter Coding-Agent-Arbeit aus realem Projektkontext.
 
 Type: Integration | Date: 2026-07-08
+
+---
+<a id="case-232"></a>
+### Case 232: [Macroscope Check-Run-GLM-Agenten](https://x.com/kayvz/status/2077810181904494631) (by [@kayvz](https://x.com/kayvz))
+
+**Nutze diesen Fall, um die Kosten von PR-Review-Agenten zu senken und trotzdem einen echten Check-Run-Workflow zu behalten, denn laut kayvz können Check Run Agents in Macroscope jetzt über die normale `.md`-basierte Repo-Konfiguration mit GLM 5.2 laufen.**
+
+kayvz sagt, dass die neuen Modelloptionen direkt beim Konfigurieren einer Check-Run-`.md`-Datei auftauchen, was die Änderung praxisnäher macht als einen allgemeinen Availability-Post. Der Thread positioniert das Feature ausdrücklich für Custom-Code-Review-Agenten in Pull Requests und macht daraus eine konkrete Integrationsoberfläche für Teams, die Review-Automation bereits über Macroscope routen und eine Open-Weight-Option suchen.
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-231"></a>
+### Case 231: [Aster 281 TPS Research-Agent-API](https://x.com/asterailabs/status/2077556435085574429) (by [@asterailabs](https://x.com/asterailabs))
+
+**Nutze diesen Fall, um einen schnellen gehosteten GLM-5.2-Endpoint zu benchmarken, denn laut asterailabs serviert Aster Inference GLM 5.2 mit 281 tokens per second als Teil einer Inference-API, die aus Research-Agent-Optimierungen hervorgegangen ist.**
+
+Aster positioniert das Produkt als Inference-API, die von AI Research Agents aufgebaut wurde, und nennt konkrete Throughput-Werte statt nur eines Launch-Slogans: 644 tps für gpt-oss-120b und 281 tps für GLM 5.2 auf GPU. Im selben Post sagt das Unternehmen, dass es Inference-Erkenntnisse aus dem eigenen Research-System direkt in Produktverbesserungen überführt, was die Route für Teams relevant macht, die schnelle gehostete GLM-Provider statt Self-Hosting von Grund auf vergleichen.
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-230"></a>
+### Case 230: [Native Wafer-GLM-Route für TrueFoundry](https://x.com/wafer_ai/status/2077837999514214456) (by [@wafer_ai](https://x.com/wafer_ai))
+
+**Nutze diesen Fall, um GLM-5.2 in einen bestehenden TrueFoundry AI Gateway Stack einzuklinken, denn laut wafer_ai startet die native Provider-Integration jetzt mit GLM 5.2 und GLM 5.2 Fast, ohne dass der übrige Gateway-Stack geändert werden muss.**
+
+wafer_ai sagt, dass Teams mit bestehendem TrueFoundry AI Gateway Wafer-Modelle nutzen können, ohne sonst etwas an ihrem Stack zu ändern, und dass der Rollout mit GLM 5.2 und GLM 5.2 Fast beginnt. Der Post rahmt Wafer als schnellste serverless GLM-Route und bindet sie an eine namentlich genannte Gateway-Integration, wodurch der Fall eher ein konkreter Managed-Access-Pfad ist als eine weitere allgemeine Modellverfügbarkeitsmeldung.
+
+Type: Integration | Date: 2026-07-16
 
 ---
 <a id="case-225"></a>
@@ -2117,6 +2185,26 @@ Type: Integration | Date: 2026-06-22
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Kosten, Preise und lokale Bereitstellung
+<a id="case-234"></a>
+### Case 234: [Jatevo-Rabattierter GLM-Zugang](https://x.com/JatevoId/status/2077770086228885536) (by [@JatevoId](https://x.com/JatevoId))
+
+**Nutze diesen Fall, um einen einfachen gehosteten GLM-5.2-Zugangsweg mit veröffentlichter Retail-Preisangabe zu bekommen, denn laut JatevoId ist GLM 5.2 auf seiner Plattform für $1.40 pro Million Input-Tokens und $4.40 pro Million Output-Tokens live, mit 50% Rabatt für qualifizierte JTVO-Halter.**
+
+JatevoId sagt, dass der Rollout eine schrittweise aktualisierte Free-Compute-Zuteilung für Holder sowie eine veröffentlichte 50-Prozent-Rabattpolitik zusätzlich zur regulären Per-Token-Preisstruktur umfasst. Die explizite Preisangabe für Input und Output macht den Fall zu einer konkreten Zugangsnotiz für Nutzer, die gehostete GLM-Routen vergleichen, auch wenn der Holder-Rabatt weiterhin von plattformspezifischen Bedingungen abhängt.
+
+Type: Integration | Date: 2026-07-16
+
+---
+<a id="case-233"></a>
+### Case 233: [MI325x-GLM-Serving unter einem Zehntel Cent](https://x.com/picocreator/status/2077817481381728268) (by [@picocreator](https://x.com/picocreator))
+
+**Nutze diesen Fall, um selbstgehostete GLM-5.2-Inferenz auf AMD-Hardware zu budgetieren, denn laut picocreator lieferte ein 4xMI325x-Setup GLM 5.2 mit 1,482 tok/s für unter $0.10 pro Million Tokens aus.**
+
+picocreator sagt, dass die Route auf vier MI325x-GPUs 1,482 tokens per second lieferte, und rahmt die Kosten als dreimal günstiger als B300s und zehnmal günstiger als Opus ein. Dadurch wird der Post zu einem konkreten Hardware-und-Ökonomie-Checkpoint für Teams, die dedizierte GLM-Kapazität kalkulieren, statt nur API-Listenpreise oder Marketing-Claims zu vergleichen.
+
+Type: Demo | Date: 2026-07-16
+
+---
 <a id="case-226"></a>
 ### Case 226: [Bonsai-Mac-Studio-Triage für Patientenakten](https://x.com/MaziyarPanahi/status/2077362554805117132) (by [@MaziyarPanahi](https://x.com/MaziyarPanahi))
 
