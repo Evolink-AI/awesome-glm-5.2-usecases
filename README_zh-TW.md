@@ -36,7 +36,7 @@
 
 ## 📊 總覽
 
-- **234 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
+- **242 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
 - 覆蓋基準與前沿評測、編碼代理與長上下文工作流、上手演示與作品展示、供應商與工具整合、成本、定價與本地部署、限制、注意事項與安全訊號。
 - 每個案例都包含原始來源、創作者署名、精簡的使用結論、證據類型與發布日期。
 - 你可以用這個 repo 尋找實用工作流、比較優勢與限制、探索供應商路徑，並追蹤真實上手實驗。
@@ -78,11 +78,11 @@ curl --request POST \
 
 | 章節 | 案例 |
 |---|---|
-| [📏 基準與前沿評測](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227 |
-| [💻 編碼代理與長上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228 |
+| [📏 基準與前沿評測](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
+| [💻 編碼代理與長上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237 |
 | [🎮 上手演示與作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
-| [🔌 供應商與工具整合](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232 |
-| [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234 |
+| [🔌 供應商與工具整合](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
+| [💸 成本、定價與本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-242 |
 | [🧭 限制、注意事項與安全訊號](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [相關儲存庫](#related-repositories) | 已驗證的 API 路徑與相鄰入口 |
 | [🙏 致謝](#acknowledge) | 來源致謝與修正政策 |
@@ -91,6 +91,7 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 235: DiligenceBench 金融 Harness 排名](#case-235) | 如果你想評估 GLM-5.2 在 public-equity research agent 上的表現，可以看這個案例，因為 karinanguyen 說 DiligenceBench 把 GLM 5.2 排到接近最前面，並證明 finance harness 能讓強模型同時變得更強也更便宜。 | Evaluation |
 | [Case 227: Gargantua WebGL Raytracer 勝出](#case-227) | 如果你想在偏物理的單檔 browser build 上 benchmark GLM-5.2，可以看這個案例，因為 AlicanKiraz0 說 GLM 5.2 Max 在 Gargantua geodesic raytracer 任務裡更好地兼顧了數值正確性與 real-time rendering discipline。 | Evaluation |
 | [Case 223: Intelligence Index Token 效率落差](#case-223) | 如果你想為長時程 benchmark 工作負載規劃 GLM-5.2 預算，可以看這個案例，因為 Artificial Analysis 說，GLM-5.2 Max 在 Intelligence Index 每個任務上的平均輸出 token 約為 43K，而 Inkling 是 25K，Kimi K2.6 和 DeepSeek v4 Pro Max 也都更低。 | Evaluation |
 | [Case 217: EvalPlus 救援路由勝過 Fable](#case-217) | 如果你想測試一條帶 verifier 的雙模型 coding 路由，可以看這個案例，因為 gmi_cloud 說，先跑 Opus 4.8、失敗時再用 GLM 5.2 FP8 救援的方案，在 100 個凍結 EvalPlus 任務裡做對了 94 個，比 Fable 5 多 5 個，而且成本低約 47%。 | 評測 |
@@ -136,6 +137,8 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 237: LM Studio Bionic GLM 代理](#case-237) | 如果你想評估一個 local-first 的 GLM-5.2 coding agent，可以看這個案例，因為 chenzeling4 說 LM Studio Bionic 把 GLM 5.2 跟本地文件 sandbox、inline code diff、rollback checkpoint，以及裝置端語音轉錄整合在一起。 | Integration |
+| [Case 236: Claude Code 網頁開發品質優勢](#case-236) | 如果你想比較 first-pass 網頁開發品質，而不是只看完成速度，可以看這個案例，因為 Lumenix0 說 GLM 5.2 在 Claude Code 裡，於三個真實任務上都在設計品質與功能完整度方面勝過了 Codex 裡的 GPT 5.5。 | Evaluation |
 | [Case 168: Synthwave Hard-Slice Ensemble 售價 $2.66 美元](#case-168) | 如果你想把 GLM-5.2 放進多模型 coding ensemble，而不是單獨使用，可以看這個案例，因為 TracNetwork 表示一個含 GLM 的 Synthwave 組合在 LiveCodeBench hard 上以約 2.66 美元拿到 46.3%，並超過每個單獨 generator。 | Integration |
 | [Case 228: OpenCode 本地 agentic coding 底座](#case-228) | 如果你想在付費訂閱 frontier 模型前先驗證本地 coding-agent stack，可以看這個案例，因為 comma_ai 說他們已經移除 Anthropic，並發現 GLM 5.2 加 OpenCode 的 agentic coding 流程更好用。 | Demo |
 | [Case 212: Dell Hub GLM Agent 教學](#case-212) | 如果你想為開放權重訓練工作流搭一套 GLM-5.2 coding agent，可以看這個案例，因為 juanjucm 表示，一篇新指南把 Dell Enterprise Hub 新增 GLM-5.2-FP8 目錄更新，與一套圍繞該模型構建 agent 的逐步搭建流程放在了一起。 | Tutorial |
@@ -209,6 +212,8 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 239: TokenRouter 免費 GLM API 視窗](#case-239) | 如果你想快速拿到一條短期免費的 GLM-5.2 API 路徑，可以看這個案例，因為 meliasiih 說 TokenRouter 提供到 2026-07-25 為止的免費存取，並且流程包含簡單註冊、API key 與公開 base URL。 | Tutorial |
+| [Case 238: Agentuity Wafer GLM 閘道](#case-238) | 如果你想把 GLM-5.2 接進 Agentuity gateway stack，可以看這個案例，因為 wafer_ai 說它的 serverless 路線現在已在 Agentuity 上提供 GLM 5.2，regular 和 Fast tier 都支援約 100 到 250 tok/s 與 1M context。 | Integration |
 | [Case 232: Macroscope Check Run GLM 代理](#case-232) | 如果你想在保留 check-run workflow 的同時壓低 PR review agent 成本，可以看這個案例，因為 kayvz 說 Macroscope 的 Check Run Agents 現在可以直接從一般 `.md` repo 設定裡選用 GLM 5.2。 | Integration |
 | [Case 231: Aster 281 TPS 研究代理 API](#case-231) | 如果你想 benchmark 一個高速 hosted GLM-5.2 endpoint，可以看這個案例，因為 asterailabs 說 Aster Inference 把來自 research-agent 優化的 API 路由以 281 tokens per second 提供給 GLM 5.2。 | Integration |
 | [Case 230: TrueFoundry 原生 Wafer GLM 路由](#case-230) | 如果你想把 GLM-5.2 接進現有 TrueFoundry AI Gateway stack，可以看這個案例，因為 wafer_ai 說這條 native provider integration 從 GLM 5.2 和 GLM 5.2 Fast 開始，而且不需要改動閘道其餘部分。 | Integration |
@@ -280,6 +285,9 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 242: ZenMux 2.49 億 Token 收據](#case-242) | 如果你想用實際收據而不是牌價來校驗 GLM-5.2 的真實經濟性，可以看這個案例，因為 AstridWiegner 說一張 ZenMux Token Receipt 顯示處理量超過 2.49 億 token，原始成本是 105.81 美元，但最終總額是 0 美元。 | Evaluation |
+| [Case 241: Zro Pro 3 億 GLM 試用](#case-241) | 如果你想用有限預算測試私有託管的 GLM-5.2 agent 工作，可以看這個案例，因為 AndarkFomo 說一個 Zro Pro 活動大約能用 1 美元解鎖 3 億 GLM-5.2 token，並附帶 OpenAI 相容存取、EU infra 與 zero-retention 定位。 | Tutorial |
+| [Case 240: DGX Station 256K 桌面部署](#case-240) | 如果你想估算桌面級 GLM-5.2 部署的規模，可以看這個案例，因為 TheAhmadOsman 說 GLM 5.2 NVFP4 在 DGX Station 上以 256K context 跑出了約 3,000 tok/s 的 prefill 與 32 tok/s 的 decode。 | Demo |
 | [Case 234: Jatevo 折扣 GLM 接入](#case-234) | 如果你想快速掌握一條帶公開定價的 hosted GLM-5.2 接入路徑，可以看這個案例，因為 JatevoId 說其平台上 GLM 5.2 的 input 價格是 $1.40 / 1M、output 價格是 $4.40 / 1M，符合條件的 JTVO holder 還能拿到 50% 折扣。 | Integration |
 | [Case 233: MI325x 上低於 0.1 美分的 GLM 服務](#case-233) | 如果你想評估 AMD 硬體上的 self-hosted GLM-5.2 inference 成本，可以看這個案例，因為 picocreator 說 4xMI325x 配置把 GLM 5.2 跑到了 1,482 tok/s，成本低於每百萬 token 0.10 美元。 | Demo |
 | [Case 226: Bonsai Mac Studio 病歷分流](#case-226) | 如果你想讓一份很長的臨床病歷留在本地，同時讓 GLM-5.2 在其上做推理，可以看這個案例，因為 MaziyarPanahi 說 GLM 5.2 透過 Mac Studio 上的 Bonsai 27B 分流一份三年期病歷，並找出了埋在 17 個月前的造影風險問題。 | Demo |
@@ -354,6 +362,15 @@ curl --request POST \
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 基準與前沿評測
 ---
+<a id="case-235"></a>
+### Case 235: [DiligenceBench 金融 Harness 排名](https://x.com/karinanguyen/status/2078245092855525578) (by [@karinanguyen](https://x.com/karinanguyen))
+
+**如果你想評估 GLM-5.2 在 public-equity research agent 上的表現，可以看這個案例，因為 karinanguyen 說 DiligenceBench 把 GLM 5.2 排到接近最前面，並證明 finance harness 能讓強模型同時變得更強也更便宜。**
+
+karinanguyen 把 DiligenceBench 介紹成一套以 rubric 為核心的 public-equity research 評估，並表示在這條 finance harness 上，Meta Muse Spark 1.1 以 57.4% 領先，而 GLM 5.2 緊跟在 Sonnet 4.6 與 GPT-5.6 Sol 之後。貼文同時主張，generic tools 對強模型的增益最大，較弱的模型反而更需要 domain-specific scaffolding；也正因如此，這條 finance harness 把 price-performance frontier 推到新的位置，讓 GLM 5.2 在絕對表現上特別突出，而 MiniMax M3 則在效率面看起來最強。
+
+Type: Evaluation | Date: 2026-07-17
+
 ---
 <a id="case-227"></a>
 ### Case 227: [Gargantua WebGL Raytracer 勝出](https://x.com/AlicanKiraz0/status/2077885419744612597) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
@@ -784,6 +801,25 @@ Type: Benchmark | Date: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 編碼代理與長上下文工作流
+<a id="case-237"></a>
+### Case 237: [LM Studio Bionic GLM 代理](https://x.com/chenzeling4/status/2077967277698515184) (by [@chenzeling4](https://x.com/chenzeling4))
+
+**如果你想評估一個 local-first 的 GLM-5.2 coding agent，可以看這個案例，因為 chenzeling4 說 LM Studio Bionic 把 GLM 5.2 跟本地文件 sandbox、inline code diff、rollback checkpoint，以及裝置端語音轉錄整合在一起。**
+
+chenzeling4 把 LM Studio Bionic 描述成一個圍繞 open model 打造的獨立 agent，可依任務選擇本地或雲端算力，但兩種路徑都維持 zero-retention 定位。貼文指出，coding 由 GLM 5.2 和 Kimi K2.7 Code 負責，文件會在 sandbox 中處理並自動留下 rollback checkpoint，程式修改會直接以 inline diff 顯示，而語音轉錄則透過 Voxtral 保持在裝置端完成。這讓它成為一條具體的本地 agent 工作流更新，而不只是泛泛的模型可用性訊號。
+
+Type: Integration | Date: 2026-07-17
+
+---
+<a id="case-236"></a>
+### Case 236: [Claude Code 網頁開發品質優勢](https://x.com/Lumenix0/status/2078241726897230164) (by [@Lumenix0](https://x.com/Lumenix0))
+
+**如果你想比較 first-pass 網頁開發品質，而不是只看完成速度，可以看這個案例，因為 Lumenix0 說 GLM 5.2 在 Claude Code 裡，於三個真實任務上都在設計品質與功能完整度方面勝過了 Codex 裡的 GPT 5.5。**
+
+Lumenix0 總結了一組 head-to-head 測試：用 Claude Code 裡的 GLM 5.2 對上 Codex 裡的 GPT 5.5，任務包含網站改版、React bug 修復，以及 Kanban board 建置。貼文表示，GPT 在每個任務上都更快完成，但 GLM 產出了更好的 redesign，在 bug 修復上給出同樣正確但更清楚的解釋，還在一次生成中交付了唯一完整可用的 Kanban board，包含任務命名、優先級、狀態切換與 reset button。相同來源也補充，這三組測試合計只用掉 16 美元方案每週額度的 7%。
+
+Type: Evaluation | Date: 2026-07-17
+
 <a id="case-168"></a>
 ### Case 168: [Synthwave Hard-Slice Ensemble 售價 $2.66 美元](https://x.com/TracNetwork/status/2073038214592360522) (by [@TracNetwork](https://x.com/TracNetwork))
 
@@ -1476,6 +1512,25 @@ Type: Demo | Date: 2026-06-23
 <a id="provider-tool-integrations"></a>
 ## 🔌 供應商與工具整合
 ---
+<a id="case-239"></a>
+### Case 239: [TokenRouter 免費 GLM API 視窗](https://x.com/meliasiih/status/2078180641468985564) (by [@meliasiih](https://x.com/meliasiih))
+
+**如果你想快速拿到一條短期免費的 GLM-5.2 API 路徑，可以看這個案例，因為 meliasiih 說 TokenRouter 提供到 2026-07-25 為止的免費存取，並且流程包含簡單註冊、API key 與公開 base URL。**
+
+meliasiih 寫得很具體：先用 email 或 X 註冊、完成帳號驗證、生成 API key、選擇 GLM-5.2，然後把客戶端指向 `https://api.tokenrouter.com/v1`。來源也直接給了操作期限，說這個免費存取計畫會持續到 2026-07-25，因此它不是泛泛的可用性消息，而是一條團隊可以立即採用的限時 hosted access 路徑。
+
+Type: Tutorial | Date: 2026-07-17
+
+---
+<a id="case-238"></a>
+### Case 238: [Agentuity Wafer GLM 閘道](https://x.com/wafer_ai/status/2078186124258984374) (by [@wafer_ai](https://x.com/wafer_ai))
+
+**如果你想把 GLM-5.2 接進 Agentuity gateway stack，可以看這個案例，因為 wafer_ai 說它的 serverless 路線現在已在 Agentuity 上提供 GLM 5.2，regular 和 Fast tier 都支援約 100 到 250 tok/s 與 1M context。**
+
+wafer_ai 表示，市場上速度最快的 serverless GLM 5.2 路線，現在已經能透過 Agentuity AI Gateway 取得，而 Wafer 會在那裡同時提供 regular 與 Fast 兩個變體。這則貼文給出的不是模糊的 availability note，而是可直接拿來規劃部署的設定輪廓：兩個 tier 都有約 100 到 250 tokens per second，以及 1M-token context window。
+
+Type: Integration | Date: 2026-07-17
+
 <a id="case-232"></a>
 ### Case 232: [Macroscope Check Run GLM 代理](https://x.com/kayvz/status/2077810181904494631) (by [@kayvz](https://x.com/kayvz))
 
@@ -2186,6 +2241,36 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 成本、定價與本地部署
+<a id="case-242"></a>
+### Case 242: [ZenMux 2.49 億 Token 收據](https://x.com/AstridWiegner/status/2077917345893511266) (by [@AstridWiegner](https://x.com/AstridWiegner))
+
+**如果你想用實際收據而不是牌價來校驗 GLM-5.2 的真實經濟性，可以看這個案例，因為 AstridWiegner 說一張 ZenMux Token Receipt 顯示處理量超過 2.49 億 token，原始成本是 105.81 美元，但最終總額是 0 美元。**
+
+AstridWiegner 表示，一張 ZenMux Token Receipt 記錄了超過 2.49 億個 GLM 5.2 token，原始成本顯示為 105.81 美元，但最後總額降到了 0.00 美元。貼文把這類收據視為比單純 benchmark 分數更有用的比較介面，因為它把輸出品質與工作負載規模，直接對應到固定預算實際能買到多少工作量。
+
+Type: Evaluation | Date: 2026-07-17
+
+---
+<a id="case-241"></a>
+### Case 241: [Zro Pro 3 億 GLM 試用](https://x.com/AndarkFomo/status/2078092015368368574) (by [@AndarkFomo](https://x.com/AndarkFomo))
+
+**如果你想用有限預算測試私有託管的 GLM-5.2 agent 工作，可以看這個案例，因為 AndarkFomo 說一個 Zro Pro 活動大約能用 1 美元解鎖 3 億 GLM-5.2 token，並附帶 OpenAI 相容存取、EU infra 與 zero-retention 定位。**
+
+AndarkFomo 說，Product Hunt 優惠碼 `PRODUCTHUNT` 會給前 100 位使用者一個月免費的 Zro Pro，而這個方案平常月費是 20 美元；同時也有人在結帳時只被觸發了 1 美元的信用卡預授權。貼文表示，這個方案透過 OpenAI 相容 API 在 EU infra 上提供 private open-model inference 給 coding agent 使用，而且不會拿 prompts 訓練模型；它也補充了實際 caveat：3 億 token 更像是預期可用量，而不是永久硬上限，名額有限，且這條路線上的 GLM-5.2 context 為 350K。
+
+Type: Tutorial | Date: 2026-07-17
+
+---
+<a id="case-240"></a>
+### Case 240: [DGX Station 256K 桌面部署](https://x.com/TheAhmadOsman/status/2078247891370442867) (by [@TheAhmadOsman](https://x.com/TheAhmadOsman))
+
+**如果你想估算桌面級 GLM-5.2 部署的規模，可以看這個案例，因為 TheAhmadOsman 說 GLM 5.2 NVFP4 在 DGX Station 上以 256K context 跑出了約 3,000 tok/s 的 prefill 與 32 tok/s 的 decode。**
+
+TheAhmadOsman 表示，這次運行使用的是帶 FP8 KV cache 的 GLM 5.2 NVFP4，部署在一台 DGX Station 上，在 256K context length 下大約達到 3,000 tokens per second 的 prefill，以及 32 tokens per second 的 decode。貼文也把取捨講得很直接：目前還不支援併發請求，但對於本地長上下文方案來說，單桌面的吞吐表現已經相當紮實。
+
+Type: Demo | Date: 2026-07-17
+
+---
 <a id="case-234"></a>
 ### Case 234: [Jatevo 折扣 GLM 接入](https://x.com/JatevoId/status/2077770086228885536) (by [@JatevoId](https://x.com/JatevoId))
 

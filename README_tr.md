@@ -36,7 +36,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **234 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **242 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -78,11 +78,11 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237 |
 | [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-242 |
 | [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [İlgili depolar](#related-repositories) | Doğrulanmış API yolu ve komşu yüzeyler |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
@@ -91,6 +91,7 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 235: DiligenceBench finans araştırması sıralaması](#case-235) | Bu vakayı, GLM-5.2'yi halka açık hisse araştırması yapan agent'larda değerlendirmek için kullanın; çünkü karinanguyen, DiligenceBench'in GLM 5.2'yi üst sıralara yerleştirdiğini ve finance harness'in güçlü modelleri hem daha iyi hem de daha ucuz hale getirebildiğini söylüyor. | Evaluation |
 | [Case 227: Gargantua WebGL Raytracer kazanımı](#case-227) | Bu vakayı, fizik ağırlıklı tek dosyalı browser build’lerde GLM-5.2’yi benchmark etmek için kullanın; çünkü AlicanKiraz0, GLM 5.2 Max’in Gargantua geodesic raytracer görevini numerical correctness ve real-time rendering discipline dengesini rakip modellerden daha iyi kurarak kazandığını söylüyor. | Evaluation |
 | [Case 223: Intelligence Index token verimliliği farkı](#case-223) | Bu vakayı, uzun ufuklu benchmark iş yüklerinde GLM-5.2 için bütçe çıkarmak amacıyla kullanın; çünkü Artificial Analysis, Intelligence Index görev başına GLM-5.2 Max’in ortalama yaklaşık 43K output token kullandığını, Inkling’in 25K’da kaldığını ve Kimi K2.6 ile DeepSeek v4 Pro Max’in de daha düşük toplamlar ürettiğini söylüyor. | Evaluation |
 | [Case 217: EvalPlus kurtarma rotası Fable'ı geçti](#case-217) | Bu vakayı, doğrulayıcı kontrollü iki modelli bir coding rotasını test etmek için kullanın; çünkü gmi_cloud, önce Opus 4.8 sonra kurtarma için GLM 5.2 FP8 kullanarak donmuş EvalPlus görevlerinin 100'ünden 94'ünü çözdüğünü, bunun Fable 5'ten beş fazla olduğunu ve maliyetin yaklaşık yüzde 47 daha düşük kaldığını söylüyor. | Değerlendirme |
@@ -136,6 +137,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 237: LM Studio Bionic GLM ajanı](#case-237) | Bu vakayı, yerel öncelikli bir GLM-5.2 coding agent'ını değerlendirmek için kullanın; çünkü chenzeling4, LM Studio Bionic'in GLM 5.2'yi yerel belge sandbox'ları, satır içi kod diff'leri, rollback checkpoint'leri ve cihaz üstü ses dökümüyle birleştirdiğini söylüyor. | Integration |
+| [Case 236: Claude Code web geliştirmede kalite üstünlüğü](#case-236) | Bu vakayı, ham tamamlama hızından çok ilk denemedeki web geliştirme kalitesini karşılaştırmak için kullanın; çünkü Lumenix0, Claude Code içindeki GLM 5.2'nin Codex içindeki GPT 5.5'i üç gerçek görevde tasarım kalitesi ve işlevsel bütünlük açısından geçtiğini söylüyor. | Evaluation |
 | [Case 168: Synthwave Sert Dilim Topluluğu 2,66 Dolardan](#case-168) | Bu vakayı GLM-5.2'yi tek başına değil, çok modelli bir coding ensemble içinde denemek için kullanın; çünkü TracNetwork, GLM tabanlı bir Synthwave karışımının LiveCodeBench hard üzerinde yaklaşık 2,66 dolara 46.3 yüzde aldığını ve tekil generator modellerin her birini geçtiğini bildiriyor. | Integration |
 | [Case 228: OpenCode ile yerel agentic coding tabanı](#case-228) | Bu vakayı, frontier aboneliklerine para vermeden önce yerel bir coding-agent stack’i doğrulamak için kullanın; çünkü comma_ai, ekibin Anthropic’i içeride bıraktığını ve artık GLM 5.2 plus OpenCode ile daha iyi bir agentic coding akışı yakaladığını söylüyor. | Demo |
 | [Case 212: Dell Hub GLM Agent öğreticisi](#case-212) | Open-weight eğitim iş akışı için GLM-5.2 tabanlı bir coding agent kurmak istiyorsanız bu vakayı kullanın; çünkü juanjucm, Dell Enterprise Hub içine eklenen GLM-5.2-FP8 kataloğunu bu model etrafında agent kurmaya yönelik adım adım bir rehberle birleştiriyor. | Tutorial |
@@ -209,6 +212,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 239: TokenRouter ücretsiz GLM API dönemi](#case-239) | Bu vakayı, kısa süreli ücretsiz bir GLM-5.2 API rotası yakalamak için kullanın; çünkü meliasiih, TokenRouter'ın 25 Temmuz 2026'ya kadar basit bir kayıt, API key akışı ve yayımlanmış base URL ile ücretsiz erişim sunduğunu söylüyor. | Tutorial |
+| [Case 238: Agentuity Wafer GLM geçidi](#case-238) | Bu vakayı, GLM-5.2'yi bir Agentuity gateway stack'ine eklemek için kullanın; çünkü wafer_ai, serverless rotasının artık Agentuity üzerinde hem normal hem de Fast katmanlarında yaklaşık 100 ila 250 tok/s ve 1M context ile GLM 5.2 sunduğunu söylüyor. | Integration |
 | [Case 232: Macroscope Check Run GLM ajanları](#case-232) | Bu vakayı, gerçek bir check-run workflow’unu korurken PR-review agent maliyetini düşürmek için kullanın; çünkü kayvz, Macroscope’un artık Check Run Agents’ı deponun normal `.md`-based config’i üzerinden GLM 5.2 ile çalıştırdığını söylüyor. | Integration |
 | [Case 231: Aster research-agent API 281 TPS](#case-231) | Bu vakayı, hızlı bir hosted GLM-5.2 endpoint’ini benchmark etmek için kullanın; çünkü asterailabs, Aster Inference’ın GLM 5.2’yi research-agent optimization work’ünden çıkan bir inference API içinde 281 tokens per second ile sunduğunu söylüyor. | Integration |
 | [Case 230: TrueFoundry için yerel Wafer GLM rotası](#case-230) | Bu vakayı, GLM-5.2’yi mevcut bir TrueFoundry AI Gateway stack’ine eklemek için kullanın; çünkü wafer_ai, native provider integration’ın GLM 5.2 ve GLM 5.2 Fast ile başladığını ve gateway setup’ın geri kalanını değiştirmediğini söylüyor. | Integration |
@@ -280,6 +285,9 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 242: ZenMux 249M token makbuzu](#case-242) | Bu vakayı, liste fiyatları yerine gerçek makbuzlarla GLM-5.2 ekonomisini sağlamasını yapmak için kullanın; çünkü AstridWiegner, tek bir ZenMux Token Receipt'in 249M'den fazla işlenmiş token, 105.81 dolarlık ilk maliyet ve 0 dolarlık nihai toplam gösterdiğini söylüyor. | Evaluation |
+| [Case 241: Zro Pro ile 300M GLM denemesi](#case-241) | Bu vakayı, bütçe dostu şekilde özel hosted GLM-5.2 agent işleri denemek için kullanın; çünkü AndarkFomo, bir Zro Pro promosyonunun OpenAI-compatible erişim, AB altyapısı ve zero-retention konumlandırmasıyla yaklaşık 1 dolar karşılığında yaklaşık 300M GLM-5.2 token açabildiğini söylüyor. | Tutorial |
+| [Case 240: DGX Station üzerinde 256K masaüstü serving](#case-240) | Bu vakayı, masaüstü sınıfı bir GLM-5.2 dağıtımını boyutlandırmak için kullanın; çünkü TheAhmadOsman, GLM 5.2 NVFP4'ün DGX Station üzerinde 256K context'te yaklaşık 3,000 tok/s prefill ve 32 tok/s decode ile çalıştığını söylüyor. | Demo |
 | [Case 234: Jatevo üzerinden indirimli GLM erişimi](#case-234) | Bu vakayı, yayınlanmış retail pricing ile basit bir hosted GLM-5.2 erişim rotası almak için kullanın; çünkü JatevoId, GLM 5.2’nin platformunda milyon input token başına $1.40 ve milyon output token başına $4.40 fiyatla yayında olduğunu, uygun JTVO holders için de %50 indirim sunduğunu söylüyor. | Integration |
 | [Case 233: MI325x üzerinde onda bir sent altı GLM serving](#case-233) | Bu vakayı, AMD donanımında self-hosted GLM-5.2 inference bütçesi çıkarmak için kullanın; çünkü picocreator, 4xMI325x kurulumunun GLM 5.2’yi milyon token başına $0.10’un altında maliyetle 1,482 tok/s hızında sunduğunu söylüyor. | Demo |
 | [Case 226: Bonsai Mac Studio klinik kayıt triyajı](#case-226) | Bu vakayı, GLM-5.2 muhakeme yürütürken uzun bir klinik kaydı yerelde tutmak için kullanın; çünkü MaziyarPanahi, GLM 5.2’nin Mac Studio üzerindeki Bonsai 27B ile üç yıllık bir hasta kaydını triyaj ettiğini ve 17 ay önceye gömülmüş bir kontrast riski ortaya çıkardığını söylüyor. | Demo |
@@ -353,6 +361,16 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
+---
+<a id="case-235"></a>
+### Case 235: [DiligenceBench finans araştırması sıralaması](https://x.com/karinanguyen/status/2078245092855525578) (by [@karinanguyen](https://x.com/karinanguyen))
+
+**Bu vakayı, GLM-5.2'yi halka açık hisse araştırması yapan agent'larda değerlendirmek için kullanın; çünkü karinanguyen, DiligenceBench'in GLM 5.2'yi üst sıralara yerleştirdiğini ve finance harness'in güçlü modelleri hem daha iyi hem de daha ucuz hale getirebildiğini söylüyor.**
+
+karinanguyen, DiligenceBench'i halka açık hisse araştırması için rubric tabanlı bir değerlendirme olarak tanıtıyor ve finance harness'te Meta Muse Spark 1.1'in yüzde 57,4 ile lider olduğunu, GLM 5.2'nin ise Sonnet 4.6 ve GPT-5.6 Sol'un hemen arkasında yer aldığını söylüyor. Gönderi ayrıca genel araçların en çok güçlü modellere yardımcı olduğunu, daha zayıf modellerin ise daha fazla alan özelinde iskeleye ihtiyaç duyduğunu savunuyor. Buna ek olarak finance harness'in fiyat-performans sınırını kaydırdığını; bu sayede GLM 5.2'nin mutlak performansta öne çıktığını, MiniMax M3'ün ise verimlilikte en güçlü seçenek göründüğünü belirtiyor.
+
+Type: Evaluation | Date: 2026-07-17
+
 ---
 <a id="case-227"></a>
 ### Case 227: [Gargantua WebGL Raytracer kazanımı](https://x.com/AlicanKiraz0/status/2077885419744612597) (by [@AlicanKiraz0](https://x.com/AlicanKiraz0))
@@ -784,6 +802,25 @@ Type: Benchmark | Date: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Kod ajanları ve uzun bağlamlı iş akışları
+<a id="case-237"></a>
+### Case 237: [LM Studio Bionic GLM ajanı](https://x.com/chenzeling4/status/2077967277698515184) (by [@chenzeling4](https://x.com/chenzeling4))
+
+**Bu vakayı, yerel öncelikli bir GLM-5.2 coding agent'ını değerlendirmek için kullanın; çünkü chenzeling4, LM Studio Bionic'in GLM 5.2'yi yerel belge sandbox'ları, satır içi kod diff'leri, rollback checkpoint'leri ve cihaz üstü ses dökümüyle birleştirdiğini söylüyor.**
+
+chenzeling4, LM Studio Bionic'i açık modeller etrafında kurulmuş bağımsız bir agent olarak tanımlıyor; görev ihtiyacına göre yerel ya da bulut compute kullanılabildiğini ve her iki durumda da zero-retention yaklaşımının korunduğunu söylüyor. Gönderiye göre coding işlerini GLM 5.2 ve Kimi K2.7 Code üstleniyor, belgeler sandbox içinde çalışıyor ve otomatik rollback checkpoint'leri alınıyor, kod düzenlemeleri satır içi diff olarak gösteriliyor, ses dökümü ise Voxtral üzerinden cihaz üzerinde kalıyor. Bu yüzden paylaşım, genel bir model kullanılabilirliği notundan ziyade somut bir yerel agent workflow güncellemesi sunuyor.
+
+Type: Integration | Date: 2026-07-17
+
+---
+<a id="case-236"></a>
+### Case 236: [Claude Code web geliştirmede kalite üstünlüğü](https://x.com/Lumenix0/status/2078241726897230164) (by [@Lumenix0](https://x.com/Lumenix0))
+
+**Bu vakayı, ham tamamlama hızından çok ilk denemedeki web geliştirme kalitesini karşılaştırmak için kullanın; çünkü Lumenix0, Claude Code içindeki GLM 5.2'nin Codex içindeki GPT 5.5'i üç gerçek görevde tasarım kalitesi ve işlevsel bütünlük açısından geçtiğini söylüyor.**
+
+Lumenix0, GLM 5.2'yi Claude Code üzerinden ve GPT 5.5'i Codex üzerinden kullanarak yapılan kafa kafaya denemeyi özetliyor: bir website redesign, bir React bug hunt ve bir Kanban board build. Gönderiye göre GPT her görevde daha hızlı tamamladı; ancak GLM daha güçlü redesign üretti, bug fix'te daha net bir açıklamayla eşleşti ve task naming, priority, status change ve reset button içeren tamamen çalışan tek Kanban board'u tek seferde çıkardı. Aynı kaynak, üç testin toplamda 16 dolarlık plandaki haftalık kotanın yalnızca yüzde 7'sini tükettiğini de söylüyor.
+
+Type: Evaluation | Date: 2026-07-17
+
 <a id="case-168"></a>
 ### Case 168: [Synthwave Sert Dilim Topluluğu 2,66 Dolardan](https://x.com/TracNetwork/status/2073038214592360522) (by [@TracNetwork](https://x.com/TracNetwork))
 
@@ -1474,6 +1511,26 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Sağlayıcı ve araç entegrasyonları
+<a id="case-239"></a>
+### Case 239: [TokenRouter ücretsiz GLM API dönemi](https://x.com/meliasiih/status/2078180641468985564) (by [@meliasiih](https://x.com/meliasiih))
+
+**Bu vakayı, kısa süreli ücretsiz bir GLM-5.2 API rotası yakalamak için kullanın; çünkü meliasiih, TokenRouter'ın 25 Temmuz 2026'ya kadar basit bir kayıt, API key akışı ve yayımlanmış base URL ile ücretsiz erişim sunduğunu söylüyor.**
+
+meliasiih, pratik erişim yolunu adım adım veriyor: e-posta ya da X ile kayıt ol, hesabı doğrula, API key üret, GLM-5.2'yi seç ve istemcileri `https://api.tokenrouter.com/v1` adresine yönlendir. Kaynak ayrıca operasyonel son tarihi açık biçimde veriyor ve ücretsiz erişim programının 25 Temmuz 2026'ya kadar sürdüğünü söylüyor. Bu da vakayı ekiplerin hemen aksiyon alabileceği zaman sınırlı bir hosted-access notuna dönüştürüyor.
+
+Type: Tutorial | Date: 2026-07-17
+
+---
+<a id="case-238"></a>
+### Case 238: [Agentuity Wafer GLM geçidi](https://x.com/wafer_ai/status/2078186124258984374) (by [@wafer_ai](https://x.com/wafer_ai))
+
+**Bu vakayı, GLM-5.2'yi bir Agentuity gateway stack'ine eklemek için kullanın; çünkü wafer_ai, serverless rotasının artık Agentuity üzerinde hem normal hem de Fast katmanlarında yaklaşık 100 ila 250 tok/s ve 1M context ile GLM 5.2 sunduğunu söylüyor.**
+
+wafer_ai, piyasadaki en hızlı serverless GLM 5.2 rotasının artık Agentuity AI Gateway üzerinden erişilebilir olduğunu ve Wafer'ın burada hem normal hem de Fast varyantlarını sunduğunu söylüyor. Gönderi, belirsiz bir kullanılabilirlik notu yerine doğrudan kullanılabilir bir deployment profili veriyor: her iki katmanda da yaklaşık 100 ila 250 tokens per second ve 1M-token context window.
+
+Type: Integration | Date: 2026-07-17
+
+---
 <a id="case-170"></a>
 ### Case 170: [NVIDIA Ücretsiz API Tak ve Çalıştır Erişimi](https://x.com/hqmank/status/2072855265612030010) (by [@hqmank](https://x.com/hqmank))
 
@@ -2185,6 +2242,36 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
+<a id="case-242"></a>
+### Case 242: [ZenMux 249M token makbuzu](https://x.com/AstridWiegner/status/2077917345893511266) (by [@AstridWiegner](https://x.com/AstridWiegner))
+
+**Bu vakayı, liste fiyatları yerine gerçek makbuzlarla GLM-5.2 ekonomisini sağlamasını yapmak için kullanın; çünkü AstridWiegner, tek bir ZenMux Token Receipt'in 249M'den fazla işlenmiş token, 105.81 dolarlık ilk maliyet ve 0 dolarlık nihai toplam gösterdiğini söylüyor.**
+
+AstridWiegner, bir ZenMux Token Receipt'in 249 milyondan fazla GLM 5.2 token kaydettiğini ve ilk maliyeti 105.81 dolar gösterirken nihai toplamın 0.00 dolara düştüğünü söylüyor. Gönderi, bu makbuzu benchmark skorlarından daha kullanışlı bir karşılaştırma yüzeyi olarak çerçeveliyor; çünkü çıktı kalitesini ve iş yükü büyüklüğünü, sabit bir bütçenin gerçekte ne kadar iş satın alabildiğine bağlıyor.
+
+Type: Evaluation | Date: 2026-07-17
+
+---
+<a id="case-241"></a>
+### Case 241: [Zro Pro ile 300M GLM denemesi](https://x.com/AndarkFomo/status/2078092015368368574) (by [@AndarkFomo](https://x.com/AndarkFomo))
+
+**Bu vakayı, bütçe dostu şekilde özel hosted GLM-5.2 agent işleri denemek için kullanın; çünkü AndarkFomo, bir Zro Pro promosyonunun OpenAI-compatible erişim, AB altyapısı ve zero-retention konumlandırmasıyla yaklaşık 1 dolar karşılığında yaklaşık 300M GLM-5.2 token açabildiğini söylüyor.**
+
+AndarkFomo, Product Hunt üzerindeki `PRODUCTHUNT` promosyonunun ilk 100 kullanıcıya normalde aylık 20 dolar olan Zro Pro'nun bir aylık ücretsiz kullanımını verdiğini, bazı ödeme akışlarında ise yalnızca 1 dolarlık kart provizyonu tetiklendiğini söylüyor. Gönderiye göre plan, coding agent'lar için OpenAI-compatible API üzerinden özel open-model inference sunuyor; altyapı AB'de çalışıyor ve prompt'lar eğitim için kullanılmıyor. Kaynak ayrıca pratik sınırlamaları da ekliyor: 300M token rakamı sonsuza kadar geçerli katı bir üst sınır değil, koltuklar sınırlı ve bu rotada GLM-5.2, 350K context ile sunuluyor.
+
+Type: Tutorial | Date: 2026-07-17
+
+---
+<a id="case-240"></a>
+### Case 240: [DGX Station üzerinde 256K masaüstü serving](https://x.com/TheAhmadOsman/status/2078247891370442867) (by [@TheAhmadOsman](https://x.com/TheAhmadOsman))
+
+**Bu vakayı, masaüstü sınıfı bir GLM-5.2 dağıtımını boyutlandırmak için kullanın; çünkü TheAhmadOsman, GLM 5.2 NVFP4'ün DGX Station üzerinde 256K context'te yaklaşık 3,000 tok/s prefill ve 32 tok/s decode ile çalıştığını söylüyor.**
+
+TheAhmadOsman, bu çalıştırmada FP8 KV cache ile GLM 5.2 NVFP4 kullanıldığını ve 256K context uzunluğunda prefill sırasında yaklaşık 3,000 tokens per second, decode sırasında ise 32 tokens per second hız elde edildiğini söylüyor. Gönderi tradeoff'u da net biçimde belirtiyor: henüz concurrent request yok, ancak yerel uzun bağlam kurulumunda tek masaüstü için güçlü bir throughput seviyesi sunuluyor.
+
+Type: Demo | Date: 2026-07-17
+
+---
 <a id="case-234"></a>
 ### Case 234: [Jatevo üzerinden indirimli GLM erişimi](https://x.com/JatevoId/status/2077770086228885536) (by [@JatevoId](https://x.com/JatevoId))
 

@@ -2,7 +2,7 @@
 
 This file is generated from `README.md` by `scripts/build_curated_data.py`.
 
-- Published cases: 234
+- Published cases: 242
 - Numbering: contiguous set from 1 through the current maximum
 - Policy: every item is source-backed and included in the public README
 
@@ -242,3 +242,11 @@ This file is generated from `README.md` by `scripts/build_curated_data.py`.
 | 232 | Macroscope Check-Run GLM Agents | Provider & Tool Integrations | Integration | 2026-07-16 | [Open source](https://x.com/kayvz/status/2077810181904494631) | [@kayvz](https://x.com/kayvz) |
 | 233 | MI325x Sub-Tenth-Cent GLM Serve | Cost, Pricing & Local Deployment | Demo | 2026-07-16 | [Open source](https://x.com/picocreator/status/2077817481381728268) | [@picocreator](https://x.com/picocreator) |
 | 234 | Jatevo Discounted GLM Access | Cost, Pricing & Local Deployment | Integration | 2026-07-16 | [Open source](https://x.com/JatevoId/status/2077770086228885536) | [@JatevoId](https://x.com/JatevoId) |
+| 235 | DiligenceBench Finance Harness Rank | Benchmarks & Frontier Evaluation | Evaluation | 2026-07-17 | [Open source](https://x.com/karinanguyen/status/2078245092855525578) | [@karinanguyen](https://x.com/karinanguyen) |
+| 236 | Claude Code Web Dev Quality Edge | Coding Agents & Long-Context Workflows | Evaluation | 2026-07-17 | [Open source](https://x.com/Lumenix0/status/2078241726897230164) | [@Lumenix0](https://x.com/Lumenix0) |
+| 237 | LM Studio Bionic GLM Agent | Coding Agents & Long-Context Workflows | Integration | 2026-07-17 | [Open source](https://x.com/chenzeling4/status/2077967277698515184) | [@chenzeling4](https://x.com/chenzeling4) |
+| 238 | Agentuity Wafer GLM Gateway | Provider & Tool Integrations | Integration | 2026-07-17 | [Open source](https://x.com/wafer_ai/status/2078186124258984374) | [@wafer_ai](https://x.com/wafer_ai) |
+| 239 | TokenRouter Free GLM API Window | Provider & Tool Integrations | Tutorial | 2026-07-17 | [Open source](https://x.com/meliasiih/status/2078180641468985564) | [@meliasiih](https://x.com/meliasiih) |
+| 240 | DGX Station 256K Desktop Serve | Cost, Pricing & Local Deployment | Demo | 2026-07-17 | [Open source](https://x.com/TheAhmadOsman/status/2078247891370442867) | [@TheAhmadOsman](https://x.com/TheAhmadOsman) |
+| 241 | Zro Pro 300M GLM Trial | Cost, Pricing & Local Deployment | Tutorial | 2026-07-17 | [Open source](https://x.com/AndarkFomo/status/2078092015368368574) | [@AndarkFomo](https://x.com/AndarkFomo) |
+| 242 | ZenMux 249M Token Receipt | Cost, Pricing & Local Deployment | Evaluation | 2026-07-17 | [Open source](https://x.com/AstridWiegner/status/2077917345893511266) | [@AstridWiegner](https://x.com/AstridWiegner) |

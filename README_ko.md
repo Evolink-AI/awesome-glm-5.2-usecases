@@ -36,7 +36,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 ## 📊 개요
 
-- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **234개의 선별된 GLM-5.2 사례**입니다.
+- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **242개의 선별된 GLM-5.2 사례**입니다.
 - 벤치마크와 프런티어 평가, 코딩 에이전트와 장기 컨텍스트 워크플로, 실사용 데모와 쇼케이스 빌드, 공급자 및 도구 통합, 비용, 가격, 로컬 배포, 한계, 주의점, 안전 신호를 다룹니다.
 - 각 사례에는 원본 출처, 작성자 표기, 간결한 활용 포인트, 근거 유형, 게시 날짜가 포함됩니다.
 - 실용 워크플로, 강점과 한계 비교, 공급자 경로, 실제 실험을 찾는 데 사용하세요.
@@ -78,11 +78,11 @@ curl --request POST \
 
 | 섹션 | 사례 |
 |---|---|
-| [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227 |
-| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228 |
+| [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
+| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237 |
 | [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
-| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232 |
-| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234 |
+| [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
+| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-242 |
 | [🧭 한계, 주의점, 안전 신호](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
 | [관련 저장소](#related-repositories) | 검증된 API 경로와 인접 표면 |
 | [🙏 감사의 말](#acknowledge) | 출처 표기 및 수정 정책 |
@@ -91,6 +91,7 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 235: DiligenceBench 금융 하네스 순위](#case-235) | 이 사례는 공개 주식 리서치 에이전트에서 GLM-5.2를 평가할 때 유용합니다. karinanguyen에 따르면 DiligenceBench에서 GLM 5.2가 상위권에 올랐고, 금융 하네스가 강한 모델을 더 좋고 더 저렴하게 만들 수 있음을 보여줬기 때문입니다. | Evaluation |
 | [Case 227: Gargantua WebGL Raytracer 승리](#case-227) | 이 사례는 물리 비중이 큰 단일 파일 browser build에서 GLM-5.2를 benchmark할 때 유용합니다. AlicanKiraz0에 따르면 GLM 5.2 Max는 Gargantua geodesic raytracer 과제에서 수치적 정확성과 real-time rendering discipline을 더 잘 양립해 비교 모델을 앞섰기 때문입니다. | Evaluation |
 | [Case 223: Intelligence Index 토큰 효율 격차](#case-223) | 이 사례는 장기 benchmark workload에 맞춰 GLM-5.2 예산을 잡을 때 유용합니다. Artificial Analysis에 따르면 GLM-5.2 Max는 Intelligence Index 작업당 평균 약 43K output tokens를 사용했고, Inkling은 25K였으며 Kimi K2.6과 DeepSeek v4 Pro Max도 그보다 적었기 때문입니다. | Evaluation |
 | [Case 217: EvalPlus 구조 루트가 Fable을 앞섬](#case-217) | 이 사례는 verifier 기반 2모델 coding 루트를 시험할 때 유용합니다. gmi_cloud에 따르면 Opus 4.8을 먼저 쓰고 verifier 실패 시 GLM 5.2 FP8을 구조 투입하는 방식으로 고정된 EvalPlus 100개 작업 중 94개를 해결해 Fable 5보다 5개 더 많이 맞히면서도 비용은 약 47퍼센트 낮췄기 때문입니다. | 평가 |
@@ -136,6 +137,8 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 237: LM Studio Bionic GLM 에이전트](#case-237) | 이 사례는 로컬 우선 GLM-5.2 coding agent를 평가할 때 유용합니다. chenzeling4에 따르면 LM Studio Bionic은 GLM 5.2를 로컬 문서 sandbox, inline code diff, rollback checkpoint, 온디바이스 음성 전사와 함께 묶어 제공하기 때문입니다. | Integration |
+| [Case 236: Claude Code 웹 개발 품질 우위](#case-236) | 이 사례는 단순 완료 속도보다 첫 시도의 웹 개발 품질을 비교할 때 유용합니다. Lumenix0에 따르면 Claude Code의 GLM 5.2가 실제 작업 3개에서 디자인 품질과 기능 완성도 면에서 Codex의 GPT 5.5를 앞섰기 때문입니다. | Evaluation |
 | [Case 168: $2.66에 Synthwave 하드 슬라이스 앙상블](#case-168) | 이 사례는 GLM-5.2를 단독 모델이 아니라 multi-model coding ensemble 안에서 시험할 때 유용합니다. TracNetwork에 따르면 GLM이 포함된 Synthwave 조합은 LiveCodeBench hard에서 46.3 percent를 약 2.66달러에 기록했고, 각 generator 단독보다 더 나았습니다. | Integration |
 | [Case 228: OpenCode 기반 로컬 agentic coding 토대](#case-228) | 이 사례는 frontier 구독료를 내기 전에 로컬 coding-agent stack을 검증할 때 유용합니다. comma_ai에 따르면 팀은 Anthropic을 내부 스택에서 제거했고, GLM 5.2와 OpenCode 조합으로 agentic coding 흐름이 더 좋아졌기 때문입니다. | Demo |
 | [Case 212: Dell Hub GLM Agent 튜토리얼](#case-212) | 이 사례는 open-weight 학습 워크플로를 위한 GLM-5.2 coding agent를 세울 때 유용합니다. juanjucm에 따르면 새 가이드는 Dell Enterprise Hub의 GLM-5.2-FP8 카탈로그 추가와, 그 모델을 중심으로 만든 agent 설정 절차를 한 번에 묶어 보여주기 때문입니다. | Tutorial |
@@ -209,6 +212,8 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 239: TokenRouter 무료 GLM API 기간](#case-239) | 이 사례는 단기 무료 GLM-5.2 API 경로를 확보할 때 유용합니다. meliasiih에 따르면 TokenRouter가 간단한 가입 절차, API key 발급 흐름, 공개 base URL과 함께 2026년 7월 25일까지 무료 접근을 제공하기 때문입니다. | Tutorial |
+| [Case 238: Agentuity Wafer GLM 게이트웨이](#case-238) | 이 사례는 GLM-5.2를 Agentuity gateway stack에 추가할 때 유용합니다. wafer_ai에 따르면 자사의 serverless 경로가 Agentuity에서 GLM 5.2를 regular와 Fast tier 모두 1M context, 대략 100~250 tok/s로 제공하기 때문입니다. | Integration |
 | [Case 232: Macroscope Check Run GLM 에이전트](#case-232) | 이 사례는 PR review agent 비용을 낮추면서 check-run workflow를 유지할 때 유용합니다. kayvz에 따르면 Macroscope의 Check Run Agents가 일반 `.md` 기반 repo config에서 GLM 5.2를 선택할 수 있게 됐기 때문입니다. | Integration |
 | [Case 231: Aster의 281 TPS 연구 에이전트 API](#case-231) | 이 사례는 빠른 hosted GLM-5.2 endpoint를 benchmark할 때 유용합니다. asterailabs에 따르면 Aster Inference는 research-agent 최적화에서 나온 API로 GLM 5.2를 281 tokens per second로 제공하기 때문입니다. | Integration |
 | [Case 230: TrueFoundry용 네이티브 Wafer GLM 경로](#case-230) | 이 사례는 기존 TrueFoundry AI Gateway stack에 GLM-5.2를 붙일 때 유용합니다. wafer_ai에 따르면 native provider integration이 GLM 5.2와 GLM 5.2 Fast부터 시작하며 나머지 gateway stack을 바꾸지 않아도 되기 때문입니다. | Integration |
@@ -278,6 +283,9 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 242: ZenMux 2억4900만 토큰 영수증](#case-242) | 이 사례는 리스트 가격이 아니라 실제 영수증으로 GLM-5.2의 경제성을 점검할 때 유용합니다. AstridWiegner에 따르면 ZenMux Token Receipt 하나에 2억4900만 개가 넘는 처리 토큰, 원래 비용 105.81달러, 최종 청구 0달러가 기록됐기 때문입니다. | Evaluation |
+| [Case 241: Zro Pro 3억 GLM 체험](#case-241) | 이 사례는 예산이 제한된 상태에서 비공개 hosted GLM-5.2 agent 작업을 시험할 때 유용합니다. AndarkFomo에 따르면 Zro Pro 프로모션으로 OpenAI 호환 접근, EU 인프라, zero-retention 포지셔닝과 함께 약 1달러 수준에서 대략 3억 GLM-5.2 토큰을 열 수 있기 때문입니다. | Tutorial |
+| [Case 240: DGX Station 256K 데스크톱 서빙](#case-240) | 이 사례는 데스크톱급 GLM-5.2 배포 규모를 가늠할 때 유용합니다. TheAhmadOsman에 따르면 DGX Station에서 GLM 5.2 NVFP4가 256K context 기준 prefill 약 3,000 tok/s, decode 32 tok/s로 동작했기 때문입니다. | Demo |
 | [Case 234: Jatevo 할인 GLM 액세스](#case-234) | 이 사례는 공개 가격이 있는 hosted GLM-5.2 접근 경로를 빠르게 확보할 때 유용합니다. JatevoId에 따르면 GLM 5.2는 플랫폼에서 input $1.40 / 1M, output $4.40 / 1M으로 제공되고, 자격 있는 JTVO holder에게는 50% 할인이 주어지기 때문입니다. | Integration |
 | [Case 233: MI325x에서 0.1센트 미만 GLM 서빙](#case-233) | 이 사례는 AMD 하드웨어에서 self-hosted GLM-5.2 inference 예산을 잡을 때 유용합니다. picocreator에 따르면 4xMI325x 구성으로 GLM 5.2를 1,482 tok/s, 백만 token당 0.10달러 미만으로 제공했기 때문입니다. | Demo |
 | [Case 191: Hermes가 만든 LiteLLM 로컬 연구소](#case-191) | 이 사례는 GLM-5.2를 coding agent로 써서 local inference lab을 부트스트랩할 때 유용합니다. source에서 Hermes Agent와 GLM-5.2가 M3 Ultra 기반으로 LiteLLM, Postgres, Prometheus, Grafana를 연결했다고 말하기 때문입니다. | Integration |
@@ -350,6 +358,16 @@ curl --request POST \
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 벤치마크와 프런티어 평가
+---
+<a id="case-235"></a>
+### Case 235: [DiligenceBench 금융 하네스 순위](https://x.com/karinanguyen/status/2078245092855525578) (by [@karinanguyen](https://x.com/karinanguyen))
+
+**이 사례는 공개 주식 리서치 에이전트에서 GLM-5.2를 평가할 때 유용합니다. karinanguyen에 따르면 DiligenceBench에서 GLM 5.2가 상위권에 올랐고, 금융 하네스가 강한 모델을 더 좋고 더 저렴하게 만들 수 있음을 보여줬기 때문입니다.**
+
+karinanguyen은 DiligenceBench를 공개 주식 리서치를 위한 rubric 기반 평가로 소개하며, 금융 하네스에서 Meta Muse Spark 1.1이 57.4 percent로 선두를 달렸고 GLM 5.2가 Sonnet 4.6, GPT-5.6 Sol 바로 뒤를 이었다고 말합니다. 또한 generic tool은 강한 모델일수록 더 큰 개선을 주지만, 약한 모델은 더 도메인 특화된 scaffolding이 필요하다고 주장합니다. 그 결과 금융 하네스가 가격 대비 성능 프런티어를 다시 그려서, 절대 성능은 GLM 5.2가 두드러지고 효율성은 MiniMax M3가 가장 강하게 보인다고 설명합니다.
+
+Type: Evaluation | Date: 2026-07-17
+
 ---
 ---
 <a id="case-227"></a>
@@ -793,6 +811,25 @@ Type: Integration | Date: 2026-07-03
 ---
 
 ---
+
+<a id="case-237"></a>
+### Case 237: [LM Studio Bionic GLM 에이전트](https://x.com/chenzeling4/status/2077967277698515184) (by [@chenzeling4](https://x.com/chenzeling4))
+
+**이 사례는 로컬 우선 GLM-5.2 coding agent를 평가할 때 유용합니다. chenzeling4에 따르면 LM Studio Bionic은 GLM 5.2를 로컬 문서 sandbox, inline code diff, rollback checkpoint, 온디바이스 음성 전사와 함께 묶어 제공하기 때문입니다.**
+
+chenzeling4는 LM Studio Bionic을 open model 중심의 standalone agent로 설명하며, 작업 종류에 따라 로컬 또는 cloud compute를 쓰되 어느 쪽이든 zero-retention 포지셔닝을 유지한다고 말합니다. 게시물에 따르면 코딩은 GLM 5.2와 Kimi K2.7 Code가 맡고, 문서는 자동 rollback checkpoint가 있는 sandbox 안에서 처리되며, 코드 수정은 inline diff로 드러나고 음성 전사는 Voxtral을 통해 기기 안에서만 수행됩니다. 그래서 이 사례는 단순한 모델 지원 공지가 아니라 구체적인 로컬 agent workflow 업데이트가 됩니다.
+
+Type: Integration | Date: 2026-07-17
+
+---
+<a id="case-236"></a>
+### Case 236: [Claude Code 웹 개발 품질 우위](https://x.com/Lumenix0/status/2078241726897230164) (by [@Lumenix0](https://x.com/Lumenix0))
+
+**이 사례는 단순 완료 속도보다 첫 시도의 웹 개발 품질을 비교할 때 유용합니다. Lumenix0에 따르면 Claude Code의 GLM 5.2가 실제 작업 3개에서 디자인 품질과 기능 완성도 면에서 Codex의 GPT 5.5를 앞섰기 때문입니다.**
+
+Lumenix0는 Claude Code의 GLM 5.2와 Codex의 GPT 5.5를 웹사이트 리디자인, React 버그 탐색, Kanban 보드 구현이라는 세 가지 실전 과제로 정면 비교한 결과를 요약합니다. 게시물에 따르면 GPT가 각 작업을 더 빨리 끝내기는 했지만, GLM은 더 강한 리디자인 결과물을 냈고, 버그 수정도 더 명확한 설명과 함께 같은 수준으로 해결했으며, task naming, priority, status change, reset button까지 포함한 완전 동작 Kanban 보드를 one-shot으로 만든 유일한 모델이었습니다. 같은 출처는 이 세 번의 테스트가 16달러 플랜 주간 quota의 7 percent만 사용했다고 덧붙입니다.
+
+Type: Evaluation | Date: 2026-07-17
 
 <a id="case-228"></a>
 ### Case 228: [OpenCode 기반 로컬 agentic coding 토대](https://x.com/comma_ai/status/2077819467267186700) (by [@comma_ai](https://x.com/comma_ai))
@@ -1472,6 +1509,26 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 공급자 및 도구 통합
+---
+<a id="case-239"></a>
+### Case 239: [TokenRouter 무료 GLM API 기간](https://x.com/meliasiih/status/2078180641468985564) (by [@meliasiih](https://x.com/meliasiih))
+
+**이 사례는 단기 무료 GLM-5.2 API 경로를 확보할 때 유용합니다. meliasiih에 따르면 TokenRouter가 간단한 가입 절차, API key 발급 흐름, 공개 base URL과 함께 2026년 7월 25일까지 무료 접근을 제공하기 때문입니다.**
+
+meliasiih는 실무적으로 바로 쓸 수 있는 접근 경로를 정리합니다. 이메일이나 X로 가입하고, 계정을 인증한 뒤, API key를 생성하고, GLM-5.2를 선택한 다음, 클라이언트를 `https://api.tokenrouter.com/v1`에 연결하면 된다는 설명입니다. 출처는 무료 접근 프로그램이 2026년 7월 25일까지라고 운영 마감일도 명시하므로, 팀이 바로 행동할 수 있는 기간 한정 hosted access note가 됩니다.
+
+Type: Tutorial | Date: 2026-07-17
+
+---
+<a id="case-238"></a>
+### Case 238: [Agentuity Wafer GLM 게이트웨이](https://x.com/wafer_ai/status/2078186124258984374) (by [@wafer_ai](https://x.com/wafer_ai))
+
+**이 사례는 GLM-5.2를 Agentuity gateway stack에 추가할 때 유용합니다. wafer_ai에 따르면 자사의 serverless 경로가 Agentuity에서 GLM 5.2를 regular와 Fast tier 모두 1M context, 대략 100~250 tok/s로 제공하기 때문입니다.**
+
+wafer_ai는 시장에서 가장 빠른 serverless GLM 5.2 경로가 이제 Agentuity AI Gateway를 통해 제공되며, Wafer가 그 안에서 regular와 Fast variant를 모두 서빙한다고 말합니다. 이 게시물은 막연한 지원 공지가 아니라 실사용 배포 프로필을 제시합니다. 두 tier 모두 약 100~250 tokens per second와 1M-token context window를 제공한다고 밝혀, hosted route를 고르는 팀이 바로 참고할 수 있는 구체적 정보가 됩니다.
+
+Type: Integration | Date: 2026-07-17
+
 ---
 <a id="case-232"></a>
 ### Case 232: [Macroscope Check Run GLM 에이전트](https://x.com/kayvz/status/2077810181904494631) (by [@kayvz](https://x.com/kayvz))
@@ -2183,6 +2240,36 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 비용, 가격, 로컬 배포
+<a id="case-242"></a>
+### Case 242: [ZenMux 2억4900만 토큰 영수증](https://x.com/AstridWiegner/status/2077917345893511266) (by [@AstridWiegner](https://x.com/AstridWiegner))
+
+**이 사례는 리스트 가격이 아니라 실제 영수증으로 GLM-5.2의 경제성을 점검할 때 유용합니다. AstridWiegner에 따르면 ZenMux Token Receipt 하나에 2억4900만 개가 넘는 처리 토큰, 원래 비용 105.81달러, 최종 청구 0달러가 기록됐기 때문입니다.**
+
+AstridWiegner는 ZenMux Token Receipt 하나에 GLM 5.2 토큰 2억4900만 개 이상이 기록됐고, 원래 비용은 105.81달러였지만 최종 합계는 0.00달러로 표시됐다고 말합니다. 이 게시물은 그런 영수증이 단순 benchmark score보다 더 유용한 비교 표면이라고 설명합니다. 출력 품질과 workload 규모를, 고정 예산으로 실제 얼마나 많은 일을 살 수 있는지와 직접 연결해 보여주기 때문입니다.
+
+Type: Evaluation | Date: 2026-07-17
+
+---
+<a id="case-241"></a>
+### Case 241: [Zro Pro 3억 GLM 체험](https://x.com/AndarkFomo/status/2078092015368368574) (by [@AndarkFomo](https://x.com/AndarkFomo))
+
+**이 사례는 예산이 제한된 상태에서 비공개 hosted GLM-5.2 agent 작업을 시험할 때 유용합니다. AndarkFomo에 따르면 Zro Pro 프로모션으로 OpenAI 호환 접근, EU 인프라, zero-retention 포지셔닝과 함께 약 1달러 수준에서 대략 3억 GLM-5.2 토큰을 열 수 있기 때문입니다.**
+
+AndarkFomo는 Product Hunt 프로모션 코드 `PRODUCTHUNT`가 선착순 100명에게 월 20달러짜리 Zro Pro 한 달 무료 이용권을 주고, 일부 결제에서는 1달러 카드 홀드만 발생한다고 설명합니다. 또한 이 플랜이 코딩 에이전트를 위한 비공개 open model inference를 OpenAI 호환 API, EU 인프라, 프롬프트 비학습 정책과 함께 제공한다고 말합니다. 실무상 caveat도 함께 적습니다. 3억 토큰은 영구적인 하드캡이 아니라 예상 사용량이고, 좌석 수는 제한적이며, 이 경로에서 GLM-5.2는 350K context로 동작합니다.
+
+Type: Tutorial | Date: 2026-07-17
+
+---
+<a id="case-240"></a>
+### Case 240: [DGX Station 256K 데스크톱 서빙](https://x.com/TheAhmadOsman/status/2078247891370442867) (by [@TheAhmadOsman](https://x.com/TheAhmadOsman))
+
+**이 사례는 데스크톱급 GLM-5.2 배포 규모를 가늠할 때 유용합니다. TheAhmadOsman에 따르면 DGX Station에서 GLM 5.2 NVFP4가 256K context 기준 prefill 약 3,000 tok/s, decode 32 tok/s로 동작했기 때문입니다.**
+
+TheAhmadOsman은 이 실행이 DGX Station 위에서 FP8 KV cache를 사용한 GLM 5.2 NVFP4로 이뤄졌고, 256K context length에서 prefill은 대략 초당 3,000 tokens, decode는 초당 32 tokens에 도달했다고 말합니다. 게시물은 tradeoff도 분명히 남깁니다. 아직 concurrent request는 없지만, 로컬 장문맥 설정에서 단일 데스크톱 기준으로는 충분히 탄탄한 처리량이라는 점입니다.
+
+Type: Demo | Date: 2026-07-17
+
+---
 <a id="case-234"></a>
 ### Case 234: [Jatevo 할인 GLM 액세스](https://x.com/JatevoId/status/2077770086228885536) (by [@JatevoId](https://x.com/JatevoId))
 
