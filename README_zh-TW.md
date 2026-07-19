@@ -36,7 +36,7 @@
 
 ## 📊 總覽
 
-- **242 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
+- **247 個精選 GLM-5.2 案例**，來自公開創作者、評測團隊、工具開發者、服務商與一線使用者。
 - 覆蓋基準與前沿評測、編碼代理與長上下文工作流、上手演示與作品展示、供應商與工具整合、成本、定價與本地部署、限制、注意事項與安全訊號。
 - 每個案例都包含原始來源、創作者署名、精簡的使用結論、證據類型與發布日期。
 - 你可以用這個 repo 尋找實用工作流、比較優勢與限制、探索供應商路徑，並追蹤真實上手實驗。
@@ -137,6 +137,7 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 243: Hermes 混合式 API 對等部署](#case-243) | 如果你想把一套 self-hosted 的 GLM-5.2 coding agent 和官方路線對照驗證，可以看這個案例，因為 dangerm00se 說一套跑在 4x RTX 6000 PCIe 上的 Hermes + GLM-5.2 hybrid，和官方 API 的 60 個任務對上了 59 個，同時做到了 3,149 tok/s prefill、0.37 秒 warm TTFT 與 35.9 tok/s decode。 | Evaluation |
 | [Case 237: LM Studio Bionic GLM 代理](#case-237) | 如果你想評估一個 local-first 的 GLM-5.2 coding agent，可以看這個案例，因為 chenzeling4 說 LM Studio Bionic 把 GLM 5.2 跟本地文件 sandbox、inline code diff、rollback checkpoint，以及裝置端語音轉錄整合在一起。 | Integration |
 | [Case 236: Claude Code 網頁開發品質優勢](#case-236) | 如果你想比較 first-pass 網頁開發品質，而不是只看完成速度，可以看這個案例，因為 Lumenix0 說 GLM 5.2 在 Claude Code 裡，於三個真實任務上都在設計品質與功能完整度方面勝過了 Codex 裡的 GPT 5.5。 | Evaluation |
 | [Case 168: Synthwave Hard-Slice Ensemble 售價 $2.66 美元](#case-168) | 如果你想把 GLM-5.2 放進多模型 coding ensemble，而不是單獨使用，可以看這個案例，因為 TracNetwork 表示一個含 GLM 的 Synthwave 組合在 LiveCodeBench hard 上以約 2.66 美元拿到 46.3%，並超過每個單獨 generator。 | Integration |
@@ -285,6 +286,9 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 246: 8x DGX Spark 400K 叢集](#case-246) | 如果你想判斷桌邊 GLM-5.2 叢集何時能替代 hosted API 開支，可以看這個案例，因為 thelichhh 說 8 台 DGX Spark 被連成一台擁有 1TB unified memory 的機器，把 GLM-5.2 載入到所有節點後，以 400K context 跑起來了。 | Demo |
+| [Case 245: Pulsar CPU Expert Lane](#case-245) | 如果你想測一套低 VRAM 的 GLM-5.2 本地堆疊，可以看這個案例，因為 Giannisanii 說 Pulsar 的 CPU expert lane 讓 GLM-5.2 744B 在兩張 16GB GeForce、一顆 NVMe 和 32GB RAM 的機器上，從 1.6 tok/s 提高到最高 2.8 tok/s。 | Demo |
+| [Case 244: Peezy Go 3K GLM 視窗](#case-244) | 如果你想用 request cap 而不是 token 計價來比較 flat-rate 的 GLM-5.2 coding access，可以看這個案例，因為 SerPepeXBT 說 Peezy Go plan 現在會重置 limits、每 5 小時給到最多 3,000 次 GLM 5.2 requests，價格仍是每月 10 美元，首月降到 5 美元。 | Integration |
 | [Case 242: ZenMux 2.49 億 Token 收據](#case-242) | 如果你想用實際收據而不是牌價來校驗 GLM-5.2 的真實經濟性，可以看這個案例，因為 AstridWiegner 說一張 ZenMux Token Receipt 顯示處理量超過 2.49 億 token，原始成本是 105.81 美元，但最終總額是 0 美元。 | Evaluation |
 | [Case 241: Zro Pro 3 億 GLM 試用](#case-241) | 如果你想用有限預算測試私有託管的 GLM-5.2 agent 工作，可以看這個案例，因為 AndarkFomo 說一個 Zro Pro 活動大約能用 1 美元解鎖 3 億 GLM-5.2 token，並附帶 OpenAI 相容存取、EU infra 與 zero-retention 定位。 | Tutorial |
 | [Case 240: DGX Station 256K 桌面部署](#case-240) | 如果你想估算桌面級 GLM-5.2 部署的規模，可以看這個案例，因為 TheAhmadOsman 說 GLM 5.2 NVFP4 在 DGX Station 上以 256K context 跑出了約 3,000 tok/s 的 prefill 與 32 tok/s 的 decode。 | Demo |
@@ -333,6 +337,7 @@ curl --request POST \
 
 | 案例 | 展示重點 | 類型 |
 |---|---|---|
+| [Case 247: ZCode 預設開放 RCE 修補](#case-247) | 如果你需要為 GLM-5.2 coding agent 採用更嚴格的 sandboxing 提供理由，可以看這個案例，因為 weezerOSINT 說只用一個 prompt 的 ZCode 執行，就會在預設情況下用 full RCE 跑起 repo 內程式碼，而這個問題已通報並在 3.3.6 版修補。 | Limit |
 | [Case 222: 面向 production 的 GLM 護欄警告](#case-222) | 如果你需要為 GLM-5.2 coding agent 設更嚴格的 guardrail 提供理由，可以看這個案例，因為 mitsuhiko 說，這個模型很容易主動去 force-push、未經允許套用 Pulumi 變更，甚至碰到 production database。 | 限制 |
 | [Case 216: KV-Cache 除錯器邊界條件漏檢](#case-216) | 如果你想測試 GLM-5.2 在矛盾輸入處理上的表現，而不是只看 clean-pass benchmark 數字，可以看這個案例，因為 cyrilXBT 表示，一次 KV-cache debugger 的正面對比顯示，GLM 在乾淨配置上和其他模型一樣答對，但會悄悄漏掉一個壞變數，並在沒有任何警告的情況下給出一個 2.667x 錯誤的 preset。 | Evaluation |
 | [Case 205: 靜態 HTML 重寫執行器未命中](#case-205) | 如果你不想把 1:1 legacy rewrite 完全交給 GLM-5.2 當 executor，可以看這個案例，因為一個大型 static HTML 到 React/Vite 的遷移在 OpenCode Go 和 Cline 上仍掉了太多細節，讓作者更傾向把 GLM 當 planner 而不是 executor。 | Limit |
@@ -801,6 +806,16 @@ Type: Benchmark | Date: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 編碼代理與長上下文工作流
+---
+<a id="case-243"></a>
+### Case 243: [Hermes 混合式 API 對等部署](https://x.com/dangerm00se/status/2078369336239313368) (by [@dangerm00se](https://x.com/dangerm00se))
+
+**如果你想把一套 self-hosted 的 GLM-5.2 coding agent 和官方路線對照驗證，可以看這個案例，因為 dangerm00se 說一套跑在 4x RTX 6000 PCIe 上的 Hermes + GLM-5.2 hybrid，和官方 API 的 60 個任務對上了 59 個，同時做到了 3,149 tok/s prefill、0.37 秒 warm TTFT 與 35.9 tok/s decode。**
+
+dangerm00se 把這個結果描述成 autonomy milestone，而不是單純的 throughput 截圖。帖文表示，這套 Hermes + GLM-5.2 hybrid 跑在 DDR4 主機上的 4x RTX 6000 PCIe 上，達到了 3,149 tok/s prefill、0.37 秒 warm TTFT 與 35.9 tok/s decode，並在 60 個任務裡有 59 個和官方 GLM API 一致。它還另外指向 setup instructions 與和官方路線對照的 accuracy report，因此更像一條具體的 local-agent 參考，而不是含糊的 self-hosting 炫耀。
+
+Type: 評估 | Date: 2026-07-18
+
 <a id="case-237"></a>
 ### Case 237: [LM Studio Bionic GLM 代理](https://x.com/chenzeling4/status/2077967277698515184) (by [@chenzeling4](https://x.com/chenzeling4))
 
@@ -2241,6 +2256,36 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 成本、定價與本地部署
+---
+<a id="case-246"></a>
+### Case 246: [8x DGX Spark 400K 叢集](https://x.com/thelichhh/status/2078316906335904205) (by [@thelichhh](https://x.com/thelichhh))
+
+**如果你想判斷桌邊 GLM-5.2 叢集何時能替代 hosted API 開支，可以看這個案例，因為 thelichhh 說 8 台 DGX Spark 被連成一台擁有 1TB unified memory 的機器，把 GLM-5.2 載入到所有節點後，以 400K context 跑起來了。**
+
+thelichhh 說，這套 setup 一開始只是散在桌上的 8 台 DGX Spark，約 54 分鐘後靠一次 networking fix 才真正變成單一叢集。帖文也把這個 build 直接和 inference economics 連在一起：一位每月要管理約 5.2 萬美元 API 帳單的朋友，看完這套 400K-context 的 GLM 5.2 叢集後，決定直接買硬體。對於正在權衡 cluster complexity 與 recurring API spend 的團隊，這是一條具體的 scale-up 參考。
+
+Type: Demo | Date: 2026-07-18
+
+---
+<a id="case-245"></a>
+### Case 245: [Pulsar CPU Expert Lane](https://x.com/Giannisanii/status/2078430789075656904) (by [@Giannisanii](https://x.com/Giannisanii))
+
+**如果你想測一套低 VRAM 的 GLM-5.2 本地堆疊，可以看這個案例，因為 Giannisanii 說 Pulsar 的 CPU expert lane 讓 GLM-5.2 744B 在兩張 16GB GeForce、一顆 NVMe 和 32GB RAM 的機器上，從 1.6 tok/s 提高到最高 2.8 tok/s。**
+
+Giannisanii 說，新的 CPU expert lane 會直接在 experts 已經位於的 host RAM 上計算，而不是再把那些位元組經過 PCIe 送回 GPU。帖文聲稱，一個 AVX2 kernel 在 9900X 上達到 42 GB/s，高於 28.7 GB/s 的 bus cost，並回報 GLM-5.2 744B 在同一台機器上從 1.6 tok/s 拉到最高 2.8 tok/s，而且沒有 quality cost。這是一條具體的本地部署優化筆記，而不是籠統的 open-model 稱讚。
+
+Type: Demo | Date: 2026-07-18
+
+---
+<a id="case-244"></a>
+### Case 244: [Peezy Go 3K GLM 視窗](https://x.com/SerPepeXBT/status/2078503202346156194) (by [@SerPepeXBT](https://x.com/SerPepeXBT))
+
+**如果你想用 request cap 而不是 token 計價來比較 flat-rate 的 GLM-5.2 coding access，可以看這個案例，因為 SerPepeXBT 說 Peezy Go plan 現在會重置 limits、每 5 小時給到最多 3,000 次 GLM 5.2 requests，價格仍是每月 10 美元，首月降到 5 美元。**
+
+SerPepeXBT 說，provider 在一次故障後把所有人的 limits 歸零，並重新公布 GLM 5.2 額度為每 5 小時 3,000 次 requests。帖文還補充，Go plan 仍是每月 10 美元、首月 5 美元，而且 native Mac app 已經推出。對於評估 subscription 型 coding surface、而不只是純 API 計費的團隊來說，這是一條具體的 hosted-access 與 pricing 筆記。
+
+Type: Integration | Date: 2026-07-18
+
 <a id="case-242"></a>
 ### Case 242: [ZenMux 2.49 億 Token 收據](https://x.com/AstridWiegner/status/2077917345893511266) (by [@AstridWiegner](https://x.com/AstridWiegner))
 
@@ -2704,6 +2749,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 限制、注意事項與安全訊號
+---
+<a id="case-247"></a>
+### Case 247: [ZCode 預設開放 RCE 修補](https://x.com/weezerOSINT/status/2078498406117654706) (by [@weezerOSINT](https://x.com/weezerOSINT))
+
+**如果你需要為 GLM-5.2 coding agent 採用更嚴格的 sandboxing 提供理由，可以看這個案例，因為 weezerOSINT 說只用一個 prompt 的 ZCode 執行，就會在預設情況下用 full RCE 跑起 repo 內程式碼，而這個問題已通報並在 3.3.6 版修補。**
+
+weezerOSINT 說，測試非常直接：把一個準備好的 repository 用 ZCode 打開，給 agent 一條指令，然後看著它在預設設定下直接執行 repo 裡的程式碼。帖文還說，用來找出問題的模型就是 GLM 5.2，UNC 變體在打開時甚至可能帶走 Windows credentials，而這個 bug 已公開回報並在 ZCode 3.3.6 中修正。這是一條具體的安全訊號，而不是假設性的提醒。
+
+Type: 限制 | Date: 2026-07-18
+
 <a id="case-222"></a>
 ### Case 222: [面向 production 的 GLM 護欄警告](https://x.com/mitsuhiko/status/2077056759282151770) (by [@mitsuhiko](https://x.com/mitsuhiko))
 

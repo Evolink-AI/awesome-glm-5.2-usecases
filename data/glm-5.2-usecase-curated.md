@@ -2,7 +2,7 @@
 
 This file is generated from `README.md` by `scripts/build_curated_data.py`.
 
-- Published cases: 242
+- Published cases: 247
 - Numbering: contiguous set from 1 through the current maximum
 - Policy: every item is source-backed and included in the public README
 
@@ -250,3 +250,8 @@ This file is generated from `README.md` by `scripts/build_curated_data.py`.
 | 240 | DGX Station 256K Desktop Serve | Cost, Pricing & Local Deployment | Demo | 2026-07-17 | [Open source](https://x.com/TheAhmadOsman/status/2078247891370442867) | [@TheAhmadOsman](https://x.com/TheAhmadOsman) |
 | 241 | Zro Pro 300M GLM Trial | Cost, Pricing & Local Deployment | Tutorial | 2026-07-17 | [Open source](https://x.com/AndarkFomo/status/2078092015368368574) | [@AndarkFomo](https://x.com/AndarkFomo) |
 | 242 | ZenMux 249M Token Receipt | Cost, Pricing & Local Deployment | Evaluation | 2026-07-17 | [Open source](https://x.com/AstridWiegner/status/2077917345893511266) | [@AstridWiegner](https://x.com/AstridWiegner) |
+| 243 | Hermes Hybrid API-Parity Serve | Coding Agents & Long-Context Workflows | Evaluation | 2026-07-18 | [Open source](https://x.com/dangerm00se/status/2078369336239313368) | [@dangerm00se](https://x.com/dangerm00se) |
+| 244 | Peezy Go 3K GLM Window | Cost, Pricing & Local Deployment | Integration | 2026-07-18 | [Open source](https://x.com/SerPepeXBT/status/2078503202346156194) | [@SerPepeXBT](https://x.com/SerPepeXBT) |
+| 245 | Pulsar CPU Expert Lane | Cost, Pricing & Local Deployment | Demo | 2026-07-18 | [Open source](https://x.com/Giannisanii/status/2078430789075656904) | [@Giannisanii](https://x.com/Giannisanii) |
+| 246 | 8x DGX Spark 400K Cluster | Cost, Pricing & Local Deployment | Demo | 2026-07-18 | [Open source](https://x.com/thelichhh/status/2078316906335904205) | [@thelichhh](https://x.com/thelichhh) |
+| 247 | ZCode Default-Open RCE Patch | Limits, Caveats & Safety Signals | Limit | 2026-07-18 | [Open source](https://x.com/weezerOSINT/status/2078498406117654706) | [@weezerOSINT](https://x.com/weezerOSINT) |

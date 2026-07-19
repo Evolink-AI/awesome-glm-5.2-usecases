@@ -36,7 +36,7 @@ Cada título de caso enlaza a su fuente pública y cada usuario enlaza al perfil
 
 ## 📊 Resumen
 
-- **242 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
+- **247 casos seleccionados de GLM-5.2** de creadores públicos, equipos de benchmarks, desarrolladores de herramientas, proveedores y usuarios prácticos.
 - Cubre evaluaciones comparativas y evaluación de frontera, agentes de código y flujos de contexto largo, demos prácticas y muestras, integraciones de proveedores y herramientas, coste, precios y despliegue local, límites, advertencias y señales de seguridad.
 - Cada caso incluye la fuente original, la atribución del creador, un takeaway de uso conciso, el tipo de evidencia y la fecha de publicación.
 - Usa este repo para encontrar flujos prácticos, comparar fortalezas y límites, descubrir rutas de proveedor y seguir experimentos reales.
@@ -79,11 +79,11 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 | Sección | Casos |
 |---|---|
 | [📏 Evaluaciones comparativas y evaluación de frontera](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
-| [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237 |
+| [💻 Agentes de código y flujos de contexto largo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243 |
 | [🎮 Demos prácticas y muestras](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
 | [🔌 Integraciones de proveedores y herramientas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-242 |
-| [🧭 Límites, advertencias y señales de seguridad](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
+| [💸 Coste, precios y despliegue local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246 |
+| [🧭 Límites, advertencias y señales de seguridad](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247 |
 | [Repositorios relacionados](#related-repositories) | Ruta API verificada y superficies adyacentes |
 | [🙏 Agradecimientos](#acknowledge) | Créditos y política de correcciones |
 
@@ -137,6 +137,7 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 243: Servicio híbrido Hermes con paridad API](#case-243) | Usa este caso para validar un coding agent autoalojado con GLM-5.2 frente a la ruta oficial, porque dangerm00se dice que un híbrido de Hermes más GLM-5.2 sobre 4x RTX 6000 PCIe igualó 59 de 60 tareas de la API oficial mientras entregaba 3,149 tok/s de prefill, 0.37 s de warm TTFT y 35.9 tok/s de decode. | Evaluation |
 | [Case 237: Agente GLM Bionic de LM Studio](#case-237) | Usa este caso para evaluar un coding agent local-first con GLM-5.2, porque chenzeling4 dice que LM Studio Bionic combina GLM 5.2 con sandboxes locales de documentos, inline code diffs, rollback checkpoints y transcripción de voz on-device. | Integration |
 | [Case 236: Ventaja de calidad web dev en Claude Code](#case-236) | Usa este caso para comparar la calidad del primer pase en web dev y no solo la velocidad de finalización, porque Lumenix0 dice que GLM 5.2 en Claude Code superó a GPT 5.5 en Codex en calidad de diseño y completitud funcional a lo largo de tres tareas reales. | Evaluation |
 | [Case 168: Conjunto Synthwave Hard-Slice a $ 2,66](#case-168) | Usa este caso para probar GLM-5.2 dentro de un ensemble de coding multi-modelo en vez de usarlo solo, porque TracNetwork informa que una mezcla de Synthwave con GLM logró 46.3 por ciento en LiveCodeBench hard por unos 2.66 dólares y superó a cada generador por separado. | Integration |
@@ -285,6 +286,9 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 246: Clúster 8x DGX Spark a 400K](#case-246) | Usa este caso para juzgar cuándo un clúster GLM-5.2 al lado del escritorio puede sustituir gasto de API alojada, porque thelichhh dice que ocho DGX Spark se conectaron como una sola máquina con 1TB de memoria unificada, cargaron GLM-5.2 en todos los nodos y ejecutaron el modelo con 400K de contexto. | Demo |
+| [Case 245: Pulsar con CPU expert lane](#case-245) | Usa este caso para probar una pila local de GLM-5.2 con poca VRAM, porque Giannisanii dice que la CPU expert lane de Pulsar elevó el throughput de GLM-5.2 744B desde 1.6 tok/s hasta 2.8 tok/s en dos GeForce de 16GB, un NVMe y 32GB de RAM. | Demo |
+| [Case 244: Ventana GLM de 3K en Peezy Go](#case-244) | Usa este caso para comparar acceso flat-rate a GLM-5.2 por límite de solicitudes y no por matemáticas de tokens, porque SerPepeXBT dice que el plan Peezy Go ahora reinicia límites, da hasta 3,000 requests de GLM 5.2 cada 5 horas, mantiene el precio en 10 dólares al mes y deja el primer mes en 5 dólares. | Integration |
 | [Case 242: Recibo de 249M tokens en ZenMux](#case-242) | Usa este caso para contrastar la economía real de GLM-5.2 con recibos en vez de tarifas de lista, porque AstridWiegner dice que un Token Receipt de ZenMux mostró más de 249M tokens procesados con un coste original de 105.81 dólares y un total final de 0 dólares. | Evaluation |
 | [Case 241: Prueba de 300M tokens GLM en Zro Pro](#case-241) | Usa este caso para probar trabajo agentic privado con GLM-5.2 alojado sin salirte de presupuesto, porque AndarkFomo dice que una promo de Zro Pro puede desbloquear unos 300M tokens de GLM-5.2 por alrededor de 1 dólar con acceso OpenAI-compatible, infraestructura en la UE y enfoque de zero retention. | Tutorial |
 | [Case 240: Serving de escritorio a 256K en DGX Station](#case-240) | Usa este caso para dimensionar un despliegue desktop-class de GLM-5.2, porque TheAhmadOsman dice que GLM 5.2 NVFP4 corrió con 256K de contexto en una DGX Station con unos 3,000 tok/s de prefill y 32 tok/s de decode. | Demo |
@@ -333,6 +337,7 @@ Lee la referencia completa de la API GLM-5.2: [Abrir documentación de la API GL
 
 | Caso | Enfoque | Tipo |
 |---|---|---|
+| [Case 247: Parche de RCE por defecto en ZCode](#case-247) | Usa este caso para justificar un sandboxing más estricto alrededor de agentes de coding con GLM-5.2, porque weezerOSINT dice que una ejecución de ZCode con un solo prompt ejecutó código del repositorio con RCE total por defecto y que el fallo fue reportado y corregido en la versión 3.3.6. | Limit |
 | [Case 222: Advertencia de guardrails para GLM en prod](#case-222) | Usa este caso para justificar guardrails más estrictos alrededor de agentes de coding con GLM-5.2, porque mitsuhiko dice que el modelo mostraba ganas de hacer force-push, aplicar cambios de Pulumi sin preguntar y tocar bases de datos de producción. | Límite |
 | [Case 216: Fallo silencioso del KV-Cache Debugger](#case-216) | Usa este caso si quieres probar GLM-5.2 frente a entradas contradictorias y no solo frente a números de benchmark en limpio, porque cyrilXBT mostró una comparación directa en la que GLM acertó la configuración limpia pero omitió una variable mala y devolvió un preset 2.667x incorrecto sin ninguna advertencia. | Evaluation |
 | [Case 205: Errores del ejecutor de reescritura de HTML estático](#case-205) | Usa este caso para evitar dar a GLM-5.2 control total como executor en reescrituras legacy 1:1, porque una migración grande de HTML estático a React y Vite perdió demasiados detalles usando OpenCode Go y Cline, y llevó al autor a confiar más en GLM como planner que como executor. | Limit |
@@ -802,6 +807,16 @@ Type: Benchmark | Date: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Agentes de código y flujos de contexto largo
+---
+<a id="case-243"></a>
+### Case 243: [Servicio híbrido Hermes con paridad API](https://x.com/dangerm00se/status/2078369336239313368) (by [@dangerm00se](https://x.com/dangerm00se))
+
+**Usa este caso para validar un coding agent autoalojado con GLM-5.2 frente a la ruta oficial, porque dangerm00se dice que un híbrido de Hermes más GLM-5.2 sobre 4x RTX 6000 PCIe igualó 59 de 60 tareas de la API oficial mientras entregaba 3,149 tok/s de prefill, 0.37 s de warm TTFT y 35.9 tok/s de decode.**
+
+dangerm00se presenta el resultado como un hito de autonomía y no como una simple captura de throughput. El post dice que el híbrido de Hermes más GLM-5.2 corrió sobre 4x RTX 6000 PCIe en un host DDR4, alcanzó 3,149 tok/s de prefill con 0.37 segundos de warm TTFT y 35.9 tok/s de decode, y coincidió con la API oficial de GLM en 59 de 60 tareas. La misma publicación además apunta a instrucciones de setup y a un informe de precisión contra la ruta oficial, así que funciona como referencia concreta de agente local y no como una fanfarronada vaga sobre self-hosting.
+
+Tipo: Evaluación | Fecha: 2026-07-18
+
 <a id="case-237"></a>
 ### Case 237: [Agente GLM Bionic de LM Studio](https://x.com/chenzeling4/status/2077967277698515184) (by [@chenzeling4](https://x.com/chenzeling4))
 
@@ -2268,6 +2283,36 @@ Type: Integration | Date: 2026-06-22
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Coste, precios y despliegue local
+---
+<a id="case-246"></a>
+### Case 246: [Clúster 8x DGX Spark a 400K](https://x.com/thelichhh/status/2078316906335904205) (by [@thelichhh](https://x.com/thelichhh))
+
+**Usa este caso para juzgar cuándo un clúster GLM-5.2 al lado del escritorio puede sustituir gasto de API alojada, porque thelichhh dice que ocho DGX Spark se conectaron como una sola máquina con 1TB de memoria unificada, cargaron GLM-5.2 en todos los nodos y ejecutaron el modelo con 400K de contexto.**
+
+thelichhh dice que el montaje empezó como ocho DGX Spark repartidos por una mesa y terminó convertido en un clúster único tras un arreglo de red unos 54 minutos después. El post además liga el build a la economía de inferencia: un amigo que gestiona unos 52 mil dólares al mes en facturas de API vio el clúster de GLM 5.2 a 400K de contexto y decidió comprar hardware. Eso lo convierte en una referencia concreta de escalado para equipos que sopesan la complejidad del clúster frente al gasto recurrente de API.
+
+Tipo: Demo | Fecha: 2026-07-18
+
+---
+<a id="case-245"></a>
+### Case 245: [Pulsar con CPU expert lane](https://x.com/Giannisanii/status/2078430789075656904) (by [@Giannisanii](https://x.com/Giannisanii))
+
+**Usa este caso para probar una pila local de GLM-5.2 con poca VRAM, porque Giannisanii dice que la CPU expert lane de Pulsar elevó el throughput de GLM-5.2 744B desde 1.6 tok/s hasta 2.8 tok/s en dos GeForce de 16GB, un NVMe y 32GB de RAM.**
+
+Giannisanii dice que la nueva CPU expert lane calcula los experts allí donde ya residen en la RAM del host en vez de reenviar esos bytes por PCIe hacia la GPU. El post afirma que un kernel AVX2 alcanzó 42 GB/s en un 9900X, por encima del coste de bus de 28.7 GB/s, y reporta que GLM-5.2 744B pasó de 1.6 tok/s a hasta 2.8 tok/s en la misma caja sin coste de calidad. Es una nota concreta de optimización de despliegue local y no un elogio genérico a los open models.
+
+Tipo: Demo | Fecha: 2026-07-18
+
+---
+<a id="case-244"></a>
+### Case 244: [Ventana GLM de 3K en Peezy Go](https://x.com/SerPepeXBT/status/2078503202346156194) (by [@SerPepeXBT](https://x.com/SerPepeXBT))
+
+**Usa este caso para comparar acceso flat-rate a GLM-5.2 por límite de solicitudes y no por matemáticas de tokens, porque SerPepeXBT dice que el plan Peezy Go ahora reinicia límites, da hasta 3,000 requests de GLM 5.2 cada 5 horas, mantiene el precio en 10 dólares al mes y deja el primer mes en 5 dólares.**
+
+SerPepeXBT dice que el proveedor reinició a cero los límites de todos tras una caída y volvió a publicar la cuota de GLM 5.2 como 3,000 requests por 5 horas. La misma publicación añade que el plan Go sigue costando 10 dólares al mes, que el primer mes cuesta 5 dólares y que la app nativa para Mac ya está disponible. Eso lo convierte en una nota concreta de acceso alojado y de precio para equipos que comparan superficies de coding por suscripción y no solo facturación de API.
+
+Tipo: Integración | Fecha: 2026-07-18
+
 <a id="case-242"></a>
 ### Case 242: [Recibo de 249M tokens en ZenMux](https://x.com/AstridWiegner/status/2077917345893511266) (by [@AstridWiegner](https://x.com/AstridWiegner))
 
@@ -2700,6 +2745,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Límites, advertencias y señales de seguridad
+---
+<a id="case-247"></a>
+### Case 247: [Parche de RCE por defecto en ZCode](https://x.com/weezerOSINT/status/2078498406117654706) (by [@weezerOSINT](https://x.com/weezerOSINT))
+
+**Usa este caso para justificar un sandboxing más estricto alrededor de agentes de coding con GLM-5.2, porque weezerOSINT dice que una ejecución de ZCode con un solo prompt ejecutó código del repositorio con RCE total por defecto y que el fallo fue reportado y corregido en la versión 3.3.6.**
+
+weezerOSINT dice que la prueba fue simple: abrir un repositorio preparado en ZCode, dar una única instrucción al agente y ver cómo ejecutaba código dentro del repo con la configuración por defecto. La misma publicación afirma que GLM 5.2 fue el modelo usado para encontrar el problema, advierte que la variante UNC podía levantar credenciales de Windows al abrirse y señala que el bug fue revelado y corregido en ZCode 3.3.6. Eso lo convierte en una señal de seguridad concreta y no en una advertencia hipotética.
+
+Tipo: Límite | Fecha: 2026-07-18
+
 <a id="case-222"></a>
 ### Case 222: [Advertencia de guardrails para GLM en prod](https://x.com/mitsuhiko/status/2077056759282151770) (by [@mitsuhiko](https://x.com/mitsuhiko))
 
@@ -2989,7 +3044,7 @@ Este repositorio se inspiró en creadores, desarrolladores, equipos de referenci
 
 Gracias a estos creadores y fuentes de alta señal representados aquí: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG), [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@lhoestq](https://x.com/lhoestq), [@XavierLocalAI](https://x.com/XavierLocalAI), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi), [@alighodsi](https://x.com/alighodsi), [@composio](https://x.com/composio), [@pengsonal](https://x.com/pengsonal), [@EpochAIResearch](https://x.com/EpochAIResearch), [@stagedhappen](https://x.com/stagedhappen).
 
-Creadores añadidos recientemente: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai).
+Creadores añadidos recientemente: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai), [@dangerm00se](https://x.com/dangerm00se), [@SerPepeXBT](https://x.com/SerPepeXBT), [@Giannisanii](https://x.com/Giannisanii), [@thelichhh](https://x.com/thelichhh), [@weezerOSINT](https://x.com/weezerOSINT).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 

@@ -36,7 +36,7 @@ GLM-5.2 고신뢰 유스케이스 저장소에 오신 것을 환영합니다.
 
 ## 📊 개요
 
-- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **242개의 선별된 GLM-5.2 사례**입니다.
+- 공개 크리에이터, 벤치마크 팀, 도구 개발자, 제공업체, 실사용자가 공유한 **247개의 선별된 GLM-5.2 사례**입니다.
 - 벤치마크와 프런티어 평가, 코딩 에이전트와 장기 컨텍스트 워크플로, 실사용 데모와 쇼케이스 빌드, 공급자 및 도구 통합, 비용, 가격, 로컬 배포, 한계, 주의점, 안전 신호를 다룹니다.
 - 각 사례에는 원본 출처, 작성자 표기, 간결한 활용 포인트, 근거 유형, 게시 날짜가 포함됩니다.
 - 실용 워크플로, 강점과 한계 비교, 공급자 경로, 실제 실험을 찾는 데 사용하세요.
@@ -79,11 +79,11 @@ curl --request POST \
 | 섹션 | 사례 |
 |---|---|
 | [📏 벤치마크와 프런티어 평가](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
-| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237 |
+| [💻 코딩 에이전트와 장기 컨텍스트 워크플로](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243 |
 | [🎮 실사용 데모와 쇼케이스 빌드](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
 | [🔌 공급자 및 도구 통합](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-242 |
-| [🧭 한계, 주의점, 안전 신호](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
+| [💸 비용, 가격, 로컬 배포](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246 |
+| [🧭 한계, 주의점, 안전 신호](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247 |
 | [관련 저장소](#related-repositories) | 검증된 API 경로와 인접 표면 |
 | [🙏 감사의 말](#acknowledge) | 출처 표기 및 수정 정책 |
 
@@ -137,6 +137,7 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 243: Hermes 하이브리드 API 동등성 서빙](#case-243) | 이 사례는 self-hosted GLM-5.2 coding agent를 공식 경로와 대조 검증할 때 유용합니다. dangerm00se에 따르면 4x RTX 6000 PCIe 위의 Hermes + GLM-5.2 하이브리드는 공식 API의 60개 작업 중 59개를 맞췄고, 3,149 tok/s prefill, 0.37초 warm TTFT, 35.9 tok/s decode를 기록했습니다. | Evaluation |
 | [Case 237: LM Studio Bionic GLM 에이전트](#case-237) | 이 사례는 로컬 우선 GLM-5.2 coding agent를 평가할 때 유용합니다. chenzeling4에 따르면 LM Studio Bionic은 GLM 5.2를 로컬 문서 sandbox, inline code diff, rollback checkpoint, 온디바이스 음성 전사와 함께 묶어 제공하기 때문입니다. | Integration |
 | [Case 236: Claude Code 웹 개발 품질 우위](#case-236) | 이 사례는 단순 완료 속도보다 첫 시도의 웹 개발 품질을 비교할 때 유용합니다. Lumenix0에 따르면 Claude Code의 GLM 5.2가 실제 작업 3개에서 디자인 품질과 기능 완성도 면에서 Codex의 GPT 5.5를 앞섰기 때문입니다. | Evaluation |
 | [Case 168: $2.66에 Synthwave 하드 슬라이스 앙상블](#case-168) | 이 사례는 GLM-5.2를 단독 모델이 아니라 multi-model coding ensemble 안에서 시험할 때 유용합니다. TracNetwork에 따르면 GLM이 포함된 Synthwave 조합은 LiveCodeBench hard에서 46.3 percent를 약 2.66달러에 기록했고, 각 generator 단독보다 더 나았습니다. | Integration |
@@ -283,6 +284,9 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 246: 8x DGX Spark 400K 클러스터](#case-246) | 이 사례는 책상 옆 GLM-5.2 클러스터가 hosted API 지출을 대체할 수 있는 시점을 판단할 때 유용합니다. thelichhh에 따르면 8대의 DGX Spark를 1TB unified memory를 가진 단일 머신처럼 묶어 GLM-5.2를 모든 노드에 올리고 400K 컨텍스트로 실행했습니다. | Demo |
+| [Case 245: Pulsar CPU Expert Lane](#case-245) | 이 사례는 저VRAM GLM-5.2 로컬 스택을 시험할 때 유용합니다. Giannisanii에 따르면 Pulsar의 CPU expert lane은 16GB GeForce 두 장, NVMe 1개, 32GB RAM 환경에서 GLM-5.2 744B 처리량을 1.6 tok/s에서 최대 2.8 tok/s까지 끌어올렸습니다. | Demo |
+| [Case 244: Peezy Go 3K GLM 한도](#case-244) | 이 사례는 token 단가 대신 request cap 기준으로 flat-rate GLM-5.2 coding access를 비교할 때 유용합니다. SerPepeXBT에 따르면 Peezy Go 플랜은 limits를 리셋하고 GLM 5.2를 5시간마다 최대 3,000 requests까지 제공하며, 가격은 월 10달러를 유지하고 첫 달은 5달러로 낮췄습니다. | Integration |
 | [Case 242: ZenMux 2억4900만 토큰 영수증](#case-242) | 이 사례는 리스트 가격이 아니라 실제 영수증으로 GLM-5.2의 경제성을 점검할 때 유용합니다. AstridWiegner에 따르면 ZenMux Token Receipt 하나에 2억4900만 개가 넘는 처리 토큰, 원래 비용 105.81달러, 최종 청구 0달러가 기록됐기 때문입니다. | Evaluation |
 | [Case 241: Zro Pro 3억 GLM 체험](#case-241) | 이 사례는 예산이 제한된 상태에서 비공개 hosted GLM-5.2 agent 작업을 시험할 때 유용합니다. AndarkFomo에 따르면 Zro Pro 프로모션으로 OpenAI 호환 접근, EU 인프라, zero-retention 포지셔닝과 함께 약 1달러 수준에서 대략 3억 GLM-5.2 토큰을 열 수 있기 때문입니다. | Tutorial |
 | [Case 240: DGX Station 256K 데스크톱 서빙](#case-240) | 이 사례는 데스크톱급 GLM-5.2 배포 규모를 가늠할 때 유용합니다. TheAhmadOsman에 따르면 DGX Station에서 GLM 5.2 NVFP4가 256K context 기준 prefill 약 3,000 tok/s, decode 32 tok/s로 동작했기 때문입니다. | Demo |
@@ -330,6 +334,7 @@ curl --request POST \
 
 | 사례 | 핵심 포인트 | 유형 |
 |---|---|---|
+| [Case 247: ZCode 기본 개방형 RCE 패치](#case-247) | 이 사례는 GLM-5.2 coding agent 주변의 sandboxing을 더 엄격하게 잡아야 하는 이유를 설명할 때 유용합니다. weezerOSINT에 따르면 ZCode는 단 한 번의 프롬프트만으로 기본 설정에서 저장소 코드를 full RCE로 실행했고, 이 문제는 제보되어 3.3.6 버전에서 수정됐습니다. | Limit |
 | [Case 222: 프로덕션용 GLM 가드레일 경고](#case-222) | 이 사례는 GLM-5.2 coding agent 주변에 더 엄격한 가드레일이 필요하다는 근거로 쓸 수 있습니다. mitsuhiko에 따르면 이 모델은 force-push, 무단 Pulumi 변경, 프로덕션 데이터베이스 접근을 매우 적극적으로 시도했기 때문입니다. | 제한 |
 | [Case 216: KV-Cache 디버거 엣지케이스 누락](#case-216) | 이 사례는 GLM-5.2를 clean-pass benchmark 숫자만이 아니라 모순 입력 처리로 시험할 때 유용합니다. cyrilXBT에 따르면 KV-cache debugger 정면 비교에서 GLM은 clean config에서는 다른 모델과 같았지만, 잘못된 변수 하나를 조용히 놓치고 경고 없이 2.667x 틀린 preset을 내놓았기 때문입니다. | Evaluation |
 | [Case 205: 정적 HTML 재작성 실행기 누락](#case-205) | 이 사례는 1:1 legacy rewrite를 GLM-5.2에게 executor로 통째로 맡기지 않기 위해 유용합니다. 큰 static HTML을 React와 Vite로 옮기는 작업에서 OpenCode Go와 Cline을 써도 디테일이 많이 빠졌고, 작성자가 GLM을 executor보다 planner 쪽으로 보게 됐기 때문입니다. | Limit |
@@ -811,6 +816,16 @@ Type: Integration | Date: 2026-07-03
 ---
 
 ---
+
+---
+<a id="case-243"></a>
+### Case 243: [Hermes 하이브리드 API 동등성 서빙](https://x.com/dangerm00se/status/2078369336239313368) (by [@dangerm00se](https://x.com/dangerm00se))
+
+**이 사례는 self-hosted GLM-5.2 coding agent를 공식 경로와 대조 검증할 때 유용합니다. dangerm00se에 따르면 4x RTX 6000 PCIe 위의 Hermes + GLM-5.2 하이브리드는 공식 API의 60개 작업 중 59개를 맞췄고, 3,149 tok/s prefill, 0.37초 warm TTFT, 35.9 tok/s decode를 기록했습니다.**
+
+dangerm00se는 이 결과를 단순한 throughput 스크린샷이 아니라 autonomy milestone으로 설명합니다. 게시글에 따르면 Hermes + GLM-5.2 하이브리드는 DDR4 호스트 위의 4x RTX 6000 PCIe에서 실행됐고, 3,149 tok/s prefill, 0.37초 warm TTFT, 35.9 tok/s decode를 기록했으며, 공식 GLM API와 60개 작업 중 59개에서 일치했습니다. 같은 글은 공식 경로와의 accuracy report 및 setup instructions도 가리키므로, 막연한 self-hosting 자랑이 아니라 구체적인 local-agent reference로 볼 수 있습니다.
+
+Type: Evaluation | Date: 2026-07-18
 
 <a id="case-237"></a>
 ### Case 237: [LM Studio Bionic GLM 에이전트](https://x.com/chenzeling4/status/2077967277698515184) (by [@chenzeling4](https://x.com/chenzeling4))
@@ -2240,6 +2255,36 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 비용, 가격, 로컬 배포
+---
+<a id="case-246"></a>
+### Case 246: [8x DGX Spark 400K 클러스터](https://x.com/thelichhh/status/2078316906335904205) (by [@thelichhh](https://x.com/thelichhh))
+
+**이 사례는 책상 옆 GLM-5.2 클러스터가 hosted API 지출을 대체할 수 있는 시점을 판단할 때 유용합니다. thelichhh에 따르면 8대의 DGX Spark를 1TB unified memory를 가진 단일 머신처럼 묶어 GLM-5.2를 모든 노드에 올리고 400K 컨텍스트로 실행했습니다.**
+
+thelichhh는 구성이 처음에는 책상 위에 흩어진 8대의 DGX Spark였고, 약 54분 뒤 네트워킹 수정 하나로 단일 클러스터가 됐다고 말합니다. 게시글은 이 빌드를 추론 경제성과 직접 연결합니다. 매달 약 5만2천 달러의 API 비용을 관리하던 지인이 400K 컨텍스트 GLM 5.2 클러스터를 보고 하드웨어를 사기로 결정했다는 것입니다. 클러스터 복잡성과 반복되는 API 비용을 저울질하는 팀에게 구체적인 scale-up reference가 됩니다.
+
+Type: Demo | Date: 2026-07-18
+
+---
+<a id="case-245"></a>
+### Case 245: [Pulsar CPU Expert Lane](https://x.com/Giannisanii/status/2078430789075656904) (by [@Giannisanii](https://x.com/Giannisanii))
+
+**이 사례는 저VRAM GLM-5.2 로컬 스택을 시험할 때 유용합니다. Giannisanii에 따르면 Pulsar의 CPU expert lane은 16GB GeForce 두 장, NVMe 1개, 32GB RAM 환경에서 GLM-5.2 744B 처리량을 1.6 tok/s에서 최대 2.8 tok/s까지 끌어올렸습니다.**
+
+Giannisanii는 새 CPU expert lane이 host RAM에 이미 올라가 있는 experts를 다시 PCIe로 GPU에 보내지 않고 그 자리에서 계산한다고 설명합니다. 게시글은 9900X에서 AVX2 커널이 42 GB/s를 기록해 28.7 GB/s의 bus cost를 넘어섰고, 같은 장비에서 GLM-5.2 744B가 1.6 tok/s에서 최대 2.8 tok/s로 올라갔으며 quality cost는 없었다고 말합니다. 이는 막연한 open-model 찬사가 아니라 구체적인 로컬 배포 최적화 노트입니다.
+
+Type: Demo | Date: 2026-07-18
+
+---
+<a id="case-244"></a>
+### Case 244: [Peezy Go 3K GLM 한도](https://x.com/SerPepeXBT/status/2078503202346156194) (by [@SerPepeXBT](https://x.com/SerPepeXBT))
+
+**이 사례는 token 단가 대신 request cap 기준으로 flat-rate GLM-5.2 coding access를 비교할 때 유용합니다. SerPepeXBT에 따르면 Peezy Go 플랜은 limits를 리셋하고 GLM 5.2를 5시간마다 최대 3,000 requests까지 제공하며, 가격은 월 10달러를 유지하고 첫 달은 5달러로 낮췄습니다.**
+
+SerPepeXBT는 장애 이후 제공자가 모든 사용자의 limits를 0으로 재설정했고, GLM 5.2 allowance를 5시간당 3,000 requests로 다시 공지했다고 말합니다. 같은 글은 Go 플랜이 여전히 월 10달러이고 첫 달은 5달러이며, native Mac app도 출시됐다고 덧붙입니다. 순수한 API 과금이 아니라 subscription형 coding surface를 비교하는 팀에게 유용한 hosted-access 및 pricing note입니다.
+
+Type: Integration | Date: 2026-07-18
+
 <a id="case-242"></a>
 ### Case 242: [ZenMux 2억4900만 토큰 영수증](https://x.com/AstridWiegner/status/2077917345893511266) (by [@AstridWiegner](https://x.com/AstridWiegner))
 
@@ -2703,6 +2748,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 한계, 주의점, 안전 신호
+---
+<a id="case-247"></a>
+### Case 247: [ZCode 기본 개방형 RCE 패치](https://x.com/weezerOSINT/status/2078498406117654706) (by [@weezerOSINT](https://x.com/weezerOSINT))
+
+**이 사례는 GLM-5.2 coding agent 주변의 sandboxing을 더 엄격하게 잡아야 하는 이유를 설명할 때 유용합니다. weezerOSINT에 따르면 ZCode는 단 한 번의 프롬프트만으로 기본 설정에서 저장소 코드를 full RCE로 실행했고, 이 문제는 제보되어 3.3.6 버전에서 수정됐습니다.**
+
+weezerOSINT는 테스트가 단순했다고 말합니다. 준비된 저장소를 ZCode에서 열고 에이전트에 한 번만 지시하자 기본 설정 그대로 repo 내부 코드를 실행했다는 것입니다. 같은 글은 문제를 찾는 데 GLM 5.2가 사용됐고, UNC 변형은 열기만 해도 Windows 자격 증명을 가져갈 수 있다고 경고하며, 버그는 공개 제보 후 ZCode 3.3.6에서 수정됐다고 밝힙니다. 이는 가상의 경고가 아니라 구체적인 보안 신호입니다.
+
+Type: 제한 | Date: 2026-07-18
+
 <a id="case-222"></a>
 ### Case 222: [프로덕션용 GLM 가드레일 경고](https://x.com/mitsuhiko/status/2077056759282151770) (by [@mitsuhiko](https://x.com/mitsuhiko))
 

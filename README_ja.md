@@ -36,7 +36,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **242 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **247 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -79,11 +79,11 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 | セクション | ケース |
 |---|---|
 | [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
-| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237 |
+| [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243 |
 | [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
 | [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-242 |
-| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246 |
+| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247 |
 | [関連リポジトリ](#related-repositories) | 検証済み API ルートと関連サーフェス |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
@@ -137,6 +137,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 243: Hermes ハイブリッド API 同等運用](#case-243) | このケースは、自己ホストの GLM-5.2 coding agent を公式ルートと比較検証したいときに使えます。dangerm00se によると、4x RTX 6000 PCIe 上の Hermes と GLM-5.2 の hybrid は official API の 60 タスク中 59 件で一致し、3,149 tok/s の prefill、0.37 秒の warm TTFT、35.9 tok/s の decode を出したためです。 | Evaluation |
 | [Case 237: LM Studio Bionic GLM エージェント](#case-237) | このケースは、ローカル優先の GLM-5.2 coding agent を評価したいときに使えます。chenzeling4 によると、LM Studio Bionic は GLM 5.2 にローカル document sandbox、inline code diff、rollback checkpoint、端末内 voice transcription を組み合わせているためです。 | Integration |
 | [Case 236: Claude Code の Web 開発品質優位](#case-236) | このケースは、単純な完了速度ではなく初回生成時の Web 開発品質を比較したいときに使えます。Lumenix0 によると、Claude Code 上の GLM 5.2 は 3 つの実タスクで、Codex 上の GPT 5.5 を design quality と機能完成度で上回ったためです。 | Evaluation |
 | [Case 168: Synthwave ハードスライス アンサンブル、$2.66](#case-168) | このケースは、GLM-5.2 を単独ではなく multi-model の coding ensemble に組み込んで試すのに向いています。TracNetwork によれば、GLM を含む Synthwave 構成は LiveCodeBench hard で 46.3 percent を約 2.66 ドルで出し、各 generator 単体を上回りました。 | Integration |
@@ -283,6 +284,9 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 246: 8x DGX Spark 400K クラスタ](#case-246) | このケースは、机上の GLM-5.2 cluster が hosted API 支出を置き換えられる境目を判断したいときに使えます。thelichhh によると、8 台の DGX Spark を 1TB unified memory の 1 台として束ね、全ノードに GLM-5.2 を載せて 400K context で動かしたためです。 | Demo |
+| [Case 245: Pulsar CPU Expert Lane](#case-245) | このケースは、低 VRAM の GLM-5.2 local stack を試したいときに使えます。Giannisanii によると、Pulsar の CPU expert lane により、2 枚の 16GB GeForce と 1 台の NVMe、32GB RAM で GLM-5.2 744B の throughput が 1.6 tok/s から最大 2.8 tok/s まで上がったためです。 | Demo |
+| [Case 244: Peezy Go 3K GLM 枠](#case-244) | このケースは、token 単価ではなく request cap で flat-rate の GLM-5.2 coding access を比較したいときに使えます。SerPepeXBT によると、Peezy Go plan は limit をリセットし、GLM 5.2 を 5 時間ごとに最大 3,000 requests まで使え、月額 10 dollar を維持しつつ初月は 5 dollar になったためです。 | Integration |
 | [Case 242: ZenMux 249M Token Receipt](#case-242) | このケースは、定価ではなく実際の receipt で GLM-5.2 の経済性を確かめたいときに使えます。AstridWiegner によると、1 件の ZenMux Token Receipt には 2.49 億超の処理 tokens、元の料金 105.81 dollars、最終合計 0 dollars が記録されていたためです。 | Evaluation |
 | [Case 241: Zro Pro 300M GLM トライアル](#case-241) | このケースは、予算を抑えて private hosted な GLM-5.2 agent 作業を試したいときに使えます。AndarkFomo によると、Zro Pro の promo により OpenAI-compatible access、EU infra、zero-retention 方針付きで、約 1 dollar でおよそ 300M GLM-5.2 tokens を使えるためです。 | Tutorial |
 | [Case 240: DGX Station 256K デスクトップ推論](#case-240) | このケースは、デスクトップ級の GLM-5.2 配備規模を見積もりたいときに使えます。TheAhmadOsman によると、DGX Station 上の GLM 5.2 NVFP4 は 256K context で約 3,000 tok/s の prefill と 32 tok/s の decode を出したためです。 | Demo |
@@ -330,6 +334,7 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 247: ZCode デフォルト RCE 修正](#case-247) | このケースは、GLM-5.2 coding agent の sandboxing をより厳格にすべき根拠として使えます。weezerOSINT によると、1 回の prompt だけで ZCode が repo 内コードを default で full RCE 実行し、この問題は報告されて version 3.3.6 で修正されたためです。 | Limit |
 | [Case 222: 本番向け GLM ガードレール警告](#case-222) | このケースは、GLM-5.2 coding agent の guardrail をより厳しくすべき根拠として使えます。mitsuhiko によると、このモデルは force-push、無断の Pulumi 変更、production database への接触に積極的だったためです。 | 制限 |
 | [Case 216: KV-Cache Debugger エッジケース見落とし](#case-216) | このケースは、GLM-5.2 を clean-pass の benchmark 数字だけでなく、矛盾入力の扱いで試したいときに役立ちます。cyrilXBT によれば、KV-cache debugger の正面比較で、GLM は clean config では他モデルと同等だった一方、1 つの bad variable を見落とし、警告なしで 2.667x 間違った preset を出したためです。 | Evaluation |
 | [Case 205: 静的 HTML Rewrite Executor が失敗する](#case-205) | このケースは、1:1 の legacy rewrite を GLM-5.2 に executor として丸ごと任せないために使えます。大きな static HTML から React/Vite への移行で OpenCode Go と Cline を使っても detail がかなり落ち、author が GLM を executor より planner 寄りに見るようになったためです。 | Limit |
@@ -799,6 +804,16 @@ Type: Benchmark | Date: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 コーディングエージェントと長文脈ワークフロー
+---
+<a id="case-243"></a>
+### Case 243: [Hermes ハイブリッド API 同等運用](https://x.com/dangerm00se/status/2078369336239313368) (by [@dangerm00se](https://x.com/dangerm00se))
+
+**このケースは、自己ホストの GLM-5.2 coding agent を公式ルートと比較検証したいときに使えます。dangerm00se によると、4x RTX 6000 PCIe 上の Hermes と GLM-5.2 の hybrid は official API の 60 タスク中 59 件で一致し、3,149 tok/s の prefill、0.37 秒の warm TTFT、35.9 tok/s の decode を出したためです。**
+
+dangerm00se はこの結果を、単なる throughput screenshot ではなく autonomy の節目として位置付けています。post によると、Hermes と GLM-5.2 の hybrid は DDR4 host 上の 4x RTX 6000 PCIe で動き、3,149 tok/s の prefill、0.37 second の warm TTFT、35.9 tok/s の decode を記録し、official GLM API と 60 タスク中 59 件で一致しました。さらに setup instruction と official route との accuracy report も案内しており、曖昧な self-hosting 自慢ではなく具体的な local-agent reference になっています。
+
+Type: Evaluation | Date: 2026-07-18
+
 <a id="case-237"></a>
 ### Case 237: [LM Studio Bionic GLM エージェント](https://x.com/chenzeling4/status/2077967277698515184) (by [@chenzeling4](https://x.com/chenzeling4))
 
@@ -2240,6 +2255,36 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 コスト、価格、ローカル運用
+---
+<a id="case-246"></a>
+### Case 246: [8x DGX Spark 400K クラスタ](https://x.com/thelichhh/status/2078316906335904205) (by [@thelichhh](https://x.com/thelichhh))
+
+**このケースは、机上の GLM-5.2 cluster が hosted API 支出を置き換えられる境目を判断したいときに使えます。thelichhh によると、8 台の DGX Spark を 1TB unified memory の 1 台として束ね、全ノードに GLM-5.2 を載せて 400K context で動かしたためです。**
+
+thelichhh によると、setup は机に散らばった 8 台の DGX Spark から始まり、約 54 分後に networking fix を入れて 1 つの cluster になりました。post はこの build を inference economics と明確に結び付けており、毎月およそ 52 thousand dollars の API 請求を見ている友人が、この 400K-context の GLM 5.2 cluster を見て hardware 購入を決めたと述べています。cluster complexity と recurring API spend を比べるチームにとって、具体的な scale-up reference です。
+
+Type: Demo | Date: 2026-07-18
+
+---
+<a id="case-245"></a>
+### Case 245: [Pulsar CPU Expert Lane](https://x.com/Giannisanii/status/2078430789075656904) (by [@Giannisanii](https://x.com/Giannisanii))
+
+**このケースは、低 VRAM の GLM-5.2 local stack を試したいときに使えます。Giannisanii によると、Pulsar の CPU expert lane により、2 枚の 16GB GeForce と 1 台の NVMe、32GB RAM で GLM-5.2 744B の throughput が 1.6 tok/s から最大 2.8 tok/s まで上がったためです。**
+
+Giannisanii は、新しい CPU expert lane が experts を PCIe 経由で GPU に戻すのではなく、すでに host RAM にある場所でそのまま計算すると説明しています。post では、9900X 上の AVX2 kernel が 42 GB/s に達し、28.7 GB/s の bus cost を上回ったとされ、同じ box で GLM-5.2 744B が 1.6 tok/s から最大 2.8 tok/s に伸び、quality cost はゼロだったと報告しています。generic な open-model praise ではなく、具体的な local-deployment optimization note です。
+
+Type: Demo | Date: 2026-07-18
+
+---
+<a id="case-244"></a>
+### Case 244: [Peezy Go 3K GLM 枠](https://x.com/SerPepeXBT/status/2078503202346156194) (by [@SerPepeXBT](https://x.com/SerPepeXBT))
+
+**このケースは、token 単価ではなく request cap で flat-rate の GLM-5.2 coding access を比較したいときに使えます。SerPepeXBT によると、Peezy Go plan は limit をリセットし、GLM 5.2 を 5 時間ごとに最大 3,000 requests まで使え、月額 10 dollar を維持しつつ初月は 5 dollar になったためです。**
+
+SerPepeXBT は、障害の後で provider が全員の limit をゼロに戻し、GLM 5.2 の allowance を 5 時間あたり 3,000 requests として再告知したと述べています。同じ post は、Go plan が月額 10 dollar のままで、初月は 5 dollar、native Mac app もリリース済みだと付け加えています。純粋な API billing ではなく、subscription 型 coding surface を比較するチーム向けの具体的な hosted-access と pricing note です。
+
+Type: Integration | Date: 2026-07-18
+
 <a id="case-242"></a>
 ### Case 242: [ZenMux 249M Token Receipt](https://x.com/AstridWiegner/status/2077917345893511266) (by [@AstridWiegner](https://x.com/AstridWiegner))
 
@@ -2703,6 +2748,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 制約、注意点、安全性シグナル
+---
+<a id="case-247"></a>
+### Case 247: [ZCode デフォルト RCE 修正](https://x.com/weezerOSINT/status/2078498406117654706) (by [@weezerOSINT](https://x.com/weezerOSINT))
+
+**このケースは、GLM-5.2 coding agent の sandboxing をより厳格にすべき根拠として使えます。weezerOSINT によると、1 回の prompt だけで ZCode が repo 内コードを default で full RCE 実行し、この問題は報告されて version 3.3.6 で修正されたためです。**
+
+weezerOSINT によると、test は単純で、用意した repository を ZCode で開き、agent に 1 つ指示を出すだけで、default settings のまま repo 内コードが実行されました。同じ post は、問題発見に使った model が GLM 5.2 だったこと、UNC variant では open しただけで Windows credential を持ち出せる可能性があること、そして bug は開示され ZCode 3.3.6 で修正されたことを述べています。仮説的な warning ではなく、具体的な safety signal です。
+
+Type: 制限 | Date: 2026-07-18
+
 <a id="case-222"></a>
 ### Case 222: [本番向け GLM ガードレール警告](https://x.com/mitsuhiko/status/2077056759282151770) (by [@mitsuhiko](https://x.com/mitsuhiko))
 
