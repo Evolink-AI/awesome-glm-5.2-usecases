@@ -36,7 +36,7 @@ Jeder Case-Titel verlinkt auf die öffentliche Quelle, jeder Autor auf das jewei
 
 ## 📊 Überblick
 
-- **247 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
+- **252 ausgewählte GLM-5.2-Fälle** von öffentlichen Creators, Benchmark-Teams, Tool-Buildern, Providern und praxisnahen Reviewern.
 - Deckt Vergleichstests und Grenzmodell-Bewertung, Coding-Agenten und Langkontext-Workflows, Praxisdemos und Beispiel-Builds, Anbieter- und Tool-Integrationen, Kosten, Preise und lokale Bereitstellung sowie Grenzen, Hinweise und Sicherheitssignale ab.
 - Jeder Case enthält die Originalquelle, die Creator-Attribution, ein knappes Nutzungs-Takeaway, den Evidenztyp und das Veröffentlichungsdatum.
 - Nutze dieses Repo, um praktische Workflows zu finden, Stärken und Grenzen zu vergleichen, Provider-Routen zu entdecken und echte Experimente nachzuvollziehen.
@@ -78,12 +78,12 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Abschnitt | Fälle |
 |---|---|
-| [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
+| [📏 Vergleichstests und Grenzmodell-Bewertung](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235, 248, 250 |
 | [💻 Coding-Agenten und Langkontext-Workflows](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243 |
 | [🎮 Praxisdemos und Beispiel-Builds](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
 | [🔌 Anbieter- und Tool-Integrationen](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246 |
-| [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247 |
+| [💸 Kosten, Preise und lokale Bereitstellung](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251 |
+| [🧭 Grenzen, Hinweise und Sicherheitssignale](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247, 252 |
 | [Verwandte Repositories](#related-repositories) | Verifizierte API-Route und angrenzende Oberflächen |
 | [🙏 Danksagung](#acknowledge) | Credits und Korrekturrichtlinie |
 
@@ -91,6 +91,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 250: ToolEval-FP16-Indexer-Sprung](#case-250) | Nutze diesen Fall, um feinabgestimmte lokale GLM-5.2-Toolnutzung statt roher API-Baselines zu benchmarken, denn volatilemarkts sagt, dass ein 753GB-FP8-Fine-Tune plus ein eigener FP16-Indexer SeraphimSerapis/tool-eval-bench von 83 Prozent mit der Standard-GLM-5.2-API auf 94 Prozent anhob. | Evaluation |
+| [Case 248: Aikido-26-CVE-Harness-Baseline](#case-248) | Nutze diesen Fall, um GLM-5.2 auf echten Code-Audit-Harnesses statt in Chat-Demos zu benchmarken, denn Aikido sagt, dass sein AI-Code-Analysis-Benchmark auf 26 bekannten CVEs GLM-5.2 bei pass@3 sechzehn Wiederfunde brachte und bei max reasoning fuer nur etwa 1.3x Kosten drei weitere Findings gewann. | Evaluation |
 | [Case 235: DiligenceBench-Rang im Finance-Harness](#case-235) | Nutze diesen Fall, um GLM-5.2 bei Public-Equity-Research-Agenten zu bewerten, denn karinanguyen sagt, dass DiligenceBench GLM 5.2 nahe an der Spitze platzierte und zeigte, dass das Finance Harness starke Modelle zugleich besser und günstiger machen kann. | Evaluation |
 | [Case 227: Gargantua-WebGL-Raytracer-Sieg](#case-227) | Nutze diesen Fall, um GLM-5.2 bei physiklastigen Single-File-Browser-Builds zu benchmarken, denn laut AlicanKiraz0 gewann GLM 5.2 Max eine Gargantua-Geodesic-Raytracer-Aufgabe, weil es numerische Korrektheit und Real-Time-Rendering-Disziplin besser ausbalancierte als die getesteten Vergleichsmodelle. | Evaluation |
 | [Case 223: Token-Effizienzlücke im Intelligence Index](#case-223) | Nutze diesen Fall, um GLM-5.2 für Benchmark-Workloads mit langem Horizont zu budgetieren, denn laut Artificial Analysis lag GLM-5.2 Max im Intelligence Index im Schnitt bei etwa 43K Output-Tokens pro Aufgabe gegenüber 25K bei Inkling sowie niedrigeren Werten bei Kimi K2.6 und DeepSeek v4 Pro Max. | Evaluation |
@@ -286,6 +288,8 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 | Fall | Fokus | Typ |
 |---|---|---|
+| [Case 251: Ollama-Pro-Budget fuer schwere GLM-Tasks](#case-251) | Nutze diesen Fall, um Flat-Rate-Abos fuer GLM-5.2 anhand von Heavy-Task-Quoten statt anhand des Sticker-Preises zu dimensionieren, denn iamcheyan sagt, dass OpenCode Go pro Woche nur etwa fuenf schwere GLM-5.2-Tasks abdeckte, waehrend Ollama Pro fuer 20 US-Dollar pro Monat gegenueber 5 und dann 10 US-Dollar bei OpenCode Go rund drei Tage dauerhafte GLM-Arbeit trug. | Limit |
+| [Case 249: Alibaba Unified Token Plan](#case-249) | Nutze diesen Fall, um monatlichen Multi-Model-Zugang statt getrennter Provider-Guthaben zu vergleichen, denn Alibaba Cloud sagt, dass sein Token Plan for Individuals gemeinsame Credits fuer Text-, Bild- und Video-Tools buendelt, GLM-5.2 unter den enthaltenen Frontier-Textmodellen listet und nach Coupon fuer den ersten Monat ab 4 US-Dollar startet. | Integration |
 | [Case 234: Jatevo-Rabattierter GLM-Zugang](#case-234) | Nutze diesen Fall, um einen einfachen gehosteten GLM-5.2-Zugangsweg mit veröffentlichter Retail-Preisangabe zu bekommen, denn laut JatevoId ist GLM 5.2 auf seiner Plattform für $1.40 pro Million Input-Tokens und $4.40 pro Million Output-Tokens live, mit 50% Rabatt für qualifizierte JTVO-Halter. | Integration |
 | [Case 233: MI325x-GLM-Serving unter einem Zehntel Cent](#case-233) | Nutze diesen Fall, um selbstgehostete GLM-5.2-Inferenz auf AMD-Hardware zu budgetieren, denn laut picocreator lieferte ein 4xMI325x-Setup GLM 5.2 mit 1,482 tok/s für unter $0.10 pro Million Tokens aus. | Demo |
 | [Case 226: Bonsai-Mac-Studio-Triage für Patientenakten](#case-226) | Nutze diesen Fall, um eine lange klinische Patientenakte lokal zu halten, während GLM-5.2 darüber schlussfolgert, denn laut MaziyarPanahi triagierte GLM 5.2 eine dreijährige Patientenakte über Bonsai 27B auf einem Mac Studio und fand ein Kontrastmittel-Risiko, das 17 Monate zurücklag. | Demo |
@@ -360,6 +364,26 @@ Vollständige GLM-5.2 API-Referenz: [GLM-5.2 API docs öffnen](https://docs.evol
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Vergleichstests und Grenzmodell-Bewertung
+---
+<a id="case-250"></a>
+### Case 250: [ToolEval-FP16-Indexer-Sprung](https://x.com/volatilemarkts/status/2078663037825831172) (by [@volatilemarkts](https://x.com/volatilemarkts))
+
+**Nutze diesen Fall, um feinabgestimmte lokale GLM-5.2-Toolnutzung statt roher API-Baselines zu benchmarken, denn volatilemarkts sagt, dass ein 753GB-FP8-Fine-Tune plus ein eigener FP16-Indexer SeraphimSerapis/tool-eval-bench von 83 Prozent mit der Standard-GLM-5.2-API auf 94 Prozent anhob.**
+
+volatilemarkts sagt, dass das Setup ein feinabgestimmtes GLM-5.2-Modell, 753GB FP8-Gewichte und einen noch aktiv entwickelten eigenen FP16-Indexer nutzte. Derselbe Post meldet einen Sprung von grob zehn Punkten gegenueber der Standard-API-Baseline und fuegt hinzu, dass das getunte Modell mehrere Zeilen erkannte, die ein Fable-Lauf verpasste. Das macht den Fall zu einer konkreten Referenz fuer lokales Benchmarking und Fine-Tuning statt zu einem generischen Open-Source-Endorsement.
+
+Type: Evaluation | Date: 2026-07-19
+
+---
+<a id="case-248"></a>
+### Case 248: [Aikido-26-CVE-Harness-Baseline](https://x.com/AikidoSecurity/status/2078816460865253714) (by [@AikidoSecurity](https://x.com/AikidoSecurity))
+
+**Nutze diesen Fall, um GLM-5.2 auf echten Code-Audit-Harnesses statt in Chat-Demos zu benchmarken, denn Aikido sagt, dass sein AI-Code-Analysis-Benchmark auf 26 bekannten CVEs GLM-5.2 bei pass@3 sechzehn Wiederfunde brachte und bei max reasoning fuer nur etwa 1.3x Kosten drei weitere Findings gewann.**
+
+Der Post verweist auf Aikidos Benchmark-Bericht vom 16. Juli, der 13 Modelle gegen 26 bekannte Schwachstellen aus der GitHub Advisory Database im produktiven Analyse-Harness des Unternehmens testete. Der Bericht ordnet GLM-5.2 im vollstaendigen pass@3-Table im Mittelfeld ein, sagt ausdruecklich, dass Open-Weight-Modelle aufholen, und zeigt, dass GLM-5.2 beim Wechsel von high auf max reasoning fuer grob 1.3x Kosten drei zusaetzliche Findings gewann. Das macht den Fall zu einer konkreten Cyber-Code-Review-Baseline statt zu einer generischen Sicherheitsbehauptung.
+
+Type: Evaluation | Date: 2026-07-19
+
 ---
 <a id="case-235"></a>
 ### Case 235: [DiligenceBench-Rang im Finance-Harness](https://x.com/karinanguyen/status/2078245092855525578) (by [@karinanguyen](https://x.com/karinanguyen))
@@ -2253,6 +2277,26 @@ Type: Integration | Date: 2026-06-22
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Kosten, Preise und lokale Bereitstellung
 ---
+<a id="case-251"></a>
+### Case 251: [Ollama-Pro-Budget fuer schwere GLM-Tasks](https://x.com/iamcheyan/status/2078732985537601895) (by [@iamcheyan](https://x.com/iamcheyan))
+
+**Nutze diesen Fall, um Flat-Rate-Abos fuer GLM-5.2 anhand von Heavy-Task-Quoten statt anhand des Sticker-Preises zu dimensionieren, denn iamcheyan sagt, dass OpenCode Go pro Woche nur etwa fuenf schwere GLM-5.2-Tasks abdeckte, waehrend Ollama Pro fuer 20 US-Dollar pro Monat gegenueber 5 und dann 10 US-Dollar bei OpenCode Go rund drei Tage dauerhafte GLM-Arbeit trug.**
+
+iamcheyan vergleicht einen Monat auf beiden Plaenen und sagt, dass GLM-5.2 OpenCode Gos Wochenbalken so schnell leert, dass nach nur einer gesaettigten Woche bereits etwa die Haelfte des Monatskontingents verbraucht sein kann. Derselbe Post sagt, dass Ollama Pro ebenfalls woechentlich drosselt, aber auf die zusaetzliche Monatskappe verzichtet und dadurch fuer wiederholte schwere GLM-Sessions nachsichtiger bleibt, waehrend OpenCode Go besser zu leichterer Flash-Model-Nutzung passt. Das macht den Fall zu einer konkreten Warnung fuer die Abo-Auswahl und nicht zu einem vagen Vorlieben-Post.
+
+Typ: Limit | Datum: 2026-07-19
+
+---
+<a id="case-249"></a>
+### Case 249: [Alibaba Unified Token Plan](https://x.com/alibaba_cloud/status/2078784690534670495) (by [@alibaba_cloud](https://x.com/alibaba_cloud))
+
+**Nutze diesen Fall, um monatlichen Multi-Model-Zugang statt getrennter Provider-Guthaben zu vergleichen, denn Alibaba Cloud sagt, dass sein Token Plan for Individuals gemeinsame Credits fuer Text-, Bild- und Video-Tools buendelt, GLM-5.2 unter den enthaltenen Frontier-Textmodellen listet und nach Coupon fuer den ersten Monat ab 4 US-Dollar startet.**
+
+Der offizielle Alibaba-Cloud-Post rahmt das Angebot als einen Plan fuer alle Modalitaeten statt als Coding-only-Abo. Er buendelt gemeinsame Credits fuer Text, Bild und Video, listet Qwen3.8-Max-Preview, GLM-5.2 und DeepSeek-V4-Pro auf der Textseite und fuegt Happy Horse 1.1 fuer Videogenerierung hinzu. Das macht den Fall zu einer konkreten Zugangs- und Budgetnotiz fuer Teams, die flache Monats-Pools mit getrennter Per-Provider-Abrechnung vergleichen.
+
+Typ: Integration | Datum: 2026-07-19
+
+---
 <a id="case-246"></a>
 ### Case 246: [8x-DGX-Spark-400K-Cluster](https://x.com/thelichhh/status/2078316906335904205) (by [@thelichhh](https://x.com/thelichhh))
 
@@ -2745,6 +2789,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Grenzen, Hinweise und Sicherheitssignale
+---
+<a id="case-252"></a>
+### Case 252: [HF-Forensik bei Guardrail-Blockade](https://x.com/perrymetzger/status/2078909187950792887) (by [@perrymetzger](https://x.com/perrymetzger))
+
+**Nutze diesen Fall, um eine lokale GLM-5.2-Route fur Incident Response bereitzuhalten, denn laut Hugging Face blockierten kommerzielle Frontier-APIs die forensische Analyse echter Angreifer-Payloads, wahrend selbst gehostetes GLM 5.2 mehr als 17.000 Angriffsereignisse verarbeitete, ohne Angreiferdaten oder referenzierte Zugangsdaten aus der Umgebung herauszugeben.**
+
+Die Sicherheitsmeldung von Hugging Face vom 16. Juli sagt, dass KI-gestutzte Erkennung eine autonome Intrusion markierte und LLM-gesteuerte Analyse-Agenten den Angriff aus mehr als 17.000 aufgezeichneten Ereignissen rekonstruierten. Der Text sagt, dass kommerzielle Frontier-APIs versagten, weil ihre Guardrails echte Exploit-Payloads und C2-Artefakte blockierten, worauf das Team auf GLM 5.2 in eigener Infrastruktur wechselte. Daraus folgt eine konkrete Lehre fur Verteidiger: Prufe vor einem Vorfall ein lokales Modell, sowohl um Guardrail-Lockout zu vermeiden als auch um sensible Forensikdaten in der eigenen Umgebung zu halten.
+
+Type: Limit | Date: 2026-07-20
+
 ---
 <a id="case-247"></a>
 ### Case 247: [ZCode-Default-RCE-Patch](https://x.com/weezerOSINT/status/2078498406117654706) (by [@weezerOSINT](https://x.com/weezerOSINT))

@@ -36,7 +36,7 @@ GLM-5.2 の高シグナルなユースケース集へようこそ。
 
 ## 📊 Overview
 
-- **247 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
+- **252 件の厳選 GLM-5.2 ケース**を、公開クリエイター、ベンチマークチーム、ツール開発者、プロバイダー、実利用者から収集しています。
 - ベンチマークとフロンティア評価、コーディングエージェントと長文脈ワークフロー、実演デモとショーケースビルド、プロバイダ・ツール統合、コスト、価格、ローカル運用、制約、注意点、安全性シグナルを扱います。
 - 各ケースには元ソース、作者クレジット、簡潔な活用ポイント、エビデンスタイプ、公開日を含めています。
 - 実用ワークフロー、強みと限界の比較、プロバイダ経路、実際の検証例を探すために使ってください。
@@ -78,12 +78,12 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | セクション | ケース |
 |---|---|
-| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
+| [📏 ベンチマークとフロンティア評価](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235, 248, 250 |
 | [💻 コーディングエージェントと長文脈ワークフロー](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243 |
 | [🎮 実演デモとショーケースビルド](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
 | [🔌 プロバイダ・ツール統合](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246 |
-| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247 |
+| [💸 コスト、価格、ローカル運用](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251 |
+| [🧭 制約、注意点、安全性シグナル](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247, 252 |
 | [関連リポジトリ](#related-repositories) | 検証済み API ルートと関連サーフェス |
 | [🙏 謝辞](#acknowledge) | クレジットと修正ポリシー |
 
@@ -91,6 +91,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 250: ToolEval FP16 Indexer 向上](#case-250) | このケースは、生の API baseline ではなく、fine-tune 済みローカル GLM-5.2 の tool use を benchmark したいときに使えます。volatilemarkts によると、753GB FP8 fine-tune と custom FP16 indexer により、SeraphimSerapis/tool-eval-bench が標準の GLM 5.2 API の 83 percent から 94 percent に上がったためです。 | Evaluation |
+| [Case 248: Aikido 26-CVE ハーネス基準線](#case-248) | このケースは、chat demo ではなく実際の code-audit harness で GLM-5.2 を benchmark したいときに使えます。AikidoSecurity によると、26 件の既知 CVE を使った AI Code Analysis benchmark で、GLM-5.2 は pass@3 で 16 件を再発見し、max reasoning ではコスト約 1.3x でさらに 3 件増やしたためです。 | Evaluation |
 | [Case 235: DiligenceBench 金融ハーネス上位](#case-235) | このケースは、公開株式リサーチ agent に対する GLM-5.2 の実力を評価したいときに使えます。karinanguyen によると、DiligenceBench では GLM 5.2 が上位に入り、この金融ハーネスが強いモデルをより高性能かつ低コストにできることを示したためです。 | Evaluation |
 | [Case 227: Gargantua WebGL Raytracer 勝利](#case-227) | このケースは、物理寄りの単一ファイル browser build で GLM-5.2 を benchmark したいときに使えます。AlicanKiraz0 によると、GLM 5.2 Max は Gargantua geodesic raytracer 課題で、数値的正しさと real-time rendering discipline の両立によって比較対象を上回ったためです。 | Evaluation |
 | [Case 223: Intelligence Index のトークン効率ギャップ](#case-223) | このケースは、長期的な benchmark workload 向けに GLM-5.2 の予算を見積もるときに使えます。Artificial Analysis によると、GLM-5.2 Max は Intelligence Index の 1 タスクあたり平均約 43K の output tokens を使い、Inkling は 25K、Kimi K2.6 と DeepSeek v4 Pro Max もそれより少なかったためです。 | Evaluation |
@@ -284,6 +286,8 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 
 | ケース | 注目点 | タイプ |
 |---|---|---|
+| [Case 251: Ollama Pro の高負荷 GLM 予算](#case-251) | このケースは、定価ではなく heavy-task quota で flat-rate の GLM-5.2 subscription を見積もりたいときに使えます。iamcheyan によると、OpenCode Go の weekly quota では重い GLM-5.2 task を約 5 件しか処理できなかった一方、Ollama Pro の weekly pool ではおよそ 3 日分の継続的な GLM 作業をこなせたためです。 | Limit |
+| [Case 249: Alibaba 統合トークンプラン](#case-249) | このケースは、provider ごとの残高ではなく、複数モデル向けの monthly access を比較したいときに使えます。Alibaba Cloud によると、Token Plan for Individuals は text、image、video tools にまたがる統合 credits を共有し、GLM-5.2 を対象の frontier text models に含めつつ、coupon 適用後の初月料金は 4 US dollars から始まるためです。 | Integration |
 | [Case 246: 8x DGX Spark 400K クラスタ](#case-246) | このケースは、机上の GLM-5.2 cluster が hosted API 支出を置き換えられる境目を判断したいときに使えます。thelichhh によると、8 台の DGX Spark を 1TB unified memory の 1 台として束ね、全ノードに GLM-5.2 を載せて 400K context で動かしたためです。 | Demo |
 | [Case 245: Pulsar CPU Expert Lane](#case-245) | このケースは、低 VRAM の GLM-5.2 local stack を試したいときに使えます。Giannisanii によると、Pulsar の CPU expert lane により、2 枚の 16GB GeForce と 1 台の NVMe、32GB RAM で GLM-5.2 744B の throughput が 1.6 tok/s から最大 2.8 tok/s まで上がったためです。 | Demo |
 | [Case 244: Peezy Go 3K GLM 枠](#case-244) | このケースは、token 単価ではなく request cap で flat-rate の GLM-5.2 coding access を比較したいときに使えます。SerPepeXBT によると、Peezy Go plan は limit をリセットし、GLM 5.2 を 5 時間ごとに最大 3,000 requests まで使え、月額 10 dollar を維持しつつ初月は 5 dollar になったためです。 | Integration |
@@ -364,6 +368,26 @@ GLM-5.2 API の完全なリファレンス: [GLM-5.2 API docs を開く](https:/
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 ベンチマークとフロンティア評価
 ---
+---
+<a id="case-250"></a>
+### Case 250: [ToolEval FP16 Indexer 向上](https://x.com/volatilemarkts/status/2078663037825831172) (by [@volatilemarkts](https://x.com/volatilemarkts))
+
+**このケースは、生の API baseline ではなく、fine-tune 済みローカル GLM-5.2 の tool use を benchmark したいときに使えます。volatilemarkts によると、753GB FP8 fine-tune と custom FP16 indexer により、SeraphimSerapis/tool-eval-bench が標準の GLM 5.2 API の 83 percent から 94 percent に上がったためです。**
+
+著者によると、この構成では fine-tune 済みの GLM 5.2 model、753GB の FP8 weights、そして開発中の custom FP16 indexer を使っています。同じ投稿では、標準 API baseline と比べておよそ 10 ポイント改善し、さらに tuned model が Fable run で見逃された複数の line も拾ったと述べています。generic な open-source endorsement ではなく、具体的な local benchmarking と fine-tuning の reference です。
+
+Type: Evaluation | Date: 2026-07-19
+
+---
+<a id="case-248"></a>
+### Case 248: [Aikido 26-CVE ハーネス基準線](https://x.com/AikidoSecurity/status/2078816460865253714) (by [@AikidoSecurity](https://x.com/AikidoSecurity))
+
+**このケースは、chat demo ではなく実際の code-audit harness で GLM-5.2 を benchmark したいときに使えます。AikidoSecurity によると、26 件の既知 CVE を使った AI Code Analysis benchmark で、GLM-5.2 は pass@3 で 16 件を再発見し、max reasoning ではコスト約 1.3x でさらに 3 件増やしたためです。**
+
+この投稿は、Aikido が 7 月 16 日に出した benchmark report を指しており、同社の production analysis harness 内で GitHub Advisory Database の既知 vulnerability 26 件に対して 13 モデルをテストしたと説明しています。report では GLM-5.2 が完全な pass@3 table の中位に位置し、open-weight models が追い上げていると明記され、さらに high から max reasoning へ上げるとコスト約 1.3x で検出件数が 3 件増えたと示されています。generic な security claim ではなく、具体的な cyber code-review baseline です。
+
+Type: Evaluation | Date: 2026-07-19
+
 ---
 <a id="case-235"></a>
 ### Case 235: [DiligenceBench 金融ハーネス上位](https://x.com/karinanguyen/status/2078245092855525578) (by [@karinanguyen](https://x.com/karinanguyen))
@@ -2256,6 +2280,26 @@ Type: Integration | Date: 2026-06-24
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 コスト、価格、ローカル運用
 ---
+<a id="case-251"></a>
+### Case 251: [Ollama Pro の高負荷 GLM 予算](https://x.com/iamcheyan/status/2078732985537601895) (by [@iamcheyan](https://x.com/iamcheyan))
+
+**このケースは、定価ではなく heavy-task quota で flat-rate の GLM-5.2 subscription を見積もりたいときに使えます。iamcheyan によると、OpenCode Go の weekly quota では重い GLM-5.2 task を約 5 件しか処理できなかった一方、Ollama Pro の weekly pool では月額 20 US dollars で、およそ 3 日分の継続的な GLM 作業をこなせたためです。OpenCode Go は最初 5 US dollars、その後 10 US dollars でした。**
+
+著者は、両プランを 1 か月使った比較として、GLM-5.2 は OpenCode Go の weekly bar をかなり速く消費し、飽和した 1 週間の後には monthly quota の半分が消えていることもあると述べています。同じ投稿では、Ollama Pro も weekly で計測される一方、追加の monthly cap がないため、重い GLM session を繰り返す用途にはより寛容で、OpenCode Go は軽い flash-model 用途に向いているとしています。曖昧な好みではなく、subscription 選定時の具体的な caveat です。
+
+Type: Limit | Date: 2026-07-19
+
+---
+<a id="case-249"></a>
+### Case 249: [Alibaba 統合トークンプラン](https://x.com/alibaba_cloud/status/2078784690534670495) (by [@alibaba_cloud](https://x.com/alibaba_cloud))
+
+**このケースは、provider ごとの残高ではなく、複数モデル向けの monthly access を比較したいときに使えます。Alibaba Cloud によると、Token Plan for Individuals は text、image、video tools にまたがる統合 credits を共有し、対象の frontier text models に GLM-5.2 を含めつつ、coupon 適用後の初月料金は 4 US dollars から始まるためです。**
+
+Alibaba Cloud の公式投稿は、この offer を coding 専用 subscription ではなく、すべての modality を 1 つにまとめた plan として紹介しています。text、image、video 向けの unified credits を明示し、text 側には Qwen3.8-Max-Preview、GLM-5.2、DeepSeek-V4-Pro を並べ、video generation として Happy Horse 1.1 も追加しています。separate per-provider billing と flat monthly pool を比べる team にとって、具体的な access と budget の note です。
+
+Type: Integration | Date: 2026-07-19
+
+---
 <a id="case-246"></a>
 ### Case 246: [8x DGX Spark 400K クラスタ](https://x.com/thelichhh/status/2078316906335904205) (by [@thelichhh](https://x.com/thelichhh))
 
@@ -2748,6 +2792,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 制約、注意点、安全性シグナル
+---
+<a id="case-252"></a>
+### Case 252: [HF ガードレール遮断フォレンジクス](https://x.com/perrymetzger/status/2078909187950792887) (by [@perrymetzger](https://x.com/perrymetzger))
+
+**このケースは、GLM-5.2 を使ったローカル incident-response ルートを事前に用意しておきたいときに使えます。Hugging Face によると、商用 frontier API は実際の attacker payload の forensic analysis を guardrail で止めた一方、self-hosted の GLM 5.2 は 17,000 件超の attack event を処理しながら attacker data や参照された credential を環境外に出しませんでした。**
+
+Hugging Face の 7 月 16 日付 security incident disclosure によると、AI-assisted detection が自律的な intrusion を検知し、LLM-driven analysis agents が 17,000 件を超える記録イベントから攻撃を再構成しました。本文では、商用 frontier API は real exploit payload と C2 artifact を guardrail がブロックしたため使えず、チームは自前インフラ上の GLM 5.2 に切り替えたと説明しています。これは defender にとって具体的な教訓です。incident の前にローカル model を検証しておくことで、guardrail lockout を避けつつ、機微な forensic data を自分の環境内に留められます。
+
+Type: Limit | Date: 2026-07-20
+
 ---
 <a id="case-247"></a>
 ### Case 247: [ZCode デフォルト RCE 修正](https://x.com/weezerOSINT/status/2078498406117654706) (by [@weezerOSINT](https://x.com/weezerOSINT))

@@ -36,7 +36,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **247 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **252 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -78,12 +78,12 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Bölüm | Vakalar |
 |---|---|
-| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
+| [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235, 248, 250 |
 | [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243 |
 | [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
 | [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246 |
-| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251 |
+| [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247, 252 |
 | [İlgili depolar](#related-repositories) | Doğrulanmış API yolu ve komşu yüzeyler |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
 
@@ -91,6 +91,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 250: ToolEval FP16 indexer sıçraması](#case-250) | Bu vakayı, ham API baseline'ları yerine ince ayarlı yerel GLM-5.2 tool kullanımını benchmark etmek için kullanın; çünkü volatilemarkts, 753GB FP8 fine-tune ile özel bir FP16 indexer'ın SeraphimSerapis/tool-eval-bench sonucunu standart GLM 5.2 API'deki yüzde 83'ten yüzde 94'e çıkardığını söylüyor. | Evaluation |
+| [Case 248: Aikido 26-CVE harness baseline'ı](#case-248) | Bu vakayı, GLM-5.2'yi chat demo'ları yerine gerçek code-audit harness'lerinde benchmark etmek için kullanın; çünkü Aikido, 26 bilinen CVE üzerinde çalışan AI Code Analysis benchmark'ında GLM-5.2'nin pass@3'te 16 açığı yeniden bulduğunu ve max reasoning'e çıkınca yalnızca yaklaşık 1.3x maliyetle üç bulgu daha kazandığını söylüyor. | Evaluation |
 | [Case 235: DiligenceBench finans araştırması sıralaması](#case-235) | Bu vakayı, GLM-5.2'yi halka açık hisse araştırması yapan agent'larda değerlendirmek için kullanın; çünkü karinanguyen, DiligenceBench'in GLM 5.2'yi üst sıralara yerleştirdiğini ve finance harness'in güçlü modelleri hem daha iyi hem de daha ucuz hale getirebildiğini söylüyor. | Evaluation |
 | [Case 227: Gargantua WebGL Raytracer kazanımı](#case-227) | Bu vakayı, fizik ağırlıklı tek dosyalı browser build’lerde GLM-5.2’yi benchmark etmek için kullanın; çünkü AlicanKiraz0, GLM 5.2 Max’in Gargantua geodesic raytracer görevini numerical correctness ve real-time rendering discipline dengesini rakip modellerden daha iyi kurarak kazandığını söylüyor. | Evaluation |
 | [Case 223: Intelligence Index token verimliliği farkı](#case-223) | Bu vakayı, uzun ufuklu benchmark iş yüklerinde GLM-5.2 için bütçe çıkarmak amacıyla kullanın; çünkü Artificial Analysis, Intelligence Index görev başına GLM-5.2 Max’in ortalama yaklaşık 43K output token kullandığını, Inkling’in 25K’da kaldığını ve Kimi K2.6 ile DeepSeek v4 Pro Max’in de daha düşük toplamlar ürettiğini söylüyor. | Evaluation |
@@ -286,6 +288,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 251: Ollama Pro ağır GLM bütçesi](#case-251) | Bu vakayı, flat-rate GLM-5.2 aboneliklerini etiket fiyatı yerine ağır görev kotasına göre boyutlandırmak için kullanın; çünkü iamcheyan, OpenCode Go'nun haftalık kotasının yalnızca yaklaşık beş ağır GLM-5.2 görevini karşıladığını, buna karşılık aylık 20 ABD dolarlık Ollama Pro'nun, OpenCode Go'daki önce 5 sonra 10 ABD dolarlık plana kıyasla yaklaşık üç gün süren yoğun GLM çalışmasını kaldırdığını söylüyor. | Limit |
+| [Case 249: Alibaba Unified Token Plan](#case-249) | Bu vakayı, ayrı provider bakiyeleri yerine çok modelli aylık erişimi karşılaştırmak için kullanın; çünkü Alibaba Cloud, Token Plan for Individuals teklifinin text, image ve video araçları için birleşik kredi havuzu sunduğunu, GLM-5.2'yi dahil edilen frontier text modelleri arasında listelediğini ve kupon sonrası ilk ay fiyatının 4 ABD dolarından başladığını söylüyor. | Integration |
 | [Case 246: 8x DGX Spark 400K kümesi](#case-246) | Bu vaka, masanın yanındaki bir GLM-5.2 kümesinin hosted API harcamasını ne zaman ikame edebileceğini anlamak için kullanışlıdır; çünkü thelichhh, sekiz DGX Spark'ı 1TB birleşik belleğe sahip tek bir makine gibi bağlayıp GLM-5.2'yi tüm düğümlere yükleyerek modeli 400K bağlamda çalıştırdığını söylüyor. | Demo |
 | [Case 245: Pulsar CPU Expert Lane](#case-245) | Bu vaka, düşük VRAM'li bir GLM-5.2 yerel yığınını denemek için kullanışlıdır; çünkü Giannisanii, Pulsar'ın CPU expert lane özelliğinin GLM-5.2 744B throughput'unu iki adet 16GB GeForce, bir NVMe ve 32GB RAM üzerinde 1.6 tok/s'den 2.8 tok/s'ye kadar çıkardığını söylüyor. | Demo |
 | [Case 244: Peezy Go 3K GLM penceresi](#case-244) | Bu vaka, token hesabı yerine request cap üzerinden flat-rate GLM-5.2 coding access karşılaştırmak için kullanışlıdır; çünkü SerPepeXBT, Peezy Go planının limits'i sıfırladığını, GLM 5.2 için her 5 saatte bir 3,000 request verdiğini, fiyatı aylık 10 dolar tuttuğunu ve ilk ayı 5 dolara düşürdüğünü söylüyor. | Integration |
@@ -366,6 +370,26 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 Kıyaslamalar ve öncü model değerlendirmesi
+---
+<a id="case-250"></a>
+### Case 250: [ToolEval FP16 indexer sıçraması](https://x.com/volatilemarkts/status/2078663037825831172) (by [@volatilemarkts](https://x.com/volatilemarkts))
+
+**Bu vakayı, ham API baseline'ları yerine ince ayarlı yerel GLM-5.2 tool kullanımını benchmark etmek için kullanın; çünkü volatilemarkts, 753GB FP8 fine-tune ile özel bir FP16 indexer'ın SeraphimSerapis/tool-eval-bench sonucunu standart GLM 5.2 API'deki yüzde 83'ten yüzde 94'e çıkardığını söylüyor.**
+
+volatilemarkts, kurulumun ince ayarlı bir GLM 5.2 modeli, 753GB FP8 ağırlıklar ve hâlâ aktif geliştirme altındaki özel bir FP16 indexer kullandığını söylüyor. Aynı paylaşım, standart API baseline'ına göre yaklaşık 10 puanlık bir sıçrama raporluyor ve ayarlı modelin bir Fable çalıştırmasının kaçırdığı birkaç satırı da yakaladığını ekliyor. Bu da vakayı, genel bir open-source övgüsü yerine somut bir yerel benchmark ve fine-tuning referansı haline getiriyor.
+
+Type: Evaluation | Date: 2026-07-19
+
+---
+<a id="case-248"></a>
+### Case 248: [Aikido 26-CVE harness baseline'ı](https://x.com/AikidoSecurity/status/2078816460865253714) (by [@AikidoSecurity](https://x.com/AikidoSecurity))
+
+**Bu vakayı, GLM-5.2'yi chat demo'ları yerine gerçek code-audit harness'lerinde benchmark etmek için kullanın; çünkü Aikido, 26 bilinen CVE üzerinde çalışan AI Code Analysis benchmark'ında GLM-5.2'nin pass@3'te 16 açığı yeniden bulduğunu ve max reasoning'e çıkınca yalnızca yaklaşık 1.3x maliyetle üç bulgu daha kazandığını söylüyor.**
+
+Aikido'nun paylaşımı, şirketin production analysis harness'i içinde GitHub Advisory Database'ten 26 bilinen açığa karşı 13 modeli test eden 16 Temmuz tarihli benchmark raporuna işaret ediyor. Rapor, GLM-5.2'yi tam pass@3 tablosunda orta sıraya yerleştiriyor, open-weight modellerin hızla yetiştiğini açıkça söylüyor ve GLM-5.2'nin high'dan max reasoning'e geçince yaklaşık 1.3x maliyetle üç ek bulgu aldığını gösteriyor. Bu da vakayı, genel bir security iddiası yerine somut bir cyber code-review baseline'ı yapıyor.
+
+Type: Evaluation | Date: 2026-07-19
+
 ---
 <a id="case-235"></a>
 ### Case 235: [DiligenceBench finans araştırması sıralaması](https://x.com/karinanguyen/status/2078245092855525578) (by [@karinanguyen](https://x.com/karinanguyen))
@@ -2258,6 +2282,26 @@ Type: Integration | Date: 2026-06-24
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
 ---
+<a id="case-251"></a>
+### Case 251: [Ollama Pro ağır GLM bütçesi](https://x.com/iamcheyan/status/2078732985537601895) (by [@iamcheyan](https://x.com/iamcheyan))
+
+**Bu vakayı, flat-rate GLM-5.2 aboneliklerini etiket fiyatı yerine ağır görev kotasına göre boyutlandırmak için kullanın; çünkü iamcheyan, OpenCode Go'nun haftalık kotasının yalnızca yaklaşık beş ağır GLM-5.2 görevini karşıladığını, buna karşılık aylık 20 ABD dolarlık Ollama Pro'nun, OpenCode Go'daki önce 5 sonra 10 ABD dolarlık plana kıyasla yaklaşık üç gün süren yoğun GLM çalışmasını kaldırdığını söylüyor.**
+
+iamcheyan, iki plan üzerinde geçirdiği bir ayı karşılaştırıyor ve GLM-5.2'nin OpenCode Go'nun haftalık çubuğunu o kadar hızlı tükettiğini, yoğun geçen tek bir haftadan sonra aylık kotanın yarısının gidebildiğini söylüyor. Aynı paylaşım, Ollama Pro'nun da haftalık ölçüm yaptığını ama ek bir aylık tavan koymadığını, bu yüzden tekrarlanan ağır GLM oturumlarında daha affedici kaldığını; OpenCode Go'nun ise daha hafif flash-model kullanımı için daha uygun olduğunu belirtiyor. Bu da vakayı, muğlak bir tercih paylaşımı değil, somut bir abonelik seçimi uyarısı haline getiriyor.
+
+Tür: Limit | Tarih: 2026-07-19
+
+---
+<a id="case-249"></a>
+### Case 249: [Alibaba Unified Token Plan](https://x.com/alibaba_cloud/status/2078784690534670495) (by [@alibaba_cloud](https://x.com/alibaba_cloud))
+
+**Bu vakayı, ayrı provider bakiyeleri yerine çok modelli aylık erişimi karşılaştırmak için kullanın; çünkü Alibaba Cloud, Token Plan for Individuals teklifinin text, image ve video araçları için birleşik kredi havuzu sunduğunu, GLM-5.2'yi dahil edilen frontier text modelleri arasında listelediğini ve kupon sonrası ilk ay fiyatının 4 ABD dolarından başladığını söylüyor.**
+
+Alibaba Cloud'un resmi paylaşımı, teklifi yalnızca coding odaklı bir abonelik değil, her modality için tek plan olarak çerçeveliyor. Metin, görsel ve video için birleşik krediler sunuyor; text tarafında Qwen3.8-Max-Preview, GLM-5.2 ve DeepSeek-V4-Pro'yu listeliyor, video tarafına da Happy Horse 1.1'i ekliyor. Bu da vakayı, düz aylık kredi havuzlarını provider bazlı ayrı faturalandırmayla karşılaştıran ekipler için somut bir erişim ve bütçe notuna dönüştürüyor.
+
+Tür: Entegrasyon | Tarih: 2026-07-19
+
+---
 <a id="case-246"></a>
 ### Case 246: [8x DGX Spark 400K kümesi](https://x.com/thelichhh/status/2078316906335904205) (by [@thelichhh](https://x.com/thelichhh))
 
@@ -2750,6 +2794,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 Sınırlar, uyarılar ve güvenlik sinyalleri
+---
+<a id="case-252"></a>
+### Case 252: [HF guardrail kilitlenmesi adli incelemesi](https://x.com/perrymetzger/status/2078909187950792887) (by [@perrymetzger](https://x.com/perrymetzger))
+
+**Bu vakayi, yerel bir GLM-5.2 incident-response yolunu hazir tutmak icin kullanin; cunku Hugging Face, ticari frontier API lerinin gercek saldirgan payload larinin adli analizini engelledigini, buna karsin self-hosted GLM 5.2 nin 17.000 den fazla saldiri olayini isleyip ne saldirgan verilerini ne de atif yapilan kimlik bilgilerini ortam disina cikarmadigini soyluyor.**
+
+Hugging Face in 16 Temmuz tarihli security incident disclosure yazisi, AI yardimli tespitin otonom bir sizmayi isaretledigini ve LLM driven analysis agent larinin 17.000 den fazla kayitli olaydan saldiriyi yeniden kurdugunu soyluyor. Metin, ticari frontier API lerinin gercek exploit payload lari ve C2 artefaktlarini guardrail ler yuzunden engelledigini, bu nedenle ekibin kendi altyapisindaki GLM 5.2 ye gectigini belirtiyor. Bu da savunmacilar icin somut bir ders birakiyor: bir olay yasamadan once yerel bir modeli dogrulayin; hem guardrail kilitlenmesini onlemek hem de hassas adli verileri kendi ortaminizda tutmak icin.
+
+Type: Limit | Date: 2026-07-20
+
 ---
 <a id="case-247"></a>
 ### Case 247: [ZCode varsayılan RCE yaması](https://x.com/weezerOSINT/status/2078498406117654706) (by [@weezerOSINT](https://x.com/weezerOSINT))

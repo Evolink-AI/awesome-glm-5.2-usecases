@@ -36,7 +36,7 @@
 
 ## 📊 总览
 
-- **247 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
+- **252 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
 - 覆盖基准与前沿评测、编码代理与长上下文工作流、上手演示与作品展示、供应商与工具集成、成本、定价与本地部署、限制、注意事项与安全信号。
 - 每个案例都包含原始来源、创作者署名、简洁的使用结论、证据类型和发布日期。
 - 你可以用这个 repo 查找实用工作流、比较优势和限制、发现供应商路径，并跟踪真实上手实验。
@@ -78,12 +78,12 @@ curl --request POST \
 
 | 章节 | 案例 |
 |---|---|
-| [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235 |
+| [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235, 248, 250 |
 | [💻 编码代理与长上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237 |
 | [🎮 上手演示与作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
 | [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-242 |
-| [🧭 限制、注意事项与安全信号](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222 |
+| [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251 |
+| [🧭 限制、注意事项与安全信号](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247, 252 |
 | [相关仓库](#related-repositories) | 已验证的 API 路径与相邻入口 |
 | [🙏 致谢](#acknowledge) | 来源致谢与修正政策 |
 
@@ -91,6 +91,8 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 250: ToolEval FP16 Indexer 提升](#case-250) | 如果你想 benchmark 经 fine-tune 的本地 GLM-5.2 tool use，而不是只看原始 API baseline，可以看这个案例，因为 volatilemarkts 说 753GB FP8 fine-tune 加上 custom FP16 indexer，让 SeraphimSerapis/tool-eval-bench 从标准 GLM 5.2 API 的 83 percent 提高到 94 percent。 | Evaluation |
+| [Case 248: Aikido 26-CVE 测试框架基线](#case-248) | 如果你想在真实 code-audit harness 上 benchmark GLM-5.2，而不是只看 chat demo，可以看这个案例，因为 AikidoSecurity 说他们的 26 个已知 CVE AI Code Analysis benchmark 显示，GLM-5.2 在 pass@3 重新找出 16 个，切到 max reasoning 后又多出 3 个发现，成本只增加约 1.3x。 | Evaluation |
 | [Case 235: DiligenceBench 金融评测排名](#case-235) | 如果你想评估 GLM-5.2 在公开股票研究 agent 上的表现，可以看这个案例，因为 karinanguyen 说 DiligenceBench 把 GLM 5.2 放在前列，并证明 finance harness 能让强模型同时更强且更便宜。 | Evaluation |
 | [Case 227: Gargantua WebGL Raytracer 胜出](#case-227) | 如果你想在偏物理的单文件 browser build 上 benchmark GLM-5.2，可以看这个案例，因为 AlicanKiraz0 说 GLM 5.2 Max 在 Gargantua geodesic raytracer 任务里更好地兼顾了数值正确性与 real-time rendering discipline。 | Evaluation |
 | [Case 223: 智能指数 Token 效率差距](#case-223) | 如果你想为长周期 benchmark 工作负载规划 GLM-5.2 预算，可以看这个案例，因为 Artificial Analysis 说，GLM-5.2 Max 在 Intelligence Index 每个任务上的平均输出 token 约为 43K，而 Inkling 是 25K，Kimi K2.6 和 DeepSeek v4 Pro Max 也都更低。 | Evaluation |
@@ -286,6 +288,8 @@ curl --request POST \
 
 | 案例 | 展示重点 | 类型 |
 |---|---|---|
+| [Case 251: Ollama Pro 重负载 GLM 预算](#case-251) | 如果你想按 heavy-task quota 而不是标价来估算 flat-rate GLM-5.2 subscription，可以看这个案例，因为 iamcheyan 说 OpenCode Go 的周配额大概只够约 5 次重型 GLM-5.2 任务，但 Ollama Pro 的周池大约能支撑 3 天的持续 GLM 使用。 | Limit |
+| [Case 249: Alibaba 统一 Token 方案](#case-249) | 如果你想比较的是跨模型 monthly access，而不是每家 provider 各自的储值余额，可以看这个案例，因为 Alibaba Cloud 说 Token Plan for Individuals 会把 text、image、video 工具共用同一池 credits，并把 GLM-5.2 列入 frontier text models，首月套用 coupon 后从 4 US dollars 起。 | Integration |
 | [Case 246: 8x DGX Spark 400K 集群](#case-246) | 如果你想判断桌边 GLM-5.2 集群何时能替代 hosted API 开支，可以看这个案例，因为 thelichhh 说 8 台 DGX Spark 被连成一台拥有 1TB unified memory 的机器，把 GLM-5.2 载入到所有节点后，以 400K context 跑起来了。 | Demo |
 | [Case 245: Pulsar CPU Expert Lane](#case-245) | 如果你想测一套低 VRAM 的 GLM-5.2 本地堆栈，可以看这个案例，因为 Giannisanii 说 Pulsar 的 CPU expert lane 让 GLM-5.2 744B 在两张 16GB GeForce、一块 NVMe 和 32GB RAM 的机器上，从 1.6 tok/s 提高到最高 2.8 tok/s。 | Demo |
 | [Case 244: Peezy Go 3K GLM 窗口](#case-244) | 如果你想用 request cap 而不是 token 计价来比较 flat-rate 的 GLM-5.2 coding access，可以看这个案例，因为 SerPepeXBT 说 Peezy Go plan 现在会重置 limits、每 5 小时给到最多 3,000 次 GLM 5.2 requests，价格仍是每月 10 美元，首月降到 5 美元。 | Integration |
@@ -366,6 +370,26 @@ curl --request POST \
 
 <a id="benchmarks-frontier-evaluation"></a>
 ## 📏 基准与前沿评测
+---
+<a id="case-250"></a>
+### Case 250: [FP16 Indexer 带来的 ToolEval 提升](https://x.com/volatilemarkts/status/2078663037825831172) (by [@volatilemarkts](https://x.com/volatilemarkts))
+
+**如果你想 benchmark 的是 fine-tune 之后的本地 GLM-5.2 tool use，而不是原始 API baseline，可以看这个案例；volatilemarkts 表示，一个 753GB 的 FP8 fine-tune 再加上 custom FP16 indexer，让 SeraphimSerapis/tool-eval-bench 从标准 GLM 5.2 API 的 83% 提升到 94%。**
+
+作者表示，这个 setup 使用了 fine-tuned GLM 5.2 model、753GB 的 FP8 weights，以及一个仍在积极开发中的 custom FP16 indexer。同一条帖子还说，相比标准 API baseline，这套配置大约多了 10 个百分点，并补充 tuned model 抓到了几行 Fable run 漏掉的内容。这让它成为一条具体的本地 benchmarking 与 fine-tuning 参考，而不是泛泛的 open-source 背书。
+
+Type: Evaluation | Date: 2026-07-19
+
+---
+<a id="case-248"></a>
+### Case 248: [Aikido 26-CVE 测试框架基线](https://x.com/AikidoSecurity/status/2078816460865253714) (by [@AikidoSecurity](https://x.com/AikidoSecurity))
+
+**如果你想在真实的 code-audit harness，而不是 chat demo 里评估 GLM-5.2，可以看这个案例；Aikido 表示，他们针对 26 个已知 CVE 的 AI Code Analysis benchmark 让 GLM-5.2 在 pass@3 下重找出 16 个，并在 max reasoning 下以大约 1.3 倍成本再多拿到 3 个发现。**
+
+这条帖子指向 Aikido 7 月 16 日的 benchmark report。该报告在公司的 production analysis harness 中，用 13 个模型去测 GitHub Advisory Database 的 26 个已知漏洞。报告把 GLM-5.2 放在完整 pass@3 表的中段，明确表示 open-weight model 正在追上，并展示 GLM-5.2 从 high 切到 max reasoning 后，能以约 1.3 倍成本多拿 3 个发现。这让它成为一条具体的 cyber code-review 基线，而不是泛泛的 security claim。
+
+Type: Evaluation | Date: 2026-07-19
+
 ---
 ---
 <a id="case-235"></a>
@@ -2260,6 +2284,26 @@ Type: Integration | Date: 2026-06-24
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 成本、定价与本地部署
 ---
+<a id="case-251"></a>
+### Case 251: [Ollama Pro 重负载 GLM 预算](https://x.com/iamcheyan/status/2078732985537601895) (by [@iamcheyan](https://x.com/iamcheyan))
+
+**如果你想按 heavy-task quota，而不是标价，来估算 flat-rate GLM-5.2 subscription，可以看这个案例；iamcheyan 表示，OpenCode Go 的周配额大概只够约 5 次重型 GLM-5.2 任务，而 Ollama Pro 的周池则能支撑大约 3 天的持续 GLM 使用，价格是每月 20 美元，相对 OpenCode Go 的首月 5 美元、之后 10 美元。**
+
+作者比较了两个 plan 各一个月的使用情况，并表示 GLM-5.2 会非常快地吃掉 OpenCode Go 的周进度条，快到只要一个饱和周就可能把月度 quota 用掉一半。同一条帖子也提到，Ollama Pro 虽然同样按周计量，但没有额外的月度 cap，因此更适合反复进行重负载 GLM session；而 OpenCode Go 则更适合较轻量的 flash-model 使用。这使它成为一条具体的 subscription 选型 caveat，而不是模糊的偏好。
+
+Type: Limit | Date: 2026-07-19
+
+---
+<a id="case-249"></a>
+### Case 249: [Alibaba 统一 Token 方案](https://x.com/alibaba_cloud/status/2078784690534670495) (by [@alibaba_cloud](https://x.com/alibaba_cloud))
+
+**如果你想比较的是 multi-model 月费访问，而不是每个 provider 各自的余额，可以看这个案例；Alibaba Cloud 表示，Token Plan for Individuals 会把 text、image、video 工具的 unified credits 放进同一个池子，并把 GLM-5.2 列为其中的 frontier text model，coupon 后首月起价为 4 美元。**
+
+Alibaba Cloud 的官方帖子把这个方案描述成覆盖各种 modality 的单一 plan，而不是只面向 coding 的 subscription。它明确打包了 text、image、video 的 unified credits，在 text 一侧列出 Qwen3.8-Max-Preview、GLM-5.2、DeepSeek-V4-Pro，并额外加入用于 video generation 的 Happy Horse 1.1。对于要比较固定月度 credit pool 与各 provider 分开计费的团队来说，这是一条具体的 access 与 budget 笔记。
+
+Type: Integration | Date: 2026-07-19
+
+---
 <a id="case-246"></a>
 ### Case 246: [8x DGX Spark 400K 集群](https://x.com/thelichhh/status/2078316906335904205) (by [@thelichhh](https://x.com/thelichhh))
 
@@ -2752,6 +2796,16 @@ Type: Demo | Date: 2026-06-24
 
 <a id="limits-caveats-safety-signals"></a>
 ## 🧭 限制、注意事项与安全信号
+---
+<a id="case-252"></a>
+### Case 252: [HF Guardrail 锁死取证案例](https://x.com/perrymetzger/status/2078909187950792887) (by [@perrymetzger](https://x.com/perrymetzger))
+
+**如果你想提前准备一条本地 GLM-5.2 incident-response 路径，可以看这个案例；Hugging Face 表示，商用 frontier API 会挡下真实 attacker payload 的 forensic analysis，而 self-hosted 的 GLM 5.2 则处理了超过 17,000 个 attack event，且没有把 attacker data 或被提到的 credential 带出环境。**
+
+Hugging Face 7 月 16 日的 security incident disclosure 指出，AI-assisted detection 标记出一次 autonomous intrusion，而 LLM-driven analysis agents 通过超过 17,000 条记录事件重建了整场攻击。文中表示，商用 frontier API 之所以失效，是因为其 guardrail 会封锁真实 exploit payload 与 C2 artifact，因此团队改用自家基础设施上的 GLM 5.2。对 defender 来说，这是一条很具体的教训：在 incident 发生前先验证可本地运行的 model，同时避免 guardrail lockout 与敏感 forensic data 外流。
+
+Type: Limit | Date: 2026-07-20
+
 ---
 <a id="case-247"></a>
 ### Case 247: [ZCode 默认开放 RCE 修补](https://x.com/weezerOSINT/status/2078498406117654706) (by [@weezerOSINT](https://x.com/weezerOSINT))

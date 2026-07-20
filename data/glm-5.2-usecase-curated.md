@@ -2,7 +2,7 @@
 
 This file is generated from `README.md` by `scripts/build_curated_data.py`.
 
-- Published cases: 247
+- Published cases: 252
 - Numbering: contiguous set from 1 through the current maximum
 - Policy: every item is source-backed and included in the public README
 
@@ -255,3 +255,8 @@ This file is generated from `README.md` by `scripts/build_curated_data.py`.
 | 245 | Pulsar CPU Expert Lane | Cost, Pricing & Local Deployment | Demo | 2026-07-18 | [Open source](https://x.com/Giannisanii/status/2078430789075656904) | [@Giannisanii](https://x.com/Giannisanii) |
 | 246 | 8x DGX Spark 400K Cluster | Cost, Pricing & Local Deployment | Demo | 2026-07-18 | [Open source](https://x.com/thelichhh/status/2078316906335904205) | [@thelichhh](https://x.com/thelichhh) |
 | 247 | ZCode Default-Open RCE Patch | Limits, Caveats & Safety Signals | Limit | 2026-07-18 | [Open source](https://x.com/weezerOSINT/status/2078498406117654706) | [@weezerOSINT](https://x.com/weezerOSINT) |
+| 248 | Aikido 26-CVE Harness Baseline | Benchmarks & Frontier Evaluation | Evaluation | 2026-07-19 | [Open source](https://x.com/AikidoSecurity/status/2078816460865253714) | [@AikidoSecurity](https://x.com/AikidoSecurity) |
+| 249 | Alibaba Unified Token Plan | Cost, Pricing & Local Deployment | Integration | 2026-07-19 | [Open source](https://x.com/alibaba_cloud/status/2078784690534670495) | [@alibaba_cloud](https://x.com/alibaba_cloud) |
+| 250 | ToolEval FP16 Indexer Lift | Benchmarks & Frontier Evaluation | Evaluation | 2026-07-19 | [Open source](https://x.com/volatilemarkts/status/2078663037825831172) | [@volatilemarkts](https://x.com/volatilemarkts) |
+| 251 | Ollama Pro Heavy GLM Budget | Cost, Pricing & Local Deployment | Limit | 2026-07-19 | [Open source](https://x.com/iamcheyan/status/2078732985537601895) | [@iamcheyan](https://x.com/iamcheyan) |
+| 252 | HF Guardrail Lockout Forensics | Limits, Caveats & Safety Signals | Limit | 2026-07-20 | [Open source](https://x.com/perrymetzger/status/2078909187950792887) | [@perrymetzger](https://x.com/perrymetzger) |
