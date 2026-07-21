@@ -36,7 +36,7 @@ Her vaka başlığı herkese açık kaynağa, her yazar adı da üretici profili
 
 ## 📊 Genel Bakış
 
-- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **252 seçilmiş GLM-5.2 vakası**.
+- Herkese açık içerik üreticileri, benchmark ekipleri, araç geliştiricileri, sağlayıcılar ve pratik kullanıcılar tarafından paylaşılan **258 seçilmiş GLM-5.2 vakası**.
 - Kıyaslamaları ve öncü model değerlendirmesini, kod ajanlarını ve uzun bağlamlı iş akışlarını, uygulamalı demoları ve vitrin derlemelerini, sağlayıcı ve araç entegrasyonlarını, maliyet, fiyatlandırma ve yerel dağıtımı, sınırları, uyarıları ve güvenlik sinyallerini kapsar.
 - Her vaka; orijinal kaynağı, üretici atfını, kısa bir kullanım çıkarımını, kanıt türünü ve yayın tarihini içerir.
 - Pratik iş akışları bulmak, güçlü ve zayıf yönleri karşılaştırmak, sağlayıcı yollarını keşfetmek ve gerçek deneyleri izlemek için kullanın.
@@ -79,10 +79,10 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 | Bölüm | Vakalar |
 |---|---|
 | [📏 Kıyaslamalar ve öncü model değerlendirmesi](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235, 248, 250 |
-| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243 |
+| [💻 Kod ajanları ve uzun bağlamlı iş akışları](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243, 255, 257 |
 | [🎮 Uygulamalı demolar ve vitrin derlemeleri](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
-| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251 |
+| [🔌 Sağlayıcı ve araç entegrasyonları](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239, 256, 258 |
+| [💸 Maliyet, fiyatlandırma ve yerel dağıtım](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251, 253-254 |
 | [🧭 Sınırlar, uyarılar ve güvenlik sinyalleri](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247, 252 |
 | [İlgili depolar](#related-repositories) | Doğrulanmış API yolu ve komşu yüzeyler |
 | [🙏 Teşekkür](#acknowledge) | Kaynak belirtme ve düzeltme politikası |
@@ -139,6 +139,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 257: OpenCodex model değiştirme iş akışı](#case-257) | Bu vakayı, tek bir modele kilitlenmek yerine GLM-5.2'yi Codex merkezli bir coding loop içine yerleştirmek için kullanın; çünkü vista8, OpenCodex'in aynı ortam içinde GLM 5.2, Kimi K3, GPT-5.6 Sol ve Grok 4.5 arasında frontend design, backend work ve canlı X search için geçiş yapabildiğini söylüyor. | Integration |
+| [Case 255: Hermes 11 ajanlı hibrit laboratuvar](#case-255) | Bu vakayı, tek bir monolitik asistana bağlı kalmak yerine GLM-5.2 etrafında role-based bir multi-agent laboratuvarı kurmak için kullanın; çünkü MichaelGannotti, 11 ajanlı Hermes kurulumunun software, research, marketing ve coordination işlerini DGX Spark, Ryzen workstation'lar ve GLM 5.2 dahil bulut modelleri arasında dinamik olarak yönlendirdiğini söylüyor. | Integration |
 | [Case 243: API eşdeğerli Hermes hibrit çalıştırma](#case-243) | Bu vaka, self-hosted bir GLM-5.2 coding agent'ı resmi rota ile doğrulamak için kullanışlıdır; çünkü dangerm00se, 4x RTX 6000 PCIe üzerindeki Hermes + GLM-5.2 hibritinin resmi API'deki 60 görevin 59'unu eşlediğini ve 3,149 tok/s prefill, 0.37 sn warm TTFT, 35.9 tok/s decode verdiğini söylüyor. | Evaluation |
 | [Case 237: LM Studio Bionic GLM ajanı](#case-237) | Bu vakayı, yerel öncelikli bir GLM-5.2 coding agent'ını değerlendirmek için kullanın; çünkü chenzeling4, LM Studio Bionic'in GLM 5.2'yi yerel belge sandbox'ları, satır içi kod diff'leri, rollback checkpoint'leri ve cihaz üstü ses dökümüyle birleştirdiğini söylüyor. | Integration |
 | [Case 236: Claude Code web geliştirmede kalite üstünlüğü](#case-236) | Bu vakayı, ham tamamlama hızından çok ilk denemedeki web geliştirme kalitesini karşılaştırmak için kullanın; çünkü Lumenix0, Claude Code içindeki GLM 5.2'nin Codex içindeki GPT 5.5'i üç gerçek görevde tasarım kalitesi ve işlevsel bütünlük açısından geçtiğini söylüyor. | Evaluation |
@@ -215,6 +217,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 258: Orbit sağlayıcısında yüzde 50 indirimli GLM erişimi](#case-258) | Bu vakayı, ayrı provider kimlik bilgileri yönetmeden Orbit içinde GLM-5.2 denemek için kullanın; çünkü Orbit Editor v0.4.0, yeni Orbit Provider katmanının GLM-5.2'yi doğrudan editöre getirdiğini ve yüzde 50 indirimle açıldığını söylüyor. | Integration |
+| [Case 256: Pen.dev paralel tasarım değerlendirmesi](#case-256) | Bu vakayı, GLM-5.2'yi design-oriented rakiplerle aynı yerel workflow içinde karşılaştırmak için kullanın; çünkü tomkrcha, pen.dev'in GLM 5.2'yi ChatGPT, Claude, Cursor Composer, OpenCode Go, Kimi, Grok, Gemini, Qwen ve diğerleriyle birlikte masaüstü codebase içinde tasarım görevlerinde paralel çalıştırabildiğini söylüyor. | Integration |
 | [Case 239: TokenRouter ücretsiz GLM API dönemi](#case-239) | Bu vakayı, kısa süreli ücretsiz bir GLM-5.2 API rotası yakalamak için kullanın; çünkü meliasiih, TokenRouter'ın 25 Temmuz 2026'ya kadar basit bir kayıt, API key akışı ve yayımlanmış base URL ile ücretsiz erişim sunduğunu söylüyor. | Tutorial |
 | [Case 238: Agentuity Wafer GLM geçidi](#case-238) | Bu vakayı, GLM-5.2'yi bir Agentuity gateway stack'ine eklemek için kullanın; çünkü wafer_ai, serverless rotasının artık Agentuity üzerinde hem normal hem de Fast katmanlarında yaklaşık 100 ila 250 tok/s ve 1M context ile GLM 5.2 sunduğunu söylüyor. | Integration |
 | [Case 232: Macroscope Check Run GLM ajanları](#case-232) | Bu vakayı, gerçek bir check-run workflow’unu korurken PR-review agent maliyetini düşürmek için kullanın; çünkü kayvz, Macroscope’un artık Check Run Agents’ı deponun normal `.md`-based config’i üzerinden GLM 5.2 ile çalıştırdığını söylüyor. | Integration |
@@ -288,6 +292,8 @@ Tam GLM-5.2 API referansı: [GLM-5.2 API docs aç](https://docs.evolink.ai/en/ap
 
 | Vaka | Odak | Tür |
 |---|---|---|
+| [Case 254: 8x GB10 ile 860K sparse serving](#case-254) | Bu vakayı, GB10 sınıfı kümelerde yerel uzun bağlamlı GLM-5.2 serving performansını benchmark etmek için kullanın; çünkü light_foundry, sparse indexer ve Int4-Int8Mix ağırlıkları kullanan 8x GB10 yığınının 4K derinlikte 1,101 tok/s prefill gördüğünü, 860K tokene kadar servis verdiğini ve 845K bağlamda iğneyi yine de bulduğunu söylüyor. | Evaluation |
+| [Case 253: Hibrit 3/4/8-bit yerel denge](#case-253) | Bu vakayı, BF16'ya dönmeden önce agresif biçimde quantize edilmiş yerel bir GLM-5.2 rotasını boyutlandırmak için kullanın; çünkü 0xSero, hibrit 3/4/8-bit kurulumunun Terminal-Bench 2.1'de yüzde 70.8, GPQA Diamond'da yüzde 88.89, 4x RTX 6000 üzerinde yaklaşık 82 tok/s ve görev başına yaklaşık 0.22 sent verdiğini söylüyor. | Evaluation |
 | [Case 251: Ollama Pro ağır GLM bütçesi](#case-251) | Bu vakayı, flat-rate GLM-5.2 aboneliklerini etiket fiyatı yerine ağır görev kotasına göre boyutlandırmak için kullanın; çünkü iamcheyan, OpenCode Go'nun haftalık kotasının yalnızca yaklaşık beş ağır GLM-5.2 görevini karşıladığını, buna karşılık aylık 20 ABD dolarlık Ollama Pro'nun, OpenCode Go'daki önce 5 sonra 10 ABD dolarlık plana kıyasla yaklaşık üç gün süren yoğun GLM çalışmasını kaldırdığını söylüyor. | Limit |
 | [Case 249: Alibaba Unified Token Plan](#case-249) | Bu vakayı, ayrı provider bakiyeleri yerine çok modelli aylık erişimi karşılaştırmak için kullanın; çünkü Alibaba Cloud, Token Plan for Individuals teklifinin text, image ve video araçları için birleşik kredi havuzu sunduğunu, GLM-5.2'yi dahil edilen frontier text modelleri arasında listelediğini ve kupon sonrası ilk ay fiyatının 4 ABD dolarından başladığını söylüyor. | Integration |
 | [Case 246: 8x DGX Spark 400K kümesi](#case-246) | Bu vaka, masanın yanındaki bir GLM-5.2 kümesinin hosted API harcamasını ne zaman ikame edebileceğini anlamak için kullanışlıdır; çünkü thelichhh, sekiz DGX Spark'ı 1TB birleşik belleğe sahip tek bir makine gibi bağlayıp GLM-5.2'yi tüm düğümlere yükleyerek modeli 400K bağlamda çalıştırdığını söylüyor. | Demo |
@@ -831,6 +837,26 @@ Type: Benchmark | Date: 2026-06-24
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Kod ajanları ve uzun bağlamlı iş akışları
+---
+<a id="case-257"></a>
+### Case 257: [OpenCodex model değiştirme iş akışı](https://x.com/vista8/status/2079239701391675404) (by [@vista8](https://x.com/vista8))
+
+**Bu vakayı, tek bir modele kilitlenmek yerine GLM-5.2'yi Codex merkezli bir coding loop içine yerleştirmek için kullanın; çünkü vista8, OpenCodex'in aynı ortam içinde GLM 5.2, Kimi K3, GPT-5.6 Sol ve Grok 4.5 arasında frontend design, backend work ve canlı X search için geçiş yapabildiğini söylüyor.**
+
+vista8, Codex'in pratikte en çok kullanılan coding aracı olarak kaldığını ancak frontend zevki tarafında zayıf kaldığını, bu yüzden iş akışının modeller arasında istek üzerine geçiş yapabilen bir OpenCodex projesine taşındığını söylüyor. Gönderinin pratik yönlendirmesi net: frontend design için OAuth üzerinden Kimi K3 kullanın, backend work için GPT-5.6 Sol'a geçin, X search için Grok 4.5'i hazır tutun ve GLM 5.2'yi aynı coding yüzeyi içinde başka bir drop-in seçenek olarak değerlendirin. Bu da paylaşımı salt model sıralaması görüşü değil, coding agent'lar için somut bir model-router workflow'u haline getiriyor.
+
+Type: Integration | Date: 2026-07-20
+
+---
+<a id="case-255"></a>
+### Case 255: [Hermes 11 ajanlı hibrit laboratuvar](https://x.com/MichaelGannotti/status/2079168568478912834) (by [@MichaelGannotti](https://x.com/MichaelGannotti))
+
+**Bu vakayı, tek bir monolitik asistana bağlı kalmak yerine GLM-5.2 etrafında role-based bir multi-agent laboratuvarı kurmak için kullanın; çünkü MichaelGannotti, 11 ajanlı Hermes kurulumunun software, research, marketing ve coordination işlerini DGX Spark, Ryzen workstation'lar ve GLM 5.2 dahil bulut modelleri arasında dinamik olarak yönlendirdiğini söylüyor.**
+
+MichaelGannotti somut bir laboratuvar mimarisi anlatıyor: ana yerel inference sunucusu olarak 128GB unified memory'li bir DGX Spark, engineering ve organizational roller için sekiz Hermes ajanı çalıştıran bir Ryzen 9 Halo Strix kutusu ve content ile Microsoft ağırlıklı işler için üç ek ajan barındıran bir Ryzen 7 Windows makinesi. Bu düzende her ajan göreve göre buluttaki GPT-5.6, GLM 5.2 ve Grok 4.5 ile yereldeki Qwen, Nemotron ve Gemma modelleri arasında seçim yapıyor. Bu yüzden gönderi, belirsiz bir verimlilik iddiasından çok hibrit local-cloud agent ekipleri için ayrıntılı bir operating model referansı sunuyor.
+
+Type: Integration | Date: 2026-07-20
+
 ---
 <a id="case-243"></a>
 ### Case 243: [API eşdeğerli Hermes hibrit çalıştırma](https://x.com/dangerm00se/status/2078369336239313368) (by [@dangerm00se](https://x.com/dangerm00se))
@@ -1550,6 +1576,26 @@ Type: Demo | Date: 2026-06-23
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Sağlayıcı ve araç entegrasyonları
+<a id="case-258"></a>
+### Case 258: [Orbit sağlayıcısında yüzde 50 indirimli GLM erişimi](https://x.com/orbiteditor/status/2079148011259916552) (by [@orbiteditor](https://x.com/orbiteditor))
+
+**Bu vakayı, ayrı provider kimlik bilgileri yönetmeden Orbit içinde GLM-5.2 denemek için kullanın; çünkü Orbit Editor v0.4.0, yeni Orbit Provider katmanının GLM-5.2'yi doğrudan editöre getirdiğini ve yüzde 50 indirimle açıldığını söylüyor.**
+
+Orbit Editor v0.4.0 duyurusu, açık kaynak modeller için yerleşik bir provider katmanı tanıtıyor ve ayrı API anahtarı ile provider kurulumu yükünü tek bir editor workflow'unun arkasına gizlemeyi hedeflediğini açıkça söylüyor. Paylaşım, kullanıcıların tek yerden model seçebileceğini, kodlamaya başlayabileceğini, kullanım takibi yapabileceğini ve maliyeti yönetebileceğini; GLM-5.2'nin ise yüzde 50 indirimli fiyatla açıldığını belirtiyor. Bu da vakayı, daha düşük friction ile GLM denemek isteyen ekipler için somut bir editor entegrasyonu ve erişim notu haline getiriyor.
+
+Type: Integration | Date: 2026-07-20
+
+---
+<a id="case-256"></a>
+### Case 256: [Pen.dev paralel tasarım değerlendirmesi](https://x.com/tomkrcha/status/2079253857834828230) (by [@tomkrcha](https://x.com/tomkrcha))
+
+**Bu vakayı, GLM-5.2'yi design-oriented rakiplerle aynı yerel workflow içinde karşılaştırmak için kullanın; çünkü tomkrcha, pen.dev'in GLM 5.2'yi ChatGPT, Claude, Cursor Composer, OpenCode Go, Kimi, Grok, Gemini, Qwen ve diğerleriyle birlikte masaüstü codebase içinde tasarım görevlerinde paralel çalıştırabildiğini söylüyor.**
+
+tomkrcha, pen.dev'i tek model gösterisinden çok realtime bir design-agent yüzeyi olarak çerçeveliyor. Paylaşıma göre geliştiriciler mevcut ChatGPT veya Claude abonelikleriyle giriş yapabiliyor, Cursor Composer, GitHub Copilot, OpenCode Go, Grok 4.5, Kimi, MiniMax, GLM 5.2, Gemini ve Qwen'i bağlayıp aynı yerel proje içinde frontend design görevlerinde karıştırabiliyor. Bu yüzden paylaşım, UI ağırlıklı işlerde GLM-5.2 için somut bir side-by-side evaluation surface sunuyor; izole bir benchmark ekran görüntüsü olmanın ötesine geçiyor.
+
+Type: Integration | Date: 2026-07-20
+
+---
 <a id="case-239"></a>
 ### Case 239: [TokenRouter ücretsiz GLM API dönemi](https://x.com/meliasiih/status/2078180641468985564) (by [@meliasiih](https://x.com/meliasiih))
 
@@ -2281,6 +2327,26 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Maliyet, fiyatlandırma ve yerel dağıtım
+---
+<a id="case-254"></a>
+### Case 254: [8x GB10 ile 860K sparse serving](https://x.com/light_foundry/status/2079158726658060652) (by [@light_foundry](https://x.com/light_foundry))
+
+**Bu vakayı, GB10 sınıfı kümelerde yerel uzun bağlamlı GLM-5.2 serving performansını benchmark etmek için kullanın; çünkü light_foundry, sparse indexer ve Int4-Int8Mix ağırlıkları kullanan 8x GB10 yığınının 4K derinlikte 1,101 tok/s prefill gördüğünü, 860K tokene kadar servis verdiğini ve 845K bağlamda iğneyi yine de bulduğunu söylüyor.**
+
+light_foundry, GLM-5.2 Int4-Int8Mix için fp8 sparse-MLA KV ve MTP kullanan 8x GB10 kümesini birleşik bir base ve `b12x` sparse indexer'a taşıdığını anlatıyor. Paylaşım, 4K derinlikte prefill'in 880'den 1,101 tok/s'ye çıktığını; 77K, 231K ve 395K derinliklerde 1,052 / 940 / 838 tok/s depth-prefill ölçüldüğünü; median tek akış decode'un 42.1 tok/s olduğunu ve 903K tokenlık KV havuzunun 860K max length sunarken yaklaşık 845K civarında bile 10.9 tok/s decode sağladığını söylüyor. Ayrıca iki operasyonel tuzağı açıkça listeliyor: shared-memory kilitlenmesi gibi görünen soğuk inductor cache derlemesi ve tekrar tekrar açılışlardan sonra kullanılabilir KV'yi küçülten GPU memory parçalanması.
+
+Type: Evaluation | Date: 2026-07-20
+
+---
+<a id="case-253"></a>
+### Case 253: [Hibrit 3/4/8-bit yerel denge](https://x.com/0xSero/status/2079184434188685668) (by [@0xSero](https://x.com/0xSero))
+
+**Bu vakayı, BF16'ya dönmeden önce agresif biçimde quantize edilmiş yerel bir GLM-5.2 rotasını boyutlandırmak için kullanın; çünkü 0xSero, hibrit 3/4/8-bit kurulumunun Terminal-Bench 2.1'de yüzde 70.8, GPQA Diamond'da yüzde 88.89, 4x RTX 6000 üzerinde yaklaşık 82 tok/s ve görev başına yaklaşık 0.22 sent verdiğini söylüyor.**
+
+Paylaşım, quantize edilmiş GLM-5.2-Hybrid kurulumu için hem eval hem de serving sayıları veriyor: Terminal-Bench 2.1'de yüzde 70.8 ve bazı koşularda yüzde 77.8, GPQA Diamond'da yüzde 88.89, yaklaşık 1,200 tok/s prefill, 4x RTX 6000 GPU üzerinde yaklaşık 82 tok/s decode, yaklaşık 340K context ve görev başına yaklaşık 0.22 sent. Yazar ayrıca BF16'ya göre farkın Terminal-Bench'te yalnızca 3 ila 8 puan, GPQA'da ise 0.15 olduğunu iddia ediyor. Bu da kaliteyi ne kadar feda edip yerel GLM serving maliyetini ve memory baskısını ne kadar azaltabileceklerini hesaplayan ekipler için somut bir tradeoff referansı sunuyor.
+
+Type: Evaluation | Date: 2026-07-20
+
 ---
 <a id="case-251"></a>
 ### Case 251: [Ollama Pro ağır GLM bütçesi](https://x.com/iamcheyan/status/2078732985537601895) (by [@iamcheyan](https://x.com/iamcheyan))
@@ -3102,7 +3168,7 @@ Bu depo, gerçek GLM-5.2 kullanım kanıtlarını paylaşan herkese açık içer
 
 Burada yer alan yüksek sinyalli kaynaklara ve üreticilere teşekkürler: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG), [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi), [@alighodsi](https://x.com/alighodsi), [@composio](https://x.com/composio), [@pengsonal](https://x.com/pengsonal), [@EpochAIResearch](https://x.com/EpochAIResearch), [@stagedhappen](https://x.com/stagedhappen).
 
-[@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), Yakın zamanda eklenen üreticiler: [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai), [@dangerm00se](https://x.com/dangerm00se), [@SerPepeXBT](https://x.com/SerPepeXBT), [@Giannisanii](https://x.com/Giannisanii), [@thelichhh](https://x.com/thelichhh), [@weezerOSINT](https://x.com/weezerOSINT).
+Yakın zamanda eklenen üreticiler: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai), [@dangerm00se](https://x.com/dangerm00se), [@SerPepeXBT](https://x.com/SerPepeXBT), [@Giannisanii](https://x.com/Giannisanii), [@thelichhh](https://x.com/thelichhh), [@weezerOSINT](https://x.com/weezerOSINT), [@MichaelGannotti](https://x.com/MichaelGannotti), [@tomkrcha](https://x.com/tomkrcha), [@vista8](https://x.com/vista8), [@light_foundry](https://x.com/light_foundry), [@orbiteditor](https://x.com/orbiteditor).
 
 *Herhangi bir atıfın düzeltilmesi gerekiyorsa bizimle iletişime geçin; güncelleriz.*
 

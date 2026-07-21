@@ -36,7 +36,7 @@
 
 ## 📊 总览
 
-- **252 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
+- **258 个精选 GLM-5.2 案例**，来自公开创作者、评测团队、工具开发者、服务商和一线使用者。
 - 覆盖基准与前沿评测、编码代理与长上下文工作流、上手演示与作品展示、供应商与工具集成、成本、定价与本地部署、限制、注意事项与安全信号。
 - 每个案例都包含原始来源、创作者署名、简洁的使用结论、证据类型和发布日期。
 - 你可以用这个 repo 查找实用工作流、比较优势和限制、发现供应商路径，并跟踪真实上手实验。
@@ -79,10 +79,10 @@ curl --request POST \
 | 章节 | 案例 |
 |---|---|
 | [📏 基准与前沿评测](#benchmarks-frontier-evaluation) | 案例 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235, 248, 250 |
-| [💻 编码代理与长上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237 |
+| [💻 编码代理与长上下文工作流](#coding-agents-long-context-workflows) | 案例 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243, 255, 257 |
 | [🎮 上手演示与作品展示](#hands-on-demos-showcase-builds) | 案例 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
-| [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251 |
+| [🔌 供应商与工具集成](#provider-tool-integrations) | 案例 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239, 256, 258 |
+| [💸 成本、定价与本地部署](#cost-pricing-local-deployment) | 案例 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251, 253-254 |
 | [🧭 限制、注意事项与安全信号](#limits-caveats-safety-signals) | 案例 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247, 252 |
 | [相关仓库](#related-repositories) | 已验证的 API 路径与相邻入口 |
 | [🙏 致谢](#acknowledge) | 来源致谢与修正政策 |
@@ -832,6 +832,26 @@ Type: Benchmark | Date: 2026-06-24
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 编码代理与长上下文工作流
 ---
+<a id="case-257"></a>
+### Case 257: [OpenCodex 模型切换工作流](https://x.com/vista8/status/2079239701391675404) (by [@vista8](https://x.com/vista8))
+
+**如果你想在以 Codex 为中心的 coding loop 里给 GLM-5.2 做路由，而不是被锁定在单一模型上，可以看这个案例，因为 vista8 说 OpenCodex 让同一套环境可以在 GLM 5.2、Kimi K3、GPT-5.6 Sol 和 Grok 4.5 之间切换，用于前端设计、后端工作和实时 X 搜索。**
+
+vista8 说，Codex 依然是自己日常使用最频繁的 coding tool，但前端审美是它的弱项，所以工作流转到了一个可以按需切模型的 OpenCodex 项目里。帖文给出的路由说明很实用：前端设计走通过 OAuth 接入的 Kimi K3，后端工作切到 GPT-5.6 Sol，实时 X 搜索交给 Grok 4.5，同时把 GLM 5.2 作为同一 coding surface 里的可替换选项之一。因此，这更像是一条面向 coding agents 的具体模型路由工作流，而不是单纯的模型排名观点。
+
+Type: Integration | Date: 2026-07-20
+
+---
+<a id="case-255"></a>
+### Case 255: [Hermes 11 代理混合实验室](https://x.com/MichaelGannotti/status/2079168568478912834) (by [@MichaelGannotti](https://x.com/MichaelGannotti))
+
+**如果你想围绕 GLM-5.2 搭一套按角色分工的多代理实验室，而不是只用一个单体助手，可以看这个案例，因为 MichaelGannotti 说一套 11 代理的 Hermes 配置，会在 DGX Spark、Ryzen 工作站和云端模型之间动态路由任务，其中就包括用于软件、研究、营销和协调工作的 GLM 5.2。**
+
+MichaelGannotti 给出了一套很具体的实验室架构：一台带 128GB unified memory 的 DGX Spark 作为主要本地推理服务器，一台 Ryzen 9 Halo Strix 机器运行 8 个负责工程与组织角色的 Hermes agents，另一台 Ryzen 7 Windows 机器再运行 3 个面向内容与微软生态工作的 agents。在这套配置里，每个 agent 会按任务在云端的 GPT-5.6、GLM 5.2、Grok 4.5，以及本地的 Qwen、Nemotron、Gemma 模型之间做选择，因此这条帖子更像是一份混合本地加云端 agent 团队的操作模型参考，而不是含糊的效率宣传。
+
+Type: Integration | Date: 2026-07-20
+
+---
 <a id="case-243"></a>
 ### Case 243: [Hermes 混合式 API 对等部署](https://x.com/dangerm00se/status/2078369336239313368) (by [@dangerm00se](https://x.com/dangerm00se))
 
@@ -1553,6 +1573,25 @@ Type: Demo | Date: 2026-06-23
 <a id="provider-tool-integrations"></a>
 ## 🔌 供应商与工具集成
 ---
+<a id="case-258"></a>
+### Case 258: [Orbit Provider 50% GLM 接入](https://x.com/orbiteditor/status/2079148011259916552) (by [@orbiteditor](https://x.com/orbiteditor))
+
+**如果你想在 Orbit 里试用 GLM-5.2，同时不自己管理单独的 provider 凭证，可以看这个案例，因为 Orbit Editor v0.4.0 说其新的 Orbit Provider 会把 GLM-5.2 直接暴露在编辑器里，并以 50% 折扣上线。**
+
+Orbit Editor 的 v0.4.0 发布引入了一层面向开源模型的内置 provider，目标是把单独设置 API key 和 provider 的工作，收敛到一个编辑器工作流里。帖文表示，用户可以在一个界面里选择模型、开始编码、跟踪用量并管理成本，而 GLM-5.2 则以 5 折价格上线。因此，这是一条很具体的编辑器集成与访问路径，适合那些想低摩擦试用 GLM 的团队。
+
+Type: Integration | Date: 2026-07-20
+
+---
+<a id="case-256"></a>
+### Case 256: [pen.dev 并行设计评测](https://x.com/tomkrcha/status/2079253857834828230) (by [@tomkrcha](https://x.com/tomkrcha))
+
+**如果你想在同一套本地工作流里，把 GLM-5.2 和偏设计导向的同类模型并排比较，可以看这个案例，因为 tomkrcha 说 pen.dev 能让 GLM 5.2 和 ChatGPT、Claude、Cursor Composer、OpenCode Go、Kimi、Grok、Gemini、Qwen 等模型一起并行运行，直接在桌面 codebase 上做设计任务。**
+
+tomkrcha 把 pen.dev 描述为一层实时设计 agent surface，而不是单模型 demo。帖文表示，开发者可以直接登录自己已有的 ChatGPT 或 Claude 订阅，接入 Cursor Composer、GitHub Copilot、OpenCode Go、Grok 4.5、Kimi、MiniMax、GLM 5.2、Gemini、Qwen，再把它们混搭到同一个本地项目里的前端设计任务上。因此，这更像是一个面向 UI-heavy 工作的 GLM-5.2 横向评测界面，而不是另一张孤立的 benchmark 截图。
+
+Type: Integration | Date: 2026-07-20
+
 <a id="case-239"></a>
 ### Case 239: [TokenRouter 免费 GLM API 窗口](https://x.com/meliasiih/status/2078180641468985564) (by [@meliasiih](https://x.com/meliasiih))
 
@@ -2283,6 +2322,26 @@ Type: Integration | Date: 2026-06-24
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 成本、定价与本地部署
+---
+<a id="case-254"></a>
+### Case 254: [8x GB10 860K 稀疏服务](https://x.com/light_foundry/status/2079158726658060652) (by [@light_foundry](https://x.com/light_foundry))
+
+**如果你想 benchmark 基于 GB10 级集群的长上下文本地 GLM-5.2 服务，可以看这个案例，因为 light_foundry 说一套 8x GB10 配置，配合 sparse indexer 和 Int4-Int8Mix 权重，在 4K 深度下做到了 1,101 tok/s prefill，最高可服务到 860K tokens，并且在 845K context 仍然能找回 needle。**
+
+light_foundry 描述的是一套把 8x GB10 集群迁移到统一 base 加 `b12x` sparse indexer 的配置，用来运行带 fp8 sparse-MLA KV 和 MTP 的 GLM-5.2 Int4-Int8Mix。帖文给出的数字包括：4K 深度下 prefill 从 880 提高到 1,101 tok/s，77K / 231K / 395K 深度下的 prefill 分别为 1,052 / 940 / 838 tok/s，单流 decode 中位数为 42.1 tok/s，以及一个可支持 860K 最大长度的 903K-token KV 池，并且在约 845K 深度下仍能以 10.9 tok/s 解码。帖文还特别指出两个很具体的运维陷阱：冷启动时的 inductor cache 编译看起来像 shared-memory hang，以及 GPU memory fragmentation 会在多次重启后压缩可用 KV。
+
+Type: Evaluation | Date: 2026-07-20
+
+---
+<a id="case-253"></a>
+### Case 253: [混合 3/4/8-Bit 本地权衡](https://x.com/0xSero/status/2079184434188685668) (by [@0xSero](https://x.com/0xSero))
+
+**如果你想在退回 BF16 之前，先估算一条激进量化的本地 GLM-5.2 路线值不值得走，可以看这个案例，因为 0xSero 说一套混合 3/4/8-bit 配置，仍然在 Terminal-Bench 2.1 上做到 70.8%，在 GPQA Diamond 上做到 88.89%，在 4x RTX 6000 上约 82 tok/s，并把单任务成本压到约 0.22 美分。**
+
+这条帖子把一套量化版 GLM-5.2-Hybrid 的评测与服务数据打包放在一起：Terminal-Bench 2.1 成绩为 70.8%，个别运行最高到 77.8%；GPQA Diamond 为 88.89%；在 4x RTX 6000 GPU 上约 1,200 tok/s prefill、约 82 tok/s decode，context 大约 340K，单任务成本约 0.22 美分。帖文还声称，它和 BF16 相比，在 Terminal-Bench 上只差 3 到 8 个点，在 GPQA 上只差 0.15，因此对于要判断为了降低本地 GLM 服务成本和内存占用，最多能接受多少质量损失的团队来说，这是一个非常具体的权衡参考。
+
+Type: Evaluation | Date: 2026-07-20
+
 ---
 <a id="case-251"></a>
 ### Case 251: [Ollama Pro 重负载 GLM 预算](https://x.com/iamcheyan/status/2078732985537601895) (by [@iamcheyan](https://x.com/iamcheyan))
@@ -3105,7 +3164,7 @@ Type: Evaluation | Date: 2026-06-24
 
 感谢这里收录的高信号来源创作者：[@ArtificialAnlys](https://x.com/ArtificialAnlys)、[@arena](https://x.com/arena)、[@Designarena](https://x.com/Designarena)、[@ProximalHQ](https://x.com/ProximalHQ)、[@AiBattle_](https://x.com/AiBattle_)、[@cline](https://x.com/cline)、[@gosrum](https://x.com/gosrum)、[@bridgemindai](https://x.com/bridgemindai)、[@bridgebench](https://x.com/bridgebench)、[@elliotarledge](https://x.com/elliotarledge)、[@maxbittker](https://x.com/maxbittker)、[@KELMAND1](https://x.com/KELMAND1)、[@altudev](https://x.com/altudev)、[@AskVenice](https://x.com/AskVenice)、[@atomic_chat_hq](https://x.com/atomic_chat_hq)、[@anshuc](https://x.com/anshuc)、[@laozhang2579](https://x.com/laozhang2579)、[@zcode_ai](https://x.com/zcode_ai)、[@0xSero](https://x.com/0xSero)、[@laogui](https://x.com/laogui)、[@aimlapi](https://x.com/aimlapi)、[@ivanfioravanti](https://x.com/ivanfioravanti)、[@grx_xce](https://x.com/grx_xce)、[@askalphaxiv](https://x.com/askalphaxiv)、[@emollick](https://x.com/emollick)、[@opencode](https://x.com/opencode)、[@ollama](https://x.com/ollama)、[@OpenRouter](https://x.com/OpenRouter)、[@vllm_project](https://x.com/vllm_project)、[@NotionHQ](https://x.com/NotionHQ)、[@FireworksAI_HQ](https://x.com/FireworksAI_HQ)、[@CarolGLMs](https://x.com/CarolGLMs)、[@CommandCodeAI](https://x.com/CommandCodeAI)、[@Teknium](https://x.com/Teknium)、[@ionet](https://x.com/ionet)、[@clattner_llvm](https://x.com/clattner_llvm)、[@Hesamation](https://x.com/Hesamation)、[@Jeyffre](https://x.com/Jeyffre)、[@pcuenq](https://x.com/pcuenq)、[@ai_xiaomu](https://x.com/ai_xiaomu)、[@RoundtableSpace](https://x.com/RoundtableSpace)、[@JZiyue_](https://x.com/JZiyue_)、[@nahcrof](https://x.com/nahcrof)、[@scaling01](https://x.com/scaling01)、[@sawyerhood](https://x.com/sawyerhood)、[@ml_angelopoulos](https://x.com/ml_angelopoulos)、[@VittoStack](https://x.com/VittoStack)、[@josepha_mayo](https://x.com/josepha_mayo)、[@k_matsumaru](https://x.com/k_matsumaru)、[@nikhilchandak29](https://x.com/nikhilchandak29)、[@datacurve](https://x.com/datacurve)、[@pseudokid](https://x.com/pseudokid)、[@LechMazur](https://x.com/LechMazur)、[@wongmjane](https://x.com/wongmjane)、[@browser_use](https://x.com/browser_use)、[@s_batzoglou](https://x.com/s_batzoglou)、[@yuhasbeentaken](https://x.com/yuhasbeentaken)、[@DeRonin_](https://x.com/DeRonin_)、[@LyalinDotCom](https://x.com/LyalinDotCom)、[@Alan_Earn](https://x.com/Alan_Earn)、[@hxiao](https://x.com/hxiao)、[@DeryaTR_](https://x.com/DeryaTR_)、[@threepointone](https://x.com/threepointone)、[@skirano](https://x.com/skirano)、[@vulcanbench](https://x.com/vulcanbench)、[@OpenCodeLog](https://x.com/OpenCodeLog)、[@0x_kaize](https://x.com/0x_kaize)、[@buildwithhassan](https://x.com/buildwithhassan)、[@OpenDesignHQ](https://x.com/OpenDesignHQ)、[@_xjdr](https://x.com/_xjdr)、[@thealexker](https://x.com/thealexker)、[@cramforce](https://x.com/cramforce)、[@CardilloSamuel](https://x.com/CardilloSamuel)、[@karminski3](https://x.com/karminski3)、[@atmoio](https://x.com/atmoio)、[@RayFernando1337](https://x.com/RayFernando1337)、[@colemurray](https://x.com/colemurray)、[@dyfan22](https://x.com/dyfan22)、[@Marktechpost](https://x.com/Marktechpost)、[@perplexitydevs](https://x.com/perplexitydevs)、[@joshua_saxe](https://x.com/joshua_saxe)、[@aqaderb](https://x.com/aqaderb)、[@ScaleAILabs](https://x.com/ScaleAILabs)、[@wafer_ai](https://x.com/wafer_ai)、[@ankrgyl](https://x.com/ankrgyl)、[@vedovelli74](https://x.com/vedovelli74)、[@clairevo](https://x.com/clairevo)、[@AlicanKiraz0](https://x.com/AlicanKiraz0)、[@denizirgin](https://x.com/denizirgin)、[@Dracoshowumore](https://x.com/Dracoshowumore)、[@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar)、[@OkhayIea](https://x.com/OkhayIea)、[@MrAhmadAwais](https://x.com/MrAhmadAwais)、[@0G_labs](https://x.com/0G_labs)、[@SubhoGhosh02](https://x.com/SubhoGhosh02)、[@undefinedKi](https://x.com/undefinedKi)、[@alighodsi](https://x.com/alighodsi)、[@composio](https://x.com/composio)、[@pengsonal](https://x.com/pengsonal)、[@EpochAIResearch](https://x.com/EpochAIResearch)、[@stagedhappen](https://x.com/stagedhappen)。
 
-最近新增的创作者：[@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ)、[@_xjdr](https://x.com/_xjdr)、[@thealexker](https://x.com/thealexker)、[@cramforce](https://x.com/cramforce)、[@CardilloSamuel](https://x.com/CardilloSamuel)、[@karminski3](https://x.com/karminski3)、[@atmoio](https://x.com/atmoio)、[@RayFernando1337](https://x.com/RayFernando1337)、[@colemurray](https://x.com/colemurray)、[@dyfan22](https://x.com/dyfan22)、[@Marktechpost](https://x.com/Marktechpost)、[@perplexitydevs](https://x.com/perplexitydevs)、[@joshua_saxe](https://x.com/joshua_saxe)、[@aqaderb](https://x.com/aqaderb)、[@TraffAlex](https://x.com/TraffAlex)、[@FareaNFts](https://x.com/FareaNFts)、[@xpasky](https://x.com/xpasky)、[@TheZachMueller](https://x.com/TheZachMueller)、[@RedHat_AI](https://x.com/RedHat_AI)、[@juanjucm](https://x.com/juanjucm)、[@cyrilXBT](https://x.com/cyrilXBT)、[@QCXINT_](https://x.com/QCXINT_)、[@vorfluxai](https://x.com/vorfluxai)。
+最近新增的创作者：[@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@lhoestq](https://x.com/lhoestq), [@XavierLocalAI](https://x.com/XavierLocalAI), [@CommandCodeAI](https://x.com/CommandCodeAI), [@coworkerapp](https://x.com/coworkerapp), [@perplexity_ai](https://x.com/perplexity_ai), [@petruknisme](https://x.com/petruknisme), [@sgl_project](https://x.com/sgl_project), [@MaziyarPanahi](https://x.com/MaziyarPanahi), [@techNmak](https://x.com/techNmak), [@spettrotoken](https://x.com/spettrotoken), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai), [@dangerm00se](https://x.com/dangerm00se), [@SerPepeXBT](https://x.com/SerPepeXBT), [@Giannisanii](https://x.com/Giannisanii), [@thelichhh](https://x.com/thelichhh), [@weezerOSINT](https://x.com/weezerOSINT), [@MichaelGannotti](https://x.com/MichaelGannotti), [@tomkrcha](https://x.com/tomkrcha), [@vista8](https://x.com/vista8), [@light_foundry](https://x.com/light_foundry), [@orbiteditor](https://x.com/orbiteditor)。
 
 *我们无法保证每个案例都已归属到最初原创者。如果需要修正，请联系我们，我们会更新。*
 

@@ -36,7 +36,7 @@ Cada título de caso aponta para a fonte pública, e cada autor aponta para o pe
 
 ## 📊 Visão Geral
 
-- **252 casos selecionados de GLM-5.2** de criadores públicos, equipes de benchmark, desenvolvedores de ferramentas, provedores e usuários práticos.
+- **258 casos selecionados de GLM-5.2** de criadores públicos, equipes de benchmark, desenvolvedores de ferramentas, provedores e usuários práticos.
 - Cobre avaliações comparativas e avaliação de fronteira, agentes de código e fluxos de trabalho de contexto longo, demos práticas e mostras, integrações de provedores e ferramentas, custo, preços e implantação local, limites, ressalvas e sinais de segurança.
 - Cada caso inclui a fonte original, a atribuição do criador, um takeaway de uso conciso, o tipo de evidência e a data de publicação.
 - Use este repo para encontrar workflows práticos, comparar pontos fortes e limites, descobrir provedores e acompanhar experimentos reais.
@@ -79,10 +79,10 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 | Seção | Casos |
 |---|---|
 | [📏 Avaliações comparativas e avaliação de fronteira](#benchmarks-frontier-evaluation) | Case 1-12, 60, 70, 72, 76, 90, 94, 110-111, 113, 120-121, 146, 154, 159, 162, 167, 175, 178, 184, 188-190, 196, 199, 207, 217, 223, 227, 235, 248, 250 |
-| [💻 Agentes de código e fluxos de trabalho de contexto longo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243 |
+| [💻 Agentes de código e fluxos de trabalho de contexto longo](#coding-agents-long-context-workflows) | Case 13-22, 62, 65, 66, 77, 80, 91, 102, 117, 119, 122, 127, 135-136, 142-143, 145, 148, 150, 153, 155, 168, 174, 180, 194, 210-212, 228, 236-237, 243, 255, 257 |
 | [🎮 Demos práticas e mostras](#hands-on-demos-showcase-builds) | Case 23-30, 71, 78, 81-82, 92, 99-100, 123, 144, 158, 161, 192, 200, 202, 213, 218, 229 |
-| [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239 |
-| [💸 Custo, preços e implantação local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251 |
+| [🔌 Integrações de provedores e ferramentas](#provider-tool-integrations) | Case 31-42, 61, 63, 69, 74, 79, 83-87, 93, 95-96, 101, 104-105, 109, 115-116, 124-125, 128-130, 137, 141, 147, 152, 160, 165, 169-170, 176, 179, 185, 193, 195, 198, 201, 203-204, 208, 214, 219-220, 224-225, 230-232, 238-239, 256, 258 |
+| [💸 Custo, preços e implantação local](#cost-pricing-local-deployment) | Case 43-51, 64, 68, 88-89, 97-98, 106-107, 112, 118, 131, 138-140, 151, 156, 164, 166, 171-173, 177, 181-183, 186-187, 191, 206, 209, 215, 221, 226, 233-234, 240-246, 249, 251, 253-254 |
 | [🧭 Limites, ressalvas e sinais de segurança](#limits-caveats-safety-signals) | Case 52-59, 67, 73, 75, 103, 108, 114, 126, 132-134, 149, 157, 163, 197, 205, 216, 222, 247, 252 |
 | [Repositórios relacionados](#related-repositories) | Rota de API verificada e superfícies adjacentes |
 | [🙏 Agradecimentos](#acknowledge) | Créditos e política de correções |
@@ -141,6 +141,8 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 257: Workflow de troca de modelo no OpenCodex](#case-257) | Use este caso para rotear o GLM-5.2 dentro de um loop de coding centrado no Codex em vez de ficar preso a um único modelo, porque vista8 diz que o OpenCodex permite que o mesmo ambiente troque entre GLM 5.2, Kimi K3, GPT-5.6 Sol e Grok 4.5 para design de frontend, trabalho de backend e pesquisa ao vivo no X. | Integration |
+| [Case 255: Laboratório híbrido de 11 agentes do Hermes](#case-255) | Use este caso para estruturar um laboratório multiagente baseado em papéis em torno do GLM-5.2 em vez de um único assistente monolítico, porque MichaelGannotti diz que uma configuração Hermes com 11 agentes roteia tarefas dinamicamente entre DGX Spark, workstations Ryzen e modelos na cloud, incluindo GLM 5.2, para software, research, marketing e coordenação. | Integration |
 | [Case 243: Serviço híbrido Hermes com paridade de API](#case-243) | Use este caso para validar um coding agent auto-hospedado com GLM-5.2 contra a rota oficial, porque dangerm00se diz que um híbrido Hermes mais GLM-5.2 em 4x RTX 6000 PCIe igualou 59 de 60 tarefas da API oficial enquanto entregava 3,149 tok/s de prefill, 0.37 s de warm TTFT e 35.9 tok/s de decode. | Evaluation |
 | [Case 237: Agente GLM do LM Studio Bionic](#case-237) | Use este caso para avaliar um agente de coding local-first com GLM-5.2, porque chenzeling4 diz que o LM Studio Bionic combina GLM 5.2 com sandboxes locais de documentos, diffs inline de código, checkpoints de rollback e transcrição de voz no dispositivo. | Integration |
 | [Case 236: Vantagem de qualidade web dev no Claude Code](#case-236) | Use este caso para comparar a qualidade da primeira entrega em web dev, e não apenas a velocidade bruta de conclusão, porque Lumenix0 diz que o GLM 5.2 no Claude Code superou o GPT 5.5 no Codex em qualidade de design e completude funcional em três tarefas reais. | Evaluation |
@@ -215,6 +217,8 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 258: Acesso GLM com 50% via Orbit Provider](#case-258) | Use este caso para testar o GLM-5.2 dentro do Orbit sem gerir credenciais separadas de provedor, porque o Orbit Editor v0.4.0 diz que seu novo Orbit Provider expõe GLM-5.2 diretamente no editor e foi lançado com 50 por cento de desconto. | Integration |
+| [Case 256: Avaliação paralela de design no pen.dev](#case-256) | Use este caso para comparar o GLM-5.2 com pares orientados a design dentro de um único workflow local, porque tomkrcha diz que o pen.dev pode rodar GLM 5.2 em paralelo com ChatGPT, Claude, Cursor Composer, OpenCode Go, Kimi, Grok, Gemini, Qwen e outros em tarefas de design diretamente dentro de uma codebase desktop. | Integration |
 | [Case 239: Janela de API GLM gratuita no TokenRouter](#case-239) | Use este caso para conseguir uma rota temporária gratuita de API para GLM-5.2, porque meliasiih diz que o TokenRouter está oferecendo acesso grátis até 25 de julho de 2026 com um fluxo simples de cadastro, API key e base URL publicada. | Tutorial |
 | [Case 238: Gateway GLM Wafer no Agentuity](#case-238) | Use este caso para adicionar o GLM-5.2 a uma stack de gateway no Agentuity, porque wafer_ai diz que sua rota serverless agora entrega GLM 5.2 no Agentuity a cerca de 100 a 250 tok/s com contexto de 1M tanto na tier regular quanto na Fast. | Integration |
 | [Case 170: Acesso plug-and-play gratuito à API NVIDIA](#case-170) | Use este caso para testar o GLM-5.2 rapidamente por meio de um endpoint hospedado sem custo, porque hqmank diz que a NVIDIA abriu uma rota de API compatível com OpenAI e confirmou que ela funcionou como um drop-in plug-and-play. | Integration |
@@ -288,6 +292,8 @@ Leia a referência completa da API GLM-5.2: [Abrir docs da API GLM-5.2](https://
 
 | Caso | Foco | Tipo |
 |---|---|---|
+| [Case 254: Serving sparse de 860K em 8x GB10](#case-254) | Use este caso para benchmarkear serving local de GLM-5.2 de contexto longo em clusters da classe GB10, porque light_foundry diz que uma stack de 8x GB10 com sparse indexer e pesos Int4-Int8Mix atingiu 1,101 tok/s de prefill a 4K de profundidade, serviu até 860K tokens e ainda recuperou uma needle em 845K de contexto. | Evaluation |
+| [Case 253: Tradeoff local híbrido de 3/4/8 bits](#case-253) | Use este caso para dimensionar uma rota local de GLM-5.2 agressivamente quantizada antes de cair para BF16, porque 0xSero diz que uma build híbrida de 3/4/8 bits ainda alcançou 70.8 por cento no Terminal-Bench 2.1, 88.89 por cento no GPQA Diamond, cerca de 82 tok/s em 4x RTX 6000 e aproximadamente 0.22 centavos por tarefa. | Evaluation |
 | [Case 251: Orçamento pesado de GLM no Ollama Pro](#case-251) | Use este caso para dimensionar assinaturas flat-rate do GLM-5.2 pela cota de tarefas pesadas, e não pelo preço de vitrine, porque iamcheyan diz que a cota semanal do OpenCode Go cobriu só cerca de cinco tarefas pesadas de GLM-5.2, enquanto o pool semanal do Ollama Pro sustentou cerca de três dias de trabalho GLM contínuo por 20 dólares por mês contra 5 e depois 10 dólares no OpenCode Go. | Limit |
 | [Case 249: Plano unificado de tokens da Alibaba](#case-249) | Use este caso para comparar acesso mensal multi-modelo, e não saldos separados por provedor, porque a Alibaba Cloud diz que seu Token Plan for Individuals agrupa créditos unificados para ferramentas de texto, imagem e vídeo enquanto lista o GLM-5.2 entre os modelos frontier de texto e preço de entrada a partir de 4 dólares no primeiro mês após cupom. | Integration |
 | [Case 246: Cluster 8x DGX Spark em 400K](#case-246) | Use este caso para julgar quando um cluster de GLM-5.2 ao lado da mesa pode substituir gasto com API hospedada, porque thelichhh diz que oito DGX Sparks foram ligados como uma única máquina com 1TB de memória unificada, carregaram GLM-5.2 em todos os nós e rodaram o modelo com 400K de contexto. | Demo |
@@ -853,6 +859,26 @@ Type: Demo | Date: 2026-06-23
 
 <a id="coding-agents-long-context-workflows"></a>
 ## 💻 Agentes de código e fluxos de trabalho de contexto longo
+---
+<a id="case-257"></a>
+### Case 257: [Workflow de troca de modelo no OpenCodex](https://x.com/vista8/status/2079239701391675404) (by [@vista8](https://x.com/vista8))
+
+**Use este caso para rotear o GLM-5.2 dentro de um loop de coding centrado no Codex em vez de ficar preso a um único modelo, porque vista8 diz que o OpenCodex permite que o mesmo ambiente troque entre GLM 5.2, Kimi K3, GPT-5.6 Sol e Grok 4.5 para design de frontend, trabalho de backend e pesquisa ao vivo no X.**
+
+vista8 diz que o Codex continuava a ser a ferramenta de coding mais usada na prática, mas o gosto para frontend era uma fraqueza, por isso o workflow migrou para um projeto OpenCodex que consegue trocar modelos sob demanda. A nota específica de roteamento é prática: usar Kimi K3 via OAuth para design de frontend, mudar para GPT-5.6 Sol no trabalho de backend, manter Grok 4.5 disponível para pesquisa no X e tratar o GLM 5.2 como mais uma opção drop-in dentro da mesma superfície de coding. Isso transforma o post em um workflow concreto de model router para coding agents, e não em uma opinião genérica de ranking de modelos.
+
+Type: Integration | Date: 2026-07-20
+
+---
+<a id="case-255"></a>
+### Case 255: [Laboratório híbrido de 11 agentes do Hermes](https://x.com/MichaelGannotti/status/2079168568478912834) (by [@MichaelGannotti](https://x.com/MichaelGannotti))
+
+**Use este caso para estruturar um laboratório multiagente baseado em papéis em torno do GLM-5.2 em vez de um único assistente monolítico, porque MichaelGannotti diz que uma configuração Hermes com 11 agentes roteia tarefas dinamicamente entre DGX Spark, workstations Ryzen e modelos na cloud, incluindo GLM 5.2, para software, research, marketing e coordenação.**
+
+MichaelGannotti descreve uma arquitetura concreta de laboratório: um DGX Spark com 128 GB de memória unificada como servidor principal de inferência local, uma caixa Ryzen 9 Halo Strix rodando oito agentes Hermes para papéis de engenharia e organização e uma caixa Ryzen 7 com Windows rodando mais três agentes para conteúdo e trabalho na stack da Microsoft. Nessa configuração, cada agente escolhe entre GPT-5.6, GLM 5.2 e Grok 4.5 na cloud ou modelos locais Qwen, Nemotron e Gemma dependendo da tarefa, o que transforma o post em uma referência operacional detalhada para equipas híbridas local-cloud de agentes, e não em uma afirmação vaga de produtividade.
+
+Type: Integration | Date: 2026-07-20
+
 ---
 <a id="case-243"></a>
 ### Case 243: [Serviço híbrido Hermes com paridade de API](https://x.com/dangerm00se/status/2078369336239313368) (by [@dangerm00se](https://x.com/dangerm00se))
@@ -1551,6 +1577,26 @@ Type: Evaluation | Date: 2026-06-22
 
 <a id="provider-tool-integrations"></a>
 ## 🔌 Integrações de provedores e ferramentas
+<a id="case-258"></a>
+### Case 258: [Acesso GLM com 50% via Orbit Provider](https://x.com/orbiteditor/status/2079148011259916552) (by [@orbiteditor](https://x.com/orbiteditor))
+
+**Use este caso para testar o GLM-5.2 dentro do Orbit sem gerir credenciais separadas de provedor, porque o Orbit Editor v0.4.0 diz que seu novo Orbit Provider expõe GLM-5.2 diretamente no editor e foi lançado com 50 por cento de desconto.**
+
+O anúncio do Orbit Editor v0.4.0 apresenta uma camada de provedor embutida para modelos open-source com o objetivo explícito de esconder, atrás de um único workflow do editor, o trabalho separado de API keys e configuração de provedores. O post diz que os utilizadores podem escolher um modelo, começar a programar, acompanhar o uso e gerir custos de um só lugar, enquanto o GLM-5.2 foi lançado com preço 50 por cento menor. Isso o torna uma nota concreta de integração com editor e acesso para equipas que querem uma rota de teste de GLM com menos atrito.
+
+Type: Integration | Date: 2026-07-20
+
+---
+<a id="case-256"></a>
+### Case 256: [Avaliação paralela de design no pen.dev](https://x.com/tomkrcha/status/2079253857834828230) (by [@tomkrcha](https://x.com/tomkrcha))
+
+**Use este caso para comparar o GLM-5.2 com pares orientados a design dentro de um único workflow local, porque tomkrcha diz que o pen.dev pode rodar GLM 5.2 em paralelo com ChatGPT, Claude, Cursor Composer, OpenCode Go, Kimi, Grok, Gemini, Qwen e outros em tarefas de design diretamente dentro de uma codebase desktop.**
+
+tomkrcha enquadra o pen.dev como uma superfície de agentes de design em tempo real, e não como uma demo de modelo único. O post diz que builders podem iniciar sessão com as suas subscrições existentes de ChatGPT ou Claude, ligar Cursor Composer, GitHub Copilot, OpenCode Go, Grok 4.5, Kimi, MiniMax, GLM 5.2, Gemini e Qwen, e depois combiná-los em tarefas de design de frontend dentro do mesmo projeto local. Isso o transforma em uma superfície concreta de avaliação lado a lado para o GLM-5.2 em trabalho intenso de UI, e não em mais uma captura isolada de benchmark.
+
+Type: Integration | Date: 2026-07-20
+
+---
 <a id="case-239"></a>
 ### Case 239: [Janela de API GLM gratuita no TokenRouter](https://x.com/meliasiih/status/2078180641468985564) (by [@meliasiih](https://x.com/meliasiih))
 
@@ -2309,6 +2355,26 @@ Type: Integration | Date: 2026-06-22
 
 <a id="cost-pricing-local-deployment"></a>
 ## 💸 Custo, preços e implantação local
+---
+<a id="case-254"></a>
+### Case 254: [Serving sparse de 860K em 8x GB10](https://x.com/light_foundry/status/2079158726658060652) (by [@light_foundry](https://x.com/light_foundry))
+
+**Use este caso para benchmarkear serving local de GLM-5.2 de contexto longo em clusters da classe GB10, porque light_foundry diz que uma stack de 8x GB10 com sparse indexer e pesos Int4-Int8Mix atingiu 1,101 tok/s de prefill a 4K de profundidade, serviu até 860K tokens e ainda recuperou uma needle em 845K de contexto.**
+
+light_foundry descreve a migração de um cluster de 8x GB10 para uma base unificada mais um sparse indexer `b12x` para GLM-5.2 Int4-Int8Mix com sparse-MLA KV fp8 e MTP. O post relata que o prefill melhorou de 880 para 1,101 tok/s a 4K de profundidade, com leituras de depth-prefill de 1,052 / 940 / 838 tok/s em 77K / 231K / 395K, mediana de decode em fluxo único de 42.1 tok/s e um pool KV de 903K tokens que permitiu servir com comprimento máximo de 860K enquanto ainda decodificava a 10.9 tok/s por volta de 845K de profundidade. Ele também aponta duas armadilhas operacionais concretas: compilação a frio da cache do inductor, que parece um travamento de memória partilhada, e fragmentação de memória GPU, que reduz o KV disponível após reinícios repetidos.
+
+Type: Evaluation | Date: 2026-07-20
+
+---
+<a id="case-253"></a>
+### Case 253: [Tradeoff local híbrido de 3/4/8 bits](https://x.com/0xSero/status/2079184434188685668) (by [@0xSero](https://x.com/0xSero))
+
+**Use este caso para dimensionar uma rota local de GLM-5.2 agressivamente quantizada antes de cair para BF16, porque 0xSero diz que uma build híbrida de 3/4/8 bits ainda alcançou 70.8 por cento no Terminal-Bench 2.1, 88.89 por cento no GPQA Diamond, cerca de 82 tok/s em 4x RTX 6000 e aproximadamente 0.22 centavos por tarefa.**
+
+O post reúne números de eval e de serving para uma configuração quantizada GLM-5.2-Hybrid: 70.8 por cento no Terminal-Bench 2.1 com execuções que chegaram a 77.8 por cento, 88.89 por cento no GPQA Diamond, cerca de 1,200 tok/s de prefill, algo perto de 82 tok/s de decode em 4x RTX 6000 GPUs, cerca de 340K de contexto e aproximadamente 0.22 centavos por tarefa. Também afirma que a diferença para BF16 é de apenas 3 a 8 pontos no Terminal-Bench e 0.15 no GPQA, o que faz dele uma referência concreta de tradeoff para equipas que estão a decidir quanta qualidade podem ceder para reduzir custo e memória no serving local de GLM.
+
+Type: Evaluation | Date: 2026-07-20
+
 ---
 <a id="case-251"></a>
 ### Case 251: [Orçamento pesado de GLM no Ollama Pro](https://x.com/iamcheyan/status/2078732985537601895) (by [@iamcheyan](https://x.com/iamcheyan))
@@ -3101,7 +3167,7 @@ Este repositório foi inspirado por criadores públicos, desenvolvedores, equipe
 
 Agradecemos a estes criadores e fontes de alto sinal representados aqui: [@ArtificialAnlys](https://x.com/ArtificialAnlys), [@arena](https://x.com/arena), [@Designarena](https://x.com/Designarena), [@ProximalHQ](https://x.com/ProximalHQ), [@AiBattle_](https://x.com/AiBattle_), [@cline](https://x.com/cline), [@gosrum](https://x.com/gosrum), [@bridgemindai](https://x.com/bridgemindai), [@bridgebench](https://x.com/bridgebench), [@elliotarledge](https://x.com/elliotarledge), [@maxbittker](https://x.com/maxbittker), [@KELMAND1](https://x.com/KELMAND1), [@altudev](https://x.com/altudev), [@AskVenice](https://x.com/AskVenice), [@atomic_chat_hq](https://x.com/atomic_chat_hq), [@anshuc](https://x.com/anshuc), [@laozhang2579](https://x.com/laozhang2579), [@zcode_ai](https://x.com/zcode_ai), [@0xSero](https://x.com/0xSero), [@laogui](https://x.com/laogui), [@aimlapi](https://x.com/aimlapi), [@ivanfioravanti](https://x.com/ivanfioravanti), [@grx_xce](https://x.com/grx_xce), [@askalphaxiv](https://x.com/askalphaxiv), [@emollick](https://x.com/emollick), [@opencode](https://x.com/opencode), [@ollama](https://x.com/ollama), [@OpenRouter](https://x.com/OpenRouter), [@vllm_project](https://x.com/vllm_project), [@NotionHQ](https://x.com/NotionHQ), [@FireworksAI_HQ](https://x.com/FireworksAI_HQ), [@CarolGLMs](https://x.com/CarolGLMs), [@CommandCodeAI](https://x.com/CommandCodeAI), [@Teknium](https://x.com/Teknium), [@ionet](https://x.com/ionet), [@clattner_llvm](https://x.com/clattner_llvm), [@Hesamation](https://x.com/Hesamation), [@Jeyffre](https://x.com/Jeyffre), [@pcuenq](https://x.com/pcuenq), [@ai_xiaomu](https://x.com/ai_xiaomu), [@RoundtableSpace](https://x.com/RoundtableSpace), [@JZiyue_](https://x.com/JZiyue_), [@nahcrof](https://x.com/nahcrof), [@scaling01](https://x.com/scaling01), [@sawyerhood](https://x.com/sawyerhood), [@ml_angelopoulos](https://x.com/ml_angelopoulos), [@VittoStack](https://x.com/VittoStack), [@josepha_mayo](https://x.com/josepha_mayo), [@k_matsumaru](https://x.com/k_matsumaru), [@nikhilchandak29](https://x.com/nikhilchandak29), [@datacurve](https://x.com/datacurve), [@pseudokid](https://x.com/pseudokid), [@LechMazur](https://x.com/LechMazur), [@wongmjane](https://x.com/wongmjane), [@browser_use](https://x.com/browser_use), [@s_batzoglou](https://x.com/s_batzoglou), [@yuhasbeentaken](https://x.com/yuhasbeentaken), [@DeRonin_](https://x.com/DeRonin_), [@LyalinDotCom](https://x.com/LyalinDotCom), [@Alan_Earn](https://x.com/Alan_Earn), [@hxiao](https://x.com/hxiao), [@DeryaTR_](https://x.com/DeryaTR_), [@threepointone](https://x.com/threepointone), [@skirano](https://x.com/skirano), [@vulcanbench](https://x.com/vulcanbench), [@OpenCodeLog](https://x.com/OpenCodeLog), [@0x_kaize](https://x.com/0x_kaize), [@buildwithhassan](https://x.com/buildwithhassan), [@ScaleAILabs](https://x.com/ScaleAILabs), [@wafer_ai](https://x.com/wafer_ai), [@ankrgyl](https://x.com/ankrgyl), [@clairevo](https://x.com/clairevo), [@MatinSenPai](https://x.com/MatinSenPai), [@hrdkbhatnagar](https://x.com/hrdkbhatnagar), [@nutlope](https://x.com/nutlope), [@victormustar](https://x.com/victormustar), [@digitalocean](https://x.com/digitalocean), [@BohuTANG](https://x.com/BohuTANG), [@AlicanKiraz0](https://x.com/AlicanKiraz0), [@denizirgin](https://x.com/denizirgin), [@Dracoshowumore](https://x.com/Dracoshowumore), [@Aiswarya_Sankar](https://x.com/Aiswarya_Sankar), [@OkhayIea](https://x.com/OkhayIea), [@MrAhmadAwais](https://x.com/MrAhmadAwais), [@0G_labs](https://x.com/0G_labs), [@SubhoGhosh02](https://x.com/SubhoGhosh02), [@undefinedKi](https://x.com/undefinedKi), [@alighodsi](https://x.com/alighodsi), [@composio](https://x.com/composio), [@pengsonal](https://x.com/pengsonal), [@EpochAIResearch](https://x.com/EpochAIResearch), [@stagedhappen](https://x.com/stagedhappen).
 
-Criadores adicionados recentemente: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai), [@dangerm00se](https://x.com/dangerm00se), [@SerPepeXBT](https://x.com/SerPepeXBT), [@Giannisanii](https://x.com/Giannisanii), [@thelichhh](https://x.com/thelichhh), [@weezerOSINT](https://x.com/weezerOSINT).
+Criadores adicionados recentemente: [@iamwaynechi](https://x.com/iamwaynechi), [@TracNetwork](https://x.com/TracNetwork), [@ClaudeCode_UT](https://x.com/ClaudeCode_UT), [@hqmank](https://x.com/hqmank), [@XciD_](https://x.com/XciD_), [@OpenDesignHQ](https://x.com/OpenDesignHQ), [@_xjdr](https://x.com/_xjdr), [@thealexker](https://x.com/thealexker), [@cramforce](https://x.com/cramforce), [@CardilloSamuel](https://x.com/CardilloSamuel), [@karminski3](https://x.com/karminski3), [@atmoio](https://x.com/atmoio), [@RayFernando1337](https://x.com/RayFernando1337), [@colemurray](https://x.com/colemurray), [@dyfan22](https://x.com/dyfan22), [@Marktechpost](https://x.com/Marktechpost), [@perplexitydevs](https://x.com/perplexitydevs), [@joshua_saxe](https://x.com/joshua_saxe), [@aqaderb](https://x.com/aqaderb), [@TraffAlex](https://x.com/TraffAlex), [@FareaNFts](https://x.com/FareaNFts), [@xpasky](https://x.com/xpasky), [@LangChain](https://x.com/LangChain), [@morganlinton](https://x.com/morganlinton), [@Irregular](https://x.com/Irregular), [@0xluffy_eth](https://x.com/0xluffy_eth), [@Digiato](https://x.com/Digiato), [@thatcofffeeguy](https://x.com/thatcofffeeguy), [@TheZachMueller](https://x.com/TheZachMueller), [@RedHat_AI](https://x.com/RedHat_AI), [@juanjucm](https://x.com/juanjucm), [@cyrilXBT](https://x.com/cyrilXBT), [@QCXINT_](https://x.com/QCXINT_), [@vorfluxai](https://x.com/vorfluxai), [@dangerm00se](https://x.com/dangerm00se), [@SerPepeXBT](https://x.com/SerPepeXBT), [@Giannisanii](https://x.com/Giannisanii), [@thelichhh](https://x.com/thelichhh), [@weezerOSINT](https://x.com/weezerOSINT), [@MichaelGannotti](https://x.com/MichaelGannotti), [@tomkrcha](https://x.com/tomkrcha), [@vista8](https://x.com/vista8), [@light_foundry](https://x.com/light_foundry), [@orbiteditor](https://x.com/orbiteditor).
 
 *If any attribution needs to be corrected, please contact us and we will update it.*
 
