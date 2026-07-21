@@ -6,6 +6,23 @@ The update automation must append one entry for every scheduled run, including n
 
 ## 2026-07-20
 
+## 2026-07-21
+
+- Status: UPDATED
+- Run id: `20260721T000303Z`
+- Run artifact: `.codex/usecase-update-loop/runs/20260721T000303Z/`
+- Raw collected: 72
+- Review queue: 36
+- High confidence: 6
+- Selected for update: 6
+- Deferred high confidence: 0
+- Added cases: Case 253-258
+- Latest update commit: `f426cf8`
+- Verifier: PASS, 11 README files, English case count 258
+- Blocker: none
+
+## 2026-07-20
+
 - Status: UPDATED
 - Run id: `20260720T000149Z`
 - Run artifact: `.codex/usecase-update-loop/runs/20260720T000149Z/`
